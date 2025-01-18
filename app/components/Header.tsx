@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-[#07141C]' : 'bg-transparent'
+        isScrolled ? 'bg-[#030B10]' : 'bg-[#040D12]'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -36,18 +36,46 @@ export default function Header() {
         </Link>
         <nav>
           <ul className="flex space-x-6">
-            {['Αρχική', 'Υπηρεσίες', 'Ποιοι Είμαστε', 'Επικοινωνία'].map((item) => (
-              <li key={item}>
-                <Link href={`#${item.toLowerCase()}`} className="hover:text-[#01FFFF] transition-colors">
-                  {item}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link href="/" className="hover:text-[#01FFFF] transition-colors text-white">
+                Αρχική
+              </Link>
+            </li>
+            <li className="relative group">
+              <span className="hover:text-[#01FFFF] transition-colors text-white cursor-pointer">
+                Υπηρεσίες
+              </span>
+              <ul className="absolute left-0 mt-2 w-40 bg-[#040D12] shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                {['Placeholder 1', 'Placeholder 2', 'Placeholder 3'].map((item, index) => (
+                  <li key={index} className="px-4 py-2 hover:bg-[#01FFFF] hover:text-black">
+                    <Link href="#" className="block">
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-[#01FFFF] transition-colors text-white">
+                Ποιοι Είμαστε
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact#contact-form" className="hover:text-[#01FFFF] transition-colors text-white">
+                Επικοινωνία
+              </Link>
+            </li>
+            <li>
+              <Link href="/projects" className="hover:text-[#01FFFF] transition-colors text-white">
+                Τα Έργα μας
+              </Link>
+            </li>
           </ul>
         </nav>
-        <button className="btn btn-primary">Ξεκινήστε Τώρα</button>
+        <Link href="/contact#contact-form">
+          <button className="btn btn-primary">Ελάτε σε Επαφή</button>
+        </Link>
       </div>
     </motion.header>
   )
 }
-

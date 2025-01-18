@@ -1,19 +1,19 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#07141C] py-12 relative">
+    <footer className="bg-[#07141C] py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center">
-            <Image src="/logo.png" alt="adinfinity logo" width={220} height={220} className="mb-4" />
-            <p className="opacity-80 text-center">Σας ευχαριστούμε που μας εμπιστεύεστε για την ανάπτυξη της επιχείρησής σας.</p>
+            <Image src="/logo.png" alt="adinfinity logo" width={140} height={140} className="mb-2" />
+            <p className="opacity-80 text-center text-sm">Σας ευχαριστούμε που μας εμπιστεύεστε για την ανάπτυξη της επιχείρησής σας.</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-bold mb-4">Γρήγορη Πλοήγηση</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-center">
               {['Αρχική', 'Υπηρεσίες', 'Ποιοι Είμαστε', 'Επικοινωνία'].map((item) => (
                 <li key={item}>
                   <Link href={`#${item.toLowerCase()}`} className="hover:text-[#01FFFF] transition-colors">
@@ -23,20 +23,24 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-lg font-bold mb-4">Ακολουθήστε μας</h3>
-            <p className="opacity-80 mb-4">Ακολουθήστε μας στα social media για περισσότερα νέα και ιδέες.</p>
+            <p className="opacity-80 mb-4 text-center">Ακολουθήστε μας στα social media για περισσότερα νέα και ιδέες.</p>
             <div className="flex space-x-4">
-              {[FaFacebook, FaTwitter, FaInstagram, FaLinkedin].map((Icon, index) => (
-                <a key={index} href="#" className="text-[#01FFFF] hover:text-white transition-colors">
-                  <Icon size={24} />
-                </a>
-              ))}
+              <a href="https://www.facebook.com/1.adinfinity" target="_blank" rel="noopener noreferrer" className="text-[#01FFFF] hover:text-white transition-colors">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://www.instagram.com/adinfinityads/" target="_blank" rel="noopener noreferrer" className="text-[#01FFFF] hover:text-white transition-colors">
+                <FaInstagram size={24} />
+              </a>
+              <a href="https://www.linkedin.com/in/adinfinity-ads-bb0a398a/?originalSubdomain=gr" target="_blank" rel="noopener noreferrer" className="text-[#01FFFF] hover:text-white transition-colors">
+                <FaLinkedin size={24} />
+              </a>
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p className="opacity-80">© 2025 adinfinity.gr. Όλα τα δικαιώματα διατηρούνται.</p>
+          <p className="opacity-80 text-xs">© 2025 adinfinity.gr. All rights reserved.</p>
         </div>
       </div>
     </footer>

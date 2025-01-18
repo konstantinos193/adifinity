@@ -28,7 +28,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="bg-[#07141C] p-6 rounded-lg border border-transparent hover:border-[#01FFFF] transition-all duration-300"
+              className="bg-[#07141C] p-6 rounded-xl border border-transparent hover:border-[#01FFFF] transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
