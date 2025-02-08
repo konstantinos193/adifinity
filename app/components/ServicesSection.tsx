@@ -30,8 +30,8 @@ export default function ServicesSection() {
               key={service.title}
               className="bg-[#07141C] p-6 rounded-xl border border-transparent hover:border-[#01FFFF] transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              animate={{ opacity: 1, y: 0, borderColor: '#01FFFF' }}
+              transition={{ duration: 0.5 }}
             >
               <service.icon className="w-12 h-12 text-[#01FFFF] mb-4" />
               <h3 className="text-xl font-bold mb-2">{service.title}</h3>

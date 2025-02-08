@@ -45,11 +45,25 @@ export default function Header() {
               <span className="hover:text-[#01FFFF] transition-colors text-white cursor-pointer">
                 Υπηρεσίες
               </span>
-              <ul className="absolute left-0 mt-2 w-40 bg-[#040D12] shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                {['Placeholder 1', 'Placeholder 2', 'Placeholder 3'].map((item, index) => (
+              <ul className="absolute left-0 mt-2 w-48 bg-[#040D12] shadow-lg rounded-lg invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                {[
+                  { name: 'Εκτυπώσεις', path: '/prints' },
+                  { name: 'Γραφικές τέχνες', path: '/graphic-design' },
+                  { name: 'Έντυποδιανομές', path: '/flyer-distribution' },
+                  { name: 'Ιστοσελίδες', path: '/website-development' },
+                  { name: 'Έρευνα αγοράς', path: '/market-research' }
+                ].map((item, index) => (
                   <li key={index} className="px-4 py-2 hover:bg-[#01FFFF] hover:text-black">
-                    <Link href="#" className="block">
-                      {item}
+                    <Link 
+                      href={item.path} 
+                      className="block w-full h-full"
+                      onClick={(e) => {
+                        if (!item.path) {
+                          e.preventDefault();
+                        }
+                      }}
+                    >
+                      {item.name}
                     </Link>
                   </li>
                 ))}

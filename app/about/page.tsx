@@ -27,11 +27,16 @@ export default function AboutPage() {
 
         <div className="mb-16">
           <h2 className="text-3xl mb-6 text-[#01FFFF]">Η Ομάδα μας</h2>
-          <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
             <TeamMember 
               name="Μάνος Κωσμας"
               role="Διευθύνων Σύμβουλος"
-              imageSrc="https://scontent.fath4-2.fna.fbcdn.net/v/t1.6435-9/64245563_10214000324822545_724186126679539712_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Y6sBnHEsXl0Q7kNvgFvCANL&_nc_zt=23&_nc_ht=scontent.fath4-2.fna&_nc_gid=AUuBxwbYtKZHvubsd9FIzv8&oh=00_AYCwfglGVd9TGdPGnybHaOfYn-uUFDO1RqED3n8xVVi1Cw&oe=67B279D9"
+              imageSrc="https://i.imgur.com/RvCXgPE.jpeg"
+            />
+            <TeamMember 
+              name="Κωνσταντινος Μπλαβακης"
+              role="Web Developer"
+              imageSrc="https://i.imgur.com/rDfUjRC.jpeg"
             />
           </div>
         </div>

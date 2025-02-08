@@ -103,11 +103,11 @@ export default function TestimonialsSection() {
         <Slider {...settings}>
           {reviews.map((review, index) => (
             <div key={index} className="p-4">
-              <div className="bg-[#0A1A24] p-8 rounded-xl shadow-lg border border-transparent hover:border-[#01FFFF] transition-all duration-300 text-center h-80 flex flex-col justify-between">
+              <div className="bg-[var(--background)] p-8 rounded-xl shadow-lg border border-transparent hover:border-[var(--accent)] transition-all duration-300 text-center h-80 flex flex-col justify-between">
                 <div>
-                  <img src={review.image} alt={review.author_name} className="w-16 h-16 rounded-full mx-auto mb-4" />
+                  <img src="/placeholder.svg" alt={review.author_name} className="w-16 h-16 rounded-full mx-auto mb-4" />
                   <p className="mb-4 text-base italic text-white line-clamp-4">"{review.text}"</p>
-                  <h4 className="text-lg font-bold text-[#01FFFF]">{review.author_name}</h4>
+                  <h4 className="text-lg font-bold text-[var(--accent)]">{review.author_name}</h4>
                   <p className="text-xs text-gray-400">{review.time_ago}</p>
                 </div>
                 <div className="flex justify-center mt-2">

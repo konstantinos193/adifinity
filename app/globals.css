@@ -3,20 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: #07141C;
-  --accent: #01FFFF;
-  --text: #FFFFFF;
+  --background: #07141c;
+  --accent: #01ffff;
+  --text: #ffffff;
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold uppercase;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
   }
 }
 
@@ -25,10 +30,36 @@ body {
     @apply px-6 py-2 rounded-full font-bold transition-all duration-300 ease-in-out;
   }
   .btn-primary {
-    @apply bg-[#01FFFF] text-[#07141C] hover:bg-opacity-80;
+    @apply bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] hover:from-[#01A9FF] hover:to-[#01FFFF];
   }
   .btn-secondary {
     @apply border-2 border-[#01FFFF] text-[#01FFFF] hover:bg-[#01FFFF] hover:text-[#07141C];
   }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #01ffff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #01a9ff;
+}
+
+/* Graphic Design page specific styles */
+.graphic-design-bg {
+  background-image: url("/graphic-design-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
