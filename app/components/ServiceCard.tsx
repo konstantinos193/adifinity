@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 import { motion } from "framer-motion"
 import Link from "next/link"
 import type { LucideIcon } from "lucide-react"
@@ -39,4 +37,3 @@ export function ServiceCard({ icon: Icon, title, description, link }: ServiceCar
   )
 }
 
->>>>>>> 89be38c (Fixed syntax errors in projects data and added random sorting)

@@ -19,13 +19,8 @@ const chartData = {
   labels: ["Ιαν", "Φεβ", "Μαρ", "Απρ", "Μαι", "Ιουν"],
   datasets: [
     {
-<<<<<<< HEAD
-      label: "Πωλήσεις",
-      data: [45000, 48000, 52000, 49000, 54000, 57000],
-=======
       label: "Έτος",
       data: [2013, 2015, 2017, 2019, 2022, 2025],
->>>>>>> 89be38c (Fixed syntax errors in projects data and added random sorting)
       backgroundColor: "rgba(1, 255, 255, 0.6)",
       borderColor: "rgba(1, 255, 255, 1)",
       borderWidth: 1,
@@ -44,8 +39,6 @@ const options = {
       text: "Παράδειγμα Οπτικοποίησης Δεδομένων",
     },
   },
-<<<<<<< HEAD
-=======
   scales: {
     y: {
       min: 2012,
@@ -58,7 +51,6 @@ const options = {
       }
     }
   }
->>>>>>> 89be38c (Fixed syntax errors in projects data and added random sorting)
 }
 
 export function DataVisualization() {

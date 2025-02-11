@@ -63,8 +63,6 @@ body {
   background-position: center;
 }
 
-<<<<<<< HEAD
-=======
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #01FFFF #0A1A24;
@@ -85,4 +83,3 @@ body {
   border: 2px solid #0A1A24;
 }
 
->>>>>>> 89be38c (Fixed syntax errors in projects data and added random sorting)

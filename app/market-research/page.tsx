@@ -33,14 +33,8 @@ export default function MarketResearchPage() {
       title: "Έρευνα Καταναλωτών",
       description: "Κατανοούμε σε βάθος τις ανάγκες και προτιμήσεις του κοινού σας.",
       features: [
-<<<<<<< HEAD
-        "Δημοσκοπήσεις & focus groups για πραγματικά δεδομένα",
-        "Ανάλυση προτιμήσεων, αναγκών & αγοραστικής συμπεριφοράς",
-        "Δημιουργία personas για στοχευμένο marketing"
-=======
         "Δημοσκοπική έρευνα & focus groups για πραγματικά δεδομένα",
         "Ανάλυση προτιμήσεων, αναγκών & αγοραστικής συμπεριφοράς"
->>>>>>> 89be38c (Fixed syntax errors in projects data and added random sorting)
       ]
     },
     {
