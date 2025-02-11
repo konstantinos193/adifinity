@@ -46,6 +46,7 @@ export function CreativeProcess() {
                 {step.title}
               </h4>
 
+<<<<<<< HEAD
               <p className="text-gray-300 text-sm text-center mb-4">
                 {step.description}
               </p>
@@ -53,6 +54,11 @@ export function CreativeProcess() {
               <div className="text-[#01FFFF]/50 text-sm">
                 {(index + 1).toString().padStart(2, '0')}
               </div>
+=======
+              <p className="text-gray-300 text-sm text-center">
+                {step.description}
+              </p>
+>>>>>>> 89be38c (Fixed syntax errors in projects data and added random sorting)
             </motion.div>
           ))}
         </div>

@@ -42,9 +42,17 @@ export default function Header() {
               </Link>
             </li>
             <li className="relative group">
+<<<<<<< HEAD
               <span className="hover:text-[#01FFFF] transition-colors text-white cursor-pointer">
                 Υπηρεσίες
               </span>
+=======
+              <Link href="/services" className="hover:text-[#01FFFF] transition-colors text-white cursor-pointer">
+                <span className="hover:text-[#01FFFF] transition-colors text-white cursor-pointer">
+                  Υπηρεσίες
+                </span>
+              </Link>
+>>>>>>> 89be38c (Fixed syntax errors in projects data and added random sorting)
               <ul className="absolute left-0 mt-2 w-48 bg-[#040D12] shadow-lg rounded-lg invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
                 {[
                   { name: 'Εκτυπώσεις', path: '/prints' },
@@ -75,11 +83,6 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/contact#contact-form" className="hover:text-[#01FFFF] transition-colors text-white">
-                Επικοινωνία
-              </Link>
-            </li>
-            <li>
               <Link href="/projects" className="hover:text-[#01FFFF] transition-colors text-white">
                 Τα Έργα μας
               </Link>
@@ -87,7 +90,7 @@ export default function Header() {
           </ul>
         </nav>
         <Link href="/contact#contact-form">
-          <button className="btn btn-primary">Ελάτε σε Επαφή</button>
+          <button className="btn btn-primary">Επικοινωνία</button>
         </Link>
       </div>
     </motion.header>
