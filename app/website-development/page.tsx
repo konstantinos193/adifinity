@@ -57,13 +57,13 @@ export default function WebsiteDevelopmentPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
             Ιστοσελίδες
           </h1>
-          <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">
+          <h2 className="text-lg sm:text-xl md:text-2xl mb-8 text-[#01FFFF]">
             Ολοκληρωμένες λύσεις για την online παρουσία της επιχείρησής σας!
           </h2>
-          <p className="text-lg max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
             Στη σύγχρονη εποχή, η ιστοσελίδα σας είναι η ψηφιακή βιτρίνα της επιχείρησής σας. Από τον σχεδιασμό μέχρι τη φιλοξενία και τη συνεχή υποστήριξη, προσφέρουμε ολοκληρωμένες λύσεις που εξασφαλίζουν γρήγορη, ασφαλή και επαγγελματική διαδικτυακή παρουσία.
           </p>
         </motion.div>
@@ -74,7 +74,7 @@ export default function WebsiteDevelopmentPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-3xl font-bold mb-8 text-center">Οι υπηρεσίες μας περιλαμβάνουν:</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Οι υπηρεσίες μας περιλαμβάνουν:</h3>
           <ServiceTab services={services} />
         </motion.div>
 
@@ -84,8 +84,8 @@ export default function WebsiteDevelopmentPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h3 className="text-3xl font-bold mb-8 text-center">Γιατί να μας επιλέξετε;</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Γιατί να μας επιλέξετε;</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <FeatureCard key={index} feature={benefit} />
             ))}

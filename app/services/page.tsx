@@ -42,7 +42,7 @@ export default function ServicesPage() {
     <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
       <div className="container mx-auto px-4">
         <motion.h1
-          className="text-5xl md:text-7xl text-center mb-12 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]"
+          className="text-4xl md:text-7xl text-center mb-12 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -51,7 +51,7 @@ export default function ServicesPage() {
         </motion.h1>
 
         <motion.p
-          className="text-xl text-center mb-16 max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-center mb-16 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -61,7 +61,7 @@ export default function ServicesPage() {
         </motion.p>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -77,7 +77,7 @@ export default function ServicesPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h2 className="text-3xl font-bold mb-4">Δεν βρίσκετε αυτό που ψάχνετε;</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Δεν βρίσκετε αυτό που ψάχνετε;</h2>
           <p className="mb-8">Επικοινωνήστε μαζί μας για εξατομικευμένες λύσεις που ταιριάζουν στις ανάγκες σας.</p>
           <motion.button className="btn btn-primary" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             Επικοινωνήστε Μαζί Μας

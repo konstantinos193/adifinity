@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Palette, FileImage, Monitor, Layers } from "lucide-react"
-import { CreativeProcess } from "../components/CreativeProcess"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Palette, FileImage, Monitor, Layers } from "lucide-react";
+import { CreativeProcess } from "../components/CreativeProcess";
+import Link from "next/link";
 
 export default function GraphicDesignPage() {
   const services = [
@@ -19,7 +19,7 @@ export default function GraphicDesignPage() {
     },
     { icon: Monitor, title: "Ψηφιακά & Social Media Graphics", description: "Δυναμική παρουσία στον ψηφιακό κόσμο" },
     { icon: Layers, title: "Εξειδικευμένες Δημιουργίες", description: "Καινοτόμες λύσεις για κάθε ανάγκη" },
-  ]
+  ];
 
   return (
     <main className="min-h-screen py-20 overflow-hidden bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
@@ -42,7 +42,7 @@ export default function GraphicDesignPage() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,7 +78,7 @@ export default function GraphicDesignPage() {
           </p>
           <Link href="/contact#contact-form">
             <motion.button 
-              className="btn btn-primary mt-4" 
+              className="btn btn-primary mt-4 py-3 px-6 text-xl" 
               whileHover={{ scale: 1.05 }} 
               whileTap={{ scale: 0.95 }}
             >
@@ -88,6 +88,5 @@ export default function GraphicDesignPage() {
         </motion.div>
       </div>
     </main>
-  )
+  );
 }
-

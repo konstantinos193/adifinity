@@ -25,7 +25,7 @@ export default function MarketResearchPage() {
       features: [
         "Ανάλυση ανταγωνιστών & σύγκριση στρατηγικών",
         "SWOT Analysis για αξιολόγηση θέσης στην αγορά",
-        "Προτάσεις διαφοροποίησης & ανταγωνιστικού πλεονεκτήματος"
+        "Προτάσεις διαφοροποίησης & ανταγωνιστικού πλεονέκτηματος"
       ]
     },
     {
@@ -65,13 +65,13 @@ export default function MarketResearchPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
             Έρευνα Αγοράς
           </h1>
-          <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">
+          <h2 className="text-lg sm:text-xl md:text-2xl mb-8 text-[#01FFFF]">
             Γνωρίστε το κοινό σας, κατακτήστε την αγορά!
           </h2>
-          <p className="text-lg max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
             Η σωστή στρατηγική ξεκινά με δεδομένα! Η έρευνα αγοράς είναι το κλειδί για να κατανοήσετε το κοινό σας, να αναλύσετε τον ανταγωνισμό και να πάρετε στρατηγικές αποφάσεις που θα ενισχύσουν την επιχείρησή σας.
           </p>
         </motion.div>
@@ -82,8 +82,8 @@ export default function MarketResearchPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-3xl font-bold mb-8 text-center">Οι υπηρεσίες μας περιλαμβάνουν:</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Οι υπηρεσίες μας περιλαμβάνουν:</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <ResearchService key={index} {...service} />
             ))}
@@ -96,7 +96,7 @@ export default function MarketResearchPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h3 className="text-3xl font-bold mb-8 text-center">Οπτικοποίηση Δεδομένων</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Οπτικοποίηση Δεδομένων</h3>
           <DataVisualization />
         </motion.div>
 

@@ -6,7 +6,7 @@ import { ProjectCard } from "../components/ProjectCard"
 import { ProjectModal } from "../components/ProjectModal"
 import { FilterButton } from "../components/FilterButton"
 
-const projects = [
+export const projects = [
   {
     id: 1,
     name: "Α.Π.Ο.Φ.Α",
@@ -365,7 +365,7 @@ export default function ProjectsPage() {
     <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
       <div className="container mx-auto px-4">
         <motion.h1
-          className="text-5xl md:text-7xl text-center mb-12 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]"
+          className="text-4xl md:text-7xl text-center mb-12 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -395,7 +395,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
             <AnimatePresence>
               {filteredProjects.map((project) => (
                 <motion.div

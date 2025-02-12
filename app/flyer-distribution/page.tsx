@@ -53,13 +53,13 @@ export default function FlyerDistributionPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
             Έντυποδιανομές
           </h1>
-          <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">
+          <h2 className="text-lg sm:text-xl md:text-2xl mb-8 text-[#01FFFF]">
             Στοχευμένη διανομή εντύπων για μέγιστη προβολή!
           </h2>
-          <p className="text-lg max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
             Η έντυπη διαφήμιση παραμένει ένας από τους πιο αποτελεσματικούς τρόπους προώθησης, αρκεί να φτάσει στο σωστό κοινό. Η εταιρεία μας αναλαμβάνει τη στρατηγική διανομή φυλλαδίων, καταλόγων και διαφημιστικών εντύπων σε στοχευμένες τοποθεσίες, εξασφαλίζοντας μέγιστη απήχηση και άμεσα αποτελέσματα.
           </p>
         </motion.div>
@@ -70,8 +70,8 @@ export default function FlyerDistributionPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-3xl font-bold mb-8 text-center">Τύποι Έντυποδιανομής που προσφέρουμε:</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Τύποι Έντυποδιανομής που προσφέρουμε:</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {distributionTypes.map((type, index) => (
               <DistributionType key={index} {...type} />
             ))}
@@ -84,8 +84,8 @@ export default function FlyerDistributionPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h3 className="text-3xl font-bold mb-8 text-center">Γιατί να επιλέξετε εμάς;</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-8 text-center">Γιατί να επιλέξετε εμάς;</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <BenefitCard key={index} benefit={benefit} />
             ))}

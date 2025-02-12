@@ -54,10 +54,10 @@ function NextArrow(props: any) {
   const { onClick } = props;
   return (
     <div
-      className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 cursor-pointer z-10"
+      className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 cursor-pointer z-10"
       onClick={onClick}
     >
-      <ChevronRightIcon className="w-8 h-8 text-[#01FFFF]" />
+      <ChevronRightIcon className="w-6 h-6 text-[#01FFFF]" />
     </div>
   );
 }
@@ -66,10 +66,10 @@ function PrevArrow(props: any) {
   const { onClick } = props;
   return (
     <div
-      className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 cursor-pointer z-10"
+      className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 cursor-pointer z-10"
       onClick={onClick}
     >
-      <ChevronLeftIcon className="w-8 h-8 text-[#01FFFF]" />
+      <ChevronLeftIcon className="w-6 h-6 text-[#01FFFF]" />
     </div>
   );
 }
@@ -81,8 +81,8 @@ export default function TestimonialsSection() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -97,16 +97,16 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section id="μαρτυρίες" className="py-20 bg-gradient-to-b from-[#0A1A24] to-[#07141C]">
+    <section id="μαρτυρίες" className="py-10 bg-gradient-to-b from-[#0A1A24] to-[#07141C]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl text-center mb-12 text-[#01FFFF]">Η Φωνή των Πελατών μας</h2>
+        <h2 className="text-3xl text-center mb-8 text-[#01FFFF]">Η Φωνή των Πελατών μας</h2>
         <Slider {...settings}>
           {reviews.map((review, index) => (
             <div key={index} className="p-4">
-              <div className="bg-[var(--background)] p-8 rounded-xl shadow-lg border border-transparent hover:border-[var(--accent)] transition-all duration-300 text-center h-80 flex flex-col justify-between">
+              <div className="bg-[var(--background)] p-6 rounded-xl shadow-lg border border-transparent hover:border-[var(--accent)] transition-all duration-300 text-center h-auto flex flex-col justify-between">
                 <div>
                   <img src="/placeholder.svg" alt={review.author_name} className="w-16 h-16 rounded-full mx-auto mb-4" />
-                  <p className="mb-4 text-base italic text-white line-clamp-4">"{review.text}"</p>
+                  <p className="mb-4 text-sm italic text-white line-clamp-4">"{review.text}"</p>
                   <h4 className="text-lg font-bold text-[var(--accent)]">{review.author_name}</h4>
                   <p className="text-xs text-gray-400">{review.time_ago}</p>
                 </div>

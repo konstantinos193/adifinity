@@ -24,7 +24,7 @@ export default function ServicesSection() {
     <section id="υπηρεσίες" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl text-center mb-12">Οι Υπηρεσίες Μας</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -33,9 +33,9 @@ export default function ServicesSection() {
               animate={{ opacity: 1, y: 0, borderColor: '#01FFFF' }}
               transition={{ duration: 0.5 }}
             >
-              <service.icon className="w-12 h-12 text-[#01FFFF] mb-4" />
-              <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              <p className="opacity-80">{service.description}</p>
+              <service.icon className="w-12 h-12 text-[#01FFFF] mb-4 mx-auto" />
+              <h3 className="text-xl font-bold mb-2 text-center">{service.title}</h3>
+              <p className="opacity-80 text-center">{service.description}</p>
             </motion.div>
           ))}
         </div>
