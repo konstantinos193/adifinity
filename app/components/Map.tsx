@@ -21,9 +21,8 @@ export default function Map() {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    L.marker([39.161524, 20.9820707]).addTo(map)
-      .bindPopup('adinfinity')
-      .openPopup();
+    // Add marker without popup
+    L.marker([39.161524, 20.9820707]).addTo(map);
 
     return () => {
       map.remove();

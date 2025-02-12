@@ -41,67 +41,69 @@ export default function Header() {
   ]
 
   return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-40 transition-colors duration-300 ${
-        isScrolled ? 'bg-[#030B10]/95 backdrop-blur-sm' : 'bg-[#040D12]'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          <Link href="/">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={120}
-              height={120}
-              className="w-24 md:w-32"
-            />
-          </Link>
+    <>
+      <motion.header
+        className={`fixed top-0 left-0 right-0 z-[100] transition-colors duration-300 ${
+          isScrolled ? 'bg-[#030B10]/95 backdrop-blur-sm' : 'bg-[#040D12]'
+        }`}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={120}
+                height={120}
+                className="w-24 md:w-32"
+              />
+            </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:block">
-            <ul className="flex space-x-6">
-              {menuItems.map((item, index) => (
-                <li key={index} className="relative group">
-                  <Link href={item.path} className="hover:text-[#01FFFF] transition-colors text-white">
-                    {item.name}
-                  </Link>
-                  {item.dropdownItems && (
-                    <ul className="absolute left-0 mt-2 w-48 bg-[#040D12] shadow-lg rounded-lg invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
-                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
-                        <li key={dropdownIndex} className="px-4 py-2 hover:bg-[#01FFFF] hover:text-black">
-                          <Link href={dropdownItem.path} className="block w-full h-full">
-                            {dropdownItem.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </nav>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:block">
+              <ul className="flex space-x-6">
+                {menuItems.map((item, index) => (
+                  <li key={index} className="relative group">
+                    <Link href={item.path} className="hover:text-[#01FFFF] transition-colors text-white">
+                      {item.name}
+                    </Link>
+                    {item.dropdownItems && (
+                      <ul className="absolute left-0 mt-2 w-48 bg-[#040D12] shadow-lg rounded-lg invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                          <li key={dropdownIndex} className="px-4 py-2 hover:bg-[#01FFFF] hover:text-black">
+                            <Link href={dropdownItem.path} className="block w-full h-full">
+                              {dropdownItem.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white p-2 hover:text-[#01FFFF] transition-colors"
-              aria-label="Menu"
-            >
-              <Bars3Icon className="h-6 w-6" />
-            </button>
+            {/* Mobile Menu Button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-white p-2 hover:text-[#01FFFF] transition-colors"
+                aria-label="Menu"
+              >
+                <Bars3Icon className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Contact Button (Desktop) */}
+            <Link href="/contact#contact-form" className="hidden md:block">
+              <button className="btn btn-primary">Επικοινωνία</button>
+            </Link>
           </div>
-
-          {/* Contact Button (Desktop) */}
-          <Link href="/contact#contact-form" className="hidden md:block">
-            <button className="btn btn-primary">Επικοινωνία</button>
-          </Link>
         </div>
-      </div>
+      </motion.header>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
@@ -112,7 +114,7 @@ export default function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+              className="fixed inset-0 bg-black/50 z-[998] md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
@@ -122,7 +124,8 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-[300px] bg-[#030B10] z-50 md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-[100dvh] w-[300px] bg-[#030B10] z-[999] md:hidden overflow-y-auto"
+              style={{ position: 'fixed' }}
             >
               <div className="p-6">
                 <div className="flex justify-between items-center mb-8">
@@ -179,6 +182,6 @@ export default function Header() {
           </>
         )}
       </AnimatePresence>
-    </motion.header>
+    </>
   )
 }

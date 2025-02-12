@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { projects } from '../projects/page' // Ensure this path is correct
+// Import projects data directly if your setup allows it
+import projectsData from '../data/projects.json' // Adjust the path as necessary
 
 export default function LogoCarousel() {
-  const logos = projects.map(project => project.image) // Extract logos from projects
+  // Use the imported projects data
+  const logos = projectsData.projects.map(project => project.image) // Extract logos from projects
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextLogo = () => {
