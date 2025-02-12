@@ -1,38 +1,14 @@
 'use client';
 
-import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
 
-// Fix for missing marker icons
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-});
+// Dynamically import the map component
+const Map = dynamic(() => import('../components/Map'), { ssr: false });
 
 export default function ContactPage() {
-  useEffect(() => {
-    const map = L.map('map').setView([39.161524, 20.9820707], 15);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
-
-    L.marker([39.161524, 20.9820707]).addTo(map)
-      .bindPopup('adinfinity')
-      .openPopup();
-
-    return () => {
-      map.remove();
-    };
-  }, []);
-
   return (
     <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
       <div className="container mx-auto px-4">
@@ -80,7 +56,7 @@ export default function ContactPage() {
               </div>
               
               <div className="bg-[#0A1A24] p-6 rounded-lg h-64 sm:h-80">
-                <div id="map" className="w-full h-full"></div>
+                <Map />
               </div>
             </div>
           </div>
