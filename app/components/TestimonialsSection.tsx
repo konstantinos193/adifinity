@@ -14,13 +14,6 @@ interface Review {
 
 const staticReviews: Review[] = [
   {
-    author_name: 'Pit Karajohn',
-    rating: 5,
-    text: 'Άριστοι επαγγελματίες με εμπειρία ετών στο χώρο. Με διαφορά το καλύτερο γραφείο στην περιοχή',
-    image: 'https://lh3.googleusercontent.com/a/ACg8ocKlC7XOBYxeV9wcDuaCS7gBZ1L63KPDKtfhXqxgbaQf4K39Fg=w36-h36-p-rp-mo-ba2-br100',
-    time_ago: 'πριν από 2 μήνες',
-  },
-  {
     author_name: 'ΣΤΕΦΑΝΟΣ ΜΑΛΕΣΚΟΣ',
     rating: 5,
     text: 'Γνώστες του αντικειμένου, άψογη εξυπηρέτηση και άριστη συνεργασία.',

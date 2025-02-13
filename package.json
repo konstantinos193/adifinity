@@ -1,6 +1,6 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "adifinity",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.0",
     "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "latest",
     "@hookform/resolvers": "^3.9.1",
