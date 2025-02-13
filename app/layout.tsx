@@ -39,6 +39,8 @@ export default function RootLayout({
   return (
     <html lang="el">
       <head>
+        {/* Google Site Verification */}
+        <meta name="google-site-verification" content="jtMtOJZf8BIpM68R5nn5ZSR4YqqnbplmWlIjHlzPArA" />
         {/* Viewport for responsive design */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
