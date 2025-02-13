@@ -26,12 +26,12 @@ export default function AboutPage() {
           <h2 className="text-2xl sm:text-3xl mb-6 text-[#01FFFF]">Η Ομάδα μας</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
             <TeamMember 
-              name="Μάνος Κωσμας"
+              name="Μάνος Κωσμάς"
               role="Διευθύνων Σύμβουλος"
               imageSrc="https://i.imgur.com/RvCXgPE.jpeg"
             />
             <TeamMember 
-              name="Κωνσταντινος Μπλαβακης"
+              name="Κωνσταντίνος Μπλαβάκης"
               role="Web Developer"
               imageSrc="https://i.imgur.com/rDfUjRC.jpeg"
             />
