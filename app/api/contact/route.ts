@@ -1,37 +1,37 @@
 import { NextResponse } from 'next/server'
-import emailjs from '@emailjs/browser'
+import nodemailer from 'nodemailer'
 
-// Initialize EmailJS with your public key
-emailjs.init(process.env.EMAILJS_PUBLIC_KEY!)
+export async function POST(request: Request) {
+  const { name, email, message } = await request.json()
 
-export async function POST(req: Request) {
+  // Configure email transporter
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  })
+
   try {
-    const { name, email, message } = await req.json()
+    // Send email
+    await transporter.sendMail({
+      from: `"Contact Form" <${process.env.EMAIL_USER}>`,
+      to: 'adenfinity@gmail.com',
+      subject: `New message from ${name}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+    })
 
-    // Validate input
-    if (!name || !email || !message) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      )
-    }
-
-    await emailjs.send(
-      process.env.EMAILJS_SERVICE_ID!,
-      process.env.EMAILJS_TEMPLATE_ID!,
-      {
-        from_name: name,
-        from_email: email,
-        message: message,
-        to_email: process.env.DESTINATION_EMAIL,
-      }
-    )
-
-    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 })
+    return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Email error:', error)
+    console.error(error)
     return NextResponse.json(
-      { error: 'Failed to send email', details: error.message },
+      { success: false },
       { status: 500 }
     )
   }
