@@ -6,6 +6,7 @@ import ServicesSection from './components/ServicesSection'
 import LogoCarousel from './components/LogoCarousel'
 import TestimonialsSection from './components/TestimonialsSection'
 import ContactSection from './components/ContactSection'
+import { Analytics } from '@vercel/analytics/next';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <LogoCarousel />
       <TestimonialsSection />
+      <Analytics />
     </main>
   )
 }
