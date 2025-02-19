@@ -33,7 +33,7 @@ export default function AboutPage() {
             <TeamMember 
               name="Κωνσταντίνος Μπλαβάκης"
               role="Web Developer"
-              imageSrc="https://i.imgur.com/rDfUjRC.jpeg"
+              imageSrc="https://i.postimg.cc/FHH2qc1B/viber-image-2025-02-18-19-25-40-199.jpg"
             />
           </div>
         </div>
