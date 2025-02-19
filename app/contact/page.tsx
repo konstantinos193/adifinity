@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Dynamically import the map component
 const Map = dynamic(() => import('../components/Map'), { ssr: false });
@@ -62,6 +63,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      <SpeedInsights />
     </main>
   );
 }

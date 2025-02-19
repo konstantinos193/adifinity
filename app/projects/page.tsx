@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ProjectCard } from "../components/ProjectCard"
 import { ProjectModal } from "../components/ProjectModal"
 import projectData from "../data/projects.json"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<(typeof projectData.projects)[0] | null>(null)
@@ -63,6 +64,7 @@ export default function ProjectsPage() {
 
         <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
       </div>
+      <SpeedInsights />
     </main>
   )
 }

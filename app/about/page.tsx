@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { TeamMember } from '../components/TeamMember';
 import { Timeline } from '../components/Timeline';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function AboutPage() {
   return (
@@ -60,6 +61,7 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+      <SpeedInsights />
     </main>
   );
 }

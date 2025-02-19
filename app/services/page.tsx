@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ServiceCard } from "../components/ServiceCard"
 import { Megaphone, Palette, LineChart, Printer, Globe } from "lucide-react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const services = [
   {
@@ -84,6 +85,7 @@ export default function ServicesPage() {
           </motion.button>
         </motion.div>
       </div>
+      <SpeedInsights />
     </main>
   )
 }

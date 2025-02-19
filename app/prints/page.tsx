@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Maximize2, Sparkles, Package } from "lucide-react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const IconComponent = ({ type }: { type: string }) => {
   switch (type) {
@@ -176,6 +177,7 @@ function PrintsPage() {
           </div>
         </motion.div>
       </motion.div>
+      <SpeedInsights />
     </div>
   );
 }
