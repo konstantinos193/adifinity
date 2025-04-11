@@ -4,7 +4,6 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import projectsData from "../data/projects.json"
 
 export default function LogoCarousel() {
@@ -178,14 +177,26 @@ export default function LogoCarousel() {
             </AnimatePresence>
           </div>
 
-          {/* Navigation buttons with proper styling and positioning */}
+          {/* Navigation buttons with custom SVG arrows */}
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-5">
             <button
               onClick={prevLogo}
               className="bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors"
               aria-label="Previous logo"
             >
-              <ChevronLeft size={24} />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#071218"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
             </button>
           </div>
 
@@ -195,7 +206,19 @@ export default function LogoCarousel() {
               className="bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors"
               aria-label="Next logo"
             >
-              <ChevronRight size={24} />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#071218"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
             </button>
           </div>
 

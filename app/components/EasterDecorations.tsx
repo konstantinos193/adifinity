@@ -2,72 +2,61 @@
 
 import { useEffect, useState, useRef } from "react"
 import { createPortal } from "react-dom"
+import Image from "next/image"
 
 // Easter egg SVG with different colors
-const EasterEggSVG = ({ color1, color2, id }: { color1: string; color2: string; id: number }) => (
-  <svg
-    width="24"
-    height="30"
-    viewBox="0 0 24 30"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-label="Falling Easter egg"
-  >
-    {/* Egg shape */}
-    <path
-      d="M12 2C8 2 4 8 4 15C4 22 8 28 12 28C16 28 20 22 20 15C20 8 16 2 12 2Z"
-      fill={`url(#egg-gradient-${id})`}
-      stroke="#01FFFF"
-      strokeWidth="1.5"
-      filter="url(#egg-shadow)"
-    />
-
-    {/* Playful patterns */}
-    <path d="M8 10 Q9 8 10 10 T12 12" stroke="#FF4081" strokeWidth="1" strokeLinecap="round" />
-    <circle cx="16" cy="12" r="1.5" fill={color2} />
-    <path d="M10 20 L12 22 L14 20" stroke="#FF4081" strokeWidth="1" strokeLinecap="round" />
-
-    <defs>
-      {/* Gradient for egg */}
-      <linearGradient id={`egg-gradient-${id}`} x1="4" y1="2" x2="20" y2="28" gradientUnits="userSpaceOnUse">
-        <stop stopColor={color1} />
-        <stop offset="1" stopColor={color2} />
-      </linearGradient>
-
-      {/* Shadow for egg */}
-      <filter id="egg-shadow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="1" />
-        <feOffset dx="0" dy="1" result="offsetblur" />
-        <feComponentTransfer>
-          <feFuncA type="linear" slope="0.2" />
-        </feComponentTransfer>
-        <feMerge>
-          <feMergeNode />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
-  </svg>
+const EasterEggSVG = ({ id }: { id: number }) => (
+  <Image
+    src="/easteregg.svg"
+    alt="Falling Easter egg"
+    width={32}
+    height={40}
+    className="w-[32px] h-[40px] dark:opacity-90 transition-all duration-300 ease-in-out"
+    style={{ maxWidth: '32px', maxHeight: '40px' }}
+  />
 )
 
-// Define egg color combinations
+// Define egg color combinations with dark mode variants
 const eggColors = [
-  { color1: "#FFD1DC", color2: "#FF9AA2" }, // Pink
-  { color1: "#B5EAD7", color2: "#78C2AD" }, // Mint
-  { color1: "#C7CEEA", color2: "#8B9DC3" }, // Lavender
-  { color1: "#FFF1AC", color2: "#FDFD96" }, // Yellow
-  { color1: "#FF9AA2", color2: "#E27396" }, // Rose
+  { 
+    color1: "#C9E3F7", 
+    color2: "#AED5F3",
+    darkColor1: "#E6F3FC",
+    darkColor2: "#C9E3F7"
+  },
+  { 
+    color1: "#FFD1DC", 
+    color2: "#FF9AA2",
+    darkColor1: "#ffe6ec",
+    darkColor2: "#ffb3b9"
+  },
+  { 
+    color1: "#B5EAD7", 
+    color2: "#78C2AD",
+    darkColor1: "#d9f2e6",
+    darkColor2: "#99d6c2"
+  },
+  { 
+    color1: "#C7CEEA", 
+    color2: "#8B9DC3",
+    darkColor1: "#e6ebff",
+    darkColor2: "#b3bfdb"
+  },
+  { 
+    color1: "#FFF1AC", 
+    color2: "#FDFD96",
+    darkColor1: "#fff7d9",
+    darkColor2: "#ffefb3"
+  }
 ]
 
 const FallingEgg = ({
   delay,
   left,
-  colorSet,
   id,
 }: {
   delay: number
   left: string
-  colorSet: { color1: string; color2: string }
   id: number
 }) => {
   const [position, setPosition] = useState(-50)
@@ -122,7 +111,7 @@ const FallingEgg = ({
         zIndex: 40,
       }}
     >
-      <EasterEggSVG color1={colorSet.color1} color2={colorSet.color2} id={id} />
+      <EasterEggSVG id={id} />
     </div>
   )
 }
@@ -157,13 +146,12 @@ export default function EasterDecorations() {
   // Only render when mounted and Easter theme is enabled
   if (!mounted || !isEasterTheme) return null
 
-  // Generate 8 falling eggs (reduced for less clutter) with random positions and delays
+  // Generate 8 falling eggs with random positions and delays
   const eggs = Array.from({ length: 8 }).map((_, i) => {
-    const randomColorSet = eggColors[Math.floor(Math.random() * eggColors.length)]
     const randomDelay = Math.random() * 5 // Random delay between 0-5s
     const randomLeft = `${Math.random() * 98}%` // Random horizontal position
 
-    return <FallingEgg key={i} delay={randomDelay} left={randomLeft} colorSet={randomColorSet} id={i} />
+    return <FallingEgg key={i} delay={randomDelay} left={randomLeft} id={i} />
   })
 
   // Use portal to render at the root level

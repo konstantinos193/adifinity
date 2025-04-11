@@ -89,6 +89,11 @@ body {
   --text: #ffffff;
 }
 
+/* Prevent global --text from overriding specific color classes */
+.easter-theme *:not([class*="text-"]) {
+  color: var(--text);
+}
+
 /* Easter-themed buttons */
 .easter-theme .btn-primary {
   @apply bg-gradient-to-r from-[#FFD1DC] to-[#C7CEEA] text-[#07141C] hover:from-[#C7CEEA] hover:to-[#FFD1DC];
@@ -99,11 +104,11 @@ body {
 }
 
 /* Easter-themed scrollbar */
-.easter-theme ::-webkit-scrollbar-thumb {
+.easter-theme :not(svg)::-webkit-scrollbar-thumb {
   background: #ffd1dc;
 }
 
-.easter-theme ::-webkit-scrollbar-thumb:hover {
+.easter-theme :not(svg)::-webkit-scrollbar-thumb:hover {
   background: #c7ceea;
 }
 
@@ -128,49 +133,57 @@ body {
   animation: float-egg 6s ease-in-out infinite;
 }
 
-/* Easter-themed text colors - EXCLUDING SVGs */
-.easter-theme h1[class*="text-[#01FFFF]"],
-.easter-theme h2[class*="text-[#01FFFF]"],
-.easter-theme h3[class*="text-[#01FFFF]"],
-.easter-theme h4[class*="text-[#01FFFF]"],
-.easter-theme p[class*="text-[#01FFFF]"],
-.easter-theme span[class*="text-[#01FFFF]"],
-.easter-theme div[class*="text-[#01FFFF]"]:not(svg *),
-.easter-theme a[class*="text-[#01FFFF]"],
-.easter-theme button[class*="text-[#01FFFF]"] {
+/* Easter-themed text colors - EXCLUDING SVGs and their containers */
+.easter-theme h1[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme h2[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme h3[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme h4[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme p[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme span[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme div[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme a[class*="text-[#01FFFF]"]:not(:has(svg)),
+.easter-theme button[class*="text-[#01FFFF]"]:not(:has(svg)) {
   color: #ffd1dc;
 }
 
-/* Easter-themed borders - EXCLUDING SVGs */
-.easter-theme div[class*="border-[#01FFFF]"]:not(svg *),
-.easter-theme button[class*="border-[#01FFFF]"] {
+/* Easter-themed borders - EXCLUDING SVGs and their containers */
+.easter-theme div[class*="border-[#01FFFF]"]:not(:has(svg)),
+.easter-theme button[class*="border-[#01FFFF]"]:not(:has(svg)) {
   border-color: #ffd1dc;
 }
 
-/* Easter-themed gradients - EXCLUDING SVGs */
-.easter-theme div[class*="from-[#01FFFF]"]:not(svg *),
-.easter-theme button[class*="from-[#01FFFF]"] {
+/* Easter-themed gradients - EXCLUDING SVGs and their containers */
+.easter-theme div[class*="from-[#01FFFF]"]:not(:has(svg)),
+.easter-theme button[class*="from-[#01FFFF]"]:not(:has(svg)) {
   --tw-gradient-from: #ffd1dc var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(255 209 220 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.easter-theme div[class*="to-[#01A9FF]"]:not(svg *),
-.easter-theme button[class*="to-[#01A9FF]"] {
+.easter-theme div[class*="to-[#01A9FF]"]:not(:has(svg)),
+.easter-theme button[class*="to-[#01A9FF]"]:not(:has(svg)) {
   --tw-gradient-to: #c7ceea var(--tw-gradient-to-position);
 }
 
-/* Preserve SVG elements */
-.easter-theme svg,
-.easter-theme svg *,
-.easter-theme path,
-.easter-theme circle,
-.easter-theme rect {
-  fill: currentColor;
-  stroke: currentColor;
+/* Protect SVGs with explicit fill/stroke attributes (from EasterThemeToggle fix) */
+.easter-theme svg[fill],
+.easter-theme svg *[fill],
+.easter-theme svg[stroke],
+.easter-theme svg *[stroke] {
+  fill: attr(fill) !important;
+  stroke: attr(stroke) !important;
 }
 
-/* Don't override SVG fills and strokes with explicit attributes */
+/* MODIFIED: Fallback for SVGs without explicit fill/stroke - More specific to avoid breaking visibility */
+.easter-theme svg:not([fill]):not([class*="text-[#01FFFF]"]) {
+  fill: none !important;
+}
+
+.easter-theme svg:not([stroke]):not([class*="text-[#01FFFF]"]) {
+  stroke: none !important;
+}
+
+/* Preserve explicit SVG fills and strokes */
 svg[fill]:not([fill="currentColor"]),
 path[fill]:not([fill="currentColor"]),
 circle[fill]:not([fill="currentColor"]),
@@ -183,4 +196,18 @@ path[stroke]:not([stroke="currentColor"]),
 circle[stroke]:not([stroke="currentColor"]),
 rect[stroke]:not([stroke="currentColor"]) {
   stroke: attr(stroke) !important;
+}
+
+/* Protect SVGs with text-[#01FFFF] class in Easter theme (from ServicesSection fix) */
+.easter-theme svg[class*="text-[#01FFFF]"],
+.easter-theme svg[class*="text-[#01FFFF]"] * {
+  color: #ffd1dc !important; /* Match the parent's color change */
+  fill: none !important; /* Lucide icons should remain unfilled */
+  stroke: currentColor !important; /* Use the parent's color (should be #ffd1dc) */
+}
+
+/* NEW: Allow custom SVGs with fill="#01FFFF" to change to the Easter theme accent */
+.easter-theme svg[fill="#01FFFF"],
+.easter-theme svg *[fill="#01FFFF"] {
+  fill: #ffd1dc !important;
 }

@@ -47,7 +47,7 @@ export default function EasterBanner() {
 
   return (
     <motion.div
-      className="relative w-full bg-gradient-to-r from-[#FFD1DC] to-[#C7CEEA] text-[#07141C] py-4 px-4 text-center mt-16 z-10"
+      className="relative w-full bg-gradient-to-r from-[#FFD1DC] to-[#C7CEEA] dark:from-[#ffe6ec] dark:to-[#e6ebff] text-[#07141C] dark:text-[#1a1a1a] py-4 px-4 text-center mt-16 z-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -64,7 +64,7 @@ export default function EasterBanner() {
         </div>
         <button
           onClick={dismissBanner}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#07141C]/70 hover:text-[#07141C]"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#07141C]/70 hover:text-[#07141C] dark:text-[#1a1a1a]/70 dark:hover:text-[#1a1a1a]"
           aria-label="Dismiss Easter banner"
         >
           <X size={20} />

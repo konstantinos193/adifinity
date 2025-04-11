@@ -27,81 +27,65 @@ const PrinterIcon = () => (
 const PremiumIcon = () => (
   <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#01FFFF] to-[#01A9FF] rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/20">
     <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]">
-      <path
-        d="M12 3L16 10L22 11L17 16L18 22L12 19L6 22L7 16L2 11L8 10L12 3Z"
-        fill="currentColor"
-        fillOpacity="0.2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12 7L14 12L19 12.5L15.5 16L16.5 20L12 18L7.5 20L8.5 16L5 12.5L10 12L12 7Z"
-        fill="white"
-        stroke="currentColor"
-        strokeWidth="0.75"
-        strokeLinejoin="round"
-      />
-      <circle cx="12" cy="12" r="1" fill="currentColor" />
+      {/* Box base */}
+      <rect x="5" y="8" width="14" height="12" rx="2" fill="currentColor" fillOpacity="0.2" stroke="currentColor" strokeWidth="1.5" />
+      
+      {/* Lid */}
+      <rect x="4" y="5" width="16" height="4" rx="1" fill="white" stroke="currentColor" strokeWidth="1" />
+
+      {/* Ribbon vertical */}
+      <line x1="12" y1="5" x2="12" y2="20" stroke="currentColor" strokeWidth="0.75" />
+      
+      {/* Ribbon bow */}
+      <path d="M10 5C9.5 4 8 3.5 7 4.5C6 5.5 6.5 7 8 7L10 5Z" fill="white" stroke="currentColor" strokeWidth="0.75" />
+      <path d="M14 5C14.5 4 16 3.5 17 4.5C18 5.5 17.5 7 16 7L14 5Z" fill="white" stroke="currentColor" strokeWidth="0.75" />
     </svg>
   </div>
-)
+);
+
 
 const PackageIcon = () => (
   <div className="relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#01FFFF] to-[#01A9FF] rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/20">
     <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]">
-      <path
-        d="M21 10V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V10"
-        fill="currentColor"
-        fillOpacity="0.2"
-      />
-      <path
-        d="M21 10V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V10"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M3 10L12 4L21 10"
+      {/* Envelope base */}
+      <rect
+        x="3"
+        y="6"
+        width="18"
+        height="12"
+        rx="2"
         fill="currentColor"
         fillOpacity="0.2"
         stroke="currentColor"
         strokeWidth="1.5"
-        strokeLinecap="round"
+      />
+      {/* Envelope flap */}
+      <path
+        d="M3 6L12 13L21 6"
+        fill="white"
+        stroke="currentColor"
+        strokeWidth="1.5"
         strokeLinejoin="round"
       />
+      {/* Fold line detail */}
       <path
-        d="M16 20V14C16 13.4477 15.5523 13 15 13H9C8.44772 13 8 13.4477 8 14V20"
+        d="M3 18L10.5 11.5"
         stroke="currentColor"
-        strokeWidth="1.5"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeOpacity="0.6"
       />
-      <path d="M12 4V8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M10.5 8.5L13.5 8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path
+        d="M21 18L13.5 11.5"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeOpacity="0.6"
+      />
     </svg>
   </div>
-)
+);
 
-// Custom Feature Icons
-const HighQualityIcon = () => (
-  <svg className="w-8 h-8 text-[#01FFFF]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Diamond shape */}
-    <path
-      d="M12 2L22 12L12 22L2 12L12 2Z"
-      fill="currentColor"
-      fillOpacity="0.1"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinejoin="round"
-    />
-    {/* Checkmark */}
-    <path d="M8 12L11 15L16 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    {/* Quality indicator lines */}
-    <path d="M12 6V7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M12 17V18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M6 12H7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M17 12H18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-  </svg>
-)
 
 const FastDeliveryIcon = () => (
   <svg className="w-8 h-8 text-[#01FFFF]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,6 +98,31 @@ const FastDeliveryIcon = () => (
     <path d="M19 19L21 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     <path d="M5 5L3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     <path d="M5 19L3 21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+)
+
+const HighQualityIcon = () => (
+  <svg className="w-8 h-8 text-[#01FFFF]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Diamond shape */}
+    <path
+      d="M12 3L20 8V16L12 21L4 16V8L12 3Z"
+      fill="currentColor"
+      fillOpacity="0.1"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    />
+    {/* Star in center */}
+    <path
+      d="M12 8L13.5 10.5L16 11L14 13L14.5 15.5L12 14.25L9.5 15.5L10 13L8 11L10.5 10.5L12 8Z"
+      fill="currentColor"
+      stroke="currentColor"
+      strokeWidth="0.5"
+    />
+    {/* Quality marks */}
+    <path d="M12 3V5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M12 19V21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M4 12H6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    <path d="M18 12H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
   </svg>
 )
 
