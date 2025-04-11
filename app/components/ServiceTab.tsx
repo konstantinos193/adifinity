@@ -18,8 +18,8 @@ export function ServiceTab({ services }: ServiceTabProps) {
   const [activeTab, setActiveTab] = useState(0)
 
   return (
-    <div className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] rounded-lg shadow-lg overflow-hidden">
-      <div className="flex border-b border-[#01FFFF]/20">
+    <div className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] rounded-xl shadow-lg overflow-hidden border border-cyan-900/30">
+      <div className="flex flex-col sm:flex-row border-b border-[#01FFFF]/20">
         {services.map((service, index) => (
           <button
             key={index}
@@ -53,7 +53,7 @@ export function ServiceTab({ services }: ServiceTabProps) {
                 className="flex items-start"
               >
                 <span className="text-[#01FFFF] mr-2">•</span>
-                <span className="text-sm">{feature}</span>
+                <span className="text-gray-300">{feature}</span>
               </motion.li>
             ))}
           </ul>
@@ -62,4 +62,3 @@ export function ServiceTab({ services }: ServiceTabProps) {
     </div>
   )
 }
-

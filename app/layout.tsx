@@ -1,42 +1,47 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import type React from "react"
+import "./globals.css"
+import { Inter } from "next/font/google"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import EasterBanner from "./components/EasterBanner"
+import EasterDecorations from "./components/EasterDecorations"
+import EasterThemeToggle from "./components/EasterThemeToggle"
+import type { Metadata } from "next"
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
-  title: 'adinfinity',
-  description: 'Μετατρέπουμε Ιδέες σε Επιτυχίες!',
+export const metadata: Metadata = {
+  title: "adinfinity",
+  description: "Μετατρέπουμε Ιδέες σε Επιτυχίες!",
   openGraph: {
-    type: 'website',
-    url: 'https://adinfinity.gr',
-    title: 'adinfinity',
-    description: 'Μετατρέπουμε Ιδέες σε Επιτυχίες!',
-    siteName: 'adinfinity', // Add site name
+    type: "website",
+    url: "https://adinfinity.gr",
+    title: "adinfinity",
+    description: "Μετατρέπουμε Ιδέες σε Επιτυχίες!",
+    siteName: "adinfinity", // Add site name
     images: [
       {
-        url: 'https://i.postimg.cc/2SygFYcf/Untitled-design-28.png',
+        url: "https://i.postimg.cc/2SygFYcf/Untitled-design-28.png",
         width: 1200,
         height: 630,
-        alt: 'adinfinity',
+        alt: "adinfinity",
       },
     ],
   },
   twitter: {
-    card: 'https://scontent.fath3-3.fna.fbcdn.net/v/t39.30808-6/334408131_1246318269646846_8224333063588841539_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=2_CWXkcAw9UQ7kNvgGdyaZk&_nc_oc=AdhGP9wzla-A9WlCeyQ2S9Na1zrMjnnSwRROYPVGzPQ2pe-YBwkL_K9MmF9IIkH9mBWlp97aXtC3cg5O2mvLDeTU&_nc_zt=23&_nc_ht=scontent.fath3-3.fna&_nc_gid=AUyTEjsEyqR1nHIds61x-bj&oh=00_AYAtJbtm9NsYUpqBTDoZ7XWXxOy7J3c4dYPlMKPpHSzBAA&oe=67B39D48', // Add Twitter card
-    title: 'adinfinity',
-    description: 'Μετατρέπουμε Ιδέες σε Επιτυχίες!',
-    images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
+    card: "https://scontent.fath3-3.fna.fbcdn.net/v/t39.30808-6/334408131_1246318269646846_8224333063588841539_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=2_CWXkcAw9UQ7kNvgGdyaZk&_nc_oc=AdhGP9wzla-A9WlCeyQ2S9Na1zrMjnnSwRROYPVGzPQ2pe-YBwkL_K9MmF9IIkH9mBWlp97aXtC3cg5O2mvLDeTU&_nc_zt=23&_nc_ht=scontent.fath3-3.fna&_nc_gid=AUyTEjsEyqR1nHIds61x-bj&oh=00_AYAtJbtm9NsYUpqBTDoZ7XWXxOy7J3c4dYPlMKPpHSzBAA&oe=67B39D48", // Add Twitter card
+    title: "adinfinity",
+    description: "Μετατρέπουμε Ιδέες σε Επιτυχίες!",
+    images: ["https://i.postimg.cc/2SygFYcf/Untitled-design-28.png"],
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="el">
@@ -68,11 +73,16 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Header />
-        {children}
+        <EasterBanner />
+        <main>{children}</main>
         <Footer />
+        <EasterDecorations />
+        <div className="fixed bottom-8 right-8 z-[9999]">
+          <EasterThemeToggle />
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>
     </html>
-  );
+  )
 }

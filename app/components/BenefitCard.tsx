@@ -1,20 +1,29 @@
+"use client"
+
 import { motion } from "framer-motion"
-import { CheckCircle } from "lucide-react"
 
 interface BenefitCardProps {
-  benefit: string
+  icon: React.ReactNode
+  title: string
+  description: string
 }
 
-export function BenefitCard({ benefit }: BenefitCardProps) {
+export function BenefitCard({ icon, title, description }: BenefitCardProps) {
   return (
     <motion.div
-      className="flex items-start p-4 bg-gradient-to-br from-[#0A1A24] to-[#0D2436] rounded-lg shadow-lg"
-      whileHover={{ scale: 1.02, boxShadow: "0 0 15px rgba(1, 255, 255, 0.15)" }}
+      className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-8 rounded-xl shadow-xl border border-cyan-900/30 h-full"
+      whileHover={{
+        y: -10,
+        boxShadow: "0 20px 25px rgba(1, 255, 255, 0.1)",
+        borderColor: "rgba(1, 255, 255, 0.3)",
+      }}
       transition={{ duration: 0.3 }}
     >
-      <CheckCircle className="w-6 h-6 text-[#01FFFF] mr-3 flex-shrink-0 mt-1" />
-      <p className="text-sm">{benefit}</p>
+      <div className="bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+        {icon}
+      </div>
+      <h4 className="text-xl font-bold mb-3 text-white">{title}</h4>
+      <p className="text-gray-300">{description}</p>
     </motion.div>
   )
 }
-

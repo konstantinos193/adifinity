@@ -1,122 +1,287 @@
-import { useState } from 'react';
-import Slider from 'react-slick';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+"use client"
+
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 
 interface Review {
-  author_name: string;
-  rating: number;
-  text: string;
-  image: string;
-  time_ago: string;
+  author_name: string
+  rating: number
+  text: string
+  image?: string
+  time_ago: string
 }
 
 const staticReviews: Review[] = [
   {
-    author_name: 'ΣΤΕΦΑΝΟΣ ΜΑΛΕΣΚΟΣ',
+    author_name: "ΣΤΕΦΑΝΟΣ ΜΑΛΕΣΚΟΣ",
     rating: 5,
-    text: 'Γνώστες του αντικειμένου, άψογη εξυπηρέτηση και άριστη συνεργασία.',
-    image: 'https://lh3.googleusercontent.com/a/ACg8ocI8XKXADowxhbBz_F64VeojH_XHHEBe4sCXe2XTsNwwcnCT-g=w36-h36-p-rp-mo-ba3-br100',
-    time_ago: 'πριν από έναν χρόνο',
+    text: "Γνώστες του αντικειμένου, άψογη εξυπηρέτηση και άριστη συνεργασία.",
+    time_ago: "πριν από έναν χρόνο",
   },
   {
-    author_name: 'Παναγιωτα Στρεβινα',
+    author_name: "Παναγιωτα Στρεβινα",
     rating: 5,
-    text: 'Υπέροχος επαγγελματίας με συνέπεια και ξεπέρασε τις προσδοκίες μας σε ότι ζητήθηκε... 👍👍👍…',
-    image: 'https://lh3.googleusercontent.com/a/ACg8ocK7BFFzA-IeIYHqPd5hkdrjXhPmbWKAM2i0allWMYjfWyzUZQ=w36-h36-p-rp-mo-br100',
-    time_ago: 'πριν από 2 χρόνια',
+    text: "Υπέροχος επαγγελματίας με συνέπεια και ξεπέρασε τις προσδοκίες μας σε ότι ζητήθηκε... 👍👍👍…",
+    time_ago: "πριν από 2 χρόνια",
   },
   {
-    author_name: 'Ermioni Zerva',
+    author_name: "Ermioni Zerva",
     rating: 5,
-    text: 'επαγγελματισμός, πρωτότυπες ιδέες, λογότυπα που εκφράζουν την κάθε επιχείρηση τέλεια γραφιστική και όχι μόνο δουλειά.',
-    image: 'https://lh3.googleusercontent.com/a/ACg8ocJbJHyRb4-oYR7Cz1bs3jb7azf_U9CXcMveOlFwjlIZGVg8PQ=w36-h36-p-rp-mo-br100',
-    time_ago: 'πριν από 2 χρόνια',
+    text: "Επαγγελματισμός, πρωτότυπες ιδέες, λογότυπα που εκφράζουν την κάθε επιχείρηση τέλεια γραφιστική και όχι μόνο δουλειά.",
+    time_ago: "πριν από 2 χρόνια",
   },
   {
-    author_name: 'Δημητρης Σαριδακης',
+    author_name: "Δημητρης Σαριδακης",
     rating: 5,
-    text: 'Από την μικρή συνεργασία που είχα με την επιχείριση μόνο θετικές λέξεις μπορώ να γράψω... Ένα μεγάλο μπράβο στον Μάνο και σε όλους συντελούν για να βγεί αυτό το αποτέλεσμα τουλάχιστον στα δικά μου χέρια....',
-    image: 'https://lh3.googleusercontent.com/a/ACg8ocLcPFpKomOCax38fqr3WUu-dpxXWk9oVu6JbaWB5Qb36G08bA=w36-h36-p-rp-mo-ba4-br100',
-    time_ago: 'πριν από 2 χρόνια',
+    text: "Από την μικρή συνεργασία που είχα με την επιχείριση μόνο θετικές λέξεις μπορώ να γράψω... Ένα μεγάλο μπράβο στον Μάνο και σε όλους συντελούν για να βγεί αυτό το αποτέλεσμα τουλάχιστον στα δικά μου χέρια....",
+    time_ago: "πριν από 2 χρόνια",
   },
-];
+]
 
-function NextArrow(props: any) {
-  const { onClick } = props;
-  return (
-    <div
-      className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 cursor-pointer z-10"
-      onClick={onClick}
-    >
-      <ChevronRightIcon className="w-6 h-6 text-[#01FFFF]" />
-    </div>
-  );
+// Function to generate a unique color based on name
+function generateColor(name: string): string {
+  let hash = 0
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash)
+  }
+
+  // Generate colors in the cyan/blue spectrum to match the site theme
+  const h = (Math.abs(hash) % 60) + 180 // Hue between 180-240 (cyan to blue)
+  const s = 70 + (Math.abs(hash) % 30) // Saturation 70-100%
+  const l = 45 + (Math.abs(hash) % 15) // Lightness 45-60%
+
+  return `hsl(${h}, ${s}%, ${l}%)`
 }
 
-function PrevArrow(props: any) {
-  const { onClick } = props;
+// Function to generate initials from name
+function getInitials(name: string): string {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .toUpperCase()
+    .substring(0, 2)
+}
+
+// SVG Avatar component
+function AvatarSvg({ name }: { name: string }) {
+  const bgColor = generateColor(name)
+  const initials = getInitials(name)
+
   return (
-    <div
-      className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 cursor-pointer z-10"
-      onClick={onClick}
-    >
-      <ChevronLeftIcon className="w-6 h-6 text-[#01FFFF]" />
+    <div className="relative w-20 h-20 rounded-full overflow-hidden">
+      <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        {/* Background */}
+        <circle cx="50" cy="50" r="50" fill={bgColor} />
+
+        {/* Decorative elements */}
+        <circle cx="20" cy="20" r="8" fill="rgba(255, 255, 255, 0.2)" />
+        <circle cx="80" cy="80" r="10" fill="rgba(255, 255, 255, 0.1)" />
+        <path d="M0,50 Q25,30 50,50 T100,50" stroke="rgba(255, 255, 255, 0.1)" strokeWidth="2" fill="none" />
+
+        {/* Text */}
+        <text
+          x="50"
+          y="50"
+          fontFamily="Arial, sans-serif"
+          fontSize="32"
+          fontWeight="bold"
+          fill="white"
+          textAnchor="middle"
+          dominantBaseline="central"
+        >
+          {initials}
+        </text>
+      </svg>
     </div>
-  );
+  )
 }
 
 export default function TestimonialsSection() {
-  const [reviews] = useState<Review[]>(staticReviews);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [autoplay, setAutoplay] = useState(true)
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  // Initialize on client side
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
+
+  // Autoplay functionality
+  useEffect(() => {
+    if (!autoplay) return
+
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 6000)
+
+    return () => clearInterval(interval)
+  }, [autoplay, currentIndex])
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % staticReviews.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + staticReviews.length) % staticReviews.length)
+  }
+
+  // If we're not loaded yet, don't render anything to avoid hydration issues
+  if (!isLoaded) {
+    return null
+  }
 
   return (
-    <section id="μαρτυρίες" className="py-10 bg-gradient-to-b from-[#0A1A24] to-[#07141C]">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl text-center mb-8 text-[#01FFFF]">Η Φωνή των Πελατών μας</h2>
-        <Slider {...settings}>
-          {reviews.map((review, index) => (
-            <div key={index} className="p-4">
-              <div className="bg-[var(--background)] p-6 rounded-xl shadow-lg border border-transparent hover:border-[var(--accent)] transition-all duration-300 text-center h-auto flex flex-col justify-between">
-                <div>
-                  <img src="/placeholder.svg" alt={review.author_name} className="w-16 h-16 rounded-full mx-auto mb-4" />
-                  <p className="mb-4 text-sm italic text-white line-clamp-4">"{review.text}"</p>
-                  <h4 className="text-lg font-bold text-[var(--accent)]">{review.author_name}</h4>
-                  <p className="text-xs text-gray-400">{review.time_ago}</p>
-                </div>
-                <div className="flex justify-center mt-2">
-                  {Array.from({ length: review.rating }, (_, i) => (
-                    <span key={i} className="text-[#FFD700]">★</span>
-                  ))}
-                  {Array.from({ length: 5 - review.rating }, (_, i) => (
-                    <span key={i} className="text-gray-400">★</span>
-                  ))}
-                </div>
+    <section className="py-20 bg-gradient-to-b from-[#0A1A24] to-[#07141C] relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#01FFFF]/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#01FFFF]/20 to-transparent"></div>
+
+        {/* Subtle grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #01FFFF 1px, transparent 1px), linear-gradient(to bottom, #01FFFF 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        ></div>
+
+        {/* Ambient glow */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#01FFFF]/5 rounded-full blur-[100px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold text-[#01FFFF] mb-4">Η Φωνή των Πελατών μας</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Διαβάστε τι λένε οι πελάτες μας για τις υπηρεσίες μας και την εμπειρία συνεργασίας μαζί μας.
+          </p>
+        </motion.div>
+
+        <div className="max-w-4xl mx-auto relative">
+          {/* Testimonial carousel */}
+          <div
+            className="relative overflow-hidden rounded-2xl"
+            onMouseEnter={() => setAutoplay(false)}
+            onMouseLeave={() => setAutoplay(true)}
+          >
+            <div className="relative">
+              {/* Quote icon */}
+              <div className="absolute top-6 left-6 text-[#01FFFF]/20 z-10">
+                <Quote size={40} />
               </div>
+
+              {/* Testimonial card */}
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-gradient-to-br from-[#0D2436] to-[#071218] p-10 rounded-2xl shadow-xl border border-cyan-900/30 min-h-[300px] flex flex-col md:flex-row items-center gap-8"
+              >
+                {/* Avatar and author info */}
+                <div className="flex flex-col items-center text-center md:w-1/3">
+                  <AvatarSvg name={staticReviews[currentIndex].author_name} />
+
+                  <h4 className="text-xl font-bold text-white mt-4 mb-1">{staticReviews[currentIndex].author_name}</h4>
+                  <p className="text-sm text-gray-400 mb-3">{staticReviews[currentIndex].time_ago}</p>
+
+                  {/* Star rating */}
+                  <div className="flex">
+                    {Array.from({ length: staticReviews[currentIndex].rating }, (_, i) => (
+                      <span key={i} className="text-[#FFD700]">
+                        ★
+                      </span>
+                    ))}
+                    {Array.from({ length: 5 - staticReviews[currentIndex].rating }, (_, i) => (
+                      <span key={i} className="text-gray-600">
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Testimonial text */}
+                <div className="md:w-2/3 flex flex-col justify-center">
+                  <p className="text-lg text-gray-200 italic relative">"{staticReviews[currentIndex].text}"</p>
+                </div>
+              </motion.div>
             </div>
-          ))}
-        </Slider>
+          </div>
+
+          {/* Navigation buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-5 bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors z-20"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-5 bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors z-20"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight size={24} />
+          </button>
+
+          {/* Pagination dots */}
+          <div className="flex justify-center mt-8 gap-2">
+            {staticReviews.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  currentIndex === index ? "bg-[#01FFFF] w-4" : "bg-gray-500 hover:bg-gray-400"
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Call to action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-center mt-16"
+        >
+          <a
+            href="https://www.google.com/search?sca_esv=563a49081b992b59&sxsrf=AHTn8zqcSOmVdrCzYX1kpi-aKj8l1zWsuw:1744342540659&q=adinfinity+άρτα&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzXvKLFbeez8PPOhekLYza1Rc6Q1WXuPuzJp09Qe7EbNDkp3ecz0ejbgYqNd0UvNWF08A-n0%3D&uds=ABqPDvxkc1hlhLTCjoC0jcqe9t987VI5kbgY0cMqLGuEMONFDU0BqVmw3Ox1bDJyNuvWymPHNO0_kQ94mcBdl2zl8uS0fjmcEIsSFtSzx4jbFFgavnjidgTwjVLB36YkK4vTYloN1I9t&sa=X&ved=2ahUKEwiru4Kshs-MAxVcywIHHTfhHt4Q3PALegQIGhAE&biw=1876&bih=959&dpr=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-transparent hover:bg-[#01FFFF]/10 border border-[#01FFFF] text-[#01FFFF] font-medium py-2 px-6 rounded-full transition-colors"
+          >
+            <span>Δείτε περισσότερες κριτικές στο Google</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
-  );
+  )
 }
-

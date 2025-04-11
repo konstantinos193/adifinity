@@ -1,5 +1,7 @@
+"use client"
+
 import { motion } from "framer-motion"
-import type { LucideIcon } from "lucide-react"
+import { LucideIcon } from "lucide-react"
 
 interface ResearchServiceProps {
   icon: LucideIcon
@@ -11,30 +13,28 @@ interface ResearchServiceProps {
 export function ResearchService({ icon: Icon, title, description, features }: ResearchServiceProps) {
   return (
     <motion.div
-      className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-6 rounded-lg shadow-lg"
-      whileHover={{ scale: 1.03, boxShadow: "0 0 20px rgba(1, 255, 255, 0.2)" }}
-      transition={{ duration: 0.3 }}
+      className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] rounded-xl p-6 border border-cyan-900/20 hover:border-cyan-500/30"
+      whileHover={{
+        y: -10,
+        boxShadow: "0 10px 25px rgba(1, 255, 255, 0.2)",
+        borderColor: "rgba(1, 255, 255, 0.3)",
+      }}
     >
-      <div className="flex items-center mb-4">
-        <Icon className="w-10 h-10 text-[#01FFFF] mr-4" />
-        <h4 className="text-xl font-bold text-[#01FFFF]">{title}</h4>
+      <div className="bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+        <Icon className="w-8 h-8 text-[#01FFFF]" />
       </div>
-      <p className="text-sm mb-4 opacity-80">{description}</p>
+
+      <h3 className="text-xl font-bold mb-3 text-white">{title}</h3>
+      <p className="text-gray-300 mb-6">{description}</p>
+
       <ul className="space-y-2">
         {features.map((feature, index) => (
-          <motion.li
-            key={index}
-            className="flex items-start text-sm"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
+          <li key={index} className="flex items-start text-gray-300">
             <span className="text-[#01FFFF] mr-2">•</span>
-            <span>{feature}</span>
-          </motion.li>
+            {feature}
+          </li>
         ))}
       </ul>
     </motion.div>
   )
 }
-

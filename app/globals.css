@@ -65,7 +65,7 @@ body {
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #01FFFF #0A1A24;
+  scrollbar-color: #01ffff #0a1a24;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -73,13 +73,114 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #0A1A24;
+  background: #0a1a24;
   border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #01FFFF;
+  background-color: #01ffff;
   border-radius: 4px;
-  border: 2px solid #0A1A24;
+  border: 2px solid #0a1a24;
 }
 
+/* Easter Theme Styles */
+.easter-theme {
+  --accent: #ffd1dc;
+  --text: #ffffff;
+}
+
+/* Easter-themed buttons */
+.easter-theme .btn-primary {
+  @apply bg-gradient-to-r from-[#FFD1DC] to-[#C7CEEA] text-[#07141C] hover:from-[#C7CEEA] hover:to-[#FFD1DC];
+}
+
+.easter-theme .btn-secondary {
+  @apply border-2 border-[#FFD1DC] text-[#FFD1DC] hover:bg-[#FFD1DC] hover:text-[#07141C];
+}
+
+/* Easter-themed scrollbar */
+.easter-theme ::-webkit-scrollbar-thumb {
+  background: #ffd1dc;
+}
+
+.easter-theme ::-webkit-scrollbar-thumb:hover {
+  background: #c7ceea;
+}
+
+.easter-theme .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ffd1dc;
+}
+
+/* Easter egg animation */
+@keyframes float-egg {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.easter-float {
+  animation: float-egg 6s ease-in-out infinite;
+}
+
+/* Easter-themed text colors - EXCLUDING SVGs */
+.easter-theme h1[class*="text-[#01FFFF]"],
+.easter-theme h2[class*="text-[#01FFFF]"],
+.easter-theme h3[class*="text-[#01FFFF]"],
+.easter-theme h4[class*="text-[#01FFFF]"],
+.easter-theme p[class*="text-[#01FFFF]"],
+.easter-theme span[class*="text-[#01FFFF]"],
+.easter-theme div[class*="text-[#01FFFF]"]:not(svg *),
+.easter-theme a[class*="text-[#01FFFF]"],
+.easter-theme button[class*="text-[#01FFFF]"] {
+  color: #ffd1dc;
+}
+
+/* Easter-themed borders - EXCLUDING SVGs */
+.easter-theme div[class*="border-[#01FFFF]"]:not(svg *),
+.easter-theme button[class*="border-[#01FFFF]"] {
+  border-color: #ffd1dc;
+}
+
+/* Easter-themed gradients - EXCLUDING SVGs */
+.easter-theme div[class*="from-[#01FFFF]"]:not(svg *),
+.easter-theme button[class*="from-[#01FFFF]"] {
+  --tw-gradient-from: #ffd1dc var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 209 220 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.easter-theme div[class*="to-[#01A9FF]"]:not(svg *),
+.easter-theme button[class*="to-[#01A9FF]"] {
+  --tw-gradient-to: #c7ceea var(--tw-gradient-to-position);
+}
+
+/* Preserve SVG elements */
+.easter-theme svg,
+.easter-theme svg *,
+.easter-theme path,
+.easter-theme circle,
+.easter-theme rect {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* Don't override SVG fills and strokes with explicit attributes */
+svg[fill]:not([fill="currentColor"]),
+path[fill]:not([fill="currentColor"]),
+circle[fill]:not([fill="currentColor"]),
+rect[fill]:not([fill="currentColor"]) {
+  fill: attr(fill) !important;
+}
+
+svg[stroke]:not([stroke="currentColor"]),
+path[stroke]:not([stroke="currentColor"]),
+circle[stroke]:not([stroke="currentColor"]),
+rect[stroke]:not([stroke="currentColor"]) {
+  stroke: attr(stroke) !important;
+}

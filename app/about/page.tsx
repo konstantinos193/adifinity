@@ -1,67 +1,97 @@
-import Image from 'next/image';
-import { TeamMember } from '../components/TeamMember';
-import { Timeline } from '../components/Timeline';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+"use client"
+
+import { motion } from "framer-motion"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { AboutHero } from "../components/AboutHero"
+import { CompanyDescription } from "../components/CompanyDescription"
+import { CompanyHistory } from "../components/CompanyHistory"
+import { TeamMember } from "../components/TeamMember"
+import { Timeline } from "../components/Timeline"
+import { OfficeShowcase } from "../components/OfficeShowcase"
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
-      <section className="container mx-auto px-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl text-center mb-12 text-[#01FFFF]">Σχετικά με Εμάς</h1>
+    <main className="min-h-screen bg-gradient-to-b from-[#07141C] to-[#0A1A24] overflow-hidden">
+      <AboutHero />
 
-        <div className="mb-16">
-          <h2 className="text-2xl sm:text-3xl mb-6 text-[#01FFFF]">Περιγραφή Επιχείρησης</h2>
-          <p className="text-base sm:text-lg mb-4 text-white">
-            Είμαστε μια νεοσύστατη εταιρία η όποια αποτελείται από νέα άτομα και δραστηριοποιείται στον χώρο της διαφήμισης, ψάχνουμε συνεχώς νέους τρόπους και λύσεις για την ανάδειξη της επιχείρησής σας, του γραφείου ή της εταιρίας σας. Η adInfinity είναι ένα διαφημιστικό γραφείο που δραστηριοποιείται στον χώρο της διαφήμισης στην Άρτα και γενικότερα στην Ήπειρο, από τον Οκτώβριο του 2013. Ειδικευόμαστε στην δημιουργία λογότυπων, κάθε είδους μακετών αλλά και τον σχεδιασμό και ανάπτυξη προωθητικών ενεργειών καθώς και σε σύγχρονες εκτυπώσεις.
-          </p>
-        </div>
+      <div className="container mx-auto px-4 pb-20">
+        <CompanyDescription />
 
-        <div className="mb-16">
-          <h2 className="text-2xl sm:text-3xl mb-6 text-[#01FFFF]">Η Ιστορία μας</h2>
-          <p className="text-base sm:text-lg mb-4 text-white">
-            Η εταιρεία μας ιδρύθηκε το 2013 με στόχο να προσφέρει πρακτικές και αποτελεσματικές λύσεις μάρκετινγκ. Από τότε, βοηθάμε επιχειρήσεις να αναπτύξουν την παρουσία τους, προσαρμοζόμενοι στις εξελίξεις της αγοράς.
-          </p>
-        </div>
+        <CompanyHistory />
 
-        <div className="mb-16">
-          <h2 className="text-2xl sm:text-3xl mb-6 text-[#01FFFF]">Η Ομάδα μας</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
-            <TeamMember 
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2
+            className="text-3xl font-bold mb-8 text-[#01FFFF]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Η Ομάδα μας
+          </motion.h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <TeamMember
               name="Μάνος Κωσμάς"
               role="Διευθύνων Σύμβουλος"
               imageSrc="https://i.imgur.com/RvCXgPE.jpeg"
+              bio="Με πάνω από 10 χρόνια εμπειρίας στον χώρο της διαφήμισης και του μάρκετινγκ, ο Μάνος ηγείται της ομάδας μας με όραμα και δημιουργικότητα."
             />
-            <TeamMember 
+            <TeamMember
               name="Κωνσταντίνος Μπλαβάκης"
               role="Web Developer"
               imageSrc="https://i.postimg.cc/FHH2qc1B/viber-image-2025-02-18-19-25-40-199.jpg"
+              bio="Ειδικός στην ανάπτυξη ιστοσελίδων και εφαρμογών, ο Κωνσταντίνος φέρνει τις ιδέες μας στη ζωή με τεχνική αρτιότητα και καινοτομία."
             />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mb-16">
-          <h2 className="text-2xl sm:text-3xl mb-6 text-[#01FFFF]">Η Πορεία μας</h2>
+        <motion.div
+          className="mb-20 mt-8" // Add mt-8 for more top margin
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2
+            className="text-3xl font-bold mb-8 text-[#01FFFF]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Η Πορεία μας
+          </motion.h2>
+
           <Timeline />
-        </div>
+        </motion.div>
 
-        <div>
-          <h2 className="text-2xl sm:text-3xl mb-6 text-[#01FFFF]">Το Γραφείο μας</h2>
-          <div className="relative w-full max-w-4xl mx-auto h-auto aspect-w-1311 aspect-h-735 rounded-lg overflow-hidden">
-            <Image
-              src="https://i.imgur.com/ERErjTs.png"
-              alt="Το γραφείο μας"
-              layout="responsive"
-              width={1311}
-              height={735}
-              objectFit="cover"
-            />
-          </div>
-          <p className="mt-4 text-base sm:text-lg text-white">
-            Το σύγχρονο γραφείο μας στο κέντρο της Άρτας είναι σχεδιασμένο για να εμπνέει δημιουργικότητα και συνεργασία. Είναι ο χώρος όπου οι ιδέες μας παίρνουν ζωή και μετατρέπονται σε επιτυχημένες καμπάνιες για τους πελάτες μας.
-          </p>
-        </div>
-      </section>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          <motion.h2
+            className="text-3xl font-bold mb-8 text-[#01FFFF]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Επισκεφθείτε μας
+          </motion.h2>
+
+          <OfficeShowcase />
+        </motion.div>
+      </div>
       <SpeedInsights />
     </main>
-  );
+  )
 }
