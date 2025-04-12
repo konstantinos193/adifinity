@@ -6,6 +6,8 @@ import Footer from "./components/Footer"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import EasterBanner from "./components/EasterBanner"
+import EasterDecorations from "./components/EasterDecorations"
+import EasterThemeToggle from "./components/EasterThemeToggle"
 import type { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "https://scontent.fath3-3.fna.fbcdn.net/v/t39.30808-6/334408131_1246318269646846_8224333063588841539_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=2_CWXkcAw9UQ7kNvgGdyaZk&_nc_oc=AdhGP9wzla-A9WlCeyQ2S9Na1zrMjnnSwRROYPVGzPQ2pe-YBwkL_K9MmF9IIkH9mBWlp97aXtC3cg5O2mvLDeTU&_nc_zt=23&_nc_ht=scontent.fath3-3.fna&_nc_gid=AUyTEjsEyqR1nHIds61x-bj&oh=00_AYAtJbtm9NsYUpqBTDoZ7XWXxOy7J3c4dYPlMKPpHSzBAA&oe=67B39D48", // Add Twitter card
+    card: "summary_large_image",
     title: "adinfinity",
     description: "Μετατρέπουμε Ιδέες σε Επιτυχίες!",
     images: ["https://i.postimg.cc/2SygFYcf/Untitled-design-28.png"],
