@@ -132,16 +132,46 @@ export default function ContactPage() {
                   <div className="bg-[#01FFFF]/10 p-2 rounded-lg mr-4">
                     <Clock className="text-[#01FFFF] h-5 w-5" />
                   </div>
-                  <div>
-                    <h3 className="font-medium text-white">Ώρες Λειτουργίας</h3>
-                    <div className="text-gray-300 text-sm space-y-1">
-                      <p>Δευτέρα: 9:00π.μ.-2:30μ.μ.</p>
-                      <p>Τρίτη: 9:00π.μ.-2:30μ.μ., 6:00-9:00μ.μ.</p>
-                      <p>Τετάρτη: 9:00π.μ.-2:30μ.μ.</p>
-                      <p>Πέμπτη: 9:00π.μ.-2:30μ.μ., 6:00-9:00μ.μ.</p>
-                      <p>Παρασκευή: 9:00π.μ.-2:30μ.μ., 6:00-9:00μ.μ.</p>
-                      <p>Σάββατο: Κλειστά</p>
-                      <p>Κυριακή: Κλειστά</p>
+                  <div className="w-full">
+                    <h3 className="font-medium text-white mb-3">Ώρες Λειτουργίας</h3>
+                    <div className="space-y-2">
+                      {[
+                        { day: 'Δευτέρα', hours: ['09:00 - 14:30'] },
+                        { day: 'Τρίτη', hours: ['09:00 - 14:30', '18:00 - 21:00'] },
+                        { day: 'Τετάρτη', hours: ['09:00 - 14:30'] },
+                        { day: 'Πέμπτη', hours: ['09:00 - 14:30', '18:00 - 21:00'] },
+                        { day: 'Παρασκευή', hours: ['09:00 - 14:30', '18:00 - 21:00'] },
+                        { day: 'Σάββατο', hours: ['Κλειστά'] },
+                        { day: 'Κυριακή', hours: ['Κλειστά'] }
+                      ].map((schedule, index) => (
+                        <div 
+                          key={schedule.day}
+                          className={`flex items-center justify-between p-2 rounded-lg transition-colors ${
+                            schedule.hours[0] === 'Κλειστά' 
+                              ? 'bg-red-500/10 border border-red-500/20' 
+                              : 'bg-[#071218] hover:bg-[#01FFFF]/5 border border-cyan-900/30'
+                          }`}
+                        >
+                          <span className="text-sm font-medium text-white">{schedule.day}</span>
+                          <div className="text-right">
+                            {schedule.hours.map((time, idx) => (
+                              <span 
+                                key={idx} 
+                                className={`text-sm ${
+                                  time === 'Κλειστά' 
+                                    ? 'text-red-400' 
+                                    : 'text-[#01FFFF]'
+                                }`}
+                              >
+                                {time}
+                                {idx < schedule.hours.length - 1 && (
+                                  <span className="mx-1 text-gray-500">&</span>
+                                )}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </li>
