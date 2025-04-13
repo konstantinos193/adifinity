@@ -2,9 +2,9 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import { motion } from "framer-motion"
-import { Send, Loader2 } from "lucide-react"
+import { Send, Loader2, Upload } from "lucide-react"
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -13,13 +13,43 @@ export default function ContactForm() {
     message: "",
     phone: "",
     subject: "",
+    file: null as File | null,
   })
 
+  const [isDragging, setIsDragging] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<{
     message: string
     isError: boolean
   } | null>(null)
+
+  const handleDragEnter = useCallback((e: React.DragEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsDragging(true)
+  }, [])
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsDragging(false)
+  }, [])
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+  }, [])
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsDragging(false)
+
+    const files = e.dataTransfer.files
+    if (files && files[0]) {
+      setFormData(prev => ({ ...prev, file: files[0] }))
+    }
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -29,18 +59,28 @@ export default function ContactForm() {
     }))
   }
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setFormData(prev => ({ ...prev, file: e.target.files![0] }))
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus(null)
 
     try {
+      const formDataToSend = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        if (value !== null) {
+          formDataToSend.append(key, value)
+        }
+      })
+
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend,
       })
 
       if (!response.ok) throw new Error("Failed to send message")
@@ -49,7 +89,7 @@ export default function ContactForm() {
         message: "Το μήνυμά σας στάλθηκε με επιτυχία!",
         isError: false,
       })
-      setFormData({ name: "", email: "", message: "", phone: "", subject: "" })
+      setFormData({ name: "", email: "", message: "", phone: "", subject: "", file: null })
     } catch (error) {
       setSubmitStatus({
         message: "Παρουσιάστηκε σφάλμα κατά την αποστολή του μηνύματος.",
@@ -156,6 +196,40 @@ export default function ContactForm() {
           ></textarea>
         </div>
 
+        <div>
+          <label className="block text-[#01FFFF] text-sm font-medium mb-1">
+            Επισύναψη Αρχείου
+          </label>
+          <div
+            className={`relative border-2 border-dashed rounded-lg p-6 transition-colors ${
+              isDragging
+                ? "border-[#01FFFF] bg-[#01FFFF]/5"
+                : "border-cyan-900/50 hover:border-[#01FFFF]/50 hover:bg-[#01FFFF]/5"
+            }`}
+            onDragEnter={handleDragEnter}
+            onDragOver={handleDragOver}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+          >
+            <input
+              type="file"
+              onChange={handleFileChange}
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            />
+            <div className="text-center">
+              <Upload className="mx-auto h-8 w-8 text-[#01FFFF] mb-2" />
+              <p className="text-sm text-gray-300">
+                Σύρετε ένα αρχείο εδώ ή κάντε κλικ για επιλογή
+              </p>
+              {formData.file && (
+                <p className="mt-2 text-sm text-[#01FFFF]">
+                  Επιλεγμένο: {formData.file.name}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+
         {submitStatus && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -174,7 +248,7 @@ export default function ContactForm() {
           <motion.button
             type="submit"
             disabled={isSubmitting}
-            className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#071218] font-bold py-2.5 px-6 rounded-lg shadow-lg shadow-cyan-500/20 flex items-center justify-center min-w-[140px]"
+            className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#071218] font-bold py-2.5 px-6 rounded-lg shadow-lg shadow-cyan-500/20 flex items-center justify-center min-w-[140px] disabled:opacity-50"
             whileHover={{ scale: 1.03, boxShadow: "0 0 20px rgba(1, 255, 255, 0.3)" }}
             whileTap={{ scale: 0.97 }}
           >
