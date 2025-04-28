@@ -5,9 +5,6 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import EasterBanner from "./components/EasterBanner"
-import EasterDecorations from "./components/EasterDecorations"
-import EasterThemeToggle from "./components/EasterThemeToggle"
 import type { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -20,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://adinfinity.gr",
     title: "adinfinity",
     description: "Μετατρέπουμε Ιδέες σε Επιτυχίες!",
-    siteName: "adinfinity", // Add site name
+    siteName: "adinfinity",
     images: [
       {
         url: "https://i.postimg.cc/2SygFYcf/Untitled-design-28.png",
@@ -73,13 +70,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <Header />
-        <EasterBanner />
         <main>{children}</main>
         <Footer />
-        <EasterDecorations />
-        <div className="fixed bottom-8 right-8 z-[9999]">
-          <EasterThemeToggle />
-        </div>
         <Analytics />
         <SpeedInsights />
       </body>
