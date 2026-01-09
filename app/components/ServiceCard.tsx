@@ -43,7 +43,7 @@ export function ServiceCard({ icon, title, description, link, index = 0, classNa
       <div className="absolute top-0 right-0 w-32 h-32 bg-[#01FFFF]/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <Link href={link} className="block p-8 relative z-10 h-full flex flex-col">
-        <div className="bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 p-4 rounded-full w-20 h-20 flex items-center justify-center mb-6 mx-auto">
+        <div className="service-icon-container bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 p-4 rounded-full w-20 h-20 flex items-center justify-center mb-6 mx-auto">
           {icon}
         </div>
 

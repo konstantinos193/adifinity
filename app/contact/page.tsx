@@ -6,6 +6,7 @@ import ContactForm from "../components/ContactForm"
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Link from "next/link"
+import SEOContent from "./SEOContent"
 
 // Dynamically import the map component
 const Map = dynamic(() => import("../components/Map"), { ssr: false })
@@ -13,6 +14,7 @@ const Map = dynamic(() => import("../components/Map"), { ssr: false })
 export default function ContactPage() {
   return (
     <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24] overflow-hidden">
+      <SEOContent />
       {/* Hero Section with Subtle Background */}
       <div className="relative mb-16">
         <div className="absolute inset-0 overflow-hidden">

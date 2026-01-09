@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #07141c;
@@ -12,6 +10,16 @@ body {
   background-color: var(--background);
   color: var(--text);
   font-family: "Arial", sans-serif;
+}
+
+/* Global SVG protection - prevent dark color inheritance */
+/* SVGs should use their explicit fill/stroke attributes, not inherit body color */
+svg {
+  color: unset;
+}
+
+svg * {
+  color: unset;
 }
 
 @layer base {
@@ -166,13 +174,8 @@ body {
 }
 
 /* Protect SVGs with explicit fill/stroke attributes (from EasterThemeToggle fix) */
-.easter-theme svg[fill],
-.easter-theme svg *[fill],
-.easter-theme svg[stroke],
-.easter-theme svg *[stroke] {
-  fill: attr(fill) !important;
-  stroke: attr(stroke) !important;
-}
+/* REMOVED invalid attr() usage - SVG attributes work correctly by default */
+/* Only override when needed for Easter theme color changes */
 
 /* MODIFIED: Fallback for SVGs without explicit fill/stroke - More specific to avoid breaking visibility */
 .easter-theme svg:not([fill]):not([class*="text-[#01FFFF]"]) {
@@ -183,20 +186,9 @@ body {
   stroke: none !important;
 }
 
-/* Preserve explicit SVG fills and strokes */
-svg[fill]:not([fill="currentColor"]),
-path[fill]:not([fill="currentColor"]),
-circle[fill]:not([fill="currentColor"]),
-rect[fill]:not([fill="currentColor"]) {
-  fill: attr(fill) !important;
-}
-
-svg[stroke]:not([stroke="currentColor"]),
-path[stroke]:not([stroke="currentColor"]),
-circle[stroke]:not([stroke="currentColor"]),
-rect[stroke]:not([stroke="currentColor"]) {
-  stroke: attr(stroke) !important;
-}
+/* Preserve explicit SVG fills and strokes - REMOVED invalid attr() usage */
+/* SVG elements with explicit fill/stroke attributes in HTML work correctly by default */
+/* No CSS override needed - the HTML attributes take precedence naturally */
 
 /* Protect SVGs with text-[#01FFFF] class in Easter theme (from ServicesSection fix) */
 .easter-theme svg[class*="text-[#01FFFF]"],
@@ -210,4 +202,105 @@ rect[stroke]:not([stroke="currentColor"]) {
 .easter-theme svg[fill="#01FFFF"],
 .easter-theme svg *[fill="#01FFFF"] {
   fill: #ffd1dc !important;
+}
+
+/* Services Page Exceptions - FORCE SVG COLORS - Most aggressive approach */
+/* Reset and force base SVG properties */
+.services-page svg {
+  fill: none !important;
+  stroke: none !important;
+  color: #01FFFF !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* FORCE ALL child element strokes to cyan */
+.services-page svg * {
+  stroke: #01FFFF !important;
+  opacity: 1 !important;
+}
+
+/* FORCE fills on elements without explicit fill or with dark fills */
+.services-page svg rect:not([fill]),
+.services-page svg circle:not([fill]),
+.services-page svg path:not([fill]) {
+  fill: #01FFFF !important;
+}
+
+/* Override any dark/black fills - force to cyan */
+.services-page svg rect[fill]:not([fill="white"]):not([fill="none"]):not([fill*="url"]):not([fill="#01FFFF"]):not([fill="#01A9FF"]),
+.services-page svg circle[fill]:not([fill="white"]):not([fill="none"]):not([fill*="url"]):not([fill="#01FFFF"]):not([fill="#01A9FF"]),
+.services-page svg path[fill]:not([fill="white"]):not([fill="none"]):not([fill*="url"]):not([fill="#01FFFF"]):not([fill="#01A9FF"]) {
+  fill: #01FFFF !important;
+}
+
+/* Preserve white fills */
+.services-page svg rect[fill="white"],
+.services-page svg circle[fill="white"],
+.services-page svg path[fill="white"] {
+  fill: white !important;
+}
+
+/* Preserve blue fills */
+.services-page svg rect[fill="#01A9FF"],
+.services-page svg circle[fill="#01A9FF"],
+.services-page svg path[fill="#01A9FF"] {
+  fill: #01A9FF !important;
+}
+
+/* Preserve cyan fills */
+.services-page svg rect[fill="#01FFFF"],
+.services-page svg circle[fill="#01FFFF"],
+.services-page svg path[fill="#01FFFF"] {
+  fill: #01FFFF !important;
+}
+
+/* Preserve gradients - don't override (gradients use url(#id) syntax) */
+
+/* Force gradient stops to ensure they're bright */
+.services-page svg stop[stopColor] {
+  stop-color: #01FFFF !important;
+}
+
+.services-page svg stop[stopColor="#01A9FF"] {
+  stop-color: #01A9FF !important;
+}
+
+/* Most aggressive - ServiceIcon container - override everything */
+.services-page .service-icon-container svg {
+  fill: none !important;
+  stroke: none !important;
+}
+
+.services-page .service-icon-container svg * {
+  stroke: #01FFFF !important;
+  opacity: 1 !important;
+}
+
+/* Force fills in icon container except white, gradients, and explicit colors */
+.services-page .service-icon-container svg rect:not([fill="white"]):not([fill*="url"]):not([fill="#01FFFF"]):not([fill="#01A9FF"]):not([fill="none"]),
+.services-page .service-icon-container svg circle:not([fill="white"]):not([fill*="url"]):not([fill="#01FFFF"]):not([fill="#01A9FF"]):not([fill="none"]),
+.services-page .service-icon-container svg path:not([fill="white"]):not([fill*="url"]):not([fill="#01FFFF"]):not([fill="#01A9FF"]):not([fill="none"]) {
+  fill: #01FFFF !important;
+}
+
+/* Prevent Easter theme */
+.services-page.easter-theme svg * {
+  stroke: #01FFFF !important;
+  fill: #01FFFF !important;
+  color: #01FFFF !important;
+}
+
+/* ULTIMATE FORCE - Target all SVG elements with style attribute (from inline styles) */
+.services-page svg[style*="color"] *,
+.services-page svg[style*="stroke"] * {
+  stroke: #01FFFF !important;
+  fill: #01FFFF !important;
+}
+
+/* Force on elements that might be getting black/dark fills */
+.services-page svg[style*="color"] rect:not([fill="white"]):not([fill="none"]),
+.services-page svg[style*="color"] circle:not([fill="white"]):not([fill="none"]),
+.services-page svg[style*="color"] path:not([fill="white"]):not([fill="none"]) {
+  fill: #01FFFF !important;
 }

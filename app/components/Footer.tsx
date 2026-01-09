@@ -200,7 +200,7 @@ export default function Footer() {
                   href="https://www.facebook.com/1.adinfinity"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#0A1A24] hover:bg-[#01FFFF]/10 border border-gray-700 hover:border-[#01FFFF]/50 p-2 rounded-full transition-colors"
+                  className="bg-gray-800/40 hover:bg-[#01FFFF]/20 border border-gray-600 hover:border-[#01FFFF]/70 p-2 rounded-full transition-colors"
                   whileHover={{ y: -5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
@@ -210,7 +210,7 @@ export default function Footer() {
                   href="https://www.instagram.com/adinfinityads/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#0A1A24] hover:bg-[#01FFFF]/10 border border-gray-700 hover:border-[#01FFFF]/50 p-2 rounded-full transition-colors"
+                  className="bg-gray-800/40 hover:bg-[#01FFFF]/20 border border-gray-600 hover:border-[#01FFFF]/70 p-2 rounded-full transition-colors"
                   whileHover={{ y: -5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
@@ -220,7 +220,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/adinfinity-ads-bb0a398a/?originalSubdomain=gr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#0A1A24] hover:bg-[#01FFFF]/10 border border-gray-700 hover:border-[#01FFFF]/50 p-2 rounded-full transition-colors"
+                  className="bg-gray-800/40 hover:bg-[#01FFFF]/20 border border-gray-600 hover:border-[#01FFFF]/70 p-2 rounded-full transition-colors"
                   whileHover={{ y: -5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
@@ -229,6 +229,13 @@ export default function Footer() {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Desktop Copyright */}
+        <div className="hidden lg:block mt-8 pt-6 border-t border-gray-800 relative z-10 w-full">
+          <p className="text-center text-gray-400 text-sm">
+            © {currentYear} adinfinity. Με επιφύλαξη παντός δικαιώματος.
+          </p>
         </div>
 
         {/* Mobile Footer - Completely Redesigned for Compactness */}
@@ -246,7 +253,7 @@ export default function Footer() {
                 href="https://www.facebook.com/1.adinfinity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#0A1A24] border border-gray-700 p-1.5 rounded-full"
+                className="bg-gray-800/40 border border-gray-600 hover:border-[#01FFFF]/70 p-1.5 rounded-full transition-colors"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#01FFFF" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C6.477 2 2 6.477 2 12C2 16.991 5.657 21.128 10.438 21.879V14.89H7.898V12H10.438V9.797C10.438 7.291 11.93 5.907 14.215 5.907C15.309 5.907 16.453 6.102 16.453 6.102V8.562H15.193C13.95 8.562 13.563 9.333 13.563 10.124V12H16.336L15.893 14.89H13.563V21.879C18.343 21.128 22 16.991 22 12C22 6.477 17.523 2 12 2Z" />
@@ -256,7 +263,7 @@ export default function Footer() {
                 href="https://www.instagram.com/adinfinityads/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#0A1A24] border border-gray-700 p-1.5 rounded-full"
+                className="bg-gray-800/40 border border-gray-600 hover:border-[#01FFFF]/70 p-1.5 rounded-full transition-colors"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#01FFFF" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7Z" />
@@ -266,7 +273,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/adinfinity-ads-bb0a398a/?originalSubdomain=gr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#0A1A24] border border-gray-700 p-1.5 rounded-full"
+                className="bg-gray-800/40 border border-gray-600 hover:border-[#01FFFF]/70 p-1.5 rounded-full transition-colors"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#01FFFF" xmlns="http://www.w3.org/2000/svg">
                   <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z" />
@@ -308,7 +315,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-center text-gray-500 text-xs border-t border-gray-800 pt-4">
-            © {new Date().getFullYear()} adinfinity. Με επιφύλαξη παντός δικαιώματος.
+            © {currentYear} adinfinity. Με επιφύλαξη παντός δικαιώματος.
           </div>
         </div>
       </div>

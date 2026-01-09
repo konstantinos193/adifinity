@@ -12,6 +12,7 @@ export const PrintingIcon: React.FC<IconProps> = ({ className = "w-10 h-10" }) =
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-label="Printer icon"
+    style={{ color: "#01FFFF", stroke: "#01FFFF" }}
   >
     {/* Main printer body */}
     <rect
@@ -53,14 +54,14 @@ export const PrintingIcon: React.FC<IconProps> = ({ className = "w-10 h-10" }) =
     <defs>
       {/* Gradient for main body */}
       <linearGradient id="printing-machine-gradient" x1="8" y1="12" x2="56" y2="48" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#01FFFF" stopOpacity="0.3" />
-        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.3" />
+        <stop stopColor="#01FFFF" stopOpacity="0.8" />
+        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.8" />
       </linearGradient>
 
       {/* Gradient for trays */}
       <linearGradient id="tray-gradient" x1="16" y1="6" x2="48" y2="14" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#01FFFF" stopOpacity="0.1" />
-        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.1" />
+        <stop stopColor="#01FFFF" stopOpacity="0.6" />
+        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.6" />
       </linearGradient>
 
       {/* Subtle shadow for paper */}
@@ -87,6 +88,7 @@ export const GraphicDesignIcon: React.FC<IconProps> = ({ className = "w-10 h-10"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-label="Graphic design icon"
+    style={{ color: "#01FFFF", stroke: "#01FFFF" }}
   >
     {/* Background canvas */}
     <rect x="8" y="8" width="48" height="48" rx="6" fill="url(#design-gradient)" stroke="#01FFFF" strokeWidth="1.5" />
@@ -118,8 +120,8 @@ export const GraphicDesignIcon: React.FC<IconProps> = ({ className = "w-10 h-10"
     <defs>
       {/* Gradient for canvas */}
       <linearGradient id="design-gradient" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#01FFFF" stopOpacity="0.2" />
-        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.2" />
+        <stop stopColor="#01FFFF" stopOpacity="0.8" />
+        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.8" />
       </linearGradient>
 
       {/* Shadow for emblem */}
@@ -146,6 +148,7 @@ export const FlyerDistributionIcon: React.FC<IconProps> = ({ className = "w-10 h
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-label="Flyer distribution icon"
+    style={{ color: "#01FFFF", stroke: "#01FFFF" }}
   >
     {/* Background (optional subtle ground) */}
     <rect x="8" y="48" width="48" height="8" rx="2" fill="url(#ground-gradient)" stroke="#01FFFF" strokeWidth="1.5" />
@@ -205,14 +208,14 @@ export const FlyerDistributionIcon: React.FC<IconProps> = ({ className = "w-10 h
     <defs>
       {/* Gradient for flyers */}
       <linearGradient id="flyer-gradient" x1="18" y1="22" x2="42" y2="38" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#01FFFF" stopOpacity="0.3" />
-        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.3" />
+        <stop stopColor="#01FFFF" stopOpacity="0.8" />
+        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.8" />
       </linearGradient>
 
       {/* Gradient for ground */}
       <linearGradient id="ground-gradient" x1="8" y1="48" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#01FFFF" stopOpacity="0.1" />
-        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.1" />
+        <stop stopColor="#01FFFF" stopOpacity="0.6" />
+        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.6" />
       </linearGradient>
 
       {/* Shadow for flyer stack */}
@@ -239,6 +242,7 @@ export const WebsiteIcon: React.FC<IconProps> = ({ className = "w-10 h-10" }) =>
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-label="Website icon"
+    style={{ color: "#01FFFF", stroke: "#01FFFF" }}
   >
     {/* Browser window */}
     <rect x="8" y="8" width="48" height="40" rx="4" fill="url(#website-gradient)" stroke="#01FFFF" strokeWidth="1.5" />
@@ -290,8 +294,8 @@ export const WebsiteIcon: React.FC<IconProps> = ({ className = "w-10 h-10" }) =>
     <defs>
       {/* Gradient for screen */}
       <linearGradient id="website-gradient" x1="8" y1="8" x2="56" y2="48" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#01FFFF" stopOpacity="0.3" />
-        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.3" />
+        <stop stopColor="#01FFFF" stopOpacity="0.8" />
+        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.8" />
       </linearGradient>
 
       {/* Shadow for content */}
@@ -317,6 +321,7 @@ export const MarketResearchIcon: React.FC<IconProps> = ({ className = "w-10 h-10
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-label="Market research icon"
+    style={{ color: "#01FFFF", stroke: "#01FFFF" }}
   >
     {/* Background workspace */}
     <rect x="8" y="8" width="48" height="48" rx="6" fill="url(#research-gradient)" stroke="#01FFFF" strokeWidth="1.5" />
@@ -346,8 +351,8 @@ export const MarketResearchIcon: React.FC<IconProps> = ({ className = "w-10 h-10
     <defs>
       {/* Gradient for background */}
       <linearGradient id="research-gradient" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#01FFFF" stopOpacity="0.2" />
-        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.2" />
+        <stop stopColor="#01FFFF" stopOpacity="0.8" />
+        <stop offset="1" stopColor="#01A9FF" stopOpacity="0.8" />
       </linearGradient>
 
       {/* Shadow for chart */}
