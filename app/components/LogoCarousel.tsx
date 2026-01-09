@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import Image from "next/image"
 import projectsData from "../data/projects.json"
 
@@ -12,6 +12,7 @@ export default function LogoCarousel() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [autoplay, setAutoplay] = useState(true)
   const [touchStart, setTouchStart] = useState(0)
+  const shouldReduceMotion = useReducedMotion()
 
   // Initialize on client side
   useEffect(() => {
@@ -159,20 +160,23 @@ export default function LogoCarousel() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0 }}
+                initial={{ opacity: shouldReduceMotion ? 1 : 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: shouldReduceMotion ? 1 : 0 }}
+                transition={{ duration: shouldReduceMotion ? 0 : 0.2 }}
                 className="w-full h-full flex items-center justify-center relative z-10"
+                style={{ willChange: 'opacity' }}
               >
-                <Image
-                  src={currentProject.image || "/placeholder.svg"}
-                  alt={currentProject.name}
-                  width={400}
-                  height={250}
-                  className="max-h-full w-auto object-contain"
-                  priority
-                />
+                <div className="relative w-full h-full max-w-[400px] max-h-[250px] aspect-[400/250]">
+                  <Image
+                    src={currentProject.image || "/placeholder.svg"}
+                    alt={currentProject.name}
+                    fill
+                    className="object-contain"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                  />
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -225,10 +229,11 @@ export default function LogoCarousel() {
           {/* Partner name with animation */}
           <motion.div
             key={`name-${currentIndex}`}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 5 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.2 }}
             className="text-center mt-8"
+            style={{ willChange: 'opacity, transform' }}
           >
             <h3 className="text-xl font-bold text-[#01FFFF]">{currentProject.name}</h3>
             <p className="text-gray-300 text-sm mt-2">{currentProject.category}</p>

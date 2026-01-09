@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import { ServiceCard } from "../components/ServiceCard"
 import {
   PrintingIcon,
@@ -49,6 +49,8 @@ const services = [
 ]
 
 export default function ServicesPage() {
+  const shouldReduceMotion = useReducedMotion()
+  
   return (
     <main className="services-page min-h-screen pt-32 pb-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24] relative overflow-hidden">
       <SEOContent />
@@ -77,18 +79,20 @@ export default function ServicesPage() {
         <div className="mb-16">
           <motion.h1
             className="text-4xl md:text-7xl text-center mb-6 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]"
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.3 }}
+            style={{ willChange: 'opacity, transform' }}
           >
             Οι Υπηρεσίες Μας
           </motion.h1>
 
           <motion.p
             className="text-lg md:text-xl text-center mb-8 max-w-3xl mx-auto text-gray-300"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.05 }}
+            style={{ willChange: 'opacity, transform' }}
           >
             Προσφέρουμε ένα ευρύ φάσμα υπηρεσιών μάρκετινγκ και επικοινωνίας για να καλύψουμε όλες τις ανάγκες της
             επιχείρησής σας. Από την έρευνα αγοράς μέχρι την υλοποίηση, είμαστε δίπλα σας σε κάθε βήμα.
@@ -97,9 +101,9 @@ export default function ServicesPage() {
           {/* Decorative element */}
           <motion.div
             className="w-24 h-1 bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] mx-auto rounded-full"
-            initial={{ width: 0 }}
+            initial={{ width: shouldReduceMotion ? 96 : 0 }}
             animate={{ width: 96 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.1 }}
           ></motion.div>
         </div>
 
@@ -120,9 +124,10 @@ export default function ServicesPage() {
         {/* CTA Section */}
         <motion.div
           className="relative overflow-hidden bg-gradient-to-r from-[#0A1A24] to-[#0D2436] p-8 md:p-12 rounded-2xl shadow-2xl border border-cyan-900/30 mt-20"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.15 }}
+          style={{ willChange: 'opacity, transform' }}
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#01FFFF]/10 to-transparent rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#01A9FF]/10 to-transparent rounded-full blur-3xl"></div>
@@ -136,9 +141,10 @@ export default function ServicesPage() {
             <div className="flex justify-center">
               <Link href="/contact#contact-form">
                 <motion.button
-                  className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-bold py-3 px-8 rounded-full text-lg shadow-lg shadow-cyan-500/20 flex items-center"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
-                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-bold py-3 px-8 rounded-full text-lg shadow-lg shadow-cyan-500/20 flex items-center transition-transform will-change-transform"
+                  whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+                  whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
+                  transition={{ duration: 0.15 }}
                 >
                   Επικοινωνήστε Μαζί Μας
                   <ArrowRight className="ml-2 h-5 w-5" />

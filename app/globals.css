@@ -12,6 +12,43 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Improve image rendering */
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent layout shift for images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
 /* Global SVG protection - prevent dark color inheritance */
 /* SVGs should use their explicit fill/stroke attributes, not inherit body color */
 svg {
