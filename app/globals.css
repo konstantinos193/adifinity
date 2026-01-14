@@ -37,16 +37,25 @@ video {
   max-width: 100%;
   height: auto;
   display: block;
+  opacity: 1;
 }
 
 /* Prevent layout shift for images */
 img[loading="lazy"] {
-  opacity: 0;
-  transition: opacity 0.3s;
+  opacity: 1;
 }
 
-img[loading="lazy"].loaded {
-  opacity: 1;
+/* Ensure Next/Image doesn't stay transparent */
+img[data-nimg] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+img[data-nimg="fill"] {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
 }
 
 /* Global SVG protection - prevent dark color inheritance */

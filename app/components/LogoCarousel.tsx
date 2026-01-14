@@ -54,6 +54,15 @@ export default function LogoCarousel() {
     }
   }
 
+  const handleImageError = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = event.currentTarget
+    if (img.dataset.fallbackApplied) {
+      return
+    }
+    img.dataset.fallbackApplied = "true"
+    img.src = "/placeholder.svg"
+  }
+
   // If we're not loaded yet, don't render anything to avoid hydration issues
   if (!isLoaded) {
     return null
@@ -167,7 +176,7 @@ export default function LogoCarousel() {
                 className="w-full h-full flex items-center justify-center relative z-10"
                 style={{ willChange: 'opacity' }}
               >
-                <div className="relative w-full h-full max-w-[400px] max-h-[250px] aspect-[400/250]">
+                <div className="relative w-full max-w-[400px] h-[200px] sm:h-[220px] md:h-[250px]">
                   <Image
                     src={currentProject.image || "/placeholder.svg"}
                     alt={currentProject.name}
@@ -175,6 +184,7 @@ export default function LogoCarousel() {
                     className="object-contain"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+                    onError={handleImageError}
                   />
                 </div>
               </motion.div>

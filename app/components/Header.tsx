@@ -259,18 +259,20 @@ export default function Header() {
                           >
                             <span>{item.name}</span>
                           </Link>
-                          <button
-                            onClick={() => toggleMobileDropdown(index)}
-                            className="focus:outline-none"
-                            aria-label="Toggle dropdown"
-                          >
-                            <ChevronDown
-                              size={18}
-                              className={`transition-transform duration-300 ${
-                                activeMobileDropdown === index ? "rotate-180 text-[#01FFFF]" : ""
-                              }`}
-                            />
-                          </button>
+                          {item.dropdownItems && (
+                            <button
+                              onClick={() => toggleMobileDropdown(index)}
+                              className="focus:outline-none"
+                              aria-label="Toggle dropdown"
+                            >
+                              <ChevronDown
+                                size={18}
+                                className={`transition-transform duration-300 ${
+                                  activeMobileDropdown === index ? "rotate-180 text-[#01FFFF]" : ""
+                                }`}
+                              />
+                            </button>
+                          )}
                         </div>
 
                         <AnimatePresence>
