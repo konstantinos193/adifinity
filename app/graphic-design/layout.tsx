@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Γραφιστική Άρτα | adinfinity - Γραφιστικό Γραφείο',
-  description: 'Γραφιστική και γραφιστικό γραφείο στην Άρτα. Επαγγελματικός σχεδιασμός, branding, εταιρική ταυτότητα, logo design και διαφημιστικά σχέδια. Επικοινωνήστε στο +30 2681 303007.',
+  title: 'Γραφιστική Άρτα | Graphic Design & Branding | adinfinity',
+  description: 'Επαγγελματική γραφιστική και graphic design στην Άρτα. Logo design, branding, εταιρική ταυτότητα, διαφημιστικά σχέδια. Αποτελέσματα που ξεχωρίζουν! +30 2681 303007',
   keywords: [
     'γραφιστικη',
     'γραφιστική',
     'γραφιστικο γραφειο',
-    'γραφιστικά γραφεία',
+    'γραφικά γραφεία',
     'γραφικές τέχνες Άρτα',
     'graphic design',
     'graphic designs',
@@ -18,10 +18,13 @@ export const metadata: Metadata = {
     'διαφημιστικός σχεδιασμός',
     'graphic design Άρτα',
     'ψηφιακός σχεδιασμός',
+    'digital design',
+    'visual identity',
+    'creative design',
   ],
   openGraph: {
-    title: 'Γραφικές Τέχνες | adinfinity',
-    description: 'Εντυπωσιακός σχεδιασμός που κάνει τη διαφορά! Branding και εταιρική ταυτότητα.',
+    title: 'Γραφιστική Άρτα | Graphic Design & Branding | adinfinity',
+    description: 'Επαγγελματική γραφιστική και graphic design στην Άρτα. Logo design, branding, εταιρική ταυτότητα. Αποτελέσματα που ξεχωρίζουν!',
     url: 'https://adinfinity.gr/graphic-design',
     siteName: 'adinfinity',
     images: [
@@ -37,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Γραφικές Τέχνες | adinfinity',
-    description: 'Εντυπωσιακός σχεδιασμός που κάνει τη διαφορά!',
+    title: 'Γραφιστική Άρτα | Graphic Design | adinfinity',
+    description: 'Επαγγελματική γραφιστική και graphic design. Logo design, branding, εταιρική ταυτότητα.',
     images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
   },
   alternates: {
@@ -62,6 +65,78 @@ export default function GraphicDesignLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <>
+      {/* Structured Data - Service */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Γραφιστική & Graphic Design",
+            "description": "Επαγγελματικές υπηρεσίες γραφιστικής και graphic design στην Άρτα. Logo design, branding, εταιρική ταυτότητα, διαφημιστικά σχέδια.",
+            "provider": {
+              "@type": "Organization",
+              "name": "adinfinity",
+              "url": "https://adinfinity.gr",
+              "telephone": "+30-2681-303007",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Βασ. Πύρρου 30",
+                "addressLocality": "Άρτα",
+                "postalCode": "471 32",
+                "addressCountry": "GR",
+              },
+            },
+            "serviceType": ["Graphic Design", "Branding", "Logo Design", "Visual Identity"],
+            "areaServed": {
+              "@type": "Country",
+              "name": "Greece",
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Υπηρεσίες Γραφιστικής",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Branding & Εταιρική Ταυτότητα",
+                    "description": "Δημιουργία μοναδικών εταιρικών ταυτοτήτων που ξεχωρίζουν",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Διαφημιστικά & Έντυπα Σχέδια",
+                    "description": "Εντυπωσιακά σχέδια που προσελκύουν το κοινό",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Ψηφιακά & Social Media Graphics",
+                    "description": "Δυναμική παρουσία στον ψηφιακό κόσμο",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Εξειδικευμένες Δημιουργίες",
+                    "description": "Καινοτόμες λύσεις για κάθε ανάγκη",
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      {children}
+    </>
+  )
 }
 

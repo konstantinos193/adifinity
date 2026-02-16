@@ -83,7 +83,7 @@ export default function HeroSection() {
             transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.25 }}
             style={{ willChange: 'opacity' }}
           >
-            Με τη σωστή στρατηγική και δημιουργικότητα, σας βοηθάμε να ξεχωρίσετε στην αγορά σας.
+            Ως κορυφαία <span className="text-[#01FFFF]">διαφημιστική εταιρεία</span> στην Άρτα, με τη σωστή στρατηγική και δημιουργικότητα, σας βοηθάμε να ξεχωρίσετε στην αγορά σας.
           </motion.p>
 
           <motion.div

@@ -12,6 +12,7 @@ type Project = {
   solution?: string
   results?: string
   bgColor?: string // Optional background color override
+  liveUrl?: string // Optional live website URL
 }
 
 interface ProjectCardProps {
@@ -137,7 +138,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
         <p className="text-[#01FFFF] text-sm mb-4 text-center">{project.category}</p>
         <p className="text-gray-300 text-sm line-clamp-3 text-center">{project.description}</p>
 
-        <div className="mt-6 w-full">
+        <div className="mt-6 w-full space-y-3">
           <button className="w-full py-2 px-4 bg-transparent hover:bg-[#01FFFF]/10 border border-[#01FFFF]/30 rounded-lg text-[#01FFFF] text-sm flex items-center justify-center transition-all backdrop-blur-sm">
             Περισσότερες λεπτομέρειες
             <svg
@@ -150,6 +151,27 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
+          
+          {project.liveUrl && (
+            <a 
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-2 px-4 bg-[#01FFFF]/10 hover:bg-[#01FFFF]/20 border border-[#01FFFF]/50 rounded-lg text-[#01FFFF] text-sm flex items-center justify-center transition-all backdrop-blur-sm"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Επίσκεψη Ιστοσελίδας
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 ml-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

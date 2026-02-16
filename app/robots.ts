@@ -7,15 +7,23 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
+        allow: [
+          '/',
+          '/images/',
+          '/public/',
+        ],
         disallow: [
           '/api/',
           '/_next/',
-          '/admin/',
-          // Disallow old Joomla query parameters
+          '/node_modules/',
+          '/.git/',
+          '/*.json$',
+          // Block old Joomla query parameters
           '/*?option=com_k2*',
           '/*?option=com_content*',
           '/*?option=com_users*',
+          '/*?view=itemlist*',
+          '/*?task=user*',
         ],
       },
       {
@@ -24,13 +32,20 @@ export default function robots(): MetadataRoute.Robots {
         disallow: [
           '/api/',
           '/_next/',
+          '/node_modules/',
+          '/.git/',
+          '/*.json$',
           '/*?option=com_k2*',
           '/*?option=com_content*',
           '/*?option=com_users*',
+          '/*?view=itemlist*',
+          '/*?task=user*',
         ],
+        crawlDelay: 1,
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   }
 }
 

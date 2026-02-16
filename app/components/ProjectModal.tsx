@@ -15,6 +15,7 @@ type Project = {
   solution?: string
   results?: string
   bgColor?: string // Optional background color override
+  liveUrl?: string // Optional live website URL
 }
 
 interface ProjectModalProps {
@@ -220,6 +221,29 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     <div className="mb-4">
                       <h3 className="text-lg font-bold text-[#01FFFF] mb-2">Αποτελέσματα</h3>
                       <p className="text-gray-300 text-sm">{project.results}</p>
+                    </div>
+                  )}
+
+                  {project.liveUrl && (
+                    <div className="mb-4">
+                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">Ζωντανή Ιστοσελίδα</h3>
+                      <a 
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-[#01FFFF] hover:text-[#01A9FF] transition-colors text-sm"
+                      >
+                        {project.liveUrl}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 ml-2"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </a>
                     </div>
                   )}
                 </div>

@@ -55,6 +55,78 @@ export default function WebsiteDevelopmentLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <>
+      {/* Structured Data - Service */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Κατασκευή Ιστοσελίδων & Web Development",
+            "description": "Επαγγελματική κατασκευή ιστοσελίδων στην Άρτα. Web development, responsive design, SEO, e-commerce και τεχνική υποστήριξη.",
+            "provider": {
+              "@type": "Organization",
+              "name": "adinfinity",
+              "url": "https://adinfinity.gr",
+              "telephone": "+30-2681-303007",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Βασ. Πύρρου 30",
+                "addressLocality": "Άρτα",
+                "postalCode": "471 32",
+                "addressCountry": "GR",
+              },
+            },
+            "serviceType": ["Web Development", "Website Design", "SEO", "E-commerce"],
+            "areaServed": {
+              "@type": "Country",
+              "name": "Greece",
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Υπηρεσίες Web Development",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Responsive Website Design",
+                    "description": "Σύγχρονες ιστοσελίδες που λειτουργούν τέλεια σε όλες τις συσκευές",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "E-commerce Solutions",
+                    "description": "Πλήρεις λύσεις ηλεκτρονικού εμπορίου για online πωλήσεις",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "SEO Optimization",
+                    "description": "Βελτιστοποίηση για μηχανές αναζήτησης και υψηλότερες κατατάξεις",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Technical Support",
+                    "description": "Τεχνική υποστήριξη και συντήρηση ιστοσελίδων",
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      {children}
+    </>
+  )
 }
 
