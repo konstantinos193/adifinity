@@ -44,6 +44,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://adinfinity.gr/',
+    languages: {
+      'el-GR': 'https://adinfinity.gr',
+      'el': 'https://adinfinity.gr',
+    },
   },
   openGraph: {
     title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Marketing & Digital Services',

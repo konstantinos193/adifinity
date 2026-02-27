@@ -6,6 +6,7 @@ import { CreativeProcess } from "../components/CreativeProcess"
 import Link from "next/link"
 import Image from "next/image"
 
+
 export default function GraphicDesignPage() {
   const services = [
     {

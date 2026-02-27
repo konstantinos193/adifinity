@@ -11,10 +11,10 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "adinfinity Άρτα | Διαφημιστική Εταιρεία & Marketing",
+    default: "adinfinity Άρτα | #1 Διαφημιστική Εταιρεία & Marketing Agency",
     template: "%s | adinfinity",
   },
-  description: "Διαφημιστική εταιρεία στην Άρτα. Εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων. Επικοινωνήστε: +30 2681 303007",
+  description: "Κορυφαία διαφημιστική εταιρεία στην Άρτα με 100+ πελάτες. Εκτυπώσεις, γραφιστική, ιστοσελίδες, digital marketing. Αποτελέσματα που φαίνονται! +30 2681 303007",
   keywords: [
     "adinfinity",
     "ad infinity",
@@ -53,6 +53,11 @@ export const metadata: Metadata = {
     "Άρτα",
     "Ελλάδα",
     "Greece",
+    "creative agency",
+    "graphic design",
+    "web development",
+    "flyer distribution",
+    "print services",
   ],
   authors: [{ name: "adinfinity" }],
   creator: "adinfinity",
