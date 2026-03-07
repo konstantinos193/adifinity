@@ -15,10 +15,12 @@ export function proxy(request: NextRequest) {
 
   // Handle old Joomla URLs with query parameters - redirect to clean homepage
   const searchParams = url.searchParams
-  const hasJoomlaParams = searchParams.has('option') &&
-    (searchParams.get('option')?.includes('com_k2') ||
-      searchParams.get('option')?.includes('com_content') ||
-      searchParams.get('option')?.includes('com_users'))
+  const joomlaParams = ['option', 'view', 'task', 'id', 'itemlist', 'user']
+  const hasJoomlaParams = joomlaParams.some(param => searchParams.has(param)) ||
+    (searchParams.has('option') &&
+      (searchParams.get('option')?.includes('com_k2') ||
+        searchParams.get('option')?.includes('com_content') ||
+        searchParams.get('option')?.includes('com_users')))
 
   // If it's a Joomla URL or needs protocol/domain redirect, redirect to canonical
   if (hasJoomlaParams || needsRedirect) {

@@ -83,7 +83,7 @@ export default function HeroSection() {
             transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.25 }}
             style={{ willChange: 'opacity' }}
           >
-            Ως κορυφαία <span className="text-[#01FFFF]">διαφημιστική εταιρεία</span> στην Άρτα, με τη σωστή στρατηγική και δημιουργικότητα, σας βοηθάμε να ξεχωρίσετε στην αγορά σας.
+            Ως κορυφαία <span className="text-[#01FFFF]">διαφημιστική εταιρεία</span> στην Άρτα, ειδικευμένη σε <span className="text-[#01FFFF]">διαφημιστικά</span>, <span className="text-[#01FFFF]">γραφιστική</span>, <span className="text-[#01FFFF]">εκτυπώσεις</span> και digital marketing, μετατρέπουμε τις ιδέες σας σε επιχειρηματική επιτυχία.
           </motion.p>
 
           <motion.div

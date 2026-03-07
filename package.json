@@ -1,12 +1,17 @@
 {
   "name": "adifinity",
   "version": "1.0.0",
+  "description": "Modern dark-themed marketing agency website for adinfinity",
   "private": true,
+  "homepage": "https://adinfinity.gr",
+  "author": "adinfinity",
+  "keywords": ["marketing", "agency", "next.js", "react", "typescript", "tailwind"],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -52,7 +57,7 @@
     "framer-motion": "latest",
     "input-otp": "1.4.2",
     "leaflet": "^1.9.4",
-    "lucide-react": "^0.575.0",
+    "lucide-react": "^0.577.0",
     "next": "16.1.6",
     "next-themes": "^0.4.6",
     "nodemailer": "^8.0.1",
@@ -62,10 +67,10 @@
     "react-dom": "^19.2.4",
     "react-hook-form": "^7.71.2",
     "react-icons": "latest",
-    "react-resizable-panels": "^4.6.5",
+    "react-resizable-panels": "^4.7.1",
     "react-slick": "^0.31.0",
-    "recharts": "3.7.0",
-    "resend": "^6.9.2",
+    "recharts": "3.8.0",
+    "resend": "^6.9.3",
     "slick-carousel": "^1.8.1",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.5.0",

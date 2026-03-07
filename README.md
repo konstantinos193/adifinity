@@ -7,46 +7,46 @@ A modern, dark-themed marketing agency website built with Next.js 16, because we
 ## Tech Stack (The Usual Suspects)
 
 ### Core Framework
-![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-19.2.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### Styling & UI
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.1.18-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.2.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-latest-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 ![Radix UI](https://img.shields.io/badge/Radix_UI-All_Components-161618?style=for-the-badge&logo=radix-ui&logoColor=white)
 
 ### Icons & Graphics
-![Lucide React](https://img.shields.io/badge/Lucide_React-0.562.0-FF6B6B?style=for-the-badge)
+![Lucide React](https://img.shields.io/badge/Lucide_React-0.577.0-FF6B6B?style=for-the-badge)
 ![Heroicons](https://img.shields.io/badge/Heroicons-latest-7C3AED?style=for-the-badge)
 ![React Icons](https://img.shields.io/badge/React_Icons-latest-F7DF1E?style=for-the-badge&logo=react&logoColor=black)
 
 ### Forms & Validation
-![React Hook Form](https://img.shields.io/badge/React_Hook_Form-7.70.0-EC5990?style=for-the-badge)
-![Zod](https://img.shields.io/badge/Zod-4.3.5-3E63DD?style=for-the-badge)
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-7.71.2-EC5990?style=for-the-badge)
+![Zod](https://img.shields.io/badge/Zod-4.3.6-3E63DD?style=for-the-badge)
 ![Hookform Resolvers](https://img.shields.io/badge/Hookform_Resolvers-5.2.2-FF6B6B?style=for-the-badge)
 
 ### Charts & Data Visualization
 ![Chart.js](https://img.shields.io/badge/Chart.js-4.5.1-FF6384?style=for-the-badge&logo=chart.js&logoColor=white)
 ![React ChartJS 2](https://img.shields.io/badge/React_ChartJS_2-5.3.1-FF6384?style=for-the-badge)
-![Recharts](https://img.shields.io/badge/Recharts-3.6.0-00D9FF?style=for-the-badge)
+![Recharts](https://img.shields.io/badge/Recharts-3.8.0-00D9FF?style=for-the-badge)
 
 ### Maps & Location
 ![Leaflet](https://img.shields.io/badge/Leaflet-1.9.4-199900?style=for-the-badge&logo=leaflet&logoColor=white)
 
 ### Email & Communication
 ![EmailJS](https://img.shields.io/badge/EmailJS-4.4.1-FF6B6B?style=for-the-badge)
-![Nodemailer](https://img.shields.io/badge/Nodemailer-7.0.12-FF6B6B?style=for-the-badge)
-![Resend](https://img.shields.io/badge/Resend-6.7.0-FF6B6B?style=for-the-badge)
+![Nodemailer](https://img.shields.io/badge/Nodemailer-8.0.1-FF6B6B?style=for-the-badge)
+![Resend](https://img.shields.io/badge/Resend-6.9.3-FF6B6B?style=for-the-badge)
 
 ### Analytics & Performance
 ![Vercel Analytics](https://img.shields.io/badge/Vercel_Analytics-1.6.1-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Vercel Speed Insights](https://img.shields.io/badge/Speed_Insights-1.3.1-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 ### Utilities & Helpers
-![Date-fns](https://img.shields.io/badge/date--fns-4.1.0-FF6B6B?style=for-the-badge)
+![date-fns](https://img.shields.io/badge/date--fns-4.1.0-FF6B6B?style=for-the-badge)
 ![clsx](https://img.shields.io/badge/clsx-2.1.1-FF6B6B?style=for-the-badge)
-![Tailwind Merge](https://img.shields.io/badge/Tailwind_Merge-3.4.0-38B2AC?style=for-the-badge)
+![Tailwind Merge](https://img.shields.io/badge/Tailwind_Merge-3.5.0-38B2AC?style=for-the-badge)
 ![Class Variance Authority](https://img.shields.io/badge/CVA-0.7.1-FF6B6B?style=for-the-badge)
 
 ### Carousels & UI Components
@@ -59,7 +59,7 @@ A modern, dark-themed marketing agency website built with Next.js 16, because we
 
 ### Development Tools
 ![PostCSS](https://img.shields.io/badge/PostCSS-8-DD3A0A?style=for-the-badge&logo=postcss&logoColor=white)
-![Autoprefixer](https://img.shields.io/badge/Autoprefixer-10.4.23-DD3735?style=for-the-badge)
+![Autoprefixer](https://img.shields.io/badge/Autoprefixer-10.4.27-DD3735?style=for-the-badge)
 
 ## What This Thing Does
 
