@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     siteName: 'adinfinity',
     images: [
       {
-        url: 'https://i.postimg.cc/2SygFYcf/Untitled-design-28.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'adinfinity - Ποιοι Είμαστε',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ποιοι Είμαστε | adinfinity',
     description: 'Μετατρέπουμε Ιδέες σε Επιτυχίες!',
-    images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
+    images: ['/images/og-image.png'],
   },
   alternates: {
     canonical: 'https://adinfinity.gr/about',

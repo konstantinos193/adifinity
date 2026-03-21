@@ -15,7 +15,7 @@ export function OfficeShowcase() {
     >
       <div className="relative w-full h-[400px]">
         <Image
-          src="https://i.imgur.com/ERErjTs.png"
+          src="/images/office-showcase.png"
           alt="Το γραφείο μας"
           fill
           className="object-cover"

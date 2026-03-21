@@ -2,6 +2,10 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function proxy(request: NextRequest) {
+  if (process.env.NODE_ENV !== 'production') {
+    return NextResponse.next()
+  }
+
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
   const protocol = request.headers.get('x-forwarded-proto') || (request.nextUrl.protocol === 'https:' ? 'https' : 'http')

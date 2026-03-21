@@ -61,7 +61,7 @@ const FallingEgg = ({
 }) => {
   const [position, setPosition] = useState(-50)
   const [rotation, setRotation] = useState(0)
-  const animationRef = useRef<number>()
+  const animationRef = useRef<number | undefined>(undefined)
   const startTime = useRef(Date.now() + delay * 1000)
   const speed = useRef(Math.random() * 0.5 + 0.5) // Slower speed between 0.5-1
 

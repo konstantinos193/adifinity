@@ -3,8 +3,6 @@
 import { lazy, Suspense } from 'react'
 import HeroSection from './HeroSection'
 import ServicesSection from './ServicesSection'
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Lazy load below-the-fold components for better LCP
 const LogoCarousel = lazy(() => import('./LogoCarousel'))
@@ -32,8 +30,6 @@ export default function HomePageClient() {
       <Suspense fallback={<LoadingPlaceholder />}>
         <ContactSection />
       </Suspense>
-      <Analytics />
-      <SpeedInsights />
     </main>
   )
 }

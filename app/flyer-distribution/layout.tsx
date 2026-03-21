@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Διανομή Εντύπων Άρτα | adinfinity - Έντυποδιανομές',
-  description: 'Διανομή εντύπων και έντυποδιανομές στην Άρτα. Πόρτα-πόρτα, διανομή φυλλαδίων, διανομή σε επιχειρήσεις και στοχευμένη διανομή. Επικοινωνήστε στο +30 2681 303007.',
+  title: 'Διανομή Φυλλαδίων Άρτα | Στοχευμένη Διανομή Εντύπων | adinfinity',
+  description: 'Επαγγελματική διανομή φυλλαδίων & εντύπων στην Άρτα. Πόρτα-πόρτα, στοχευμένη διανομή σε επιχειρήσεις και κατοικίες. Μέγιστη προβολή για την επιχείρησή σας. ☎ 2681 303007',
   keywords: [
     'διανομη εντυπων',
     'διανομή εντύπων',
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     'διαφημιστικα φυλλαδια',
   ],
   openGraph: {
-    title: 'Έντυποδιανομές | adinfinity',
-    description: 'Στοχευμένη διανομή εντύπων για μέγιστη προβολή και απήχηση.',
+    title: 'Διανομή Φυλλαδίων Άρτα | adinfinity',
+    description: 'Επαγγελματική διανομή φυλλαδίων & εντύπων στην Άρτα. Πόρτα-πόρτα, στοχευμένη διανομή για μέγιστη προβολή της επιχείρησής σας.',
     url: 'https://adinfinity.gr/flyer-distribution',
     siteName: 'adinfinity',
     images: [
       {
-        url: 'https://i.postimg.cc/2SygFYcf/Untitled-design-28.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'adinfinity - Έντυποδιανομές',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Έντυποδιανομές | adinfinity',
-    description: 'Στοχευμένη διανομή εντύπων για μέγιστη προβολή.',
-    images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
+    title: 'Διανομή Φυλλαδίων Άρτα | adinfinity',
+    description: 'Επαγγελματική διανομή φυλλαδίων & εντύπων στην Άρτα. Στοχευμένη διανομή για μέγιστη προβολή.',
+    images: ['/images/og-image.png'],
   },
   alternates: {
     canonical: 'https://adinfinity.gr/flyer-distribution',
@@ -61,6 +61,61 @@ export default function FlyerDistributionLayout({
 }: {
   children: React.ReactNode
 }) {
-  return children
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Διανομή Φυλλαδίων & Εντύπων',
+            description: 'Επαγγελματική στοχευμένη διανομή φυλλαδίων και εντύπων στην Άρτα και την Ήπειρο. Πόρτα-πόρτα διανομή σε κατοικίες και επιχειρήσεις.',
+            provider: {
+              '@type': 'Organization',
+              name: 'adinfinity',
+              url: 'https://adinfinity.gr',
+              telephone: '+30-2681-303007',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: 'Βασ. Πύρρου 30',
+                addressLocality: 'Άρτα',
+                postalCode: '471 32',
+                addressCountry: 'GR',
+              },
+            },
+            serviceType: 'Flyer Distribution',
+            areaServed: [
+              { '@type': 'City', name: 'Άρτα' },
+              { '@type': 'State', name: 'Ήπειρος' },
+            ],
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'Υπηρεσίες Διανομής Εντύπων',
+              itemListElement: [
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Πόρτα-Πόρτα Διανομή',
+                    description: 'Διανομή φυλλαδίων σε κατοικίες και γραμματοκιβώτια',
+                  },
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: 'Στοχευμένη Διανομή σε Επιχειρήσεις',
+                    description: 'Διανομή εντύπων σε επιλεγμένες επιχειρήσεις και σημεία',
+                  },
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      {children}
+    </>
+  )
 }
 

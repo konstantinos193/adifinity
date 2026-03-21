@@ -3,18 +3,16 @@ import "./globals.css"
 import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata, Viewport } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "adinfinity Άρτα | #1 Διαφημιστική Εταιρεία & Marketing Agency",
+    default: "adinfinity Άρτα | #1 Διαφημιστική Εταιρεία - Marketing & Digital Services",
     template: "%s | adinfinity",
   },
-  description: "Κορυφαία διαφημιστική εταιρεία στην Άρτα με 100+ πελάτες. Εκτυπώσεις, γραφιστική, ιστοσελίδες, digital marketing. Αποτελέσματα που φαίνονται! +30 2681 303007",
+  description: "Κορυφαία διαφημιστική εταιρεία στην Άρτα με 100+ πελάτες. Εκτυπώσεις, γραφιστική, ιστοσελίδες, digital marketing, διανομή εντύπων. Επαγγελματικές υπηρεσίες με αποτελέσματα! +30 2681 303007",
   keywords: [
     "adinfinity",
     "ad infinity",
@@ -117,13 +115,6 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-    themeColor: '#07141C',
-  },
   metadataBase: new URL("https://adinfinity.gr"),
   alternates: {
     canonical: "https://adinfinity.gr/",
@@ -141,7 +132,7 @@ export const metadata: Metadata = {
     siteName: "adinfinity",
     images: [
       {
-        url: "https://i.postimg.cc/2SygFYcf/Untitled-design-28.png",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "adinfinity - Μετατρέπουμε Ιδέες σε Επιτυχίες!",
@@ -152,7 +143,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "adinfinity | Μετατρέπουμε Ιδέες σε Επιτυχίες!",
     description: "Επαγγελματικές υπηρεσίες διαφήμισης, εκτυπώσεων, γραφικών τεχνών και ανάπτυξης ιστοσελίδων.",
-    images: ["https://i.postimg.cc/2SygFYcf/Untitled-design-28.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
@@ -175,6 +166,8 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
+  themeColor: '#07141C',
+  colorScheme: 'dark',
 }
 
 export default function RootLayout({
@@ -243,7 +236,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "adinfinity",
-              image: "https://i.postimg.cc/2SygFYcf/Untitled-design-28.png",
+              image: "/images/og-image.png",
               "@id": "https://adinfinity.gr",
               url: "https://adinfinity.gr",
               telephone: "+30-2681-303007",
@@ -353,8 +346,6 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   )

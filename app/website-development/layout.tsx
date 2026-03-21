@@ -1,28 +1,30 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ιστοσελίδες Άρτα | adinfinity - Κατασκευή Ιστοσελίδων & Web Development',
-  description: 'Κατασκευή ιστοσελίδων στην Άρτα. Web development, responsive design, SEO, e-commerce και τεχνική υποστήριξη. Επικοινωνήστε στο +30 2681 303007.',
+  title: 'Κατασκευή Ιστοσελίδων Ελλάδα | adinfinity - Web Development',
+  description: 'Επαγγελματική κατασκευή ιστοσελίδων για επιχειρήσεις σε όλη την Ελλάδα. Web development, e-commerce, responsive design και SEO. Από €1.200.',
   keywords: [
-    'ιστοσελίδες Άρτα',
+    'κατασκευή ιστοσελίδων Ελλάδα',
+    'web development Ελλάδα',
     'κατασκευή ιστοσελίδων',
-    'web development Άρτα',
-    'SEO Άρτα',
+    'e-shop κατασκευή',
     'responsive websites',
-    'e-commerce websites',
-    'διαφημιστικές ιστοσελίδες',
+    'e-commerce development',
+    'SEO βελτιστοποίηση',
+    'Next.js development',
+    'custom React development',
   ],
   openGraph: {
-    title: 'Ιστοσελίδες Άρτα | adinfinity - Κατασκευή Ιστοσελίδων',
-    description: 'Κατασκευή ιστοσελίδων στην Άρτα. Web development, responsive design, SEO και e-commerce.',
+    title: 'Κατασκευή Ιστοσελίδων Ελλάδα | adinfinity',
+    description: 'Επαγγελματική κατασκευή ιστοσελίδων για επιχειρήσεις σε όλη την Ελλάδα. Από €1.200.',
     url: 'https://adinfinity.gr/website-development',
     siteName: 'adinfinity',
     images: [
       {
-        url: 'https://i.postimg.cc/2SygFYcf/Untitled-design-28.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'adinfinity - Ιστοσελίδες',
+        alt: 'adinfinity - Κατασκευή Ιστοσελίδων',
       },
     ],
     locale: 'el_GR',
@@ -30,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ιστοσελίδες Άρτα | adinfinity',
-    description: 'Κατασκευή ιστοσελίδων στην Άρτα. Web development, responsive design και SEO.',
-    images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
+    title: 'Κατασκευή Ιστοσελίδων Ελλάδα | adinfinity',
+    description: 'Επαγγελματική κατασκευή ιστοσελίδων για επιχειρήσεις σε όλη την Ελλάδα. Από €1.200.',
+    images: ['/images/og-image.png'],
   },
   alternates: {
     canonical: 'https://adinfinity.gr/website-development',
@@ -57,7 +59,6 @@ export default function WebsiteDevelopmentLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -65,7 +66,7 @@ export default function WebsiteDevelopmentLayout({
             "@context": "https://schema.org",
             "@type": "Service",
             "name": "Κατασκευή Ιστοσελίδων & Web Development",
-            "description": "Επαγγελματική κατασκευή ιστοσελίδων στην Άρτα. Web development, responsive design, SEO, e-commerce και τεχνική υποστήριξη.",
+            "description": "Επαγγελματική κατασκευή ιστοσελίδων για επιχειρήσεις σε όλη την Ελλάδα. Web development, responsive design, SEO και e-commerce.",
             "provider": {
               "@type": "Organization",
               "name": "adinfinity",
@@ -84,44 +85,6 @@ export default function WebsiteDevelopmentLayout({
               "@type": "Country",
               "name": "Greece",
             },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Web Development",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Responsive Website Design",
-                    "description": "Σύγχρονες ιστοσελίδες που λειτουργούν τέλεια σε όλες τις συσκευές",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "E-commerce Solutions",
-                    "description": "Πλήρεις λύσεις ηλεκτρονικού εμπορίου για online πωλήσεις",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "SEO Optimization",
-                    "description": "Βελτιστοποίηση για μηχανές αναζήτησης και υψηλότερες κατατάξεις",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Technical Support",
-                    "description": "Τεχνική υποστήριξη και συντήρηση ιστοσελίδων",
-                  },
-                },
-              ],
-            },
           }),
         }}
       />
@@ -129,4 +92,3 @@ export default function WebsiteDevelopmentLayout({
     </>
   )
 }
-

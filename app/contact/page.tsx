@@ -3,8 +3,7 @@
 import dynamic from "next/dynamic"
 import { motion } from "framer-motion"
 import ContactForm from "../components/ContactForm"
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin, Shield, Check, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import SEOContent from "./SEOContent"
 
@@ -230,7 +229,6 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </div>
-      <SpeedInsights />
     </main>
   )
 }

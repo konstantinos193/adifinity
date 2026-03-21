@@ -1,103 +1,84 @@
 "use client"
 
 import type React from "react"
-
-import { useState, useCallback } from "react"
 import { motion } from "framer-motion"
-import { Send, Loader2, Upload } from "lucide-react"
+import { Send, Loader2, Upload, Plus, Minus } from "lucide-react"
+import { useContactForm } from "@/hooks/useContactForm"
+import { useState } from "react"
+
+const projectTypes = [
+  { value: "custom-website", label: "Custom Website", basePrice: "Contact for pricing" },
+  { value: "e-commerce", label: "E-commerce Shop", basePrice: "Contact for pricing" },
+  { value: "web-app", label: "Web Application", basePrice: "Contact for pricing" },
+  { value: "landing-page", label: "Landing Page", basePrice: "Contact for pricing" },
+  { value: "technical-seo", label: "Technical SEO", basePrice: "Contact for pricing" }
+]
+
+const premiumFeatures = [
+  { id: "booking", name: "Σύστημα Κρατήσεων", price: "Contact for pricing", description: "Real-time booking engine" },
+  { id: "dashboard", name: "Admin Dashboard", price: "Contact for pricing", description: "Analytics & management" },
+  { id: "subscription", name: "Σύστημα Συνδρομών", price: "Contact for pricing", description: "Recurring revenue platform" },
+  { id: "ai-chatbot", name: "AI Chatbot", price: "Contact for pricing", description: "Intelligent support automation" },
+  { id: "analytics", name: "Advanced Analytics", price: "Contact for pricing", description: "Deep customer insights" },
+  { id: "inventory", name: "Inventory Management", price: "Contact for pricing", description: "Real-time stock tracking" }
+]
+
+const supportPackages = [
+  { id: "bronze", name: "Bronze Υποστήριξη", price: "Contact for pricing", description: "Basic maintenance & support" },
+  { id: "silver", name: "Silver Υποστήριξη", price: "Contact for pricing", description: "Priority support & monitoring" },
+  { id: "gold", name: "Gold Υποστήριξη", price: "Contact for pricing", description: "24/7 enterprise support" }
+]
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    phone: "",
-    subject: "",
-    file: null as File | null,
-  })
+  const [selectedProjectType, setSelectedProjectType] = useState("")
+  const [selectedFeatures, setSelectedFeatures] = useState<string[]>([])
+  const [selectedSupport, setSelectedSupport] = useState("")
+  const [showPricing, setShowPricing] = useState(false)
 
-  const [isDragging, setIsDragging] = useState(false)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<{
-    message: string
-    isError: boolean
-  } | null>(null)
+  const {
+    formData,
+    isDragging,
+    isSubmitting,
+    submitStatus,
+    handleDragEnter,
+    handleDragLeave,
+    handleDragOver,
+    handleDrop,
+    handleChange,
+    handleFileChange,
+    handleSubmit,
+  } = useContactForm()
 
-  const handleDragEnter = useCallback((e: React.DragEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    setIsDragging(true)
-  }, [])
-
-  const handleDragLeave = useCallback((e: React.DragEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    setIsDragging(false)
-  }, [])
-
-  const handleDragOver = useCallback((e: React.DragEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-  }, [])
-
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
-    setIsDragging(false)
-
-    const files = e.dataTransfer.files
-    if (files && files[0]) {
-      setFormData(prev => ({ ...prev, file: files[0] }))
-    }
-  }, [])
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
+  const toggleFeature = (featureId: string) => {
+    setSelectedFeatures(prev => 
+      prev.includes(featureId) 
+        ? prev.filter(id => id !== featureId)
+        : [...prev, featureId]
+    )
   }
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setFormData(prev => ({ ...prev, file: e.target.files![0] }))
+  const calculateTotal = () => {
+    let total = 0
+    
+    const project = projectTypes.find(p => p.value === selectedProjectType)
+    if (project) {
+      const price = parseInt(project.basePrice.replace(/[^0-9]/g, ''))
+      total += price
     }
+    
+    selectedFeatures.forEach(featureId => {
+      const feature = premiumFeatures.find(f => f.id === featureId)
+      if (feature) {
+        const price = parseInt(feature.price.replace(/[^0-9]/g, ''))
+        total += price
+      }
+    })
+    
+    return total
   }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus(null)
-
-    try {
-      const formDataToSend = new FormData()
-      Object.entries(formData).forEach(([key, value]) => {
-        if (value !== null) {
-          formDataToSend.append(key, value)
-        }
-      })
-
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        body: formDataToSend,
-      })
-
-      if (!response.ok) throw new Error("Failed to send message")
-
-      setSubmitStatus({
-        message: "Το μήνυμά σας στάλθηκε με επιτυχία!",
-        isError: false,
-      })
-      setFormData({ name: "", email: "", message: "", phone: "", subject: "", file: null })
-    } catch (error) {
-      setSubmitStatus({
-        message: "Παρουσιάστηκε σφάλμα κατά την αποστολή του μηνύματος.",
-        isError: true,
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
+  const formatPrice = (price: number) => {
+    return `€${price.toLocaleString()}`
   }
 
   return (
@@ -228,6 +209,196 @@ export default function ContactForm() {
               )}
             </div>
           </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div className="border-t border-cyan-900/30 pt-4">
+          <div className="flex items-center justify-between mb-4">
+            <label className="block text-[#01FFFF] text-sm font-medium">
+              Επιλέξτε Υπηρεσίες & Features
+            </label>
+            <button
+              type="button"
+              onClick={() => setShowPricing(!showPricing)}
+              className="text-[#01FFFF] text-sm hover:text-[#01A9FF] transition-colors"
+            >
+              {showPricing ? 'Απόκρυψη' : 'Εμφάνιση'} Τιμολόγησης
+            </button>
+          </div>
+
+          {showPricing && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="space-y-4"
+            >
+              {/* Project Type Selection */}
+              <div>
+                <label className="block text-gray-300 text-sm font-medium mb-2">
+                  Τύπος Project
+                </label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  {projectTypes.map((project) => (
+                    <motion.button
+                      key={project.value}
+                      type="button"
+                      onClick={() => setSelectedProjectType(project.value)}
+                      className={`p-3 rounded-lg border text-left transition-all ${
+                        selectedProjectType === project.value
+                          ? 'border-[#01FFFF] bg-[#01FFFF]/10'
+                          : 'border-cyan-900/30 hover:border-[#01FFFF]/50'
+                      }`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <div className="text-white font-medium">{project.label}</div>
+                          <div className="text-gray-400 text-xs">{project.basePrice}</div>
+                        </div>
+                        {selectedProjectType === project.value && (
+                          <div className="w-5 h-5 rounded-full bg-[#01FFFF] flex items-center justify-center">
+                            <div className="w-2 h-2 rounded-full bg-[#07141C]" />
+                          </div>
+                        )}
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Premium Features */}
+              <div>
+                <label className="block text-gray-300 text-sm font-medium mb-2">
+                  Premium Features
+                </label>
+                <div className="space-y-2">
+                  {premiumFeatures.map((feature) => {
+                    const isSelected = selectedFeatures.includes(feature.id)
+                    return (
+                      <motion.div
+                        key={feature.id}
+                        onClick={() => toggleFeature(feature.id)}
+                        className={`p-3 rounded-lg border cursor-pointer transition-all ${
+                          isSelected
+                            ? 'border-[#01FFFF] bg-[#01FFFF]/10'
+                            : 'border-cyan-900/30 hover:border-[#01FFFF]/50'
+                        }`}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className="flex justify-between items-start">
+                          <div className="flex-1">
+                            <div className="text-white font-medium">{feature.name}</div>
+                            <div className="text-gray-400 text-xs">{feature.description}</div>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <span className="text-[#01FFFF] font-bold text-sm">{feature.price}</span>
+                            <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                              isSelected ? 'border-[#01FFFF] bg-[#01FFFF]' : 'border-gray-500'
+                            }`}>
+                              {isSelected && (
+                                <div className="w-2 h-2 rounded-full bg-[#07141C]" />
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* Support Packages */}
+              <div>
+                <label className="block text-gray-300 text-sm font-medium mb-2">
+                  Μηνιαία Υποστήριξη (Προαιρετικό)
+                </label>
+                <div className="space-y-2">
+                  {supportPackages.map((support) => (
+                    <motion.div
+                      key={support.id}
+                      onClick={() => setSelectedSupport(selectedSupport === support.id ? "" : support.id)}
+                      className={`p-3 rounded-lg border cursor-pointer transition-all ${
+                        selectedSupport === support.id
+                          ? 'border-[#01FFFF] bg-[#01FFFF]/10'
+                          : 'border-cyan-900/30 hover:border-[#01FFFF]/50'
+                      }`}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div className="flex justify-between items-start">
+                        <div className="flex-1">
+                          <div className="text-white font-medium">{support.name}</div>
+                          <div className="text-gray-400 text-xs">{support.description}</div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[#01FFFF] font-bold text-sm">{support.price}</span>
+                          <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center ${
+                            selectedSupport === support.id ? 'border-[#01FFFF] bg-[#01FFFF]' : 'border-gray-500'
+                          }`}>
+                            {selectedSupport === support.id && (
+                              <div className="w-2 h-2 rounded-full bg-[#07141C]" />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Price Summary */}
+              {(selectedProjectType || selectedFeatures.length > 0) && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-gradient-to-r from-[#01FFFF]/10 to-[#01A9FF]/10 border border-[#01FFFF]/30 rounded-lg p-4"
+                >
+                  <div className="space-y-2">
+                    {selectedProjectType && (
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-300">
+                          {projectTypes.find(p => p.value === selectedProjectType)?.label}
+                        </span>
+                        <span className="text-[#01FFFF] font-medium">
+                          {projectTypes.find(p => p.value === selectedProjectType)?.basePrice}
+                        </span>
+                      </div>
+                    )}
+                    {selectedFeatures.map(featureId => {
+                      const feature = premiumFeatures.find(f => f.id === featureId)
+                      return (
+                        <div key={featureId} className="flex justify-between text-sm">
+                          <span className="text-gray-300">{feature?.name}</span>
+                          <span className="text-[#01FFFF] font-medium">{feature?.price}</span>
+                        </div>
+                      )
+                    })}
+                    {selectedSupport && (
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-300">
+                          {supportPackages.find(p => p.id === selectedSupport)?.name}
+                        </span>
+                        <span className="text-[#01FFFF] font-medium">
+                          {supportPackages.find(p => p.id === selectedSupport)?.price}
+                        </span>
+                      </div>
+                    )}
+                    <div className="border-t border-[#01FFFF]/30 pt-2 mt-2">
+                      <div className="flex justify-between">
+                        <span className="text-white font-bold">Συνολικό Κόστος:</span>
+                        <span className="text-[#01FFFF] font-bold text-lg">
+                          {formatPrice(calculateTotal())}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </motion.div>
+          )}
         </div>
 
         {submitStatus && (

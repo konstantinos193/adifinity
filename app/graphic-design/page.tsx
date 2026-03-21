@@ -28,17 +28,17 @@ export default function GraphicDesignPage() {
     {
       title: "Α.Π.Ο.Φ.Α",
       description: "Ολοκληρωμένη εταιρική ταυτότητα",
-      image: "https://i.postimg.cc/1tStyg9B/Untitled-design-2.png",
+      image: "/images/apofa-branding.png",
     },
     {
       title: "Bohĕme Beach bar",
       description: "Branding για παραλιακό bar",
-      image: "https://i.postimg.cc/gcv1nmRx/Untitled-design-3.png",
+      image: "/images/boheme-beach-bar.png",
     },
     {
       title: "Box Bijou",
       description: "Κομψή ταυτότητα για χειροποίητο κόσμημα",
-      image: "https://i.postimg.cc/G20qhHxg/Untitled-design-4.png",
+      image: "/images/box-bijou.png",
     },
   ]
 

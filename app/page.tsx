@@ -3,7 +3,7 @@ import HomePageClient from './components/HomePageClient'
 
 export const metadata: Metadata = {
   title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Marketing Agency & Digital Services',
-  description: 'Η adfinity είναι κορυφαία διαφημιστική εταιρεία στην Άρτα. Marketing, digital advertising, εκτυπώσεις, γραφιστική, ιστοσελίδες. Μετατρέπουμε ιδέες σε επιτυχίες! +30 2681 303007',
+  description: 'Η adinfinity είναι κορυφαία διαφημιστική εταιρεία στην Άρτα με 100+ πελάτες. Marketing, digital advertising, εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων. Επαγγελματικές υπηρεσίες με αποτελέσματα! +30 2681 303007',
   keywords: [
     'adinfinity',
     'ad infinity',
@@ -114,7 +114,7 @@ export const metadata: Metadata = {
     siteName: 'adinfinity',
     images: [
       {
-        url: 'https://i.postimg.cc/2SygFYcf/Untitled-design-28.png',
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: 'adinfinity - Μετατρέπουμε Ιδέες σε Επιτυχίες!',
@@ -127,7 +127,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα',
     description: 'Κορυφαία διαφημιστική εταιρεία στην Άρτα. Marketing, digital services, εκτυπώσεις, γραφιστική.',
-    images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
+    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,

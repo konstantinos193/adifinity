@@ -5,7 +5,6 @@ import { TrendingUp, Users, LineChart, Lightbulb } from 'lucide-react'
 import { ResearchService } from "../components/ResearchService"
 import { DataVisualization } from "../components/DataVisualization"
 import { CTASection } from "../components/CTASection"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Link from "next/link"
 
 export default function MarketResearchPage() {
@@ -183,7 +182,6 @@ export default function MarketResearchPage() {
 
         <CTASection />
       </div>
-      <SpeedInsights />
     </main>
   )
 }

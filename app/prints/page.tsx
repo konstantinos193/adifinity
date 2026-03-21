@@ -5,7 +5,6 @@ import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Link from "next/link"
 
 // Custom SVG Icons with consistent styling
@@ -232,7 +231,7 @@ const CategoryCard = ({
 )
 
 // Feature card component
-const FeatureCard = ({ icon, title, description }: { icon: JSX.Element; title: string; description: string }) => (
+const FeatureCard = ({ icon, title, description }: { icon: React.ReactElement; title: string; description: string }) => (
   <motion.div
     className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-8 rounded-xl shadow-xl border border-cyan-900/30 h-full"
     whileHover={{
@@ -732,7 +731,6 @@ export default function PrintsPage() {
           </div>
         </motion.div>
       </div>
-      <SpeedInsights />
     </main>
   )
 }

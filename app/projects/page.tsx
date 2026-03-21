@@ -5,11 +5,10 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ProjectCard } from "../components/ProjectCard"
 import { ProjectModal } from "../components/ProjectModal"
 import projectData from "../data/projects.json"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Link from "next/link"
 
 // Function to shuffle array (Fisher-Yates algorithm)
-const shuffleArray = (array: any[]) => {
+const shuffleArray = <T,>(array: T[]): T[] => {
   const newArray = [...array]
   for (let i = newArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
@@ -190,7 +189,6 @@ export default function ProjectsPage() {
       </div>
 
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
-      <SpeedInsights />
     </main>
   )
 }

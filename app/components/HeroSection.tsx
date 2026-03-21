@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion()
-  
+
   return (
     <section className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden">
       {/* Background elements */}
@@ -25,9 +25,9 @@ export default function HeroSection() {
 
       {/* Main content */}
       <div className="container mx-auto px-4 text-center relative z-10">
-        <motion.div 
-          initial={{ opacity: 0 }} 
-          animate={{ opacity: 1 }} 
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: shouldReduceMotion ? 0 : 0.3 }}
         >
           {/* Headline - reduced delays for faster LCP */}

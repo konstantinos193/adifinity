@@ -3,74 +3,67 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://adinfinity.gr'
   
-  // Define all routes with optimized priorities based on Google Search Console data
+  // Define all routes with optimized priorities based on actual Google Search Console performance
   const routes = [
     {
       url: baseUrl,
-      lastModified: new Date('2026-02-28'), // Updated to match your last update
+      lastModified: new Date('2026-03-21'), // Updated to current date
       changeFrequency: 'daily' as const,
-      priority: 1.0,
+      priority: 1.0, // 15.8% CTR (71 clicks, 449 impressions) - EXCELLENT
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/graphic-design`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9, // High priority based on search performance
-    },
-    {
-      url: `${baseUrl}/prints`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.85, // Good performance (2 clicks, 125 impressions)
+      priority: 0.9, // 2.8% CTR (3 clicks, 108 impressions) - GOOD
     },
     {
       url: `${baseUrl}/website-development`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.85, // Good performance (2 clicks, 61 impressions)
+      priority: 0.85, // 2.9% CTR (2 clicks, 70 impressions) - GOOD
     },
     {
-      url: `${baseUrl}/flyer-distribution`,
+      url: `${baseUrl}/prints`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.8, // Target for "διανομη εντυπων" searches
-    },
-    {
-      url: `${baseUrl}/market-research`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8, // Good performance (1 click, 51 impressions)
+      priority: 0.8, // 1.4% CTR (2 clicks, 148 impressions) - NEEDS IMPROVEMENT
     },
     {
       url: `${baseUrl}/projects`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
-      priority: 0.8, // Good performance (1 click, 77 impressions)
+      priority: 0.8, // 1.2% CTR (1 click, 83 impressions) - NEEDS IMPROVEMENT
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/market-research`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8, // Good performance (3 clicks, 99 impressions)
+      changeFrequency: 'weekly' as const,
+      priority: 0.75, // 1.8% CTR (1 click, 55 impressions) - NEEDS IMPROVEMENT
+    },
+    {
+      url: `${baseUrl}/graphic-design`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7, // 1.4% CTR (1 click, 70 impressions) - NEEDS IMPROVEMENT
+    },
+    {
+      url: `${baseUrl}/flyer-distribution`,
+      lastModified: new Date('2026-03-21'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85, // High-value service page - meta optimized for CTR improvement
+    },
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date('2026-03-21'),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85, // High-value hub page - meta optimized for CTR improvement
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.7, // Lower priority (1 click, 21 impressions)
-    },
-    // Add new content pages targeting high-impression keywords
-    {
-      url: `${baseUrl}/services/graphic-design-agency-arta`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.85, // Target "γραφιστικο γραφειο" searches
+      priority: 0.6, // 4.8% CTR (1 click, 21 impressions) - LOW TRAFFIC
     },
   ]
 

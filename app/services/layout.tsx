@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Υπηρεσίες Διαφήμισης | adinfinity - Marketing Agency Άρτα',
-  description: 'Διαφημιστικές υπηρεσίες στην Άρτα: εκτυπώσεις, γραφιστική, διανομή εντύπων, ιστοσελίδες, έρευνα αγοράς και digital marketing. Επαγγελματικές λύσεις για κάθε επιχείρηση. Επικοινωνήστε στο +30 2681 303007.',
+  title: 'Υπηρεσίες Marketing & Διαφήμισης Άρτα | adinfinity',
+  description: 'Αναπτύξτε την επιχείρησή σας με τις υπηρεσίες της adinfinity: εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων & digital marketing. 100+ ικανοποιημένοι πελάτες. ☎ 2681 303007',
   keywords: [
     'υπηρεσίες διαφήμισης',
     'διαφημιστικές υπηρεσίες',
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     'advertising services',
   ],
   openGraph: {
-    title: 'Υπηρεσίες Διαφήμισης | adinfinity - Marketing Agency Άρτα',
-    description: 'Διαφημιστικές υπηρεσίες στην Άρτα: εκτυπώσεις, γραφιστική, διανομή εντύπων, ιστοσελίδες, έρευνα αγοράς και digital marketing. Επικοινωνήστε στο +30 2681 303007.',
+    title: 'Υπηρεσίες Marketing & Διαφήμισης Άρτα | adinfinity',
+    description: 'Αναπτύξτε την επιχείρησή σας: εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων & digital marketing. 100+ ικανοποιημένοι πελάτες στην Άρτα.',
     url: 'https://adinfinity.gr/services',
     siteName: 'adinfinity',
     images: [
       {
-        url: 'https://i.postimg.cc/2SygFYcf/Untitled-design-28.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'adinfinity - Υπηρεσίες',
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Υπηρεσίες Διαφήμισης | adinfinity',
-    description: 'Διαφημιστικές υπηρεσίες στην Άρτα: εκτυπώσεις, γραφιστική, διανομή εντύπων και digital marketing.',
-    images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
+    title: 'Υπηρεσίες Marketing & Διαφήμισης Άρτα | adinfinity',
+    description: 'Εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων & digital marketing στην Άρτα. 100+ πελάτες.',
+    images: ['/images/og-image.png'],
   },
   alternates: {
     canonical: 'https://adinfinity.gr/services',

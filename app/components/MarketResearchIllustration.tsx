@@ -5,8 +5,21 @@ import { MapPin } from "lucide-react"
 
 declare global {
   interface Window {
-    initMap: () => void
-    google: any // Add this line to declare the google variable
+    initMap?: () => void
+    google: {
+      maps: {
+        Map: new (element: HTMLElement, options: any) => any
+        Marker: new (options: any) => any & {
+          addListener: (event: string, handler: () => void) => void
+        }
+        SymbolPath: {
+          CIRCLE: number
+        }
+        InfoWindow: new (options: any) => any & {
+          open: (map: any, marker: any) => void
+        }
+      }
+    }
   }
 }
 
@@ -161,7 +174,9 @@ export default function Map() {
     return () => {
       // Clean up
       document.head.removeChild(script)
-      delete window.initMap
+      if (window.initMap) {
+        delete window.initMap
+      }
     }
   }, [])
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'adinfinity',
     images: [
       {
-        url: 'https://i.postimg.cc/2SygFYcf/Untitled-design-28.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'adinfinity - Εκτυπώσεις',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Εκτυπώσεις Άρτα | Digital Printing | adinfinity',
     description: 'Επαγγελματικές εκτυπώσεις στην Άρτα. Digital printing, banners, flyers. Γρήγορη παράδοση!',
-    images: ['https://i.postimg.cc/2SygFYcf/Untitled-design-28.png'],
+    images: ['/images/og-image.png'],
   },
   alternates: {
     canonical: 'https://adinfinity.gr/prints',

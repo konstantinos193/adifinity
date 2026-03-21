@@ -19,6 +19,9 @@ const nextConfig = {
     parallelServerCompiles: true,
   },
   async redirects() {
+    if (process.env.NODE_ENV !== 'production') {
+      return []
+    }
     return [
       // Force HTTPS
       {
@@ -46,26 +49,24 @@ const nextConfig = {
         permanent: true,
         destination: 'https://adinfinity.gr/:path*',
       },
-      // Block and redirect old Joomla URLs
+      // Block and redirect specific old Joomla URLs with exact patterns
       {
-        source: '/:path*',
+        source: '/',
         has: [
           {
             type: 'query',
             key: 'option',
-            value: ':option',
+            value: 'com_k2',
           },
-        ],
-        permanent: true,
-        destination: 'https://adinfinity.gr',
-      },
-      {
-        source: '/:path*',
-        has: [
           {
             type: 'query',
-            key: 'com_k2',
-            value: ':k2',
+            key: 'view',
+            value: 'itemlist',
+          },
+          {
+            type: 'query',
+            key: 'task',
+            value: 'user',
           },
         ],
         permanent: true,

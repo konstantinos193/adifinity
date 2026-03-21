@@ -35,7 +35,7 @@ const services = [
 
 export default function ServicesSection() {
   const shouldReduceMotion = useReducedMotion()
-  
+
   return (
     <section id="υπηρεσίες" className="py-20">
       <div className="container mx-auto px-4">

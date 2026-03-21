@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import { AboutHero } from "../components/AboutHero"
 import { CompanyDescription } from "../components/CompanyDescription"
 import { CompanyHistory } from "../components/CompanyHistory"
@@ -40,13 +39,13 @@ export default function AboutPage() {
             <TeamMember
               name="Μάνος Κωσμάς"
               role="Διευθύνων Σύμβουλος"
-              imageSrc="https://i.imgur.com/RvCXgPE.jpeg"
+              imageSrc="/images/team-member-manos.jpg"
               bio="Με πάνω από 10 χρόνια εμπειρίας στον χώρο της διαφήμισης και του μάρκετινγκ, ο Μάνος ηγείται της ομάδας μας με όραμα και δημιουργικότητα."
             />
             <TeamMember
               name="Κωνσταντίνος Μπλαβάκης"
               role="Web Developer"
-              imageSrc="https://i.postimg.cc/FHH2qc1B/viber-image-2025-02-18-19-25-40-199.jpg"
+              imageSrc="/images/team-member.jpg"
               bio="Ειδικός στην ανάπτυξη ιστοσελίδων και εφαρμογών, ο Κωνσταντίνος φέρνει τις ιδέες μας στη ζωή με τεχνική αρτιότητα και καινοτομία."
             />
           </div>
@@ -91,7 +90,6 @@ export default function AboutPage() {
           <OfficeShowcase />
         </motion.div>
       </div>
-      <SpeedInsights />
     </main>
   )
 }
