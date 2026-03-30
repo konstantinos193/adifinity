@@ -2,7 +2,7 @@
 
 > Because your business deserves better than a Wix template and your competitors deserve to cry.
 
-A modern, dark-themed marketing agency website built with Next.js 16, because we're not living in 2020 anymore. This is where we showcase our services, projects, and convince people that yes, we can actually make their business look good.
+A modern, bilingual marketing agency website built with Next.js 16, because we're not living in 2020 anymore. This is where we showcase our services, projects, and convince people that yes, we can actually make their business look good. Available in both Greek and English for our international clients.
 
 ## Tech Stack (The Usual Suspects)
 
@@ -10,6 +10,9 @@ A modern, dark-themed marketing agency website built with Next.js 16, because we
 ![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+
+### Internationalization
+![next-intl](https://img.shields.io/badge/next--intl-latest-000000?style=for-the-badge&logo=next.js&logoColor=white)
 
 ### Styling & UI
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.2.1-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -71,6 +74,8 @@ This is the website for adinfinity, a Greek marketing agency that's been around 
 - **Website Development** - Modern websites that don't look like they're from 2005
 - **Market Research** - Because guessing is for amateurs
 
+Our site serves both Greek and international markets with seamless language switching and optimized SEO for both audiences.
+
 ## Features
 
 - Dark theme that won't burn your retinas at 2 AM
@@ -79,7 +84,10 @@ This is the website for adinfinity, a Greek marketing agency that's been around 
 - Contact forms that actually send emails (revolutionary, right?)
 - Project gallery to show off our work
 - Service pages that explain what we do without putting you to sleep
-- Easter egg theme toggle (because why not?)
+- Full bilingual support (Greek/English) with client-side language switching
+- SEO optimized for both Greek and international markets
+- Accessibility features because we're not monsters
+- Cookie consent management because GDPR is still a thing
 
 ## Getting Started
 
@@ -128,16 +136,26 @@ If it builds without errors, congratulations. You've achieved the impossible.
 ```
 adifinity/
 ├── app/                    # Next.js app directory (because we're modern)
-│   ├── components/         # React components (the good stuff)
+│   ├── components/         # Page-specific components
 │   ├── about/             # About page (we exist, here's proof)
-│   ├── contact/           # Contact page (talk to us, maybe)
-│   ├── services/          # Services page (what we do)
-│   ├── projects/          # Projects page (what we've done)
-│   └── [service-pages]/   # Individual service pages
-├── components/            # Shared UI components (shadcn/ui stuff)
-├── lib/                   # Utility functions (the boring but necessary stuff)
+│   ├── accessibility/     # Accessibility page
+│   ├── api/               # API routes (contact forms, etc.)
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout with SEO metadata
+│   └── page.tsx           # Homepage
+├── components/            # Shared UI components
+│   ├── ui/                # Reusable UI components (shadcn/ui)
+│   ├── DynamicSEO.tsx     # Dynamic SEO management
+│   └── LocaleProvider.tsx # Internationalization provider
+├── hooks/                 # Custom React hooks
+├── i18n/                  # Internationalization configuration
+├── lib/                   # Utility functions and configurations
+├── messages/              # Translation files (el/ and en/)
+│   ├── el/                # Greek translations
+│   └── en/                # English translations
 ├── public/                # Static assets (images, logos, etc.)
-└── styles/                # Global styles (because CSS is still a thing)
+├── styles/                # Additional global styles
+└── types/                 # TypeScript type definitions
 ```
 
 ## Key Dependencies Explained
@@ -145,10 +163,28 @@ adifinity/
 - **Next.js 16** - The framework that makes React actually usable for websites
 - **TypeScript** - Because JavaScript errors at runtime are for masochists
 - **Tailwind CSS** - Utility-first CSS that doesn't make you want to cry
+- **next-intl** - Internationalization that doesn't make you want to quit programming
 - **Framer Motion** - Animations that don't look like they're from 2010
 - **Radix UI** - Accessible components that don't make you hate yourself
 - **React Hook Form** - Forms that don't make you question your life choices
 - **Zod** - Validation that actually works (unlike your ex's promises)
+
+## Internationalization
+
+The site supports both Greek (default) and English languages:
+- **Default Language**: Greek (el)
+- **Secondary Language**: English (en)
+- **URL Structure**: Single URL structure with client-side language switching
+- **SEO**: Proper hreflang tags and localized metadata for both languages
+- **Translation Files**: Located in `messages/el/` and `messages/en/`
+
+## SEO Optimization
+
+- **Localized Metadata**: Dynamic titles, descriptions, and keywords per language
+- **Structured Data**: Organization and LocalBusiness schema markup
+- **Open Graph & Twitter Cards**: Fully localized social media metadata
+- **Canonical URLs**: Proper canonicalization for both languages
+- **Performance**: Optimized for Core Web Vitals and mobile-first indexing
 
 ## Contributing
 
@@ -158,6 +194,8 @@ Want to contribute? Great. Here's what you need to know:
 2. Follow the existing code style (or don't, we're not your boss)
 3. Test your changes (or don't, live dangerously)
 4. Write meaningful commit messages (or just write "fix stuff", we've all been there)
+5. For translation changes: Update both `messages/el/` and `messages/en/` files
+6. For SEO changes: Test metadata in both languages
 
 ## License
 
@@ -177,8 +215,11 @@ For actual support, you can:
 - Thanks to all the open-source maintainers who make our jobs possible
 - Thanks to coffee for keeping us awake during late-night debugging sessions
 - Thanks to Stack Overflow for existing (we all know we use it)
+- Thanks to our clients for paying us so we can keep building cool stuff
 
 ---
 
 Built with questionable amounts of caffeine and an unhealthy obsession with making things look good.
+
+Now serving both Greek and international markets because we're fancy like that.
 

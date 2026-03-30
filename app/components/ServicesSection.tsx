@@ -1,45 +1,54 @@
 "use client"
 
+import React from "react"
 import { motion, useReducedMotion } from "framer-motion"
 import { ChartBarIcon, MegaphoneIcon, GlobeAltIcon } from "@heroicons/react/24/outline"
+import { useTranslations } from "@/components/useTranslations"
 
-const services = [
-  {
-    title: "Στρατηγική Μάρκετινγκ",
-    icon: ChartBarIcon,
-    description: (
-      <>
-        Αναπτύσσουμε εξατομικευμένες στρατηγικές marketing που συνδέουν την <span className="text-[#01FFFF]">εταιρεία</span> σας με το κοινό σας.
-      </>
-    ),
-  },
-  {
-    title: "Διαφημιστικές Καμπάνιες",
-    icon: MegaphoneIcon,
-    description: (
-      <>
-        Από την ιδέα μέχρι την υλοποίηση, δημιουργούμε <span className="text-[#01FFFF]">διαφημιστικές</span> καμπάνιες που αποδίδουν πραγματικά.
-      </>
-    ),
-  },
-  {
-    title: "Ψηφιακές Λύσεις",
-    icon: GlobeAltIcon,
-    description: (
-      <>
-        Εξοπλίζουμε την <span className="text-[#01FFFF]">εταιρεία</span> σας με καινοτόμα digital εργαλεία για το ψηφιακό μέλλον.
-      </>
-    ),
-  },
+const icons = [
+  ChartBarIcon,
+  MegaphoneIcon,
+  GlobeAltIcon,
 ]
 
 export default function ServicesSection() {
+  const { t, locale, isReady } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
+  
+  // Don't render until locale is ready
+  if (!isReady) {
+    return (
+      <section id="υπηρεσίες" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center text-gray-400">
+            Loading...
+          </div>
+        </div>
+      </section>
+    )
+  }
+  
+  const services = t('services.services')
+  
+  // Ensure services is an array before mapping
+  if (!Array.isArray(services)) {
+    console.error('Services data is not an array:', services, 'locale:', locale)
+    return (
+      <section id="υπηρεσίες" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#01FFFF]">{t('services.title')}</h2>
+          <div className="text-center text-gray-400">
+            Loading services...
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <section id="υπηρεσίες" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-[#01FFFF]">Οι Υπηρεσίες Μας</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-[#01FFFF]">{t('services.title')}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
@@ -54,7 +63,7 @@ export default function ServicesSection() {
               }}
             >
               <div className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
-                <service.icon className="w-8 h-8 text-[#01FFFF]" />
+                {React.createElement(icons[index], { className: "w-8 h-8 text-[#01FFFF]" })}
               </div>
               <h3 className="text-xl font-bold mb-2 text-center text-white">{service.title}</h3>
               <p className="text-gray-300 text-center">{service.description}</p>

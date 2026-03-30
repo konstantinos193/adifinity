@@ -1,0 +1,263 @@
+{
+  "title": "Custom Web Apps & Εταιρικές Ιστοσελίδες",
+  "subtitle": "100% Custom Development — Καμία Χρήση Templates",
+  "hero_badge": "Next.js · React · TypeScript · Tailwind",
+  "hero_title_line1": "Εταιρικές",
+  "hero_title_line2": "Ιστοσελίδες",
+  "hero_title_line3": "100% Custom",
+  "description": "Κάθε ιστοσελίδα ξεκινά από λευκή σελίδα. Κανένα theme, κανένα template, κανένας page builder — μόνο React & Next.js γραμμένα ειδικά για Greek market.",
+  "get_started": "Ζητήστε Προσφορά",
+  "see_projects": "Δείτε Projects",
+  "every_project_includes": "Κάθε project περιλαμβάνει",
+  "custom_web_development": "Custom Web Development",
+  "custom_web_development_desc": "Κάθε τύπος custom website που χρειάζεται η Greek επιχείρησή σας.",
+  "case_studies_title": "Case Studies & Αποτελέσματα",
+  "case_studies_desc": "Real projects — με μετρήσιμα αποτελέσματα για Greek market.",
+  "greek_industry_solutions": "Greek Industry Solutions",
+  "greek_industry_solutions_desc": "Custom λύσεις για κάθε κλάδο — με βαθιά κατανόηση των Greek market αναγκών.",
+  "technologies": "Τεχνολογίες",
+  "technologies_list": "Next.js, TypeScript, Tailwind CSS, Vercel hosting",
+  "key_features": "Βασικά Χαρακτηριστικά",
+  "technical_metrics": "Τεχνικές Μετρήσεις",
+  "premium_features_title": "Premium Features & Add-ons",
+  "request_quote": "Ζητήστε Προσφορά",
+  "see_project": "Δείτε Project",
+  "less": "Λιγότερα",
+  "more": "Περισσότερα",
+  "technologies_desc": "Next.js, TypeScript, Tailwind CSS, Vercel hosting",
+  "phone": "2681 303007",
+  "what_we_deliver": [
+    {
+      "title": "Εταιρική Ιστοσελίδα",
+      "desc": "Πλήρης online παρουσία — about, υπηρεσίες, portfolio, blog, επικοινωνία. Custom design, custom code."
+    },
+    {
+      "title": "Multi-page Platforms",
+      "desc": "Σύνθετες ιστοσελίδες με δεκάδες σελίδες, dynamic content και custom routing."
+    },
+    {
+      "title": "Mobile-First Design",
+      "desc": "Κάθε project σχεδιάζεται πρώτα για κινητά — 70%+ traffic έρχεται από mobile."
+    },
+    {
+      "title": "Custom UI/UX",
+      "desc": "Figma mockups, animation με Framer Motion, unique design που δεν μοιάζει με κανέναν άλλο."
+    },
+    {
+      "title": "Clean, Maintainable Code",
+      "desc": "TypeScript, component architecture, proper state management. Code που μπορεί να κλιμακωθεί."
+    },
+    {
+      "title": "SEO & Performance",
+      "desc": "Server-side rendering, image optimization, Core Web Vitals. Γρήγορο από την πρώτη μέρα."
+    }
+  ],
+  "portfolio_items": [
+    {
+      "name": "Αστεριας Κορωνησία",
+      "category": "Hospitality",
+      "image": "/images/asteriashome-preview.png",
+      "url": "https://asteriashome.gr",
+      "tags": ["Next.js", "TypeScript", "Tailwind"],
+      "metrics": { "performance": "95", "seo": "92", "speed": "1.2s" },
+      "description": "Custom booking system για ξενοδοχείο με real-time διαθεσιμότητα και online payments."
+    },
+    {
+      "name": "ΚΥΚΛΟΣ Εκπαίδευση",
+      "category": "Education",
+      "image": "/images/kyklosedu-preview.png",
+      "url": "https://kyklosedu.gr",
+      "tags": ["Next.js", "TypeScript", "SEO"],
+      "metrics": { "performance": "98", "seo": "94", "pages": "50+" },
+      "description": "Πλήρης εκπαιδευτική πλατφόρμα με course management, student portals και online exams."
+    },
+    {
+      "name": "Physio Elpida",
+      "category": "Healthcare",
+      "image": "/images/physioelpida-preview.png",
+      "url": "https://physioelpida.gr",
+      "tags": ["Next.js", "TypeScript", "Booking"],
+      "metrics": { "performance": "96", "seo": "91", "bookings": "85%" },
+      "description": "Patient portal με appointment booking, telemedicine features και HIPAA compliant security."
+    }
+  ],
+  "included_features": [
+    "Custom design σε Figma — εγκρίνετε πριν ξεκινήσει ο κώδικας",
+    "Development σε Next.js & TypeScript",
+    "Responsive για κινητά, tablet, desktop",
+    "SEO on-page (titles, meta, schema, sitemap)",
+    "Google Analytics 4 setup",
+    "Contact form με email notifications",
+    "SSL + deploy σε Vercel ή δικό σας hosting",
+    "3 μήνες technical support post-launch"
+  ],
+  "industries": [
+    {
+      "title": "Φιλοξενία",
+      "desc": "Booking systems, room management, tour packages - ολοκληρωμένες λύσεις για hotels & rentals.",
+      "features": ["Online Booking", "Room Management", "Tour Packages", "Multi-language"]
+    },
+    {
+      "title": "Εκπαίδευση",
+      "desc": "E-learning platforms, course management, student portals - ψηφιακή μεταμόρφωση για εκπαιδευτικούς φορείς.",
+      "features": ["E-learning", "Course Management", "Student Portals", "Online Exams"]
+    },
+    {
+      "title": "Υγεία",
+      "desc": "Patient portals, appointment booking, telemedicine - ασφαλείς λύσεις για ιατρικούς φορείς.",
+      "features": ["Patient Portals", "Appointment Booking", "Telemedicine", "HIPAA Compliant"]
+    },
+    {
+      "title": "E-commerce",
+      "desc": "Online shops, payment integration, inventory management - πλήρη e-commerce λύσεις για κάθε επιχείρηση.",
+      "features": ["Online Shops", "Payment Integration", "Inventory", "Multi-currency"]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Πόσο χρόνο παίρνει η ανάπτυξη μιας custom ιστοσελίδας;",
+      "a": "Ένα πλήρες custom website συνήθως ολοκληρώνεται σε 4-8 εβδομάδες, ανάλογα με την πολυπλοκότητα και τις απαιτήσεις."
+    },
+    {
+      "q": "Ποια είναι η διαφορά μεταξύ custom website και template;",
+      "a": "Custom website είναι φτιαγμένο από το μηδέν για τις δικές σας ανάγκες, ενώ τα templates περιορίζονται σε προκαθορισμένα σχέδια και λειτουργίες."
+    },
+    {
+      "q": "Παρέχετε υποστήριξη μετά την παράδοση;",
+      "a": "Ναι, παρέχουμε 3 μήνες δωρεάν τεχνική υποστήριξη και συντήρηση μετά την παράδοση του project."
+    },
+    {
+      "q": "Η ιστοσελίδα θα είναι φιλική προς τις μηχανές αναζήτησης;",
+      "a": "Απολύτως! Όλες οι ιστοσελίδες μας είναι βελτιστοποιημένες για SEO από την πρώτη μέρα με τεχνικές SEO, schema markup και γρήγορους χρόνους φόρτωσης."
+    },
+    {
+      "q": "Ποια μέτρα ασφαλείας εφαρμόζετε;",
+      "a": "Χρησιμοποιούμε end-to-end encryption, OAuth authentication, secure APIs, και τακτικά security updates για μέγιστη προστασία δεδομένων."
+    },
+    {
+      "q": "Μπορώ να ενσωματώσω τρίτες υπηρεσίες;",
+      "a": "Ναι, ενσωματώνουμε payment gateways (Stripe, PayPal), CRM systems, marketing automation tools, και οποιαδήποτε άλλη υπηρεσία χρειάζεστε."
+    }
+  ],
+  "security_features": [
+    {
+      "title": "End-to-End Encryption",
+      "desc": "Όλα τα δεδομένα κρυπτογραφούνται από τον client μέχρι τον server για μέγιστη ασφάλεια."
+    },
+    {
+      "title": "OAuth & MFA",
+      "desc": "Multi-factor authentication και OAuth integration για ασφαλή πρόσβαση χρηστών."
+    },
+    {
+      "title": "Secure Database",
+      "desc": "Encrypted databases με τακτικά backups και disaster recovery plans."
+    },
+    {
+      "title": "Cloud Security",
+      "desc": "AWS/Azure security best practices με DDoS protection και 24/7 monitoring."
+    }
+  ],
+  "process_steps": [
+    {
+      "number": "01",
+      "title": "Discovery & Strategy",
+      "desc": "Ανάλυση απαιτήσεων, competitor research, και τεχνική αρχιτεκτονική.",
+      "duration": "1-2 εβδομάδες"
+    },
+    {
+      "number": "02",
+      "title": "UX/UI Design",
+      "desc": "Wireframes, mockups σε Figma, και user testing πριν την ανάπτυξη.",
+      "duration": "1-2 εβδομάδες"
+    },
+    {
+      "number": "03",
+      "title": "Development",
+      "desc": "Agile development με τακτικά demos και feedback sessions.",
+      "duration": "2-4 εβδομάδες"
+    },
+    {
+      "number": "04",
+      "title": "Testing & Launch",
+      "desc": "QA testing, security audit, deployment και post-launch monitoring.",
+      "duration": "1 εβδομάδα"
+    }
+  ],
+  "integrations": [
+    { "name": "Stripe", "category": "Payments" },
+    { "name": "PayPal", "category": "Payments" },
+    { "name": "Google Analytics", "category": "Analytics" },
+    { "name": "Meta Pixel", "category": "Marketing" },
+    { "name": "SendGrid", "category": "Email" },
+    { "name": "Twilio", "category": "Communications" },
+    { "name": "Zapier", "category": "Automation" },
+    { "name": "Slack", "category": "Productivity" },
+    { "name": "Calendly", "category": "Booking" },
+    { "name": "Mailchimp", "category": "Email" }
+  ],
+  "premium_features": [
+    {
+      "title": "Σύστημα Κρατήσεων",
+      "price": "Ζητήστε Προσφορά",
+      "description": "Real-time booking engine για ραντεβού, κρατήσεις, υπηρεσίες.",
+      "features": [
+        "Real-time calendar διαθεσιμότητας",
+        "Συγχρονισμός ημερολογίου (Google/Outlook)",
+        "Αυτόματες επιβεβαιώσεις μέσω email/SMS",
+        "Ενσωμάτωση πληρωμών με καταθέσεις",
+        "Προγραμματισμός πολλαπλού προσωπικού",
+        "Προσαρμοσμένοι κανόνες & περιορισμοί κρατήσεων"
+      ],
+      "icon": "Calendar",
+      "timeline": "2-3 εβδομάδες"
+    },
+    {
+      "title": "Admin Dashboard",
+      "price": "Ζητήστε Προσφορά",
+      "description": "Custom analytics & management dashboard για business intelligence.",
+      "features": [
+        "Real-time analytics & μέτρικα",
+        "Διαχείριση χρηστών & ρόλων",
+        "Σύστημα διαχείρισης περιεχομένου",
+        "Διαχείριση παραγγελιών/κρατήσεων",
+        "Προσαρμοσμένες αναφορές & εξαγωγές",
+        "Γραφήματα οπτικοποίησης δεδομένων"
+      ],
+      "icon": "BarChart3",
+      "timeline": "3-4 εβδομάδες"
+    },
+    {
+      "title": "Σύστημα Συνδρομών",
+      "price": "Ζητήστε Προσφορά",
+      "description": "Recurring revenue platform με πολλαπλά επίπεδα & επεξεργασία πληρωμών.",
+      "features": [
+        "Ευέλικτα πακέτα συνδρομών",
+        "Αυτόματη χρέωση & επαναπροσπάθειες",
+        "Portal πελατών & self-service",
+        "Χρέωση βάσει χρήσης",
+        "Dashboard μελών & προφίλ"
+      ],
+      "icon": "CreditCard",
+      "recurring": "Ζητήστε Προσφορά",
+      "timeline": "4-5 εβδομάδες"
+    },
+    {
+      "title": "AI Chatbot",
+      "price": "Ζητήστε Προσφορά",
+      "description": "Intelligent customer service automation με AI & επεξεργασία φυσικής γλώσσας.",
+      "features": [
+        "Συνομιλίες με φυσική γλώσσα",
+        "Αυτόματη υποστήριξη 24/7",
+        "Προσέγγιση & κατηγοριοποίηση leads",
+        "Υποστήριξη πολλαπλών γλωσσών",
+        "Ενσωμάτωση με CRM"
+      ],
+      "icon": "Zap",
+      "timeline": "6-8 εβδομάδες"
+    }
+  ],
+  "seo": {
+    "title": "Custom Web Apps & Εταιρικές Ιστοσελίδες | adinfinity — 100% Custom Development",
+    "description": "Custom εταιρικές ιστοσελίδες και web applications σε React & Next.js. Καμία χρήση templates. Mobile-first design, SEO optimization, enterprise security για Greek businesses."
+  }
+}

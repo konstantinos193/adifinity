@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import { validateInput, SecurityMonitor } from "@/lib/security"
 
 interface ContactFormData {
   name: string
@@ -29,6 +30,7 @@ export function useContactForm() {
   const [isDragging, setIsDragging] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus | null>(null)
+  const [validationErrors, setValidationErrors] = useState<string[]>([])
 
   const handleDragEnter = useCallback((e: React.DragEvent) => {
     e.preventDefault()
@@ -81,8 +83,36 @@ export function useContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus(null)
+    setValidationErrors([])
 
     try {
+      // Validate form data
+      const dataToValidate = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        subject: formData.subject
+      }
+
+      const validation = validateInput(dataToValidate)
+      
+      if (!validation.isValid) {
+        setValidationErrors(validation.errors)
+        
+        // Log security event for invalid input
+        SecurityMonitor.logEvent({
+          type: 'invalid_input',
+          ip: 'client-side', // Will be updated on server
+          userAgent: navigator.userAgent,
+          path: '/contact',
+          details: `Validation errors: ${validation.errors.join(', ')}`
+        })
+        
+        setIsSubmitting(false)
+        return
+      }
+
       const formDataToSend = new FormData()
       Object.entries(formData).forEach(([key, value]) => {
         if (value !== null) {
@@ -117,6 +147,7 @@ export function useContactForm() {
     isDragging,
     isSubmitting,
     submitStatus,
+    validationErrors,
     handleDragEnter,
     handleDragLeave,
     handleDragOver,

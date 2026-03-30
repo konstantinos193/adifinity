@@ -1,8 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTranslations } from "@/components/useTranslations"
 
 export function CompanyHistory() {
+  const { t } = useTranslations()
+
   return (
     <div className="mb-20">
       <motion.h2
@@ -12,7 +15,7 @@ export function CompanyHistory() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        Η Ιστορία μας
+        {t('about_page.company_history.title')}
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -23,11 +26,9 @@ export function CompanyHistory() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-xl font-bold mb-4 text-white">Οι Αρχές μας</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">{t('about_page.company_history.our_beginnings.title')}</h3>
           <p className="text-gray-300 leading-relaxed">
-            Η εταιρεία μας ιδρύθηκε το 2013 με στόχο να προσφέρει πρακτικές και αποτελεσματικές λύσεις μάρκετινγκ.
-            Ξεκινήσαμε με ένα όραμα: να βοηθήσουμε τις τοπικές επιχειρήσεις να αναπτυχθούν μέσω της δημιουργικής
-            επικοινωνίας και του στρατηγικού σχεδιασμού.
+            {t('about_page.company_history.our_beginnings.description')}
           </p>
         </motion.div>
 
@@ -38,12 +39,9 @@ export function CompanyHistory() {
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-xl font-bold mb-4 text-white">Η Εξέλιξή μας</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">{t('about_page.company_history.our_evolution.title')}</h3>
           <p className="text-gray-300 leading-relaxed">
-            Από τότε, έχουμε εξελιχθεί σε ένα πλήρες διαφημιστικό γραφείο, προσαρμοζόμενοι στις συνεχείς αλλαγές του
-            ψηφιακού κόσμου και τις νέες τάσεις του μάρκετινγκ. Η ομάδα μας έχει μεγαλώσει, οι υπηρεσίες μας έχουν
-            διευρυνθεί, αλλά ο στόχος μας παραμένει ο ίδιος: να βοηθάμε τις επιχειρήσεις να επικοινωνούν αποτελεσματικά
-            με το κοινό τους.
+            {t('about_page.company_history.our_evolution.description')}
           </p>
         </motion.div>
       </div>

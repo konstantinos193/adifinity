@@ -1,0 +1,64 @@
+{
+  "title": "Επικοινωνία",
+  "subtitle": "Είμαστε εδώ για να σας βοηθήσουμε να αναπτύξετε την επιχείρησή σας. Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες σας.",
+  "hero_title": "Επικοινωνία",
+  "hero_description": "Είμαστε εδώ για να σας βοηθήσουμε να αναπτύξετε την επιχείρησή σας. Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες σας.",
+  "send_message": "Στείλτε μας μήνυμα",
+  "contact_info": "Στοιχεία Επικοινωνίας",
+  "address": "Διεύθυνση",
+  "phone": "Τηλέφωνο",
+  "email": "Email",
+  "working_hours": "Ώρες Λειτουργίας",
+  "follow_us": "Ακολουθήστε μας",
+  "closed": "Κλειστά",
+  "schedule": {
+    "monday": "Δευτέρα",
+    "tuesday": "Τρίτη",
+    "wednesday": "Τετάρτη",
+    "thursday": "Πέμπτη",
+    "friday": "Παρασκευή",
+    "saturday": "Σάββατο",
+    "sunday": "Κυριακή"
+  },
+  "form": {
+    "title": "Στείλτε μας μήνυμα",
+    "name": "Ονοματεπώνυμο",
+    "name_placeholder": "Το ονοματεπώνυμό σας",
+    "email": "Email",
+    "email_placeholder": "Το email σας",
+    "phone": "Τηλέφωνο",
+    "phone_placeholder": "Το τηλέφωνό σας",
+    "subject": "Θέμα",
+    "subject_placeholder": "Επιλέξτε θέμα",
+    "subject_options": {
+      "general_info": "Γενική Πληροφορία",
+      "request_quote": "Ζήτηση Προσφοράς",
+      "partnership": "Συνεργασία",
+      "other": "Άλλο"
+    },
+    "message": "Μήνυμα",
+    "message_placeholder": "Πώς μπορούμε να σας βοηθήσουμε;",
+    "attachment": "Επισύναψη Αρχείου",
+    "attachment_placeholder": "No file chosen",
+    "attachment_drag": "Σύρετε ένα αρχείο εδώ ή κάντε κλικ για επιλογή",
+    "selected_file": "Επιλεγμένο",
+    "services": "Επιλέξτε Υπηρεσίες & Features",
+    "show_pricing": "Εμφάνιση",
+    "hide_pricing": "Απόκρυψη",
+    "submit": "Αποστολή"
+  },
+  "contact_details": {
+    "address_text": "Βασ. Πύρρου 30, Άρτα 471 32",
+    "phone_text": "+30 2681 303007",
+    "email_text": "adenfinity@gmail.com"
+  },
+  "social_links": {
+    "facebook": "https://www.facebook.com/1.adinfinity",
+    "instagram": "https://www.instagram.com/adinfinityads/",
+    "linkedin": "https://www.linkedin.com/in/adinfinity-ads-bb0a398a/?originalSubdomain=gr"
+  },
+  "seo": {
+    "title": "Επικοινωνία | adinfinity",
+    "description": "Επικοινωνήστε μαζί μας για custom web development, graphic design, και digital marketing υπηρεσίες. Βρείτε μας στην Άρτα ή καλέστε μας σήμερα."
+  }
+}

@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react"
+import { useTranslations } from "@/components/useTranslations"
 
 // Custom SVG Icons for desktop
 const FacebookIcon = () => (
@@ -24,6 +25,7 @@ const LinkedinIcon = () => (
 )
 
 export default function Footer() {
+  const { t } = useTranslations()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -59,24 +61,23 @@ export default function Footer() {
                 <Image src="/logo.png" alt="adinfinity logo" width={120} height={120} className="mb-4" />
               </motion.div>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Σας ευχαριστούμε που μας εμπιστεύεστε για την ανάπτυξη της επιχείρησής σας. Είμαστε εδώ για να σας
-                βοηθήσουμε να ξεχωρίσετε.
+                {t('footer.about.description')}
               </p>
             </div>
 
             {/* Contact Info */}
             <div className="space-y-2 mt-2">
-              <h4 className="text-[#01FFFF] font-medium mb-4 text-sm">ΕΠΙΚΟΙΝΩΝΙΑ</h4>
+              <h4 className="text-[#01FFFF] font-medium mb-4 text-sm">{t('footer.contact.title')}</h4>
               <div className="flex items-center text-gray-400 text-sm group">
                 <Phone size={16} className="mr-2 text-[#01FFFF] group-hover:text-white transition-colors" />
                 <a href="tel:+302681303007" className="hover:text-white transition-colors">
-                  +30 2681 303007
+                  {t('footer.contact.phone')}
                 </a>
               </div>
               <div className="flex items-center text-gray-400 text-sm group">
                 <Mail size={16} className="mr-2 text-[#01FFFF] group-hover:text-white transition-colors" />
                 <a href="mailto:adenfinity@gmail.com" className="hover:text-white transition-colors">
-                  adenfinity@gmail.com
+                  {t('footer.contact.email')}
                 </a>
               </div>
               <div className="flex items-start text-gray-400 text-sm group">
@@ -87,7 +88,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
                 >
-                  Βασ. Πύρρου 30, Άρτα 471 32
+                  {t('footer.contact.address')}
                 </a>
               </div>
             </div>
@@ -101,16 +102,9 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex flex-col"
           >
-            <h3 className="text-lg font-bold mb-4 text-white">Γρήγορη Πλοήγηση</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.quick_links.title')}</h3>
             <ul className="space-y-2">
-              {[
-                { name: "Αρχική", path: "/" },
-                { name: "Υπηρεσίες", path: "/services" },
-                { name: "Ποιοι Είμαστε", path: "/about" },
-                { name: "Τα Έργα μας", path: "/projects" },
-
-                { name: "Επικοινωνία", path: "/contact" },
-              ].map((item, index) => (
+              {Array.isArray(t('footer.quick_links.links')) ? (t('footer.quick_links.links') as any[]).map((item: any, index: number) => (
                 <motion.li
                   key={index}
                   whileHover={{ x: 5 }}
@@ -127,7 +121,7 @@ export default function Footer() {
                     {item.name}
                   </Link>
                 </motion.li>
-              ))}
+              )) : null}
             </ul>
           </motion.div>
 
@@ -139,15 +133,9 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex flex-col"
           >
-            <h3 className="text-lg font-bold mb-4 text-white">Υπηρεσίες</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.services.title')}</h3>
             <ul className="space-y-2">
-              {[
-                { name: "Εκτυπώσεις", path: "/prints" },
-                { name: "Γραφικές τέχνες", path: "/graphic-design" },
-                { name: "Έντυποδιανομές", path: "/flyer-distribution" },
-                { name: "Ιστοσελίδες", path: "/website-development" },
-                { name: "Έρευνα αγοράς", path: "/market-research" },
-              ].map((item, index) => (
+              {Array.isArray(t('footer.services.links')) ? (t('footer.services.links') as any[]).map((item: any, index: number) => (
                 <motion.li
                   key={index}
                   whileHover={{ x: 5 }}
@@ -164,7 +152,7 @@ export default function Footer() {
                     {item.name}
                   </Link>
                 </motion.li>
-              ))}
+              )) : null}
             </ul>
           </motion.div>
 
@@ -176,9 +164,9 @@ export default function Footer() {
             viewport={{ once: true }}
             className="flex flex-col"
           >
-            <h3 className="text-lg font-bold mb-4 text-white">Ξεκινήστε Σήμερα</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">{t('footer.cta.title')}</h3>
             <p className="text-gray-400 text-sm mb-4">
-              Είμαστε έτοιμοι να συζητήσουμε το επόμενο project σας και να σας βοηθήσουμε να ξεχωρίσετε στην αγορά.
+              {t('footer.cta.description')}
             </p>
 
             {/* Contact CTA */}
@@ -188,13 +176,13 @@ export default function Footer() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                Επικοινωνήστε Μαζί Μας
+                {t('footer.cta.button')}
               </motion.button>
             </Link>
 
             {/* Social Media with Custom Icons */}
             <div>
-              <h4 className="text-white font-medium mb-4">Ακολουθήστε μας</h4>
+              <h4 className="text-white font-medium mb-4">{t('footer.social.title')}</h4>
               <div className="flex space-x-4">
                 <motion.a
                   href="https://www.facebook.com/1.adinfinity"
@@ -233,9 +221,55 @@ export default function Footer() {
 
         {/* Desktop Copyright */}
         <div className="hidden lg:block mt-8 pt-6 border-t border-gray-800 relative z-10 w-full">
-          <p className="text-center text-gray-400 text-sm">
-            © {currentYear} adinfinity. Με επιφύλαξη παντός δικαιώματος.
-          </p>
+          <div className="space-y-3">
+            <p className="text-center text-gray-400 text-sm">
+              {t('footer.copyright').replace('{year}', currentYear.toString())}
+            </p>
+            {/* Legal Links - Desktop */}
+            <div className="flex justify-center space-x-4 text-xs text-gray-400">
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                {t('cookies.privacy_policy')}
+              </Link>
+              <span className="text-gray-600">•</span>
+              <Link href="/cookie-policy" className="hover:text-white transition-colors">
+                {t('cookies.cookie_policy')}
+              </Link>
+              <span className="text-gray-600">•</span>
+              <button
+                onClick={() => {
+                  const event = new CustomEvent('openCookieSettings')
+                  window.dispatchEvent(event)
+                }}
+                className="hover:text-white transition-colors"
+              >
+                {t('cookies.cookie_settings')}
+              </button>
+              <span className="text-gray-600">•</span>
+              <Link href="/dsa-compliance" className="hover:text-white transition-colors">
+                {t('footer.legal_links.dsa_compliance')}
+              </Link>
+              <span className="text-gray-600">•</span>
+              <Link href="/report-content" className="hover:text-white transition-colors">
+                {t('footer.legal_links.report_content')}
+              </Link>
+              <span className="text-gray-600">•</span>
+              <Link href="/accessibility" className="hover:text-white transition-colors">
+                {t('navigation.accessibility')}
+              </Link>
+            </div>
+            {/* EU Business Compliance Information - Compact */}
+            <div className="text-center">
+              <div className="inline-flex items-center space-x-2 text-xs text-gray-600">
+                <span>{t('footer.business_info.company_name')}</span>
+                <span className="text-gray-700">•</span>
+                <span>{t('footer.business_info.address')}</span>
+                <span className="text-gray-700">•</span>
+                <span>{t('footer.business_info.phone')}</span>
+                <span className="text-gray-700">•</span>
+                <span>{t('footer.business_info.email')}</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Mobile Footer - Completely Redesigned for Compactness */}
@@ -244,7 +278,7 @@ export default function Footer() {
           <div className="flex flex-col items-center text-center mb-4">
             <Image src="/logo.png" alt="adinfinity logo" width={70} height={70} className="mb-2" />
             <p className="text-gray-400 text-xs mb-3 max-w-xs">
-              Σας ευχαριστούμε που μας εμπιστεύεστε για την ανάπτυξη της επιχείρησής σας.
+              {t('footer.mobile.description')}
             </p>
 
             {/* Social Media Icons - Simple SVGs with direct fill */}
@@ -286,36 +320,66 @@ export default function Footer() {
           <div className="flex justify-center space-x-4 mb-4 text-xs text-gray-400">
             <a href="tel:+302681303007" className="flex items-center">
               <Phone size={12} className="mr-1 text-[#01FFFF]" />
-              <span>2681 303007</span>
+              <span>{t('footer.business_info.phone')}</span>
             </a>
             <a href="mailto:adenfinity@gmail.com" className="flex items-center">
               <Mail size={12} className="mr-1 text-[#01FFFF]" />
-              <span>adenfinity@gmail.com</span>
+              <span>{t('footer.business_info.email')}</span>
             </a>
           </div>
 
           {/* Quick links - Two columns */}
           <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
-            <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-              Αρχική
+            {Array.isArray(t('footer.quick_links.links')) ? (t('footer.quick_links.links') as any[]).map((item, index) => (
+              <Link key={index} href={item.path} className="text-gray-400 hover:text-white transition-colors">
+                {item.name}
+              </Link>
+            )) : null}
+          </div>
+
+          {/* Legal Links */}
+          <div className="flex justify-center space-x-4 mb-4 text-xs">
+            <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
+              {t('cookies.privacy_policy')}
             </Link>
-            <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-              Υπηρεσίες
+            <span className="text-gray-600">•</span>
+            <Link href="/cookie-policy" className="text-gray-400 hover:text-white transition-colors">
+              {t('cookies.cookie_policy')}
             </Link>
-            <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-              Ποιοι Είμαστε
+            <span className="text-gray-600">•</span>
+            <button
+              onClick={() => {
+                const event = new CustomEvent('openCookieSettings')
+                window.dispatchEvent(event)
+              }}
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              {t('cookies.cookie_settings')}
+            </button>
+            <span className="text-gray-600">•</span>
+            <Link href="/dsa-compliance" className="text-gray-400 hover:text-white transition-colors">
+              {t('footer.legal_links.dsa_compliance')}
             </Link>
-            <Link href="/projects" className="text-gray-400 hover:text-white transition-colors">
-              Τα Έργα μας
+            <span className="text-gray-600">•</span>
+            <Link href="/report-content" className="text-gray-400 hover:text-white transition-colors">
+              {t('footer.legal_links.report_content')}
             </Link>
-            <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-              Επικοινωνία
+            <span className="text-gray-600">•</span>
+            <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors">
+              {t('navigation.accessibility')}
             </Link>
           </div>
 
           {/* Copyright */}
-          <div className="text-center text-gray-500 text-xs border-t border-gray-800 pt-4">
-            © {currentYear} adinfinity. Με επιφύλαξη παντός δικαιώματος.
+          <div className="text-center text-gray-500 text-xs border-t border-gray-800 pt-4 space-y-2">
+            <p>{t('footer.copyright').replace('{year}', currentYear.toString())}</p>
+            {/* EU Business Compliance Information - Mobile - Compact */}
+            <div className="flex flex-col items-center space-y-1 text-xs text-gray-600">
+              <span>{t('footer.business_info.company_name')}</span>
+              <span>{t('footer.business_info.vat_number')} • {t('footer.business_info.gemi_number')}</span>
+              <span>{t('footer.business_info.address')}</span>
+              <span>{t('footer.business_info.phone')} • {t('footer.business_info.email')}</span>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,143 @@
+{
+  "title": "Custom E-commerce Development",
+  "subtitle": "Online Stores Without Platform Fees",
+  "hero_badge": "No Shopify · No Monthly Fees · 100% Custom",
+  "hero_title": "Custom E-commerce Development",
+  "description": "Online stores built exclusively in Next.js & React with Stripe payments. No platform monthly fees, no limitations, no templates.",
+  "get_started": "Request a Quote",
+  "features_title": "What's Included",
+  "features_description": "Every e-shop is built from scratch with these building blocks.",
+  "payment_methods_title": "Payment Methods",
+  "payment_methods_description": "Every payment method your customer needs — built in.",
+  "premium_features_title": "E-commerce Premium Features",
+  "premium_features_subtitle": "Enhance your online store with advanced features that drive sales and automate operations.",
+  "cta_title": "Building an online store?",
+  "cta_description": "Tell us what you want to sell and we'll send you a proposal within 24 hours.",
+  "cta_button": "Request a Quote",
+  "custom_vs_title": "Custom vs. Shopify/WooCommerce",
+  "why_custom": [
+    "Full design control — exactly as you want it",
+    "Zero monthly platform fees (Shopify costs €30-500/month)",
+    "Faster loading — no bloat from plugins",
+    "Custom features that don't exist in ready-made platforms",
+    "The codebase belongs to you — 100%",
+    "Easy scaling as your business grows"
+  ],
+  "features": [
+    {
+      "title": "Custom Product Catalog",
+      "description": "Categories, filters, search, variants — designed exactly for your products."
+    },
+    {
+      "title": "Stripe Payments",
+      "description": "Cards, Apple Pay, Google Pay, IBAN. Secure checkout without redirects."
+    },
+    {
+      "title": "Order Management",
+      "description": "Custom admin panel for orders, inventory, shipping and invoicing."
+    },
+    {
+      "title": "Analytics Dashboard",
+      "description": "Revenue, conversion rate, top products. All in one custom dashboard."
+    },
+    {
+      "title": "Automations",
+      "description": "Confirmation emails, low-stock alerts, abandoned cart — automatically."
+    },
+    {
+      "title": "Security by Design",
+      "description": "HTTPS, rate limiting, secure sessions, PCI-compliant payment flow."
+    }
+  ],
+  "payment_categories": [
+    {
+      "category": "Cards & Core",
+      "description": "Visa, Mastercard, Amex — the foundation of every e-shop.",
+      "providers": ["Stripe", "Adyen", "Checkout.com", "Viva Wallet"]
+    },
+    {
+      "category": "Digital Wallets",
+      "description": "One-tap checkout. Maximum conversion rate.",
+      "providers": ["Apple Pay", "Google Pay", "PayPal", "Revolut Pay"]
+    },
+    {
+      "category": "Buy Now Pay Later",
+      "description": "BNPL increases average order value by 30-50%.",
+      "providers": ["Klarna", "Scalapay", "Afterpay"]
+    },
+    {
+      "category": "Bank Payments",
+      "description": "EU bank transfers & instant payments. Critical for Greece.",
+      "providers": ["SEPA", "GoCardless", "IRIS", "iDEAL"]
+    },
+    {
+      "category": "Offline & Local",
+      "description": "Still popular in Greece — we don't ignore it.",
+      "providers": ["Cash on Delivery", "Bank Transfer", "IRIS Instant"]
+    },
+    {
+      "category": "Enterprise & Global",
+      "description": "For scale to EU & global markets.",
+      "providers": ["Adyen", "Checkout.com", "Mollie", "Crypto (optional)"]
+    }
+  ],
+  "payment_summary": "Your e-shop accepts:",
+  "premium_features": [
+    {
+      "title": "Advanced Analytics",
+      "price": "Request Quote",
+      "description": "Deep insights into customer behavior, sales performance, and conversion optimization.",
+      "features": [
+        "Customer journey tracking",
+        "Product performance analytics",
+        "Conversion funnel analysis",
+        "Revenue attribution model",
+        "Custom dashboard & reports"
+      ],
+      "timeline": "2-3 weeks"
+    },
+    {
+      "title": "Subscription System",
+      "price": "Request Quote",
+      "description": "Recurring revenue platform for subscription boxes, memberships, and recurring orders.",
+      "features": [
+        "Flexible subscription tiers",
+        "Automatic billing & retries",
+        "Customer portal & self-service",
+        "Usage-based billing",
+        "Upgrade/downgrade workflows"
+      ],
+      "timeline": "3-4 weeks"
+    },
+    {
+      "title": "Multi-Vendor Marketplace",
+      "price": "Request Quote",
+      "description": "Multi-vendor platform with vendor management, commission tracking, and dispute resolution.",
+      "features": [
+        "Vendor onboarding & integration",
+        "Commission management system",
+        "Product approval workflows",
+        "Vendor dashboard & analytics",
+        "Vendor rating & review system"
+      ],
+      "timeline": "6-8 weeks"
+    },
+    {
+      "title": "Inventory Management",
+      "price": "Request Quote",
+      "description": "Real-time inventory tracking, automatic reordering, and warehouse management integration.",
+      "features": [
+        "Real-time inventory tracking",
+        "Low stock alerts & reordering",
+        "Warehouse location management",
+        "Barcode/QR code scanning",
+        "Supplier management system"
+      ],
+      "timeline": "3-4 weeks"
+    }
+  ],
+  "seo": {
+    "title": "Custom E-commerce Development | Online Shops | adinfinity",
+    "description": "Custom e-commerce development without Shopify/WooCommerce. Next.js, React, Stripe payments. Zero monthly fees. Greek market expertise for online shops."
+  }
+}

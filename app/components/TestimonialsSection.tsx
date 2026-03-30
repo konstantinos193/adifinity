@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { useTranslations } from "@/components/useTranslations"
 
 interface Review {
   author_name: string
@@ -12,32 +13,14 @@ interface Review {
   time_ago: string
 }
 
-const staticReviews: Review[] = [
-  {
-    author_name: "ΣΤΕΦΑΝΟΣ ΜΑΛΕΣΚΟΣ",
-    rating: 5,
-    text: "Γνώστες του αντικειμένου, άψογη εξυπηρέτηση και άριστη συνεργασία.",
-    time_ago: "πριν από έναν χρόνο",
-  },
-  {
-    author_name: "Παναγιωτα Στρεβινα",
-    rating: 5,
-    text: "Υπέροχος επαγγελματίας με συνέπεια και ξεπέρασε τις προσδοκίες μας σε ότι ζητήθηκε... 👍👍👍…",
-    time_ago: "πριν από 2 χρόνια",
-  },
-  {
-    author_name: "Ermioni Zerva",
-    rating: 5,
-    text: "Επαγγελματισμός, πρωτότυπες ιδέες, λογότυπα που εκφράζουν την κάθε επιχείρηση τέλεια γραφιστική και όχι μόνο δουλειά.",
-    time_ago: "πριν από 2 χρόνια",
-  },
-  {
-    author_name: "Δημητρης Σαριδακης",
-    rating: 5,
-    text: "Από την μικρή συνεργασία που είχα με την επιχείριση μόνο θετικές λέξεις μπορώ να γράψω... Ένα μεγάλο μπράβο στον Μάνο και σε όλους συντελούν για να βγεί αυτό το αποτέλεσμα τουλάχιστον στα δικά μου χέρια....",
-    time_ago: "πριν από 2 χρόνια",
-  },
-]
+export default function TestimonialsSection() {
+  const { t } = useTranslations()
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [autoplay, setAutoplay] = useState(true)
+
+  // Get testimonials from translations
+  const staticReviews: Review[] = Array.isArray(t('testimonials.reviews')) ? (t('testimonials.reviews') as Review[]) : []
 
 // Function to generate a unique color based on name
 function generateColor(name: string): string {
@@ -98,11 +81,6 @@ function AvatarSvg({ name }: { name: string }) {
   )
 }
 
-export default function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [autoplay, setAutoplay] = useState(true)
-
   // Initialize on client side
   useEffect(() => {
     setIsLoaded(true)
@@ -160,9 +138,9 @@ export default function TestimonialsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-[#01FFFF] mb-4">Η Φωνή των Πελατών μας</h2>
+          <h2 className="text-4xl font-bold text-[#01FFFF] mb-4">{t('testimonials.title')}</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Διαβάστε τι λένε οι πελάτες μας για τις υπηρεσίες μας και την εμπειρία συνεργασίας μαζί μας.
+            {t('testimonials.subtitle')}
           </p>
         </motion.div>
 
@@ -222,7 +200,7 @@ export default function TestimonialsSection() {
           <button
             onClick={prevSlide}
             className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-5 bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors z-20"
-            aria-label="Previous testimonial"
+            aria-label={t('testimonials.previous_testimonial') as string}
           >
             <ChevronLeft size={24} />
           </button>
@@ -230,7 +208,7 @@ export default function TestimonialsSection() {
           <button
             onClick={nextSlide}
             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-5 bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors z-20"
-            aria-label="Next testimonial"
+            aria-label={t('testimonials.next_testimonial') as string}
           >
             <ChevronRight size={24} />
           </button>
@@ -244,7 +222,7 @@ export default function TestimonialsSection() {
                 className={`w-2 h-2 rounded-full transition-all ${
                   currentIndex === index ? "bg-[#01FFFF] w-4" : "bg-gray-500 hover:bg-gray-400"
                 }`}
-                aria-label={`Go to testimonial ${index + 1}`}
+                aria-label={t('testimonials.go_to_testimonial') as string}
               />
             ))}
           </div>
@@ -263,7 +241,7 @@ export default function TestimonialsSection() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-transparent hover:bg-[#01FFFF]/10 border border-[#01FFFF] text-[#01FFFF] font-medium py-2 px-6 rounded-full transition-colors"
           >
-            <span>Δείτε περισσότερες κριτικές στο Google</span>
+            <span>{t('testimonials.see_more_reviews')}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

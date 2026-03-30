@@ -5,8 +5,10 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import Image from "next/image"
 import projectsData from "../data/projects.json"
+import { useTranslations } from "@/components/useTranslations"
 
 export default function LogoCarousel() {
+  const { t } = useTranslations()
   const projects = projectsData.projects
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
@@ -130,7 +132,7 @@ export default function LogoCarousel() {
   return (
     <section className="py-16 bg-gradient-to-b from-[#071218] to-[#0A1A24]">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center text-white">Οι Συνεργάτες Μας</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-white">{t('carousel.title')}</h2>
 
         <div className="relative max-w-4xl mx-auto">
           {/* Logo display area with manually selected background */}
@@ -196,7 +198,7 @@ export default function LogoCarousel() {
             <button
               onClick={prevLogo}
               className="bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors"
-              aria-label="Previous logo"
+              aria-label={t('carousel.previous_logo') as string}
             >
               <svg
                 width="24"
@@ -218,7 +220,7 @@ export default function LogoCarousel() {
             <button
               onClick={nextLogo}
               className="bg-[#01FFFF] hover:bg-[#01A9FF] text-[#071218] w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-colors"
-              aria-label="Next logo"
+              aria-label={t('carousel.next_logo') as string}
             >
               <svg
                 width="24"
@@ -258,7 +260,7 @@ export default function LogoCarousel() {
                 className={`w-2 h-2 rounded-full transition-all ${
                   currentIndex === index ? "bg-[#01FFFF] w-4" : "bg-gray-500 hover:bg-gray-400"
                 }`}
-                aria-label={`Go to logo ${index + 1}`}
+                aria-label={t('carousel.go_to_logo') as string}
               />
             ))}
           </div>

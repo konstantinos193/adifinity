@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useTranslations } from "@/components/useTranslations"
 
 type Project = {
   id: string
@@ -21,6 +22,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onClick }: ProjectCardProps) {
+  const { t } = useTranslations()
   // Enhanced color palette with more options for better contrast
   const colors = {
     white: "#ffffff",
@@ -140,7 +142,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
 
         <div className="mt-6 w-full space-y-3">
           <button className="w-full py-2 px-4 bg-transparent hover:bg-[#01FFFF]/10 border border-[#01FFFF]/30 rounded-lg text-[#01FFFF] text-sm flex items-center justify-center transition-all backdrop-blur-sm">
-            Περισσότερες λεπτομέρειες
+            {t('projects_page.more_details')}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-4 w-4 ml-2"
@@ -160,7 +162,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
               className="w-full py-2 px-4 bg-[#01FFFF]/10 hover:bg-[#01FFFF]/20 border border-[#01FFFF]/50 rounded-lg text-[#01FFFF] text-sm flex items-center justify-center transition-all backdrop-blur-sm"
               onClick={(e) => e.stopPropagation()}
             >
-              Επίσκεψη Ιστοσελίδας
+              {t('projects_page.visit_website')}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 ml-2"

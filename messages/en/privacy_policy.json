@@ -1,0 +1,231 @@
+{
+  "title": "Privacy Policy",
+  "lastUpdated": "Last updated: March 30, 2026",
+  "description": "At adinfinity, we are committed to protecting your privacy and ensuring the security of your personal data. This Privacy Policy explains how we collect, use, and protect your information in compliance with the General Data Protection Regulation (GDPR) and other applicable privacy laws.",
+  
+  "sections": {
+    "informationWeCollect": {
+      "title": "Information We Collect",
+      "personal": {
+        "title": "Personal Information",
+        "description": "We may collect the following types of personal information:",
+        "items": {
+          "contact": "Contact Information: Name, email address, phone number",
+          "business": "Business Information: Company name, position, industry",
+          "communication": "Communication Data: Messages, inquiries, support requests"
+        }
+      },
+      "technical": {
+        "title": "Technical Information",
+        "description": "We automatically collect certain technical information when you visit our website:",
+        "items": {
+          "usage": "Usage Data: Pages visited, time spent, click patterns",
+          "device": "Device Information: Browser type, operating system, IP address",
+          "cookies": "Cookies and Tracking: Analytics and marketing cookies"
+        }
+      }
+    },
+    
+    "howWeUse": {
+      "title": "How We Use Your Information",
+      "description": "We use your personal information for the following purposes:",
+      "categories": {
+        "service": {
+          "title": "Service Provision",
+          "items": [
+            "Respond to inquiries",
+            "Provide marketing services",
+            "Manage client relationships",
+            "Deliver requested information"
+          ]
+        },
+        "communication": {
+          "title": "Communication",
+          "items": [
+            "Send newsletters",
+            "Marketing communications",
+            "Service updates",
+            "Support responses"
+          ]
+        },
+        "analytics": {
+          "title": "Analytics & Improvement",
+          "items": [
+            "Website optimization",
+            "Service improvement",
+            "Performance analysis",
+            "User experience research"
+          ]
+        },
+        "legal": {
+          "title": "Legal Compliance",
+          "items": [
+            "Regulatory requirements",
+            "Legal obligations",
+            "Dispute resolution",
+            "Fraud prevention"
+          ]
+        }
+      }
+    },
+    
+    "legalBasis": {
+      "title": "Legal Basis for Processing",
+      "description": "Under GDPR, we process your personal data based on one or more of the following legal bases:",
+      "bases": [
+        {
+          "title": "Consent",
+          "description": "When you explicitly consent to our processing of your data for specific purposes"
+        },
+        {
+          "title": "Contractual Necessity",
+          "description": "When processing is necessary to fulfill our contractual obligations"
+        },
+        {
+          "title": "Legitimate Interest",
+          "description": "When we have a legitimate interest that is not overridden by your privacy rights"
+        },
+        {
+          "title": "Legal Obligation",
+          "description": "When processing is required by applicable law or regulation"
+        }
+      ]
+    },
+    
+    "dataSharing": {
+      "title": "Data Sharing and Disclosure",
+      "description": "We may share your personal information with the following categories of recipients:",
+      "categories": [
+        {
+          "title": "Service Providers",
+          "description": "Third-party service providers who assist us in operating our website, conducting our business, or servicing our users (e.g., email marketing services, analytics providers)."
+        },
+        {
+          "title": "Business Partners",
+          "description": "Trusted business partners with whom we jointly offer services or conduct marketing campaigns."
+        },
+        {
+          "title": "Legal Authorities",
+          "description": "When required by law, court order, or government regulation, or to protect our rights, property, or safety."
+        }
+      ]
+    },
+    
+    "dataSecurity": {
+      "title": "Data Security Measures",
+      "description": "We implement appropriate technical and organizational measures to protect your personal data:",
+      "categories": {
+        "technical": {
+          "title": "Technical Security",
+          "items": [
+            "SSL/TLS encryption",
+            "Secure data storage",
+            "Access controls",
+            "Regular security updates"
+          ]
+        },
+        "organizational": {
+          "title": "Organizational Security",
+          "items": [
+            "Staff training",
+            "Data access policies",
+            "Confidentiality agreements",
+            "Regular audits"
+          ]
+        }
+      }
+    },
+    
+    "gdprRights": {
+      "title": "Your GDPR Rights",
+      "description": "Under GDPR, you have the following rights regarding your personal data:",
+      "rights": [
+        {
+          "title": "Right to Access",
+          "description": "Request access to and obtain a copy of your personal data"
+        },
+        {
+          "title": "Right to Rectification",
+          "description": "Request correction of inaccurate or incomplete personal data"
+        },
+        {
+          "title": "Right to Erasure",
+          "description": "Request deletion of your personal data (right to be forgotten)"
+        },
+        {
+          "title": "Right to Portability",
+          "description": "Request transfer of your data to another service provider"
+        },
+        {
+          "title": "Right to Object",
+          "description": "Object to processing of your personal data"
+        }
+      ]
+    },
+    
+    "dataRetention": {
+      "title": "Data Retention",
+      "description": "We retain your personal data only as long as necessary for the purposes for which it was collected:",
+      "periods": {
+        "title": "Retention Periods",
+        "items": [
+          "<strong>Contact inquiries:</strong> 2 years from last communication",
+          "<strong>Newsletter subscriptions:</strong> Until unsubscribe",
+          "<strong>Analytics data:</strong> 26 months (Google Analytics default)",
+          "<strong>Legal requirements:</strong> As required by applicable law"
+        ]
+      }
+    },
+    
+    "internationalTransfers": {
+      "title": "International Data Transfers",
+      "description": "Your personal data may be transferred to and processed in countries outside the European Economic Area (EEA). We ensure adequate protection through appropriate safeguards such as:",
+      "safeguards": [
+        "Standard Contractual Clauses (SCCs)",
+        "EU-US Data Privacy Framework (where applicable)",
+        "Binding Corporate Rules (BCRs)",
+        "Adequacy decisions by the European Commission"
+      ]
+    },
+    
+    "contact": {
+      "title": "Contact Information",
+      "description": "If you have any questions about this Privacy Policy or wish to exercise your GDPR rights, please contact us:",
+      "details": {
+        "email": "adenfinity@gmail.com",
+        "phone": "+30-2681-303007",
+        "address": "Βασ. Πύρρου 30, 471 32 Άρτα, Greece"
+      },
+      "dpo": {
+        "title": "Data Protection Officer",
+        "description": "For data protection matters, you may also contact our Data Protection Officer at the above email address with the subject line \"Data Protection Request\"."
+      }
+    },
+    
+    "complaints": {
+      "title": "Right to Lodge a Complaint",
+      "description": "If you believe that our processing of your personal data infringes GDPR or other privacy laws, you have the right to lodge a complaint with a supervisory authority. In Greece, you can contact:",
+      "authority": {
+        "name": "Hellenic Data Protection Authority (APDPA)",
+        "details": "Website: www.dpa.gr<br />Email: contact@dpa.gr<br />Phone: +30 210 6475600"
+      }
+    },
+    
+    "policyUpdates": {
+      "title": "Changes to This Policy",
+      "description": "We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or for other operational reasons. We will notify you of any changes by:",
+      "methods": [
+        "Posting the updated policy on our website",
+        "Updating the \"Last updated\" date",
+        "Sending email notifications for significant changes",
+        "Displaying prominent notices on our website"
+      ]
+    }
+  },
+  
+  "cta": {
+    "title": "Have Privacy Questions?",
+    "description": "We're here to help you understand your rights and how we protect your data.",
+    "button": "Contact Our Privacy Team"
+  }
+}

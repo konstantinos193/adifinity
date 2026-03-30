@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTranslations } from "@/components/useTranslations"
 
 interface Milestone {
   year: number
@@ -9,40 +10,19 @@ interface Milestone {
 }
 
 export function Timeline() {
-  const milestones: Milestone[] = [
-    {
-      year: 2013,
-      event: "Ίδρυση της εταιρείας στην Άρτα",
-      description:
-        "Ξεκινήσαμε το ταξίδι μας με όραμα να προσφέρουμε καινοτόμες λύσεις μάρκετινγκ στις τοπικές επιχειρήσεις.",
-    },
-    {
-      year: 2014,
-      event: "Επέκταση δραστηριοτήτων σε όλη την Άρτα",
-      description: "Διευρύναμε το πελατολόγιό μας και αναπτύξαμε νέες υπηρεσίες για να καλύψουμε περισσότερες ανάγκες.",
-    },
-    {
-      year: 2016,
-      event: "Λανσάρισμα του τμήματος ψηφιακού μάρκετινγκ",
-      description: "Προσαρμοστήκαμε στις νέες τάσεις της αγοράς, προσφέροντας ολοκληρωμένες ψηφιακές λύσεις.",
-    },
-    {
-      year: 2018,
-      event: "Βράβευση για την Καλύτερη Διαφημιστική Καμπάνια στην Ήπειρο",
-      description:
-        "Η δημιουργικότητα και η αποτελεσματικότητα της δουλειάς μας αναγνωρίστηκε με αυτή τη σημαντική διάκριση.",
-    },
-    {
-      year: 2020,
-      event: "Επέτειος 7 ετών και δημιουργία τμήματος σχεδίασης προϊόντων",
-      description: "Γιορτάσαμε την επταετία μας επεκτείνοντας τις υπηρεσίες μας στον τομέα του product design.",
-    },
-    {
-      year: 2023,
-      event: "Συνεργασία με μεγάλες εταιρείες σε όλη την Ελλάδα",
-      description: "Η φήμη μας ξεπέρασε τα όρια της Ηπείρου, με συνεργασίες που επεκτείνονται σε όλη τη χώρα.",
-    },
-  ]
+  const { t } = useTranslations()
+  
+  const timelineEvents = (t('about_page.timeline_events') as unknown) as Array<{
+    year: string
+    event: string
+    description: string
+  }>
+
+  const milestones: Milestone[] = timelineEvents.map(event => ({
+    year: parseInt(event.year),
+    event: event.event,
+    description: event.description
+  }))
 
   return (
     <div className="relative">

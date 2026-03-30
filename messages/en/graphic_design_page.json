@@ -1,0 +1,95 @@
+{
+  "title": "Graphic Design",
+  "subtitle": "Impressive design that makes the difference!",
+  "description": "Your business image is the first thing your audience sees – let's make it unforgettable! With creativity and expertise, we design graphics that enhance your brand and communicate your message effectively.",
+  "get_started": "Get Started",
+  "our_services": "Our Services",
+  "learn_more": "Learn more",
+  "portfolio_title": "Our Portfolio",
+  "portfolio_description": "See some of our recent projects and discover how we can help your business",
+  "see_all_projects": "See All Projects",
+  "why_choose_us": "Why Choose Us",
+  "why_choose_description": "We combine creativity with expertise to deliver exceptional results",
+  "cta": {
+    "title": "Elevate your brand with creativity & professional design!",
+    "description": "We undertake projects of any size, from startups to large businesses. Let's create the ideal visual identity for you together!"
+  },
+  "request_quote": "Request a Quote",
+  "see_portfolio": "See Portfolio",
+  "services": {
+    "branding": {
+      "title": "Branding & Corporate Identity",
+      "description": "We create unique identities that stand out"
+    },
+    "advertising": {
+      "title": "Advertising & Print Designs",
+      "description": "Impressive designs that attract your audience"
+    },
+    "digital": {
+      "title": "Digital & Social Media Graphics",
+      "description": "Dynamic presence in the digital world"
+    },
+    "specialized": {
+      "title": "Specialized Creations",
+      "description": "Innovative solutions for every need"
+    }
+  },
+  "features": [
+    {
+      "title": "Fast Delivery",
+      "description": "We strictly meet deadlines and deliver high-quality projects in a short time."
+    },
+    {
+      "title": "Unique Design",
+      "description": "We create original designs that stand out and reflect your business identity."
+    },
+    {
+      "title": "Guaranteed Quality",
+      "description": "We offer unlimited revisions until you are completely satisfied with the final result."
+    },
+    {
+      "title": "Personal Support",
+      "description": "We provide personalized service and support at every step of our collaboration."
+    }
+  ],
+  "portfolio_items": [
+    {
+      "title": "A.P.O.F.A",
+      "description": "Complete corporate identity",
+      "image": "/images/apofa-branding.png"
+    },
+    {
+      "title": "Bohĕme Beach bar",
+      "description": "Branding for beach bar",
+      "image": "/images/boheme-beach-bar.png"
+    },
+    {
+      "title": "Box Bijou",
+      "description": "Elegant identity for handmade jewelry",
+      "image": "/images/box-bijou.png"
+    }
+  ],
+  "creative_process": {
+    "title": "Our Creative Process",
+    "idea": {
+      "title": "Idea",
+      "description": "We gather information and get inspired"
+    },
+    "design": {
+      "title": "Design",
+      "description": "We create unique designs"
+    },
+    "review": {
+      "title": "Review",
+      "description": "We refine and perfect"
+    },
+    "delivery": {
+      "title": "Delivery",
+      "description": "We deliver the final result"
+    }
+  },
+  "seo": {
+    "title": "Graphic Design Artas | adinfinity - Professional Graphic Design Services | Branding",
+    "description": "Professional graphic design in Artas with branding, logo design, corporate identity, advertising materials, social media graphics. Quality & creativity! +30 2681 303007"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "title": "Υπηρεσίες Τεχνικού SEO | Core Web Vitals | Τεχνικό SEO | adfinity",
+  "description": "Βελτιστοποίηση τεχνικού SEO για ελληνική αγορά. Core Web Vitals, schema markup, έλεγχος Lighthouse. Διορθώσεις σε επίπεδο κώδικα χωρίς plugins. Βελτιστοποίηση για Google rankings.",
+  "keywords": "τεχνικό SEO, core web vitals, schema markup, βελτιστοποίηση SEO, ελληνικό SEO, υπηρεσίες SEO, έλεγχος Lighthouse, Google Search Console, βελτιστοποίηση crawling, έλεγχος SEO, ανάπτυξη react, nextjs, adfinity, adinity, τεχνικο SEO, βελτιστοποιηση SEO, Google ranking, ανάλυση SEO, βελτιστοποίηση ταχύτητας σελίδας, δομημένα δεδομένα, SEO Ελλάδα, βελτιστοποίηση μηχανών αναζήτησης",
+  "hero_badge": "Core Web Vitals · Schema · Speed · Rankings",
+  "hero_title": "Τεχνικό SEO",
+  "hero_description": "Η τεχνική βάση για top Google rankings. <span className=\"text-[#01FFFF] font-semibold\">Core Web Vitals, schema markup, speed optimization</span> — διορθώσεις απευθείας στον κώδικα, όχι plugins.",
+  "request_audit": "Ζητήστε Έλεγχο SEO",
+  "phone_number": "+30 2681 303007",
+  "unique_approach_title": "Μοναδική Προσέγγιση",
+  "unique_approach_desc": "Αντί για plugins, διορθώνουμε απευθείας τον κώδικα για μακροπρόθεσμα αποτελέσματα.",
+  "lighthouse_target": "Στόχος Lighthouse",
+  "performance": "Απόδοση",
+  "accessibility": "Προσβασιμότητα", 
+  "best_practices": "Βέλτιστες Πρακτικές",
+  "seo_score": "SEO",
+  "performance_tooltip": "Χρόνος φόρτωσης < 2δ",
+  "accessibility_tooltip": "WCAG 2.1 AA",
+  "best_practices_tooltip": "Σύγχρονες προδιαγραφές web",
+  "seo_tooltip": "Τέλεια βελτιστοποίηση για Google",
+  "avg_improvement": "Μέση βελτίωση:",
+  "time_to_results": "Χρόνος για αποτελέσματα:",
+  "improvement_value": "+40 θέσεις",
+  "results_time": "2-4 εβδομάδες",
+  "scores_explanation": "Τι σημαίνουν αυτές οι βαθμολογίες:",
+  "performance_desc": "Απόδοση: Γρήγοροι χρόνοι φόρτωσης (&lt; 2δ)",
+  "accessibility_desc": "Προσβασιμότητα: Πλήρης προσβασιμότητα για όλους",
+  "best_practices_desc": "Βέλτιστες Πρακτικές: Σύγχρονος, ασφαλής κώδικας",
+  "seo_desc": "SEO: Τέλεια βελτιστοποίηση για Google",
+  "what_we_optimize": "Τι βελτιστοποιούμε",
+  "optimize_desc": "Κάθε τεχνικό πρόβλημα που επηρεάζει το ranking σας.",
+  "audits": {
+    "core_web_vitals": {
+      "title": "Core Web Vitals",
+      "desc": "LCP, FID, CLS — οι μετρήσεις που μετρά η Google για ranking. Βελτιστοποιήσεις για φόρτωση κάτω από 2δ."
+    },
+    "schema_markup": {
+      "title": "Schema Markup", 
+      "desc": "Δομημένα δεδομένα (JSON-LD) για εμπλουτισμένα αποτελέσματα στη Google — αξιολογήσεις, συχνές ερωτήσεις, breadcrumbs."
+    },
+    "crawlability": {
+      "title": "Crawlability",
+      "desc": "Sitemap, robots.txt, canonical tags, internal linking. Η Google βλέπει ακριβώς τι θέλετε να δείτε."
+    },
+    "lighthouse_audit": {
+      "title": "Lighthouse Audit",
+      "desc": "Performance, Accessibility, Best Practices, SEO score. Στοχεύουμε 90+ σε όλες τις κατηγορίες."
+    },
+    "on_page_seo": {
+      "title": "On-page SEO",
+      "desc": "Titles, meta descriptions, ιεραρχία H1-H6, βελτιστοποίηση λέξεων-κλειδιών, περιγραφές εικόνων."
+    },
+    "technical_fixes": {
+      "title": "Technical Fixes",
+      "desc": "Σπασμένοι σύνδεσμοι, αλυσίδες ανακατευθύνσεων, διπλότυπο περιεχόμενο, προβλήματα χρηστικότητας σε κινητά — όλα διορθωμένα."
+    }
+  },
+  "how_we_work": "Πώς δουλεύουμε",
+  "process": {
+    "audit": {
+      "title": "Έλεγχος",
+      "desc": "Πλήρης τεχνικός έλεγχος με Lighthouse, Google Search Console και Screaming Frog."
+    },
+    "analysis": {
+      "title": "Ανάλυση", 
+      "desc": "Εντοπισμός των κρίσιμων προβλημάτων που επηρεάζουν περισσότερο την κατάταξή σας."
+    },
+    "implementation": {
+      "title": "Υλοποίηση",
+      "desc": "Διορθώσεις απευθείας στον κώδικα — όχι plugins, όχι προσωρινές λύσεις."
+    },
+    "monitoring": {
+      "title": "Παρακολούθηση",
+      "desc": "Παρακολούθηση αποτελεσμάτων στο Google Search Console για 30 ημέρες μετά την υλοποίηση."
+    }
+  },
+  "what_to_expect": "Τι να Περιμένετε",
+  "expect_desc": "Μετρήσιμα αποτελέσματα που παραδίδουμε σε κάθε έργο.",
+  "expected_results": {
+    "positions": {
+      "title": "+40 Θέσεις",
+      "desc": "Μέση βελτίωση θέσεων μετά από διορθώσεις τεχνικού SEO"
+    },
+    "load_time": {
+      "title": "-60% Χρόνος Φόρτωσης", 
+      "desc": "Γρηγορότεροι χρόνοι φόρτωσης για καλύτερη εμπειρία χρήστη"
+    },
+    "traffic": {
+      "title": "+200% Επισκεψιμότητα",
+      "desc": "Αύξηση οργανικής επισκεψιμότητας μέσω καλύτερης κατάταξης"
+    },
+    "compliance": {
+      "title": "100% Συμμόρφωση",
+      "desc": "Πλήρης συμμόρφωση με οδηγίες της Google και βέλτιστες πρακτικές"
+    }
+  },
+  "tools_we_use": "Εργαλεία που Χρησιμοποιούμε",
+  "tools_desc": "Τα πιο σύγχρονα εργαλεία SEO για αποτελέσματα με βάση δεδομένα.",
+  "tools": {
+    "lighthouse": {
+      "name": "Lighthouse",
+      "category": "Έλεγχος Απόδοσης",
+      "description": "Core Web Vitals και μετρήσεις απόδοσης"
+    },
+    "gsc": {
+      "name": "Google Search Console",
+      "category": "Παρακολούθηση", 
+      "description": "Κατατάξεις και δεδομένα ευρετηρίασης"
+    },
+    "screaming_frog": {
+      "name": "Screaming Frog",
+      "category": "Ανάγνωση",
+      "description": "Ολοκληρωμένος τεχνικός έλεγχος ιστοσελίδας"
+    },
+    "pagespeed": {
+      "name": "PageSpeed Insights",
+      "category": "Ανάλυση Ταχύτητας",
+      "description": "Απόδοση σε mobile και desktop"
+    },
+    "gtmetrix": {
+      "name": "GTmetrix",
+      "category": "Απόδοση",
+      "description": "Λεπτομερής βελτιστοποίηση ταχύτητας"
+    },
+    "schema_validator": {
+      "name": "Schema.org Validator",
+      "category": "Schema",
+      "description": "Επικύρωση δομημένων δεδομένων"
+    }
+  },
+  "faq_title": "Συχνές Ερωτήσεις",
+  "faq_desc": "Όλα όσα χρειάζεται να ξέρετε για τεχνικό SEO.",
+  "faqs": {
+    "duration": {
+      "q": "Πόσο χρόνο παίρνει ένας τεχνικός έλεγχος SEO;",
+      "a": "Ένας πλήρης τεχνικός έλεγχος συνήθως ολοκληρώνεται σε 2-3 εργάσιμες ημέρες. Οι διορθώσεις μπορεί να πάρουν 1-2 εβδομάδες ανάλογα με την πολυπλοκότητα."
+    },
+    "difference": {
+      "q": "Τι διαφορά έχει από άλλες υπηρεσίες SEO;",
+      "a": "Εμείς διορθώνουμε προβλήματα απευθείας στον κώδικα, όχι με plugins. Αυτό εξασφαλίζει μακροπρόθεσμα αποτελέσματα χωρίς εξαρτήσεις από εργαλεία τρίτων."
+    },
+    "results": {
+      "q": "Θα δω άμεσα αποτελέσματα;",
+      "a": "Οι τεχνικές βελτιώσεις συνήθως φαίνονται σε 2-4 εβδομάδες. Μερικοί πελάτες είδαν βελτίωση μέσα σε 10 ημέρες."
+    },
+    "support": {
+      "q": "Περιλαμβάνετε υποστήριξη μετά τον έλεγχο;",
+      "a": "Ναι, παρακολουθούμε τα αποτελέσματα για 30 ημέρες μετά την υλοποίηση και παρέχουμε υποστήριξη για οποιαδήποτε ερώτηση."
+    }
+  },
+  "cta_title": "Θέλετε δωρεάν έλεγχο SEO;",
+  "cta_desc": "Στείλτε μας το URL σας και σας στέλνουμε πλήρη αναφορά τεχνικού SEO εντός 24 ωρών.",
+  "free_audit": "Δωρεάν Έλεγχος SEO"
+}

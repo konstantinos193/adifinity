@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Linkedin, Mail } from "lucide-react"
+import { Users, Mail } from "lucide-react"
 
 interface TeamMemberProps {
   name: string
@@ -65,7 +65,7 @@ export function TeamMember({ name, role, imageSrc, bio, email, linkedin }: TeamM
             whileHover={{ y: -3 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Linkedin size={18} className="text-[#01FFFF]" />
+            <Users size={18} className="text-[#01FFFF]" />
           </motion.a>
         )}
       </div>

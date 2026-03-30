@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import HomePageClient from './components/HomePageClient'
 
 export const metadata: Metadata = {
-  title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Marketing Agency & Digital Services',
-  description: 'Η adinfinity είναι κορυφαία διαφημιστική εταιρεία στην Άρτα με 100+ πελάτες. Marketing, digital advertising, εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων. Επαγγελματικές υπηρεσίες με αποτελέσματα! +30 2681 303007',
+  title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Advertising & Digital Services',
+  description: 'Η adinfinity είναι κορυφαία διαφημιστική εταιρεία στην Άρτα με 100+ πελάτες. Διαφημιστικές υπηρεσίες, digital advertising, εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων. Επαγγελματικές υπηρεσίες με αποτελέσματα! +30 2681 303007',
   keywords: [
     'adinfinity',
     'ad infinity',
@@ -14,11 +14,13 @@ export const metadata: Metadata = {
     'infinity ad',
     'infinity company',
     'infinity the coffee project',
-    'διαφημιστική εταιρεία',
+    'διαφημιστική',
     'διαφημιστικη',
+    'διαφημιστική εταιρεία',
     'διαφημιστική εταιρεία Άρτα',
     'διαφημιστικη εταιρεια',
     'διαφημιστικη εταιρια',
+    'διαφημιστικεσ εταιρειεσ',
     'marketing agency',
     'agency',
     'marketing company',
@@ -71,7 +73,6 @@ export const metadata: Metadata = {
     'εκτυπώσεις',
     'εκτυπώσεις Άρτα',
     'εκτυπωση φυλλαδιων',
-    'εκτυπωσεις',
     'εκτυπωσεισ',
     'εκτυπωσεισ κοντα μου',
     'διανομη εντυπων',
@@ -108,8 +109,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Marketing & Digital Services',
-    description: 'Η adinfinity είναι κορυφαία διαφημιστική εταιρεία στην Άρτα. Marketing, digital advertising, εκτυπώσεις, γραφιστική. Μετατρέπουμε ιδέες σε επιτυχίες!',
+    title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Advertising & Digital Services',
+    description: 'Η adinfinity είναι κορυφαία διαφημιστική εταιρεία στην Άρτα. Διαφημιστικές υπηρεσίες, digital advertising, εκτυπώσεις, γραφιστική. Μετατρέπουμε ιδέες σε επιτυχίες!',
     url: 'https://adinfinity.gr',
     siteName: 'adinfinity',
     images: [
@@ -126,7 +127,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα',
-    description: 'Κορυφαία διαφημιστική εταιρεία στην Άρτα. Marketing, digital services, εκτυπώσεις, γραφιστική.',
+    description: 'Κορυφαία διαφημιστική εταιρεία στην Άρτα. Διαφημιστικές υπηρεσίες, digital services, εκτυπώσεις, γραφιστική.',
     images: ['/images/og-image.png'],
   },
   robots: {

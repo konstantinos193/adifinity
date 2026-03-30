@@ -10,11 +10,12 @@ interface ServiceCardProps {
   title: string
   description: string
   link: string
+  learnMore?: string
   index?: number
   className?: string
 }
 
-export function ServiceCard({ icon, title, description, link, index = 0, className = "" }: ServiceCardProps) {
+export function ServiceCard({ icon, title, description, link, learnMore, index = 0, className = "" }: ServiceCardProps) {
   const shouldReduceMotion = useReducedMotion()
   
   return (
@@ -59,7 +60,7 @@ export function ServiceCard({ icon, title, description, link, index = 0, classNa
         <p className="text-gray-300 mb-6 flex-grow text-center">{description}</p>
 
         <div className="flex items-center justify-center text-[#01FFFF] mt-auto group-hover:font-medium transition-all duration-200">
-          <span className="mr-2">Μάθετε περισσότερα</span>
+          <span className="mr-2">{learnMore || 'Μάθετε Περισσότερα'}</span>
           <div className="group-hover:translate-x-1 transition-transform duration-200 will-change-transform">
             <ArrowRight className="h-5 w-5" />
           </div>

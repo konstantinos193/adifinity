@@ -1,0 +1,213 @@
+{
+  "title": "Κατασκευή Ιστοσελίδων",
+  "subtitle": "Custom Web Apps που Αποδίδουν!",
+  "hero_badge": "100% Custom · Καμία Χρήση Templates · React Development",
+  "hero_title": "Κατασκευή Ιστοσελίδων που Αποδίδουν",
+  "description": "Custom web apps, e-shops και platforms χτισμένα αποκλειστικά σε React & Next.js. Καμία χρήση WordPress, Wix ή templates — μόνο clean, scalable code για Greek market.",
+  "get_started": "Ζητήστε Προσφορά",
+  "our_services": "Υπηρεσίες Web Development",
+  "services_description": "Από landing pages έως πλήρη web applications — πάντα custom, πάντα React για Greek businesses.",
+  "portfolio_title": "Portfolio Projects",
+  "portfolio_description": "Real projects, real results — όλα custom-built για Greek market.",
+  "see_all_projects": "Δείτε όλα τα Projects",
+  "why_choose_us": "Γιατί να μας επιλέξετε",
+  "why_choose_description": "Συνδυάζουμε την τεχνολογία αιχμής με την ελληνική αγορά για να παραδώσουμε εξαιρετικά αποτελέσματα",
+  "cta": {
+    "title": "Έχετε project στο μυαλό σας;",
+    "description": "Στείλτε μας μια σύντομη περιγραφή και σας απαντάμε εντός 24 ωρών με ενδεικτική τιμή και χρονοδιάγραμμα."
+  },
+  "request_quote": "Ζητήστε Δωρεάν Προσφορά",
+  "see_portfolio": "Δείτε Projects",
+  "services": {
+    "custom_web_apps": {
+      "title": "Custom Web Apps",
+      "description": "Πλήρως custom React/Next.js εφαρμογές. Καμία χρήση template ή page builder — μόνο clean code.",
+      "tags": ["Next.js", "React", "TypeScript"]
+    },
+    "e-commerce": {
+      "title": "E-commerce",
+      "description": "Custom online stores με Stripe, διαχείριση παραγγελιών και αποθήκης. Χτισμένο από μηδέν.",
+      "tags": ["Next.js", "Stripe", "PostgreSQL"]
+    },
+    "landing_pages": {
+      "title": "Landing Pages",
+      "description": "High-converting pages για καμπάνιες και διαφημίσεις. Fast, SEO-ready, mobile-first.",
+      "tags": ["Next.js", "Tailwind", "Framer Motion"]
+    },
+    "web_applications": {
+      "title": "Web Applications",
+      "description": "SaaS tools, dashboards, booking systems, portals. Ό,τι χρειάζεται η επιχείρησή σας.",
+      "tags": ["React", "Node.js", "PostgreSQL"]
+    },
+    "technical_seo": {
+      "title": "Technical SEO",
+      "description": "Core Web Vitals, schema markup, speed optimization. Η τεχνική βάση για top Google rankings.",
+      "tags": ["Lighthouse", "Schema.org", "GSC"]
+    },
+    "maintenance": {
+      "title": "Maintenance & Updates",
+      "description": "Ongoing development retainer. Νέα features, performance monitoring, security updates.",
+      "tags": ["CI/CD", "Vercel", "Monitoring"]
+    }
+  },
+  "features": [
+    {
+      "title": "Zero templates",
+      "description": "Κάθε project ξεκινά από λευκή σελίδα. Καμία επαναχρησιμοποίηση θεμάτων ή page builders."
+    },
+    {
+      "title": "Performance-first",
+      "description": "Next.js, server components, edge caching. Sites που φορτώνουν σε < 1 δευτερόλεπτο."
+    },
+    {
+      "title": "Direct developer access",
+      "description": "Μιλάτε απευθείας με τον developer — χωρίς account managers και ενδιάμεσους."
+    }
+  ],
+  "portfolio_items": [
+    {
+      "name": "Αστεριας Κορωνησία",
+      "category": "Ιστοσελίδα Φιλοξενίας",
+      "description": "Πλήρως ολοκληρωμένο σύστημα κρατήσεων με Next.js 16, React 19 και custom NestJS backend. Πραγματικός χρόνος κρατήσεων, Stripe payments, multilingual support, admin dashboard και comprehensive booking management.",
+      "image": "/images/asteriashome-preview.png",
+      "url": "https://asteriashome.gr",
+      "tags": ["Next.js", "TypeScript", "Full-Stack System"],
+      "client": "Asterias Homes",
+      "duration": "3 μήνες",
+      "team": "2 developers",
+      "technologies": ["Next.js 16", "React 19", "NestJS", "MongoDB", "Stripe", "TypeScript"],
+      "features": [
+        "Σύστημα κρατήσεων πραγματικού χρόνου",
+        "Υποστήριξη πολλαπλών γλωσσών (EL, EN, DE)",
+        "Επεξεργασία πληρωμών με Stripe",
+        "Admin dashboard",
+        "Mobile-responsive design",
+        "SEO optimization",
+        "Image gallery με lightbox",
+        "Email notifications"
+      ],
+      "results": [
+        "95% page speed score",
+        "40% αύξηση κρατήσεων",
+        "Top 3 Google rankings",
+        "Mobile-first user experience"
+      ],
+      "challenge": "Δημιουργία ενός πλήρους συστήματος διαχείρισης φιλοξενίας από το μηδέν με πραγματική διαθεσιμότητα και ασφαλή επεξεργασία πληρωμών."
+    },
+    {
+      "name": "ΚΥΚΛΟΣ Εκπαίδευση",
+      "category": "Εκπαιδευτική Πλατφόρμα",
+      "description": "Ολοκληρωμένο εκπαιδευτικό σύστημα με Next.js 16, React 19 και custom NestJS backend. Student management, authentication, blog system, newsletter, και 25+ χρόνια εκπαιδευτικού υλικού.",
+      "image": "/images/kyklosedu-preview.png",
+      "url": "https://kyklosedu.gr",
+      "tags": ["Next.js", "TypeScript", "Full-Stack Platform"],
+      "client": "ΚΥΚΛΟΣ Εκπαιδευτικό Κέντρο",
+      "duration": "6 εβδομάδες",
+      "team": "2 developers",
+      "technologies": ["Next.js 16", "React 19", "NestJS", "MongoDB", "TypeScript", "Tailwind CSS", "JWT", "Sentry"],
+      "features": [
+        "Σύστημα αυθεντικοποίησης μαθητών",
+        "Admin dashboard με πρόσβαση βάσει ρόλων",
+        "Σύστημα διαχείρισης blog",
+        "Συνδρομή newsletter",
+        "Υλικά Πανελληνίων εξετάσεων",
+        "Παρουσίαση ιστοριών επιτυχίας",
+        "Προφίλ καθηγητών",
+        "Διαχείριση μαθημάτων",
+        "Mobile-responsive design",
+        "Υποστήριξη Dark/Light mode",
+        "Βελτιστοποίηση SEO",
+        "Δυνατότητες PWA"
+      ],
+      "results": [
+        "500+ εγγεγραμμένοι μαθητές",
+        "95% ποσοστό επιτυχίας",
+        "25+ χρόνια εκπαιδευτικού υλικού",
+        "Mobile-first user experience",
+        "Top Google rankings",
+        "Ολοκληρωμένο admin system"
+      ],
+      "challenge": "Δημιουργία μιας ολοκληρωμένης εκπαιδευτικής πλατφόρμας που διαχειρίζεται 25+ χρόνια εκπαιδευτικού υλικού, αυθεντικοποίηση μαθητών, διαχείριση admin, και παρέχει πρόσβαση σε υλικά Πανελληνίων εξετάσεων."
+    },
+    {
+      "name": "Physio Elpida",
+      "category": "Ιστοσελίδα Υγειονομικής Περίθαλψης",
+      "description": "Επαγγελματική ιστοσελίδα WordPress για φυσιοθεραπευτήριο στην Άρτα. Παρουσίαση υπηρεσιών φυσικοθεραπείας, εξοπλισμού, online κρατήσεων και πληροφοριών επικοινωνίας για ασθενείς.",
+      "image": "/images/physioelpida-preview.png",
+      "url": "https://physioelpida.gr",
+      "tags": ["WordPress", "PHP", "2022"],
+      "client": "Physio Elpida Clinic",
+      "duration": "2 εβδομάδες",
+      "team": "1 developer",
+      "technologies": ["WordPress", "PHP", "Custom Theme", "SEO", "Contact Forms"],
+      "features": [
+        "Online σύστημα κρατήσεων ραντεβού",
+        "Gallery παρουσίασης υπηρεσιών",
+        "Showcase εξοπλισμού με περιγραφές",
+        "Interactive φόρμες επικοινωνίας",
+        "Mobile-responsive design",
+        "Greek SEO optimization",
+        "Ενότητα μαρτυριών ασθενών",
+        "Ενσωμάτωση χάρτη τοποθεσίας",
+        "Πληροφορίες επαφής επειγόντων"
+      ],
+      "results": [
+        "Επαγγελματική online παρουσία",
+        "30% αύξηση ερωτήσεων ασθενών",
+        "Mobile-friendly εμπειρία ασθενών",
+        "Top τοπικές αναζητήσεις",
+        "Βελτιστοποιημένο σύστημα κρατήσεων"
+      ],
+      "challenge": "Σύσταση επαγγελματικής online παρουσίας για φυσιοθεραπευτήριο με έμφαση στο local SEO, εύκολη πρόσβαση ασθενών σε πληροφορίες υπηρεσιών και online σύστημα κρατήσεων."
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Discovery Call",
+      "desc": "30 λεπτά για να καταλάβουμε τι χρειάζεστε, τους στόχους σας και το budget."
+    },
+    {
+      "step": "02",
+      "title": "Design & Wireframes",
+      "desc": "Mockups σε Figma πριν γραφτεί μια γραμμή κώδικα. Εγκρίνετε την εμφάνιση πρώτα."
+    },
+    {
+      "step": "03",
+      "title": "Development",
+      "desc": "Clean code, Next.js, TypeScript. Σταδιακές παραδόσεις για review σε κάθε βήμα."
+    },
+    {
+      "step": "04",
+      "title": "Launch & Support",
+      "desc": "Deploy, testing, SEO setup. Εκπαίδευση στη διαχείριση και ongoing support."
+    }
+  ],
+  "tech_stack": [
+    "Next.js 15", "React 19", "TypeScript", "Tailwind CSS",
+    "Node.js", "PostgreSQL", "Prisma", "Stripe",
+    "Vercel", "Framer Motion", "Figma"
+  ],
+  "stats": [
+    { "num": "100%", "label": "Πλήρως Custom Code" },
+    { "num": "3+", "label": "Ζωντανά Projects" },
+    { "num": "24h", "label": "Χρόνος Απόκρισης" }
+  ],
+  "process_title": "Διαδικασία Development",
+  "process_description": "Απλό, διαφανές, αποτελεσματικό — από idea έως launch.",
+  "modal": {
+    "client": "Πελάτης",
+    "duration": "Διάρκεια",
+    "team_size": "Μέγεθος Ομάδας",
+    "technologies_used": "Χρησιμοποιούμενες Τεχνολογίες",
+    "key_features": "Βασικά Χαρακτηριστικά",
+    "results_achieved": "Επιτευχθέντα Αποτελέσματα",
+    "the_challenge": "Η Πρόκληση",
+    "visit_live_website": "Επίσκεψη Live Website",
+    "close": "Κλείσιμο"
+  },
+  "seo": {
+    "title": "Κατασκευή Ιστοσελίδων & Web Apps | Custom Development | adinfinity",
+    "description": "Custom κατασκευή ιστοσελίδων, e-shops και web applications σε React & Next.js. Καμία χρήση templates. Performance-first SEO optimization για Greek market."
+  }
+}

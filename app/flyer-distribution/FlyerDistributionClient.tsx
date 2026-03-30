@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { DistributionType } from "../components/DistributionType"
 import { BenefitCard } from "../components/BenefitCard"
+import { useTranslations } from "@/components/useTranslations"
 import {
   DoorToDoorIcon,
   BusinessDistributionIcon,
@@ -158,11 +159,13 @@ const FlyerDistributionIllustration: React.FC = () => (
 )
 
 export function FlyerDistributionClient() {
+  const { t } = useTranslations()
+  
   const distributionTypes = [
     {
       icon: <DoorToDoorIcon className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]" />,
-      title: "Πόρτα-πόρτα",
-      description: "Διανομή φυλλαδίων σε οικίες & πολυκατοικίες με στοχευμένη κάλυψη συγκεκριμένων περιοχών.",
+      title: t('flyer_distribution_page.services.residential.title') as string,
+      description: t('flyer_distribution_page.services.residential.description') as string,
       items: [
         "Στοχευμένη κάλυψη συγκεκριμένων περιοχών",
         "Ενημέρωση κατοίκων για προσφορές & νέες επιχειρήσεις",
@@ -172,8 +175,8 @@ export function FlyerDistributionClient() {
     },
     {
       icon: <BusinessDistributionIcon className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]" />,
-      title: "Διανομή σε επιχειρήσεις",
-      description: "Παράδοση εντύπων σε επαγγελματικούς χώρους για στοχευμένη προώθηση B2B.",
+      title: t('flyer_distribution_page.services.business.title') as string,
+      description: t('flyer_distribution_page.services.business.description') as string,
       items: [
         "Ενημέρωση επαγγελματιών για προϊόντα & υπηρεσίες",
         "Τοποθέτηση διαφημιστικού υλικού σε σημεία υψηλής επισκεψιμότητας",
@@ -183,8 +186,8 @@ export function FlyerDistributionClient() {
     },
     {
       icon: <TargetedDistributionIcon className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]" />,
-      title: "Στοχευμένη διανομή",
-      description: "Χειροδιανομή σε πολυσύχναστα σημεία με μέγιστη προβολή και απήχηση.",
+      title: t('flyer_distribution_page.services.targeted.title') as string,
+      description: t('flyer_distribution_page.services.targeted.description') as string,
       items: [
         "Τοποθέτηση εντύπων σε stands & σημεία ενδιαφέροντος",
         "Ειδικές προωθητικές καμπάνιες με brand ambassadors",
@@ -194,32 +197,7 @@ export function FlyerDistributionClient() {
     },
   ]
 
-  const benefits = [
-    {
-      icon: <StrategicPlanningIcon className="w-8 h-8 text-[#01FFFF]" />,
-      title: "Στρατηγικός Σχεδιασμός",
-      description:
-        "Αναλύουμε το κοινό-στόχο σας και σχεδιάζουμε τη διανομή για μέγιστη αποτελεσματικότητα και απόδοση της επένδυσής σας.",
-    },
-    {
-      icon: <ReportingIcon className="w-8 h-8 text-[#01FFFF]" />,
-      title: "Αναφορές & Reporting",
-      description:
-        "Παρέχουμε λεπτομερείς αναφορές για την πορεία της καμπάνιας σας, με στοιχεία κάλυψης και αποτελεσματικότητας.",
-    },
-    {
-      icon: <ProfessionalTeamIcon className="w-8 h-8 text-[#01FFFF]" />,
-      title: "Έμπειρη Ομάδα",
-      description:
-        "Η ομάδα διανομέων μας διαθέτει εμπειρία και επαγγελματισμό, εξασφαλίζοντας άψογη εκτέλεση κάθε καμπάνιας.",
-    },
-    {
-      icon: <CombinedServicesIcon className="w-8 h-8 text-[#01FFFF]" />,
-      title: "Ολοκληρωμένες Λύσεις",
-      description:
-        "Συνδυάζουμε τις υπηρεσίες διανομής με εκτύπωση και σχεδιασμό, προσφέροντας ολοκληρωμένες λύσεις προώθησης.",
-    },
-  ]
+  const benefitsData = t('flyer_distribution_page.features') as Array<{title: string, description: string}>
 
   return (
     <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
@@ -271,18 +249,16 @@ export function FlyerDistributionClient() {
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
-              Έντυποδιανομές
+              {t('flyer_distribution_page.title')}
             </h1>
-            <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">Στοχευμένη διανομή εντύπων για μέγιστη προβολή!</h2>
+            <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">{t('flyer_distribution_page.subtitle')}</h2>
             <motion.p
               className="text-lg max-w-3xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Η έντυπη διαφήμιση παραμένει ένας από τους πιο αποτελεσματικούς τρόπους προώθησης, αρκεί να φτάσει στο
-              σωστό κοινό. Η εταιρεία μας αναλαμβάνει τη στρατηγική διανομή φυλλαδίων, καταλόγων και διαφημιστικών
-              εντύπων σε στοχευμένες τοποθεσίες, εξασφαλίζοντας μέγιστη απήχηση και άμεσα αποτελέσματα.
+              {t('flyer_distribution_page.description')}
             </motion.p>
 
             <motion.div
@@ -297,7 +273,7 @@ export function FlyerDistributionClient() {
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Ζητήστε Προσφορά
+                  {t('flyer_distribution_page.get_started')}
                 </motion.button>
               </Link>
             </motion.div>
@@ -305,7 +281,6 @@ export function FlyerDistributionClient() {
         </div>
       </div>
 
-      {/* Rest of the page content remains the same */}
       {/* Distribution Types Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
@@ -314,7 +289,7 @@ export function FlyerDistributionClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Οι Υπηρεσίες μας
+          {t('flyer_distribution_page.our_services')}
         </motion.h2>
 
         <motion.div
@@ -338,7 +313,7 @@ export function FlyerDistributionClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Γιατί να μας επιλέξετε
+            {t('flyer_distribution_page.why_choose_us')}
           </motion.h2>
 
           <motion.div
@@ -347,8 +322,18 @@ export function FlyerDistributionClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {benefits.map((benefit, index) => (
-              <BenefitCard key={index} {...benefit} />
+            {benefitsData.map((benefit, index) => (
+              <BenefitCard 
+                key={index} 
+                icon={[
+                  <StrategicPlanningIcon className="w-8 h-8 text-[#01FFFF]" />,
+                  <ReportingIcon className="w-8 h-8 text-[#01FFFF]" />,
+                  <ProfessionalTeamIcon className="w-8 h-8 text-[#01FFFF]" />,
+                  <CombinedServicesIcon className="w-8 h-8 text-[#01FFFF]" />
+                ][index]}
+                title={benefit.title}
+                description={benefit.description}
+              />
             ))}
           </motion.div>
         </div>
@@ -366,10 +351,9 @@ export function FlyerDistributionClient() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#01A9FF]/10 to-transparent rounded-full blur-3xl"></div>
 
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">Ξεκινήστε την καμπάνια σας σήμερα!</h3>
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">{t('flyer_distribution_page.cta.title')}</h3>
             <p className="text-lg text-center max-w-3xl mx-auto mb-8">
-              Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες σας και να σχεδιάσουμε την ιδανική στρατηγική
-              διανομής για την επιχείρησή σας.
+              {t('flyer_distribution_page.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact#contact-form">
@@ -378,7 +362,7 @@ export function FlyerDistributionClient() {
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Ζητήστε Προσφορά
+                  {t('flyer_distribution_page.request_quote')}
                 </motion.button>
               </Link>
               <Link href="/projects">
@@ -387,7 +371,7 @@ export function FlyerDistributionClient() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Δείτε Περισσότερα Έργα
+                  {t('flyer_distribution_page.see_portfolio')}
                 </motion.button>
               </Link>
             </div>

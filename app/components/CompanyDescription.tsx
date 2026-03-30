@@ -2,29 +2,22 @@
 
 import { motion } from "framer-motion"
 import { Award, Users, Calendar, Lightbulb } from "lucide-react"
+import { useTranslations } from "@/components/useTranslations"
 
 export function CompanyDescription() {
-  const features = [
-    {
-      icon: <Users className="w-6 h-6 text-[#01FFFF]" />,
-      title: "Νέα & Δυναμική Ομάδα",
-      description: "Αποτελούμαστε από νέους επαγγελματίες με φρέσκιες ιδέες και σύγχρονη προσέγγιση.",
-    },
-    {
-      icon: <Calendar className="w-6 h-6 text-[#01FFFF]" />,
-      title: "Από το 2013",
-      description: "Με εμπειρία από το 2013, έχουμε αναπτύξει βαθιά γνώση της τοπικής αγοράς.",
-    },
-    {
-      icon: <Award className="w-6 h-6 text-[#01FFFF]" />,
-      title: "Βραβευμένη Δημιουργικότητα",
-      description: "Η δουλειά μας έχει αναγνωριστεί για την ποιότητα και την αποτελεσματικότητά της.",
-    },
-    {
-      icon: <Lightbulb className="w-6 h-6 text-[#01FFFF]" />,
-      title: "Καινοτόμες Λύσεις",
-      description: "Αναζητούμε συνεχώς νέους τρόπους για να αναδείξουμε την επιχείρησή σας.",
-    },
+  const { t } = useTranslations()
+  
+  const features = (t('about_page.company_description.features') as unknown) as Array<{
+    icon: React.ReactNode
+    title: string
+    description: string
+  }>
+
+  const featureIcons = [
+    <Users className="w-6 h-6 text-[#01FFFF]" />,
+    <Calendar className="w-6 h-6 text-[#01FFFF]" />,
+    <Award className="w-6 h-6 text-[#01FFFF]" />,
+    <Lightbulb className="w-6 h-6 text-[#01FFFF]" />
   ]
 
   return (
@@ -36,7 +29,7 @@ export function CompanyDescription() {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        Περιγραφή Επιχείρησης
+        {t('about_page.company_description.title')}
       </motion.h2>
 
       <motion.div
@@ -47,11 +40,7 @@ export function CompanyDescription() {
         viewport={{ once: true }}
       >
         <p className="text-gray-300 leading-relaxed">
-          Είμαστε μια νεοσύστατη εταιρία η όποια αποτελείται από νέα άτομα και δραστηριοποιείται στον χώρο της
-          διαφήμισης, ψάχνουμε συνεχώς νέους τρόπους και λύσεις για την ανάδειξη της επιχείρησής σας, του γραφείου ή της
-          εταιρίας σας. Η adInfinity είναι ένα διαφημιστικό γραφείο που δραστηριοποιείται στον χώρο της διαφήμισης στην
-          Άρτα και γενικότερα στην Ήπειρο, από τον Οκτώβριο του 2013. Ειδικευόμαστε στην δημιουργία λογότυπων, κάθε
-          είδους μακετών αλλά και τον σχεδιασμό και ανάπτυξη προωθητικών ενεργειών καθώς και σε σύγχρονες εκτυπώσεις.
+          {t('about_page.company_description.description')}
         </p>
       </motion.div>
 
@@ -71,7 +60,7 @@ export function CompanyDescription() {
             }}
           >
             <div className="bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-              {feature.icon}
+              {featureIcons[index]}
             </div>
             <h3 className="text-lg font-bold mb-2 text-white">{feature.title}</h3>
             <p className="text-gray-300 text-sm">{feature.description}</p>

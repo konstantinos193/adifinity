@@ -1,8 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTranslations } from "@/components/useTranslations"
 
 export function AboutHero() {
+  const { t } = useTranslations()
+
   return (
     <div className="relative overflow-hidden mb-20">
       {/* Background elements */}
@@ -23,7 +26,7 @@ export function AboutHero() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-20 relative z-10 pt-20">
         <motion.div
           className="text-center max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +39,7 @@ export function AboutHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Σχετικά με Εμάς
+            {t('about_page.hero_title')}
           </motion.h1>
 
           <motion.p
@@ -45,8 +48,7 @@ export function AboutHero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Από το 2013, βοηθάμε επιχειρήσεις να αναπτύξουν την παρουσία τους με καινοτόμες λύσεις μάρκετινγκ και
-            δημιουργικό σχεδιασμό.
+            {t('about_page.hero_description')}
           </motion.p>
 
           <motion.div

@@ -7,8 +7,11 @@ import Image from "next/image"
 import { Menu, ChevronDown } from "lucide-react"
 import MobileMenu from "./MobileMenu"
 import { useBodyScrollLock } from "@/hooks/useBodyScrollLock"
+import { useTranslations } from "@/components/useTranslations"
+import LanguageSwitcher from "@/components/LanguageSwitcher"
 
 export default function Header() {
+  const { t } = useTranslations()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -24,21 +27,20 @@ export default function Header() {
   }, [])
 
   const menuItems = [
-    { name: "Αρχική", path: "/" },
     {
-      name: "Υπηρεσίες",
+      name: t('navigation.services'),
       path: "/services",
       dropdownItems: [
-        { name: "Εκτυπώσεις", path: "/prints" },
-        { name: "Γραφικές τέχνες", path: "/graphic-design" },
-        { name: "Έντυποδιανομές", path: "/flyer-distribution" },
-        { name: "Ιστοσελίδες", path: "/website-development" },
-        { name: "Έρευνα αγοράς", path: "/market-research" },
+        { name: t('navigation.prints'), path: "/prints" },
+        { name: t('navigation.graphic_design'), path: "/graphic-design" },
+        { name: t('navigation.flyer_distribution'), path: "/flyer-distribution" },
+        { name: t('navigation.website_development'), path: "/website-development" },
+        { name: t('navigation.market_research'), path: "/market-research" },
       ],
     },
-    { name: "Ποιοι Είμαστε", path: "/about" },
-    { name: "Τα Έργα μας", path: "/projects" },
-    // { name: "Τιμές", path: "/pricing" },
+    { name: t('navigation.about'), path: "/about" },
+    { name: t('navigation.projects'), path: "/projects" },
+    { name: t('navigation.accessibility'), path: "/accessibility" },
   ]
 
   return (
@@ -71,7 +73,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:block">
+            <nav id="navigation" role="navigation" aria-label="Main navigation" className="hidden lg:block">
               <ul className="flex space-x-8">
                 {menuItems.map((item, index) => (
                   <li key={index} className="relative group">
@@ -137,16 +139,19 @@ export default function Header() {
               </motion.button>
             </div>
 
-            {/* Contact Button (Desktop) */}
-            <Link href="/contact#contact-form" className="hidden lg:block">
-              <motion.button
-                className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-medium py-2 px-6 rounded-full hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Επικοινωνία
-              </motion.button>
-            </Link>
+            {/* Language Switcher & Contact Button - Desktop Only */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <LanguageSwitcher />
+              <Link href="/contact#contact-form" className="hidden lg:block">
+                <motion.button
+                  className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-medium py-2 px-6 rounded-full hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('navigation.contact')}
+                </motion.button>
+              </Link>
+            </div>
           </div>
         </div>
       </motion.header>

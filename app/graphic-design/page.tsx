@@ -5,42 +5,54 @@ import { Palette, FileImage, Monitor, Layers } from "lucide-react"
 import { CreativeProcess } from "../components/CreativeProcess"
 import Link from "next/link"
 import Image from "next/image"
+import { useTranslations } from "@/components/useTranslations"
 
 
 export default function GraphicDesignPage() {
+  const { t } = useTranslations()
+  
   const services = [
     {
       icon: Palette,
-      title: "Branding & Εταιρική Ταυτότητα",
-      description: "Δημιουργούμε μοναδικές ταυτότητες που ξεχωρίζουν",
+      title: t('graphic_design_page.services.branding.title') as string,
+      description: t('graphic_design_page.services.branding.description') as string,
     },
     {
       icon: FileImage,
-      title: "Διαφημιστικά & Έντυπα Σχέδια",
-      description: "Εντυπωσιακά σχέδια που προσελκύουν το κοινό σας",
+      title: t('graphic_design_page.services.advertising.title') as string,
+      description: t('graphic_design_page.services.advertising.description') as string,
     },
-    { icon: Monitor, title: "Ψηφιακά & Social Media Graphics", description: "Δυναμική παρουσία στον ψηφιακό κόσμο" },
-    { icon: Layers, title: "Εξειδικευμένες Δημιουργίες", description: "Καινοτόμες λύσεις για κάθε ανάγκη" },
+    { 
+      icon: Monitor, 
+      title: t('graphic_design_page.services.digital.title') as string, 
+      description: t('graphic_design_page.services.digital.description') as string
+    },
+    { 
+      icon: Layers, 
+      title: t('graphic_design_page.services.specialized.title') as string, 
+      description: t('graphic_design_page.services.specialized.description') as string
+    },
   ]
 
-  // Update the portfolioItems array with real projects
   const portfolioItems = [
     {
-      title: "Α.Π.Ο.Φ.Α",
-      description: "Ολοκληρωμένη εταιρική ταυτότητα",
-      image: "/images/apofa-branding.png",
+      title: t('graphic_design_page.portfolio_items.0.title') as string,
+      description: t('graphic_design_page.portfolio_items.0.description') as string,
+      image: t('graphic_design_page.portfolio_items.0.image') as string,
     },
     {
-      title: "Bohĕme Beach bar",
-      description: "Branding για παραλιακό bar",
-      image: "/images/boheme-beach-bar.png",
+      title: t('graphic_design_page.portfolio_items.1.title') as string,
+      description: t('graphic_design_page.portfolio_items.1.description') as string,
+      image: t('graphic_design_page.portfolio_items.1.image') as string,
     },
     {
-      title: "Box Bijou",
-      description: "Κομψή ταυτότητα για χειροποίητο κόσμημα",
-      image: "/images/box-bijou.png",
+      title: t('graphic_design_page.portfolio_items.2.title') as string,
+      description: t('graphic_design_page.portfolio_items.2.description') as string,
+      image: t('graphic_design_page.portfolio_items.2.image') as string,
     },
   ]
+
+  const featuresData = (t('graphic_design_page.features') as unknown) as Array<{title: string, description: string}>
 
   return (
     <main className="min-h-screen overflow-hidden bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
@@ -139,18 +151,16 @@ export default function GraphicDesignPage() {
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
-              Γραφικές Τέχνες
+              {t('graphic_design_page.title')}
             </h1>
-            <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">Εντυπωσιακός σχεδιασμός που κάνει τη διαφορά!</h2>
+            <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">{t('graphic_design_page.subtitle')}</h2>
             <motion.p
               className="text-lg max-w-3xl mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Η εικόνα της επιχείρησής σας είναι το πρώτο πράγμα που βλέπει το κοινό σας – ας την κάνουμε αξέχαστη! Με
-              δημιουργικότητα και τεχνογνωσία, σχεδιάζουμε γραφικά που ενισχύουν το brand σας και επικοινωνούν το μήνυμά
-              σας αποτελεσματικά.
+              {t('graphic_design_page.description')}
             </motion.p>
 
             <motion.div
@@ -165,7 +175,7 @@ export default function GraphicDesignPage() {
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Ξεκινήστε Τώρα
+                  {t('graphic_design_page.get_started')}
                 </motion.button>
               </Link>
             </motion.div>
@@ -181,7 +191,7 @@ export default function GraphicDesignPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Οι Υπηρεσίες μας
+          {t('graphic_design_page.our_services')}
         </motion.h2>
 
         <motion.div
@@ -208,7 +218,7 @@ export default function GraphicDesignPage() {
               <p className="text-gray-300">{service.description}</p>
               <div className="mt-4 pt-4 border-t border-cyan-900/30">
                 <Link href="/contact" className="text-[#01FFFF] text-sm flex items-center">
-                  Μάθετε περισσότερα
+                  {t('graphic_design_page.learn_more')}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-4 w-4 ml-1"
@@ -240,7 +250,7 @@ export default function GraphicDesignPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Το Χαρτοφυλάκιό μας
+          {t('graphic_design_page.portfolio_title')}
         </motion.h2>
 
         <motion.p
@@ -249,7 +259,7 @@ export default function GraphicDesignPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Δείτε μερικά από τα πρόσφατα έργα μας και ανακαλύψτε πώς μπορούμε να βοηθήσουμε την επιχείρησή σας
+          {t('graphic_design_page.portfolio_description')}
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -286,7 +296,7 @@ export default function GraphicDesignPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Δείτε όλα τα έργα μας
+              {t('graphic_design_page.see_all_projects')}
             </motion.button>
           </Link>
         </div>
@@ -312,7 +322,7 @@ export default function GraphicDesignPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Γιατί να μας επιλέξετε
+            {t('graphic_design_page.why_choose_us')}
           </motion.h2>
 
           <motion.p
@@ -321,120 +331,37 @@ export default function GraphicDesignPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Συνδυάζουμε τη δημιουργικότητα με την τεχνογνωσία για να προσφέρουμε εξαιρετικά αποτελέσματα
+            {t('graphic_design_page.why_choose_description')}
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              className="bg-[#0A1A24]/80 p-6 rounded-xl border border-cyan-900/30 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.5 }}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(1, 255, 255, 0.1)" }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-[#01FFFF]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-white">Γρήγορη Παράδοση</h3>
-              <p className="text-gray-300 text-sm">
-                Τηρούμε αυστηρά τις προθεσμίες και παραδίδουμε έργα υψηλής ποιότητας σε σύντομο χρονικό διάστημα.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="bg-[#0A1A24]/80 p-6 rounded-xl border border-cyan-900/30 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(1, 255, 255, 0.1)" }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-[#01FFFF]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-white">Μοναδικός Σχεδιασμός</h3>
-              <p className="text-gray-300 text-sm">
-                Δημιουργούμε πρωτότυπα σχέδια που ξεχωρίζουν και αντικατοπτρίζουν την ταυτότητα της επιχείρησής σας.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="bg-[#0A1A24]/80 p-6 rounded-xl border border-cyan-900/30 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(1, 255, 255, 0.1)" }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-[#01FFFF]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-white">Εγγυημένη Ποιότητα</h3>
-              <p className="text-gray-300 text-sm">
-                Προσφέρουμε απεριόριστες αναθεωρήσεις μέχρι να είστε απόλυτα ικανοποιημένοι με το τελικό αποτέλεσμα.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="bg-[#0A1A24]/80 p-6 rounded-xl border border-cyan-900/30 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(1, 255, 255, 0.1)" }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 rounded-full flex items-center justify-center mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-[#01FFFF]"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-white">Προσωπική Υποστήριξη</h3>
-              <p className="text-gray-300 text-sm">
-                Παρέχουμε εξατομικευμένη εξυπηρέτηση και υποστήριξη σε κάθε βήμα της συνεργασίας μας.
-              </p>
-            </motion.div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuresData.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="bg-[#0A1A24]/80 p-6 rounded-xl border border-cyan-900/30 backdrop-blur-sm"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + index * 0.1, duration: 0.5 }}
+                whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(1, 255, 255, 0.1)" }}
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/10 rounded-full flex items-center justify-center mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-[#01FFFF]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    {index === 0 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />}
+                    {index === 1 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4" />}
+                    {index === 2 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
+                    {index === 3 && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />}
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
+                <p className="text-gray-300 text-sm">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
@@ -453,11 +380,10 @@ export default function GraphicDesignPage() {
 
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Απογειώστε το brand σας με δημιουργικότητα & επαγγελματικό design!
+              {t('graphic_design_page.cta.title')}
             </h3>
             <p className="text-lg text-center max-w-3xl mx-auto mb-8">
-              Αναλαμβάνουμε projects κάθε μεγέθους, από startups έως μεγάλες επιχειρήσεις. Ελάτε να δημιουργήσουμε μαζί
-              την ιδανική οπτική ταυτότητα για εσάς!
+              {t('graphic_design_page.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact#contact-form">
@@ -466,7 +392,7 @@ export default function GraphicDesignPage() {
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Ζητήστε Προσφορά
+                  {t('graphic_design_page.request_quote')}
                 </motion.button>
               </Link>
               <Link href="/projects">
@@ -475,7 +401,7 @@ export default function GraphicDesignPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Δείτε το Portfolio
+                  {t('graphic_design_page.see_portfolio')}
                 </motion.button>
               </Link>
             </div>

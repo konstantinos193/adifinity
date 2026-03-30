@@ -1,0 +1,17 @@
+{
+  "title": "Our Services",
+  "services": [
+    {
+      "title": "Marketing Strategy",
+      "description": "We develop customized marketing strategies that connect your business with your audience."
+    },
+    {
+      "title": "Advertising Campaigns",
+      "description": "From idea to implementation, we create advertising campaigns that really deliver."
+    },
+    {
+      "title": "Digital Solutions",
+      "description": "We equip your business with innovative digital tools for the digital future."
+    }
+  ]
+}

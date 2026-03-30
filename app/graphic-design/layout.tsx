@@ -1,63 +1,130 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 
-export const metadata: Metadata = {
-  title: 'Γραφιστική Άρτα | Graphic Design & Branding | adinfinity',
-  description: 'Επαγγελματική γραφιστική και graphic design στην Άρτα. Logo design, branding, εταιρική ταυτότητα, διαφημιστικά σχέδια. Αποτελέσματα που ξεχωρίζουν! +30 2681 303007',
-  keywords: [
-    'γραφιστικη',
-    'γραφιστική',
-    'γραφιστικο γραφειο',
-    'γραφικά γραφεία',
-    'γραφικές τέχνες Άρτα',
-    'graphic design',
-    'graphic designs',
-    'graphic art',
-    'branding Άρτα',
-    'εταιρική ταυτότητα',
-    'logo design',
-    'διαφημιστικός σχεδιασμός',
-    'graphic design Άρτα',
-    'ψηφιακός σχεδιασμός',
-    'digital design',
-    'visual identity',
-    'creative design',
-  ],
-  openGraph: {
-    title: 'Γραφιστική Άρτα | Graphic Design & Branding | adinfinity',
-    description: 'Επαγγελματική γραφιστική και graphic design στην Άρτα. Logo design, branding, εταιρική ταυτότητα. Αποτελέσματα που ξεχωρίζουν!',
-    url: 'https://adinfinity.gr/graphic-design',
-    siteName: 'adinfinity',
-    images: [
-      {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'adinfinity - Γραφικές Τέχνες',
-      },
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('graphic_design_page')
+  
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+    keywords: [
+      // Brand variations
+      'adinfinity',
+      'ad infinity',
+      'adinity',
+      'adinfit',
+      'infiniry',
+      'infinity ad',
+      'adi infinity',
+      
+      // Core graphic design services
+      'γραφικές τέχνες',
+      'γραφιστική',
+      'graphic design',
+      'γραφιστική άρτα',
+      'graphic design artas',
+      'design services',
+      
+      // Specific services
+      'branding',
+      'εταιρική ταυτότητα',
+      'corporate identity',
+      'logo design',
+      'σχεδιασμός λογοτύπων',
+      'διαφημιστικό υλικό',
+      'advertising design',
+      'social media graphics',
+      'digital design',
+      
+      // Design applications
+      'επαγγελματικές κάρτες',
+      'business cards',
+      'flyers',
+      'αφίσες',
+      'posters',
+      'brochures',
+      'κατάλογοι',
+      'catalogs',
+      'παquetaging',
+      'συσκευασία',
+      
+      // Digital design
+      'web design',
+      'ui design',
+      'ux design',
+      'social media design',
+      'digital marketing',
+      'content creation',
+      
+      // Geographic keywords
+      'γραφιστική άρτα',
+      'graphic design artas',
+      'γραφιστική ιωαννίνων',
+      'graphic design ioannina',
+      'γραφιστική ηπείρου',
+      'graphic design epirus',
+      'γραφιστική βόρειου ελλάδας',
+      
+      // Quality indicators
+      'επαγγελματική γραφιστική',
+      'ποιοτικό design',
+      'creative design',
+      'custom design',
+      'original design',
+      'καινοτόμος σχεδιασμός',
+      
+      // Related services
+      'εκτυπώσεις',
+      'printing',
+      'διαφημιστική εταιρεία',
+      'advertising agency',
+      'marketing',
+      'digital marketing',
+      'branding agency'
     ],
-    locale: 'el_GR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Γραφιστική Άρτα | Graphic Design | adinfinity',
-    description: 'Επαγγελματική γραφιστική και graphic design. Logo design, branding, εταιρική ταυτότητα.',
-    images: ['/images/og-image.png'],
-  },
-  alternates: {
-    canonical: 'https://adinfinity.gr/graphic-design',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+    alternates: {
+      canonical: 'https://adinfinity.gr/graphic-design',
+      languages: {
+        'el-GR': 'https://adinfinity.gr/graphic-design',
+        'el': 'https://adinfinity.gr/graphic-design',
+        'en': 'https://adinfinity.gr/graphic-design',
+        'en-US': 'https://adinfinity.gr/graphic-design'
+      },
+    },
+    openGraph: {
+      title: t('seo.title'),
+      description: t('seo.description'),
+      url: 'https://adinfinity.gr/graphic-design',
+      siteName: 'adinfinity',
+      images: [
+        {
+          url: "/images/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: 'Γραφικές Τέχνες adinfinity - Επαγγελματικές Υπηρεσίες Graphic Design',
+        },
+      ],
+      locale: 'el_GR',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('seo.title'),
+      description: t('seo.description'),
+      images: ['/images/og-image.png'],
+    },
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
+  }
 }
 
 export default function GraphicDesignLayout({
@@ -67,15 +134,15 @@ export default function GraphicDesignLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Service */}
+      {/* Structured Data - Professional Service */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Γραφιστική & Graphic Design",
-            "description": "Επαγγελματικές υπηρεσίες γραφιστικής και graphic design στην Άρτα. Logo design, branding, εταιρική ταυτότητα, διαφημιστικά σχέδια.",
+            "@type": "ProfessionalService",
+            "name": "Γραφικές Τέχνες & Graphic Design",
+            "description": "Επαγγελματικές γραφικές τέχνες στην Άρτα. Branding, logo design, εταιρική ταυτότητα, διαφημιστικό υλικό, social media graphics.",
             "provider": {
               "@type": "Organization",
               "name": "adinfinity",
@@ -88,50 +155,108 @@ export default function GraphicDesignLayout({
                 "postalCode": "471 32",
                 "addressCountry": "GR",
               },
+              "sameAs": [
+                "https://www.facebook.com/adinfinity.gr",
+                "https://www.instagram.com/adinfinity.gr"
+              ]
             },
-            "serviceType": ["Graphic Design", "Branding", "Logo Design", "Visual Identity"],
+            "serviceType": ["Graphic Design", "Branding", "Logo Design", "Corporate Identity", "Digital Design", "Social Media Graphics"],
             "areaServed": {
               "@type": "Country",
               "name": "Greece",
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Γραφιστικής",
+              "name": "Υπηρεσίες Graphic Design",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Branding & Εταιρική Ταυτότητα",
-                    "description": "Δημιουργία μοναδικών εταιρικών ταυτοτήτων που ξεχωρίζουν",
+                    "description": "Logo design, εταιρική ταυτότητα, branding, οπτική επικοινωνία",
                   },
+                  "availableAtOrFrom": {
+                    "@type": "Place",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "Άρτα",
+                      "addressCountry": "GR"
+                    }
+                  }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Διαφημιστικά & Έντυπα Σχέδια",
-                    "description": "Εντυπωσιακά σχέδια που προσελκύουν το κοινό",
+                    "name": "Διαφημιστικό & Έντυπο Σχεδιασμό",
+                    "description": "Flyers, αφίσες, brochures, καταλόγοι, διαφημιστικό υλικό",
                   },
+                  "availableAtOrFrom": {
+                    "@type": "Place",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "Άρτα",
+                      "addressCountry": "GR"
+                    }
+                  }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Ψηφιακά & Social Media Graphics",
-                    "description": "Δυναμική παρουσία στον ψηφιακό κόσμο",
+                    "name": "Ψηφιακός Σχεδιασμός & Social Media",
+                    "description": "Social media graphics, digital design, web graphics, content creation",
                   },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Εξειδικευμένες Δημιουργίες",
-                    "description": "Καινοτόμες λύσεις για κάθε ανάγκη",
-                  },
-                },
-              ],
+                  "availableAtOrFrom": {
+                    "@type": "Place",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "Άρτα",
+                      "addressCountry": "GR"
+                    }
+                  }
+                }
+              ]
             },
+            "openingHours": "Mo-Fr 09:00-17:00",
+            "priceRange": "€€"
+          }),
+        }}
+      />
+      {/* Structured Data - Local Business */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "adinfinity - Γραφικές Τέχνες Άρτα",
+            "description": "Επαγγελματικές γραφικές τέχνες και design υπηρεσίες στην Άρτα",
+            "url": "https://adinfinity.gr/graphic-design",
+            "telephone": "+30-2681-303007",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Βασ. Πύρρου 30",
+              "addressLocality": "Άρτα",
+              "postalCode": "471 32",
+              "addressCountry": "GR",
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "39.1262",
+              "longitude": "20.9373"
+            },
+            "openingHours": [
+              "Mo 09:00-17:00",
+              "Tu 09:00-17:00", 
+              "We 09:00-17:00",
+              "Th 09:00-17:00",
+              "Fr 09:00-17:00"
+            ],
+            "priceRange": "€€",
+            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
+            "currenciesAccepted": "EUR"
           }),
         }}
       />

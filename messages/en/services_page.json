@@ -1,0 +1,36 @@
+{
+  "title": "Our Services",
+  "subtitle": "We offer a wide range of marketing and communication services to cover all your business needs. From market research to implementation, we are with you every step of the way.",
+  "services": {
+    "printing": {
+      "title": "Printing",
+      "description": "High-quality printing for every business need, from business cards to large banners."
+    },
+    "graphic_design": {
+      "title": "Graphic Design",
+      "description": "Creative design that makes a difference and enhances your business image."
+    },
+    "flyer_distribution": {
+      "title": "Flyer Distribution",
+      "description": "Targeted print distribution for maximum exposure and reach to your target audience."
+    },
+    "websites": {
+      "title": "Websites",
+      "description": "Design and development of modern, functional websites that stand out in the digital world."
+    },
+    "market_research": {
+      "title": "Market Research",
+      "description": "We analyze your market and audience to help you make strategic, data-driven decisions."
+    }
+  },
+  "cta": {
+    "title": "Don't find what you're looking for?",
+    "description": "Contact us for customized solutions that fit your needs. Our team is ready to design a strategy specifically for you.",
+    "button": "Contact Us"
+  },
+  "learn_more": "Learn More",
+  "seo": {
+    "title": "Services | adinfinity - Advertising Agency Artas",
+    "description": "Full range of advertising services in Artas: Printing, graphic design, websites, digital marketing, flyer distribution, market research. Professional solutions +30 2681 303007"
+  }
+}

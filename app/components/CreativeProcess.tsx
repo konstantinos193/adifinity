@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { Lightbulb, PenTool, Eye, Rocket } from "lucide-react";
-
-const steps = [
-  { icon: Lightbulb, title: "Ιδέα", description: "Συλλέγουμε πληροφορίες και εμπνεόμαστε" },
-  { icon: PenTool, title: "Σχεδιασμός", description: "Δημιουργούμε μοναδικά σχέδια" },
-  { icon: Eye, title: "Αναθεώρηση", description: "Βελτιώνουμε και τελειοποιούμε" },
-  { icon: Rocket, title: "Παράδοση", description: "Παραδίδουμε το τελικό αποτέλεσμα" },
-];
+import { useTranslations } from "@/components/useTranslations";
 
 export function CreativeProcess() {
+  const { t } = useTranslations();
+  
+  const steps = [
+    { icon: Lightbulb, title: t('graphic_design_page.creative_process.idea.title') as string, description: t('graphic_design_page.creative_process.idea.description') as string },
+    { icon: PenTool, title: t('graphic_design_page.creative_process.design.title') as string, description: t('graphic_design_page.creative_process.design.description') as string },
+    { icon: Eye, title: t('graphic_design_page.creative_process.review.title') as string, description: t('graphic_design_page.creative_process.review.description') as string },
+    { icon: Rocket, title: t('graphic_design_page.creative_process.delivery.title') as string, description: t('graphic_design_page.creative_process.delivery.description') as string },
+  ];
   return (
     <div className="mb-16 px-4">
       <motion.h3 
@@ -17,7 +19,7 @@ export function CreativeProcess() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Η Δημιουργική μας Διαδικασία
+        {t('graphic_design_page.creative_process.title')}
       </motion.h3>
 
       <div className="relative">

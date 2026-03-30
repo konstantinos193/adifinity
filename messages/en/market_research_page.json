@@ -1,0 +1,61 @@
+{
+  "title": "Market Research",
+  "subtitle": "Know your audience, conquer the market!",
+  "hero_title": "Market Research",
+  "hero_description": "The right strategy starts with data! Market research is the key to understanding your audience, analyzing competitors, and making strategic decisions that will strengthen your business.",
+  "request_quote": "Request a Quote",
+  "services_title": "Our services include:",
+  "data_visualization_title": "Data Visualization",
+  "data_visualization_subtitle": "Detailed Data & Statistics",
+  "data_visualization_description": "We transform data into understandable charts and reports, helping you make informed decisions for your business.",
+  "data_visualization_features": [
+    "Detailed charts and visualizations",
+    "Analytical reports with insights",
+    "Comparative data analysis"
+  ],
+  "cta_title": "Start your research today!",
+  "cta_description": "Contact us to discuss your needs and design the right research strategy for your business.",
+  "cta_primary_button": "Request a Quote",
+  "cta_secondary_button": "See Our Projects",
+  "services": {
+    "market_analysis": {
+      "title": "Market & Trend Analysis",
+      "description": "We map your market and predict future trends.",
+      "features": [
+        "Research and mapping of your market",
+        "Trend analysis & consumer behavior",
+        "Opportunity prediction & emerging markets"
+      ]
+    },
+    "competitor_research": {
+      "title": "Competitor Research",
+      "description": "We analyze your competitors to find your competitive advantage.",
+      "features": [
+        "Competitor analysis & strategy comparison",
+        "SWOT Analysis for market position assessment",
+        "Differentiation & competitive advantage recommendations"
+      ]
+    },
+    "consumer_research": {
+      "title": "Consumer Research",
+      "description": "We deeply understand the needs and preferences of your audience.",
+      "features": [
+        "Survey research & focus groups for real data",
+        "Analysis of preferences, needs & purchasing behavior"
+      ]
+    },
+    "product_research": {
+      "title": "New Product & Service Research",
+      "description": "We evaluate the success of new ideas before their implementation.",
+      "features": [
+        "Market research before new product development",
+        "Test campaigns & acceptance evaluation",
+        "Demand prediction & potential success"
+      ]
+    }
+  },
+  "seo": {
+    "title": "Market Research & Competitor Analysis | adinfinity",
+    "description": "Professional market research, competitor analysis, consumer research. Data-driven strategic decisions for your business."
+  }
+}

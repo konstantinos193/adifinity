@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { X } from "lucide-react"
+import { useTranslations } from "@/components/useTranslations"
 
 type Project = {
   id: string
@@ -24,6 +25,7 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, onClose }: ProjectModalProps) {
+  const { t } = useTranslations()
   // Close modal when Escape key is pressed
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -199,34 +201,34 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 {/* Project details */}
                 <div className="flex flex-col h-full custom-scrollbar overflow-y-auto pr-2">
                   <div className="mb-4">
-                    <h3 className="text-lg font-bold text-[#01FFFF] mb-2">Περιγραφή</h3>
+                    <h3 className="text-lg font-bold text-[#01FFFF] mb-2">{t('projects_page.description')}</h3>
                     <p className="text-gray-300 text-sm">{project.description}</p>
                   </div>
 
                   {project.challenge && (
                     <div className="mb-4">
-                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">Πρόκληση</h3>
+                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">{t('projects_page.challenge')}</h3>
                       <p className="text-gray-300 text-sm">{project.challenge}</p>
                     </div>
                   )}
 
                   {project.solution && (
                     <div className="mb-4">
-                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">Λύση</h3>
+                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">{t('projects_page.solution')}</h3>
                       <p className="text-gray-300 text-sm">{project.solution}</p>
                     </div>
                   )}
 
                   {project.results && (
                     <div className="mb-4">
-                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">Αποτελέσματα</h3>
+                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">{t('projects_page.results')}</h3>
                       <p className="text-gray-300 text-sm">{project.results}</p>
                     </div>
                   )}
 
                   {project.liveUrl && (
                     <div className="mb-4">
-                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">Ζωντανή Ιστοσελίδα</h3>
+                      <h3 className="text-lg font-bold text-[#01FFFF] mb-2">{t('projects_page.live_website')}</h3>
                       <a 
                         href={project.liveUrl}
                         target="_blank"
@@ -254,7 +256,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                   className="bg-transparent hover:bg-[#01FFFF]/10 border border-[#01FFFF]/30 text-[#01FFFF] font-bold py-1.5 px-5 rounded-full backdrop-blur-sm transition-all text-sm"
                   onClick={onClose}
                 >
-                  Κλείσιμο
+                  {t('projects_page.close')}
                 </button>
               </div>
             </div>

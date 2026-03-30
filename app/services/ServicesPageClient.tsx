@@ -12,43 +12,49 @@ import {
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import SEOContent from "./SEOContent"
-
-const services = [
-  {
-    icon: <PrintingIcon />,
-    title: "Εκτυπώσεις",
-    description:
-      "Υψηλής ποιότητας εκτυπώσεις για κάθε ανάγκη της επιχείρησής σας, από επαγγελματικές κάρτες μέχρι μεγάλα banner.",
-    link: "/prints",
-  },
-  {
-    icon: <GraphicDesignIcon />,
-    title: "Γραφικές τέχνες",
-    description: "Δημιουργικός σχεδιασμός που κάνει τη διαφορά και ενισχύει την εικόνα της επιχείρησής σας.",
-    link: "/graphic-design",
-  },
-  {
-    icon: <FlyerDistributionIcon />,
-    title: "Έντυποδιανομές",
-    description: "Στοχευμένη διανομή εντύπων για μέγιστη προβολή και απήχηση στο κοινό-στόχο σας.",
-    link: "/flyer-distribution",
-  },
-  {
-    icon: <WebsiteIcon />,
-    title: "Ιστοσελίδες",
-    description: "Σχεδιασμός και ανάπτυξη σύγχρονων, λειτουργικών ιστοσελίδων που ξεχωρίζουν στον ψηφιακό κόσμο.",
-    link: "/website-development",
-  },
-  {
-    icon: <MarketResearchIcon />,
-    title: "Έρευνα αγοράς",
-    description: "Αναλύουμε την αγορά και το κοινό σας για να λάβετε στρατηγικές αποφάσεις βασισμένες σε δεδομένα.",
-    link: "/market-research",
-  },
-]
+import { useTranslations } from "../../components/useTranslations"
 
 export function ServicesPageClient() {
+  const { t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
+  
+  const services = [
+    {
+      icon: <PrintingIcon />,
+      title: String(t('services_page.services.printing.title')),
+      description: String(t('services_page.services.printing.description')),
+      link: "/prints",
+      learnMore: String(t('services_page.learn_more')),
+    },
+    {
+      icon: <GraphicDesignIcon />,
+      title: String(t('services_page.services.graphic_design.title')),
+      description: String(t('services_page.services.graphic_design.description')),
+      link: "/graphic-design",
+      learnMore: String(t('services_page.learn_more')),
+    },
+    {
+      icon: <FlyerDistributionIcon />,
+      title: String(t('services_page.services.flyer_distribution.title')),
+      description: String(t('services_page.services.flyer_distribution.description')),
+      link: "/flyer-distribution",
+      learnMore: String(t('services_page.learn_more')),
+    },
+    {
+      icon: <WebsiteIcon />,
+      title: String(t('services_page.services.websites.title')),
+      description: String(t('services_page.services.websites.description')),
+      link: "/website-development",
+      learnMore: String(t('services_page.learn_more')),
+    },
+    {
+      icon: <MarketResearchIcon />,
+      title: String(t('services_page.services.market_research.title')),
+      description: String(t('services_page.services.market_research.description')),
+      link: "/market-research",
+      learnMore: String(t('services_page.learn_more')),
+    },
+  ]
   
   return (
     <main className="services-page min-h-screen pt-32 pb-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24] relative overflow-hidden">
@@ -83,7 +89,7 @@ export function ServicesPageClient() {
             transition={{ duration: shouldReduceMotion ? 0 : 0.3 }}
             style={{ willChange: 'opacity, transform' }}
           >
-            Οι Υπηρεσίες Μας
+            {String(t('services_page.title'))}
           </motion.h1>
 
           <motion.p
@@ -93,8 +99,7 @@ export function ServicesPageClient() {
             transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.05 }}
             style={{ willChange: 'opacity, transform' }}
           >
-            Προσφέρουμε ένα ευρύ φάσμα υπηρεσιών μάρκετινγκ και επικοινωνίας για να καλύψουμε όλες τις ανάγκες της
-            επιχείρησής σας. Από την έρευνα αγοράς μέχρι την υλοποίηση, είμαστε δίπλα σας σε κάθε βήμα.
+            {String(t('services_page.subtitle'))}
           </motion.p>
 
           {/* Decorative element */}
@@ -132,10 +137,9 @@ export function ServicesPageClient() {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#01A9FF]/10 to-transparent rounded-full blur-3xl"></div>
 
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Δεν βρίσκετε αυτό που ψάχνετε;</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">{String(t('services_page.cta.title'))}</h2>
             <p className="text-lg text-center max-w-3xl mx-auto mb-8 text-gray-300">
-              Επικοινωνήστε μαζί μας για εξατομικευμένες λύσεις που ταιριάζουν στις ανάγκες σας. Η ομάδα μας είναι
-              έτοιμη να σχεδιάσει μια στρατηγική ειδικά για εσάς.
+              {String(t('services_page.cta.description'))}
             </p>
             <div className="flex justify-center">
               <Link href="/contact#contact-form">
@@ -145,7 +149,7 @@ export function ServicesPageClient() {
                   whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
                   transition={{ duration: 0.15 }}
                 >
-                  Επικοινωνήστε Μαζί Μας
+                  {String(t('services_page.cta.button'))}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </motion.button>
               </Link>

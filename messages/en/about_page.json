@@ -1,0 +1,132 @@
+{
+  "title": "About Us",
+  "subtitle": "Learn more about our story and team",
+  "hero_title": "About Adinfinity",
+  "hero_description": "We are a creative agency dedicated to helping businesses grow through innovative digital solutions and exceptional design.",
+  "our_team": "Our Team",
+  "team_description": "Meet the talented people behind our success",
+  "our_journey": "Our Journey",
+  "journey_description": "The story of our growth and evolution",
+  "visit_us": "Visit Us",
+  "visit_description": "Come visit our office and meet us in person",
+  "company_description": {
+    "title": "Company Description",
+    "description": "We are a new company consisting of young people operating in the advertising field, constantly looking for new ways and solutions to showcase your business, office or company. AdInfinity is an advertising agency operating in the advertising field in Arta and generally in Epirus, since October 2013. We specialize in creating logos, all kinds of layouts as well as designing and developing promotional activities and modern printing.",
+    "features": [
+      {
+        "title": "Young & Dynamic Team",
+        "description": "We consist of young professionals with fresh ideas and modern approach."
+      },
+      {
+        "title": "Since 2013",
+        "description": "With experience since 2013, we have developed deep knowledge of the local market."
+      },
+      {
+        "title": "Award-Winning Creativity",
+        "description": "Our work has been recognized for its quality and effectiveness."
+      },
+      {
+        "title": "Innovative Solutions",
+        "description": "We constantly seek new ways to showcase your business."
+      }
+    ]
+  },
+  "company_history": {
+    "title": "Our History",
+    "our_beginnings": {
+      "title": "Our Beginnings",
+      "description": "Our company was founded in 2013 with the goal of offering practical and effective marketing solutions. We started with a vision: to help local businesses grow through creative communication and strategic design."
+    },
+    "our_evolution": {
+      "title": "Our Evolution",
+      "description": "Since then, we have evolved into a full advertising agency, adapting to the continuous changes of the digital world and new marketing trends. Our team has grown, our services have expanded, but our goal remains the same: to help businesses communicate effectively with their audience."
+    }
+  },
+  "timeline_events": [
+    {
+      "year": "2013",
+      "event": "Company founded in Arta",
+      "description": "We started our journey with a vision to offer innovative marketing solutions to local businesses."
+    },
+    {
+      "year": "2014",
+      "event": "Expansion of activities throughout Arta",
+      "description": "We expanded our clientele and developed new services to cover more needs."
+    },
+    {
+      "year": "2016",
+      "event": "Launch of digital marketing department",
+      "description": "We adapted to new market trends, offering complete digital solutions."
+    },
+    {
+      "year": "2018",
+      "event": "Award for Best Advertising Campaign in Epirus",
+      "description": "The creativity and effectiveness of our work was recognized with this important distinction."
+    },
+    {
+      "year": "2020",
+      "event": "7th anniversary and creation of product design department",
+      "description": "We celebrated our seventh anniversary by expanding our services into product design."
+    },
+    {
+      "year": "2023",
+      "event": "Collaboration with large companies throughout Greece",
+      "description": "Our reputation exceeded the borders of Epirus, with collaborations extending throughout the country."
+    }
+  ],
+  "office_showcase": {
+    "title": "Our Office",
+    "description": "Our modern office in the center of Arta is designed to inspire creativity and collaboration. It is the place where our ideas come to life and turn into successful campaigns for our clients.",
+    "address": "Vas. Pyrrou 30, Arta 471 32"
+  },
+  "team_members": {
+    "manos": {
+      "name": "Manos Kosmas",
+      "role": "CEO",
+      "bio": "With over 10 years of experience in advertising and marketing, Manos leads our team with vision and creativity."
+    },
+    "kostas": {
+      "name": "Konstantinos Blavakis",
+      "role": "Web Developer",
+      "bio": "Specializing in website and application development, Konstantinos brings our ideas to life with technical excellence and innovation."
+    }
+  },
+  "timeline": {
+    "title": "Our Journey",
+    "events": [
+      {
+        "year": "2015",
+        "title": "Company Founded",
+        "description": "Adinfinity was established with a vision to provide exceptional digital services."
+      },
+      {
+        "year": "2018",
+        "title": "Expansion",
+        "description": "Expanded our services to include web development and digital marketing."
+      },
+      {
+        "year": "2020",
+        "title": "Digital Transformation",
+        "description": "Embraced cutting-edge technologies and expanded our client base."
+      },
+      {
+        "year": "2023",
+        "title": "Innovation Hub",
+        "description": "Became a leading innovation hub for digital solutions in the region."
+      }
+    ]
+  },
+  "office": {
+    "title": "Visit Our Office",
+    "address": "Our office is located in the heart of the city, easily accessible and ready to welcome you.",
+    "contact_info": {
+      "phone": "Call us: +30 2681 303007",
+      "email": "Email: info@adinfinity.gr",
+      "address_line": "Visit us at our office location"
+    }
+  },
+  "seo": {
+    "title": "About Us | Adinfinity Creative Agency",
+    "description": "Learn about Adinfinity, our team, and our journey. Meet our talented professionals and discover our story of growth and innovation."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "accessibility": {
+    "title": "Accessibility Statement",
+    "last_updated": "Last updated: March 2026",
+    "description": "Our commitment to web accessibility and ensuring our website is usable by everyone.",
+    "compliance_status": "Compliance Status",
+    "wcag_compliance": "WCAG 2.1 AA Compliance",
+    "wcag_description": "Our website is designed to comply with the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA, ensuring it is accessible to people with disabilities.",
+    "current_status": "Current Status",
+    "semantic_html": "Semantic HTML structure",
+    "keyboard_navigation": "Keyboard navigation",
+    "aria_labels": "ARIA labels and descriptions",
+    "color_contrast": "Color contrast",
+    "screen_reader": "Screen reader support"
+  }
+}

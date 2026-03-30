@@ -6,6 +6,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useTranslations } from "@/components/useTranslations"
 
 // Custom SVG Icons with consistent styling
 const PrinterIcon = () => (
@@ -182,12 +183,14 @@ const CategoryCard = ({
   icon,
   isActive,
   onClick,
+  moreText,
 }: {
   title: string
   items: string[]
   icon: React.ReactNode
   isActive: boolean
   onClick: () => void
+  moreText: string
 }) => (
   <motion.div
     className={`bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-8 rounded-xl shadow-xl border ${
@@ -214,7 +217,7 @@ const CategoryCard = ({
           {item}
         </li>
       ))}
-      {items.length > 3 && <li className="text-[#01FFFF] text-sm">+ {items.length - 3} ακόμη...</li>}
+      {items.length > 3 && <li className="text-[#01FFFF] text-sm">+ {items.length - 3} {moreText}...</li>}
     </ul>
     {isActive && (
       <motion.div
@@ -223,7 +226,7 @@ const CategoryCard = ({
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <span>Περισσότερα</span>
+        <span>{moreText}</span>
         <ArrowRight className="h-4 w-4 ml-1" />
       </motion.div>
     )}
@@ -251,71 +254,48 @@ const FeatureCard = ({ icon, title, description }: { icon: React.ReactElement; t
 
 export default function PrintsPage() {
   const [activeCategory, setActiveCategory] = useState(0)
+  const { t, locale } = useTranslations()
 
   const categories = [
     {
-      title: "Εκτυπώσεις Μεγάλου Μεγέθους & Προβολής",
-      items: [
-        "Επαγγελματικές κάρτες",
-        "Επιστολόχαρτα & εταιρικοί φάκελοι",
-        "Flyers & διαφημιστικά φυλλάδια",
-        "Κατάλογοι & brochures",
-        "Αφίσες & poster διαφημίσεων",
-        "Roll-up & X-Banners",
-        "Πάνελ παρουσίασης & Standee",
-        "Αυτοκόλλητα βιτρίνας & τοίχου",
-        "Καμβάδες & εκτυπώσεις σε forex ή foam board",
-        "Διαφημιστικά πανό & μουσαμάδες",
-      ],
+      title: t('prints_page.categories.large_format.title') as string,
+      items: (t('prints_page.categories.large_format.items') as string[]) || [],
       icon: <PrinterIcon />,
     },
     {
-      title: "Εξειδικευμένες & Premium Εκτυπώσεις",
-      items: [
-        "Χρυσοτυπία & ασημοτυπία για πολυτελή έντυπα",
-        "Ανάγλυφες εκτυπώσεις (embossing)",
-        "UV Spot & βερνίκια για εντυπωσιακές λεπτομέρειες",
-        "Πλαστικοποιήσεις (γυαλιστερή, ματ, soft-touch)",
-        "Θερμοτυπίες & εκτυπώσεις σε ειδικά χαρτιά",
-        "Γιγαντοεκτυπώσεις",
-        "Χαρακτικό",
-      ],
+      title: t('prints_page.categories.premium.title') as string,
+      items: (t('prints_page.categories.premium.items') as string[]) || [],
       icon: <PremiumIcon />,
     },
     {
-      title: "Συσκευασία & Προωθητικό Υλικό",
-      items: [
-        "Ετικέτες & αυτοκόλλητα προϊόντων",
-        "Διαφημιστικά δώρα (μπλοκ, σημειωματάρια, στυλό κ.ά.)",
-        "Εκτυπώσεις σε υφάσματα & διαφημιστικά ρούχα",
-      ],
+      title: t('prints_page.categories.packaging.title') as string,
+      items: (t('prints_page.categories.packaging.items') as string[]) || [],
       icon: <PackageIcon />,
     },
   ]
 
+  const featuresData = (t('prints_page.features') as unknown) as Array<{title: string, description: string}>
+  
   const features = [
     {
       icon: <HighQualityIcon />,
-      title: "Υψηλή Ποιότητα Εκτύπωσης",
-      description:
-        "Χρησιμοποιούμε σύγχρονες τεχνικές και κορυφαία υλικά για επαγγελματικό αποτέλεσμα με αντοχή στον χρόνο.",
+      title: featuresData[0]?.title || "Υψηλή Ποιότητα Εκτύπωσης",
+      description: featuresData[0]?.description || "Χρησιμοποιούμε σύγχρονες τεχνικές και κορυφαία υλικά για επαγγελματικό αποτέλεσμα με αντοχή στον χρόνο."
     },
     {
       icon: <FastDeliveryIcon />,
-      title: "Γρήγορη & Αξιόπιστη Παράδοση",
-      description: "Διασφαλίζουμε έγκαιρη ολοκλήρωση κάθε έργου, χωρίς συμβιβασμούς στην ποιότητα.",
+      title: featuresData[1]?.title || "Γρήγορη & Αξιόπιστη Παράδοση",
+      description: featuresData[1]?.description || "Διασφαλίζουμε έγκαιρη ολοκλήρωση κάθε έργου, χωρίς συμβιβασμούς στην ποιότητα."
     },
     {
       icon: <CustomSolutionsIcon />,
-      title: "Εξατομικευμένες Λύσεις",
-      description:
-        "Προσαρμόζουμε κάθε εκτύπωση στις ανάγκες της επιχείρησής σας, από μικρές παραγγελίες έως μεγάλες παραγωγές.",
+      title: featuresData[2]?.title || "Εξατομικευμένες Λύσεις",
+      description: featuresData[2]?.description || "Προσαρμόζουμε κάθε εκτύπωση στις ανάγκες της επιχείρησής σας, από μικρές παραγγελίες έως μεγάλες παραγωγές."
     },
     {
       icon: <ExpertiseIcon />,
-      title: "Εξειδίκευση & Εμπειρία",
-      description:
-        "Με πολυετή εμπειρία στον χώρο, γνωρίζουμε πώς να αναδείξουμε την εταιρική σας εικόνα μέσα από εκτυπώσεις που ξεχωρίζουν.",
+      title: featuresData[3]?.title || "Εξειδίκευση & Εμπειρία",
+      description: featuresData[3]?.description || "Με πολυετή εμπειρία στον χώρο, γνωρίζουμε πώς να αναδείξουμε την εταιρική σας εικόνα μέσα από εκτυπώσεις που ξεχωρίζουν."
     },
   ]
 
@@ -450,10 +430,10 @@ export default function PrintsPage() {
             </motion.div>
 
             <h1 className="text-5xl md:text-7xl mb-4 font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#01FFFF] to-[#01A9FF]">
-              Εκτυπώσεις
+              {t('prints_page.title')}
             </h1>
             <h2 className="text-xl md:text-2xl mb-8 text-[#01FFFF]">
-              Επαγγελματικές εκτυπώσεις υψηλής ποιότητας για κάθε ανάγκη!
+              {t('prints_page.subtitle')}
             </h2>
             <motion.p
               className="text-lg max-w-3xl mx-auto"
@@ -461,8 +441,7 @@ export default function PrintsPage() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Η σωστή εκτύπωση κάνει τη διαφορά! Είτε πρόκειται για διαφημιστικό υλικό, εταιρική επικοινωνία ή ειδικές
-              εκτυπώσεις, η εταιρεία μας προσφέρει κορυφαία ποιότητα με σύγχρονες τεχνικές και υλικά.
+              {t('prints_page.description')}
             </motion.p>
 
             <motion.div
@@ -477,7 +456,7 @@ export default function PrintsPage() {
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Ζητήστε Προσφορά
+                  {t('prints_page.request_quote')}
                 </motion.button>
               </Link>
             </motion.div>
@@ -493,7 +472,7 @@ export default function PrintsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Οι Υπηρεσίες μας
+          {t('prints_page.our_services')}
         </motion.h2>
 
         <motion.div
@@ -510,6 +489,7 @@ export default function PrintsPage() {
               icon={category.icon}
               isActive={activeCategory === index}
               onClick={() => setActiveCategory(index)}
+              moreText={t('prints_page.more') as string}
             />
           ))}
         </motion.div>
@@ -537,7 +517,7 @@ export default function PrintsPage() {
               <div>
                 <div className="flex justify-center mb-6 md:hidden">{selectedCategory.icon}</div>
                 <ul className="space-y-3">
-                  {selectedCategory.items.map((item, index) => (
+                  {selectedCategory.items.map((item: string, index: number) => (
                     <motion.li
                       key={index}
                       className="flex items-start"
@@ -673,7 +653,7 @@ export default function PrintsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Γιατί να μας επιλέξετε
+          {t('prints_page.why_choose_us')}
         </motion.h2>
 
         <motion.div
@@ -702,11 +682,10 @@ export default function PrintsPage() {
 
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Έτοιμοι να αναβαθμίσετε το διαφημιστικό σας υλικό;
+              {t('prints_page.cta.title')}
             </h3>
             <p className="text-lg text-center max-w-3xl mx-auto mb-8">
-              Επικοινωνήστε μαζί μας σήμερα για να συζητήσουμε τις ανάγκες σας και να λάβετε μια εξατομικευμένη προσφορά
-              για τις εκτυπώσεις σας.
+              {t('prints_page.cta.description')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact#contact-form">
@@ -715,7 +694,7 @@ export default function PrintsPage() {
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Ζητήστε Προσφορά
+                  {t('prints_page.cta.request_quote')}
                 </motion.button>
               </Link>
               <Link href="/projects">
@@ -724,7 +703,7 @@ export default function PrintsPage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Δείτε Περισσότερα Έργα
+                  {t('prints_page.cta.see_projects')}
                 </motion.button>
               </Link>
             </div>

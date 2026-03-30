@@ -28,7 +28,7 @@ export function ResearchService({ icon: Icon, title, description, features }: Re
       <p className="text-gray-300 mb-6">{description}</p>
 
       <ul className="space-y-2">
-        {features.map((feature, index) => (
+        {features?.map((feature, index) => (
           <li key={index} className="flex items-start text-gray-300">
             <span className="text-[#01FFFF] mr-2">•</span>
             {feature}

@@ -1,0 +1,183 @@
+{
+  "hero_badge": "Continuous Dev · Monitoring · Support",
+  "hero_title": "Maintenance & Retainer",
+  "description": "Continuous Web Maintenance & Support to keep your site at its best. Ensure smooth operation and growth with your business — without searching for a developer every time.",
+  "get_started": "Request a Quote",
+  "why_retainer_title": "Why retainer instead of one-off?",
+  "performance_metrics_title": "Performance Metrics",
+  "whats_included_title": "What's Included",
+  "whats_included_desc": "Every retainer covers these needs.",
+  "plans_title": "Retainer Levels",
+  "plans_desc": "Need custom retainer? Contact us.",
+  "popular": "Popular",
+  "task_examples": "Task Examples",
+  "custom_plan_note": "Need custom retainer? Contact us for tailored proposal.",
+  "addons_title": "Service Add-ons",
+  "addons_desc": "Enhance your retainer with additional services",
+  "cta_badge": "Limited Offer",
+  "cta_title": "Secure 2026 Pricing",
+  "cta_desc": "Lock in your retainer plan before increases. Start with free site analysis.",
+  "cta_subtext": "Book Free Consultation - Limited spots available",
+  "existing_site_note": "Already have a site that needs maintenance?",
+  "existing_site_subnote": "We don't have to have built it. We take over maintenance and evolution of any Next.js site.",
+  "sticky_cta_text": "Interested in maintenance?",
+  "sticky_cta_button": "Request Quote",
+  "included": [
+    {
+      "title": "New Features & Changes",
+      "desc": "Adding new pages, sections, forms or functionalities. As many changes as you need within your retainer budget.",
+      "benefit": "Increase conversions with new features without worrying about technical implementation"
+    },
+    {
+      "title": "Security Updates",
+      "desc": "Dependency updates, vulnerability patching, monitoring for unusual activity. Your site remains secure.",
+      "benefit": "Protect your customer data and maintain their trust"
+    },
+    {
+      "title": "Performance Monitoring",
+      "desc": "Core Web Vitals tracking, uptime monitoring, Lighthouse scores. Alerts if something breaks.",
+      "benefit": "Maximum uptime and fast performance for better user experience and SEO"
+    },
+    {
+      "title": "Dependency Management",
+      "desc": "Next.js, React, packages updates. Compatibility testing after each update.",
+      "benefit": "Stay updated with latest technologies without compatibility issues"
+    },
+    {
+      "title": "Uptime Alerts",
+      "desc": "24/7 monitoring. If site goes down, we get notified immediately and bring it back up.",
+      "benefit": "Immediate response to downtime so you don't lose customers and revenue"
+    },
+    {
+      "title": "Priority Support",
+      "desc": "Direct access to developer. We answer questions and bugs with priority handling.",
+      "benefit": "Fast solutions to your problems without waiting and delays"
+    }
+  ],
+  "plans": [
+    {
+      "name": "Basic",
+      "hours": "2 hours/month",
+      "ideal": "For small websites",
+      "useCase": "Basic maintenance and security updates.",
+      "features": [
+        "2 hours development/month",
+        "Security updates",
+        "Uptime monitoring",
+        "Email support (48h)"
+      ],
+      "task_examples": [
+        "Contact forms",
+        "Text changes",
+        "Security checks",
+        "Basic fixes"
+      ]
+    },
+    {
+      "name": "Growth",
+      "hours": "5 hours/month",
+      "ideal": "For corporate websites",
+      "useCase": "Regular updates and performance monitoring.",
+      "features": [
+        "5 hours development/month",
+        "Security updates",
+        "Performance monitoring",
+        "Priority support (24h)",
+        "Monthly reports"
+      ],
+      "task_examples": [
+        "New pages",
+        "Content updates",
+        "Performance fixes",
+        "UX improvements"
+      ]
+    },
+    {
+      "name": "Pro",
+      "hours": "10 hours/month",
+      "ideal": "For web apps & e-shops",
+      "useCase": "Full support for high traffic.",
+      "features": [
+        "10 hours development/month",
+        "Security updates",
+        "Full monitoring",
+        "Priority support (4h)",
+        "Weekly check-ins"
+      ],
+      "task_examples": [
+        "Custom features",
+        "API integrations",
+        "Advanced UX",
+        "Strategy meetings"
+      ]
+    }
+  ],
+  "why_retainer": [
+    "No need to find a developer every time",
+    "We already know the code — no onboarding time",
+    "Priority over new clients",
+    "Fixed cost — no surprises",
+    "Your site evolves with your business",
+    "Single point of contact for everything"
+  ],
+  "testimonials": [
+    {
+      "name": "Giannis Papadopoulos",
+      "company": "Tech Solutions SA",
+      "content": "Thanks to adinfinity's ongoing maintenance, we have steadily improved our site's performance and never worry about unexpected downtime.",
+      "rating": 5,
+      "results": "99.9% uptime, 40% faster loading time"
+    },
+    {
+      "name": "Eleni Nikolau",
+      "company": "E-Shop Plus",
+      "content": "The retainer saved us from many crises. Immediate support and regular updates kept our e-shop running perfectly during peak periods.",
+      "rating": 5,
+      "results": "25% increase in conversions, zero security issues"
+    },
+    {
+      "name": "Michalis Georgiou",
+      "company": "Startup Hub",
+      "content": "The adinfinity team didn't just do maintenance for us, but helped strategically evolve our platform along with our business growth.",
+      "rating": 5,
+      "results": "3 major features launched, 50% user increase"
+    }
+  ],
+  "addons": [
+    {
+      "name": "Emergency Support",
+      "desc": "Immediate support for critical issues outside business hours",
+      "price": "Available 24/7"
+    },
+    {
+      "name": "Extra Development Hours",
+      "desc": "Additional development hours when you need more than the included ones",
+      "price": "Flexible Addition"
+    },
+    {
+      "name": "SEO Optimization",
+      "desc": "Monthly SEO audit and optimization",
+      "price": "Monthly Optimization"
+    }
+  ],
+  "performance_metrics": [
+    { "label": "Average Uptime", "value": "99.9%" },
+    { "label": "Response Time", "value": "<4 hours" },
+    { "label": "Customer Satisfaction", "value": "4.9/5" },
+    { "label": "Resolved Issues", "value": "500+" }
+  ],
+  "plan_buttons": {
+    "basic": "Schedule Basic Plan",
+    "growth": "Grow with Growth Plan",
+    "pro": "Peak Performance with Pro"
+  },
+  "cta_buttons": {
+    "consultation": "Free Consultation",
+    "proposal": "Custom Proposal",
+    "call": "Call Now"
+  },
+  "seo": {
+    "title": "Web Maintenance & Support | Website Maintenance | Retainer Services | adinfinity",
+    "description": "Professional web maintenance and support services for Greek market. Security updates, performance monitoring, ongoing development. Retainer plans for continuous support."
+  }
+}

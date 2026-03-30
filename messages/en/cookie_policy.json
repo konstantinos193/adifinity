@@ -1,0 +1,151 @@
+{
+  "title": "Cookie Policy",
+  "lastUpdated": "Last updated: March 30, 2026",
+  "description": "This Cookie Policy explains how adinfinity (\"we,\" \"our,\" or \"us\") uses cookies and similar technologies when you visit our website at adinfinity.gr.",
+  
+  "sections": {
+    "whatAreCookies": {
+      "title": "What Are Cookies?",
+      "description": "Cookies are small text files that are stored on your device (computer, tablet, or mobile) when you visit a website. They allow the website to remember your actions and preferences over time, which helps us provide you with a more personalized and efficient browsing experience.",
+      "secondParagraph": "Most web browsers accept cookies automatically, but you can usually modify your browser settings to decline cookies if you prefer. However, doing so may limit your ability to use certain features of our website."
+    },
+    
+    "typesWeUse": {
+      "title": "Types of Cookies We Use",
+      "categories": {
+        "necessary": {
+          "title": "Necessary Cookies",
+          "description": "These cookies are essential for the website to function properly and cannot be disabled in our systems. They are usually only set in response to actions made by you which amount to a request for services.",
+          "examples": "Examples:",
+          "items": [
+            "Authentication and security",
+            "Shopping cart contents",
+            "Language preferences",
+            "Load balancing"
+          ]
+        },
+        "analytics": {
+          "title": "Analytics Cookies",
+          "description": "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us understand which pages are the most and least popular and see how visitors move around the site.",
+          "examples": "Examples:",
+          "items": [
+            "Google Analytics",
+            "Hotjar heatmaps",
+            "Page view tracking",
+            "User behavior analysis"
+          ]
+        },
+        "marketing": {
+          "title": "Marketing Cookies",
+          "description": "These cookies may be set through our site by our advertising partners to build a profile of your interests and show you relevant adverts on other sites.",
+          "examples": "Examples:",
+          "items": [
+            "Google Ads conversion tracking",
+            "Facebook Pixel",
+            "LinkedIn Insight Tag",
+            "Retargeting campaigns"
+          ]
+        }
+      }
+    },
+    
+    "howWeUse": {
+      "title": "How We Use Cookies",
+      "description": "We use cookies for the following purposes:",
+      "items": [
+        "To make our website work as expected",
+        "To remember your preferences and settings",
+        "To understand how our website is being used",
+        "To personalize our content and advertisements",
+        "To improve our services and user experience"
+      ]
+    },
+    
+    "managing": {
+      "title": "Managing Your Cookie Preferences",
+      "description": "You have several options for managing cookies:",
+      "options": [
+        {
+          "title": "Cookie Consent Banner",
+          "description": "Use our cookie consent banner to accept or reject different categories of cookies"
+        },
+        {
+          "title": "Browser Settings",
+          "description": "Configure your browser to block or delete cookies through its settings menu"
+        },
+        {
+          "title": "Third-Party Tools",
+          "description": "Use online tools like Your Online Choices to manage advertising cookies"
+        }
+      ]
+    },
+    
+    "thirdParty": {
+      "title": "Third-Party Cookies",
+      "description": "We use various third-party services that may set their own cookies on your device. These include:",
+      "services": [
+        {
+          "name": "Google Analytics",
+          "description": "Website analytics and performance monitoring"
+        },
+        {
+          "name": "Google Ads",
+          "description": "Advertising campaign tracking and optimization"
+        },
+        {
+          "name": "Meta (Facebook)",
+          "description": "Social media marketing and analytics"
+        },
+        {
+          "name": "LinkedIn",
+          "description": "Professional networking and B2B marketing"
+        }
+      ]
+    },
+    
+    "duration": {
+      "title": "Cookie Duration",
+      "types": [
+        {
+          "name": "Session Cookies",
+          "description": "These are temporary cookies that are erased when you close your browser."
+        },
+        {
+          "name": "Persistent Cookies",
+          "description": "These remain on your device for a set period or until you delete them. Our persistent cookies typically last between 30 days and 2 years."
+        }
+      ]
+    },
+    
+    "gdprRights": {
+      "title": "Your Rights Under GDPR",
+      "description": "Under the General Data Protection Regulation (GDPR), you have the right to:",
+      "rights": [
+        "Access information about cookies we use",
+        "Withdraw consent at any time",
+        "Request deletion of your data",
+        "Object to processing of your data",
+        "Lodge a complaint with supervisory authorities"
+      ]
+    },
+    
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about this Cookie Policy or how we use cookies, please contact us:",
+      "email": "adenfinity@gmail.com",
+      "phone": "+30-2681-303007",
+      "address": "Βασ. Πύρρου 30, Άρτα, 471 32, Greece"
+    },
+    
+    "policyUpdates": {
+      "title": "Changes to This Policy",
+      "description": "We may update this Cookie Policy from time to time to reflect changes in our practices, legal requirements, or for other operational, legal, or regulatory reasons. We will notify you of any changes by posting the new policy on this page and updating the \"Last updated\" date at the top."
+    }
+  },
+  
+  "cta": {
+    "title": "Have Questions About Your Privacy?",
+    "description": "We're committed to protecting your privacy and being transparent about our data practices.",
+    "button": "Contact Our Privacy Team"
+  }
+}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import type React from "react"
+import { useTranslations } from "@/components/useTranslations"
 
 interface DistributionTypeProps {
   icon: React.ReactNode
@@ -12,6 +13,8 @@ interface DistributionTypeProps {
 }
 
 export function DistributionType({ icon, title, description, items }: DistributionTypeProps) {
+  const { t } = useTranslations()
+  
   return (
     <motion.div
       className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-8 rounded-xl shadow-xl border border-cyan-900/30 h-full group"
@@ -45,7 +48,7 @@ export function DistributionType({ icon, title, description, items }: Distributi
       </ul>
       
       <div className="flex items-center text-[#01FFFF] text-sm mt-auto group-hover:translate-x-1 transition-transform">
-        <span>Περισσότερα</span>
+        <span>{t('flyer_distribution_page.learn_more')}</span>
         <ArrowRight className="h-4 w-4 ml-1" />
       </div>
     </motion.div>

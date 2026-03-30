@@ -3,8 +3,10 @@
 import { motion, useReducedMotion } from "framer-motion"
 import { ChevronDownIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import { useTranslations } from "@/components/useTranslations"
 
 export default function HeroSection() {
+  const { t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
 
   return (
@@ -38,7 +40,7 @@ export default function HeroSection() {
               transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0 }}
               style={{ willChange: 'opacity, transform' }}
             >
-              Μετατρέπουμε τις
+              {t('hero.title_parts.part1')}
             </motion.span>{" "}
             <motion.span
               className="text-[#01FFFF]"
@@ -47,7 +49,7 @@ export default function HeroSection() {
               transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.05 }}
               style={{ willChange: 'opacity, transform' }}
             >
-              Ιδέες
+              {t('hero.title_parts.part2')}
             </motion.span>{" "}
             <motion.span
               initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
@@ -55,7 +57,7 @@ export default function HeroSection() {
               transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.1 }}
               style={{ willChange: 'opacity, transform' }}
             >
-              σας σε
+              {t('hero.title_parts.part3')}
             </motion.span>{" "}
             <motion.span
               className="text-[#01FFFF]"
@@ -64,7 +66,7 @@ export default function HeroSection() {
               transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.15 }}
               style={{ willChange: 'opacity, transform' }}
             >
-              Αποτελέσματα
+              {t('hero.title_parts.part4')}
             </motion.span>
             <motion.span
               initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
@@ -83,7 +85,7 @@ export default function HeroSection() {
             transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.25 }}
             style={{ willChange: 'opacity' }}
           >
-            Ως κορυφαία <span className="text-[#01FFFF]">διαφημιστική εταιρεία</span> στην Άρτα, ειδικευμένη σε <span className="text-[#01FFFF]">διαφημιστικά</span>, <span className="text-[#01FFFF]">γραφιστική</span>, <span className="text-[#01FFFF]">εκτυπώσεις</span> και digital marketing, μετατρέπουμε τις ιδέες σας σε επιχειρηματική επιτυχία.
+            {t('hero.description_long')}
           </motion.p>
 
           <motion.div
@@ -99,7 +101,7 @@ export default function HeroSection() {
                 whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
                 whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
               >
-                Δείτε Περισσότερα
+                {t('hero.see_more')}
               </motion.button>
             </Link>
 
@@ -109,7 +111,7 @@ export default function HeroSection() {
                 whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
                 whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
               >
-                Επικοινωνήστε Μαζί Μας
+                {t('hero.contact_us')}
               </motion.button>
             </Link>
           </motion.div>
@@ -123,7 +125,7 @@ export default function HeroSection() {
           transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.35 }}
           style={{ willChange: 'opacity' }}
         >
-          {["Branding", "Web Design", "Graphic Design", "Marketing"].map((service, index) => (
+          {(t('hero.services') as string[]).map((service: string, index: number) => (
             <motion.div
               key={service}
               className="px-4 py-1.5 rounded-full bg-[#0A1A24] border border-[#01FFFF]/20 text-sm transition-transform will-change-transform"
@@ -150,14 +152,14 @@ export default function HeroSection() {
             shouldReduceMotion
               ? {}
               : {
-                  duration: 2,
-                  repeat: Number.POSITIVE_INFINITY,
+                  repeat: Infinity,
                   repeatType: "loop",
+                  duration: 2,
                   ease: "easeInOut",
                 }
           }
         >
-          <ChevronDownIcon className="w-8 h-8 text-[#01FFFF]" />
+          <ChevronDownIcon className="w-6 h-6 text-[#01FFFF]" />
         </motion.div>
       </motion.div>
     </section>

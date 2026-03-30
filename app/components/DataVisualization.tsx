@@ -1,8 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTranslations } from "@/components/useTranslations"
 
 export function DataVisualization() {
+  const { t } = useTranslations()
+  
   return (
     <div className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] rounded-xl p-8 border border-cyan-900/20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -41,24 +44,17 @@ export function DataVisualization() {
 
         {/* Text Content */}
         <div className="space-y-6">
-          <h4 className="text-2xl font-bold text-white">Αναλυτικά Δεδομένα & Στατιστικά</h4>
+          <h4 className="text-2xl font-bold text-white">{t('market_research_page.data_visualization_subtitle')}</h4>
           <p className="text-gray-300">
-            Μετατρέπουμε τα δεδομένα σε κατανοητά γραφήματα και αναφορές, βοηθώντας σας να λάβετε τεκμηριωμένες
-            αποφάσεις για την επιχείρησή σας.
+            {t('market_research_page.data_visualization_description')}
           </p>
           <ul className="space-y-3">
-            <li className="flex items-center text-gray-300">
-              <span className="text-[#01FFFF] mr-2">•</span>
-              Λεπτομερή γραφήματα και οπτικοποιήσεις
-            </li>
-            <li className="flex items-center text-gray-300">
-              <span className="text-[#01FFFF] mr-2">•</span>
-              Αναλυτικές αναφορές με insights
-            </li>
-            <li className="flex items-center text-gray-300">
-              <span className="text-[#01FFFF] mr-2">•</span>
-              Συγκριτική ανάλυση δεδομένων
-            </li>
+            {(t('market_research_page.data_visualization_features') as string[]).map((feature, index) => (
+              <li key={index} className="flex items-center text-gray-300">
+                <span className="text-[#01FFFF] mr-2">•</span>
+                {feature}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

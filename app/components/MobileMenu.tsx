@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, ChevronDown } from "lucide-react"
+import LanguageSwitcher from "@/components/LanguageSwitcher"
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -82,6 +83,18 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
 
               <nav>
                 <ul className="space-y-5">
+                  {/* Language Switcher */}
+                  <motion.li
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 }}
+                    className="pb-4"
+                  >
+                    <div className="flex justify-center">
+                      <LanguageSwitcher />
+                    </div>
+                  </motion.li>
+
                   {menuItems.map((item, index) => (
                     <motion.li
                       key={index}

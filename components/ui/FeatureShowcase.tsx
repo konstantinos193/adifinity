@@ -21,6 +21,12 @@ interface FeatureShowcaseProps {
   features: Feature[]
   ctaText?: string
   showComparison?: boolean
+  locale?: string
+  lessText?: string
+  moreText?: string
+  additionalText?: string
+  deliveryText?: string
+  popularText?: string
 }
 
 export default function FeatureShowcase({ 
@@ -28,7 +34,13 @@ export default function FeatureShowcase({
   subtitle, 
   features, 
   ctaText = "Ζητήστε Προσφορά",
-  showComparison = false 
+  showComparison = false,
+  locale = 'el',
+  lessText = "Λιγότερα",
+  moreText = "Εμφάνιση",
+  additionalText = "Πρόσθετων",
+  deliveryText = "Παράδοση:",
+  popularText = "ΔΗΜΟΦΙΛΕΣ"
 }: FeatureShowcaseProps) {
   const [expandedFeature, setExpandedFeature] = useState<string | null>(null)
 
@@ -68,7 +80,7 @@ export default function FeatureShowcase({
                   <div className="absolute top-4 right-4 z-10">
                     <span className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                       <Star className="w-3 h-3" />
-                      ΔΗΜΟΦΙΛΕΣ
+                      {popularText}
                     </span>
                   </div>
                 )}
@@ -96,7 +108,7 @@ export default function FeatureShowcase({
                   {feature.timeline && (
                     <div className="flex items-center gap-2 mb-4 text-xs text-[#01FFFF]/70">
                       <Zap className="w-3 h-3" />
-                      <span>Παράδοση: {feature.timeline}</span>
+                      <span>{deliveryText} {feature.timeline}</span>
                     </div>
                   )}
 
@@ -114,7 +126,7 @@ export default function FeatureShowcase({
                       onClick={() => setExpandedFeature(isExpanded ? null : feature.title)}
                       className="text-[#01FFFF] text-sm font-semibold hover:text-[#01A9FF] transition-colors mb-4"
                     >
-                      {isExpanded ? 'Λιγότερα' : `Εμφάνιση ${feature.features.length - 3} Πρόσθετων`}
+                      {isExpanded ? lessText : `${moreText} ${feature.features.length - 3} ${additionalText}`}
                     </button>
                   )}
 
@@ -143,12 +155,16 @@ export default function FeatureShowcase({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-white font-bold text-xl mb-4">Σύγκριση Χαρακτηριστικών</h3>
+            <h3 className="text-white font-bold text-xl mb-4">
+              {locale === 'el' ? 'Σύγκριση Χαρακτηριστικών' : 'Features Comparison'}
+            </h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-cyan-900/30">
-                    <th className="text-left text-gray-400 pb-3">Χαρακτηριστικό</th>
+                    <th className="text-left text-gray-400 pb-3">
+                      {locale === 'el' ? 'Χαρακτηριστικό' : 'Feature'}
+                    </th>
                     {features.map(feature => (
                       <th key={feature.title} className="text-center text-gray-400 pb-3">
                         {feature.title}
@@ -157,7 +173,10 @@ export default function FeatureShowcase({
                   </tr>
                 </thead>
                 <tbody>
-                  {['Βασική Υποστήριξη', 'Προσαρμοσμένο Design', 'Αναλυτικά', 'API Πρόσβαση', 'Προτεραιότητα Υποστήριξης'].map((row, i) => (
+                  {(locale === 'el' 
+                    ? ['Βασική Υποστήριξη', 'Προσαρμοσμένο Design', 'Αναλυτικά', 'API Πρόσβαση', 'Προτεραιότητα Υποστήριξης']
+                    : ['Basic Support', 'Custom Design', 'Analytics', 'API Access', 'Priority Support']
+                  ).map((row, i) => (
                     <tr key={row} className="border-b border-cyan-900/20">
                       <td className="text-gray-300 py-3">{row}</td>
                       {features.map((feature, j) => (
