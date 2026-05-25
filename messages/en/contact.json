@@ -1,0 +1,64 @@
+{
+  "title": "Contact",
+  "subtitle": "We're here to help you grow your business. Contact us to discuss your needs.",
+  "hero_title": "Contact",
+  "hero_description": "We're here to help you grow your business. Contact us to discuss your needs.",
+  "send_message": "Send us a message",
+  "contact_info": "Contact Information",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "Email",
+  "working_hours": "Working Hours",
+  "follow_us": "Follow Us",
+  "closed": "Closed",
+  "schedule": {
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday"
+  },
+  "form": {
+    "title": "Send us a message",
+    "name": "Full Name",
+    "name_placeholder": "Your full name",
+    "email": "Email",
+    "email_placeholder": "Your email",
+    "phone": "Phone",
+    "phone_placeholder": "Your phone number",
+    "subject": "Subject",
+    "subject_placeholder": "Select subject",
+    "subject_options": {
+      "general_info": "General Information",
+      "request_quote": "Request Quote",
+      "partnership": "Partnership",
+      "other": "Other"
+    },
+    "message": "Message",
+    "message_placeholder": "How can we help you?",
+    "attachment": "Attach File",
+    "attachment_placeholder": "No file chosen",
+    "attachment_drag": "Drag a file here or click to select",
+    "selected_file": "Selected",
+    "services": "Select Services & Features",
+    "show_pricing": "Show",
+    "hide_pricing": "Hide",
+    "submit": "Send"
+  },
+  "contact_details": {
+    "address_text": "Vas. Pyrrou 30, Arta 471 32",
+    "phone_text": "+30 2681 303007",
+    "email_text": "adenfinity@gmail.com"
+  },
+  "social_links": {
+    "facebook": "https://www.facebook.com/1.adinfinity",
+    "instagram": "https://www.instagram.com/adinfinityads/",
+    "linkedin": "https://www.linkedin.com/in/adinfinity-ads-bb0a398a/?originalSubdomain=gr"
+  },
+  "seo": {
+    "title": "Contact | adinfinity",
+    "description": "Contact us for custom web development, graphic design, and digital marketing services. Find us in Arta or call us today."
+  }
+}

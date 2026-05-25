@@ -1,0 +1,107 @@
+let userConfig = undefined
+try {
+  userConfig = await import('./v0-user-next.config')
+} catch (e) {
+  // ignore error
+}
+
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+  experimental: {
+    webpackBuildWorker: true,
+    parallelServerBuildTraces: true,
+    parallelServerCompiles: true,
+  },
+  async redirects() {
+    if (process.env.NODE_ENV !== 'production') {
+      return []
+    }
+    return [
+      // Force HTTPS
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        permanent: true,
+        destination: 'https://adinfinity.gr/:path*',
+      },
+      // WWW to non-www redirect
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'host',
+            value: 'www.adinfinity.gr',
+          },
+        ],
+        permanent: true,
+        destination: 'https://adinfinity.gr/:path*',
+      },
+      // Block and redirect specific old Joomla URLs with exact patterns
+      {
+        source: '/',
+        has: [
+          {
+            type: 'query',
+            key: 'option',
+            value: 'com_k2',
+          },
+          {
+            type: 'query',
+            key: 'view',
+            value: 'itemlist',
+          },
+          {
+            type: 'query',
+            key: 'task',
+            value: 'user',
+          },
+        ],
+        permanent: true,
+        destination: 'https://adinfinity.gr',
+      },
+    ]
+  },
+}
+
+mergeConfig(nextConfig, userConfig)
+
+function mergeConfig(nextConfig, userConfig) {
+  if (!userConfig) {
+    return
+  }
+
+  for (const key in userConfig) {
+    if (
+      typeof nextConfig[key] === 'object' &&
+      !Array.isArray(nextConfig[key])
+    ) {
+      nextConfig[key] = {
+        ...nextConfig[key],
+        ...userConfig[key],
+      }
+    } else {
+      nextConfig[key] = userConfig[key]
+    }
+  }
+}
+
+export default withNextIntl(nextConfig)

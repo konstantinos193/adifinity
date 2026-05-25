@@ -1,0 +1,95 @@
+{
+  "title": "Flyer Distribution",
+  "subtitle": "Targeted distribution that delivers results!",
+  "description": "Get your message directly to your audience! We provide professional flyer distribution services that ensure your promotional materials reach the right people at the right time.",
+  "get_started": "Get Started",
+  "our_services": "Our Services",
+  "learn_more": "Learn more",
+  "portfolio_title": "Our Portfolio",
+  "portfolio_description": "See some of our successful distribution campaigns and discover how we can help your business grow",
+  "see_all_projects": "See All Projects",
+  "why_choose_us": "Why Choose Us",
+  "why_choose_description": "We combine reliability with efficiency to deliver exceptional distribution results",
+  "cta": {
+    "title": "Reach your audience with professional flyer distribution!",
+    "description": "We handle distribution projects of all sizes, from local campaigns to large-scale operations. Let's get your message out there effectively!"
+  },
+  "request_quote": "Request a Quote",
+  "see_portfolio": "See Portfolio",
+  "services": {
+    "residential": {
+      "title": "Residential Distribution",
+      "description": "Door-to-door delivery to homes and apartments"
+    },
+    "business": {
+      "title": "Business Distribution",
+      "description": "Targeted delivery to commercial establishments"
+    },
+    "targeted": {
+      "title": "Targeted Campaigns",
+      "description": "Strategic distribution based on demographics"
+    },
+    "specialized": {
+      "title": "Specialized Distribution",
+      "description": "Custom solutions for unique needs"
+    }
+  },
+  "features": [
+    {
+      "title": "Fast Delivery",
+      "description": "We complete distribution campaigns quickly and efficiently within agreed timelines."
+    },
+    {
+      "title": "Wide Coverage",
+      "description": "We cover extensive areas ensuring your message reaches maximum audience."
+    },
+    {
+      "title": "Guaranteed Results",
+      "description": "We provide detailed reports and confirmation of successful distribution."
+    },
+    {
+      "title": "Professional Service",
+      "description": "Our trained team ensures professional handling of your promotional materials."
+    }
+  ],
+  "portfolio_items": [
+    {
+      "title": "Local Restaurant Campaign",
+      "description": "Successful menu distribution to 5,000 households",
+      "image": "/images/restaurant-distribution.png"
+    },
+    {
+      "title": "Retail Store Promotion",
+      "description": "Targeted distribution in commercial areas",
+      "image": "/images/retail-distribution.png"
+    },
+    {
+      "title": "Service Provider Campaign",
+      "description": "Strategic distribution to residential complexes",
+      "image": "/images/service-distribution.png"
+    }
+  ],
+  "distribution_process": {
+    "title": "Our Distribution Process",
+    "planning": {
+      "title": "Planning",
+      "description": "We analyze your target audience and plan optimal routes"
+    },
+    "preparation": {
+      "title": "Preparation",
+      "description": "We organize and prepare materials for distribution"
+    },
+    "distribution": {
+      "title": "Distribution",
+      "description": "We execute the distribution campaign professionally"
+    },
+    "reporting": {
+      "title": "Reporting",
+      "description": "We provide detailed reports and feedback"
+    }
+  },
+  "seo": {
+    "title": "Flyer Distribution Artas | adinfinity - Professional Flyer Distribution Services | Targeted Distribution",
+    "description": "Professional flyer distribution in Artas with door-to-door, targeted business distribution, residential campaigns. Reliable & efficient service! +30 2681 303007"
+  }
+}

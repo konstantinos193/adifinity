@@ -1,0 +1,93 @@
+{
+  "title": "Custom Web Applications | SaaS Platforms | Web Apps",
+  "subtitle": "Full-Stack Development — React & Node.js",
+  "hero_badge": "Full-Stack · React · Node.js · PostgreSQL",
+  "hero_title_line1": "Custom",
+  "hero_title_line2": "Web Applications",
+  "description": "Dashboards, booking systems, SaaS platforms, internal tools — if you can imagine it, we build it. Full-stack React & Node.js, 100% custom, zero off-the-shelf limitations.",
+  "get_started": "Request a Quote",
+  "phone": "2681 303007",
+  "what_we_build": "What We Build",
+  "what_we_build_desc": "From simple internal tools to complete SaaS platforms.",
+  "cta_title": "Have an idea for an app?",
+  "cta_description": "Describe what you want to build — even if you're not sure exactly what you need. We'll help you define it.",
+  "book_discovery_call": "Book Discovery Call",
+  "app_types": [
+    {
+      "title": "Admin Dashboards",
+      "description": "Custom back-office tools for business management. Data visualization, reports, user management.",
+      "examples": [
+        "Analytics dashboards",
+        "Inventory management", 
+        "CRM systems"
+      ]
+    },
+    {
+      "title": "Booking Systems",
+      "description": "Online appointment, venue or resource booking. Real-time availability, email notifications, payment integration.",
+      "examples": [
+        "Clinic appointments",
+        "Hotel/room bookings",
+        "Service scheduling"
+      ]
+    },
+    {
+      "title": "SaaS Platforms",
+      "description": "Multi-tenant applications with subscription billing, user roles and custom workflows.",
+      "examples": [
+        "Team collaboration tools",
+        "Client portals",
+        "Subscription services"
+      ]
+    },
+    {
+      "title": "Data Platforms",
+      "description": "Applications for collecting, processing and visualizing data in real time.",
+      "examples": [
+        "Reporting platforms",
+        "Data pipelines",
+        "BI dashboards"
+      ]
+    },
+    {
+      "title": "API & Integrations",
+      "description": "Connecting systems, webhooks, third-party APIs. Automating data flows between tools.",
+      "examples": [
+        "ERP integrations",
+        "Payment APIs",
+        "Automation workflows"
+      ]
+    },
+    {
+      "title": "Custom Tools",
+      "description": "Anything else your business needs that doesn't exist in off-the-shelf software.",
+      "examples": [
+        "Internal tools",
+        "Automation scripts",
+        "Custom workflows"
+      ]
+    }
+  ],
+  "tech_stack": [
+    {
+      "label": "Frontend",
+      "techs": ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"]
+    },
+    {
+      "label": "Backend", 
+      "techs": ["Node.js", "Express", "REST APIs", "WebSockets"]
+    },
+    {
+      "label": "Database",
+      "techs": ["PostgreSQL", "Prisma ORM", "Redis"]
+    },
+    {
+      "label": "Deploy",
+      "techs": ["Vercel", "VPS", "Docker", "CI/CD"]
+    }
+  ],
+  "seo": {
+    "title": "Custom Web Applications | SaaS Platforms | Web Apps | adinfinity",
+    "description": "Custom web applications, SaaS platforms, dashboards in React & Node.js. Full-stack development for modern businesses. Booking systems, admin tools, data platforms."
+  }
+}

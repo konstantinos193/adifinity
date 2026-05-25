@@ -1,0 +1,263 @@
+{
+  "title": "Custom Web Apps & Corporate Websites",
+  "subtitle": "100% Custom Development — No Templates",
+  "hero_badge": "Next.js · React · TypeScript · Tailwind",
+  "hero_title_line1": "Corporate",
+  "hero_title_line2": "Websites",
+  "hero_title_line3": "100% Custom",
+  "description": "Every website starts from a blank page. No themes, no templates, no page builders — only React & Next.js built specifically for modern businesses.",
+  "get_started": "Request a Quote",
+  "see_projects": "See Projects",
+  "every_project_includes": "Every project includes",
+  "custom_web_development": "Custom Web Development",
+  "custom_web_development_desc": "Every type of custom website your modern business needs.",
+  "case_studies_title": "Case Studies & Results",
+  "case_studies_desc": "Real projects — with measurable results for modern businesses.",
+  "greek_industry_solutions": "Industry Solutions",
+  "greek_industry_solutions_desc": "Custom solutions for every industry — with deep understanding of modern business needs.",
+  "technologies": "Technologies",
+  "technologies_list": "Next.js, TypeScript, Tailwind CSS, Vercel hosting",
+  "key_features": "Key Features",
+  "technical_metrics": "Technical Metrics",
+  "premium_features_title": "Premium Features & Add-ons",
+  "request_quote": "Request Quote",
+  "see_project": "See Project",
+  "less": "Less",
+  "more": "More",
+  "technologies_desc": "Next.js, TypeScript, Tailwind CSS, Vercel hosting",
+  "phone": "2681 303007",
+  "what_we_deliver": [
+    {
+      "title": "Corporate Website",
+      "desc": "Complete online presence — about, services, portfolio, blog, contact. Custom design, custom code."
+    },
+    {
+      "title": "Multi-page Platforms",
+      "desc": "Complex websites with dozens of pages, dynamic content and custom routing."
+    },
+    {
+      "title": "Mobile-First Design",
+      "desc": "Every project is designed first for mobile — 70%+ traffic comes from mobile."
+    },
+    {
+      "title": "Custom UI/UX",
+      "desc": "Figma mockups, animation with Framer Motion, unique design that looks like no other."
+    },
+    {
+      "title": "Clean, Maintainable Code",
+      "desc": "TypeScript, component architecture, proper state management. Code that can scale."
+    },
+    {
+      "title": "SEO & Performance",
+      "desc": "Server-side rendering, image optimization, Core Web Vitals. Fast from day one."
+    }
+  ],
+  "portfolio_items": [
+    {
+      "name": "Asterias Koronisia",
+      "category": "Hospitality",
+      "image": "/images/asteriashome-preview.png",
+      "url": "https://asteriashome.gr",
+      "tags": ["Next.js", "TypeScript", "Tailwind"],
+      "metrics": { "performance": "95", "seo": "92", "speed": "1.2s" },
+      "description": "Custom booking system for hotel with real-time availability and online payments."
+    },
+    {
+      "name": "KYKLOS Education",
+      "category": "Education",
+      "image": "/images/kyklosedu-preview.png",
+      "url": "https://kyklosedu.gr",
+      "tags": ["Next.js", "TypeScript", "SEO"],
+      "metrics": { "performance": "98", "seo": "94", "pages": "50+" },
+      "description": "Complete educational platform with course management, student portals and online exams."
+    },
+    {
+      "name": "Physio Elpida",
+      "category": "Healthcare",
+      "image": "/images/physioelpida-preview.png",
+      "url": "https://physioelpida.gr",
+      "tags": ["Next.js", "TypeScript", "Booking"],
+      "metrics": { "performance": "96", "seo": "91", "bookings": "85%" },
+      "description": "Patient portal with appointment booking, telemedicine features and HIPAA compliant security."
+    }
+  ],
+  "included_features": [
+    "Custom design in Figma — approve before code starts",
+    "Development in Next.js & TypeScript",
+    "Responsive for mobile, tablet, desktop",
+    "SEO on-page (titles, meta, schema, sitemap)",
+    "Google Analytics 4 setup",
+    "Contact form with email notifications",
+    "SSL + deploy on Vercel or your hosting",
+    "3 months technical support post-launch"
+  ],
+  "industries": [
+    {
+      "title": "Hospitality",
+      "desc": "Booking systems, room management, tour packages - complete solutions for hotels & rentals.",
+      "features": ["Online Booking", "Room Management", "Tour Packages", "Multi-language"]
+    },
+    {
+      "title": "Education",
+      "desc": "E-learning platforms, course management, student portals - digital transformation for educational institutions.",
+      "features": ["E-learning", "Course Management", "Student Portals", "Online Exams"]
+    },
+    {
+      "title": "Healthcare",
+      "desc": "Patient portals, appointment booking, telemedicine - secure solutions for medical institutions.",
+      "features": ["Patient Portals", "Appointment Booking", "Telemedicine", "HIPAA Compliant"]
+    },
+    {
+      "title": "E-commerce",
+      "desc": "Online shops, payment integration, inventory management - complete e-commerce solutions for every business.",
+      "features": ["Online Shops", "Payment Integration", "Inventory", "Multi-currency"]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does it take to develop a custom website?",
+      "a": "A full custom website typically takes 4-8 weeks, depending on complexity and requirements."
+    },
+    {
+      "q": "What's the difference between custom website and template?",
+      "a": "Custom website is built from scratch for your specific needs, while templates are limited to predefined designs and functionality."
+    },
+    {
+      "q": "Do you provide support after delivery?",
+      "a": "Yes, we provide 3 months free technical support and maintenance after project delivery."
+    },
+    {
+      "q": "Will the website be search engine friendly?",
+      "a": "Absolutely! All our websites are SEO optimized from day one with technical SEO, schema markup and fast loading times."
+    },
+    {
+      "q": "What security measures do you implement?",
+      "a": "We use end-to-end encryption, OAuth authentication, secure APIs, and regular security updates for maximum data protection."
+    },
+    {
+      "q": "Can I integrate third-party services?",
+      "a": "Yes, we integrate payment gateways (Stripe, PayPal), CRM systems, marketing automation tools, and any other service you need."
+    }
+  ],
+  "security_features": [
+    {
+      "title": "End-to-End Encryption",
+      "desc": "All data is encrypted from client to server for maximum security."
+    },
+    {
+      "title": "OAuth & MFA",
+      "desc": "Multi-factor authentication and OAuth integration for secure user access."
+    },
+    {
+      "title": "Secure Database",
+      "desc": "Encrypted databases with regular backups and disaster recovery plans."
+    },
+    {
+      "title": "Cloud Security",
+      "desc": "AWS/Azure security best practices with DDoS protection and 24/7 monitoring."
+    }
+  ],
+  "process_steps": [
+    {
+      "number": "01",
+      "title": "Discovery & Strategy",
+      "desc": "Requirements analysis, competitor research, and technical architecture.",
+      "duration": "1-2 weeks"
+    },
+    {
+      "number": "02",
+      "title": "UX/UI Design",
+      "desc": "Wireframes, mockups in Figma, and user testing before development.",
+      "duration": "1-2 weeks"
+    },
+    {
+      "number": "03",
+      "title": "Development",
+      "desc": "Agile development with regular demos and feedback sessions.",
+      "duration": "2-4 weeks"
+    },
+    {
+      "number": "04",
+      "title": "Testing & Launch",
+      "desc": "QA testing, security audit, deployment and post-launch monitoring.",
+      "duration": "1 week"
+    }
+  ],
+  "integrations": [
+    { "name": "Stripe", "category": "Payments" },
+    { "name": "PayPal", "category": "Payments" },
+    { "name": "Google Analytics", "category": "Analytics" },
+    { "name": "Meta Pixel", "category": "Marketing" },
+    { "name": "SendGrid", "category": "Email" },
+    { "name": "Twilio", "category": "Communications" },
+    { "name": "Zapier", "category": "Automation" },
+    { "name": "Slack", "category": "Productivity" },
+    { "name": "Calendly", "category": "Booking" },
+    { "name": "Mailchimp", "category": "Email" }
+  ],
+  "premium_features": [
+    {
+      "title": "Booking System",
+      "price": "Request Quote",
+      "description": "Real-time booking engine for appointments, reservations, services.",
+      "features": [
+        "Real-time availability calendar",
+        "Calendar synchronization (Google/Outlook)",
+        "Automatic confirmations via email/SMS",
+        "Payment integration with deposits",
+        "Multi-staff scheduling",
+        "Custom booking rules & restrictions"
+      ],
+      "icon": "Calendar",
+      "timeline": "2-3 weeks"
+    },
+    {
+      "title": "Admin Dashboard",
+      "price": "Request Quote",
+      "description": "Custom analytics & management dashboard for business intelligence.",
+      "features": [
+        "Real-time analytics & metrics",
+        "User & role management",
+        "Content management system",
+        "Order/booking management",
+        "Custom reports & exports",
+        "Data visualization charts"
+      ],
+      "icon": "BarChart3",
+      "timeline": "3-4 weeks"
+    },
+    {
+      "title": "Subscription System",
+      "price": "Request Quote",
+      "description": "Recurring revenue platform with multiple tiers & payment processing.",
+      "features": [
+        "Flexible subscription packages",
+        "Automatic billing & retries",
+        "Customer portal & self-service",
+        "Usage-based billing",
+        "Member dashboard & profiles"
+      ],
+      "icon": "CreditCard",
+      "recurring": "Request Quote",
+      "timeline": "4-5 weeks"
+    },
+    {
+      "title": "AI Chatbot",
+      "price": "Request Quote",
+      "description": "Intelligent customer service automation with AI & natural language processing.",
+      "features": [
+        "Natural language conversations",
+        "24/7 automated support",
+        "Lead qualification & categorization",
+        "Multi-language support",
+        "CRM integration"
+      ],
+      "icon": "Zap",
+      "timeline": "6-8 weeks"
+    }
+  ],
+  "seo": {
+    "title": "Custom Web Apps & Corporate Websites | adinfinity — 100% Custom Development",
+    "description": "Custom corporate websites and web applications in React & Next.js. No templates. Mobile-first design, SEO optimization, enterprise security for modern businesses."
+  }
+}

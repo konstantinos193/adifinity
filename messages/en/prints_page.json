@@ -1,0 +1,74 @@
+{
+  "title": "Printing Services",
+  "subtitle": "Professional high-quality printing for every need!",
+  "description": "The right print makes the difference! Whether it's advertising material, corporate communication, or special prints, our company offers top quality with modern techniques and materials.",
+  "request_quote": "Request a Quote",
+  "our_services": "Our Services",
+  "more": "More",
+  "why_choose_us": "Why Choose Us",
+  "categories": {
+    "large_format": {
+      "title": "Large Format & Display Printing",
+      "items": [
+        "Business cards",
+        "Letterheads & corporate folders",
+        "Flyers & advertising leaflets",
+        "Catalogs & brochures",
+        "Posters & advertising posters",
+        "Roll-up & X-Banners",
+        "Presentation panels & Standee",
+        "Window & wall stickers",
+        "Canvas & prints on forex or foam board",
+        "Advertising banners & tarps"
+      ]
+    },
+    "premium": {
+      "title": "Specialized & Premium Printing",
+      "items": [
+        "Gold & silver foil stamping for luxury prints",
+        "Embossing prints",
+        "UV Spot & varnishes for impressive details",
+        "Laminations (glossy, matte, soft-touch)",
+        "Thermography & prints on special papers",
+        "Large format printing",
+        "Engraving"
+      ]
+    },
+    "packaging": {
+      "title": "Packaging & Promotional Materials",
+      "items": [
+        "Product labels & stickers",
+        "Promotional gifts (notebooks, pens, etc.)",
+        "Prints on fabrics & promotional clothing"
+      ]
+    }
+  },
+  "features": [
+    {
+      "title": "High-Quality Printing",
+      "description": "We use modern techniques and top materials for professional results with durability over time."
+    },
+    {
+      "title": "Fast & Reliable Delivery",
+      "description": "We ensure timely completion of every project, without compromising on quality."
+    },
+    {
+      "title": "Customized Solutions",
+      "description": "We adapt every print to your business needs, from small orders to large productions."
+    },
+    {
+      "title": "Expertise & Experience",
+      "description": "With years of experience in the field, we know how to showcase your corporate image through prints that stand out."
+    }
+  ],
+  "cta": {
+    "title": "Ready to upgrade your advertising material?",
+    "description": "Contact us today to discuss your needs and get a customized quote for your printing.",
+    "request_quote": "Request a Quote",
+    "see_projects": "See More Projects"
+  },
+  "seo": {
+    "title": "Printing Artas | adinfinity - Professional Printing Services | Digital Printing",
+    "description": "Professional printing in Artas with digital printing, offset, gold foil, banners, posters, cards, flyers. Quality & fast delivery! +30 2681 303007"
+  }
+}

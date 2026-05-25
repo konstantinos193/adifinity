@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "title": "Digital Services Compliance",
+    "last_updated": "Last updated: March 30, 2026",
+    "description": "At adinfinity, we are committed to complying with the European Digital Services Act (DSA) to ensure a safe, transparent, and responsible online environment for all our users."
+  },
+  "content_moderation": {
+    "title": "Content Moderation Policy",
+    "description": "We are committed to maintaining a safe and appropriate online environment. Our content moderation policy applies to all user-generated content on our website.",
+    "prohibited_content": {
+      "title": "Prohibited Content",
+      "items": [
+        "Illegal content according to Greek or European legislation",
+        "Hate speech, discrimination, or harassment",
+        "Violent, graphic, or sexually explicit content",
+        "Content that violates intellectual property rights",
+        "Spam, scams, or malicious content",
+        "Content that violates privacy or data protection laws"
+      ]
+    },
+    "moderation_process": {
+      "title": "Moderation Process",
+      "items": [
+        "Automated content filtering systems",
+        "Regular manual review of user content",
+        "User reporting mechanisms",
+        "Content removal within 24 hours for illegal content",
+        "Appeal process for content decisions"
+      ]
+    }
+  },
+  "user_reporting": {
+    "title": "User Reporting Mechanisms",
+    "description": "We provide multiple channels for users to report potentially illegal or inappropriate content:",
+    "online_form": {
+      "title": "Online Report Form",
+      "description": "Report content directly through our website",
+      "link": "Report Content"
+    },
+    "email_report": {
+      "title": "Email Report",
+      "description": "Send detailed reports to our compliance team"
+    },
+    "phone_report": {
+      "title": "Phone Report",
+      "description": "Call us during business hours for urgent matters"
+    },
+    "urgent_report": {
+      "title": "Urgent Report",
+      "description": "For immediate security threats"
+    }
+  },
+  "transparency_reports": {
+    "title": "Transparency Reports",
+    "description": "We publish regular transparency reports to provide information about our content moderation activities and DSA compliance efforts.",
+    "q1_2026": {
+      "title": "Q1 2026 Transparency Report",
+      "description": "Content moderation statistics January - March 2026",
+      "stats": {
+        "content_reports": "Content Reports",
+        "removed_items": "Removed Items",
+        "account_suspensions": "Account Suspensions",
+        "response_rate": "Response Rate"
+      }
+    },
+    "annual_report": {
+      "title": "Annual Transparency Report",
+      "description": "Comprehensive annual report covering all DSA compliance measures",
+      "link": "Download 2025 Report"
+    }
+  },
+  "contact": {
+    "title": "DSA Compliance Contact",
+    "description": "For DSA compliance matters, content reports, or regulatory inquiries:",
+    "compliance_email": "Compliance Email",
+    "content_reports": "Content Reports",
+    "urgent_reports": "Urgent Reports",
+    "dsa_officer": "DSA Officer",
+    "address": "Address"
+  },
+  "cta": {
+    "title": "Need to Report Content?",
+    "description": "We take all reports seriously and respond promptly to ensure a safe online environment.",
+    "button": "Report Content Now"
+  }
+}

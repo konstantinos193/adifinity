@@ -1,0 +1,93 @@
+{
+  "title": "Custom Web Applications | SaaS Platforms | Web Εφαρμογές",
+  "subtitle": "Full-Stack Development — React & Node.js",
+  "hero_badge": "Full-Stack · React · Node.js · PostgreSQL",
+  "hero_title_line1": "Custom",
+  "hero_title_line2": "Web Applications",
+  "description": "Dashboards, συστήματα κρατήσεων, SaaS πλατφόρμες, εσωτερικά εργαλεία — ό,τι μπορείτε να φανταστείτε, το φτιάχνουμε. Full-stack React & Node.js, 100% προσαρμοσμένο, χωρίς περιορισμούς έτοιμων λύσεων για την ελληνική αγορά.",
+  "get_started": "Ζητήστε Προσφορά",
+  "phone": "2681 303007",
+  "what_we_build": "Τι φτιάχνουμε",
+  "what_we_build_desc": "Από απλά εσωτερικά εργαλεία μέχρι ολοκληρωμένες SaaS πλατφόρμες.",
+  "cta_title": "Έχετε ιδέα για εφαρμογή;",
+  "cta_description": "Περιγράψτε μας τι θέλετε να φτιάξουμε — ακόμα κι αν δεν ξέρετε ακριβώς τι χρειάζεστε. Θα σας βοηθήσουμε να το ορίσουμε.",
+  "book_discovery_call": "Κλείστε Discovery Call",
+  "app_types": [
+    {
+      "title": "Πίνακες Διαχείρισης",
+      "description": "Προσαρμοσμένα εργαλεία back-office για τη διαχείριση της επιχείρησής σας. Οπτικοποίηση δεδομένων, αναφορές, διαχείριση χρηστών.",
+      "examples": [
+        "Πίνακες αναλυτικών",
+        "Διαχείριση αποθέματος",
+        "Συστήματα CRM"
+      ]
+    },
+    {
+      "title": "Συστήματα Κρατήσεων",
+      "description": "Online κρατήσεις ραντεβού, χώρων ή πόρων. Διαθεσιμότητα σε πραγματικό χρόνο, ειδοποιήσεις email, ενσωμάτωση πληρωμών.",
+      "examples": [
+        "Ραντεβού ιατρείου",
+        "Κρατήσεις ξενοδοχείου/δωματίου",
+        "Προγραμματισμός υπηρεσιών"
+      ]
+    },
+    {
+      "title": "SaaS Πλατφόρμες",
+      "description": "Εφαρμογές για πολλούς χρήστες με συνδρομητικές χρεώσεις, ρόλους χρηστών και προσαρμοσμένες ροές εργασίας.",
+      "examples": [
+        "Εργαλεία ομαδικής συνεργασίας",
+        "Πύλες πελατών",
+        "Υπηρεσίες συνδρομητικού χαρακτήρα"
+      ]
+    },
+    {
+      "title": "Πλατφόρμες Δεδομένων",
+      "description": "Εφαρμογές για συλλογή, επεξεργασία και οπτικοποίηση δεδομένων σε πραγματικό χρόνο.",
+      "examples": [
+        "Πλατφόρμες αναφορών",
+        "Ροές δεδομένων",
+        "BI πίνακες"
+      ]
+    },
+    {
+      "title": "API & Ενσωματώσεις",
+      "description": "Σύνδεση συστημάτων, webhooks, APIs τρίτων. Αυτοματοποίηση ροών δεδομένων μεταξύ εργαλείων.",
+      "examples": [
+        "Ενσωματώσεις ERP",
+        "APIs πληρωμών",
+        "Αυτοματοποιημένες ροές εργασίας"
+      ]
+    },
+    {
+      "title": "Προσαρμοσμένα Εργαλεία",
+      "description": "Ο,τιδήποτε άλλο χρειάζεται η επιχείρησή σας και δεν υπάρχει σε έτοιμο λογισμικό.",
+      "examples": [
+        "Εσωτερικά εργαλεία",
+        "Scripts αυτοματοποίησης",
+        "Προσαρμοσμένες ροές εργασίας"
+      ]
+    }
+  ],
+  "tech_stack": [
+    {
+      "label": "Frontend",
+      "techs": ["React 19", "Next.js 15", "TypeScript", "Tailwind CSS", "Framer Motion"]
+    },
+    {
+      "label": "Backend",
+      "techs": ["Node.js", "Express", "REST APIs", "WebSockets"]
+    },
+    {
+      "label": "Database",
+      "techs": ["PostgreSQL", "Prisma ORM", "Redis"]
+    },
+    {
+      "label": "Deploy",
+      "techs": ["Vercel", "VPS", "Docker", "CI/CD"]
+    }
+  ],
+  "seo": {
+    "title": "Custom Web Applications | SaaS Platforms | Web Εφαρμογές | adinfinity",
+    "description": "Custom web applications, SaaS πλατφόρμες, πίνακες ελέγχου σε React & Node.js. Full-stack development για ελληνική αγορά. Συστήματα κρατήσεων, εργαλεία διαχείρισης, πλατφόρμες δεδομένων."
+  }
+}

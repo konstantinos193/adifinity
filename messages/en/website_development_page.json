@@ -1,0 +1,213 @@
+{
+  "title": "Website Development",
+  "subtitle": "Custom Web Apps that Deliver Results!",
+  "hero_badge": "100% Custom · No Templates · React Development",
+  "hero_title": "Website Development that Delivers",
+  "description": "Custom web apps, e-shops and platforms built exclusively in React & Next.js. No WordPress, Wix or templates — only clean, scalable code for modern businesses.",
+  "get_started": "Request a Quote",
+  "our_services": "Web Development Services",
+  "services_description": "From landing pages to full web applications — always custom, always React for modern businesses.",
+  "portfolio_title": "Portfolio Projects",
+  "portfolio_description": "Real projects, real results — all custom-built for modern businesses.",
+  "see_all_projects": "See All Projects",
+  "why_choose_us": "Why Choose Us",
+  "why_choose_description": "We combine cutting-edge technology with business needs to deliver exceptional results",
+  "cta": {
+    "title": "Have a project in mind?",
+    "description": "Send us a brief description and we'll respond within 24 hours with an indicative price and timeline."
+  },
+  "request_quote": "Request Free Quote",
+  "see_portfolio": "See Projects",
+  "services": {
+    "custom_web_apps": {
+      "title": "Custom Web Apps",
+      "description": "Fully custom React/Next.js applications. No templates or page builders — only clean code.",
+      "tags": ["Next.js", "React", "TypeScript"]
+    },
+    "e-commerce": {
+      "title": "E-commerce",
+      "description": "Custom online stores with Stripe, order management and inventory. Built from scratch.",
+      "tags": ["Next.js", "Stripe", "PostgreSQL"]
+    },
+    "landing_pages": {
+      "title": "Landing Pages",
+      "description": "High-converting pages for campaigns and ads. Fast, SEO-ready, mobile-first.",
+      "tags": ["Next.js", "Tailwind", "Framer Motion"]
+    },
+    "web_applications": {
+      "title": "Web Applications",
+      "description": "SaaS tools, dashboards, booking systems, portals. Whatever your business needs.",
+      "tags": ["React", "Node.js", "PostgreSQL"]
+    },
+    "technical_seo": {
+      "title": "Technical SEO",
+      "description": "Core Web Vitals, schema markup, speed optimization. The technical foundation for top Google rankings.",
+      "tags": ["Lighthouse", "Schema.org", "GSC"]
+    },
+    "maintenance": {
+      "title": "Maintenance & Updates",
+      "description": "Ongoing development retainer. New features, performance monitoring, security updates.",
+      "tags": ["CI/CD", "Vercel", "Monitoring"]
+    }
+  },
+  "features": [
+    {
+      "title": "Zero templates",
+      "description": "Every project starts from a blank page. No theme reuse or page builders."
+    },
+    {
+      "title": "Performance-first",
+      "description": "Next.js, server components, edge caching. Sites that load in < 1 second."
+    },
+    {
+      "title": "Direct developer access",
+      "description": "Talk directly to the developer — no account managers or intermediaries."
+    }
+  ],
+  "portfolio_items": [
+    {
+      "name": "Asterias Koronisia",
+      "category": "Hospitality Website",
+      "description": "Complete booking system with Next.js 16, React 19 and custom NestJS backend. Real-time bookings, Stripe payments, multilingual support, admin dashboard and comprehensive booking management.",
+      "image": "/images/asteriashome-preview.png",
+      "url": "https://asteriashome.gr",
+      "tags": ["Next.js", "TypeScript", "Full-Stack System"],
+      "client": "Asterias Homes",
+      "duration": "3 months",
+      "team": "2 developers",
+      "technologies": ["Next.js 16", "React 19", "NestJS", "MongoDB", "Stripe", "TypeScript"],
+      "features": [
+        "Real-time booking system",
+        "Multi-language support (EL, EN, DE)",
+        "Payment processing with Stripe",
+        "Admin dashboard",
+        "Mobile-responsive design",
+        "SEO optimization",
+        "Image gallery with lightbox",
+        "Email notifications"
+      ],
+      "results": [
+        "95% page speed score",
+        "40% increase in bookings",
+        "Top 3 Google rankings",
+        "Mobile-first user experience"
+      ],
+      "challenge": "Build a complete hospitality management system from scratch with real-time availability and secure payment processing."
+    },
+    {
+      "name": "KYKLOS Education",
+      "category": "Educational Platform",
+      "description": "Complete educational system with Next.js 16, React 19 and custom NestJS backend. Student management, authentication, blog system, newsletter, and 25+ years of educational content.",
+      "image": "/images/kyklosedu-preview.png",
+      "url": "https://kyklosedu.gr",
+      "tags": ["Next.js", "TypeScript", "Full-Stack Platform"],
+      "client": "KYKLOS Educational Center",
+      "duration": "6 weeks",
+      "team": "2 developers",
+      "technologies": ["Next.js 16", "React 19", "NestJS", "MongoDB", "TypeScript", "Tailwind CSS", "JWT", "Sentry"],
+      "features": [
+        "Student authentication system",
+        "Admin dashboard with role-based access",
+        "Blog management system",
+        "Newsletter subscription",
+        "Pan-Hellenic exam materials",
+        "Success stories showcase",
+        "Teacher profiles",
+        "Course management",
+        "Mobile-responsive design",
+        "Dark/Light mode support",
+        "SEO optimization",
+        "PWA capabilities"
+      ],
+      "results": [
+        "500+ enrolled students",
+        "95% success rate",
+        "25+ years educational content",
+        "Mobile-first user experience",
+        "Top Google rankings",
+        "Comprehensive admin system"
+      ],
+      "challenge": "Create a complete educational platform that manages 25+ years of educational content, student authentication, admin management, and provides access to Pan-Hellenic exam materials."
+    },
+    {
+      "name": "Physio Elpida",
+      "category": "Healthcare Website",
+      "description": "Professional WordPress website for physiotherapy clinic in Arta. Services presentation, equipment showcase, online appointment booking and patient contact information.",
+      "image": "/images/physioelpida-preview.png",
+      "url": "https://physioelpida.gr",
+      "tags": ["WordPress", "PHP", "2022"],
+      "client": "Physio Elpida Clinic",
+      "duration": "2 weeks",
+      "team": "1 developer",
+      "technologies": ["WordPress", "PHP", "Custom Theme", "SEO", "Contact Forms"],
+      "features": [
+        "Online appointment booking system",
+        "Services presentation gallery",
+        "Equipment showcase with descriptions",
+        "Interactive contact forms",
+        "Mobile-responsive design",
+        "Greek SEO optimization",
+        "Patient testimonials section",
+        "Location map integration",
+        "Emergency contact information"
+      ],
+      "results": [
+        "Professional online presence",
+        "30% increase in patient inquiries",
+        "Mobile-friendly patient experience",
+        "Top local search rankings",
+        "Streamlined appointment booking"
+      ],
+      "challenge": "Establish a professional online presence for a physiotherapy clinic with focus on local SEO, easy patient access to service information and online appointment booking system."
+    }
+  ],
+  "process": [
+    {
+      "step": "01",
+      "title": "Discovery Call",
+      "desc": "30 minutes to understand what you need, your goals and budget."
+    },
+    {
+      "step": "02",
+      "title": "Design & Wireframes",
+      "desc": "Mockups in Figma before a single line of code is written. Approve the look first."
+    },
+    {
+      "step": "03",
+      "title": "Development",
+      "desc": "Clean code, Next.js, TypeScript. Incremental deliveries for review at every step."
+    },
+    {
+      "step": "04",
+      "title": "Launch & Support",
+      "desc": "Deploy, testing, SEO setup. Training in management and ongoing support."
+    }
+  ],
+  "process_title": "Development Process",
+  "process_description": "Simple, transparent, effective — from idea to launch.",
+  "tech_stack": [
+    "Next.js 15", "React 19", "TypeScript", "Tailwind CSS",
+    "Node.js", "PostgreSQL", "Prisma", "Stripe",
+    "Vercel", "Framer Motion", "Figma"
+  ],
+  "stats": [
+    { "num": "100%", "label": "Custom Code" },
+    { "num": "3+", "label": "Live Projects" },
+    { "num": "24h", "label": "Response Time" }
+  ],
+  "modal": {
+    "client": "Client",
+    "duration": "Duration",
+    "team_size": "Team Size",
+    "technologies_used": "Technologies Used",
+    "key_features": "Key Features",
+    "results_achieved": "Results Achieved",
+    "the_challenge": "The Challenge",
+    "visit_live_website": "Visit Live Website",
+    "close": "Close"
+  },
+  "seo": {
+    "title": "Website Development & Web Apps | Custom Development | adinfinity",
+    "description": "Custom website development, e-shops and web applications in React & Next.js. No templates. Performance-first SEO optimization for modern businesses."
+  }
+}

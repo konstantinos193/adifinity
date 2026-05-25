@@ -1,0 +1,154 @@
+{
+  "title": "Technical SEO Services | Core Web Vitals | Technical SEO | adfinity",
+  "description": "Technical SEO optimization for modern businesses. Core Web Vitals, schema markup, Lighthouse audit. Code-level fixes without plugins. Google rankings optimization.",
+  "keywords": "technical SEO, core web vitals, schema markup, SEO optimization, SEO services, Lighthouse audit, Google Search Console, crawling optimization, SEO audit, react development, nextjs, adfinity, adinity, Google ranking, SEO analysis, page speed optimization, structured data, search engine optimization",
+  "hero_badge": "Core Web Vitals · Schema · Speed · Rankings",
+  "hero_title": "Technical SEO Optimization",
+  "hero_description": "The technical foundation for top Google rankings. <span className=\"text-[#01FFFF] font-semibold\">Core Web Vitals, schema markup, speed optimization</span> — fixes directly in code, not plugins.",
+  "request_audit": "Request SEO Audit",
+  "phone_number": "2681 303007",
+  "unique_approach_title": "Unique Approach",
+  "unique_approach_desc": "Instead of plugins, we fix code directly for long-term results.",
+  "lighthouse_target": "Lighthouse Score Target",
+  "performance": "Performance",
+  "accessibility": "Accessibility",
+  "best_practices": "Best Practices", 
+  "seo_score": "SEO",
+  "performance_tooltip": "Load time < 2s",
+  "accessibility_tooltip": "WCAG 2.1 AA",
+  "best_practices_tooltip": "Modern web standards",
+  "seo_tooltip": "Perfect optimization",
+  "avg_improvement": "Average improvement:",
+  "time_to_results": "Time to results:",
+  "improvement_value": "+40 positions",
+  "results_time": "2-4 weeks",
+  "scores_explanation": "What these scores mean:",
+  "performance_desc": "Performance: Fast load times (&lt; 2s)",
+  "accessibility_desc": "Accessibility: Full accessibility for everyone",
+  "best_practices_desc": "Best Practices: Modern, secure code",
+  "seo_desc": "SEO: Perfect optimization for Google",
+  "what_we_optimize": "What We Optimize",
+  "optimize_desc": "Every technical issue affecting your rankings.",
+  "audits": {
+    "core_web_vitals": {
+      "title": "Core Web Vitals",
+      "desc": "LCP, FID, CLS — the metrics Google measures for ranking. Optimizations for sub-2s load."
+    },
+    "schema_markup": {
+      "title": "Schema Markup",
+      "desc": "Structured data (JSON-LD) for rich results in Google — ratings, FAQs, breadcrumbs."
+    },
+    "crawlability": {
+      "title": "Crawlability",
+      "desc": "Sitemap, robots.txt, canonical tags, internal linking. Google sees exactly what you want."
+    },
+    "lighthouse_audit": {
+      "title": "Lighthouse Audit",
+      "desc": "Performance, Accessibility, Best Practices, SEO score. We target 90+ in all categories."
+    },
+    "on_page_seo": {
+      "title": "On-page SEO",
+      "desc": "Titles, meta descriptions, H1-H6 hierarchy, keyword optimization, image alt texts."
+    },
+    "technical_fixes": {
+      "title": "Technical Fixes",
+      "desc": "Broken links, redirect chains, duplicate content, mobile usability issues — all fixed."
+    }
+  },
+  "how_we_work": "How We Work",
+  "process": {
+    "audit": {
+      "title": "Audit",
+      "desc": "Complete technical audit with Lighthouse, Google Search Console and Screaming Frog."
+    },
+    "analysis": {
+      "title": "Analysis",
+      "desc": "Identify critical issues that most affect your rankings."
+    },
+    "implementation": {
+      "title": "Implementation",
+      "desc": "Fixes directly in code — no plugins, no workarounds."
+    },
+    "monitoring": {
+      "title": "Monitoring",
+      "desc": "Monitor results in Google Search Console for 30 days post-implementation."
+    }
+  },
+  "what_to_expect": "What to Expect",
+  "expect_desc": "Measurable results we deliver on every project.",
+  "expected_results": {
+    "positions": {
+      "title": "+40 Positions",
+      "desc": "Average position improvement after technical SEO fixes"
+    },
+    "load_time": {
+      "title": "-60% Load Time",
+      "desc": "Faster load times for better user experience"
+    },
+    "traffic": {
+      "title": "+200% Traffic",
+      "desc": "Increase organic traffic through better rankings"
+    },
+    "compliance": {
+      "title": "100% Compliance",
+      "desc": "Full compliance with Google guidelines and best practices"
+    }
+  },
+  "tools_we_use": "Tools We Use",
+  "tools_desc": "The most modern SEO tools for data-backed results.",
+  "tools": {
+    "lighthouse": {
+      "name": "Lighthouse",
+      "category": "Performance Testing",
+      "description": "Core Web Vitals and performance metrics"
+    },
+    "gsc": {
+      "name": "Google Search Console",
+      "category": "Monitoring",
+      "description": "Rankings and indexing data"
+    },
+    "screaming_frog": {
+      "name": "Screaming Frog",
+      "category": "Crawling",
+      "description": "Comprehensive site audit"
+    },
+    "pagespeed": {
+      "name": "PageSpeed Insights",
+      "category": "Speed Analysis",
+      "description": "Mobile and desktop performance"
+    },
+    "gtmetrix": {
+      "name": "GTmetrix",
+      "category": "Performance",
+      "description": "Detailed speed optimization"
+    },
+    "schema_validator": {
+      "name": "Schema.org Validator",
+      "category": "Schema",
+      "description": "Structured data validation"
+    }
+  },
+  "faq_title": "Frequently Asked Questions",
+  "faq_desc": "Everything you need to know about technical SEO.",
+  "faqs": {
+    "duration": {
+      "q": "How long does a technical SEO audit take?",
+      "a": "A complete technical audit typically takes 2-3 business days. Fixes may take 1-2 weeks depending on complexity."
+    },
+    "difference": {
+      "q": "How is this different from other SEO services?",
+      "a": "We fix problems directly in code, not with plugins. This ensures long-term results without dependencies on third-party tools."
+    },
+    "results": {
+      "q": "Will I see immediate results?",
+      "a": "Technical improvements typically show in 2-4 weeks. Some clients saw improvement within 10 days."
+    },
+    "support": {
+      "q": "Do you include post-audit support?",
+      "a": "Yes, we monitor results for 30 days after implementation and provide support for any questions."
+    }
+  },
+  "cta_title": "Want a free SEO audit?",
+  "cta_desc": "Send us your URL and we'll send you a complete technical SEO report within 24 hours.",
+  "free_audit": "Free SEO Audit"
+}

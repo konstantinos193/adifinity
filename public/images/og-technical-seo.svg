@@ -1,0 +1,74 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark background matching your theme -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#07141C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A1F2E;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Purple gradient for technical SEO -->
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#8B5CF6" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Search icon -->
+  <circle cx="350" cy="240" r="25" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#glow)"/>
+  <path d="M 370 260 L 390 280" stroke="url(#neon)" stroke-width="3" stroke-linecap="round" filter="url(#glow)"/>
+  
+  <!-- Chart/graph icon -->
+  <rect x="780" y="200" width="80" height="60" fill="none" stroke="url(#neon)" stroke-width="3" filter="url(#glow)"/>
+  <rect x="790" y="240" width="15" height="15" fill="url(#neon)" opacity="0.8"/>
+  <rect x="815" y="230" width="15" height="25" fill="url(#neon)" opacity="0.8"/>
+  <rect x="840" y="220" width="15" height="35" fill="url(#neon)" opacity="0.8"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="450" r="60" fill="none" stroke="url(#neon)" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  <circle cx="1050" cy="150" r="40" fill="none" stroke="url(#neon)" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+  
+  <!-- Main title -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="url(#neon)" text-anchor="middle" filter="url(#glow)">
+    TECHNICAL
+  </text>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="url(#neon)" text-anchor="middle" filter="url(#glow)">
+    SEO
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="28" fill="#8B5CF6" text-anchor="middle" opacity="0.9">
+    Core Web Vitals • Schema • Analytics
+  </text>
+  
+  <!-- Tech stack -->
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="22" fill="#7C3AED" text-anchor="middle" opacity="0.8">
+    Lighthouse • Google Search Console • Audits
+  </text>
+  
+  <!-- Logo -->
+  <image href="/logo.png" x="520" y="550" width="160" height="60" preserveAspectRatio="xMidYMid meet"/>
+  
+  <!-- Corner decorations -->
+  <path d="M 0 0 L 100 0 L 0 100 Z" fill="url(#neon)" opacity="0.1"/>
+  <path d="M 1200 0 L 1100 0 L 1200 100 Z" fill="url(#neon)" opacity="0.1"/>
+  <path d="M 0 630 L 100 630 L 0 530 Z" fill="url(#neon)" opacity="0.1"/>
+  <path d="M 1200 630 L 1100 630 L 1200 530 Z" fill="url(#neon)" opacity="0.1"/>
+</svg>

@@ -1,0 +1,43 @@
+{
+  "about": {
+    "description": "Thank you for trusting us with your business growth. We're here to help you stand out."
+  },
+  "contact": {
+    "title": "CONTACT",
+    "phone": "+30 2681 303007",
+    "email": "adenfinity@gmail.com",
+    "address": "Vas. Pyrrou 30, Arta 471 32"
+  },
+  "quick_links": {
+    "title": "Quick Links",
+    "links": [
+      { "name": "Home", "path": "/" },
+      { "name": "Services", "path": "/services" },
+      { "name": "About Us", "path": "/about" },
+      { "name": "Our Projects", "path": "/projects" },
+      { "name": "Contact", "path": "/contact" }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "links": [
+      { "name": "Printing", "path": "/prints" },
+      { "name": "Graphic Design", "path": "/graphic-design" },
+      { "name": "Flyer Distribution", "path": "/flyer-distribution" },
+      { "name": "Websites", "path": "/website-development" },
+      { "name": "Market Research", "path": "/market-research" }
+    ]
+  },
+  "cta": {
+    "title": "Get Started Today",
+    "description": "We're ready to discuss your next project and help you stand out in the market.",
+    "button": "Contact Us"
+  },
+  "social": {
+    "title": "Follow Us"
+  },
+  "copyright": "© {year} adinfinity. All rights reserved.",
+  "mobile": {
+    "description": "Thank you for trusting us with your business growth."
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "title": "Landing Pages Development",
+  "subtitle": "High Conversions · Ads Ready",
+  "hero_badge": "Fast · SEO-Ready · Conversion Optimized",
+  "hero_title_line1": "Custom",
+  "hero_title_line2": "Landing Pages",
+  "description": "We build custom landing pages in Next.js, optimized for fast performance and high conversions. Perfect for Google Ads, new products, and any marketing goal.",
+  "get_started": "Get Quote",
+  "phone": "2681 303007",
+  "what_we_deliver": "What We Deliver",
+  "features_title": "Built for Performance",
+  "features_subtitle": "Every landing page follows these principles.",
+  "use_cases_title": "When Do You Need a Landing Page?",
+  "use_cases_subtitle": "Every campaign deserves its own targeted page.",
+  "why_choose_title": "Why Choose Us?",
+  "faq_title": "Frequently Asked Questions",
+  "faq_subtitle": "Everything you need to know about landing pages.",
+  "cta_title": "Ready to Launch Your Campaign?",
+  "cta_description": "Tell us about your project. Google Ads, new product, or anything else - a high-performance landing page ready in days.",
+  "features": [
+    {
+      "title": "Load Speed < 1s",
+      "desc": "Next.js static generation + image optimization = lightning performance. Google and visitors reward fast pages."
+    },
+    {
+      "title": "Conversion-Focused Design",
+      "desc": "Proven structure with hero section, social proof, CTAs, and urgency for maximum conversions."
+    },
+    {
+      "title": "Google Ads Optimized",
+      "desc": "Tracking pixels, conversion events, A/B testing support. Maximize your ad ROI."
+    },
+    {
+      "title": "Mobile-First Design",
+      "desc": "70%+ of traffic from mobile. We design first for mobile, then desktop."
+    },
+    {
+      "title": "SEO Foundation",
+      "desc": "Ready for organic traffic: Schema markup, meta tags, Open Graph, sitemap."
+    },
+    {
+      "title": "Analytics & Heatmaps",
+      "desc": "Google Analytics 4, Meta Pixel, Hotjar integration for full tracking and optimization."
+    }
+  ],
+  "use_cases": [
+    {
+      "title": "Google / Meta Ads",
+      "desc": "Specialized landing pages for each campaign. Better Quality Score, lower CPC."
+    },
+    {
+      "title": "New Products",
+      "desc": "Present new products/services with launch pages before the full site is live."
+    },
+    {
+      "title": "Events / Webinars",
+      "desc": "Promote events with countdowns, social proof, and data collection forms."
+    },
+    {
+      "title": "Lead Generation",
+      "desc": "Collect leads with high-converting contact forms and quote requests."
+    },
+    {
+      "title": "Seasonal Offers",
+      "desc": "Fresh pages for Black Friday, Easter, Summer, and any seasonal event."
+    },
+    {
+      "title": "Startup MVP",
+      "desc": "Coming Soon or Waitlist pages to measure interest before full product development."
+    }
+  ],
+  "deliverables": [
+    {
+      "title": "Custom Design in Figma",
+      "items": [
+        "Fully customized to your brand and goals.",
+        "Design approval before development starts."
+      ]
+    },
+    {
+      "title": "Next.js Development",
+      "items": [
+        "Fast static pages for optimal SEO speed.",
+        "Fully mobile-responsive for excellent experience on all devices."
+      ]
+    },
+    {
+      "title": "Google Analytics 4 Setup",
+      "items": [
+        "Conversion tracking setup from day one.",
+        "Meta Pixel integration for Facebook/Instagram campaigns."
+      ]
+    },
+    {
+      "title": "SSL + Deployment",
+      "items": [
+        "Secure deployment on Vercel or hosting of your choice."
+      ]
+    },
+    {
+      "title": "1 Month Support",
+      "items": [
+        "Free support for small changes and smooth operation."
+      ]
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Proven Performance",
+      "desc": "Fast, mobile-first pages that deliver results."
+    },
+    {
+      "title": "Transparency",
+      "desc": "You approve the design before we start development."
+    },
+    {
+      "title": "Support",
+      "desc": "One month of support for smooth operation."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long does a landing page take?",
+      "a": "A custom landing page is delivered in 3-5 business days, depending on complexity."
+    },
+    {
+      "q": "What's the difference from a regular website?",
+      "a": "A landing page is targeted for one specific action (campaign), while a website is the full online presence."
+    },
+    {
+      "q": "Does it work for Google Ads?",
+      "a": "Absolutely. Optimized for Google Ads with high Quality Score and fast load times."
+    },
+    {
+      "q": "Is there support after delivery?",
+      "a": "Yes, we provide 1 month of free support for small changes and ensuring functionality."
+    }
+  ],
+  "response_time": "24h Response",
+  "support_period": "1 Month Support",
+  "fast_delivery": "Fast Delivery",
+  "seo": {
+    "title": "Landing Pages Development | High Conversions | Google Ads Ready | adinfinity",
+    "description": "Custom landing pages for Google Ads and conversion optimization. Next.js, mobile-first design, SEO ready. Greek market expertise."
+  }
+}

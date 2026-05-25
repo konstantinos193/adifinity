@@ -1,0 +1,55 @@
+{
+  "common": {
+    "loading": "Loading..."
+  },
+  "proof_bar": {
+    "title": "Trusted by Leading Brands",
+    "subtitle": "Results-driven partnerships that fuel business growth",
+    "partners": "Partnered with industry leaders across sectors"
+  },
+  "what_we_replace": {
+    "title": "What We Replace",
+    "subtitle": "From chaos to clarity - transforming how businesses handle marketing and design",
+    "before": "BEFORE",
+    "after": "AFTER",
+    "ready_to_replace": "Ready to Replace the Chaos?",
+    "ready_description": "Join businesses that have transformed their operations with our automated system",
+    "start_transformation": "Start the Transformation"
+  },
+  "interactive_services": {
+    "title": "Interactive Services",
+    "subtitle": "Click any service to see how our automation transforms traditional workflows",
+    "whats_included": "What's Included:",
+    "automation_benefits": "Automation Benefits",
+    "time_saved": "Time saved",
+    "faster_delivery": "Faster delivery",
+    "configure_service": "Configure This Service"
+  },
+  "case_studies": {
+    "title": "Case Studies",
+    "subtitle": "Real results from businesses that transformed their operations",
+    "challenge": "Challenge",
+    "solution": "Solution", 
+    "results": "Results",
+    "get_similar_results": "Get Similar Results",
+    "transform_your_business": "Transform Your Business Too",
+    "projects_delivered": "Projects Delivered",
+    "client_satisfaction": "Client Satisfaction",
+    "years_experience": "Years Experience",
+    "join_businesses": "Join hundreds of businesses that have already replaced marketing chaos with automated success",
+    "start_your_transformation": "Start Your Transformation"
+  },
+  "final_cta": {
+    "ready_to_automate": "Ready to",
+    "automate": "Automate",
+    "your_growth": "Your Growth?",
+    "stop_managing": "Stop managing chaos. Start scaling with confidence.",
+    "your_automated_system": "Your automated marketing system is one click away.",
+    "start_automating_now": "Start Automating Now",
+    "no_credit_card": "No credit card required",
+    "setup_hours": "Setup in 24 hours",
+    "cancel_anytime": "Cancel anytime",
+    "join_businesses": "Join 100+ businesses that have already replaced their marketing chaos with automated success.",
+    "from_startups_to_brands": "From local startups to established brands — we help you scale without the headaches."
+  }
+}

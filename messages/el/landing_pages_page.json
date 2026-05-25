@@ -1,0 +1,146 @@
+{
+  "title": "Landing Pages Development",
+  "subtitle": "Υψηλές Μετατροπές · Έτοιμες για Διαφημίσεις",
+  "hero_badge": "Γρήγορες · SEO-Ready · Μεγιστοποίηση Μετατροπών",
+  "hero_title_line1": "Custom",
+  "hero_title_line2": "Landing Pages",
+  "description": "Δημιουργούμε custom landing pages σε Next.js, βελτιστοποιημένες για γρήγορη απόδοση και υψηλές μετατροπές. Ιδανικές για Google Ads, νέα προϊόντα και κάθε marketing στόχο.",
+  "get_started": "Ζητήστε Προσφορά",
+  "phone": "2681 303007",
+  "what_we_deliver": "Τι Παραδίδουμε",
+  "features_title": "Χτισμένες για Αποτελεσματικότητα",
+  "features_subtitle": "Κάθε landing page ακολουθεί αυτές τις αρχές.",
+  "use_cases_title": "Πότε Χρειάζεστε Landing Page;",
+  "use_cases_subtitle": "Κάθε καμπάνια αξίζει τη δική της στοχευμένη σελίδα.",
+  "why_choose_title": "Γιατί να Επιλέξετε Εμάς;",
+  "faq_title": "Συχνές Ερωτήσεις",
+  "faq_subtitle": "Όλα όσα πρέπει να ξέρετε για τις landing pages.",
+  "cta_title": "Έτοιμοι να Ξεκινήσετε την Καμπάνια σας;",
+  "cta_description": "Πείτε μας για το project σας. Google Ads, νέο προϊόν, ή οτιδήποτε άλλο - μια landing page υψηλής απόδοσης έτοιμη σε λίγες μέρες.",
+  "features": [
+    {
+      "title": "Ταχύτητα Φόρτωσης < 1s",
+      "desc": "Next.js static generation + image optimization = αστραπιαία απόδοση. Google και επισκέπτες επιβραβεύουν τις γρήγορες σελίδες."
+    },
+    {
+      "title": "Design Εστιασμένο σε Μετατροπές",
+      "desc": "Δομή με αποδεδειγμένα στοιχεία: hero section, social proof, CTAs, και urgency για μέγιστες μετατροπές."
+    },
+    {
+      "title": "Βελτιστοποιημένη για Google Ads",
+      "desc": "Tracking pixels, conversion events, A/B testing support. Μεγιστοποίηση ROI διαφημίσεων."
+    },
+    {
+      "title": "Mobile-First Σχεδιασμός",
+      "desc": "70%+ της κίνησης από κινητά. Σχεδιάζουμε πρώτα για mobile, μετά για desktop."
+    },
+    {
+      "title": "SEO Βάση",
+      "desc": "Έτοιμη για οργανική κίνηση: Schema markup, meta tags, Open Graph, sitemap."
+    },
+    {
+      "title": "Analytics & Heatmaps",
+      "desc": "Ενσωμάτωση Google Analytics 4, Meta Pixel, Hotjar για πλήρη παρακολούθηση και βελτιστοποίηση."
+    }
+  ],
+  "use_cases": [
+    {
+      "title": "Google / Meta Ads",
+      "desc": "Εξειδικευμένες landing pages για κάθε καμπάνια. Καλύτερο Quality Score, χαμηλότερο CPC."
+    },
+    {
+      "title": "Νέα Προϊόντα",
+      "desc": "Παρουσίαση νέων προϊόντων/υπηρεσιών με launch pages πριν το πλήρες site."
+    },
+    {
+      "title": "Events / Webinars",
+      "desc": "Προώθηση events με countdowns, social proof, φόρμες συλλογής δεδομένων."
+    },
+    {
+      "title": "Lead Generation",
+      "desc": "Συλλογή leads με φόρμες υψηλής μετατροπής και αιτήσεις προσφορών."
+    },
+    {
+      "title": "Εποχιακές Προσφορές",
+      "desc": "Φρέσκες σελίδες για Black Friday, Πάσχα, Καλοκαίρι και κάθε εποχιακή εκδήλωση."
+    },
+    {
+      "title": "Startup MVP",
+      "desc": "Coming Soon ή Waitlist pages για μέτρηση ενδιαφέροντος πριν την πλήρη ανάπτυξη."
+    }
+  ],
+  "deliverables": [
+    {
+      "title": "Custom Design σε Figma",
+      "items": [
+        "Πλήρως προσαρμοσμένο στο brand και στόχους σας.",
+        "Έγκριση σχεδιασμού πριν την έναρξη ανάπτυξης."
+      ]
+    },
+    {
+      "title": "Next.js Development",
+      "items": [
+        "Γρήγορες static σελίδες για βέλτιστη SEO ταχύτητα.",
+        "Πλήρως mobile-responsive για άριστη εμπειρία σε όλες τις συσκευές."
+      ]
+    },
+    {
+      "title": "Google Analytics 4 Setup",
+      "items": [
+        "Conversion tracking setup από την πρώτη μέρα.",
+        "Meta Pixel ενσωμάτωση για Facebook/Instagram καμπάνιες."
+      ]
+    },
+    {
+      "title": "SSL + Deployment",
+      "items": [
+        "Ασφαλής deployment σε Vercel ή hosting της επιλογής σας."
+      ]
+    },
+    {
+      "title": "1 Μήνας Υποστήριξη",
+      "items": [
+        "Δωρεάν υποστήριξη για μικρές αλλαγές και ομαλή λειτουργία."
+      ]
+    }
+  ],
+  "why_us": [
+    {
+      "title": "Αποδεδειγμένη Απόδοση",
+      "desc": "Γρήγορες, mobile-first σελίδες που φέρνουν αποτελέσματα."
+    },
+    {
+      "title": "Διαφάνεια",
+      "desc": "Εγκρίνετε τον σχεδιασμό πριν ξεκινήσουμε την ανάπτυξη."
+    },
+    {
+      "title": "Υποστήριξη",
+      "desc": "Ένας μήνας υποστήριξης για ομαλή λειτουργία."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Πόσο χρόνο παίρνει μια landing page;",
+      "a": "Μια custom landing page παραδίδεται σε 3-5 εργάσιμες ημέρες, ανάλογα με την πολυπλοκότητα."
+    },
+    {
+      "q": "Τι διαφορά έχει από κανονική ιστοσελίδα;",
+      "a": "Η landing page είναι στοχευμένη για μία συγκεκριμένη ενέργεια (καμπάνια), ενώ η ιστοσελίδα είναι η πλήρης online παρουσία."
+    },
+    {
+      "q": "Λειτουργεί για Google Ads;",
+      "a": "Απολύτως. Βελτιστοποιημένες για Google Ads με υψηλό Quality Score και γρήγορους χρόνους φόρτωσης."
+    },
+    {
+      "q": "Υπάρχει υποστήριξη μετά την παράδοση;",
+      "a": "Ναι, παρέχουμε 1 μήνα δωρεάν υποστήριξη για μικρές αλλαγές και διασφάλιση λειτουργίας."
+    }
+  ],
+  "response_time": "Απόκριση 24ω",
+  "support_period": "Υποστήριξη 1 μήνα",
+  "fast_delivery": "Γρήγορη Παράδοση",
+  "seo": {
+    "title": "Landing Pages Development | Υψηλές Μετατροπές | Google Ads Ready | adinfinity",
+    "description": "Custom landing pages για Google Ads και conversion optimization. Next.js, mobile-first design, SEO ready. Greek market expertise."
+  }
+}
