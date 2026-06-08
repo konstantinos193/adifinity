@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -243,66 +244,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Core e-commerce services
-      'κατασκευή eshop',
-      'ecommerce development',
-      'online store development',
-      'custom ecommerce',
-      'e-shop κατασκευή Ελλάδα',
-      'custom online stores',
-      
-      // Technology stack
-      'next.js ecommerce',
-      'react ecommerce',
-      'stripe integration',
-      'typescript development',
-      'custom web development',
-      
-      // Platform alternatives
-      'shopify alternative',
-      'woocommerce alternative',
-      'no platform fees',
-      'custom ecommerce solution',
-      'zero monthly fees',
-      
-      // Payment systems
-      'payment gateway integration',
-      'stripe payments greece',
-      'online payment systems',
-      'apple pay integration',
-      'google pay integration',
-      
-      // Greek market specific
-      'greek ecommerce developer',
-      'ελληνική κατασκευή eshop',
-      'ecommerce greece',
-      'online stores athens',
-      'professional ecommerce greece',
-      
-      // Features
-      'custom admin panel',
-      'inventory management',
-      'order management system',
-      'analytics dashboard',
-      'automated workflows',
-      
-      // Business terms
-      'online business',
-      'digital store',
-      'e-commerce solution',
-      'professional online store',
-      'custom development'
-    ],
+    keywords: getKeywords('website-development/e-commerce'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development/e-commerce',
       languages: {

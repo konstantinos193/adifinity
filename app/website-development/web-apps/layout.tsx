@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -183,68 +184,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Web app specific
-      'web applications',
-      'SaaS platforms',
-      'custom dashboards',
-      'react development',
-      'nodejs development',
-      'full-stack development',
-      'custom web apps',
-      'web app development',
-      'business applications',
-      
-      // Greek market specific
-      'web εφαρμογές',
-      'SaaS πλατφόρμες',
-      'custom dashboards',
-      'react development',
-      'nodejs',
-      'full-stack development',
-      'ελληνικός web developer',
-      'συστήματα κρατήσεων',
-      'admin tools',
-      'web εφαρμογές',
-      'ανάπτυξη εφαρμογών',
-      'custom software',
-      'business applications',
-      
-      // Technology specific
-      'React 19',
-      'Next.js 16.2',
-      'TypeScript',
-      'Node.js',
-      'PostgreSQL',
-      'Express.js',
-      'REST APIs',
-      'WebSockets',
-      
-      // Use cases
-      'booking systems',
-      'admin dashboards',
-      'data platforms',
-      'API integrations',
-      'custom tools',
-      'internal tools',
-      'automation workflows',
-      
-      // Business terms
-      'business solutions',
-      'digital transformation',
-      'enterprise applications',
-      'cloud applications',
-      'scalable web apps'
-    ],
+    keywords: getKeywords('website-development/web-apps'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development/web-apps',
       languages: {

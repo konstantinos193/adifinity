@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -14,43 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Contact specific keywords
-      'επικοινωνία adinfinity',
-      'contact adinfinity',
-      'adinfinity τηλέφωνο',
-      'adinfinity email',
-      'επικοινωνία διαφημιστική',
-      'contact advertising agency',
-      'web development contact',
-      'graphic design contact',
-      'digital marketing contact',
-      'Άρτα επικοινωνία',
-      'Arta contact',
-      
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      
-      // Service keywords
-      'custom web development',
-      'graphic design services',
-      'digital marketing agency',
-      'printing services',
-      'flyer distribution',
-      'web development Greece',
-      'digital marketing Arta',
-      
-      // Location keywords
-      'Arta advertising agency',
-      'Άρτα διαφημιστική',
-      'Greece web development',
-      'Ελλάδα digital marketing'
-    ],
+    keywords: getKeywords('contact'),
     alternates: {
       canonical: 'https://adinfinity.gr/contact',
       languages: {

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -243,76 +244,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Core portfolio and projects
-      'έργα adinfinity',
-      'portfolio adinfinity',
-      'case studies',
-      'projects portfolio',
-      'work portfolio',
-      'client projects',
-      'design portfolio',
-      
-      // Branding services
-      'branding',
-      'logo design',
-      'brand identity',
-      'visual identity',
-      'brand development',
-      'corporate identity',
-      'brand strategy',
-      'logo creation',
-      
-      // Graphic design services
-      'graphic design',
-      'digital design',
-      'print design',
-      'marketing design',
-      'visual communication',
-      'creative design',
-      'design services',
-      
-      // Web design
-      'web design',
-      'website design',
-      'ui design',
-      'ux design',
-      'responsive design',
-      'web development',
-      
-      // Marketing services
-      'marketing campaigns',
-      'digital marketing',
-      'advertising',
-      'promotion materials',
-      'marketing collateral',
-      
-      // Greek market specific
-      'διαφημιστικά έργα',
-      'portfolio Άρτα',
-      'branding Άρτα',
-      'graphic design Ελλάδα',
-      'design projects greece',
-      'creative agency greece',
-      
-      // Related terms
-      'creative agency',
-      'design studio',
-      'advertising agency',
-      'visual design',
-      'branding agency',
-      'design solutions',
-      'creative solutions'
-    ],
+    keywords: getKeywords('projects'),
     alternates: {
       canonical: 'https://adinfinity.gr/projects',
       languages: {

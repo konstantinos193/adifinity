@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('custom_web_apps_page')
@@ -7,67 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Core web development services
-      'custom web apps',
-      'εταιρικές ιστοσελίδες',
-      'custom website development',
-      'web application development',
-      'εταιρική ιστοσελίδα',
-      'custom ιστοσελίδα',
-      'web εφαρμογές',
-      'custom web applications',
-      
-      // Technology keywords
-      'next.js development',
-      'react development',
-      'typescript development',
-      'tailwind css',
-      'custom development',
-      'web design',
-      'ui ux design',
-      
-      // Industry-specific
-      'hospitality website',
-      'education platform',
-      'healthcare website',
-      'e-commerce website',
-      'booking system',
-      'admin dashboard',
-      'subscription system',
-      
-      // Service quality
-      'professional web development',
-      'custom web solutions',
-      'mobile-first design',
-      'seo optimization',
-      'fast loading',
-      'secure websites',
-      
-      // Geographic keywords
-      'web development greece',
-      'custom websites artas',
-      'web development ioannina',
-      'web development epirus',
-      'custom web apps northern greece',
-      
-      // Related services
-      'digital marketing',
-      'graphic design',
-      'printing',
-      'flyer distribution',
-      'business promotion',
-      'online presence'
-    ],
+    keywords: getKeywords('website-development/custom-web-apps'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development/custom-web-apps',
       languages: {

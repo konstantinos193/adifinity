@@ -12,5 +12,11 @@
   "description_long": "As a leading advertising agency in Artas, specializing in advertising, graphic design, printing and digital marketing, we transform your ideas into business success.",
   "see_more": "See More",
   "contact_us": "Contact Us",
-  "services": ["Branding", "Web Design", "Graphic Design", "Marketing"]
+  "services": ["Branding", "Web Design", "Graphic Design", "Marketing"],
+  "stats": [
+    { "value": "12+", "label": "Years of Experience" },
+    { "value": "200+", "label": "Projects Completed" },
+    { "value": "50+", "label": "Happy Clients" },
+    { "value": "2013", "label": "Founded" }
+  ]
 }

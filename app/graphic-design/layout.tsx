@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('graphic_design_page')
@@ -7,81 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Core graphic design services
-      'γραφικές τέχνες',
-      'γραφιστική',
-      'graphic design',
-      'γραφιστική άρτα',
-      'graphic design artas',
-      'design services',
-      
-      // Specific services
-      'branding',
-      'εταιρική ταυτότητα',
-      'corporate identity',
-      'logo design',
-      'σχεδιασμός λογοτύπων',
-      'διαφημιστικό υλικό',
-      'advertising design',
-      'social media graphics',
-      'digital design',
-      
-      // Design applications
-      'επαγγελματικές κάρτες',
-      'business cards',
-      'flyers',
-      'αφίσες',
-      'posters',
-      'brochures',
-      'κατάλογοι',
-      'catalogs',
-      'παquetaging',
-      'συσκευασία',
-      
-      // Digital design
-      'web design',
-      'ui design',
-      'ux design',
-      'social media design',
-      'digital marketing',
-      'content creation',
-      
-      // Geographic keywords
-      'γραφιστική άρτα',
-      'graphic design artas',
-      'γραφιστική ιωαννίνων',
-      'graphic design ioannina',
-      'γραφιστική ηπείρου',
-      'graphic design epirus',
-      'γραφιστική βόρειου ελλάδας',
-      
-      // Quality indicators
-      'επαγγελματική γραφιστική',
-      'ποιοτικό design',
-      'creative design',
-      'custom design',
-      'original design',
-      'καινοτόμος σχεδιασμός',
-      
-      // Related services
-      'εκτυπώσεις',
-      'printing',
-      'διαφημιστική εταιρεία',
-      'advertising agency',
-      'marketing',
-      'digital marketing',
-      'branding agency'
-    ],
+    keywords: getKeywords('graphic-design'),
     alternates: {
       canonical: 'https://adinfinity.gr/graphic-design',
       languages: {

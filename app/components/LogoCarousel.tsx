@@ -6,6 +6,7 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import Image from "next/image"
 import projectsData from "../data/projects.json"
 import { useTranslations } from "@/components/useTranslations"
+import SectionBackground from "./SectionBackground"
 
 export default function LogoCarousel() {
   const { t } = useTranslations()
@@ -130,8 +131,9 @@ export default function LogoCarousel() {
   const hasPattern = isDark
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#071218] to-[#0A1A24]">
-      <div className="container mx-auto px-4">
+    <section className="py-16 bg-gradient-to-b from-[#071218] to-[#0A1A24] relative overflow-hidden">
+      <SectionBackground />
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-3xl font-bold mb-12 text-center text-white">{t('carousel.title')}</h2>
 
         <div className="relative max-w-4xl mx-auto">

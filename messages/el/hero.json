@@ -12,5 +12,11 @@
   "description_long": "Ως κορυφαία διαφημιστική εταιρεία στην Άρτα, ειδικευμένη σε διαφημιστικά, γραφιστική, εκτυπώσεις και digital marketing, μετατρέπουμε τις ιδέες σας σε επιχειρηματική επιτυχία.",
   "see_more": "Δείτε Περισσότερα",
   "contact_us": "Επικοινωνήστε Μαζί Μας",
-  "services": ["Branding", "Web Design", "Graphic Design", "Marketing"]
+  "services": ["Branding", "Web Design", "Graphic Design", "Marketing"],
+  "stats": [
+    { "value": "12+", "label": "Χρόνια Εμπειρίας" },
+    { "value": "200+", "label": "Ολοκληρωμένα Έργα" },
+    { "value": "50+", "label": "Ικανοποιημένοι Πελάτες" },
+    { "value": "2013", "label": "Ιδρύθηκε" }
+  ]
 }

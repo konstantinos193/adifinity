@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('market_research_page')
@@ -7,20 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      'έρευνα αγοράς Άρτα',
-      'ανάλυση αγοράς',
-      'έρευνα καταναλωτών',
-      'έρευνα ανταγωνισμού',
-      'market research Greece',
-      'marketing research',
-      'ανάλυση δεδομένων',
-      'business intelligence',
-      'competitor analysis',
-      'consumer insights',
-      'market analysis',
-      'στρατηγική μάρκετινγκ',
-    ],
+    keywords: getKeywords('market-research'),
     openGraph: {
       title: t('seo.title'),
       description: t('seo.description'),

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -243,74 +244,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Core maintenance services
-      'συντήρηση ιστοσελίδων',
-      'website maintenance',
-      'web support',
-      'ongoing development',
-      'retainer services',
-      'website updates',
-      'technical support',
-      'website management',
-      
-      // Security & Performance
-      'security updates',
-      'performance monitoring',
-      'uptime monitoring',
-      'website security',
-      'web performance',
-      'core web vitals',
-      'speed optimization',
-      
-      // Development & Updates
-      'continuous development',
-      'website improvements',
-      'feature updates',
-      'bug fixes',
-      'content updates',
-      'website enhancements',
-      
-      // Maintenance plans
-      'maintenance packages',
-      'support plans',
-      'retainer agreements',
-      'monthly maintenance',
-      'website care plans',
-      'ongoing support',
-      
-      // Technology specific
-      'next.js maintenance',
-      'react maintenance',
-      'web app maintenance',
-      'ecommerce maintenance',
-      'cms maintenance',
-      'database maintenance',
-      
-      // Greek market specific
-      'greek web maintenance',
-      'συντήρηση ιστοσελίδων ελλάδα',
-      'web support greece',
-      'maintenance athens',
-      'professional maintenance greece',
-      
-      // Business terms
-      'website reliability',
-      'business continuity',
-      'digital presence maintenance',
-      'online business support',
-      'website uptime',
-      'professional web care'
-    ],
+    keywords: getKeywords('website-development/maintenance'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development/maintenance',
       languages: {

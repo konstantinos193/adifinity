@@ -1,0 +1,62 @@
+{
+  "title": "Digital Wedding Invitations",
+  "subtitle": "Create unforgettable digital invitations for your special day",
+  "description": "Transform your wedding experience with our digital invitation platform. From RSVP tracking to beautiful mini-websites, we help you manage every detail of your big day.",
+  "hero_badge": "New Service",
+  "create_invitation": "Create Your Invitation",
+  "see_examples": "See Examples",
+  "our_services": "Invitation Types",
+  "why_choose_us": "Why Choose Our Invitations",
+  "types": {
+    "mini_website": {
+      "title": "Mini Wedding Website",
+      "description": "A complete mini-site with your love story, events timeline, gallery, gift registry, and RSVP form.",
+      "features": ["Full photo gallery", "Love story section", "Events timeline", "Gift registry", "RSVP tracking"]
+    },
+    "video_pro": {
+      "title": "Video Invitation Pro",
+      "description": "A stunning video-based invitation with quick action bar, countdown timer, and full RSVP capabilities.",
+      "features": ["Custom video", "Countdown timer", "Quick action buttons", "Music integration", "RSVP management"]
+    },
+    "video_only": {
+      "title": "Video Invitation",
+      "description": "A sleek video-focused invitation page, perfect for couples who want a modern, minimal presentation.",
+      "features": ["Custom video", "Elegant design", "Simple RSVP", "Easy sharing", "Guest management"]
+    }
+  },
+  "features": [
+    {
+      "title": "RSVP Tracking",
+      "description": "Real-time guest management with instant RSVP notifications and Excel export for your full guest list."
+    },
+    {
+      "title": "Beautiful Templates",
+      "description": "Three professionally designed invitation types to match your wedding style and personality."
+    },
+    {
+      "title": "Easy Sharing",
+      "description": "Share your unique invitation link via WhatsApp, social media, or email with a single click."
+    },
+    {
+      "title": "Full Customization",
+      "description": "Personalize colors, fonts, photos, videos, and every detail to make it uniquely yours."
+    }
+  ],
+  "cta": {
+    "title": "Ready to create your digital invitation?",
+    "description": "Visit our invitation platform and create a stunning digital invitation for your wedding day.",
+    "create_invitation": "Create Your Invitation",
+    "contact_us": "Contact Us"
+  },
+  "homepage_section": {
+    "badge": "New",
+    "title": "Digital Wedding Invitations",
+    "subtitle": "Introducing our newest service — beautiful, interactive digital invitations for your special day.",
+    "cta": "Create Yours Now",
+    "learn_more": "Learn More"
+  },
+  "seo": {
+    "title": "Digital Wedding Invitations | adinfinity - Create Your Perfect Invitation",
+    "description": "Create beautiful digital wedding invitations with RSVP tracking, video, mini-website templates. Manage your guest list online. Try our invitation platform!"
+  }
+}

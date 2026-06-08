@@ -4,6 +4,7 @@ import React from "react"
 import { motion, useReducedMotion } from "framer-motion"
 import { ChartBarIcon, MegaphoneIcon, GlobeAltIcon } from "@heroicons/react/24/outline"
 import { useTranslations } from "@/components/useTranslations"
+import SectionBackground from "./SectionBackground"
 
 const icons = [
   ChartBarIcon,
@@ -36,7 +37,7 @@ export default function ServicesSection() {
     return (
       <section id="υπηρεσίες" className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-[#01FFFF]">{t('services.title')}</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">{t('services.title')}</h2>
           <div className="text-center text-gray-400">
             Loading services...
           </div>
@@ -46,14 +47,18 @@ export default function ServicesSection() {
   }
 
   return (
-    <section id="υπηρεσίες" className="py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-[#01FFFF]">{t('services.title')}</h2>
+    <section id="υπηρεσίες" className="py-20 relative overflow-hidden">
+      <SectionBackground />
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="mb-12">
+          <h2 className="text-4xl font-bold text-white inline-block">{t('services.title')}</h2>
+          <div className="mt-2 w-12 h-0.5 bg-[#01FFFF]"></div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="bg-[#07141C] p-6 rounded-xl border border-cyan-900/30 hover:border-[#01FFFF] transition-all duration-200 hover:shadow-[0_0_15px_rgba(1,255,255,0.15)] will-change-transform"
+              className="bg-[#07141C] p-6 rounded-xl border border-white/10 hover:border-[#01FFFF]/50 transition-all duration-200 will-change-transform"
               initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : index * 0.05 }}
@@ -62,11 +67,11 @@ export default function ServicesSection() {
                 transition: { duration: 0.15, ease: "easeOut" },
               }}
             >
-              <div className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+              <div className="mb-4">
                 {React.createElement(icons[index], { className: "w-8 h-8 text-[#01FFFF]" })}
               </div>
-              <h3 className="text-xl font-bold mb-2 text-center text-white">{service.title}</h3>
-              <p className="text-gray-300 text-center">{service.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-white">{service.title}</h3>
+              <p className="text-gray-400">{service.description}</p>
             </motion.div>
           ))}
         </div>

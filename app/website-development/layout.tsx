@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -243,85 +244,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Core web development services
-      'κατασκευή ιστοσελίδων',
-      'web development',
-      'custom web apps',
-      'react development',
-      'nextjs development',
-      'typescript development',
-      'custom websites',
-      'business websites',
-      'professional web development',
-      
-      // E-commerce
-      'κατασκευή eshop',
-      'ecommerce development',
-      'online store development',
-      'custom ecommerce',
-      'stripe integration',
-      'payment systems',
-      
-      // Technical services
-      'technical SEO',
-      'SEO optimization',
-      'web performance',
-      'core web vitals',
-      'schema markup',
-      'speed optimization',
-      'mobile optimization',
-      
-      // Development types
-      'landing pages',
-      'web applications',
-      'SaaS development',
-      'dashboard development',
-      'booking systems',
-      'portal development',
-      
-      // Technology stack
-      'react developer',
-      'next.js developer',
-      'typescript developer',
-      'tailwind css',
-      'node.js development',
-      'postgresql database',
-      'vercel deployment',
-      
-      // Greek market specific
-      'greek web developer',
-      'ελληνική κατασκευή ιστοσελίδων',
-      'development ελλάδα',
-      'web development greece',
-      'custom development athens',
-      'professional websites greece',
-      
-      // Related services
-      'digital marketing',
-      'graphic design',
-      'ui/ux design',
-      'figma design',
-      'responsive design',
-      'mobile-first development',
-      
-      // Business terms
-      'online presence',
-      'business website',
-      'company website',
-      'professional website',
-      'custom solutions',
-      'web solutions'
-    ],
+    keywords: getKeywords('website-development'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development',
       languages: {

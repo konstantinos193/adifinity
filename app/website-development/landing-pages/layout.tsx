@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -243,62 +244,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Landing page specific
-      'landing page development',
-      'landing page Greece',
-      'κατασκευή landing page',
-      'landing page Ελλάδα',
-      'custom landing pages',
-      'high converting landing pages',
-      'landing page optimization',
-      
-      // Marketing & Ads
-      'Google Ads landing pages',
-      'campaign landing pages',
-      'conversion optimization',
-      'CRO optimization',
-      'digital marketing pages',
-      'lead generation pages',
-      
-      // Technology
-      'Next.js landing pages',
-      'React landing pages',
-      'TypeScript landing pages',
-      'static landing pages',
-      'mobile-first landing pages',
-      
-      // Use cases
-      'product launch pages',
-      'event registration pages',
-      'webinar landing pages',
-      'lead magnet pages',
-      'squeeze pages',
-      
-      // Greek market specific
-      'greek landing pages',
-      'ελληνικές landing pages',
-      'landing pages Αθήνα',
-      'landing pages Θεσσαλονίκη',
-      'digital marketing Greece',
-      
-      // Business terms
-      'conversion rate',
-      'lead generation',
-      'sales funnel',
-      'marketing campaigns',
-      'online advertising',
-      'PPC landing pages'
-    ],
+    keywords: getKeywords('website-development/landing-pages'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development/landing-pages',
       languages: {

@@ -78,6 +78,10 @@ export default function CookieConsent() {
         }
       })
     }
+
+    // Notify consent-aware components (e.g. GoogleAnalytics) that settings changed
+    // so they can load/unload their scripts accordingly.
+    window.dispatchEvent(new Event("cookieConsentUpdated"))
   }
 
   const acceptAll = () => {

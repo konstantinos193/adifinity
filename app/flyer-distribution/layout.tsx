@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('flyer_distribution_page')
@@ -7,75 +8,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // Core flyer distribution services
-      'διανομή φυλλαδίων',
-      'διανομη εντυπων',
-      'flyer distribution',
-      'leaflet distribution',
-      'έντυποδιανομές',
-      'εντυποδιανομές άρτα',
-      'flyer distribution artas',
-      
-      // Distribution methods
-      'πόρτα πόρτα διανομή',
-      'door to door distribution',
-      'στοχευμένη διανομή',
-      'targeted distribution',
-      'διανομή σε οικίες',
-      'residential distribution',
-      'διανομή σε επιχειρήσεις',
-      'business distribution',
-      'B2B distribution',
-      
-      // Marketing terms
-      'διαφημιστική διανομή',
-      'advertising distribution',
-      'διαφημιστικά φυλλάδια',
-      'marketing flyers',
-      'προβολή επιχείρησης',
-      'business promotion',
-      'direct marketing',
-      'print advertising',
-      
-      // Geographic keywords
-      'διανομή άρτα',
-      'διανομή artas',
-      'διανομή ιωαννίνων',
-      'distribution ioannina',
-      'διανομή ηπείρου',
-      'distribution epirus',
-      'διανομή βόρειου ελλάδας',
-      'distribution northern greece',
-      
-      // Service quality
-      'επαγγελματική διανομή',
-      'professional distribution',
-      'αποτελεσματική διανομή',
-      'effective distribution',
-      'γρήγορη διανομή',
-      'fast distribution',
-      'αξιόπιστη διανομή',
-      'reliable distribution',
-      
-      // Related services
-      'εκτυπώσεις',
-      'printing',
-      'διαφημιστική εταιρεία',
-      'advertising agency',
-      'marketing',
-      'digital marketing',
-      'promotional materials'
-    ],
+    keywords: getKeywords('flyer-distribution'),
     alternates: {
       canonical: 'https://adinfinity.gr/flyer-distribution',
       languages: {

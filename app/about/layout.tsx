@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -107,69 +108,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: [
-      // Brand variations
-      'adinfinity',
-      'ad infinity',
-      'adinity',
-      'adinfit',
-      'infiniry',
-      'infinity ad',
-      'adi infinity',
-      
-      // About page specific
-      'about adinfinity',
-      'ποιοι είμαστε',
-      'who we are',
-      'our team',
-      'η ομάδα μας',
-      'our story',
-      'η ιστορία μας',
-      'company history',
-      'ιστορία εταιρείας',
-      
-      // Team related
-      'manos kosmas',
-      'μάνος κωσμάς',
-      'konstantinos blavakis',
-      'κωνσταντίνος μπλαβάκης',
-      'creative team',
-      'δημιουργική ομάδα',
-      'marketing team',
-      'ομάδα μάρκετινγκ',
-      
-      // Company info
-      'adinfinity άρτα',
-      'adinfinity arta',
-      'διαφημιστική εταιρεία',
-      'creative agency',
-      'advertising agency',
-      'digital agency',
-      'marketing agency',
-      
-      // Services
-      'digital marketing',
-      'graphic design',
-      'web development',
-      'printing services',
-      'flyer distribution',
-      'market research',
-      
-      // Location specific
-      'άρτα',
-      'arta',
-      'ηπειρος',
-      'epirus',
-      'greece',
-      'ελλάδα',
-      
-      // Business related
-      'professional services',
-      'business solutions',
-      'creative solutions',
-      'marketing solutions',
-      'digital solutions'
-    ],
+    keywords: getKeywords('about'),
     alternates: {
       canonical: 'https://adinfinity.gr/about',
       languages: {

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useTranslations } from '@/components/useTranslations'
 import { useLocale } from '@/components/LocaleProvider'
 import { useEffect, useState } from 'react'
+import SectionBackground from './SectionBackground'
 
 export default function ContactSection() {
   const { t } = useTranslations()
@@ -15,8 +16,9 @@ export default function ContactSection() {
   if (!isReady) {
     // Render fallback to prevent hydration mismatch
     return (
-      <section id="επικοινωνία" className="py-20">
-        <div className="container mx-auto px-4">
+      <section id="επικοινωνία" className="py-20 relative overflow-hidden">
+        <SectionBackground />
+        <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-4xl text-center mb-12">Επικοινωνήστε Μαζί Μας</h2>
           <p className="text-center mb-8">
             Ενδιαφέρεστε να μάθετε πώς μπορούμε να σας υποστηρίξουμε; Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε σύντομα!
@@ -42,8 +44,9 @@ export default function ContactSection() {
   }
   
   return (
-    <section id="επικοινωνία" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="επικοινωνία" className="py-20 relative overflow-hidden">
+      <SectionBackground />
+      <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl text-center mb-12">{t('contact.title')}</h2>
         <p className="text-center mb-8">
           {t('contact.subtitle')}

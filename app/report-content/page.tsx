@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { routing } from '@/i18n'
 import ReportContentClient from "./ReportContentClient"
 import type { Metadata } from "next"
+import { getKeywords } from "@/lib/keywords"
 
 interface ReportContentPageProps {
   params: {
@@ -28,44 +29,8 @@ export async function generateMetadata({ params }: ReportContentPageProps): Prom
     en: "Report potentially illegal or inappropriate content on adinfinity website."
   }
   
-  const keywords = {
-    el: [
-      "αναφορά περιεχομένου",
-      "αναφορά περιεχομένου dsa",
-      "παράνομο περιεχόμενο",
-      "ακατάλληλο περιεχόμενο",
-      "ασφάλεια διαδικτύου",
-      "προστασία χρηστών",
-      "μηχανισμοί αναφοράς",
-      "κατάργηση περιεχομένου",
-      "παραβίαση περιεχομένου",
-      "φόρμα αναφοράς",
-      "μέτρα ασφαλείας",
-      "διαδικτυακή ασφάλεια",
-      "προστασία ανηλίκων",
-      "επιβίωση περιεχομένου",
-      "ρυθμιστική συμμόρφωση"
-    ],
-    en: [
-      "report content",
-      "content reporting",
-      "illegal content",
-      "inappropriate content",
-      "DSA reporting",
-      "safety reporting",
-      "content moderation",
-      "report abuse",
-      "online safety",
-      "content violation",
-      "report form",
-      "safety measures",
-      "user protection",
-      "content removal",
-      "reporting mechanisms",
-      "regulatory compliance"
-    ]
-  }
-  
+  // SEO keywords are centralized in @/lib/keywords → getKeywords('report-content', locale)
+
   // Generate structured data based on locale
   const generateStructuredData = (locale: string) => {
     const localeContent = {
@@ -158,7 +123,7 @@ export async function generateMetadata({ params }: ReportContentPageProps): Prom
       template: "%s | adinfinity",
     },
     description: descriptions[locale as keyof typeof descriptions] || descriptions.el,
-    keywords: keywords[locale as keyof typeof keywords] || keywords.el,
+    keywords: getKeywords('report-content', locale as 'el' | 'en'),
     authors: [{ name: "adinfinity" }],
     creator: "adinfinity",
     publisher: "adinfinity",

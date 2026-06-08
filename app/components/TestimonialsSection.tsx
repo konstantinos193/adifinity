@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { useTranslations } from "@/components/useTranslations"
+import SectionBackground from "./SectionBackground"
 
 interface Review {
   author_name: string
@@ -112,24 +113,7 @@ function AvatarSvg({ name }: { name: string }) {
 
   return (
     <section className="py-20 bg-gradient-to-b from-[#0A1A24] to-[#07141C] relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#01FFFF]/20 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#01FFFF]/20 to-transparent"></div>
-
-        {/* Subtle grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #01FFFF 1px, transparent 1px), linear-gradient(to bottom, #01FFFF 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-
-        {/* Ambient glow */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#01FFFF]/5 rounded-full blur-[100px]"></div>
-      </div>
+      <SectionBackground />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

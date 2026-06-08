@@ -99,40 +99,37 @@ export function ProjectsClient() {
       </div>
 
       <div className="container mx-auto px-4">
-        {/* Category Filter */}
+        {/* Category Filter — animated underline tabs */}
         <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          className="flex justify-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <motion.button
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              selectedCategory === null
-                ? "bg-[#01FFFF] text-[#07141C]"
-                : "bg-[#0D2436] text-white hover:bg-[#0D2436]/80"
-            }`}
-            onClick={() => setSelectedCategory(null)}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {t('projects_page.all_projects')}
-          </motion.button>
-          {categories.map((category) => (
-            <motion.button
-              key={category}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                selectedCategory === category
-                  ? "bg-[#01FFFF] text-[#07141C]"
-                  : "bg-[#0D2436] text-white hover:bg-[#0D2436]/80"
-              }`}
-              onClick={() => setSelectedCategory(category)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {category}
-            </motion.button>
-          ))}
+          <div className="flex flex-wrap justify-center gap-0 relative border-b border-cyan-900/30 w-full max-w-3xl">
+            {([null, ...categories] as (string | null)[]).map((category) => {
+              const isActive = selectedCategory === category
+              const label = category === null ? t('projects_page.all_projects') : category
+              return (
+                <button
+                  key={category ?? "__all__"}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`relative px-5 py-3 text-sm font-medium transition-colors duration-200 ${
+                    isActive ? "text-[#01FFFF]" : "text-gray-400 hover:text-gray-200"
+                  }`}
+                >
+                  {label}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeFilterUnderline"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-[#01FFFF] to-[#01A9FF]"
+                      transition={{ type: "spring", stiffness: 500, damping: 35 }}
+                    />
+                  )}
+                </button>
+              )
+            })}
+          </div>
         </motion.div>
 
         {/* Projects Grid */}
@@ -143,7 +140,7 @@ export function ProjectsClient() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <AnimatePresence>
                 {filteredProjects.map((project, index) => {
                   const localizedProject = getLocalizedProject(project)
@@ -180,13 +177,13 @@ export function ProjectsClient() {
 
         {/* CTA Section */}
         <motion.div
-          className="relative overflow-hidden bg-gradient-to-r from-[#0A1A24] to-[#0D2436] p-8 md:p-12 rounded-2xl shadow-2xl border border-cyan-900/30 mt-20"
+          className="relative overflow-hidden bg-linear-to-r from-[#0A1A24] to-[#0D2436] p-8 md:p-12 rounded-2xl shadow-2xl border border-cyan-900/30 mt-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#01FFFF]/10 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-[#01A9FF]/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-linear-to-br from-[#01FFFF]/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-linear-to-tr from-[#01A9FF]/10 to-transparent rounded-full blur-3xl"></div>
 
           <div className="relative z-10">
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-center">
@@ -198,7 +195,7 @@ export function ProjectsClient() {
             <div className="flex justify-center">
               <Link href="/contact#contact-form">
                 <motion.button
-                  className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-bold py-3 px-8 rounded-full text-lg shadow-lg shadow-cyan-500/20"
+                  className="bg-linear-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-bold py-3 px-8 rounded-full text-lg shadow-lg shadow-cyan-500/20"
                   whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
                   whileTap={{ scale: 0.95 }}
                 >

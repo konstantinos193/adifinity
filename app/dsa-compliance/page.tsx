@@ -1,4 +1,5 @@
 import { Metadata } from "next"
+import { getKeywords } from "@/lib/keywords"
 import DSAContentClient from "./DSAContentClient"
 
 export const metadata: Metadata = {
@@ -7,24 +8,7 @@ export const metadata: Metadata = {
     template: "%s | adinfinity",
   },
   description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",
-  keywords: [
-    "DSA compliance",
-    "Digital Services Act",
-    "content moderation",
-    "user reporting",
-    "transparency report",
-    "safety measures",
-    "content policy",
-    "illegal content",
-    "user protection",
-    "Greek DSA compliance",
-    "EU regulations",
-    "online safety",
-    "content removal",
-    "reporting mechanisms",
-    "DSA officer",
-    "compliance procedures"
-  ],
+  keywords: getKeywords('dsa-compliance'),
   openGraph: {
     title: "DSA Compliance | adinfinity",
     description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",

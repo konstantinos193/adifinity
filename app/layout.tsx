@@ -9,8 +9,10 @@ import { DynamicSEO } from "../components/DynamicSEO"
 import CookieConsent from "../components/ui/CookieConsent"
 import SkipLinks from "../components/ui/SkipLinks"
 import AccessibilityWidget from "../components/ui/AccessibilityWidget"
+import GoogleAnalytics from "../components/GoogleAnalytics"
 import type { Metadata, Viewport } from "next"
 import { getTranslations, getLocale } from 'next-intl/server'
+import { getKeywords } from '@/lib/keywords'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -118,12 +120,11 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return {
-    title: {
-      default: t('title.default'),
-      template: t('title.template'),
-    },
+    // Each page already includes the brand in its own title, so we do NOT use a
+    // `template` here (that previously produced duplicated "… | adinfinity | adinfinity").
+    title: t('title.default'),
     description: t('description'),
-    keywords: t.raw('keywords') as string[],
+    keywords: getKeywords('site', locale as 'el' | 'en'),
     authors: [{ name: "adinfinity" }],
     creator: "adinfinity",
     publisher: "adinfinity",
@@ -196,7 +197,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
+    <html lang="el">
       <head>
         {/* Structured Data - LocalBusiness */}
         <script
@@ -207,7 +208,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Διαφημιστική adinfinity",
               alternateName: "adinfinity",
-              image: "/images/og-image.png",
+              image: "https://adinfinity.gr/images/og-image.png",
               "@id": "https://adinfinity.gr",
               url: "https://adinfinity.gr",
               telephone: "+30-2681-303007",
@@ -327,6 +328,7 @@ export default function RootLayout({
           <main id="main-content" role="main">{children}</main>
           <Footer id="footer" />
           <CookieConsent />
+          <GoogleAnalytics />
         </LocaleProvider>
       </body>
     </html>

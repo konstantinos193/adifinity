@@ -10,5 +10,29 @@
   "keyboard_navigation": "Keyboard navigation",
   "aria_labels": "ARIA labels and descriptions",
   "color_contrast": "Color contrast",
-  "screen_reader": "Screen reader support"
+  "screen_reader": "Screen reader support",
+  "widget": {
+    "panel_title": "Accessibility",
+    "open_button_label": "Accessibility Options",
+    "close_button_label": "Close accessibility menu",
+    "high_contrast_label": "High Contrast",
+    "high_contrast_desc": "Increase color contrast",
+    "high_contrast_enable": "Enable high contrast",
+    "high_contrast_disable": "Disable high contrast",
+    "large_text_label": "Large Text",
+    "large_text_desc": "Increase text size",
+    "large_text_enable": "Enable large text",
+    "large_text_disable": "Disable large text",
+    "reduced_motion_label": "Reduced Motion",
+    "reduced_motion_desc": "Minimize animations",
+    "reduced_motion_enable": "Disable animations",
+    "reduced_motion_disable": "Enable animations",
+    "focus_indicators_label": "Focus Indicators",
+    "focus_indicators_desc": "Show keyboard focus",
+    "focus_indicators_enable": "Show focus indicators",
+    "focus_indicators_disable": "Hide focus indicators",
+    "reset_button": "Reset to Default",
+    "info_text": "These settings help make our website more accessible for everyone.",
+    "view_statement": "View Accessibility Statement"
+  }
 }

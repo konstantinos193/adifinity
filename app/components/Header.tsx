@@ -36,6 +36,7 @@ export default function Header() {
         { name: t('navigation.flyer_distribution'), path: "/flyer-distribution" },
         { name: t('navigation.website_development'), path: "/website-development" },
         { name: t('navigation.market_research'), path: "/market-research" },
+        { name: t('navigation.invitations'), path: "/invitations" },
       ],
     },
     { name: t('navigation.about'), path: "/about" },
@@ -57,18 +58,15 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Logo with hover effect */}
-            <Link href="/" className="relative group">
-              <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-                <Image
-                  src="/logo.png"
-                  alt="Logo"
-                  width={120}
-                  height={120}
-                  className="w-24 md:w-32 relative z-10"
-                  priority
-                />
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#01FFFF]/20 to-[#01A9FF]/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </motion.div>
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                width={120}
+                height={120}
+                className="w-24 md:w-32"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -127,14 +125,11 @@ export default function Header() {
             <div className="lg:hidden">
               <motion.button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-white p-2 hover:text-[#01FFFF] transition-colors relative"
+                className="text-white p-2 hover:text-[#01FFFF] transition-colors"
                 whileTap={{ scale: 0.9 }}
                 aria-label="Menu"
               >
                 <Menu className="h-6 w-6" />
-                {!isMobileMenuOpen && (
-                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#01FFFF] rounded-full animate-pulse"></span>
-                )}
               </motion.button>
             </div>
 

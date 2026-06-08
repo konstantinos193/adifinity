@@ -30,20 +30,8 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-gradient-to-b from-[#071218] to-[#030B10] pt-10 pb-6 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#01FFFF]/20 to-transparent"></div>
-      <div className="absolute -top-40 right-20 w-80 h-80 bg-[#01FFFF]/5 rounded-full blur-[80px]"></div>
-      <div className="absolute -bottom-40 left-20 w-80 h-80 bg-[#01A9FF]/5 rounded-full blur-[80px]"></div>
-
-      {/* Subtle grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #01FFFF 1px, transparent 1px), linear-gradient(to bottom, #01FFFF 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      ></div>
+      {/* Top border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-white/10"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Desktop Footer */}

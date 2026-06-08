@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
+import { getKeywords } from "@/lib/keywords"
 import AccessibilityClient from "./AccessibilityClient"
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -11,11 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${title} | adinfinity`,
     description,
-    keywords: [
-      'προσβασιμότητα', 'accessibility', 'WCAG', 'ADA', 'ατομα με αναπηρίες', 
-      'disabled users', 'προσβάσιμη ιστοσελίδα', 'accessible website', 'adinfinity',
-      'διαφημιστική εταιρεία', 'advertising agency', 'digital marketing', 'ηλεκτρονικό μάρκετινγκ'
-    ],
+    keywords: getKeywords('accessibility'),
     openGraph: {
       title: `${title} | adinfinity`,
       description,

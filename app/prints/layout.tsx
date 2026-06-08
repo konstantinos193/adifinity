@@ -1,25 +1,10 @@
 import type { Metadata } from 'next'
+import { getKeywords } from '@/lib/keywords'
 
 export const metadata: Metadata = {
   title: 'Εκτυπώσεις Άρτα | Επαγγελματικές Εκτυπώσεις & Digital Printing | adinfinity',
   description: 'Επαγγελματικές εκτυπώσεις στην Άρτα. Digital printing, banners, flyers, premium εκτυπώσεις, διαφημιστικά δώρα, συσκευασία. Γρήγορη παράδοση! +30 2681 303007',
-  keywords: [
-    'εκτυπώσεις Άρτα',
-    'εκτυπωσεισ κοντα μου',
-    'εκτυπώσεις κοντά μου',
-    'digital printing',
-    'διαφημιστικές εκτυπώσεις',
-    'premium εκτυπώσεις',
-    'banner εκτυπώσεις',
-    'flyers εκτυπώσεις',
-    'επαγγελματικές εκτυπώσεις',
-    'διαφημιστικά δώρα',
-    'εκτυπώσεις φυλλάδια',
-    'εκτυπώσεις εντυπα',
-    'business cards printing',
-    'poster printing',
-    'large format printing',
-  ],
+  keywords: getKeywords('prints'),
   openGraph: {
     title: 'Εκτυπώσεις Άρτα | Digital Printing & Premium Εκτυπώσεις | adinfinity',
     description: 'Επαγγελματικές εκτυπώσεις στην Άρτα. Digital printing, banners, flyers, premium εκτυπώσεις. Γρήγορη παράδοση!',

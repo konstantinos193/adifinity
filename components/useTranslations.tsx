@@ -57,12 +57,14 @@ import enHomepage from '../messages/en/homepage.json'
 import elHomepage from '../messages/el/homepage.json'
 import enPrintsPage from '../messages/en/prints_page.json'
 import elPrintsPage from '../messages/el/prints_page.json'
+import enInvitationsPage from '../messages/en/invitations_page.json'
+import elInvitationsPage from '../messages/el/invitations_page.json'
 import enProjectsPage from '../messages/en/projects_page.json'
 import elProjectsPage from '../messages/el/projects_page.json'
 import enSeo from '../messages/en/seo.json'
 import elSeo from '../messages/el/seo.json'
 
-const messageCache: Record<string, Record<string, any>> = {
+export const messageCache: Record<string, Record<string, any>> = {
   en: {
     common: enCommon,
     market_research_page: enMarketResearchPage,
@@ -90,6 +92,7 @@ const messageCache: Record<string, Record<string, any>> = {
     cookie_policy: enCookiePolicy,
     homepage: enHomepage,
     prints_page: enPrintsPage,
+    invitations_page: enInvitationsPage,
     projects_page: enProjectsPage,
     seo: enSeo,
   },
@@ -120,6 +123,7 @@ const messageCache: Record<string, Record<string, any>> = {
     cookie_policy: elCookiePolicy,
     homepage: elHomepage,
     prints_page: elPrintsPage,
+    invitations_page: elInvitationsPage,
     projects_page: elProjectsPage,
     seo: elSeo,
   }

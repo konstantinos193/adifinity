@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import { getKeywords } from '@/lib/keywords'
 
 export const metadata: Metadata = {
   title: 'Technical SEO Services | adinfinity — Core Web Vitals & Speed',
   description: 'Technical SEO υπηρεσίες για ιστοσελίδες σε Ελλάδα. Core Web Vitals, schema markup, speed optimization, Lighthouse audits. Τεχνική βελτιστοποίηση για top Google rankings.',
-  keywords: ['technical SEO Greece', 'Core Web Vitals', 'SEO βελτιστοποίηση', 'speed optimization', 'schema markup', 'Lighthouse audit'],
+  keywords: getKeywords('website-development/technical-seo'),
   alternates: { canonical: 'https://adinfinity.gr/website-development/technical-seo' },
   openGraph: {
     title: 'Technical SEO Services | adinfinity',

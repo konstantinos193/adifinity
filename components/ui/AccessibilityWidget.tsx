@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Eye, EyeOff, Type, MousePointer, Contrast, X } from "lucide-react"
+import { useTranslations } from "../useTranslations"
 
 export default function AccessibilityWidget() {
+  const { t } = useTranslations()
   const [isOpen, setIsOpen] = useState(false)
   const [settings, setSettings] = useState({
     highContrast: false,
@@ -96,7 +98,7 @@ export default function AccessibilityWidget() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed top-1/2 right-4 transform -translate-y-1/2 p-3 bg-gradient-to-br from-[#01FFFF]/20 to-[#01A9FF]/20 border border-[#01FFFF]/30 rounded-full hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 z-40 group"
-        aria-label="Accessibility Options"
+        aria-label={t('accessibility.widget.open_button_label')}
       >
         <Eye className="text-[#01FFFF] group-hover:scale-110 transition-transform" size={20} />
       </button>
@@ -114,12 +116,12 @@ export default function AccessibilityWidget() {
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-white font-bold text-lg flex items-center gap-2">
                 <Eye className="text-[#01FFFF]" size={20} />
-                Accessibility
+                {t('accessibility.widget.panel_title')}
               </h3>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800/30 rounded-lg"
-                aria-label="Close accessibility menu"
+                aria-label={t('accessibility.widget.close_button_label')}
               >
                 <X size={20} />
               </button>
@@ -132,8 +134,8 @@ export default function AccessibilityWidget() {
                 <div className="flex items-center gap-3">
                   <Contrast className="text-[#01FFFF]" size={18} />
                   <div>
-                    <h4 className="text-white font-medium text-sm">High Contrast</h4>
-                    <p className="text-gray-400 text-xs">Increase color contrast</p>
+                    <h4 className="text-white font-medium text-sm">{t('accessibility.widget.high_contrast_label')}</h4>
+                    <p className="text-gray-400 text-xs">{t('accessibility.widget.high_contrast_desc')}</p>
                   </div>
                 </div>
                 <button
@@ -143,7 +145,7 @@ export default function AccessibilityWidget() {
                       ? 'bg-[#01FFFF]/20 border-[#01FFFF]/30' 
                       : 'bg-gray-700/50 border-gray-600'
                   }`}
-                  aria-label={settings.highContrast ? 'Disable high contrast' : 'Enable high contrast'}
+                  aria-label={settings.highContrast ? t('accessibility.widget.high_contrast_disable') : t('accessibility.widget.high_contrast_enable')}
                 >
                   <div className={`w-5 h-5 rounded-full transition-all duration-300 ${
                     settings.highContrast 
@@ -158,8 +160,8 @@ export default function AccessibilityWidget() {
                 <div className="flex items-center gap-3">
                   <Type className="text-[#01A9FF]" size={18} />
                   <div>
-                    <h4 className="text-white font-medium text-sm">Large Text</h4>
-                    <p className="text-gray-400 text-xs">Increase text size</p>
+                    <h4 className="text-white font-medium text-sm">{t('accessibility.widget.large_text_label')}</h4>
+                    <p className="text-gray-400 text-xs">{t('accessibility.widget.large_text_desc')}</p>
                   </div>
                 </div>
                 <button
@@ -169,7 +171,7 @@ export default function AccessibilityWidget() {
                       ? 'bg-[#01A9FF]/20 border-[#01A9FF]/30' 
                       : 'bg-gray-700/50 border-gray-600'
                   }`}
-                  aria-label={settings.largeText ? 'Disable large text' : 'Enable large text'}
+                  aria-label={settings.largeText ? t('accessibility.widget.large_text_disable') : t('accessibility.widget.large_text_enable')}
                 >
                   <div className={`w-5 h-5 rounded-full transition-all duration-300 ${
                     settings.largeText 
@@ -184,8 +186,8 @@ export default function AccessibilityWidget() {
                 <div className="flex items-center gap-3">
                   <MousePointer className="text-[#01FFFF]/70" size={18} />
                   <div>
-                    <h4 className="text-white font-medium text-sm">Reduced Motion</h4>
-                    <p className="text-gray-400 text-xs">Minimize animations</p>
+                    <h4 className="text-white font-medium text-sm">{t('accessibility.widget.reduced_motion_label')}</h4>
+                    <p className="text-gray-400 text-xs">{t('accessibility.widget.reduced_motion_desc')}</p>
                   </div>
                 </div>
                 <button
@@ -195,7 +197,7 @@ export default function AccessibilityWidget() {
                       ? 'bg-[#01FFFF]/20 border-[#01FFFF]/30' 
                       : 'bg-gray-700/50 border-gray-600'
                   }`}
-                  aria-label={settings.reducedMotion ? 'Enable animations' : 'Disable animations'}
+                  aria-label={settings.reducedMotion ? t('accessibility.widget.reduced_motion_disable') : t('accessibility.widget.reduced_motion_enable')}
                 >
                   <div className={`w-5 h-5 rounded-full transition-all duration-300 ${
                     settings.reducedMotion 
@@ -210,8 +212,8 @@ export default function AccessibilityWidget() {
                 <div className="flex items-center gap-3">
                   <Eye className="text-[#01A9FF]" size={18} />
                   <div>
-                    <h4 className="text-white font-medium text-sm">Focus Indicators</h4>
-                    <p className="text-gray-400 text-xs">Show keyboard focus</p>
+                    <h4 className="text-white font-medium text-sm">{t('accessibility.widget.focus_indicators_label')}</h4>
+                    <p className="text-gray-400 text-xs">{t('accessibility.widget.focus_indicators_desc')}</p>
                   </div>
                 </div>
                 <button
@@ -221,7 +223,7 @@ export default function AccessibilityWidget() {
                       ? 'bg-[#01A9FF]/20 border-[#01A9FF]/30' 
                       : 'bg-gray-700/50 border-gray-600'
                   }`}
-                  aria-label={settings.focusVisible ? 'Hide focus indicators' : 'Show focus indicators'}
+                  aria-label={settings.focusVisible ? t('accessibility.widget.focus_indicators_disable') : t('accessibility.widget.focus_indicators_enable')}
                 >
                   <div className={`w-5 h-5 rounded-full transition-all duration-300 ${
                     settings.focusVisible 
@@ -238,15 +240,15 @@ export default function AccessibilityWidget() {
                 onClick={resetSettings}
                 className="w-full py-2 px-4 bg-gray-800/50 text-gray-300 rounded-lg hover:bg-gray-800/70 hover:text-white transition-all duration-300 text-sm"
               >
-                Reset to Default
+                {t('accessibility.widget.reset_button')}
               </button>
             </div>
 
             {/* Info */}
             <div className="mt-4 text-xs text-gray-500">
-              <p>These settings help make our website more accessible for everyone.</p>
+              <p>{t('accessibility.widget.info_text')}</p>
               <a href="/accessibility" className="text-[#01FFFF] hover:underline mt-2 block">
-                View Accessibility Statement
+                {t('accessibility.widget.view_statement')}
               </a>
             </div>
           </motion.div>

@@ -10,5 +10,29 @@
   "keyboard_navigation": "Πλοήγηση με πληκτρολόγιο",
   "aria_labels": "ARIA ετικέτες και περιγραφές",
   "color_contrast": "Αντίθεση χρωμάτων",
-  "screen_reader": "Υποστήριξη screen reader"
+  "screen_reader": "Υποστήριξη screen reader",
+  "widget": {
+    "panel_title": "Προσβασιμότητα",
+    "open_button_label": "Επιλογές Προσβασιμότητας",
+    "close_button_label": "Κλείσιμο μενού προσβασιμότητας",
+    "high_contrast_label": "Υψηλή Αντίθεση",
+    "high_contrast_desc": "Αύξηση αντίθεσης χρωμάτων",
+    "high_contrast_enable": "Ενεργοποίηση υψηλής αντίθεσης",
+    "high_contrast_disable": "Απενεργοποίηση υψηλής αντίθεσης",
+    "large_text_label": "Μεγάλο Κείμενο",
+    "large_text_desc": "Αύξηση μεγέθους κειμένου",
+    "large_text_enable": "Ενεργοποίηση μεγάλου κειμένου",
+    "large_text_disable": "Απενεργοποίηση μεγάλου κειμένου",
+    "reduced_motion_label": "Μειωμένη Κίνηση",
+    "reduced_motion_desc": "Ελαχιστοποίηση κινούμενων εικόνων",
+    "reduced_motion_enable": "Απενεργοποίηση κινούμενων εικόνων",
+    "reduced_motion_disable": "Ενεργοποίηση κινούμενων εικόνων",
+    "focus_indicators_label": "Δείκτες Εστίασης",
+    "focus_indicators_desc": "Εμφάνιση εστίασης πληκτρολογίου",
+    "focus_indicators_enable": "Εμφάνιση δεικτών εστίασης",
+    "focus_indicators_disable": "Απόκρυψη δεικτών εστίασης",
+    "reset_button": "Επαναφορά στις Προεπιλογές",
+    "info_text": "Αυτές οι ρυθμίσεις βοηθούν να γίνει η ιστοσελίδα μας πιο προσβάσιμη για όλους.",
+    "view_statement": "Δείτε τη Δήλωση Προσβασιμότητας"
+  }
 }

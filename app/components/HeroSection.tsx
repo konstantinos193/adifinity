@@ -1,43 +1,41 @@
 "use client"
 
 import { motion, useReducedMotion } from "framer-motion"
-import { ChevronDownIcon } from "@heroicons/react/24/outline"
+import Image from "next/image"
 import Link from "next/link"
 import { useTranslations } from "@/components/useTranslations"
+import SectionBackground from "./SectionBackground"
 
 export default function HeroSection() {
   const { t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
 
+  const stats = t('hero.stats') as { value: string; label: string }[]
+
   return (
-    <section className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden">
-      {/* Background elements */}
+    <section className="min-h-[100dvh] flex flex-col justify-center relative overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 bg-[#07141C] z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-[#07141C] via-[#071a24] to-[#061218] opacity-80"></div>
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, #01FFFF 1px, transparent 1px), linear-gradient(to bottom, #01FFFF 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-        <div className="absolute -top-20 right-0 w-[400px] h-[400px] bg-[#01FFFF]/5 rounded-full blur-[100px]"></div>
       </div>
+      <SectionBackground />
 
       {/* Main content */}
-      <div className="container mx-auto px-4 text-center relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pt-28 pb-16">
+
+        {/* Headline + description + logo */}
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10 mb-10">
         <motion.div
+          className="max-w-3xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: shouldReduceMotion ? 0 : 0.3 }}
         >
-          {/* Headline - reduced delays for faster LCP */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <motion.span
               initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0 }}
+              transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: 0 }}
               style={{ willChange: 'opacity, transform' }}
             >
               {t('hero.title_parts.part1')}
@@ -79,89 +77,93 @@ export default function HeroSection() {
           </h1>
 
           <motion.p
-            className="text-base md:text-xl lg:text-2xl mb-8 md:mb-10 opacity-80 max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-gray-300 leading-relaxed max-w-xl"
             initial={{ opacity: shouldReduceMotion ? 1 : 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.25 }}
-            style={{ willChange: 'opacity' }}
           >
             {t('hero.description_long')}
           </motion.p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row justify-center gap-4 px-4 sm:px-0"
-            initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.3 }}
-            style={{ willChange: 'opacity, transform' }}
-          >
-            <Link href="/services">
-              <motion.button
-                className="bg-[#01FFFF] hover:bg-[#01FFFF]/90 text-[#07141C] font-bold py-3 px-8 md:px-10 rounded-full text-base md:text-lg w-full sm:w-auto min-w-[200px] transition-transform will-change-transform"
-                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
-                whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
-              >
-                {t('hero.see_more')}
-              </motion.button>
-            </Link>
-
-            <Link href="/contact">
-              <motion.button
-                className="border-2 border-[#01FFFF] text-[#01FFFF] font-bold py-3 px-8 md:px-10 rounded-full text-base md:text-lg hover:bg-[#01FFFF]/10 transition-colors w-full sm:w-auto min-w-[200px]"
-                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
-                whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
-              >
-                {t('hero.contact_us')}
-              </motion.button>
-            </Link>
-          </motion.div>
         </motion.div>
 
-        {/* Service tags */}
+        {/* Company logo on the right */}
         <motion.div
-          className="flex justify-center gap-3 mt-12 flex-wrap"
-          initial={{ opacity: shouldReduceMotion ? 1 : 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.35 }}
-          style={{ willChange: 'opacity' }}
+          className="hidden lg:flex flex-1 justify-center"
+          initial={{ opacity: shouldReduceMotion ? 1 : 0, scale: shouldReduceMotion ? 1 : 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.4, delay: shouldReduceMotion ? 0 : 0.15 }}
         >
-          {(t('hero.services') as string[]).map((service: string, index: number) => (
-            <motion.div
-              key={service}
-              className="px-4 py-1.5 rounded-full bg-[#0A1A24] border border-[#01FFFF]/20 text-sm transition-transform will-change-transform"
-              initial={{ opacity: shouldReduceMotion ? 1 : 0, x: shouldReduceMotion ? 0 : -5 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: shouldReduceMotion ? 0 : 0.2, delay: shouldReduceMotion ? 0 : 0.35 + index * 0.05 }}
-              whileHover={shouldReduceMotion ? {} : { y: -2 }}
+          <Image
+            src="/logo.png"
+            alt="AdInfinity"
+            width={320}
+            height={320}
+            priority
+            className="w-64 h-auto xl:w-80"
+          />
+        </motion.div>
+        </div>
+
+        {/* CTA buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 mb-14"
+          initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.3 }}
+        >
+          <Link href="/services">
+            <motion.button
+              className="bg-[#01FFFF] hover:bg-[#01FFFF]/90 text-[#07141C] font-bold py-3 px-8 rounded text-base w-full sm:w-auto transition-colors"
+              whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+              whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
             >
-              {service}
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+              {t('hero.see_more')}
+            </motion.button>
+          </Link>
 
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
-        initial={{ opacity: shouldReduceMotion ? 1 : 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.4 }}
-      >
-        <motion.div
-          animate={shouldReduceMotion ? {} : { y: [0, 8, 0] }}
-          transition={
-            shouldReduceMotion
-              ? {}
-              : {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 2,
-                  ease: "easeInOut",
-                }
-          }
-        >
-          <ChevronDownIcon className="w-6 h-6 text-[#01FFFF]" />
+          <Link href="/contact">
+            <motion.button
+              className="border border-white/30 text-white font-bold py-3 px-8 rounded text-base hover:bg-white/5 transition-colors w-full sm:w-auto"
+              whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+              whileTap={shouldReduceMotion ? {} : { scale: 0.98 }}
+            >
+              {t('hero.contact_us')}
+            </motion.button>
+          </Link>
         </motion.div>
-      </motion.div>
+
+        {/* Stats bar */}
+        {Array.isArray(stats) && (
+          <motion.div
+            className="border-t border-white/10 pt-8"
+            initial={{ opacity: shouldReduceMotion ? 1 : 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: shouldReduceMotion ? 0 : 0.4, delay: shouldReduceMotion ? 0 : 0.35 }}
+          >
+            <div className="flex flex-wrap gap-8 sm:gap-12">
+              {stats.map((stat, index) => (
+                <div key={index} className="flex flex-col">
+                  <span className="text-2xl sm:text-3xl font-bold text-white">{stat.value}</span>
+                  <span className="text-sm text-gray-400 mt-0.5">{stat.label}</span>
+                </div>
+              ))}
+
+              {/* Service tags inline on the right */}
+              <div className="hidden sm:flex items-center gap-2 ml-auto flex-wrap">
+                {(t('hero.services') as string[]).map((service: string) => (
+                  <span
+                    key={service}
+                    className="px-3 py-1 rounded bg-[#0A1A24] border border-white/10 text-xs text-gray-400"
+                  >
+                    {service}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+      </div>
     </section>
   )
 }

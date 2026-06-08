@@ -3,6 +3,7 @@
 import { lazy, Suspense } from 'react'
 import HeroSection from './HeroSection'
 import ServicesSection from './ServicesSection'
+import InvitationsSection from './InvitationsSection'
 import { useTranslations } from '@/components/useTranslations'
 
 // Lazy load below-the-fold components for better LCP
@@ -26,6 +27,7 @@ export default function HomePageClient() {
     <main>
       <HeroSection />
       <ServicesSection />
+      <InvitationsSection />
       <Suspense fallback={<LoadingPlaceholder />}>
         <LogoCarousel />
       </Suspense>
