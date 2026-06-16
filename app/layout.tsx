@@ -199,6 +199,13 @@ export default function RootLayout({
   return (
     <html lang="el">
       <head>
+        {/* Preconnect hints for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://adinfinity.gr" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        
         {/* Structured Data - LocalBusiness */}
         <script
           type="application/ld+json"
@@ -326,7 +333,7 @@ export default function RootLayout({
           <AccessibilityWidget />
           <Header />
           <main id="main-content" role="main">{children}</main>
-          <Footer id="footer" />
+          <Footer />
           <CookieConsent />
           <GoogleAnalytics />
         </LocaleProvider>

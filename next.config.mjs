@@ -23,26 +23,30 @@ const nextConfig = {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+    optimizePackageImports: ['lucide-react', '@heroicons/react'],
+  },
+  webpack: (config, { isServer }) => {
+    // Reduce bundle size by optimizing imports
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    
+    // Enable tree shaking
+    config.optimization = {
+      ...config.optimization,
+      usedExports: true,
+      sideEffects: false,
+      moduleIds: 'deterministic',
+    };
+    
+    return config;
   },
   async redirects() {
-    if (process.env.NODE_ENV !== 'production') {
-      return []
-    }
     return [
-      // Force HTTPS
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'x-forwarded-proto',
-            value: 'http',
-          },
-        ],
-        permanent: true,
-        destination: 'https://adinfinity.gr/:path*',
-      },
-      // WWW to non-www redirect
+      // WWW to non-www redirect (HTTPS)
       {
         source: '/:path*',
         has: [
@@ -55,7 +59,20 @@ const nextConfig = {
         permanent: true,
         destination: 'https://adinfinity.gr/:path*',
       },
-      // Block and redirect specific old Joomla URLs with exact patterns
+      // WWW to non-www redirect (HTTP)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'host',
+            value: 'www.adinfinity.gr:80',
+          },
+        ],
+        permanent: true,
+        destination: 'https://adinfinity.gr/:path*',
+      },
+      // Redirect old Joomla URLs with query parameters to homepage
       {
         source: '/',
         has: [
@@ -63,16 +80,6 @@ const nextConfig = {
             type: 'query',
             key: 'option',
             value: 'com_k2',
-          },
-          {
-            type: 'query',
-            key: 'view',
-            value: 'itemlist',
-          },
-          {
-            type: 'query',
-            key: 'task',
-            value: 'user',
           },
         ],
         permanent: true,

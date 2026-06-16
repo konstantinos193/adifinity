@@ -19,6 +19,7 @@ export default function SkipLinks() {
         href="#main-content" 
         className="skip-link"
         aria-label="Skip to main content"
+        tabIndex={0}
       >
         Skip to main content
       </a>
@@ -28,6 +29,7 @@ export default function SkipLinks() {
         href="#navigation" 
         className="skip-link"
         aria-label="Skip to navigation"
+        tabIndex={0}
       >
         Skip to navigation
       </a>
@@ -37,6 +39,7 @@ export default function SkipLinks() {
         href="#contact-form" 
         className="skip-link"
         aria-label="Skip to contact form"
+        tabIndex={0}
       >
         Skip to contact form
       </a>
@@ -46,6 +49,7 @@ export default function SkipLinks() {
         href="#footer" 
         className="skip-link"
         aria-label="Skip to footer"
+        tabIndex={0}
       >
         Skip to footer
       </a>

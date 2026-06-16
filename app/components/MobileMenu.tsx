@@ -184,7 +184,13 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
                 transition={{ delay: 0.5 }}
               >
                 {/* Facebook */}
-                <a href="#" className="text-gray-400 hover:text-[#01FFFF] transition-colors">
+                <a
+                  href="https://www.facebook.com/1.adinfinity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit adinfinity on Facebook"
+                  className="text-gray-400 hover:text-[#01FFFF] transition-colors"
+                >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"
@@ -195,7 +201,13 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
                 </a>
 
                 {/* Instagram */}
-                <a href="#" className="text-gray-400 hover:text-[#01FFFF] transition-colors">
+                <a
+                  href="https://www.instagram.com/adinfinityads/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit adinfinity on Instagram"
+                  className="text-gray-400 hover:text-[#01FFFF] transition-colors"
+                >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                       fillRule="evenodd"

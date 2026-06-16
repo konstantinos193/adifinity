@@ -96,8 +96,8 @@ export default function HeroSection() {
           <Image
             src="/logo.png"
             alt="AdInfinity"
-            width={320}
-            height={320}
+            width={396}
+            height={105}
             priority
             className="w-64 h-auto xl:w-80"
           />

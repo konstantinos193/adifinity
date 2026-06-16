@@ -92,7 +92,6 @@ export function TechnicalSEOClient() {
         <meta name="keywords" content={t('technical_seo_page.keywords') as string} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#07141C" />
-        <link rel="canonical" href="https://adinfinity.gr/website-development/technical-seo" />
         
         {/* Open Graph */}
         <meta property="og:title" content={t('technical_seo_page.title') as string} />
