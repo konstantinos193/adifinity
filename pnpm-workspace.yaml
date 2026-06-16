@@ -1,6 +1,8 @@
 allowBuilds:
-  '@parcel/watcher': set this to true or false
-  '@swc/core': set this to true or false
-  sharp: set this to true or false
+  '@parcel/watcher': false
+  '@swc/core': false
+  sharp: false
 minimumReleaseAgeExclude:
   - react-hook-form@7.78.0
+  - nodemailer@9.0.0
+  - lucide-react@1.20.0

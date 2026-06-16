@@ -3,8 +3,8 @@ import { getKeywords } from '@/lib/keywords'
 import HomePageClient from './components/HomePageClient'
 
 export const metadata: Metadata = {
-  title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Advertising & Digital Services',
-  description: 'Διαφημιστική εταιρεία στην Άρτα με 100+ πελάτες. Γραφιστική, εκτυπώσεις, ιστοσελίδες, digital marketing & διανομή εντύπων. Μετατρέπουμε ιδέες σε επιτυχίες.',
+  title: 'Διαφημιστική Εταιρεία Άρτα | adinfinity - Graphic Design, Web Development',
+  description: 'Κορυφαία διαφημιστική εταιρεία στην Άρτα. Graphic design, κατασκευή ιστοσελίδων, εκτυπώσεις, digital marketing. 100+ πελάτες. 2681 303007',
   keywords: getKeywords('home'),
   alternates: {
     canonical: 'https://adinfinity.gr/',
