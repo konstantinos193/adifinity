@@ -1,6 +1,5 @@
 'use client'
 import { useLocale } from './LocaleProvider'
-import Image from 'next/image'
 
 export default function LanguageSwitcher() {
   const { locale, setLocale } = useLocale()

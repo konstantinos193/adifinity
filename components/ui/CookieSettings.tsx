@@ -26,7 +26,7 @@ export default function CookieSettings() {
     if (!newSettings.analytics) {
       // Block analytics cookies
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag = function() { return null }
+        (window as { gtag?: () => null }).gtag = function() { return null }
       }
       document.cookie.split(";").forEach(function(c) {
         if (c.trim().startsWith("_ga") || c.trim().startsWith("_gid")) {

@@ -11,7 +11,6 @@ import {
 } from "../components/ServiceIcons"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import SEOContent from "./SEOContent"
 import { useTranslations } from "../../components/useTranslations"
 
 export function ServicesPageClient() {
@@ -58,7 +57,6 @@ export function ServicesPageClient() {
   
   return (
     <main className="services-page min-h-screen pt-32 pb-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24] relative overflow-hidden">
-      <SEOContent />
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[#07141C]/90"></div>

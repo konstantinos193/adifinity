@@ -5,6 +5,21 @@ import { motion } from "framer-motion"
 import { Shield, Cookie, Eye, Settings, FileText, Mail, ArrowRight } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+interface CookieOption {
+  title: string
+  description: string
+}
+
+interface CookieService {
+  name: string
+  description: string
+}
+
+interface CookieDurationType {
+  name: string
+  description: string
+}
+
 export default function CookiePolicyContent() {
   const t = useTranslations("cookie_policy")
   return (
@@ -167,7 +182,7 @@ export default function CookiePolicyContent() {
                   {t("sections.managing.description")}
                 </p>
                 <div className="space-y-3">
-                  {t.raw("sections.managing.options").map((option: any, index: number) => (
+                  {t.raw("sections.managing.options").map((option: CookieOption, index: number) => (
                     <div key={index} className="flex items-start gap-3">
                       <div className="w-6 h-6 rounded-full bg-[#01FFFF]/20 border border-[#01FFFF]/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="text-[#01FFFF] text-xs font-bold">{index + 1}</span>
@@ -196,7 +211,7 @@ export default function CookiePolicyContent() {
                   {t("sections.thirdParty.description")}
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  {t.raw("sections.thirdParty.services").map((service: any, index: number) => (
+                  {t.raw("sections.thirdParty.services").map((service: CookieService, index: number) => (
                     <div key={index} className="bg-gray-900/50 rounded p-4">
                       <h4 className="text-white font-medium mb-2">{service.name}</h4>
                       <p className="text-gray-400 text-sm">
@@ -217,7 +232,7 @@ export default function CookiePolicyContent() {
               <h2 className="text-2xl font-bold text-white mb-4">{t("sections.duration.title")}</h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <div className="space-y-4">
-                  {t.raw("sections.duration.types").map((type: any, index: number) => (
+                  {t.raw("sections.duration.types").map((type: CookieDurationType, index: number) => (
                     <div key={index}>
                       <h4 className="text-white font-medium mb-2">{type.name}</h4>
                       <p className="text-gray-400 text-sm">

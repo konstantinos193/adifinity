@@ -8,6 +8,9 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${t("title")} | adinfinity`,
     description: t("description"),
+    alternates: {
+      canonical: "https://adinfinity.gr/cookie-policy",
+    },
     openGraph: {
       title: `${t("title")} | adinfinity`,
       description: t("description"),

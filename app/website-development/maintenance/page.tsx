@@ -1,7 +1,6 @@
 import MaintenanceClient from './MaintenanceClient'
 import { getTranslations } from 'next-intl/server'
 import { Metadata } from 'next'
-import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('maintenance_page')
@@ -9,7 +8,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: getKeywords('website-development/maintenance'),
     openGraph: {
       title: t('seo.title'),
       description: t('seo.description'),

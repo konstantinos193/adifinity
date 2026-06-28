@@ -111,7 +111,9 @@ const ChartTooltipContent = React.forwardRef<
       indicator?: "line" | "dot" | "dashed"
       nameKey?: string
       labelKey?: string
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       payload?: any[]
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       label?: any
     }
 >(
@@ -187,6 +189,7 @@ const ChartTooltipContent = React.forwardRef<
       >
         {!nestLabel ? tooltipLabel : null}
         <div className="grid gap-1.5">
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
           {payload?.map((item: any, index: number) => {
             const key = `${nameKey || item.name || item.dataKey || "value"}`
             const itemConfig = getPayloadConfigFromPayload(config, item, key)
@@ -263,6 +266,7 @@ const ChartLegend = RechartsPrimitive.Legend
 const ChartLegendContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> & {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     payload?: any[]
     verticalAlign?: string
     hideIcon?: boolean
@@ -288,6 +292,7 @@ const ChartLegendContent = React.forwardRef<
           className
         )}
       >
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
         {payload?.map((item: any) => {
           const key = `${nameKey || item.dataKey || "value"}`
           const itemConfig = getPayloadConfigFromPayload(config, item, key)

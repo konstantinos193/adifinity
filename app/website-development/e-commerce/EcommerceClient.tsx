@@ -1,18 +1,29 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ShoppingCart, CreditCard, Package, BarChart3, RefreshCw, Lock, ArrowRight, Check, Zap, TrendingUp, Users, Calendar } from "lucide-react"
+import { ShoppingCart, CreditCard, Package, BarChart3, RefreshCw, Lock, ArrowRight, Check, Users } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from "@/components/useTranslations"
 import FeatureShowcase from "@/components/ui/FeatureShowcase"
 
+interface EcommerceFeature {
+  title: string
+  description: string
+}
+
+interface PaymentCategory {
+  category: string
+  description: string
+  providers: string[]
+}
+
 const EcommerceClient = () => {
   const { t, locale } = useTranslations()
 
-  const features = t('e_commerce_page.features') as any[]
+  const features = t('e_commerce_page.features') as EcommerceFeature[]
   const whyCustom = t('e_commerce_page.why_custom') as string[]
-  const ecommercePremiumFeatures = t('e_commerce_page.premium_features') as any[]
-  const paymentCategories = t('e_commerce_page.payment_categories') as any[]
+  const ecommercePremiumFeatures = t('e_commerce_page.premium_features') as EcommerceFeature[]
+  const paymentCategories = t('e_commerce_page.payment_categories') as PaymentCategory[]
 
   const featureIcons = [
     ShoppingCart,

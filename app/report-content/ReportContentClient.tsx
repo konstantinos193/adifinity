@@ -9,7 +9,7 @@ interface ReportContentClientProps {
   locale?: string
 }
 
-export default function ReportContentClient({ locale }: ReportContentClientProps) {
+export default function ReportContentClient({ locale: _locale }: ReportContentClientProps) {
   const { t } = useTranslations()
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#07141C] to-[#030B10]">

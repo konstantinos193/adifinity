@@ -26,7 +26,7 @@ export function ProjectsClient() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
   // Helper function to get localized project content
-  const getLocalizedProject = (project: any) => {
+  const getLocalizedProject = (project: { name: string; nameEn?: string; description: string; descriptionEn?: string; category: string; categoryEn?: string }) => {
     if (locale === 'en' && project.nameEn) {
       return {
         ...project,

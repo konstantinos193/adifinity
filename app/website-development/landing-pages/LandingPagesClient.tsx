@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Zap, Target, TrendingUp, Smartphone, Search, MousePointer, ArrowRight, Check, ChevronRight, Phone, Moon, Sun, Menu, X, Star, Quote, Rocket, Shield } from "lucide-react"
+import { Zap, Target, TrendingUp, Smartphone, Search, MousePointer, ArrowRight, Check, ChevronRight, Phone, Rocket, Shield } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { useTranslations } from "@/components/useTranslations"

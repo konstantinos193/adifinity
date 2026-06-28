@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { RefreshCw, ShieldCheck, Zap, GitPullRequest, Bell, Headphones, ArrowRight, Check, Star, Clock, Users, TrendingUp, Award, MessageSquare, Phone, Calendar, BarChart3, Activity, Shield, Cpu, Globe, ZapOff } from "lucide-react"
+import { RefreshCw, ShieldCheck, Zap, GitPullRequest, Bell, Headphones, ArrowRight, Check, Star, Clock, TrendingUp, MessageSquare, Phone, Calendar, Activity, ZapOff } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { useTranslations } from "@/components/useTranslations"
@@ -10,7 +10,7 @@ const MaintenanceClient: React.FC = () => {
   const { t } = useTranslations()
 
   const [selectedPlans, setSelectedPlans] = useState(["Basic", "Growth", "Pro"])
-  const [showComparison, setShowComparison] = useState(false)
+  const [_showComparison, _setShowComparison] = useState(false)
   const [showStickyCTA, setShowStickyCTA] = useState(false)
 
   const included = t('maintenance_page.included') as unknown as Array<{
@@ -30,7 +30,7 @@ const MaintenanceClient: React.FC = () => {
   }>
 
   const whyRetainer = t('maintenance_page.why_retainer') as unknown as string[]
-  const testimonials = t('maintenance_page.testimonials') as unknown as Array<{
+  const _testimonials = t('maintenance_page.testimonials') as unknown as Array<{
     name: string
     company: string
     content: string
@@ -69,7 +69,7 @@ const MaintenanceClient: React.FC = () => {
     Check
   ]
 
-  const togglePlan = (planName: string) => {
+  const _togglePlan = (planName: string) => {
     setSelectedPlans(prev => 
       prev.includes(planName) 
         ? prev.filter(p => p !== planName)
@@ -77,7 +77,7 @@ const MaintenanceClient: React.FC = () => {
     )
   }
 
-  const filteredPlans = Array.isArray(plans) ? plans.filter(plan => selectedPlans.includes(plan.name)) : []
+  const _filteredPlans = Array.isArray(plans) ? plans.filter(plan => selectedPlans.includes(plan.name)) : []
 
   // Handle scroll for sticky CTA
   useEffect(() => {

@@ -15,10 +15,16 @@ const serviceIcons = {
   product_research: Lightbulb
 }
 
+interface Service {
+  title: string
+  description: string
+  features: string[]
+}
+
 export function MarketResearchClient() {
   const { t } = useTranslations()
 
-  const services = t('market_research_page.services') as Record<string, any>
+  const services = t('market_research_page.services') as Record<string, Service>
 
   return (
     <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24]">

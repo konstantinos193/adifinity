@@ -150,7 +150,7 @@ export function ContactClient() {
                   <div className="w-full">
                     <h3 className="font-medium text-white mb-3">{t('contact.working_hours')}</h3>
                     <div className="space-y-2">
-                      {schedule.map((scheduleItem, index) => (
+                      {schedule.map((scheduleItem, _index) => (
                         <div 
                           key={scheduleItem.day}
                           className={`flex items-center justify-between p-2 rounded-lg transition-colors ${

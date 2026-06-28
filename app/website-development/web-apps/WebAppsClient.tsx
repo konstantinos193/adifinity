@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Cpu, Database, Users, Calendar, LayoutDashboard, Plug, ArrowRight, Code2 } from "lucide-react"
+import { Database, Users, Calendar, LayoutDashboard, Plug, ArrowRight, Code2 } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from "@/components/useTranslations"
 
@@ -141,7 +141,7 @@ export function WebAppsClient() {
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="hidden lg:grid grid-cols-2 gap-4"
               >
-                {Array.isArray(techStack) && techStack.map((layer, i) => (
+                {Array.isArray(techStack) && techStack.map((layer, _i) => (
                   <TechStackCard
                     key={layer.label}
                     label={layer.label}
@@ -167,7 +167,7 @@ export function WebAppsClient() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-              {Array.isArray(appTypes) && appTypes.map((app, i) => {
+              {Array.isArray(appTypes) && appTypes.map((app, _i) => {
                 const Icon = appTypeIcons[app.title as keyof typeof appTypeIcons] || <Code2 className="w-5 h-5 text-[#01FFFF]" />
                 return (
                   <AppTypeCard

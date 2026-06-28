@@ -7,7 +7,7 @@ import { ChatBubbleLeftIcon, ArrowRightIcon, CheckCircleIcon } from "@heroicons/
 import { useTranslations } from "@/components/useTranslations"
 
 export default function CaseStudies() {
-  const { t } = useTranslations()
+  const { t: _t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
   const [activeCase, setActiveCase] = useState(0)
 

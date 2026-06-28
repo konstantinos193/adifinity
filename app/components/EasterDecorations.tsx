@@ -5,7 +5,7 @@ import { createPortal } from "react-dom"
 import Image from "next/image"
 
 // Easter egg SVG with different colors
-const EasterEggSVG = ({ id }: { id: number }) => (
+const EasterEggSVG = ({ id: _id }: { id: number }) => (
   <Image
     src="/easteregg.svg"
     alt="Falling Easter egg"
@@ -17,7 +17,7 @@ const EasterEggSVG = ({ id }: { id: number }) => (
 )
 
 // Define egg color combinations with dark mode variants
-const eggColors = [
+const _eggColors = [
   { 
     color1: "#C9E3F7", 
     color2: "#AED5F3",
@@ -83,7 +83,7 @@ const FallingEgg = ({
         })
 
         // Gentle wobble instead of full rotation
-        setRotation((prev) => {
+        setRotation((_prev) => {
           const wobble = Math.sin(Date.now() * 0.005) * 10 // Wobble between -10 and 10 degrees
           return wobble
         })

@@ -1,17 +1,11 @@
 import type { Metadata } from 'next'
-import { getKeywords } from '@/lib/keywords'
 import { ServicesPageClient } from './ServicesPageClient'
 
 export const metadata: Metadata = {
   title: 'Υπηρεσίες | adinfinity - Διαφημιστική Εταιρεία Άρτα',
   description: 'Πλήρες φάσμα διαφημιστικών υπηρεσιών στην Άρτα: Εκτυπώσεις, γραφιστική, ιστοσελίδες, digital marketing, διανομή εντύπων, έρευνα αγοράς. Επαγγελματικές λύσεις +30 2681 303007',
-  keywords: getKeywords('services'),
   alternates: {
     canonical: 'https://adinfinity.gr/services',
-    languages: {
-      'el-GR': 'https://adinfinity.gr/services',
-      'el': 'https://adinfinity.gr/services',
-    },
   },
   openGraph: {
     title: 'Υπηρεσίες | adinfinity - Διαφημιστικές Υπηρεσίες Άρτα',

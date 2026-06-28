@@ -15,7 +15,7 @@ const COOKIE_CONSENT_KEY = "adinfinity-cookie-consent"
 const COOKIE_SETTINGS_KEY = "adinfinity-cookie-settings"
 
 export default function CookieConsent() {
-  const { t, locale } = useTranslations()
+  const { t, locale: _locale } = useTranslations()
   const [showConsent, setShowConsent] = useState(false)
   const [showSettings, setShowSettings] = useState(false)
   const [settings, setSettings] = useState<CookieSettings>({
@@ -60,7 +60,7 @@ export default function CookieConsent() {
     // Block Google Analytics if analytics consent is not given
     if (!cookieSettings.analytics) {
       // Disable GA tracking
-      ;(window as any).gtag = function() { return null }
+      ;(window as { gtag?: () => null }).gtag = function() { return null }
       // Remove GA cookies
       document.cookie.split(";").forEach(function(c) {
         if (c.trim().startsWith("_ga") || c.trim().startsWith("_gid")) {

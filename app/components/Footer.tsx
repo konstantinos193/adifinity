@@ -5,6 +5,11 @@ import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react"
 import { useTranslations } from "@/components/useTranslations"
 
+interface LinkItem {
+  path: string
+  name: string
+}
+
 // Custom SVG Icons for desktop
 const FacebookIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="#01FFFF" xmlns="http://www.w3.org/2000/svg">
@@ -27,6 +32,9 @@ const LinkedinIcon = () => (
 export default function Footer() {
   const { t } = useTranslations()
   const currentYear = new Date().getFullYear()
+
+  const _quickLinks = t('footer.quick_links.links') as LinkItem[]
+  const _serviceLinks = t('footer.services.links') as LinkItem[]
 
   return (
     <footer className="relative bg-gradient-to-b from-[#071218] to-[#030B10] pt-10 pb-6 overflow-hidden">
@@ -92,7 +100,7 @@ export default function Footer() {
           >
             <h3 className="text-lg font-bold mb-4 text-white">{t('footer.quick_links.title')}</h3>
             <ul className="space-y-2">
-              {Array.isArray(t('footer.quick_links.links')) ? (t('footer.quick_links.links') as any[]).map((item: any, index: number) => (
+              {Array.isArray(t('footer.quick_links.links')) ? (t('footer.quick_links.links') as LinkItem[]).map((item: LinkItem, index: number) => (
                 <motion.li
                   key={index}
                   whileHover={{ x: 5 }}
@@ -123,7 +131,7 @@ export default function Footer() {
           >
             <h3 className="text-lg font-bold mb-4 text-white">{t('footer.services.title')}</h3>
             <ul className="space-y-2">
-              {Array.isArray(t('footer.services.links')) ? (t('footer.services.links') as any[]).map((item: any, index: number) => (
+              {Array.isArray(t('footer.services.links')) ? (t('footer.services.links') as LinkItem[]).map((item: LinkItem, index: number) => (
                 <motion.li
                   key={index}
                   whileHover={{ x: 5 }}
@@ -324,7 +332,7 @@ export default function Footer() {
 
           {/* Quick links - Two columns */}
           <div className="grid grid-cols-2 gap-2 mb-4 text-xs">
-            {Array.isArray(t('footer.quick_links.links')) ? (t('footer.quick_links.links') as any[]).map((item, index) => (
+            {Array.isArray(t('footer.quick_links.links')) ? (t('footer.quick_links.links') as LinkItem[]).map((item: LinkItem, index) => (
               <Link key={index} href={item.path} className="text-gray-400 hover:text-white transition-colors">
                 {item.name}
               </Link>

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, X, ArrowRight, Star, Zap } from "lucide-react"
+import { Check, ArrowRight, Star, Zap } from "lucide-react"
 import { useState } from "react"
 
 interface PricingTier {
@@ -9,7 +9,7 @@ interface PricingTier {
   price: string
   description: string
   features: string[]
-  icon?: React.ComponentType<any>
+  icon?: React.ComponentType<{ className?: string }>
   popular?: boolean
   savings?: string
   timeline?: string

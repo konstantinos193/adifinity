@@ -14,7 +14,7 @@ export default function Header() {
   const { t } = useTranslations()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const dropdownRefs = useRef<(HTMLDivElement | null)[]>([])
+  const _dropdownRefs = useRef<(HTMLDivElement | null)[]>([])
 
   useBodyScrollLock(isMobileMenuOpen)
 

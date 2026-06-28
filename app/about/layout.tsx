@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
-import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -13,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
   
   // Dynamic content based on locale
-  const structuredData = locale === 'el' ? {
+  const _structuredData = locale === 'el' ? {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "adinfinity - Διαφημιστική Εταιρεία",
@@ -108,15 +107,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: getKeywords('about'),
     alternates: {
       canonical: 'https://adinfinity.gr/about',
-      languages: {
-        'el-GR': 'https://adinfinity.gr/about',
-        'el': 'https://adinfinity.gr/about',
-        'en': 'https://adinfinity.gr/about',
-        'en-US': 'https://adinfinity.gr/about'
-      },
     },
     openGraph: {
       title: t('seo.title'),

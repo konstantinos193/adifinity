@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-import { getKeywords } from "@/lib/keywords"
 import DSAContentClient from "./DSAContentClient"
 
 export const metadata: Metadata = {
@@ -8,7 +7,6 @@ export const metadata: Metadata = {
     template: "%s | adinfinity",
   },
   description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",
-  keywords: getKeywords('dsa-compliance'),
   openGraph: {
     title: "DSA Compliance | adinfinity",
     description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",
@@ -31,11 +29,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://adinfinity.gr/dsa-compliance",
-    languages: {
-      "el-GR": "https://adinfinity.gr/dsa-compliance",
-      "el": "https://adinfinity.gr/dsa-compliance",
-      "en": "https://adinfinity.gr/dsa-compliance",
-    },
   },
   robots: {
     index: true,

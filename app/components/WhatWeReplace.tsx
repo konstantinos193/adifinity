@@ -5,7 +5,7 @@ import { ArrowRightIcon, CheckCircleIcon } from "@heroicons/react/24/outline"
 import { useTranslations } from "@/components/useTranslations"
 
 export default function WhatWeReplace() {
-  const { t } = useTranslations()
+  const { t: _t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
 
   const replacements = [

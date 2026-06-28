@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Check, Star, Zap, Shield, TrendingUp } from "lucide-react"
+import { ArrowRight, Check, Star, Zap } from "lucide-react"
 import { useState } from "react"
 
 interface Feature {
@@ -9,7 +9,7 @@ interface Feature {
   price: string
   description: string
   features: string[]
-  icon: React.ComponentType<any>
+  icon: React.ComponentType<{ className?: string }>
   popular?: boolean
   recurring?: string
   timeline?: string

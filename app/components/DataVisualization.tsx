@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { useTranslations } from "@/components/useTranslations"
 
 export function DataVisualization() {

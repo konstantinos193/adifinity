@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion"
 import { useTranslations } from "@/components/useTranslations"
 
 export default function ProofBar() {
-  const { t } = useTranslations()
+  const { t: _t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
 
   const metrics = [
@@ -76,7 +76,7 @@ export default function ProofBar() {
             Partnered with industry leaders across sectors
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {['TechFix', 'Bohĕme', 'Energy House', 'Maxim Cafe', 'WEST GAS'].map((name, index) => (
+            {['TechFix', 'Bohĕme', 'Energy House', 'Maxim Cafe', 'WEST GAS'].map((name, _index) => (
               <div key={name} className="text-white font-medium">
                 {name}
               </div>

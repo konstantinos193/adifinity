@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Eye, EyeOff, Type, MousePointer, Contrast, X } from "lucide-react"
+import { Eye, Type, MousePointer, Contrast, X } from "lucide-react"
 import { useTranslations } from "../useTranslations"
 
 export default function AccessibilityWidget() {
@@ -32,47 +32,37 @@ export default function AccessibilityWidget() {
   }, [])
 
   const applySettings = (newSettings: typeof settings) => {
-    console.log('Applying accessibility settings:', newSettings)
     const root = document.documentElement
 
     // High contrast
     if (newSettings.highContrast) {
       root.classList.add('high-contrast')
-      console.log('Added high-contrast class')
     } else {
       root.classList.remove('high-contrast')
-      console.log('Removed high-contrast class')
     }
 
     // Large text
     if (newSettings.largeText) {
       root.classList.add('large-text')
-      console.log('Added large-text class')
     } else {
       root.classList.remove('large-text')
-      console.log('Removed large-text class')
     }
 
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion')
-      console.log('Added reduced-motion class')
     } else {
       root.classList.remove('reduced-motion')
-      console.log('Removed reduced-motion class')
     }
 
     // Focus visible
     if (newSettings.focusVisible) {
       root.classList.add('focus-visible')
-      console.log('Added focus-visible class')
     } else {
       root.classList.remove('focus-visible')
-      console.log('Removed focus-visible class')
     }
 
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
-    console.log('Current document classes:', document.documentElement.className)
   }
 
   const updateSetting = (key: keyof typeof settings, value: boolean) => {

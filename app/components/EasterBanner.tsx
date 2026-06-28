@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { X } from "lucide-react"
-import { EasterEggIcon, EasterBunnyIcon } from "./EasterIcons"
 
 export default function EasterBanner() {
   const [isVisible, setIsVisible] = useState(true)

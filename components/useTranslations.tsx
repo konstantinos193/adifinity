@@ -1,8 +1,6 @@
 'use client'
 
 import { useLocale } from './LocaleProvider'
-import { useMemo } from 'react'
-import type { Messages } from '../types/messages'
 
 // Import all message files statically for better performance
 import enCommon from '../messages/en/common.json'
@@ -64,6 +62,7 @@ import elProjectsPage from '../messages/el/projects_page.json'
 import enSeo from '../messages/en/seo.json'
 import elSeo from '../messages/el/seo.json'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const messageCache: Record<string, Record<string, any>> = {
   en: {
     common: enCommon,
@@ -141,6 +140,7 @@ export function useTranslations() {
     }
   }
   
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const t = (key: string): any => {
     // Handle keys that don't start with a section name (like 'footer.quick_links.links')
     // by defaulting to the 'common' section
@@ -156,6 +156,7 @@ export function useTranslations() {
     
     const messages = getMessages(section)
     
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let result: any = messages
     for (const k of rest) {
       if (result && typeof result === 'object' && k in result) {
@@ -167,6 +168,6 @@ export function useTranslations() {
     
     return result || key
   }
-  
+
   return { t, locale, isReady }
 }

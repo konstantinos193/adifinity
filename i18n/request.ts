@@ -1,6 +1,5 @@
 import { getRequestConfig } from 'next-intl/server'
 import { routing } from '../i18n'
-import { notFound } from 'next/navigation'
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale
@@ -43,13 +42,14 @@ export default getRequestConfig(async ({ requestLocale }) => {
     'homepage',
   ]
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const messages: Record<string, any> = {}
   
   for (const file of messageFiles) {
     try {
       const fileMessages = (await import(`../messages/${locale}/${file}.json`)).default
       messages[file] = fileMessages
-    } catch (error) {
+    } catch (_error) {
       console.warn(`Failed to load ${file} messages for locale: ${locale}`)
     }
   }

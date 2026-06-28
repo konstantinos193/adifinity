@@ -1,9 +1,8 @@
 "use client"
 
-import { Metadata } from "next"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Shield, AlertTriangle, Users, FileText, Mail, ArrowRight, CheckCircle } from "lucide-react"
+import { Shield, AlertTriangle, Users, FileText, Mail, ArrowRight } from "lucide-react"
 import { useTranslations } from "@/components/useTranslations"
 
 export default function DSAContentClient() {
@@ -63,7 +62,7 @@ export default function DSAContentClient() {
                   <div className="bg-gray-900/50 rounded p-4">
                     <h4 className="text-white font-medium mb-2">{t('dsa_compliance.content_moderation.prohibited_content.title')}</h4>
                     <ul className="text-sm text-gray-400 space-y-1">
-                      {t('dsa_compliance.content_moderation.prohibited_content.items').map((item: string, index: number) => (
+                      {(t('dsa_compliance.content_moderation.prohibited_content.items') as string[]).map((item, index) => (
                         <li key={index}>• {item}</li>
                       ))}
                     </ul>
@@ -72,7 +71,7 @@ export default function DSAContentClient() {
                   <div className="bg-gray-900/50 rounded p-4">
                     <h4 className="text-white font-medium mb-2">{t('dsa_compliance.content_moderation.moderation_process.title')}</h4>
                     <ul className="text-sm text-gray-400 space-y-1">
-                      {t('dsa_compliance.content_moderation.moderation_process.items').map((item: string, index: number) => (
+                      {(t('dsa_compliance.content_moderation.moderation_process.items') as string[]).map((item, index) => (
                         <li key={index}>• {item}</li>
                       ))}
                     </ul>

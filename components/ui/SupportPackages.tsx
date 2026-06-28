@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Shield, Clock, Users, Zap, Check, ArrowRight, Star } from "lucide-react"
+import { Shield, Clock, Zap, Check, ArrowRight, Star } from "lucide-react"
 import { useState } from "react"
 
 interface SupportPackage {
@@ -10,7 +10,7 @@ interface SupportPackage {
   description: string
   features: string[]
   responseTime: string
-  icon: React.ComponentType<any>
+  icon: React.ComponentType<{ className?: string }>
   popular?: boolean
   color: string
 }

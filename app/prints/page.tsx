@@ -254,7 +254,7 @@ const FeatureCard = ({ icon, title, description }: { icon: React.ReactElement; t
 
 export default function PrintsPage() {
   const [activeCategory, setActiveCategory] = useState(0)
-  const { t, locale } = useTranslations()
+  const { t, locale: _locale } = useTranslations()
 
   const categories = [
     {

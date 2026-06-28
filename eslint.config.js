@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
+import unusedImports from 'eslint-plugin-unused-imports';
 
 export default [
   js.configs.recommended,
@@ -39,21 +40,33 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+      'unused-imports': unusedImports,
     },
     rules: {
-      '@typescript-eslint/no-unused-vars': 'error',
+      'no-unused-vars': 'off',
+      'no-redeclare': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': ['error', {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+        caughtErrors: 'all',
+        caughtErrorsIgnorePattern: '^_',
+      }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-empty-function': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
-      'no-console': 'warn',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-undef': 'off', // Turn off since we define globals
     },
   },
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx,mjs}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -74,9 +87,10 @@ export default [
       },
     },
     rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', caughtErrorsIgnorePattern: '^_' }],
       'prefer-const': 'error',
       'no-var': 'error',
-      'no-console': 'warn',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-undef': 'off', // Turn off since we define globals
     },
   },

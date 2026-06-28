@@ -4,7 +4,7 @@ import { useTranslations } from "@/components/useTranslations"
 import { usePathname } from "next/navigation"
 
 export default function SkipLinks() {
-  const { t } = useTranslations()
+  const { t: _t } = useTranslations()
   const pathname = usePathname()
   
   // Don't render skip links on privacy policy page

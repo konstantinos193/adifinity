@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('graphic_design_page')
@@ -8,15 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: getKeywords('graphic-design'),
     alternates: {
       canonical: 'https://adinfinity.gr/graphic-design',
-      languages: {
-        'el-GR': 'https://adinfinity.gr/graphic-design',
-        'el': 'https://adinfinity.gr/graphic-design',
-        'en': 'https://adinfinity.gr/graphic-design',
-        'en-US': 'https://adinfinity.gr/graphic-design'
-      },
     },
     openGraph: {
       title: t('seo.title'),

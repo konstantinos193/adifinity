@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { getTranslations, getLocale } from 'next-intl/server'
-import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
@@ -13,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
   
   // Dynamic content based on locale
-  const structuredData = locale === 'el' ? {
+  const _structuredData = locale === 'el' ? {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Custom Landing Pages Development",
@@ -181,7 +180,7 @@ export async function generateMetadata(): Promise<Metadata> {
     "priceRange": "€€€"
   }
 
-  const localBusinessData = locale === 'el' ? {
+  const _localBusinessData = locale === 'el' ? {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "adinfinity - Landing Pages Άρτα",
@@ -244,15 +243,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: getKeywords('website-development/landing-pages'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development/landing-pages',
-      languages: {
-        'el-GR': 'https://adinfinity.gr/website-development/landing-pages',
-        'el': 'https://adinfinity.gr/website-development/landing-pages',
-        'en': 'https://adinfinity.gr/website-development/landing-pages',
-        'en-US': 'https://adinfinity.gr/website-development/landing-pages'
-      },
     },
     openGraph: {
       title: t('seo.title'),

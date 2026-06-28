@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import { getKeywords } from '@/lib/keywords'
 
 export const metadata: Metadata = {
   title: 'Τιμοκατάλογος Υπηρεσιών Άρτα | adinfinity',
   description: 'Διαφανείς τιμές για ιστοσελίδες, γραφιστική, εκτυπώσεις, διανομή εντύπων & έρευνα αγοράς στην Άρτα. Δείτε τα πακέτα της adinfinity. ☎ 2681 303007',
-  keywords: getKeywords('pricing'),
   openGraph: {
     title: 'Τιμοκατάλογος Υπηρεσιών Άρτα | adinfinity',
     description: 'Διαφανείς τιμές για ιστοσελίδες, γραφιστική, εκτυπώσεις, διανομή εντύπων & έρευνα αγοράς στην Άρτα.',

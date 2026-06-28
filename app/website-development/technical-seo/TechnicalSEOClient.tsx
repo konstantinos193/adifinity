@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { Search, Zap, BarChart3, Code2, Globe, FileText, ArrowRight, Check, Star, Quote, Phone, Award, TrendingUp, Clock, Target, Shield, AlertCircle, Info } from "lucide-react"
+import { Search, Zap, BarChart3, Code2, Globe, FileText, ArrowRight, Check, Phone, Award, TrendingUp, Clock, Target, Shield, Info } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import Head from "next/head"
@@ -9,7 +9,7 @@ import { useTranslations } from "@/components/useTranslations"
 
 // Disable Framer Motion SSR warnings
 if (typeof window === "undefined") {
-  (motion as any).useReducedMotion = true
+  (motion as { useReducedMotion?: boolean }).useReducedMotion = true
 }
 
 export function TechnicalSEOClient() {

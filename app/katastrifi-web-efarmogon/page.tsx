@@ -1,18 +1,12 @@
 import type { Metadata } from 'next'
-import { getKeywords } from '@/lib/keywords'
 import KatastrifiWebEfarmogonContent from './KatastrifiWebEfarmogonContent'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Κατασκευή Web Εφαρμογών | Custom Development | adinfinity',
     description: 'Εξειδικευμένη κατασκευή web εφαρμογών σε React & Next.js. Custom solutions για επιχειρήσεις. No templates, SEO-ready. 📞 2681 303007',
-    keywords: getKeywords('website-development'),
     alternates: {
       canonical: 'https://adinfinity.gr/katastrifi-web-efarmogon',
-      languages: {
-        'el-GR': 'https://adinfinity.gr/katastrifi-web-efarmogon',
-        'el': 'https://adinfinity.gr/katastrifi-web-efarmogon',
-      },
     },
     openGraph: {
       title: 'Κατασκευή Web Εφαρμογών | Custom Development | adinfinity',

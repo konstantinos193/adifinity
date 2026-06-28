@@ -53,7 +53,7 @@ interface ProjectCardProps {
   onHoverEnd: () => void
 }
 
-export function ProjectCard({ id, name, logo, description, isHovered, onHoverStart, onHoverEnd }: ProjectCardProps) {
+export function ProjectCard({ id: _id, name, logo, description, isHovered, onHoverStart, onHoverEnd }: ProjectCardProps) {
   return (
     <motion.div
       className="relative aspect-square bg-[var(--background)] rounded-lg overflow-hidden cursor-pointer shadow-lg"

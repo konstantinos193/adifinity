@@ -8,6 +8,40 @@ import { useState, useEffect } from "react"
 import FeatureShowcase from "@/components/ui/FeatureShowcase"
 import { useTranslations } from "@/components/useTranslations"
 
+interface ContentCard {
+  title: string
+  desc: string
+  icon?: string
+}
+
+interface PortfolioItem {
+  name: string
+  image: string
+  category: string
+  description: string
+  tags: string[]
+  url: string
+  metrics: Record<string, string | number>
+}
+
+interface Industry {
+  title: string
+  desc: string
+  icon?: string
+  features: string[]
+}
+
+interface PremiumFeature {
+  title: string
+  price: string
+  description: string
+  features: string[]
+  icon?: string
+  popular?: boolean
+  recurring?: string
+  timeline?: string
+}
+
 const CustomWebAppsClient = () => {
   const { t, locale } = useTranslations()
   const [showStickyCTA, setShowStickyCTA] = useState(false)
@@ -42,11 +76,11 @@ const CustomWebAppsClient = () => {
     }
   }
 
-  const whatWeDeliver = t('custom_web_apps_page.what_we_deliver') as any[]
-  const portfolio = t('custom_web_apps_page.portfolio_items') as any[]
+  const whatWeDeliver = t('custom_web_apps_page.what_we_deliver') as ContentCard[]
+  const portfolio = t('custom_web_apps_page.portfolio_items') as PortfolioItem[]
   const included = t('custom_web_apps_page.included_features') as string[]
-  const industries = t('custom_web_apps_page.industries') as any[]
-  const premiumFeatures = t('custom_web_apps_page.premium_features') as any[]
+  const industries = t('custom_web_apps_page.industries') as Industry[]
+  const premiumFeatures = t('custom_web_apps_page.premium_features') as PremiumFeature[]
 
   return (
     <>
@@ -225,7 +259,7 @@ const CustomWebAppsClient = () => {
             <p className="text-gray-400 text-lg">{t('custom_web_apps_page.custom_web_development_desc') as string}</p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {whatWeDeliver.map((item: any, i: number) => {
+            {whatWeDeliver.map((item, i) => {
               const Icon = getIcon(item.icon || 'Code2')
               return (
                 <motion.div key={item.title} className="bg-[#0A1A24] border border-cyan-900/30 rounded-2xl p-6 hover:border-[#01FFFF]/40 transition-all group" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}>
@@ -250,7 +284,7 @@ const CustomWebAppsClient = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {portfolio.map((p: any, i: number) => (
+            {portfolio.map((p, i) => (
               <motion.div 
                 key={p.name} 
                 className="group"
@@ -277,7 +311,7 @@ const CustomWebAppsClient = () => {
                           whileInView={{ opacity: 1, scale: 1 }}
                           transition={{ delay: 0.2 + i * 0.1 }}
                         >
-                          <div className="text-[#01FFFF] text-xs font-bold">{value}</div>
+                          <div className="text-[#01FFFF] text-xs font-bold">{String(value)}</div>
                         </motion.div>
                       ))}
                     </div>
@@ -349,7 +383,7 @@ const CustomWebAppsClient = () => {
                               <div className="grid grid-cols-3 gap-2 text-center">
                                 {Object.entries(p.metrics).map(([key, value]) => (
                                   <div key={key} className="bg-[#01FFFF]/10 rounded-lg p-2">
-                                    <div className="text-[#01FFFF] font-bold">{value}</div>
+                                    <div className="text-[#01FFFF] font-bold">{String(value)}</div>
                                     <div className="text-gray-400 text-xs capitalize">{key}</div>
                                   </div>
                                 ))}
@@ -376,7 +410,7 @@ const CustomWebAppsClient = () => {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {industries.map((industry: any, i: number) => {
+            {industries.map((industry, i) => {
               const Icon = getIcon(industry.icon || 'Code2')
               return (
                 <motion.div
@@ -415,7 +449,7 @@ const CustomWebAppsClient = () => {
       <FeatureShowcase
         title={t('custom_web_apps_page.premium_features_title') as string}
         subtitle={t('custom_web_apps_page.premium_features_title') as string}
-        features={premiumFeatures.map((feature: any) => ({
+        features={premiumFeatures.map((feature) => ({
           ...feature,
           icon: getIcon(feature.icon || 'Zap')
         }))}

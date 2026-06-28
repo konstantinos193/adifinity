@@ -5,14 +5,12 @@ import { Inter } from "next/font/google"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import LocaleProvider from "../components/LocaleProvider"
-import { DynamicSEO } from "../components/DynamicSEO"
 import CookieConsent from "../components/ui/CookieConsent"
 import SkipLinks from "../components/ui/SkipLinks"
 import AccessibilityWidget from "../components/ui/AccessibilityWidget"
 import GoogleAnalytics from "../components/GoogleAnalytics"
 import type { Metadata, Viewport } from "next"
 import { getTranslations, getLocale } from 'next-intl/server'
-import { getKeywords } from '@/lib/keywords'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -27,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
   }
   
   // Dynamic structured data based on locale
-  const structuredData = locale === 'el' ? {
+  const _structuredData = locale === 'el' ? {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Διαφημιστική adinfinity",
@@ -124,7 +122,6 @@ export async function generateMetadata(): Promise<Metadata> {
     // `template` here (that previously produced duplicated "… | adinfinity | adinfinity").
     title: t('title.default'),
     description: t('description'),
-    keywords: getKeywords('site', locale as 'el' | 'en'),
     authors: [{ name: "adinfinity" }],
     creator: "adinfinity",
     publisher: "adinfinity",
@@ -136,12 +133,6 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL("https://adinfinity.gr"),
     alternates: {
       canonical: "https://adinfinity.gr/",
-      languages: {
-        'el-GR': 'https://adinfinity.gr',
-        'el': 'https://adinfinity.gr',
-        'en': 'https://adinfinity.gr',
-        'en-US': 'https://adinfinity.gr',
-      },
     },
     openGraph: {
       type: "website",
@@ -296,14 +287,6 @@ export default function RootLayout({
                   url: "https://adinfinity.gr/logo.png",
                 },
               },
-              potentialAction: {
-                "@type": "SearchAction",
-                target: {
-                  "@type": "EntryPoint",
-                  urlTemplate: "https://adinfinity.gr/search?q={search_term_string}",
-                },
-                "query-input": "required name=search_term_string",
-              },
             }),
           }}
         />
@@ -329,7 +312,6 @@ export default function RootLayout({
       <body className={inter.className}>
         <LocaleProvider>
           <SkipLinks />
-          <DynamicSEO />
           <AccessibilityWidget />
           <Header />
           <main id="main-content" role="main">{children}</main>

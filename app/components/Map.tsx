@@ -5,7 +5,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 // Fix for missing marker icons
-const iconDefault = L.Icon.Default.prototype as any;
+const iconDefault = L.Icon.Default.prototype as { _getIconUrl?: () => string };
 if (iconDefault._getIconUrl) {
   delete iconDefault._getIconUrl;
 }

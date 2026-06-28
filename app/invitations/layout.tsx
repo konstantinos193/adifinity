@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import { getKeywords } from '@/lib/keywords'
 
 export const metadata: Metadata = {
   title: 'Ψηφιακές Γαμήλιες Προσκλήσεις | adinfinity - Δημιουργήστε την Τέλεια Πρόσκλησή σας',
   description: 'Δημιουργήστε εντυπωσιακές ψηφιακές γαμήλιες προσκλήσεις με παρακολούθηση RSVP, βίντεο και mini-website. Διαχειριστείτε τη λίστα καλεσμένων online. adinfinity +30 2681 303007',
-  keywords: getKeywords('invitations'),
   openGraph: {
     title: 'Ψηφιακές Γαμήλιες Προσκλήσεις | adinfinity',
     description: 'Εντυπωσιακές ψηφιακές γαμήλιες προσκλήσεις με RSVP tracking, βίντεο και mini-website. Δημιουργήστε τη δική σας τώρα!',
@@ -29,12 +27,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://adinfinity.gr/invitations',
-    languages: {
-      'el': 'https://adinfinity.gr/invitations',
-      'el-GR': 'https://adinfinity.gr/invitations',
-      'en': 'https://adinfinity.gr/invitations',
-      'x-default': 'https://adinfinity.gr/invitations',
-    },
   },
   robots: {
     index: true,

@@ -9,11 +9,22 @@ import { Timeline } from "../components/Timeline"
 import { OfficeShowcase } from "../components/OfficeShowcase"
 import { useTranslations } from "@/components/useTranslations"
 
+interface TeamMemberData {
+  name: string
+  role: string
+  bio: string
+}
+
+interface TeamMembers {
+  manos: TeamMemberData
+  kostas: TeamMemberData
+}
+
 export function AboutClient() {
   const { t } = useTranslations()
 
-  const teamMembers = t('about_page.team_members') as Record<string, any>
-  const timeline = t('about_page.timeline') as Record<string, any>
+  const teamMembers = t('about_page.team_members') as TeamMembers
+  const _timeline = t('about_page.timeline') as Record<string, unknown>
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#07141C] to-[#0A1A24] overflow-hidden">

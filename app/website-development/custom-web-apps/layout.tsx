@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { getKeywords } from '@/lib/keywords'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('custom_web_apps_page')
@@ -8,15 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: getKeywords('website-development/custom-web-apps'),
     alternates: {
       canonical: 'https://adinfinity.gr/website-development/custom-web-apps',
-      languages: {
-        'el-GR': 'https://adinfinity.gr/website-development/custom-web-apps',
-        'el': 'https://adinfinity.gr/website-development/custom-web-apps',
-        'en': 'https://adinfinity.gr/website-development/custom-web-apps',
-        'en-US': 'https://adinfinity.gr/website-development/custom-web-apps'
-      },
     },
     openGraph: {
       title: t('seo.title'),

@@ -35,7 +35,7 @@ export class SecurityMonitor {
     this.sendToSecurityService(securityEvent)
   }
 
-  private static sendToSecurityService(event: SecurityEvent): void {
+  private static sendToSecurityService(_event: SecurityEvent): void {
     // TODO: Integrate with security monitoring service
     // Examples: Datadog, Sentry, or custom security service
   }
@@ -69,7 +69,7 @@ export class SecurityMonitor {
   }
 
   static validatePhone(phone: string): boolean {
-    const phoneRegex = /^\+?[\d\s\-\(\)]{10,}$/
+    const phoneRegex = /^\+?[\d\s\-()]{10,}$/
     return phoneRegex.test(phone)
   }
 
@@ -100,7 +100,7 @@ export const validationSchemas = {
     errorMessage: 'Please enter a valid email address'
   } as const,
   phone: {
-    pattern: /^\+?[\d\s\-\(\)]{10,}$/,
+    pattern: /^\+?[\d\s\-()]{10,}$/,
     errorMessage: 'Please enter a valid phone number'
   } as const,
   message: {

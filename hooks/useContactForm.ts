@@ -132,7 +132,7 @@ export function useContactForm() {
         isError: false,
       })
       resetForm()
-    } catch (error) {
+    } catch (_error) {
       setSubmitStatus({
         message: "Παρουσιάστηκε σφάλμα κατά την αποστολή του μηνύματος.",
         isError: true,

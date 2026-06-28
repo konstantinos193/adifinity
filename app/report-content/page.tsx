@@ -2,17 +2,17 @@ import { getTranslations } from 'next-intl/server'
 import { routing } from '@/i18n'
 import ReportContentClient from "./ReportContentClient"
 import type { Metadata } from "next"
-import { getKeywords } from "@/lib/keywords"
 
 interface ReportContentPageProps {
-  params: {
+  params: Promise<{
     locale: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: ReportContentPageProps): Promise<Metadata> {
-  const locale = params.locale || routing.defaultLocale
-  const t = await getTranslations({ locale, namespace: 'report_content' })
+  const { locale: requestedLocale } = await params
+  const locale = requestedLocale || routing.defaultLocale
+  const _t = await getTranslations({ locale, namespace: 'report_content' })
   
   const baseUrl = process.env.NODE_ENV === 'production' ? "https://adinfinity.gr" : "https://adinfinity.gr"
   const pagePath = "/report-content"
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: ReportContentPageProps): Prom
   // SEO keywords are centralized in @/lib/keywords → getKeywords('report-content', locale)
 
   // Generate structured data based on locale
-  const generateStructuredData = (locale: string) => {
+  const _generateStructuredData = (locale: string) => {
     const localeContent = {
       el: {
         name: "Αναφορά Περιεχομένου | adinfinity",
@@ -123,18 +123,12 @@ export async function generateMetadata({ params }: ReportContentPageProps): Prom
       template: "%s | adinfinity",
     },
     description: descriptions[locale as keyof typeof descriptions] || descriptions.el,
-    keywords: getKeywords('report-content', locale as 'el' | 'en'),
     authors: [{ name: "adinfinity" }],
     creator: "adinfinity",
     publisher: "adinfinity",
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: fullUrl,
-      languages: {
-        "el-GR": `${baseUrl}/report-content`,
-        "el": `${baseUrl}/report-content`,
-        "en": `${baseUrl}/report-content`,
-      },
     },
     openGraph: {
       title: titles[locale as keyof typeof titles] || titles.el,
@@ -171,8 +165,9 @@ export async function generateMetadata({ params }: ReportContentPageProps): Prom
   }
 }
 
-export default function ReportContentPage({ params }: ReportContentPageProps) {
-  const locale = params.locale || routing.defaultLocale
+export default async function ReportContentPage({ params }: ReportContentPageProps) {
+  const { locale: requestedLocale } = await params
+  const locale = requestedLocale || routing.defaultLocale
   
   // Generate structured data based on locale
   const generateStructuredData = (locale: string) => {

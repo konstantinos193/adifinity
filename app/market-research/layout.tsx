@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations, getLocale } from 'next-intl/server'
-import { getKeywords } from '@/lib/keywords'
+import { getTranslations } from 'next-intl/server'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('market_research_page')
@@ -8,7 +7,6 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t('seo.title'),
     description: t('seo.description'),
-    keywords: getKeywords('market-research'),
     openGraph: {
       title: t('seo.title'),
       description: t('seo.description'),

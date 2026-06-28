@@ -11,7 +11,7 @@ import { useTranslations } from "@/components/useTranslations"
 import { useState } from "react"
 
 const CodeSnippet: React.FC = () => {
-  const { t } = useTranslations()
+  const { t: _t } = useTranslations()
   
   const codeSnippet = `// adinfinity stack
 const project = {
@@ -377,9 +377,9 @@ const WhyUsCard: React.FC<{
 export function WebsiteDevelopmentClient() {
   const { t } = useTranslations()
 
-  const services = t('website_development_page.services') as Record<string, any>
-  const portfolio = t('website_development_page.portfolio_items') as Array<any>
-  const process = t('website_development_page.process') as Array<any>
+  const services = t('website_development_page.services') as Record<string, { title: string; description: string; tags: string[] }>
+  const portfolio = t('website_development_page.portfolio_items') as Array<{ name: string; category: string; description: string; image: string; url: string; tags: string[]; client?: string; duration?: string; team?: string; technologies?: string[]; features?: string[]; results?: string[]; challenge?: string }>
+  const process = t('website_development_page.process') as Array<{ name: string; category: string; description: string; image: string; url: string; tags: string[]; client?: string; duration?: string; team?: string; technologies?: string[]; features?: string[]; results?: string[]; challenge?: string }>
   const techStack = t('website_development_page.tech_stack') as string[]
   const stats = t('website_development_page.stats') as Array<{num: string, label: string}>
   const features = t('website_development_page.features') as Array<{title: string, description: string}>
@@ -508,7 +508,7 @@ export function WebsiteDevelopmentClient() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {Object.entries(services).map(([key, service], i) => (
+            {Object.entries(services).map(([key, service], _i) => (
               <ServiceCard
                 key={key}
                 icon={serviceIcons[key as keyof typeof serviceIcons]}
@@ -562,7 +562,7 @@ export function WebsiteDevelopmentClient() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {portfolio.map((p, i) => (
+            {portfolio.map((p, _i) => (
               <PortfolioCard key={p.name} {...p} />
             ))}
           </div>

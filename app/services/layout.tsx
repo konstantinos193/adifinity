@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
-import { getKeywords } from '@/lib/keywords'
 
 export const metadata: Metadata = {
   title: 'Υπηρεσίες Marketing & Διαφήμισης Άρτα | adinfinity',
   description: 'Αναπτύξτε την επιχείρησή σας με τις υπηρεσίες της adinfinity: εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων & digital marketing. 100+ ικανοποιημένοι πελάτες. ☎ 2681 303007',
-  keywords: getKeywords('services'),
   openGraph: {
     title: 'Υπηρεσίες Marketing & Διαφήμισης Άρτα | adinfinity',
     description: 'Αναπτύξτε την επιχείρησή σας: εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων & digital marketing. 100+ ικανοποιημένοι πελάτες στην Άρτα.',
