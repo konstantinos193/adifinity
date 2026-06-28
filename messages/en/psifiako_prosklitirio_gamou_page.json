@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "New Service",
+    "title": "Digital Wedding Invitation",
+    "subtitle": "Create the Perfect Invitation for Your Big Day",
+    "description": "Create stunning digital wedding invitations with video, countdown timer, RSVP, and full guest management. Easily share via Viber, WhatsApp, and social media.",
+    "cta": "Create Invitation",
+    "learn_more": "View Packages"
+  },
+  "features": {
+    "title": "Digital Invitation Features",
+    "video": {
+      "title": "Video Invitation",
+      "description": "Stunning video invitations with custom animations, photos, and music."
+    },
+    "countdown": {
+      "title": "Countdown Timer",
+      "description": "Live countdown timer counting down the days to your wedding."
+    },
+    "sharing": {
+      "title": "Easy Sharing",
+      "description": "Share the unique link via Viber, WhatsApp, email, and social media."
+    },
+    "rsvp": {
+      "title": "Online RSVP",
+      "description": "RSVP form with real-time notifications and guest list management."
+    }
+  },
+  "benefits_title": "Why Choose Digital Invitation?",
+  "benefits": [
+    {
+      "title": "Cost-Effective",
+      "description": "More affordable than printed invitations. No printing or postage costs."
+    },
+    {
+      "title": "Convenient",
+      "description": "Instant sharing to all guests with one click. Zero distribution time."
+    },
+    {
+      "title": "Interactive",
+      "description": "Video, animations, countdown timer, and RSVP for a unique experience."
+    },
+    {
+      "title": "Eco-Friendly",
+      "description": "No paper or print materials. Green solution for your wedding."
+    },
+    {
+      "title": "Real-Time Updates",
+      "description": "Upload changes instantly. All guests see the latest information."
+    },
+    {
+      "title": "Guest Management",
+      "description": "Full guest management with RSVP tracking and Excel export."
+    }
+  ],
+  "cta": {
+    "title": "Ready to create your invitation?",
+    "description": "Visit invitations.adinfinity.gr and create the perfect digital invitation for your wedding.",
+    "button": "Get Started"
+  },
+  "seo": {
+    "title": "Digital Wedding Invitation | Video Invitation & RSVP | adinfinity",
+    "description": "Create digital wedding invitation with video, RSVP and guest management. Cost-effective, convenient and interactive. Try invitations.adinfinity.gr."
+  }
+}

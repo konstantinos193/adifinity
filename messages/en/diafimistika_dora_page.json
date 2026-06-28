@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Branded Merchandise",
+    "title": "Promotional Gifts for Businesses",
+    "subtitle": "Corporate Gifts & Promotional Items in Arta",
+    "description": "Professional promotional gifts and branded merchandise in Arta. Corporate gifts, promotional items, branded merchandise, custom printing, and personalized gifts for businesses and events.",
+    "cta": "Get a Quote",
+    "view_catalog": "View Catalog"
+  },
+  "services": {
+    "title": "Promotional Gift Categories",
+    "stationery": {
+      "title": "Stationery Items",
+      "description": "Pens, notebooks, folders, business cards, and all stationery items with custom branding."
+    },
+    "drinkware": {
+      "title": "Drinkware & Mugs",
+      "description": "Mugs, coasters, water bottles, thermos cups, and drinkware with logo and custom design."
+    },
+    "apparel": {
+      "title": "Apparel & Accessories",
+      "description": "T-shirts, hoodies, caps, jackets, and apparel with custom printing and embroidery."
+    },
+    "bags": {
+      "title": "Bags & Totes",
+      "description": "Tote bags, backpacks, laptop bags, and custom bags with branding for events and promotions."
+    }
+  },
+  "benefits_title": "Why Choose adinfinity?",
+  "benefits": [
+    {
+      "title": "Custom Branding",
+      "description": "We customize each product with your brand, using custom design and high-quality printing."
+    },
+    {
+      "title": "Bulk Pricing",
+      "description": "We offer competitive pricing for bulk orders and special offers for large quantities."
+    },
+    {
+      "title": "Fast Turnaround",
+      "description": "Fast production and delivery in 5-10 business days for standard orders."
+    },
+    {
+      "title": "Quality Guarantee",
+      "description": "We provide quality guarantee and replacement for defective products."
+    },
+    {
+      "title": "Design Services",
+      "description": "We provide design services to create the perfect branded merchandise for you."
+    },
+    {
+      "title": "Wide Selection",
+      "description": "Wide range of products for every budget and occasion, from premium to budget-friendly options."
+    }
+  ],
+  "faq_title": "Promotional Gifts FAQ",
+  "faq": [
+    {
+      "question": "How much do promotional gifts cost?",
+      "answer": "Prices depend on type and quantity. Pens from €0.50/item, notebooks from €1.50/item, mugs from €2/item. We provide free quotes for bulk orders."
+    },
+    {
+      "question": "What is the minimum order quantity?",
+      "answer": "Minimum order depends on product. Pens: 50 items, notebooks: 25 items, mugs: 25 items. Custom items: 100+ items."
+    },
+    {
+      "question": "Do you provide custom design?",
+      "answer": "Yes, we provide custom design services for all branded merchandise. You can send us your logo or we can create design for you."
+    },
+    {
+      "question": "How long does production take?",
+      "answer": "Standard orders in 5-10 business days. Express available in 3-5 business days for urgent orders."
+    },
+    {
+      "question": "Do you provide proof before production?",
+      "answer": "Yes, we provide digital proof for approval before production to ensure you're satisfied with the design."
+    }
+  ],
+  "cta": {
+    "title": "Ready for branded merchandise?",
+    "description": "Contact us for a free consultation and quote for your business promotional gifts and branded merchandise.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Promotional Gifts Arta | Corporate Gifts & Promotional Items | adinfinity",
+    "description": "Professional promotional gifts in Arta. Corporate gifts, promotional items, branded merchandise. Prices from €0.50/item. Bulk orders. +30 2681 303007"
+  }
+}

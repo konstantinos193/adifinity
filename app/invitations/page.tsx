@@ -342,6 +342,304 @@ export default function InvitationsPage() {
         </motion.div>
       </div>
 
+      {/* Demo Gallery */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#01FFFF]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {t("invitations_page.demo_gallery.title")}
+        </motion.h2>
+        <motion.p
+          className="text-center text-gray-400 mb-12 max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          {t("invitations_page.demo_gallery.subtitle")}
+        </motion.p>
+
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {[
+            { key: "elegant", icon: <MiniWebIcon /> },
+            { key: "minimal", icon: <VideoProIcon /> },
+            { key: "island", icon: <VideoOnlyIcon /> },
+            { key: "traditional", icon: <MiniWebIcon /> },
+            { key: "luxury", icon: <VideoProIcon /> },
+            { key: "baptism", icon: <VideoOnlyIcon /> },
+          ].map((demo, index) => (
+            <motion.div
+              key={index}
+              className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-6 rounded-xl shadow-xl border border-cyan-900/30 group cursor-pointer"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 25px rgba(1, 255, 255, 0.2)",
+                borderColor: "rgba(1, 255, 255, 0.5)",
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="mb-4 flex justify-center">{demo.icon}</div>
+              <h3 className="text-lg font-bold mb-2 text-white group-hover:text-[#01FFFF] transition-colors">
+                {t(`invitations_page.demo_gallery.${demo.key}.title`)}
+              </h3>
+              <p className="text-sm text-gray-400">
+                {t(`invitations_page.demo_gallery.${demo.key}.description`)}
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Pricing Packages */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#01FFFF]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {t("invitations_page.pricing.title")}
+        </motion.h2>
+        <motion.p
+          className="text-center text-gray-400 mb-12 max-w-2xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          {t("invitations_page.pricing.subtitle")}
+        </motion.p>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          {["basic", "premium", "mini_website"].map((pkg, index) => (
+            <motion.div
+              key={pkg}
+              className={`bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-8 rounded-xl shadow-xl border ${
+                pkg === "premium" ? "border-[#01FFFF]/50 scale-105" : "border-cyan-900/30"
+              } relative`}
+              whileHover={{
+                scale: pkg === "premium" ? 1.05 : 1.03,
+                boxShadow: "0 0 25px rgba(1, 255, 255, 0.2)",
+              }}
+              transition={{ duration: 0.3 }}
+            >
+              {pkg === "premium" && (
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#01FFFF] text-[#07141C] px-4 py-1 rounded-full text-sm font-bold">
+                  Δημοφιλές
+                </div>
+              )}
+              <h3 className="text-2xl font-bold mb-2 text-white">
+                {t(`invitations_page.pricing.${pkg}.title`)}
+              </h3>
+              <div className="text-4xl font-bold mb-2 text-[#01FFFF]">
+                {t(`invitations_page.pricing.${pkg}.price`)}
+              </div>
+              <p className="text-gray-400 mb-6">
+                {t(`invitations_page.pricing.${pkg}.description`)}
+              </p>
+              <ul className="space-y-3 mb-6">
+                {(t(`invitations_page.pricing.${pkg}.features`) as string[]).map((feature, i) => (
+                  <li key={i} className="flex items-center text-sm text-gray-300">
+                    <Check className="w-4 h-4 text-[#01FFFF] mr-2 shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact#contact-form">
+                <motion.button
+                  className={`w-full py-3 rounded-full font-bold ${
+                    pkg === "premium"
+                      ? "bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C]"
+                      : "border-2 border-[#01FFFF] text-[#01FFFF] hover:bg-[#01FFFF]/10"
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t("invitations_page.wedding_form.submit")}
+                </motion.button>
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Wedding Form */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          className="max-w-2xl mx-auto bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-8 md:p-12 rounded-2xl shadow-2xl border border-cyan-900/30"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold mb-4 text-center text-[#01FFFF]">
+            {t("invitations_page.wedding_form.title")}
+          </h2>
+          <p className="text-center text-gray-400 mb-8">
+            {t("invitations_page.wedding_form.description")}
+          </p>
+
+          <form className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  {t("invitations_page.wedding_form.fields.names")}
+                </label>
+                <input
+                  type="text"
+                  className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none"
+                  placeholder={t("invitations_page.wedding_form.fields.names")}
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  {t("invitations_page.wedding_form.fields.date")}
+                </label>
+                <input
+                  type="date"
+                  className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  {t("invitations_page.wedding_form.fields.city")}
+                </label>
+                <input
+                  type="text"
+                  className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none"
+                  placeholder={t("invitations_page.wedding_form.fields.city")}
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  {t("invitations_page.wedding_form.fields.style")}
+                </label>
+                <select className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none">
+                  <option>Elegant</option>
+                  <option>Minimal</option>
+                  <option>Island Wedding</option>
+                  <option>Traditional</option>
+                  <option>Luxury</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm text-gray-400 mb-2">
+                {t("invitations_page.wedding_form.fields.guests")}
+              </label>
+              <input
+                type="number"
+                className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none"
+                placeholder={t("invitations_page.wedding_form.fields.guests")}
+              />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="flex items-center space-x-2">
+                <input type="checkbox" id="rsvp" className="accent-[#01FFFF]" />
+                <label htmlFor="rsvp" className="text-sm text-gray-400">
+                  {t("invitations_page.wedding_form.fields.rsvp")}
+                </label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <input type="checkbox" id="map" className="accent-[#01FFFF]" />
+                <label htmlFor="map" className="text-sm text-gray-400">
+                  {t("invitations_page.wedding_form.fields.map")}
+                </label>
+              </div>
+              <div className="flex items-center space-x-2">
+                <input type="checkbox" id="music" className="accent-[#01FFFF]" />
+                <label htmlFor="music" className="text-sm text-gray-400">
+                  {t("invitations_page.wedding_form.fields.music")}
+                </label>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  {t("invitations_page.wedding_form.fields.email")}
+                </label>
+                <input
+                  type="email"
+                  className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none"
+                  placeholder={t("invitations_page.wedding_form.fields.email")}
+                />
+              </div>
+              <div>
+                <label className="block text-sm text-gray-400 mb-2">
+                  {t("invitations_page.wedding_form.fields.phone")}
+                </label>
+                <input
+                  type="tel"
+                  className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none"
+                  placeholder={t("invitations_page.wedding_form.fields.phone")}
+                />
+              </div>
+            </div>
+            <div>
+              <label className="block text-sm text-gray-400 mb-2">
+                {t("invitations_page.wedding_form.fields.message")}
+              </label>
+              <textarea
+                rows={4}
+                className="w-full bg-[#07141C] border border-cyan-900/30 rounded-lg px-4 py-3 text-white focus:border-[#01FFFF] focus:outline-none"
+                placeholder={t("invitations_page.wedding_form.fields.message")}
+              />
+            </div>
+            <motion.button
+              type="submit"
+              className="w-full bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-bold py-3 px-8 rounded-full text-lg shadow-lg shadow-cyan-500/20"
+              whileHover={{ scale: 1.05, boxShadow: "0 0 25px rgba(1, 255, 255, 0.5)" }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t("invitations_page.wedding_form.submit")}
+            </motion.button>
+          </form>
+        </motion.div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#01FFFF]"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {t("invitations_page.faq.title")}
+        </motion.h2>
+
+        <motion.div
+          className="max-w-3xl mx-auto space-y-4 mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {(t("invitations_page.faq.questions") as Array<{ q: string; a: string }>).map((faq, index) => (
+            <motion.div
+              key={index}
+              className="bg-gradient-to-br from-[#0A1A24] to-[#0D2436] p-6 rounded-xl shadow-xl border border-cyan-900/30"
+              whileHover={{ borderColor: "rgba(1, 255, 255, 0.3)" }}
+              transition={{ duration: 0.3 }}
+            >
+              <h3 className="text-lg font-bold mb-3 text-white">{faq.q}</h3>
+              <p className="text-gray-400">{faq.a}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div

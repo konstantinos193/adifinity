@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Local Service",
+    "title": "Flyer Distribution Arta",
+    "subtitle": "Leaflet Distribution & Door-to-Door Marketing in Epirus",
+    "description": "At adinfinity, we offer professional flyer distribution services in Arta and throughout Epirus. Door-to-door distribution, targeted campaigns, tracking, and reporting for effective local marketing.",
+    "cta": "Get a Quote",
+    "learn_more": "View Services"
+  },
+  "services": {
+    "title": "Flyer Distribution Services Arta",
+    "door_to_door": {
+      "title": "Door-to-Door Distribution",
+      "description": "Professional flyer distribution to every door. Choose areas, neighborhoods, and streets for targeted reach."
+    },
+    "targeted": {
+      "title": "Targeted Campaigns",
+      "description": "We design custom campaigns based on demographics, business type, and marketing goals."
+    },
+    "tracking": {
+      "title": "GPS Tracking & Verification",
+      "description": "Real-time GPS tracking to monitor distribution progress and verify coverage."
+    },
+    "reporting": {
+      "title": "Detailed Reporting",
+      "description": "Receive detailed reports with coverage maps, statistics, and analytics for your campaign."
+    }
+  },
+  "benefits_title": "Why Choose adinfinity Arta?",
+  "benefits": [
+    {
+      "title": "Local Knowledge",
+      "description": "We know every neighborhood in Arta and Epirus. We select the best areas for your business."
+    },
+    {
+      "title": "Professional Team",
+      "description": "We have an experienced distribution team ensuring professional and reliable delivery."
+    },
+    {
+      "title": "Transparent Pricing",
+      "description": "Clear pricing with no hidden charges. You know exactly what you pay and what you get."
+    },
+    {
+      "title": "Flexible Scheduling",
+      "description": "We adapt the schedule to your needs. Weekday, weekend, or express distributions available."
+    },
+    {
+      "title": "Quality Control",
+      "description": "Quality control processes to ensure every flyer reaches the right recipient."
+    },
+    {
+      "title": "Results Focused",
+      "description": "We focus on results. We design campaigns that bring real ROI for your business."
+    }
+  ],
+  "cta": {
+    "title": "Ready for your next campaign?",
+    "description": "Contact us for a free consultation and quote for your next flyer distribution campaign.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Flyer Distribution Arta | Leaflet Distribution & Door-to-Door Marketing | adinfinity",
+    "description": "Professional flyer distribution in Arta. Door-to-door distribution, flyer distribution, leaflet distribution, local marketing. GPS tracking +30 2681 303007."
+  }
+}

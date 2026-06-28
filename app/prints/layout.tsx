@@ -108,6 +108,42 @@ export default function PrintsLayout({
           }),
         }}
       />
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Πόσο κοστίζουν οι εκτυπώσεις;",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Οι τιμές εξαρτώνται από το είδος και την ποσότητα. Business cards από €5/100 τεμ., flyers από €20/500 τεμ., banners από €30/τμ²."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Πόσο χρόνο παίρνει η παράδοση;",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standard παραγγελίες σε 2-3 εργάσιμες. Express διαθέσιμο σε 24h για επείγουσες παραγγελίες."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Παρέχετε design services;",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ναι, παρέχουμε design services για όλες τις εκτυπώσεις. Μπορείτε να μας στείλετε τα δικά σας αρχεία ή να δημιουργήσουμε design για εσάς."
+                }
+              }
+            ]
+          }),
+        }}
+      />
       {children}
     </>
   )

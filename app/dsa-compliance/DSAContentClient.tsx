@@ -116,10 +116,10 @@ export default function DSAContentClient() {
                       {t('dsa_compliance.user_reporting.email_report.description')}
                     </p>
                     <a 
-                      href="mailto:adenfinity@gmail.com" 
+                      href="mailto:info@adinfinity.gr" 
                       className="inline-flex items-center gap-2 text-[#01FFFF] hover:underline text-sm"
                     >
-                      adenfinity@gmail.com
+                      info@adinfinity.gr
                       <ArrowRight size={14} />
                     </a>
                   </div>
@@ -217,15 +217,15 @@ export default function DSAContentClient() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-gray-400">
                     <Mail className="text-[#01FFFF]" size={20} />
-                    <span><strong>{t('dsa_compliance.contact.compliance_email')}:</strong> adenfinity@gmail.com</span>
+                    <span><strong>{t('dsa_compliance.contact.compliance_email')}:</strong> info@adinfinity.gr</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-400">
                     <Mail className="text-[#01FFFF]" size={20} />
-                    <span><strong>{t('dsa_compliance.contact.content_reports')}:</strong> adenfinity@gmail.com</span>
+                    <span><strong>{t('dsa_compliance.contact.content_reports')}:</strong> info@adinfinity.gr</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-400">
                     <Users className="text-[#01FFFF]" size={20} />
-                    <span><strong>{t('dsa_compliance.contact.dsa_officer')}:</strong> adenfinity@gmail.com</span>
+                    <span><strong>{t('dsa_compliance.contact.dsa_officer')}:</strong> info@adinfinity.gr</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-400">
                     <Mail className="text-[#01FFFF]" size={20} />

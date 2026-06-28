@@ -15,7 +15,7 @@ export default function SEOContent() {
         <strong>Τηλέφωνο:</strong> +30 2681 303007
       </p>
       <p>
-        <strong>Email:</strong> adenfinity@gmail.com
+        <strong>Email:</strong> info@adinfinity.gr
       </p>
       <h2>Ώρες Λειτουργίας</h2>
       <p>

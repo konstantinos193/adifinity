@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Τοπική Υπηρεσία",
+    "title": "Κατασκευή Ιστοσελίδων Άρτα",
+    "subtitle": "Επαγγελματική Web Development στην Ήπειρο",
+    "description": "Στην adfinity, προσφέρουμε custom κατασκευή ιστοσελίδων και web applications στην Άρτα και σε όλη την Ήπειρο. Χτίζουμε σύγχρονες, γρήγορες και SEO-friendly ιστοσελίδες σε React & Next.js, χωρίς χρήση templates.",
+    "cta": "Ζητήστε Προσφορά",
+    "learn_more": "Μάθετε Περισσότερα"
+  },
+  "services": {
+    "title": "Υπηρεσίες Web Development Άρτα",
+    "custom_websites": {
+      "title": "Custom Ιστοσελίδες",
+      "description": "Επαγγελματικές ιστοσελίδες χτισμένες από το μηδέν, προσαρμοσμένες στις ανάγκες της επιχείρησής σας."
+    },
+    "web_apps": {
+      "title": "Web Applications",
+      "description": "Σύνθετες web εφαρμογές, dashboards, booking systems και SaaS platforms."
+    },
+    "e_commerce": {
+      "title": "E-commerce",
+      "description": "Custom online shops με Stripe, διαχείριση παραγγελιών και inventory."
+    },
+    "seo": {
+      "title": "Technical SEO",
+      "description": "Βελτιστοποίηση για Google, Core Web Vitals, schema markup και speed optimization."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε adinfinity Άρτα;",
+  "benefits": [
+    {
+      "title": "Τοπική Εμπειρία",
+      "description": "Γνωρίζουμε την τοπική αγορά της Ήπειρου και προσαρμόζουμε τις λύσεις στις ανάγκες των επιχειρήσεων της περιοχής."
+    },
+    {
+      "title": "Direct Communication",
+      "description": "Επικοινωνείτε απευθείας με τον developer. Δεν υπάρχουν μεσάζοντες, γρήγορη υποστήριξη."
+    },
+    {
+      "title": "No Templates",
+      "description": "Κάθε project είναι μοναδικό. Χτίζουμε από το μηδέν σε React & Next.js για βέλτιστη απόδοση."
+    },
+    {
+      "title": "SEO Friendly",
+      "description": "Όλες οι ιστοσελίδες παραδίδονται με technical SEO, schema markup και βελτιστοποίηση για ελληνικά."
+    },
+    {
+      "title": "Fast Delivery",
+      "description": "Ιστοσελίδες παραδίδονται σε 2-4 εβδομάδες. Web εφαρμογές σε 4-12 εβδομάδες ανάλογα με την πολυπλοκότητα."
+    },
+    {
+      "title": "Support & Maintenance",
+      "description": "Παρέχουμε συνεχή υποστήριξη και maintenance για να διασφαλίσουμε την ομαλή λειτουργία της ιστοσελίδας σας."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι να ξεκινήσετε το project σας;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για την ιστοσελίδα ή web εφαρμογή σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Κατασκευή Ιστοσελίδων Άρτα | Web Development Ήπειρος | adinfinity",
+    "description": "Επαγγελματική κατασκευή ιστοσελίδων στην Άρτα και Ήπειρο. Custom web development, React Next.js, e-commerce, SEO. Τοπική υποστήριξη +30 2681 303007."
+  }
+}

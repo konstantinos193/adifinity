@@ -79,7 +79,7 @@ export async function generateMetadata({ params }: ReportContentPageProps): Prom
         url: baseUrl,
         contactPoint: {
           "@type": "ContactPoint",
-          email: "adenfinity@gmail.com",
+          email: "info@adinfinity.gr",
           telephone: "+30-2681-303007",
           contactType: content.contactType,
           availableLanguage: content.availableLanguage,
@@ -220,7 +220,7 @@ export default async function ReportContentPage({ params }: ReportContentPagePro
         url: baseUrl,
         contactPoint: {
           "@type": "ContactPoint",
-          email: "adenfinity@gmail.com",
+          email: "info@adinfinity.gr",
           telephone: "+30-2681-303007",
           contactType: content.contactType,
           availableLanguage: content.availableLanguage,

@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Τοπική Υπηρεσία",
+    "title": "Επιγραφές Καταστημάτων Άρτα",
+    "subtitle": "Neon, LED & Store Signage στην Ήπειρο",
+    "description": "Επαγγελματικές επιγραφές καταστημάτων στην Άρτα και σε όλη την Ήπειρο. Neon signs, LED signs, store signage, vehicle graphics, wayfinding και custom signage solutions. Εγκατάσταση και συντήρηση.",
+    "cta": "Ζητήστε Προσφορά",
+    "view_services": "Δείτε Εκτυπώσεις"
+  },
+  "services": {
+    "title": "Υπηρεσίες Επιγραφών",
+    "store": {
+      "title": "Επιγραφές Καταστημάτων",
+      "description": "Ακρυλικές επιγραφές, PVC, αλουμίνιο, plexiglass και custom signage για καταστήματα, εστιατόρια και επιχειρήσεις."
+    },
+    "led": {
+      "title": "LED & Neon Signs",
+      "description": "LED signs, neon signs, illuminated signage και φωτεινές επιγραφές για μέγιστη ορατότητα και brand recognition."
+    },
+    "vehicle": {
+      "title": "Vehicle Graphics",
+      "description": "Vehicle wraps, car branding, truck lettering και fleet graphics για mobile advertising και brand exposure."
+    },
+    "wayfinding": {
+      "title": "Wayfinding & Directional",
+      "description": "Directional signage, wayfinding systems, information signs και navigational graphics για κτίρια και χώρους."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε adinfinity Άρτα;",
+  "benefits": [
+    {
+      "title": "Τοπική Υπηρεσία",
+      "description": "Βρισκόμαστε στην Άρτα, προσφέροντας γρήγορη εγκατάσταση και support σε όλη την Ήπειρο."
+    },
+    {
+      "title": "Custom Solutions",
+      "description": "Σχεδιάζουμε και κατασκευάζουμε custom signage προσαρμοσμένο στις ανάγκες και το brand σας."
+    },
+    {
+      "title": "High Quality Materials",
+      "description": "Χρησιμοποιούμε κορυφαία υλικά για αντοχή στον χρόνο και εγγύηση ποιότητας."
+    },
+    {
+      "title": "Professional Installation",
+      "description": "Επαγγελματική εγκατάσταση από έμπειρο τεχνικό team με safety standards."
+    },
+    {
+      "title": "Competitive Pricing",
+      "description": "Προσφέρουμε ανταγωνιστικές τιμές χωρίς συμβιβασμούς στην ποιότητα."
+    },
+    {
+      "title": "Maintenance Support",
+      "description": "Παρέχουμε maintenance και repair services για να διατηρήσετε τις επιγραφές σας σε άριστη κατάσταση."
+    }
+  ],
+  "faq_title": "Συχνές Ερωτήσεις Επιγραφών",
+  "faq": [
+    {
+      "question": "Πόσο κοστίζουν οι επιγραφές καταστημάτων;",
+      "answer": "Οι τιμές εξαρτώνται από το υλικό και το μέγεθος. Ακρυλικές επιγραφές από €50/τμ², LED signs από €150, neon signs από €200. Παρέχουμε δωρεάν προσφορά."
+    },
+    {
+      "question": "Παρέχετε εγκατάσταση;",
+      "answer": "Ναι, παρέχουμε επαγγελματική εγκατάσταση σε όλη την Ήπειρο. Η εγκατάσταση περιλαμβάνεται στην τιμή για επιγραφές άνω των €200."
+    },
+    {
+      "question": "Ποια υλικά χρησιμοποιείτε;",
+      "answer": "Χρησιμοποιούμε ακρυλικό, PVC, αλουμίνιο, LED, neon, και ανθεκτικά υλικά για εξωτερική χρήση με εγγύηση αντοχής."
+    },
+    {
+      "question": "Πόσο χρόνο παίρνει η παραγωγή;",
+      "answer": "Standard παραγγελίες σε 5-7 εργάσιμες. Express διαθέσιμο σε 2-3 εργάσιμες για επείγουσες ανάγκες."
+    },
+    {
+      "question": "Παρέχετε maintenance;",
+      "answer": "Ναι, παρέχουμε maintenance, repair και replacement services για να διασφαλίσουμε μακροζωμία και λειτουργικότητα."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι για την επιγραφή του καταστήματός σας;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για τις επιγραφές, signage ή vehicle graphics της επιχείρησής σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Επιγραφές Καταστημάτων Άρτα | Neon, LED & Store Signage | adinfinity",
+    "description": "Επαγγελματικές επιγραφές καταστημάτων στην Άρτα. Neon signs, LED signs, store signage, vehicle graphics. Τιμές από €50/τμ². Εγκατάσταση σε Ήπειρο. +30 2681 303007"
+  }
+}

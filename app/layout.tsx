@@ -9,6 +9,7 @@ import CookieConsent from "../components/ui/CookieConsent"
 import SkipLinks from "../components/ui/SkipLinks"
 import AccessibilityWidget from "../components/ui/AccessibilityWidget"
 import GoogleAnalytics from "../components/GoogleAnalytics"
+import StickyMobileCTA from "../components/ui/StickyMobileCTA"
 import type { Metadata, Viewport } from "next"
 import { getTranslations, getLocale } from 'next-intl/server'
 
@@ -49,7 +50,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "@type": "ContactPoint",
       telephone: "+30-2681-303007",
       contactType: "customer service",
-      email: "adenfinity@gmail.com",
+      email: "info@adinfinity.gr",
       areaServed: {
         "@type": "Country",
         name: "Greece",
@@ -94,7 +95,7 @@ export async function generateMetadata(): Promise<Metadata> {
       "@type": "ContactPoint",
       telephone: "+30-2681-303007",
       contactType: "customer service",
-      email: "adenfinity@gmail.com",
+      email: "info@adinfinity.gr",
       areaServed: {
         "@type": "Country",
         name: "Greece",
@@ -210,7 +211,7 @@ export default function RootLayout({
               "@id": "https://adinfinity.gr",
               url: "https://adinfinity.gr",
               telephone: "+30-2681-303007",
-              email: "adenfinity@gmail.com",
+              email: "info@adinfinity.gr",
               potentialAction: {
                 "@type": "CommunicateAction",
                 target: {
@@ -318,6 +319,7 @@ export default function RootLayout({
           <Footer />
           <CookieConsent />
           <GoogleAnalytics />
+          <StickyMobileCTA />
         </LocaleProvider>
       </body>
     </html>

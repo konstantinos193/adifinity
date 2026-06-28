@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Νέα Υπηρεσία",
+    "title": "Ψηφιακό Προσκλητήριο Γάμου",
+    "subtitle": "Δημιουργήστε την Τέλεια Πρόσκληση για τη Μεγάλη σας Μέρα",
+    "description": "Δημιουργήστε εντυπωσιακά ψηφιακά προσκλητήρια γάμου με video, αντίστροφη μέτρηση, RSVP και πλήρη διαχείριση καλεσμένων. Κοινοποιήστε εύκολα μέσω Viber, WhatsApp και social media.",
+    "cta": "Δημιουργήστε Πρόσκληση",
+    "learn_more": "Δείτε Πακέτα"
+  },
+  "features": {
+    "title": "Χαρακτηριστικά Ψηφιακών Προσκλήσεων",
+    "video": {
+      "title": "Video Πρόσκληση",
+      "description": "Εντυπωσιακά video invitations με custom animations, φωτογραφίες και μουσική."
+    },
+    "countdown": {
+      "title": "Αντίστροφη Μέτρηση",
+      "description": "Live countdown timer που μετράει τις μέρες μέχρι τον γάμο σας."
+    },
+    "sharing": {
+      "title": "Εύκολη Κοινοποίηση",
+      "description": "Μοιραστείτε τον μοναδικό σύνδεσμο μέσω Viber, WhatsApp, email και social media."
+    },
+    "rsvp": {
+      "title": "Online RSVP",
+      "description": "RSVP φόρμα με real-time ειδοποιήσεις και διαχείριση λίστας καλεσμένων."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε Ψηφιακό Προσκλητήριο;",
+  "benefits": [
+    {
+      "title": "Οικονομικό",
+      "description": "Πιο οικονομικό από τα έντυπα προσκλητήρια. Χωρίς έξοδα εκτύπωσης και ταχυδρομείου."
+    },
+    {
+      "title": "Πρακτικό",
+      "description": "Άμεση κοινοποίηση σε όλους τους καλεσμένους με ένα κλικ. Μηδενικός χρόνος διανομής."
+    },
+    {
+      "title": "Interactive",
+      "description": "Video, animations, countdown timer και RSVP για μια μοναδική εμπειρία."
+    },
+    {
+      "title": "Εco-Friendly",
+      "description": "Χωρίς χαρτί και έντυπα. Πράσινη λύση για το γάμο σας."
+    },
+    {
+      "title": "Real-Time Updates",
+      "description": "Ανεβάζετε αλλαγές αμέσως. Όλοι οι καλεσμένοι βλέπουν τις τελευταίες πληροφορίες."
+    },
+    {
+      "title": "Guest Management",
+      "description": "Πλήρης διαχείριση καλεσμένων με RSVP tracking και export σε Excel."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι να δημιουργήσετε την πρόσκλησή σας;",
+    "description": "Επισκεφτείτε την πλατφόρμα invitations.adinfinity.gr και δημιουργήστε την τέλεια ψηφιακή πρόσκληση για τον γάμο σας.",
+    "button": "Ξεκινήστε Τώρα"
+  },
+  "seo": {
+    "title": "Ψηφιακό Προσκλητήριο Γάμου | Video Invitation & RSVP | adinfinity",
+    "description": "Δημιουργήστε ψηφιακό προσκλητήριο γάμου με video, RSVP και διαχείριση καλεσμένων. Οικονομικό, πρακτικό και interactive. Δοκιμάστε το invitations.adinfinity.gr."
+  }
+}

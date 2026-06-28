@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Τοπική Υπηρεσία",
+    "title": "Διανομή Φυλλαδίων Άρτα",
+    "subtitle": "Flyer Distribution & Door-to-Door Marketing στην Ήπειρο",
+    "description": "Στην adinfinity, προσφέρουμε επαγγελματική διανομή φυλλαδίων στην Άρτα και σε όλη την Ήπειρο. Door-to-door distribution, targeted campaigns, tracking και reporting για αποτελεσματικό τοπικό marketing.",
+    "cta": "Ζητήστε Προσφορά",
+    "learn_more": "Δείτε Υπηρεσίες"
+  },
+  "services": {
+    "title": "Υπηρεσίες Διανομής Φυλλαδίων Άρτα",
+    "door_to_door": {
+      "title": "Door-to-Door Distribution",
+      "description": "Επαγγελματική διανομή φυλλαδίων σε κάθε πόρτα. Επιλέξτε περιοχές, γειτονιές και δρόμους για targeted reach."
+    },
+    "targeted": {
+      "title": "Targeted Campaigns",
+      "description": "Σχεδιάζουμε custom campaigns βάσει demographics, τύπου επιχείρησης και στόχων marketing."
+    },
+    "tracking": {
+      "title": "GPS Tracking & Verification",
+      "description": "Real-time GPS tracking για να βλέπετε την πρόοδο της διανομής και να επιβεβαιώνετε την κάλυψη."
+    },
+    "reporting": {
+      "title": "Detailed Reporting",
+      "description": "Λαμβάνετε detailed reports με coverage maps, statistics και analytics για την εκστρατεία σας."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε adfinity Άρτα;",
+  "benefits": [
+    {
+      "title": "Τοπική Γνώση",
+      "description": "Γνωρίζουμε κάθε γειτονιά στην Άρτα και Ήπειρο. Επιλέγουμε τις καλύτερες περιοχές για το business σας."
+    },
+    {
+      "title": "Professional Team",
+      "description": "Έχουμε έμπειρο team διανομής που διασφαλίζει επαγγελματική και αξιόπιστη παράδοση."
+    },
+    {
+      "title": "Transparent Pricing",
+      "description": "Σαφές pricing χωρίς κρυφές χρεώσεις. Ξέρετε ακριβώς τι πληρώνετε και τι λαμβάνετε."
+    },
+    {
+      "title": "Flexible Scheduling",
+      "description": "Προσαρμόζουμε το schedule στις ανάγκες σας. Weekday, weekend ή express διανομές διαθέσιμες."
+    },
+    {
+      "title": "Quality Control",
+      "description": "Διαδικασίες quality control για να διασφαλίσουμε ότι κάθε φυλλάδιο φτάνει στον σωστό παραλήπτη."
+    },
+    {
+      "title": "Results Focused",
+      "description": "Εστιάζουμε σε results. Σχεδιάζουμε campaigns που φέρνουν real ROI για την επιχείρησή σας."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι για την επόμενη εκστρατεία σας;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για την επόμενη flyer distribution εκστρατεία σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Διανομή Φυλλαδίων Άρτα | Flyer Distribution & Door-to-Door Marketing | adinfinity",
+    "description": "Επαγγελματική διανομή φυλλαδίων στην Άρτα. Door-to-door distribution, flyer distribution, leaflet distribution, τοπικό marketing. GPS tracking +30 2681 303007."
+  }
+}

@@ -179,6 +179,42 @@ export default function GraphicDesignLayout({
           }),
         }}
       />
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Πόσο κοστίζει το logo design;",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Logo design ξεκινά από €150 για basic concepts και φτάνει €300+ για premium packages με full branding."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ποια αρχεία λαμβάνω;",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Λαμβάνετε όλα τα source αρχεία: AI, EPS, PDF, PNG, JPG formats, μαζί με font files και color codes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Πόσο χρόνο παίρνει ένα project;",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Logo design σε 3-5 εργάσιμες. Complete branding projects σε 2-4 εβδομάδες ανάλογα με την πολυπλοκότητα."
+                }
+              }
+            ]
+          }),
+        }}
+      />
       {children}
     </>
   )

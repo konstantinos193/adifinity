@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Local Service",
+    "title": "Graphic Designer Arta",
+    "subtitle": "Logo, Branding & Corporate Identity in Epirus",
+    "description": "At adinfinity, we offer professional graphic design services in Arta and throughout Epirus. Logo design, corporate identity, advertising materials, social media graphics, and complete branding solutions.",
+    "cta": "Get a Quote",
+    "learn_more": "View Portfolio"
+  },
+  "services": {
+    "title": "Graphic Design Services Arta",
+    "branding": {
+      "title": "Branding & Corporate Identity",
+      "description": "Logo design, corporate identity, branding guidelines, visual communication, and complete branding solutions."
+    },
+    "advertising": {
+      "title": "Advertising & Print Design",
+      "description": "Flyers, posters, brochures, catalogs, advertising materials, business cards, and print communications."
+    },
+    "digital": {
+      "title": "Digital Design & Social Media",
+      "description": "Social media graphics, digital banners, web graphics, email templates, content creation, and digital design."
+    },
+    "specialized": {
+      "title": "Specialized Services",
+      "description": "Packaging design, product labels, menu design, signage, vehicle graphics, and custom design projects."
+    }
+  },
+  "benefits_title": "Why Choose adinfinity Arta?",
+  "benefits": [
+    {
+      "title": "Local Expertise",
+      "description": "We know the Epirus market and tailor design solutions to local business needs."
+    },
+    {
+      "title": "Direct Communication",
+      "description": "Communicate directly with the graphic designer. Fast feedback loop and collaboration."
+    },
+    {
+      "title": "Professional Quality",
+      "description": "All projects delivered in high-resolution, print-ready and web-ready formats."
+    },
+    {
+      "title": "Brand Consistency",
+      "description": "We ensure consistency across all brand touchpoints, from logo to social media."
+    },
+    {
+      "title": "Fast Turnaround",
+      "description": "Quick deliveries without compromising quality. Logo projects in 3-5 business days."
+    },
+    {
+      "title": "Support & Revisions",
+      "description": "We provide revisions and ongoing support to ensure you're 100% satisfied with the result."
+    }
+  ],
+  "cta": {
+    "title": "Ready to build your brand?",
+    "description": "Contact us for a free consultation and quote for your logo, branding, or graphic design project.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Graphic Designer Arta | Logo, Branding & Corporate Identity | adinfinity",
+    "description": "Professional graphic designer in Arta. Logo design, branding, corporate identity, advertising materials, social media graphics. Local service +30 2681 303007."
+  }
+}

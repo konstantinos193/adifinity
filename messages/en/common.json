@@ -18,6 +18,11 @@
   "search": "Search",
   "search_results": "Search Results",
   "no_results": "No results found",
+  "sticky_cta": {
+    "title": "Need help?",
+    "subtitle": "Contact us",
+    "button": "Contact"
+  },
   "language": "Language",
   "cookies": {
     "title": "Cookies & Privacy",
@@ -157,7 +162,7 @@
     "contact": {
       "title": "Contact",
       "phone": "2681 303007",
-      "email": "adenfinity@gmail.com",
+      "email": "info@adinfinity.gr",
       "address": "Vas. Pyrrou 30, Arta"
     },
     "quick_links": {
@@ -183,7 +188,7 @@
     "cta": {
       "title": "Let's Talk",
       "description": "Contact us to discuss your next project.",
-      "button": "Contact Now"
+      "button": "Book 15min Call"
     },
     "social": {
       "title": "Follow Us"
@@ -194,11 +199,9 @@
     "copyright": "© {year} adinfinity. All rights reserved.",
     "business_info": {
       "company_name": "adinfinity",
-      "vat_number": "VAT: EL999999999",
-      "gemi_number": "GEMI: 123456789",
       "address": "Vas. Pyrrou 30, Arta, 471 32, Greece",
       "phone": "+30-2681-303007",
-      "email": "adenfinity@gmail.com"
+      "email": "info@adinfinity.gr"
     },
     "legal_links": {
       "dsa_compliance": "DSA Compliance",

@@ -72,7 +72,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-400 text-sm group">
                 <Mail size={16} className="mr-2 text-[#01FFFF] group-hover:text-white transition-colors" />
-                <a href="mailto:adenfinity@gmail.com" className="hover:text-white transition-colors">
+                <a href="mailto:info@adinfinity.gr" className="hover:text-white transition-colors">
                   {t('footer.contact.email')}
                 </a>
               </div>
@@ -324,7 +324,7 @@ export default function Footer() {
               <Phone size={12} className="mr-1 text-[#01FFFF]" />
               <span>{t('footer.business_info.phone')}</span>
             </a>
-            <a href="mailto:adenfinity@gmail.com" className="flex items-center">
+            <a href="mailto:info@adinfinity.gr" className="flex items-center">
               <Mail size={12} className="mr-1 text-[#01FFFF]" />
               <span>{t('footer.business_info.email')}</span>
             </a>
@@ -378,7 +378,6 @@ export default function Footer() {
             {/* EU Business Compliance Information - Mobile - Compact */}
             <div className="flex flex-col items-center space-y-1 text-xs text-gray-600">
               <span>{t('footer.business_info.company_name')}</span>
-              <span>{t('footer.business_info.vat_number')} • {t('footer.business_info.gemi_number')}</span>
               <span>{t('footer.business_info.address')}</span>
               <span>{t('footer.business_info.phone')} • {t('footer.business_info.email')}</span>
             </div>

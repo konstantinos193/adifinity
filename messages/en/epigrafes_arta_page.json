@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Local Service",
+    "title": "Store Signage Arta",
+    "subtitle": "Neon, LED & Business Signage in Epirus",
+    "description": "Professional store signage in Arta and throughout Epirus. Neon signs, LED signs, store signage, vehicle graphics, wayfinding, and custom signage solutions. Installation and maintenance.",
+    "cta": "Get a Quote",
+    "view_services": "View Printing"
+  },
+  "services": {
+    "title": "Signage Services",
+    "store": {
+      "title": "Store Signage",
+      "description": "Acrylic signs, PVC, aluminum, plexiglass, and custom signage for stores, restaurants, and businesses."
+    },
+    "led": {
+      "title": "LED & Neon Signs",
+      "description": "LED signs, neon signs, illuminated signage, and lighted signs for maximum visibility and brand recognition."
+    },
+    "vehicle": {
+      "title": "Vehicle Graphics",
+      "description": "Vehicle wraps, car branding, truck lettering, and fleet graphics for mobile advertising and brand exposure."
+    },
+    "wayfinding": {
+      "title": "Wayfinding & Directional",
+      "description": "Directional signage, wayfinding systems, information signs, and navigational graphics for buildings and spaces."
+    }
+  },
+  "benefits_title": "Why Choose adinfinity Arta?",
+  "benefits": [
+    {
+      "title": "Local Service",
+      "description": "Based in Arta, offering fast installation and support throughout Epirus."
+    },
+    {
+      "title": "Custom Solutions",
+      "description": "We design and build custom signage tailored to your needs and brand."
+    },
+    {
+      "title": "High Quality Materials",
+      "description": "We use premium materials for durability and quality guarantee."
+    },
+    {
+      "title": "Professional Installation",
+      "description": "Professional installation by experienced technical team with safety standards."
+    },
+    {
+      "title": "Competitive Pricing",
+      "description": "We offer competitive pricing without compromising on quality."
+    },
+    {
+      "title": "Maintenance Support",
+      "description": "We provide maintenance and repair services to keep your signage in excellent condition."
+    }
+  ],
+  "faq_title": "Signage FAQ",
+  "faq": [
+    {
+      "question": "How much do store signs cost?",
+      "answer": "Prices depend on material and size. Acrylic signs from €50/m², LED signs from €150, neon signs from €200. We provide free quotes."
+    },
+    {
+      "question": "Do you provide installation?",
+      "answer": "Yes, we provide professional installation throughout Epirus. Installation is included in price for signs over €200."
+    },
+    {
+      "question": "What materials do you use?",
+      "answer": "We use acrylic, PVC, aluminum, LED, neon, and durable materials for outdoor use with durability guarantee."
+    },
+    {
+      "question": "How long does production take?",
+      "answer": "Standard orders in 5-7 business days. Express available in 2-3 business days for urgent needs."
+    },
+    {
+      "question": "Do you provide maintenance?",
+      "answer": "Yes, we provide maintenance, repair, and replacement services to ensure longevity and functionality."
+    }
+  ],
+  "cta": {
+    "title": "Ready for your store signage?",
+    "description": "Contact us for a free consultation and quote for your business signage, signage, or vehicle graphics.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Store Signage Arta | Neon, LED & Business Signs | adinfinity",
+    "description": "Professional store signage in Arta. Neon signs, LED signs, store signage, vehicle graphics. Prices from €50/m². Installation in Epirus. +30 2681 303007"
+  }
+}

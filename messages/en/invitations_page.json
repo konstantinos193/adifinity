@@ -48,6 +48,99 @@
     "create_invitation": "Create Your Invitation",
     "contact_us": "Contact Us"
   },
+  "demo_gallery": {
+    "title": "Invitation Examples",
+    "subtitle": "Explore the different styles we offer",
+    "elegant": {
+      "title": "Elegant",
+      "description": "Classic elegance with gold details"
+    },
+    "minimal": {
+      "title": "Minimal",
+      "description": "Modern and clean design"
+    },
+    "island": {
+      "title": "Island Wedding",
+      "description": "Inspired by Greek islands"
+    },
+    "traditional": {
+      "title": "Traditional",
+      "description": "Traditional Greek style"
+    },
+    "luxury": {
+      "title": "Luxury",
+      "description": "Luxurious and stunning presentation"
+    },
+    "baptism": {
+      "title": "Baptism",
+      "description": "Sweet baptism invitations"
+    }
+  },
+  "pricing": {
+    "title": "Packages & Pricing",
+    "subtitle": "Choose the package that fits your needs",
+    "basic": {
+      "title": "Basic",
+      "price": "€150",
+      "description": "Simple and affordable",
+      "features": ["Video invitation", "RSVP form", "Easy sharing", "Basic customization"]
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "€250",
+      "description": "Popular choice",
+      "features": ["Video invitation Pro", "RSVP with notifications", "Countdown timer", "Full customization", "Music"]
+    },
+    "mini_website": {
+      "title": "Mini Website",
+      "price": "€350",
+      "description": "Full website",
+      "features": ["Mini wedding website", "Photo gallery", "Timeline", "Gift registry", "RSVP management", "Map"]
+    }
+  },
+  "wedding_form": {
+    "title": "Request Quote for Wedding",
+    "description": "Fill out the form and we'll contact you within 24 hours",
+    "fields": {
+      "names": "Couple Names",
+      "date": "Wedding Date",
+      "city": "City/Location",
+      "style": "Wedding Style",
+      "guests": "Number of Guests",
+      "rsvp": "Need RSVP?",
+      "map": "Need Map?",
+      "music": "Need Music/Video?",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Additional Comments"
+    },
+    "submit": "Send Request"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "q": "How much does a digital wedding invitation cost?",
+        "a": "Our prices start from €150 for the Basic package and go up to €350 for the Mini Website. Each package includes different features based on your needs."
+      },
+      {
+        "q": "Can it have RSVP?",
+        "a": "Yes, all our packages include an RSVP form. The Premium and Mini Website packages offer advanced RSVP management with real-time notifications and guest list export."
+      },
+      {
+        "q": "Can it be sent via Viber/WhatsApp?",
+        "a": "Absolutely! Each invitation has a unique link that you can easily share via Viber, WhatsApp, social media, or email with one click."
+      },
+      {
+        "q": "Can it have a Google Maps?",
+        "a": "Yes, the Mini Website package includes an integrated Google Maps with the event location for your guests' convenience."
+      },
+      {
+        "q": "Can it be in Greek and English?",
+        "a": "Yes, all invitations support multiple languages. You can have your invitation in Greek, English, or both simultaneously."
+      }
+    ]
+  },
   "homepage_section": {
     "badge": "New",
     "title": "Digital Wedding Invitations",
@@ -56,7 +149,7 @@
     "learn_more": "Learn More"
   },
   "seo": {
-    "title": "Digital Wedding Invitations | adinfinity - Create Your Perfect Invitation",
-    "description": "Create beautiful digital wedding invitations with RSVP tracking, video, mini-website templates. Manage your guest list online. Try our invitation platform!"
+    "title": "Digital Wedding Invitation with RSVP | Demo & Packages | adinfinity",
+    "description": "Create digital wedding invitation with video, RSVP and guest management. Cost-effective, convenient and interactive. Try invitations.adinfinity.gr"
   }
 }

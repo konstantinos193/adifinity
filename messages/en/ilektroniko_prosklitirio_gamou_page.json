@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Advanced RSVP",
+    "title": "Electronic Wedding Invitation with RSVP",
+    "subtitle": "Full Guest Management & Real-Time Notifications",
+    "description": "Create electronic wedding invitations with advanced RSVP system, real-time notifications, guest list export, and full RSVP management.",
+    "cta": "Create with RSVP",
+    "learn_more": "View Packages"
+  },
+  "features": {
+    "title": "Advanced RSVP Features",
+    "notifications": {
+      "title": "Real-Time Notifications",
+      "description": "Get instant notification every time a guest responds to the RSVP."
+    },
+    "guest_list": {
+      "title": "Guest List Management",
+      "description": "Full dashboard with all RSVP responses, confirmations, and declines."
+    },
+    "export": {
+      "title": "Excel Export",
+      "description": "Export guest list to Excel for catering, seating, and logistics."
+    },
+    "map": {
+      "title": "Integrated Map",
+      "description": "Google Maps integration with event location for your guests."
+    }
+  },
+  "benefits_title": "Why Choose Electronic Invitation with RSVP?",
+  "benefits": [
+    {
+      "title": "Automated Management",
+      "description": "Forget phone calls and messages. The RSVP system handles everything automatically."
+    },
+    {
+      "title": "Real-Time Updates",
+      "description": "See in real-time how many guests have responded and how many will attend."
+    },
+    {
+      "title": "Reminders",
+      "description": "Automatic reminders to guests who haven't responded to the RSVP."
+    },
+    {
+      "title": "Dietary Requirements",
+      "description": "Collect dietary restrictions and special requirements from guests."
+    },
+    {
+      "title": "Plus Ones",
+      "description": "Manage plus ones and accompanying guests with ease."
+    },
+    {
+      "title": "Analytics",
+      "description": "Detailed analytics and reports for your invitation's RSVP performance."
+    }
+  ],
+  "cta": {
+    "title": "Ready for advanced RSVP?",
+    "description": "Visit invitations.adinfinity.gr and create an electronic invitation with advanced RSVP for your wedding.",
+    "button": "Get Started"
+  },
+  "seo": {
+    "title": "Electronic Wedding Invitation with RSVP | Guest Management | adinfinity",
+    "description": "Create electronic wedding invitation with advanced RSVP, real-time notifications and guest list export. Full guest management. Try invitations.adinfinity.gr."
+  }
+}

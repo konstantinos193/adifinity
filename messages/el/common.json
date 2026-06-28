@@ -18,6 +18,11 @@
   "search": "Αναζήτηση",
   "search_results": "Αποτελέσματα Αναζήτησης",
   "no_results": "Δεν βρέθηκαν αποτελέσματα",
+  "sticky_cta": {
+    "title": "Χρειάζεστε βοήθεια;",
+    "subtitle": "Επικοινωνήστε μαζί μας",
+    "button": "Επικοινωνία"
+  },
   "language": "Γλώσσα",
   "cookies": {
     "title": "Cookies & Ιδιωτικότητα",
@@ -157,7 +162,7 @@
     "contact": {
       "title": "Επικοινωνία",
       "phone": "2681 303007",
-      "email": "adenfinity@gmail.com",
+      "email": "info@adinfinity.gr",
       "address": "Βασ. Πύρρου 30, Άρτα"
     },
     "quick_links": {
@@ -183,7 +188,7 @@
     "cta": {
       "title": "Ας μιλήσουμε",
       "description": "Επικοινωνήστε μαζί μας για να συζητήσουμε το επόμενο project σας.",
-      "button": "Επικοινωνήστε τώρα"
+      "button": "Κλείσε 15λεπτο Call"
     },
     "social": {
       "title": "Ακολουθήστε μας"
@@ -194,11 +199,9 @@
     "copyright": "© {year} adinfinity. Όλα τα δικαιώματα κατοχυρωμένα.",
     "business_info": {
       "company_name": "Διαφημιστική adinfinity",
-      "vat_number": "VAT: EL999999999",
-      "gemi_number": "ΓΕΜΗ: 123456789",
       "address": "Βασ. Πύρρου 30, Άρτα, 471 32, Ελλάδα",
       "phone": "+30-2681-303007",
-      "email": "adenfinity@gmail.com"
+      "email": "info@adinfinity.gr"
     },
     "legal_links": {
       "dsa_compliance": "Συμμόρφωση DSA",

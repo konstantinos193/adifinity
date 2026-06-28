@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Full-Service Agency",
+    "title": "Advertising Agency",
+    "subtitle": "Your Full-Service Advertising Agency in Arta",
+    "description": "At adinfinity, we are a full-service advertising agency in Arta offering complete solutions: graphic design, printing, websites, digital marketing, and strategic consulting for your business growth.",
+    "cta": "Get a Quote",
+    "about_us": "About Us"
+  },
+  "services": {
+    "title": "Advertising Agency Services",
+    "team": {
+      "title": "Expert Team",
+      "description": "Experienced team with expertise in graphic design, web development, digital marketing, and strategic planning."
+    },
+    "portfolio": {
+      "title": "Proven Portfolio",
+      "description": "100+ successful projects across various industries with measurable results and happy clients."
+    },
+    "strategy": {
+      "title": "Custom Strategy",
+      "description": "We develop custom marketing strategy tailored to your business needs and goals."
+    },
+    "results": {
+      "title": "Measurable Results",
+      "description": "We focus on results with detailed reporting, analytics, and continuous optimization for maximum ROI."
+    }
+  },
+  "benefits_title": "Why Choose adinfinity?",
+  "benefits": [
+    {
+      "title": "Local Expertise",
+      "description": "We know the Epirus market and tailor solutions to local business needs."
+    },
+    {
+      "title": "Full-Service Solutions",
+      "description": "Everything in one place: graphic design, printing, websites, digital marketing, and strategic consulting."
+    },
+    {
+      "title": "Transparent Pricing",
+      "description": "Clear pricing with no hidden charges. You know exactly what you pay and what you get."
+    },
+    {
+      "title": "Fast Turnaround",
+      "description": "Quick deliveries without compromising quality. Projects in 1-4 weeks."
+    },
+    {
+      "title": "Ongoing Support",
+      "description": "We provide ongoing support and consulting for long-term success and growth."
+    },
+    {
+      "title": "Results Focused",
+      "description": "We focus on measurable results and ROI, not just deliverables."
+    }
+  ],
+  "faq_title": "Advertising Agency FAQ",
+  "faq": [
+    {
+      "question": "What does an advertising agency offer?",
+      "answer": "An advertising agency offers complete marketing solutions: graphic design, printing, websites, digital marketing, social media, and strategic consulting for your business growth."
+    },
+    {
+      "question": "How to choose the right advertising agency?",
+      "answer": "Check the portfolio, client reviews, industry experience, and strategy approach. Choose an agency that understands your business."
+    },
+    {
+      "question": "How much does it cost to work with an advertising agency?",
+      "answer": "Costs depend on project and scope. Project-based pricing from €500, monthly retainers from €500/month, and custom packages based on needs."
+    },
+    {
+      "question": "How long do projects take?",
+      "answer": "Graphic design projects in 1-2 weeks, websites in 2-4 weeks, complete campaigns in 4-8 weeks depending on complexity."
+    },
+    {
+      "question": "Do you provide ongoing support?",
+      "answer": "Yes, we provide ongoing support, maintenance, and consulting to ensure long-term success and continuous improvement."
+    }
+  ],
+  "cta": {
+    "title": "Ready to work with us?",
+    "description": "Contact us for a free consultation and quote for your next business marketing campaign.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Advertising Agency Arta | Full-Service Agency | adinfinity",
+    "description": "Advertising agency in Arta with graphic design, printing, websites, digital marketing. 100+ clients. Free quote in 24h. +30 2681 303007"
+  }
+}

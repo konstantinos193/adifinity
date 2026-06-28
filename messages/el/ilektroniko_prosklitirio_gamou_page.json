@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Advanced RSVP",
+    "title": "Ηλεκτρονικό Προσκλητήριο Γάμου με RSVP",
+    "subtitle": "Πλήρης Διαχείριση Καλεσμένων & Real-Time Ειδοποιήσεις",
+    "description": "Δημιουργήστε ηλεκτρονικά προσκλητήρια γάμου με advanced RSVP system, real-time ειδοποιήσεις, export λίστας καλεσμένων και πλήρη διαχείριση RSVP.",
+    "cta": "Δημιουργήστε με RSVP",
+    "learn_more": "Δείτε Πακέτα"
+  },
+  "features": {
+    "title": "Advanced RSVP Χαρακτηριστικά",
+    "notifications": {
+      "title": "Real-Time Ειδοποιήσεις",
+      "description": "Λάβετε άμεση ειδοποίηση κάθε φορά που ένας καλεσμένος απαντάει στο RSVP."
+    },
+    "guest_list": {
+      "title": "Διαχείριση Λίστας Καλεσμένων",
+      "description": "Πλήρης dashboard με όλες τις RSVP απαντήσεις, επιβεβαιώσεις και απορρίψεις."
+    },
+    "export": {
+      "title": "Export σε Excel",
+      "description": "Εξάγετε τη λίστα καλεσμένων σε Excel για catering, seating και logistics."
+    },
+    "map": {
+      "title": "Ενσωματωμένος Χάρτης",
+      "description": "Google Maps integration με την τοποθεσία της εκδήλωσης για τους καλεσμένους."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε Ηλεκτρονικό Προσκλητήριο με RSVP;",
+  "benefits": [
+    {
+      "title": "Αυτόματη Διαχείριση",
+      "description": "Ξεχάστε τα τηλεφωνήματα και τα μηνύματα. Το RSVP system διαχειρίζεται τα πάντα αυτόματα."
+    },
+    {
+      "title": "Real-Time Updates",
+      "description": "Βλέπετε σε πραγματικό χρόνο πόσοι καλεσμένοι έχουν απαντήσει και πόσοι θα παρευρεθούν."
+    },
+    {
+      "title": "Reminders",
+      "description": "Αυτόματα reminders σε καλεσμένους που δεν έχουν απαντήσει στο RSVP."
+    },
+    {
+      "title": "Dietary Requirements",
+      "description": "Συλλογή dietary restrictions και ειδικών απαιτήσεων από τους καλεσμένους."
+    },
+    {
+      "title": "Plus Ones",
+      "description": "Διαχείριση plus ones και accompanying guests με ease."
+    },
+    {
+      "title": "Analytics",
+      "description": "Detailed analytics και reports για την RSVP performance της πρόσκλησής σας."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι για advanced RSVP;",
+    "description": "Επισκεφτείτε invitations.adinfinity.gr και δημιουργήστε ηλεκτρονικό προσκλητήριο με advanced RSVP για τον γάμο σας.",
+    "button": "Ξεκινήστε Τώρα"
+  },
+  "seo": {
+    "title": "Ηλεκτρονικό Προσκλητήριο Γάμου με RSVP | Guest Management | adinfinity",
+    "description": "Δημιουργήστε ηλεκτρονικό προσκλητήριο γάμου με advanced RSVP, real-time ειδοποιήσεις και export λίστας. Πλήρης διαχείριση καλεσμένων. Δοκιμάστε invitations.adinfinity.gr."
+  }
+}

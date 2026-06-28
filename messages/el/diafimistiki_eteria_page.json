@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Full-Service Agency",
+    "title": "Διαφημιστική Εταιρεία",
+    "subtitle": "Η Δική σας Full-Service Διαφημιστική Εταιρεία στην Άρτα",
+    "description": "Στην adinfinity, είμαστε μια full-service διαφημιστική εταιρεία στην Άρτα που προσφέρει ολοκληρωμένες λύσεις: graphic design, printing, websites, digital marketing και strategic consulting για την ανάπτυξη της επιχείρησής σας.",
+    "cta": "Ζητήστε Προσφορά",
+    "about_us": "Σχετικά με Εμάς"
+  },
+  "services": {
+    "title": "Υπηρεσίες Διαφημιστικής Εταιρείας",
+    "team": {
+      "title": "Εξειδικευμένο Team",
+      "description": "Έμπειρο team με expertise σε graphic design, web development, digital marketing και strategic planning."
+    },
+    "portfolio": {
+      "title": "Δεδειγμένο Portfolio",
+      "description": "100+ επιτυχημένα projects σε διάφορους κλάδους με measurable results και happy clients."
+    },
+    "strategy": {
+      "title": "Custom Strategy",
+      "description": "Αναπτύσσουμε custom marketing strategy προσαρμοσμένη στις ανάγκες και τους στόχους της επιχείρησής σας."
+    },
+    "results": {
+      "title": "Measurable Results",
+      "description": "Εστιάζουμε σε results με detailed reporting, analytics και continuous optimization για maximum ROI."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε adinfinity;",
+  "benefits": [
+    {
+      "title": "Τοπική Εμπειρία",
+      "description": "Γνωρίζουμε την αγορά της Ήπειρου και προσαρμόζουμε τις λύσεις στις ανάγκες των τοπικών επιχειρήσεων."
+    },
+    {
+      "title": "Full-Service Solutions",
+      "description": "Όλα σε ένα μέρος: graphic design, printing, websites, digital marketing και strategic consulting."
+    },
+    {
+      "title": "Transparent Pricing",
+      "description": "Σαφές pricing χωρίς κρυφές χρεώσεις. Ξέρετε ακριβώς τι πληρώνετε και τι λαμβάνετε."
+    },
+    {
+      "title": "Fast Turnaround",
+      "description": "Γρήγορες παραδόσεις χωρίς συμβιβασμούς στην ποιότητα. Projects σε 1-4 εβδομάδες."
+    },
+    {
+      "title": "Ongoing Support",
+      "description": "Παρέχουμε ongoing support και consulting για long-term success και growth."
+    },
+    {
+      "title": "Results Focused",
+      "description": "Εστιάζουμε σε measurable results και ROI, όχι μόνο σε deliverables."
+    }
+  ],
+  "faq_title": "Συχνές Ερωτήσεις Διαφημιστικής Εταιρείας",
+  "faq": [
+    {
+      "question": "Τι προσφέρει μια διαφημιστική εταιρεία;",
+      "answer": "Μια διαφημιστική εταιρεία προσφέρει ολοκληρωμένες λύσεις marketing: graphic design, printing, websites, digital marketing, social media και strategic consulting για την ανάπτυξη της επιχείρησής σας."
+    },
+    {
+      "question": "Πώς να επιλέξετε τη σωστή διαφημιστική εταιρεία;",
+      "answer": "Ελέγξτε το portfolio, τις κριτικές πελατών, την εμπειρία στον κλάδο σας και την προσέγγιση στο strategy. Επιλέξτε μια agency που καταλαβαίνει το business σας."
+    },
+    {
+      "question": "Πόσο κοστίζει η συνεργασία με διαφημιστική εταιρεία;",
+      "answer": "Το κόστος εξαρτάται από το project και το scope. Project-based pricing από €500, monthly retainers από €500/μήνα, και custom packages ανάλογα με τις ανάγκες."
+    },
+    {
+      "question": "Πόσο χρόνο παίρνει τα projects;",
+      "answer": "Graphic design projects σε 1-2 εβδομάδες, websites σε 2-4 εβδομάδες, complete campaigns σε 4-8 εβδομάδες ανάλογα με την πολυπλοκότητα."
+    },
+    {
+      "question": "Παρέχετε ongoing support;",
+      "answer": "Ναι, παρέχουμε ongoing support, maintenance και consulting για να διασφαλίσουμε long-term success και continuous improvement."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι να συνεργαστείτε μαζί μας;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για την επόμενη marketing campaign της επιχείρησής σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Διαφημιστική Εταιρεία Άρτα | Full-Service Agency | adinfinity",
+    "description": "Διαφημιστική εταιρεία στην Άρτα με graphic design, printing, websites, digital marketing. 100+ πελάτες. Δωρεάν προσφορά σε 24h. +30 2681 303007"
+  }
+}

@@ -61,6 +61,30 @@ import enProjectsPage from '../messages/en/projects_page.json'
 import elProjectsPage from '../messages/el/projects_page.json'
 import enSeo from '../messages/en/seo.json'
 import elSeo from '../messages/el/seo.json'
+import enDiafimistikaDoraPage from '../messages/en/diafimistika_dora_page.json'
+import elDiafimistikaDoraPage from '../messages/el/diafimistika_dora_page.json'
+import enPsifiakoProsklitirioGamouPage from '../messages/en/psifiako_prosklitirio_gamou_page.json'
+import elPsifiakoProsklitirioGamouPage from '../messages/el/psifiako_prosklitirio_gamou_page.json'
+import enDiafimistikiEteriaPage from '../messages/en/diafimistiki_eteria_page.json'
+import elDiafimistikiEteriaPage from '../messages/el/diafimistiki_eteria_page.json'
+import enDiafimistikiPage from '../messages/en/diafimistiki_page.json'
+import elDiafimistikiPage from '../messages/el/diafimistiki_page.json'
+import enDianomiFylladionArtaPage from '../messages/en/dianomi_fylladion_arta_page.json'
+import elDianomiFylladionArtaPage from '../messages/el/dianomi_fylladion_arta_page.json'
+import enSiteGamouRsvpPage from '../messages/en/site_gamou_rsvp_page.json'
+import elSiteGamouRsvpPage from '../messages/el/site_gamou_rsvp_page.json'
+import enEktypwseisArtaPage from '../messages/en/ektypwseis_arta_page.json'
+import elEktypwseisArtaPage from '../messages/el/ektypwseis_arta_page.json'
+import enEpigrafesArtaPage from '../messages/en/epigrafes_arta_page.json'
+import elEpigrafesArtaPage from '../messages/el/epigrafes_arta_page.json'
+import enGrafistasArtaPage from '../messages/en/grafistas_arta_page.json'
+import elGrafistasArtaPage from '../messages/el/grafistas_arta_page.json'
+import enWebDevelopmentArtaPage from '../messages/en/web_development_arta_page.json'
+import elWebDevelopmentArtaPage from '../messages/el/web_development_arta_page.json'
+import enGraphicDesignGuidePage from '../messages/en/graphic_design_guide_page.json'
+import elGraphicDesignGuidePage from '../messages/el/graphic_design_guide_page.json'
+import enIlektronikoProsklitirioGamouPage from '../messages/en/ilektroniko_prosklitirio_gamou_page.json'
+import elIlektronikoProsklitirioGamouPage from '../messages/el/ilektroniko_prosklitirio_gamou_page.json'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const messageCache: Record<string, Record<string, any>> = {
@@ -94,6 +118,18 @@ export const messageCache: Record<string, Record<string, any>> = {
     invitations_page: enInvitationsPage,
     projects_page: enProjectsPage,
     seo: enSeo,
+    diafimistika_dora_page: enDiafimistikaDoraPage,
+    psifiako_prosklitirio_gamou_page: enPsifiakoProsklitirioGamouPage,
+    diafimistiki_eteria_page: enDiafimistikiEteriaPage,
+    diafimistiki_page: enDiafimistikiPage,
+    dianomi_fylladion_arta_page: enDianomiFylladionArtaPage,
+    site_gamou_rsvp_page: enSiteGamouRsvpPage,
+    ektypwseis_arta_page: enEktypwseisArtaPage,
+    epigrafes_arta_page: enEpigrafesArtaPage,
+    grafistas_arta_page: enGrafistasArtaPage,
+    web_development_arta_page: enWebDevelopmentArtaPage,
+    graphic_design_guide_page: enGraphicDesignGuidePage,
+    ilektroniko_prosklitirio_gamou_page: enIlektronikoProsklitirioGamouPage,
   },
   el: {
     common: elCommon,
@@ -125,6 +161,18 @@ export const messageCache: Record<string, Record<string, any>> = {
     invitations_page: elInvitationsPage,
     projects_page: elProjectsPage,
     seo: elSeo,
+    diafimistika_dora_page: elDiafimistikaDoraPage,
+    psifiako_prosklitirio_gamou_page: elPsifiakoProsklitirioGamouPage,
+    diafimistiki_eteria_page: elDiafimistikiEteriaPage,
+    diafimistiki_page: elDiafimistikiPage,
+    dianomi_fylladion_arta_page: elDianomiFylladionArtaPage,
+    site_gamou_rsvp_page: elSiteGamouRsvpPage,
+    ektypwseis_arta_page: elEktypwseisArtaPage,
+    epigrafes_arta_page: elEpigrafesArtaPage,
+    grafistas_arta_page: elGrafistasArtaPage,
+    web_development_arta_page: elWebDevelopmentArtaPage,
+    graphic_design_guide_page: elGraphicDesignGuidePage,
+    ilektroniko_prosklitirio_gamou_page: elIlektronikoProsklitirioGamouPage,
   }
 }
 

@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Οδηγός Διαφημιστικής",
+    "title": "Διαφημιστική",
+    "subtitle": "Οδηγός Digital Marketing & Διαφήμισης για Επιχειρήσεις",
+    "description": "Ολοκληρωμένος οδηγός διαφημιστικής για επιχειρήσεις: traditional advertising, digital marketing, social media campaigns και στρατηγικές προώθησης. Μάθετε πώς να αυξήσετε τις πωλήσεις σας.",
+    "cta": "Ζητήστε Προσφορά",
+    "view_services": "Δείτε Υπηρεσίες"
+  },
+  "services": {
+    "title": "Υπηρεσίες Διαφημιστικής",
+    "traditional": {
+      "title": "Traditional Advertising",
+      "description": "Flyers, αφίσες, διανομή φυλλαδίων, outdoor advertising και έντυπο υλικό για τοπική προώθηση."
+    },
+    "digital": {
+      "title": "Digital Marketing",
+      "description": "Google Ads, Facebook Ads, Instagram campaigns, retargeting και performance marketing για measurable results."
+    },
+    "social": {
+      "title": "Social Media Marketing",
+      "description": "Social media management, content creation, community building και influencer partnerships για brand awareness."
+    },
+    "analytics": {
+      "title": "Analytics & Reporting",
+      "description": "Data-driven decisions με detailed analytics, reporting και optimization για maximum ROI."
+    }
+  },
+  "benefits_title": "Οφέλη Επαγγελματικής Διαφημιστικής",
+  "benefits": [
+    {
+      "title": "Αυξημένες Πωλήσεις",
+      "description": "Εffective advertising campaigns οδηγούν σε αυξημένο traffic, leads και conversions."
+    },
+    {
+      "title": "Brand Awareness",
+      "description": "Συνεπής διαφημιστική χτίζει brand recognition και trust με το target audience."
+    },
+    {
+      "title": "Targeted Reach",
+      "description": "Φτάνετε το ακριβές target audience με precision targeting και segmentation."
+    },
+    {
+      "title": "Measurable Results",
+      "description": "Digital advertising προσφέρει real-time analytics και measurable KPIs για performance tracking."
+    },
+    {
+      "title": "Competitive Advantage",
+      "description": "Stay ahead του ανταγωνισμού με innovative advertising strategies και creative campaigns."
+    },
+    {
+      "title": "Cost-Effective",
+      "description": "Digital advertising προσφέρει competitive pricing και flexibility για κάθε budget."
+    }
+  ],
+  "faq_title": "Συχνές Ερωτήσεις Διαφημιστικής",
+  "faq": [
+    {
+      "question": "Τι είναι η διαφημιστική;",
+      "answer": "Η διαφημιστική είναι η τέχνη και η επιστήμη της προώθησης προϊόντων, υπηρεσιών και brands μέσω διαφόρων καναλιών επικοινωνίας για να αυξήσουν τις πωλήσεις και την αναγνωρισιμότητα."
+    },
+    {
+      "question": "Πόσο κοστίζει η διαφημιστική;",
+      "answer": "Το κόστος διαφημιστικής ποικίλλει ανάλογα με το κανάλι και το budget. Social media campaigns ξεκινούν από €200/μήνα, ενώ complete advertising packages από €500/μήνα."
+    },
+    {
+      "question": "Ποια κανάλια διαφημιστικής είναι πιο αποτελεσματικά;",
+      "answer": "Τα πιο αποτελεσματικά κανάλια εξαρτώνται από το target audience. Για B2C: social media, Google Ads, influencers. Για B2B: LinkedIn, email marketing, content marketing."
+    },
+    {
+      "question": "Πόσο χρόνο παίρνει να δω αποτελέσματα;",
+      "answer": "Digital advertising campaigns δείχνουν αποτελέσματα σε 1-2 εβδομάδες. Brand building campaigns απαιτούν 3-6 μήνες για measurable impact."
+    },
+    {
+      "question": "Πώς μετράτε την επιτυχία;",
+      "answer": "Μετράμε success μέσω KPIs: impressions, clicks, CTR, conversions, CPA, ROAS και overall ROI για κάθε campaign."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι να αυξήσετε τις πωλήσεις σας;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για την επόμενη advertising campaign της επιχείρησής σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Διαφημιστική | Digital Marketing & Advertising Guide | adinfinity",
+    "description": "Οδηγός διαφημιστικής για επιχειρήσεις: traditional advertising, digital marketing, social media, Google Ads. Τιμές, στρατηγικές και FAQ. Δωρεάν προσφορά σε 24h. +30 2681 303007"
+  }
+}

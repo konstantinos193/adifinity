@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Branded Merchandise",
+    "title": "Διαφημιστικά Δώρα Επιχειρήσεων",
+    "subtitle": "Corporate Gifts & Promotional Items στην Άρτα",
+    "description": "Επαγγελματικά διαφημιστικά δώρα και branded merchandise στην Άρτα. Corporate gifts, promotional items, branded merchandise, custom printing και personalized gifts για επιχειρήσεις και events.",
+    "cta": "Ζητήστε Προσφορά",
+    "view_catalog": "Δείτε Κατάλογο"
+  },
+  "services": {
+    "title": "Κατηγορίες Διαφημιστικών Δώρων",
+    "stationery": {
+      "title": "Εντυπούχο Υλικό",
+      "description": "Στυλό, μπλοκ, σημειωματάρια, φακέλους, καρτέλες και all stationery items με custom branding."
+    },
+    "drinkware": {
+      "title": "Ποτήρια & Μπρεζέντες",
+      "description": "Κούπες, μπρεζέντες, μπουκάλια νερού, termokούπες και drinkware με logo και custom design."
+    },
+    "apparel": {
+      "title": "Ρούχα & Αξεσουάρ",
+      "description": "T-shirts, hoodies, καπέλα, μπουφάν και apparel με custom printing και embroidery."
+    },
+    "bags": {
+      "title": "Τσάντες & Σάκοι",
+      "description": "Tote bags, backpacks, laptop bags και custom bags με branding για events και promotions."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε adinfinity;",
+  "benefits": [
+    {
+      "title": "Custom Branding",
+      "description": "Προσαρμόζουμε κάθε προϊόν με το brand σας, με custom design και high-quality printing."
+    },
+    {
+      "title": "Bulk Pricing",
+      "description": "Προσφέρουμε competitive pricing για bulk orders και special offers για large quantities."
+    },
+    {
+      "title": "Fast Turnaround",
+      "description": "Γρήγορη παραγωγή και παράδοση σε 5-10 εργάσιμες για standard orders."
+    },
+    {
+      "title": "Quality Guarantee",
+      "description": "Προσφέρουμε quality guarantee και replacement για defective products."
+    },
+    {
+      "title": "Design Services",
+      "description": "Παρέχουμε design services για να δημιουργήσουμε το τέλειο branded merchandise για εσάς."
+    },
+    {
+      "title": "Wide Selection",
+      "description": "Ευρεία γκάμα προϊόντων για κάθε budget και occasion, από premium έως budget-friendly options."
+    }
+  ],
+  "faq_title": "Συχνές Ερωτήσεις Διαφημιστικών Δώρων",
+  "faq": [
+    {
+      "question": "Πόσο κοστίζουν τα διαφημιστικά δώρα;",
+      "answer": "Οι τιμές εξαρτώνται από το είδος και την ποσότητα. Στυλό από €0.50/τεμ., μπλοκ από €1.50/τεμ., κούπες από €2/τεμ. Παρέχουμε δωρεάν προσφορά για bulk orders."
+    },
+    {
+      "question": "Ποια minimum order quantity;",
+      "answer": "Minimum order εξαρτάται από το προϊόν. Στυλό: 50 τεμ., μπλοκ: 25 τεμ., κούπες: 25 τεμ. Custom items: 100+ τεμ."
+    },
+    {
+      "question": "Παρέχετε custom design;",
+      "answer": "Ναι, παρέχουμε custom design services για όλα τα branded merchandise. Μπορείτε να μας στείλετε το δικό σας logo ή να δημιουργήσουμε design για εσάς."
+    },
+    {
+      "question": "Πόσο χρόνο παίρνει η παραγωγή;",
+      "answer": "Standard orders σε 5-10 εργάσιμες. Express διαθέσιμο σε 3-5 εργάσιμες για επείγουσες παραγγελίες."
+    },
+    {
+      "question": "Παρέχετε proof πριν την παραγωγή;",
+      "answer": "Ναι, παρέχουμε digital proof για approval πριν την παραγωγή για να διασφαλίσουμε ότι είστε ικανοποιημένοι με το design."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι για branded merchandise;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για τα διαφημιστικά δώρα και branded merchandise της επιχείρησής σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Διαφημιστικά Δώρα Επιχειρήσεων Άρτα | Corporate Gifts & Promotional Items | adinfinity",
+    "description": "Επαγγελματικά διαφημιστικά δώρα στην Άρτα. Corporate gifts, promotional items, branded merchandise. Τιμές από €0.50/τεμ. Bulk orders. +30 2681 303007"
+  }
+}

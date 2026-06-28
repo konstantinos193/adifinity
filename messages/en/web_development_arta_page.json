@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Local Service",
+    "title": "Web Development Arta",
+    "subtitle": "Professional Web Development in Epirus",
+    "description": "At adinfinity, we offer custom website development and web applications in Arta and throughout Epirus. We build modern, fast, and SEO-friendly websites in React & Next.js, without using templates.",
+    "cta": "Get a Quote",
+    "learn_more": "Learn More"
+  },
+  "services": {
+    "title": "Web Development Services Arta",
+    "custom_websites": {
+      "title": "Custom Websites",
+      "description": "Professional websites built from scratch, tailored to your business needs."
+    },
+    "web_apps": {
+      "title": "Web Applications",
+      "description": "Complex web applications, dashboards, booking systems, and SaaS platforms."
+    },
+    "e_commerce": {
+      "title": "E-commerce",
+      "description": "Custom online stores with Stripe, order management, and inventory."
+    },
+    "seo": {
+      "title": "Technical SEO",
+      "description": "Google optimization, Core Web Vitals, schema markup, and speed optimization."
+    }
+  },
+  "benefits_title": "Why Choose adinfinity Arta?",
+  "benefits": [
+    {
+      "title": "Local Expertise",
+      "description": "We know the Epirus market and tailor solutions to local business needs."
+    },
+    {
+      "title": "Direct Communication",
+      "description": "Communicate directly with the developer. No middlemen, fast support."
+    },
+    {
+      "title": "No Templates",
+      "description": "Every project is unique. We build from scratch in React & Next.js for optimal performance."
+    },
+    {
+      "title": "SEO Friendly",
+      "description": "All websites delivered with technical SEO, schema markup, and Greek optimization."
+    },
+    {
+      "title": "Fast Delivery",
+      "description": "Websites delivered in 2-4 weeks. Web apps in 4-12 weeks depending on complexity."
+    },
+    {
+      "title": "Support & Maintenance",
+      "description": "We provide ongoing support and maintenance to ensure your website runs smoothly."
+    }
+  ],
+  "cta": {
+    "title": "Ready to start your project?",
+    "description": "Contact us for a free consultation and quote for your website or web application.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Web Development Arta | Website Development Epirus | adinfinity",
+    "description": "Professional website development in Arta and Epirus. Custom web development, React Next.js, e-commerce, SEO. Local support +30 2681 303007."
+  }
+}

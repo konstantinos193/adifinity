@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "badge": "Graphic Design Guide",
+    "title": "Graphic Design Guide",
+    "subtitle": "Complete Guide to Graphic Design Services",
+    "description": "A comprehensive presentation of graphic design services: logo design, branding, corporate identity, advertising materials, and digital design. Learn what to expect and how to choose the right graphic designer.",
+    "cta": "Get a Quote",
+    "view_services": "View Services"
+  },
+  "services": {
+    "title": "Graphic Design Services",
+    "logo": {
+      "title": "Logo Design",
+      "description": "Professional logo design that reflects your business identity and stands out from the competition."
+    },
+    "branding": {
+      "title": "Branding & Corporate Identity",
+      "description": "Complete branding solutions with corporate identity, guidelines, and visual communication."
+    },
+    "print": {
+      "title": "Advertising & Print Design",
+      "description": "Flyers, posters, brochures, catalogs, and all print materials your business needs."
+    },
+    "digital": {
+      "title": "Digital Design & Social Media",
+      "description": "Social media graphics, digital banners, web graphics, and content creation for online presence."
+    }
+  },
+  "process_title": "The Graphic Design Process",
+  "process": [
+    {
+      "step": "01",
+      "title": "Discovery",
+      "description": "We understand your business needs, target audience, and competitors."
+    },
+    {
+      "step": "02",
+      "title": "Concept",
+      "description": "We develop concepts and moodboards to define the design direction."
+    },
+    {
+      "step": "03",
+      "title": "Design",
+      "description": "We create design files with professional quality and attention to detail."
+    },
+    {
+      "step": "04",
+      "title": "Delivery",
+      "description": "We deliver all files in all formats you need."
+    }
+  ],
+  "faq_title": "Graphic Design FAQ",
+  "faq": [
+    {
+      "question": "What is graphic design?",
+      "answer": "Graphic design is the art of visual communication through the use of typography, imagery, color, and layout to convey messages and create brand identity."
+    },
+    {
+      "question": "How much does graphic design cost?",
+      "answer": "Graphic design costs vary based on project scope. Logo design starts from €150, while complete branding packages range from €300-€1000+."
+    },
+    {
+      "question": "What files do I receive?",
+      "answer": "You receive all source files including AI, EPS, PDF, PNG, and JPG formats, along with font files and color codes."
+    },
+    {
+      "question": "How long does a project take?",
+      "answer": "Logo design is delivered in 3-5 business days. Complete branding projects take 2-4 weeks depending on complexity."
+    },
+    {
+      "question": "Do you provide revisions?",
+      "answer": "Yes, we provide revisions to ensure you're 100% satisfied with the result."
+    }
+  ],
+  "cta": {
+    "title": "Ready to start your graphic design project?",
+    "description": "Contact us for a free consultation and quote for your logo, branding, or graphic design project.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Graphic Design Guide | Logo, Branding & Corporate Identity | adinfinity",
+    "description": "Complete graphic design guide: logo design, branding, corporate identity, advertising materials. Pricing, process and FAQ. Free quote in 24h. +30 2681 303007"
+  }
+}

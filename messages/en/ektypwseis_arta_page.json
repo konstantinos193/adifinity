@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Local Service",
+    "title": "Prints Arta",
+    "subtitle": "Business Cards, Flyers, Catalogs & Print Materials in Epirus",
+    "description": "At adinfinity, we offer professional printing services in Arta and throughout Epirus. Digital printing, business cards, flyers, banners, posters, premium printing, packaging, and fast delivery.",
+    "cta": "Get a Quote",
+    "learn_more": "View Services"
+  },
+  "services": {
+    "title": "Printing Services Arta",
+    "business_cards": {
+      "title": "Business Cards & Stationery",
+      "description": "Business cards, letterheads, envelopes, flyers, brochures, catalogs, and all professional print materials."
+    },
+    "large_format": {
+      "title": "Large Format Printing",
+      "description": "Banners, posters, roll-up banners, signage, vehicle graphics, and display printing."
+    },
+    "premium": {
+      "title": "Specialized & Premium Printing",
+      "description": "Gold foil, embossed printing, UV spot, lamination, and special printing techniques."
+    },
+    "packaging": {
+      "title": "Packaging & Promotional Materials",
+      "description": "Product labels, promotional gifts, fabric printing, packaging, and custom print projects."
+    }
+  },
+  "benefits_title": "Why Choose adinfinity Arta?",
+  "benefits": [
+    {
+      "title": "Local Service",
+      "description": "Based in Arta, offering fast delivery and direct support throughout Epirus."
+    },
+    {
+      "title": "High Quality",
+      "description": "We use modern equipment and premium materials for professional results that last."
+    },
+    {
+      "title": "Fast Delivery",
+      "description": "We ensure timely completion of every project. Express options available for urgent orders."
+    },
+    {
+      "title": "Competitive Pricing",
+      "description": "We offer competitive prices without compromising quality for local businesses."
+    },
+    {
+      "title": "Custom Solutions",
+      "description": "We tailor every print to your needs, from small orders to large productions."
+    },
+    {
+      "title": "Design Support",
+      "description": "We provide design support and prepress services to ensure perfect results."
+    }
+  ],
+  "cta": {
+    "title": "Ready for your printing needs?",
+    "description": "Contact us for a free quote for your printing, stationery, or packaging needs.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Prints Arta | Business Cards, Flyers, Catalogs & Print Materials | adinfinity",
+    "description": "Professional printing in Arta. Digital printing, business cards, flyers, banners, posters, premium printing, packaging. Fast delivery +30 2681 303007."
+  }
+}

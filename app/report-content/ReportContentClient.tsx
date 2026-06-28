@@ -69,7 +69,7 @@ export default function ReportContentClient({ locale: _locale }: ReportContentCl
                   
                   <div className="space-y-3 mb-4">
                     <div className="text-gray-400 text-sm">
-                      <strong>{t('report_content.to')}</strong> adenfinity@gmail.com
+                      <strong>{t('report_content.to')}</strong> info@adinfinity.gr
                     </div>
                     <div className="text-gray-400 text-sm">
                       <strong>{t('report_content.subject')}</strong> {t('report_content.form.title')} - [Brief Description]
@@ -86,7 +86,7 @@ export default function ReportContentClient({ locale: _locale }: ReportContentCl
                   </div>
                   
                   <a 
-                    href="mailto:adenfinity@gmail.com?subject=Content Report&body=URL of content:%0A%0ADescription of issue:%0A%0AContact information (optional):%0A%0AAdditional details:"
+                    href="mailto:info@adinfinity.gr?subject=Content Report&body=URL of content:%0A%0ADescription of issue:%0A%0AContact information (optional):%0A%0AAdditional details:"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-[#01FFFF]/20 to-[#01A9FF]/20 text-[#01FFFF] border border-[#01FFFF]/30 px-4 py-2 rounded-lg hover:bg-[#01FFFF]/10 transition-colors"
                   >
                     {t('report_content.send_email_report')}

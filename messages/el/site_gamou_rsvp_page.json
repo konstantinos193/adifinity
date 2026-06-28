@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Premium Package",
+    "title": "Site Γάμου με RSVP & Χάρτη",
+    "subtitle": "Πλήρης Mini Γαμήλια Ιστοσελίδα για τη Μεγάλη σας Μέρα",
+    "description": "Δημιουργήστε mini γαμήλια ιστοσελίδα με RSVP, χάρτη Google Maps, γκαλερί φωτογραφιών, χρονοδιάγραμμα, μητρώο δώρων και πλήρη διαχείριση καλεσμένων.",
+    "cta": "Δημιουργήστε Mini Site",
+    "learn_more": "Δείτε Πακέτα"
+  },
+  "features": {
+    "title": "Mini Γαμήλια Ιστοσελίδα Χαρακτηριστικά",
+    "map": {
+      "title": "Ενσωματωμένος Χάρτης",
+      "description": "Google Maps integration με την τοποθεσία της εκδήλωσης για εύκολη πρόσβαση των καλεσμένων."
+    },
+    "gallery": {
+      "title": "Γκαλερί Φωτογραφιών",
+      "description": "Upload φωτογραφιών του ζευγαριού, pre-wedding photos και story telling με images."
+    },
+    "timeline": {
+      "title": "Χρονοδιάγραμμα",
+      "description": "Detailed timeline της ημέρας με ώρες, εκδηλώσεις και σημαντικά milestones."
+    },
+    "gifts": {
+      "title": "Μητρώο Δώρων",
+      "description": "Gift registry με bank details, wishlist και διαχείριση δώρων από καλεσμένους."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε Mini Γαμήλια Ιστοσελίδα;",
+  "benefits": [
+    {
+      "title": "All-in-One Solution",
+      "description": "Όλα σε ένα μέρος: RSVP, χάρτης, γκαλερί, timeline, δώρα και πληροφορίες για τους καλεσμένους."
+    },
+    {
+      "title": "Mobile Friendly",
+      "description": "100% responsive design. Οι καλεσμένοι έχουν πρόσβαση από smartphone, tablet και desktop."
+    },
+    {
+      "title": "Custom Design",
+      "description": "Προσαρμόζετε χρώματα, fonts, φωτογραφίες και κάθε λεπτομέρεια στο στυλ του γάμου σας."
+    },
+    {
+      "title": "Real-Time Updates",
+      "description": "Ανεβάζετε αλλαγές αμέσως. Όλοι οι καλεσμένοι βλέπουν τις τελευταίες πληροφορίες."
+    },
+    {
+      "title": "Analytics",
+      "description": "Δείτε πόσοι καλεσμένοι επισκέφθηκαν το site, πότε και πόσο χρόνο πέρασαν."
+    },
+    {
+      "title": "Easy Sharing",
+      "description": "Μοναδικός σύνδεσμος για εύκολη κοινοποίηση μέσω Viber, WhatsApp και social media."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι για mini γαμήλια ιστοσελίδα;",
+    "description": "Επισκεφτείτε invitations.adinfinity.gr και δημιουργήστε την τέλεια mini γαμήλια ιστοσελίδα για τον γάμο σας.",
+    "button": "Ξεκινήστε Τώρα"
+  },
+  "seo": {
+    "title": "Site Γάμου με RSVP & Χάρτη | Mini Wedding Website | adinfinity",
+    "description": "Δημιουργήστε mini γαμήλια ιστοσελίδα με RSVP, χάρτη, γκαλερί, timeline και μητρώο δώρων. All-in-one solution για τον γάμο σας. Δοκιμάστε invitations.adinfinity.gr."
+  }
+}

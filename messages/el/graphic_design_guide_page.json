@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "badge": "Οδηγός Graphic Design",
+    "title": "Graphic Design Guide",
+    "subtitle": "Πλήρης Οδηγός για Υπηρεσίες Graphic Design",
+    "description": "Μια ολοκληρωμένη παρουσίαση των υπηρεσιών graphic design: logo design, branding, εταιρική ταυτότητα, διαφημιστικό υλικό και digital design. Μάθετε τι να περιμένετε και πώς να επιλέξετε τον κατάλληλο graphic designer.",
+    "cta": "Ζητήστε Προσφορά",
+    "view_services": "Δείτε Υπηρεσίες"
+  },
+  "services": {
+    "title": "Υπηρεσίες Graphic Design",
+    "logo": {
+      "title": "Logo Design",
+      "description": "Επαγγελματικό logo design που αντικατοπτρίζει την ταυτότητα της επιχείρησής σας και ξεχωρίζει από τον ανταγωνισμό."
+    },
+    "branding": {
+      "title": "Branding & Εταιρική Ταυτότητα",
+      "description": "Ολοκληρωμένες λύσεις branding με εταιρική ταυτότητα, guidelines και οπτική επικοινωνία."
+    },
+    "print": {
+      "title": "Διαφημιστικό & Έντυπο Σχεδιασμό",
+      "description": "Flyers, αφίσες, brochures, καταλόγοι και όλα τα έντυπα που χρειάζεται η επιχείρησή σας."
+    },
+    "digital": {
+      "title": "Digital Design & Social Media",
+      "description": "Social media graphics, digital banners, web graphics και content creation για online presence."
+    }
+  },
+  "process_title": "Η Διαδικασία Graphic Design",
+  "process": [
+    {
+      "step": "01",
+      "title": "Discovery",
+      "description": "Κατανοούμε τις ανάγκες της επιχείρησής σας, το target audience και τους ανταγωνιστές."
+    },
+    {
+      "step": "02",
+      "title": "Concept",
+      "description": "Αναπτύσσουμε concepts και moodboards για να ορίσουμε την κατεύθυνση του design."
+    },
+    {
+      "step": "03",
+      "title": "Design",
+      "description": "Δημιουργούμε τα αρχεία design με επαγγελματική ποιότητα και attention to detail."
+    },
+    {
+      "step": "04",
+      "title": "Delivery",
+      "description": "Παραδίδουμε όλα τα αρχεία σε όλες τις μορφές που χρειάζεστε."
+    }
+  ],
+  "faq_title": "Συχνές Ερωτήσεις Graphic Design",
+  "faq": [
+    {
+      "question": "Τι είναι το graphic design;",
+      "answer": "Graphic design είναι η τέχνη της οπτικής επικοινωνίας μέσω της χρήσης typography, εικόνων, χρώματος και layout για να μεταδοθούν μηνύματα και να δημιουργηθεί brand identity."
+    },
+    {
+      "question": "Πόσο κοστίζει το graphic design;",
+      "answer": "Το κόστος graphic design ποικίλλει ανάλογα με το project. Logo design ξεκινά από €150, ενώ ολοκληρωμένα πακέτα branding κυμαίνονται από €300-€1000+."
+    },
+    {
+      "question": "Ποια αρχεία λαμβάνω;",
+      "answer": "Λαμβάνετε όλα τα source αρχεία συμπεριλαμβανομένων AI, EPS, PDF, PNG και JPG formats, μαζί με font files και color codes."
+    },
+    {
+      "question": "Πόσο χρόνο παίρνει ένα project;",
+      "answer": "Logo design παραδίδεται σε 3-5 εργάσιμες. Complete branding projects σε 2-4 εβδομάδες ανάλογα με την πολυπλοκότητα."
+    },
+    {
+      "question": "Παρέχετε revisions;",
+      "answer": "Ναι, παρέχουμε revisions για να διασφαλίσουμε ότι είστε 100% ικανοποιημένοι με το αποτέλεσμα."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι να ξεκινήσετε το graphic design project σας;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για το logo, branding ή graphic design project σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Graphic Design Guide | Logo, Branding & Εταιρική Ταυτότητα | adinfinity",
+    "description": "Πλήρης οδηγός graphic design: logo design, branding, εταιρική ταυτότητα, διαφημιστικό υλικό. Τιμές, διαδικασία και FAQ. Δωρεάν προσφορά σε 24h. +30 2681 303007"
+  }
+}

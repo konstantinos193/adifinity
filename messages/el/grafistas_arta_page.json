@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Τοπική Υπηρεσία",
+    "title": "Γραφίστας Άρτα",
+    "subtitle": "Logo, Branding & Εταιρική Ταυτότητα στην Ήπειρο",
+    "description": "Στην adfinity, προσφέρουμε επαγγελματικές υπηρεσίες graphic design στην Άρτα και σε όλη την Ήπειρο. Logo design, εταιρική ταυτότητα, διαφημιστικό υλικό, social media graphics και ολοκληρωμένες λύσεις branding.",
+    "cta": "Ζητήστε Προσφορά",
+    "learn_more": "Δείτε Portfolio"
+  },
+  "services": {
+    "title": "Υπηρεσίες Graphic Design Άρτα",
+    "branding": {
+      "title": "Branding & Εταιρική Ταυτότητα",
+      "description": "Logo design, εταιρική ταυτότητα, branding guidelines, οπτική επικοινωνία και complete branding solutions."
+    },
+    "advertising": {
+      "title": "Διαφημιστικό & Έντυπο Σχεδιασμό",
+      "description": "Flyers, αφίσες, brochures, καταλόγοι, διαφημιστικό υλικό, business cards και έντυπα επικοινωνίας."
+    },
+    "digital": {
+      "title": "Ψηφιακός Σχεδιασμός & Social Media",
+      "description": "Social media graphics, digital banners, web graphics, email templates, content creation και digital design."
+    },
+    "specialized": {
+      "title": "Εξειδικευμένες Υπηρεσίες",
+      "description": "Packaging design, ετικέτες προϊόντων, menu design, signage, vehicle graphics και custom design projects."
+    }
+  },
+  "benefits_title": "Γιατί να Επιλέξετε adfinity Άρτα;",
+  "benefits": [
+    {
+      "title": "Τοπική Εμπειρία",
+      "description": "Γνωρίζουμε την αγορά της Ήπειρου και προσαρμόζουμε το design στις ανάγκες των τοπικών επιχειρήσεων."
+    },
+    {
+      "title": "Direct Communication",
+      "description": "Επικοινωνείτε απευθείας με τον graphic designer. Γρήγορη feedback loop και συνεργασία."
+    },
+    {
+      "title": "Professional Quality",
+      "description": "Όλα τα projects παραδίδονται σε high-resolution, print-ready και web-ready formats."
+    },
+    {
+      "title": "Brand Consistency",
+      "description": "Διασφαλίζουμε συνέπεια σε όλα τα touchpoints της επωνυμίας σας, από logo έως social media."
+    },
+    {
+      "title": "Fast Turnaround",
+      "description": "Γρήγορες παραδόσεις χωρίς συμβιβασμούς στην ποιότητα. Logo projects σε 3-5 εργάσιμες."
+    },
+    {
+      "title": "Support & Revisions",
+      "description": "Παρέχουμε revisions και ongoing support για να είστε 100% ικανοποιημένοι με το αποτέλεσμα."
+    }
+  ],
+  "cta": {
+    "title": "Έτοιμοι να χτίσετε την επωνυμία σας;",
+    "description": "Επικοινωνήστε μαζί μας για δωρεάν συμβουλή και προσφορά για το logo, branding ή graphic design project σας.",
+    "button": "Στείλτε Αίτημα"
+  },
+  "seo": {
+    "title": "Γραφίστας Άρτα | Logo, Branding & Εταιρική Ταυτότητα | adinfinity",
+    "description": "Επαγγελματικός γραφίστας στην Άρτα. Logo design, branding, εταιρική ταυτότητα, διαφημιστικό υλικό, social media graphics. Τοπική υπηρεσία +30 2681 303007."
+  }
+}

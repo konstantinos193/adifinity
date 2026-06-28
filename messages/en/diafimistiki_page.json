@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "badge": "Advertising Guide",
+    "title": "Advertising",
+    "subtitle": "Digital Marketing & Advertising Guide for Businesses",
+    "description": "Complete advertising guide for businesses: traditional advertising, digital marketing, social media campaigns, and promotion strategies. Learn how to increase your sales.",
+    "cta": "Get a Quote",
+    "view_services": "View Services"
+  },
+  "services": {
+    "title": "Advertising Services",
+    "traditional": {
+      "title": "Traditional Advertising",
+      "description": "Flyers, posters, flyer distribution, outdoor advertising, and print materials for local promotion."
+    },
+    "digital": {
+      "title": "Digital Marketing",
+      "description": "Google Ads, Facebook Ads, Instagram campaigns, retargeting, and performance marketing for measurable results."
+    },
+    "social": {
+      "title": "Social Media Marketing",
+      "description": "Social media management, content creation, community building, and influencer partnerships for brand awareness."
+    },
+    "analytics": {
+      "title": "Analytics & Reporting",
+      "description": "Data-driven decisions with detailed analytics, reporting, and optimization for maximum ROI."
+    }
+  },
+  "benefits_title": "Benefits of Professional Advertising",
+  "benefits": [
+    {
+      "title": "Increased Sales",
+      "description": "Effective advertising campaigns lead to increased traffic, leads, and conversions."
+    },
+    {
+      "title": "Brand Awareness",
+      "description": "Consistent advertising builds brand recognition and trust with your target audience."
+    },
+    {
+      "title": "Targeted Reach",
+      "description": "Reach the exact target audience with precision targeting and segmentation."
+    },
+    {
+      "title": "Measurable Results",
+      "description": "Digital advertising offers real-time analytics and measurable KPIs for performance tracking."
+    },
+    {
+      "title": "Competitive Advantage",
+      "description": "Stay ahead of competition with innovative advertising strategies and creative campaigns."
+    },
+    {
+      "title": "Cost-Effective",
+      "description": "Digital advertising offers competitive pricing and flexibility for every budget."
+    }
+  ],
+  "faq_title": "Advertising FAQ",
+  "faq": [
+    {
+      "question": "What is advertising?",
+      "answer": "Advertising is the art and science of promoting products, services, and brands through various communication channels to increase sales and brand awareness."
+    },
+    {
+      "question": "How much does advertising cost?",
+      "answer": "Advertising costs vary by channel and budget. Social media campaigns start from €200/month, while complete advertising packages start from €500/month."
+    },
+    {
+      "question": "Which advertising channels are most effective?",
+      "answer": "The most effective channels depend on your target audience. For B2C: social media, Google Ads, influencers. For B2B: LinkedIn, email marketing, content marketing."
+    },
+    {
+      "question": "How long does it take to see results?",
+      "answer": "Digital advertising campaigns show results in 1-2 weeks. Brand building campaigns require 3-6 months for measurable impact."
+    },
+    {
+      "question": "How do you measure success?",
+      "answer": "We measure success through KPIs: impressions, clicks, CTR, conversions, CPA, ROAS, and overall ROI for each campaign."
+    }
+  ],
+  "cta": {
+    "title": "Ready to increase your sales?",
+    "description": "Contact us for a free consultation and quote for your next business advertising campaign.",
+    "button": "Send Request"
+  },
+  "seo": {
+    "title": "Advertising | Digital Marketing & Advertising Guide | adinfinity",
+    "description": "Advertising guide for businesses: traditional advertising, digital marketing, social media, Google Ads. Pricing, strategies and FAQ. Free quote in 24h. +30 2681 303007"
+  }
+}

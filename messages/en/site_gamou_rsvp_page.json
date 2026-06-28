@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "badge": "Premium Package",
+    "title": "Wedding Website with RSVP & Map",
+    "subtitle": "Complete Mini Wedding Website for Your Big Day",
+    "description": "Create a mini wedding website with RSVP, Google Maps, photo gallery, timeline, gift registry, and full guest management.",
+    "cta": "Create Mini Site",
+    "learn_more": "View Packages"
+  },
+  "features": {
+    "title": "Mini Wedding Website Features",
+    "map": {
+      "title": "Integrated Map",
+      "description": "Google Maps integration with event location for easy guest access."
+    },
+    "gallery": {
+      "title": "Photo Gallery",
+      "description": "Upload couple photos, pre-wedding photos, and storytelling with images."
+    },
+    "timeline": {
+      "title": "Timeline",
+      "description": "Detailed timeline of the day with times, events, and important milestones."
+    },
+    "gifts": {
+      "title": "Gift Registry",
+      "description": "Gift registry with bank details, wishlist, and gift management from guests."
+    }
+  },
+  "benefits_title": "Why Choose Mini Wedding Website?",
+  "benefits": [
+    {
+      "title": "All-in-One Solution",
+      "description": "Everything in one place: RSVP, map, gallery, timeline, gifts, and info for guests."
+    },
+    {
+      "title": "Mobile Friendly",
+      "description": "100% responsive design. Guests can access from smartphone, tablet, and desktop."
+    },
+    {
+      "title": "Custom Design",
+      "description": "Customize colors, fonts, photos, and every detail to match your wedding style."
+    },
+    {
+      "title": "Real-Time Updates",
+      "description": "Upload changes instantly. All guests see the latest information."
+    },
+    {
+      "title": "Analytics",
+      "description": "See how many guests visited the site, when, and how long they stayed."
+    },
+    {
+      "title": "Easy Sharing",
+      "description": "Unique link for easy sharing via Viber, WhatsApp, and social media."
+    }
+  ],
+  "cta": {
+    "title": "Ready for a mini wedding website?",
+    "description": "Visit invitations.adinfinity.gr and create the perfect mini wedding website for your wedding.",
+    "button": "Get Started"
+  },
+  "seo": {
+    "title": "Wedding Website with RSVP & Map | Mini Wedding Website | adinfinity",
+    "description": "Create mini wedding website with RSVP, map, gallery, timeline and gift registry. All-in-one solution for your wedding. Try invitations.adinfinity.gr."
+  }
+}

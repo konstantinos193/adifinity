@@ -381,7 +381,7 @@ export default function AccessibilityClient() {
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-gray-400">
                     <Mail className="text-[#01FFFF]" size={20} />
-                    <span><strong>Email:</strong> adenfinity@gmail.com</span>
+                    <span><strong>Email:</strong> info@adinfinity.gr</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-400">
                     <Phone className="text-[#01FFFF]" size={20} />

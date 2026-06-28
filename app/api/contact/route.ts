@@ -21,7 +21,7 @@ export async function POST(request: Request) {
   try {
     const mailOptions: nodemailer.SendMailOptions = {
       from: `"Contact Form" <${process.env.EMAIL_USER}>`,
-      to: 'adenfinity@gmail.com',
+      to: 'info@adinfinity.gr',
       subject: `New message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>

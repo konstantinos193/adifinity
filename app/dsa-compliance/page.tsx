@@ -72,7 +72,7 @@ export default function DSACompliancePage() {
               url: "https://adinfinity.gr",
               contactPoint: {
                 "@type": "ContactPoint",
-                email: "adenfinity@gmail.com",
+                email: "info@adinfinity.gr",
                 telephone: "+30-2681-303007",
                 contactType: "DSA compliance",
                 availableLanguage: ["Greek", "English"],
