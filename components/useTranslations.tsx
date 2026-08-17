@@ -85,6 +85,10 @@ import enGraphicDesignGuidePage from '../messages/en/graphic_design_guide_page.j
 import elGraphicDesignGuidePage from '../messages/el/graphic_design_guide_page.json'
 import enIlektronikoProsklitirioGamouPage from '../messages/en/ilektroniko_prosklitirio_gamou_page.json'
 import elIlektronikoProsklitirioGamouPage from '../messages/el/ilektroniko_prosklitirio_gamou_page.json'
+import enDigitalMarketingPage from '../messages/en/digital_marketing_page.json'
+import elDigitalMarketingPage from '../messages/el/digital_marketing_page.json'
+import enBrandingPage from '../messages/en/branding_page.json'
+import elBrandingPage from '../messages/el/branding_page.json'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const messageCache: Record<string, Record<string, any>> = {
@@ -130,6 +134,8 @@ export const messageCache: Record<string, Record<string, any>> = {
     web_development_arta_page: enWebDevelopmentArtaPage,
     graphic_design_guide_page: enGraphicDesignGuidePage,
     ilektroniko_prosklitirio_gamou_page: enIlektronikoProsklitirioGamouPage,
+    digital_marketing_page: enDigitalMarketingPage,
+    branding_page: enBrandingPage,
   },
   el: {
     common: elCommon,
@@ -173,7 +179,15 @@ export const messageCache: Record<string, Record<string, any>> = {
     web_development_arta_page: elWebDevelopmentArtaPage,
     graphic_design_guide_page: elGraphicDesignGuidePage,
     ilektroniko_prosklitirio_gamou_page: elIlektronikoProsklitirioGamouPage,
+    digital_marketing_page: elDigitalMarketingPage,
+    branding_page: elBrandingPage,
   }
+}
+
+// t() returns the key itself when a translation is missing, so casting its
+// result straight to an array crashes the render. Use this instead.
+export function asArray<T>(value: unknown): T[] {
+  return Array.isArray(value) ? (value as T[]) : []
 }
 
 export function useTranslations() {

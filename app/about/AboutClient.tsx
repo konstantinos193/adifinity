@@ -24,7 +24,6 @@ export function AboutClient() {
   const { t } = useTranslations()
 
   const teamMembers = t('about_page.team_members') as TeamMembers
-  const _timeline = t('about_page.timeline') as Record<string, unknown>
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#07141C] to-[#0A1A24] overflow-hidden">

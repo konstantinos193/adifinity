@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Κατασκευή Ιστοσελίδων & Web Applications",
-    "description": "Custom κατασκευή ιστοσελίδων, web applications και e-shops σε React & Next.js. Καμία χρήση templates, μόνο clean code.",
+    "description": "Τα νέα websites, web applications και e-shops μας υλοποιούνται custom σε React & Next.js, χωρίς έτοιμα themes ή page builders.",
     "provider": {
       "@type": "Organization",
       "name": "adinfinity",
@@ -451,10 +451,10 @@ export default function WebsiteDevelopmentLayout({
               },
               {
                 "@type": "Question",
-                "name": "Χρησιμοποιείτε WordPress ή templates;",
+                "name": "Ποια τεχνολογία χρησιμοποιείτε στα νέα projects;",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Όχι. Χτίζουμε κάθε project από μηδέν σε React & Next.js. Δεν χρησιμοποιούμε WordPress, Wix ή templates — μόνο custom code για βέλτιστη απόδοση, ασφάλεια και SEO."
+                  "text": "Στα νέα projects ακολουθούμε custom προσέγγιση με React και Next.js, χωρίς έτοιμα themes ή page builders. Το portfolio μας περιλαμβάνει και παλαιότερα έργα διαφορετικής τεχνολογίας."
                 }
               },
               {

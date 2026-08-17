@@ -1,0 +1,193 @@
+{
+  "hero_badge": "Branding & Corporate Identity Arta",
+  "hero_title": "Identity that sets you apart",
+  "description": "Logo design, corporate identity and brand guidelines for businesses in Arta and Epirus. Since 2013 we have designed identities that work equally well on a shop sign, a business card and a screen.",
+  "get_started": "Request a Quote",
+  "see_services": "See the Services",
+  "stats": [
+    { "num": "12+", "label": "Years of Experience" },
+    { "num": "200+", "label": "Completed Projects" },
+    { "num": "4.9/5", "label": "Google Rating" }
+  ],
+  "our_services": "Branding Services",
+  "services_description": "From the logo through to the complete identity system for your business.",
+  "services": [
+    {
+      "key": "logo",
+      "title": "Logo Design",
+      "description": "An original logo designed from scratch, in vector format, with variants for every use — from favicon to shop sign.",
+      "tags": ["Vector", "Variants", "Original"]
+    },
+    {
+      "key": "identity",
+      "title": "Corporate Identity",
+      "description": "Business cards, letterheads, envelopes, stamps, email signatures and whatever else your business needs to look consistent everywhere.",
+      "tags": ["Cards", "Stationery", "Uniforms & Vehicles"]
+    },
+    {
+      "key": "strategy",
+      "title": "Brand Strategy",
+      "description": "Positioning, target audience, tone of voice and core messaging. The foundation the visual design is built on.",
+      "tags": ["Positioning", "Tone of Voice", "Messaging"]
+    },
+    {
+      "key": "guidelines",
+      "title": "Brand Guidelines",
+      "description": "A usage manual covering colours, typography, spacing and examples of correct and incorrect use, so the identity stays consistent no matter who applies it.",
+      "tags": ["Colour Palette", "Typography", "PDF Manual"]
+    },
+    {
+      "key": "rebranding",
+      "title": "Rebranding",
+      "description": "Refreshing an existing identity without losing the recognition you have already built, with a staged transition plan across all your materials.",
+      "tags": ["Refresh", "Transition Plan", "Continuity"]
+    },
+    {
+      "key": "packaging",
+      "title": "Packaging & Labels",
+      "description": "Packaging, label and product marking design, production-ready and checked together with our own print department.",
+      "tags": ["Packaging", "Labels", "Production Ready"]
+    }
+  ],
+  "process_title": "The Design Process",
+  "process_description": "A structured process with clear approval points — you always know which stage you are at.",
+  "process": [
+    {
+      "step": "01",
+      "title": "Discovery",
+      "desc": "We discuss your business, your audience and your competitors, and agree a clear brief that you sign off before design begins."
+    },
+    {
+      "step": "02",
+      "title": "Research & Direction",
+      "desc": "We examine your market and propose design directions with reasoning behind them — not just 'we liked this one'."
+    },
+    {
+      "step": "03",
+      "title": "Design",
+      "desc": "We present complete logo proposals in real applications, so you can see how they will actually look in use."
+    },
+    {
+      "step": "04",
+      "title": "Revisions",
+      "desc": "You choose a direction and we refine it together. Revision rounds are agreed from the start."
+    },
+    {
+      "step": "05",
+      "title": "Delivery",
+      "desc": "You receive every file in every format you will need, along with the identity usage manual."
+    }
+  ],
+  "why_choose_us": "Why adinfinity",
+  "why_choose_description": "We design identities knowing how they will be printed — because we print them too.",
+  "features": [
+    {
+      "title": "Design & Print Together",
+      "description": "We have our own print department. Everything we design is verified to print correctly, with no surprises in the final result."
+    },
+    {
+      "title": "Full File Ownership",
+      "description": "We hand over all original vector files. Your identity is yours, and you can give it to any partner you choose."
+    },
+    {
+      "title": "Works at Any Size",
+      "description": "Every logo is checked from app icon through to shop sign, in both colour and single-colour versions."
+    },
+    {
+      "title": "Local Presence",
+      "description": "We are at Vas. Pyrrou 30 in Arta. You can drop in, see samples and talk it through in person."
+    }
+  ],
+  "deliverables_title": "What You Receive",
+  "deliverables_description": "Every branding project is delivered complete, with no hidden charges for 'extra files'.",
+  "deliverables": [
+    "Original vector files (AI, EPS, SVG)",
+    "Screen files (PNG, JPG) in multiple sizes",
+    "Colour, black-and-white and negative versions",
+    "Horizontal and vertical logo layouts",
+    "Colour palette in CMYK, RGB, HEX and Pantone",
+    "Typography guidance with the fonts used",
+    "Identity usage manual as a PDF",
+    "Print-ready and social-media-ready files"
+  ],
+  "pricing_title": "Indicative Pricing",
+  "pricing_description": "These are starting prices and are shaped by the scope of the project and the number of applications.",
+  "pricing_plans": [
+    {
+      "name": "Logo",
+      "price": "from €250",
+      "period": "",
+      "description": "For new businesses that need a proper start.",
+      "features": [
+        "Original logo design",
+        "Proposals shown in real applications",
+        "Variants & single-colour version",
+        "All vector files",
+        "Basic colour palette"
+      ]
+    },
+    {
+      "name": "Corporate Identity",
+      "price": "from €700",
+      "period": "",
+      "description": "A complete package for a business launching or refreshing.",
+      "features": [
+        "Everything in the logo package",
+        "Business card & letterhead",
+        "Email signature & social media assets",
+        "Brand guidelines as a PDF",
+        "Print-ready files"
+      ],
+      "highlighted": true
+    },
+    {
+      "name": "Rebranding",
+      "price": "On request",
+      "period": "",
+      "description": "For established businesses with existing materials.",
+      "features": [
+        "Assessment of the existing identity",
+        "Positioning strategy",
+        "Redesign with continuity",
+        "Staged transition plan",
+        "Refresh of all applications"
+      ]
+    }
+  ],
+  "pricing_note": "Need the materials printed as well? We cost it as one job, with no middlemen.",
+  "faq_title": "Frequently Asked Questions About Branding",
+  "faq": [
+    {
+      "question": "How much does a logo cost in Arta?",
+      "answer": "Logo design starts from €250 and includes original design, variants and all vector files. The full corporate identity package starts from €700. The final price depends on the number of applications."
+    },
+    {
+      "question": "How long does identity design take?",
+      "answer": "A logo is usually completed in 1-2 weeks. A full corporate identity package takes 3-4 weeks, depending on how quickly feedback comes back from your side."
+    },
+    {
+      "question": "How many revision rounds are included?",
+      "answer": "We agree the revision rounds up front and state them in the quote, so there are no surprises. In practice we keep working until you are happy with the direction you have chosen."
+    },
+    {
+      "question": "Do I get the logo files?",
+      "answer": "Yes, all of them. We deliver the original vector files (AI, EPS, SVG) along with screen formats. The identity belongs to you and you can pass it to any printer or designer."
+    },
+    {
+      "question": "What is the difference between a logo and a corporate identity?",
+      "answer": "The logo is your mark. The corporate identity is the whole system around it: colours, fonts, cards, stationery, signage and usage rules. The logo makes you recognisable; the identity keeps you consistent."
+    },
+    {
+      "question": "Can you print the materials as well?",
+      "answer": "Yes. We have our own print department, so cards, stationery, signage and packaging can be produced by us with a single cost and one quality check."
+    }
+  ],
+  "cta_title": "Let's build your identity",
+  "cta_description": "Tell us what your business does and where you want it to be in five years. That is where we start.",
+  "cta_button": "Request a Quote",
+  "cta_secondary": "See Our Work",
+  "seo": {
+    "title": "Branding & Corporate Identity Arta | Logo Design | adinfinity",
+    "description": "Logo design, corporate identity and brand guidelines in Arta, Greece. Original design, all files yours, printing handled by the same agency."
+  }
+}

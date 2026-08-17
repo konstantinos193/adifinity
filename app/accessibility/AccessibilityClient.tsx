@@ -135,93 +135,39 @@ export default function AccessibilityClient() {
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                 <Eye className="text-[#01FFFF]" size={28} />
-                Accessibility Features
+                {t('accessibility.accessibility_features')}
               </h2>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Navigation</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Keyboard-friendly navigation</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Skip to main content links</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Clear focus indicators</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Logical tab order</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Content</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Semantic HTML structure</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Alternative text for images</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Descriptive link text</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Readable font sizes</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Visual Design</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>High color contrast ratios</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Responsive design</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Text scaling support</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Consistent layout</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
-                  <h3 className="text-lg font-semibold text-white mb-3">Technical</h3>
-                  <ul className="space-y-2 text-gray-400">
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>ARIA landmarks</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Screen reader support</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Form accessibility</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
-                      <span>Error prevention</span>
-                    </li>
-                  </ul>
-                </div>
+                {[
+                  {
+                    title: t('accessibility.navigation'),
+                    items: ['keyboard_nav_desc', 'skip_links', 'focus_indicators', 'tab_order'],
+                  },
+                  {
+                    title: t('accessibility.content'),
+                    items: ['semantic_structure', 'alt_text', 'descriptive_links', 'readable_fonts'],
+                  },
+                  {
+                    title: t('accessibility.visual_design'),
+                    items: ['high_contrast', 'responsive_design', 'text_scaling', 'consistent_layout'],
+                  },
+                  {
+                    title: t('accessibility.technical'),
+                    items: ['aria_landmarks', 'screen_reader_support', 'form_accessibility', 'error_prevention'],
+                  },
+                ].map((group) => (
+                  <div key={group.title} className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
+                    <h3 className="text-lg font-semibold text-white mb-3">{group.title}</h3>
+                    <ul className="space-y-2 text-gray-400">
+                      {group.items.map((key) => (
+                        <li key={key} className="flex items-start gap-2">
+                          <ArrowRight className="text-[#01FFFF] mt-1 flex-shrink-0" size={16} />
+                          <span>{t(`accessibility.${key}`)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </motion.div>
 
@@ -233,21 +179,29 @@ export default function AccessibilityClient() {
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
                 <Keyboard className="text-[#01FFFF]" size={28} />
-                Keyboard Navigation
+                {t('accessibility.keyboard_navigation_title')}
               </h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  Our website is designed to be fully navigable using only a keyboard:
+                  {t('accessibility.keyboard_desc')}
                 </p>
                 <div className="space-y-3">
                   <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">Keyboard Shortcuts</h4>
+                    <h4 className="text-white font-medium mb-2">{t('accessibility.keyboard_shortcuts')}</h4>
                     <ul className="space-y-1 text-gray-400">
-                      <li><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Tab</kbd> - Move to next focusable element</li>
-                      <li><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Shift + Tab</kbd> - Move to previous focusable element</li>
-                      <li><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Enter</kbd> - Activate links and buttons</li>
-                      <li><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Space</kbd> - Activate buttons and toggle switches</li>
-                      <li><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Escape</kbd> - Close modals and menus</li>
+                      {[
+                        { keys: 'Tab', desc: 'tab_key' },
+                        { keys: 'Shift + Tab', desc: 'shift_tab' },
+                        { keys: 'Enter', desc: 'enter_key' },
+                        { keys: 'Space', desc: 'space_key' },
+                        { keys: 'Escape', desc: 'escape_key' },
+                      ].map((shortcut) => (
+                        <li key={shortcut.keys}>
+                          <kbd className="px-2 py-1 bg-gray-700 rounded text-xs">{shortcut.keys}</kbd>
+                          {' - '}
+                          {t(`accessibility.${shortcut.desc}`)}
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -260,30 +214,31 @@ export default function AccessibilityClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Screen Reader Support</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">{t('accessibility.screen_reader_title')}</h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  We optimize our website for popular screen readers:
+                  {t('accessibility.screen_reader_desc')}
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">Supported Screen Readers</h4>
-                    <ul className="space-y-1 text-gray-400">
-                      <li>• NVDA (Windows)</li>
-                      <li>• JAWS (Windows)</li>
-                      <li>• VoiceOver (macOS, iOS)</li>
-                      <li>• TalkBack (Android)</li>
-                    </ul>
-                  </div>
-                  <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">Accessibility Features</h4>
-                    <ul className="space-y-1 text-gray-400">
-                      <li>• ARIA labels and descriptions</li>
-                      <li>• Semantic HTML5 elements</li>
-                      <li>• Heading structure</li>
-                      <li>• Link context</li>
-                    </ul>
-                  </div>
+                  {[
+                    {
+                      title: t('accessibility.supported_screen_readers'),
+                      items: ['nvda', 'jaws', 'voiceover', 'talkback'],
+                    },
+                    {
+                      title: t('accessibility.accessibility_features_list'),
+                      items: ['aria_labels', 'semantic_html5', 'heading_structure', 'link_context'],
+                    },
+                  ].map((group) => (
+                    <div key={group.title} className="bg-gray-900/50 rounded p-4">
+                      <h4 className="text-white font-medium mb-2">{group.title}</h4>
+                      <ul className="space-y-1 text-gray-400">
+                        {group.items.map((key) => (
+                          <li key={key}>• {t(`accessibility.${key}`)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -294,40 +249,27 @@ export default function AccessibilityClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Known Limitations</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">{t('accessibility.limitations')}</h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  While we strive for full accessibility, we are aware of some limitations:
+                  {t('accessibility.limitations_desc')}
                 </p>
                 <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <AlertCircle className="text-yellow-500 mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <h4 className="text-white font-medium mb-1">Third-Party Content</h4>
-                      <p className="text-gray-400 text-sm">
-                        Some third-party widgets or embedded content may not be fully accessible. 
-                        We are working with vendors to improve this.
-                      </p>
+                  {[
+                    { title: 'third_party_title', body: 'third_party' },
+                    { title: 'animations_title', body: 'animations' },
+                    { title: 'pdfs_title', body: 'pdfs' },
+                  ].map((limitation) => (
+                    <div key={limitation.title} className="flex items-start gap-3">
+                      <AlertCircle className="text-yellow-500 mt-1 flex-shrink-0" size={20} />
+                      <div>
+                        <h4 className="text-white font-medium mb-1">{t(`accessibility.${limitation.title}`)}</h4>
+                        <p className="text-gray-400 text-sm">
+                          {t(`accessibility.${limitation.body}`)}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <AlertCircle className="text-yellow-500 mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <h4 className="text-white font-medium mb-1">Complex Animations</h4>
-                      <p className="text-gray-400 text-sm">
-                        Some complex animations may be reduced for users who prefer reduced motion.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <AlertCircle className="text-yellow-500 mt-1 flex-shrink-0" size={20} />
-                    <div>
-                      <h4 className="text-white font-medium mb-1">PDF Documents</h4>
-                      <p className="text-gray-400 text-sm">
-                        Some PDF documents may not be fully accessible. We are working to make all PDFs accessible.
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -338,30 +280,31 @@ export default function AccessibilityClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Accessibility Testing</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">{t('accessibility.testing')}</h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  We regularly test our website using various methods:
+                  {t('accessibility.testing_desc')}
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">Automated Testing</h4>
-                    <ul className="space-y-1 text-gray-400">
-                      <li>• WAVE Web Accessibility Evaluation</li>
-                      <li>• axe DevTools</li>
-                      <li>• Lighthouse Accessibility Audit</li>
-                      <li>• Automated accessibility testing tools</li>
-                    </ul>
-                  </div>
-                  <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">Manual Testing</h4>
-                    <ul className="space-y-1 text-gray-400">
-                      <li>• Keyboard navigation testing</li>
-                      <li>• Screen reader testing</li>
-                      <li>• Color contrast verification</li>
-                      <li>• User testing with assistive technology</li>
-                    </ul>
-                  </div>
+                  {[
+                    {
+                      title: t('accessibility.automated_testing'),
+                      items: ['wave', 'axe', 'lighthouse', 'automated_tools'],
+                    },
+                    {
+                      title: t('accessibility.manual_testing'),
+                      items: ['keyboard_testing', 'screen_reader_testing', 'contrast_testing', 'user_testing'],
+                    },
+                  ].map((group) => (
+                    <div key={group.title} className="bg-gray-900/50 rounded p-4">
+                      <h4 className="text-white font-medium mb-2">{group.title}</h4>
+                      <ul className="space-y-1 text-gray-400">
+                        {group.items.map((key) => (
+                          <li key={key}>• {t(`accessibility.${key}`)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -372,29 +315,27 @@ export default function AccessibilityClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Feedback and Support</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">{t('accessibility.feedback')}</h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  We welcome feedback on the accessibility of our website. If you encounter any accessibility barriers, 
-                  please let us know:
+                  {t('accessibility.feedback_desc')}
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-gray-400">
                     <Mail className="text-[#01FFFF]" size={20} />
-                    <span><strong>Email:</strong> info@adinfinity.gr</span>
+                    <span><strong>{t('accessibility.email_label')}:</strong> info@adinfinity.gr</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-400">
                     <Phone className="text-[#01FFFF]" size={20} />
-                    <span><strong>Phone:</strong> +30-2681-303007</span>
+                    <span><strong>{t('accessibility.phone_label')}:</strong> +30-2681-303007</span>
                   </div>
                 </div>
                 <div className="mt-4 p-4 bg-gray-900/50 rounded">
-                  <h4 className="text-white font-medium mb-2">What to Include in Your Feedback</h4>
+                  <h4 className="text-white font-medium mb-2">{t('accessibility.what_to_include')}</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    <li>• The web page address where you encountered the issue</li>
-                    <li>• Description of the accessibility barrier</li>
-                    <li>• The assistive technology you were using</li>
-                    <li>• Your preferred format for receiving information</li>
+                    {['web_page', 'barrier_description', 'assistive_tech', 'preferred_format'].map((key) => (
+                      <li key={key}>• {t(`accessibility.${key}`)}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -406,33 +347,24 @@ export default function AccessibilityClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Legal Requirements</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">{t('accessibility.legal_requirements')}</h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-gray-400 leading-relaxed mb-4">
-                  We are committed to complying with accessibility laws and regulations:
+                  {t('accessibility.legal_desc')}
                 </p>
                 <div className="space-y-3">
-                  <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">European Accessibility Act (EAA)</h4>
-                    <p className="text-gray-400 text-sm">
-                      We comply with the European Accessibility Act, which requires that websites and mobile applications 
-                      of private sector entities meet accessibility standards.
-                    </p>
-                  </div>
-                  <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">Greek Law 4488/2017</h4>
-                    <p className="text-gray-400 text-sm">
-                      We comply with Greek law implementing the EAA, which sets accessibility requirements for products 
-                      and services in Greece.
-                    </p>
-                  </div>
-                  <div className="bg-gray-900/50 rounded p-4">
-                    <h4 className="text-white font-medium mb-2">Enforcement Procedures</h4>
-                    <p className="text-gray-400 text-sm">
-                      If you believe we have not complied with accessibility requirements, you may contact the 
-                      Hellenic Data Protection Authority or other relevant enforcement bodies.
-                    </p>
-                  </div>
+                  {[
+                    { title: 'eaa_compliance', body: 'eaa_desc' },
+                    { title: 'greek_law', body: 'greek_law_desc' },
+                    { title: 'enforcement', body: 'enforcement_desc' },
+                  ].map((item) => (
+                    <div key={item.title} className="bg-gray-900/50 rounded p-4">
+                      <h4 className="text-white font-medium mb-2">{t(`accessibility.${item.title}`)}</h4>
+                      <p className="text-gray-400 text-sm">
+                        {t(`accessibility.${item.body}`)}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -443,12 +375,10 @@ export default function AccessibilityClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.9 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-4">Ongoing Commitment</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">{t('accessibility.ongoing_commitment')}</h2>
               <div className="bg-gray-800/30 rounded-lg p-6 border border-gray-700">
                 <p className="text-gray-400 leading-relaxed">
-                  Accessibility is an ongoing commitment at adinfinity. We regularly review and improve our website 
-                  to ensure it remains accessible to all users. This accessibility statement will be updated as 
-                  we make improvements and as accessibility standards evolve.
+                  {t('accessibility.ongoing_desc')}
                 </p>
               </div>
             </motion.div>
@@ -466,16 +396,16 @@ export default function AccessibilityClient() {
             className="text-center max-w-2xl mx-auto"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Need Accessibility Assistance?
+              {t('accessibility.need_assistance')}
             </h2>
             <p className="text-gray-400 mb-8">
-              We're here to help you access our information and services.
+              {t('accessibility.assistance_desc')}
             </p>
             <a
               href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-medium py-3 px-8 rounded-lg hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
             >
-              Contact Accessibility Support
+              {t('accessibility.contact_support')}
               <ArrowRight size={20} />
             </a>
           </motion.div>

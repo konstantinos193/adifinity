@@ -1,12 +1,12 @@
 {
   "title": "Website Development",
   "subtitle": "Custom Web Apps that Deliver Results!",
-  "hero_badge": "100% Custom · No Templates · React Development",
+  "hero_badge": "New projects: Custom · No Templates · React Development",
   "hero_title": "Website Development that Delivers",
-  "description": "Custom web apps, e-shops and platforms built exclusively in React & Next.js. No WordPress, Wix or templates — only clean, scalable code for modern businesses.",
+  "description": "Our new web apps, e-shops and platforms are custom-built in React & Next.js without off-the-shelf themes or page builders — using clean, scalable code for modern businesses.",
   "get_started": "Request a Quote",
   "our_services": "Web Development Services",
-  "services_description": "From landing pages to full web applications — always custom, always React for modern businesses.",
+  "services_description": "From landing pages to full web applications — our current delivery approach is based on custom React development.",
   "portfolio_title": "Portfolio Projects",
   "portfolio_description": "Real projects, real results — all custom-built for modern businesses.",
   "see_all_projects": "See All Projects",
@@ -22,32 +22,56 @@
     "custom_web_apps": {
       "title": "Custom Web Apps",
       "description": "Fully custom React/Next.js applications. No templates or page builders — only clean code.",
-      "tags": ["Next.js", "React", "TypeScript"]
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript"
+      ]
     },
     "e-commerce": {
       "title": "E-commerce",
       "description": "Custom online stores with Stripe, order management and inventory. Built from scratch.",
-      "tags": ["Next.js", "Stripe", "PostgreSQL"]
+      "tags": [
+        "Next.js",
+        "Stripe",
+        "PostgreSQL"
+      ]
     },
     "landing_pages": {
       "title": "Landing Pages",
       "description": "High-converting pages for campaigns and ads. Fast, SEO-ready, mobile-first.",
-      "tags": ["Next.js", "Tailwind", "Framer Motion"]
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "Framer Motion"
+      ]
     },
     "web_applications": {
       "title": "Web Applications",
       "description": "SaaS tools, dashboards, booking systems, portals. Whatever your business needs.",
-      "tags": ["React", "Node.js", "PostgreSQL"]
+      "tags": [
+        "React",
+        "Node.js",
+        "PostgreSQL"
+      ]
     },
     "technical_seo": {
       "title": "Technical SEO",
       "description": "Core Web Vitals, schema markup, speed optimization. The technical foundation for top Google rankings.",
-      "tags": ["Lighthouse", "Schema.org", "GSC"]
+      "tags": [
+        "Lighthouse",
+        "Schema.org",
+        "GSC"
+      ]
     },
     "maintenance": {
       "title": "Maintenance & Updates",
       "description": "Ongoing development retainer. New features, performance monitoring, security updates.",
-      "tags": ["CI/CD", "Vercel", "Monitoring"]
+      "tags": [
+        "CI/CD",
+        "Vercel",
+        "Monitoring"
+      ]
     }
   },
   "features": [
@@ -71,11 +95,22 @@
       "description": "Complete booking system with Next.js 16, React 19 and custom NestJS backend. Real-time bookings, Stripe payments, multilingual support, admin dashboard and comprehensive booking management.",
       "image": "/images/asteriashome-preview.png",
       "url": "https://asteriashome.gr",
-      "tags": ["Next.js", "TypeScript", "Full-Stack System"],
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Full-Stack System"
+      ],
       "client": "Asterias Homes",
       "duration": "3 months",
       "team": "2 developers",
-      "technologies": ["Next.js 16", "React 19", "NestJS", "MongoDB", "Stripe", "TypeScript"],
+      "technologies": [
+        "Next.js 16",
+        "React 19",
+        "NestJS",
+        "MongoDB",
+        "Stripe",
+        "TypeScript"
+      ],
       "features": [
         "Real-time booking system",
         "Multi-language support (EL, EN, DE)",
@@ -100,11 +135,24 @@
       "description": "Complete educational system with Next.js 16, React 19 and custom NestJS backend. Student management, authentication, blog system, newsletter, and 25+ years of educational content.",
       "image": "/images/kyklosedu-preview.png",
       "url": "https://kyklosedu.gr",
-      "tags": ["Next.js", "TypeScript", "Full-Stack Platform"],
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Full-Stack Platform"
+      ],
       "client": "KYKLOS Educational Center",
       "duration": "6 weeks",
       "team": "2 developers",
-      "technologies": ["Next.js 16", "React 19", "NestJS", "MongoDB", "TypeScript", "Tailwind CSS", "JWT", "Sentry"],
+      "technologies": [
+        "Next.js 16",
+        "React 19",
+        "NestJS",
+        "MongoDB",
+        "TypeScript",
+        "Tailwind CSS",
+        "JWT",
+        "Sentry"
+      ],
       "features": [
         "Student authentication system",
         "Admin dashboard with role-based access",
@@ -135,11 +183,21 @@
       "description": "Professional WordPress website for physiotherapy clinic in Arta. Services presentation, equipment showcase, online appointment booking and patient contact information.",
       "image": "/images/physioelpida-preview.png",
       "url": "https://physioelpida.gr",
-      "tags": ["WordPress", "PHP", "2022"],
+      "tags": [
+        "WordPress",
+        "PHP",
+        "2022"
+      ],
       "client": "Physio Elpida Clinic",
       "duration": "2 weeks",
       "team": "1 developer",
-      "technologies": ["WordPress", "PHP", "Custom Theme", "SEO", "Contact Forms"],
+      "technologies": [
+        "WordPress",
+        "PHP",
+        "Custom Theme",
+        "SEO",
+        "Contact Forms"
+      ],
       "features": [
         "Online appointment booking system",
         "Services presentation gallery",
@@ -186,14 +244,31 @@
   "process_title": "Development Process",
   "process_description": "Simple, transparent, effective — from idea to launch.",
   "tech_stack": [
-    "Next.js 15", "React 19", "TypeScript", "Tailwind CSS",
-    "Node.js", "PostgreSQL", "Prisma", "Stripe",
-    "Vercel", "Framer Motion", "Figma"
+    "Next.js 16",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS",
+    "Node.js",
+    "PostgreSQL",
+    "Prisma",
+    "Stripe",
+    "Vercel",
+    "Framer Motion",
+    "Figma"
   ],
   "stats": [
-    { "num": "100%", "label": "Custom Code" },
-    { "num": "3+", "label": "Live Projects" },
-    { "num": "24h", "label": "Response Time" }
+    {
+      "num": "Custom",
+      "label": "New Project Approach"
+    },
+    {
+      "num": "3+",
+      "label": "Live Projects"
+    },
+    {
+      "num": "24h",
+      "label": "Response Time"
+    }
   ],
   "modal": {
     "client": "Client",
@@ -208,6 +283,31 @@
   },
   "seo": {
     "title": "Web App Development & Websites Arta | React, Next.js, E-shops | adinfinity",
-    "description": "Web app development, websites and e-shops in Arta. React, Next.js, TypeScript, custom development. No WordPress. Technical SEO included. +30 2681 303007"
+    "description": "Custom web apps, websites and e-shops in Arta with React, Next.js and TypeScript. Technical SEO and support included. +30 2681 303007"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About Website Development",
+    "items": [
+      {
+        "question": "What is web application development and how does it differ from a simple website?",
+        "answer": "Web application development covers platforms with complex functionality: dashboards, booking systems, SaaS tools, portals. It is not a presentational page but a complete system built on React & Next.js."
+      },
+      {
+        "question": "How much does a website or web application cost?",
+        "answer": "A professional website starts from €800. E-shops and web applications are priced according to their features. Request a free quote for an exact estimate."
+      },
+      {
+        "question": "How long does development take?",
+        "answer": "A professional website is delivered in 2-4 weeks. Web applications take 4-12 weeks depending on complexity. Throughout the project you communicate directly with the developer."
+      },
+      {
+        "question": "Do you use WordPress or templates?",
+        "answer": "For new projects we follow a custom approach with React & Next.js, without ready-made WordPress themes, Wix or page builders. Our portfolio also includes older projects built on other technologies, such as Physio Elpida from 2022."
+      },
+      {
+        "question": "Do you provide SEO optimization for websites?",
+        "answer": "Yes. Every website is delivered with technical SEO: Core Web Vitals, schema markup, sitemap, robots.txt and on-page SEO tailored to the Greek market."
+      }
+    ]
   }
 }

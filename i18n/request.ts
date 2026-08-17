@@ -17,6 +17,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   const messageFiles = [
     'about_page',
     'accessibility',
+    'branding_page',
     'carousel',
     'common',
     'contact',
@@ -26,6 +27,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     'diafimistiki_eteria_page',
     'diafimistiki_page',
     'dianomi_fylladion_arta_page',
+    'digital_marketing_page',
     'dsa_compliance',
     'e_commerce_page',
     'ektypwseis_arta_page',

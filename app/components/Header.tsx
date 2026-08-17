@@ -35,6 +35,8 @@ export default function Header() {
         { name: t('navigation.graphic_design'), path: "/graphic-design" },
         { name: t('navigation.flyer_distribution'), path: "/flyer-distribution" },
         { name: t('navigation.website_development'), path: "/website-development" },
+        { name: t('navigation.digital_marketing'), path: "/digital-marketing" },
+        { name: t('navigation.branding'), path: "/branding" },
         { name: t('navigation.market_research'), path: "/market-research" },
         { name: t('navigation.invitations'), path: "/invitations" },
       ],

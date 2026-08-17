@@ -57,5 +57,30 @@
   "seo": {
     "title": "Market Research & Competitor Analysis | adinfinity",
     "description": "Professional market research, competitor analysis, consumer research. Data-driven strategic decisions for your business."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About Market Research",
+    "items": [
+      {
+        "question": "What is competitor research and why do you need it?",
+        "answer": "Competitor research analyses the strategies, strengths and weaknesses of your competitors. It helps you identify your competitive advantage, position yourself correctly in the market and make well-founded decisions."
+      },
+      {
+        "question": "How long does a market research project take?",
+        "answer": "Depending on scope, market research takes 1-4 weeks. We deliver a detailed report with statistics, charts and strategic recommendations for your business."
+      },
+      {
+        "question": "What does consumer research include?",
+        "answer": "Consumer research includes surveys, purchase-behaviour analysis and preference evaluation. You use real data to adapt your products and services to what your audience actually needs."
+      },
+      {
+        "question": "Which businesses do you work with?",
+        "answer": "We serve SMEs and local or regional businesses across Epirus and Greece that want evidence-based growth decisions. We specialise in the Greek market."
+      },
+      {
+        "question": "What is the difference between market analysis and SWOT analysis?",
+        "answer": "Market analysis maps the overall environment — competition, trends, audience. SWOT analysis evaluates the business itself: strengths, weaknesses, opportunities, threats. We provide both."
+      }
+    ]
   }
 }

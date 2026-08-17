@@ -11,7 +11,7 @@
   "visit_description": "Come visit our office and meet us in person",
   "company_description": {
     "title": "Company Description",
-    "description": "We are a new company consisting of young people operating in the advertising field, constantly looking for new ways and solutions to showcase your business, office or company. AdInfinity is an advertising agency operating in the advertising field in Arta and generally in Epirus, since October 2013. We specialize in creating logos, all kinds of layouts as well as designing and developing promotional activities and modern printing.",
+    "description": "We are a dynamic team of young professionals operating in the advertising field, constantly looking for new ways and solutions to showcase your business, office or company. AdInfinity is an advertising agency operating in the advertising field in Arta and generally in Epirus, since October 2013. We specialize in creating logos, all kinds of layouts as well as designing and developing promotional activities and modern printing.",
     "features": [
       {
         "title": "Young & Dynamic Team",
@@ -22,8 +22,8 @@
         "description": "With experience since 2013, we have developed deep knowledge of the local market."
       },
       {
-        "title": "Award-Winning Creativity",
-        "description": "Our work has been recognized for its quality and effectiveness."
+        "title": "4.9/5 Rating on Google",
+        "description": "Our work is rated 4.9/5 by our clients on Google — see the reviews for yourself."
       },
       {
         "title": "Innovative Solutions",
@@ -59,11 +59,6 @@
       "description": "We adapted to new market trends, offering complete digital solutions."
     },
     {
-      "year": "2018",
-      "event": "Award for Best Advertising Campaign in Epirus",
-      "description": "The creativity and effectiveness of our work was recognized with this important distinction."
-    },
-    {
       "year": "2020",
       "event": "7th anniversary and creation of product design department",
       "description": "We celebrated our seventh anniversary by expanding our services into product design."
@@ -90,31 +85,6 @@
       "role": "Web Developer",
       "bio": "Specializing in website and application development, Konstantinos brings our ideas to life with technical excellence and innovation."
     }
-  },
-  "timeline": {
-    "title": "Our Journey",
-    "events": [
-      {
-        "year": "2015",
-        "title": "Company Founded",
-        "description": "Adinfinity was established with a vision to provide exceptional digital services."
-      },
-      {
-        "year": "2018",
-        "title": "Expansion",
-        "description": "Expanded our services to include web development and digital marketing."
-      },
-      {
-        "year": "2020",
-        "title": "Digital Transformation",
-        "description": "Embraced cutting-edge technologies and expanded our client base."
-      },
-      {
-        "year": "2023",
-        "title": "Innovation Hub",
-        "description": "Became a leading innovation hub for digital solutions in the region."
-      }
-    ]
   },
   "office": {
     "title": "Visit Our Office",

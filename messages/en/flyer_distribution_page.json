@@ -91,5 +91,30 @@
   "seo": {
     "title": "Flyer Distribution Artas | adinfinity - Professional Flyer Distribution Services | Targeted Distribution",
     "description": "Professional flyer distribution in Artas with door-to-door, targeted business distribution, residential campaigns. Reliable & efficient service! +30 2681 303007"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About Flyer Distribution",
+    "items": [
+      {
+        "question": "What is flyer distribution and which areas do you cover?",
+        "answer": "Flyer distribution is the professional door-to-door delivery of flyers, catalogues and promotional material to homes and businesses. We cover Arta and the wider Epirus region."
+      },
+      {
+        "question": "How many flyers can you distribute?",
+        "answer": "We handle campaigns from 500 to 50,000+ printed pieces. Every distribution campaign is planned strategically for maximum reach within your target audience."
+      },
+      {
+        "question": "How long does distribution take?",
+        "answer": "A typical flyer distribution campaign in Arta is completed within 1-5 working days. We provide a completion report once distribution is finished."
+      },
+      {
+        "question": "Do you offer targeted distribution in specific areas?",
+        "answer": "Yes. We offer fully targeted distribution based on geographic area, demographics or business type. We analyse your target audience and design the optimal route."
+      },
+      {
+        "question": "What materials do you handle?",
+        "answer": "We distribute flyers, catalogues, restaurant menus, newsletters and promotional leaflets — any printed advertising material you need."
+      }
+    ]
   }
 }

@@ -6,7 +6,7 @@ import { ResearchService } from "../components/ResearchService"
 import { DataVisualization } from "../components/DataVisualization"
 import { CTASection } from "../components/CTASection"
 import Link from "next/link"
-import { useTranslations } from "@/components/useTranslations"
+import { useTranslations, asArray } from "@/components/useTranslations"
 
 const serviceIcons = {
   market_analysis: TrendingUp,
@@ -173,7 +173,7 @@ export function MarketResearchClient() {
             {t('market_research_page.faq.title')}
           </h2>
           <div className="space-y-4 max-w-4xl mx-auto">
-            {(t('market_research_page.faq.items') as Array<{question: string; answer: string}>).map((item, i) => (
+            {asArray<{question: string; answer: string}>(t('market_research_page.faq.items')).map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 10 }}

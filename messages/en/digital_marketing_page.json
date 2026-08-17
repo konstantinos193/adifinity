@@ -1,0 +1,181 @@
+{
+  "hero_badge": "Digital Marketing Arta",
+  "hero_title": "Digital marketing that brings customers",
+  "description": "Social media management, Google & Meta Ads, SEO and content for businesses in Arta and across Epirus. Strategy with measurable results — not posts at random.",
+  "get_started": "Request a Free Analysis",
+  "see_services": "See the Services",
+  "stats": [
+    { "num": "12+", "label": "Years of Experience" },
+    { "num": "200+", "label": "Completed Projects" },
+    { "num": "4.9/5", "label": "Google Rating" }
+  ],
+  "our_services": "Digital Marketing Services",
+  "services_description": "Pick a single service or combine them into a complete strategy.",
+  "services": [
+    {
+      "key": "social_media",
+      "title": "Social Media Management",
+      "description": "Content planning, creative design, publishing schedule and community management across Facebook, Instagram and TikTok.",
+      "tags": ["Content Plan", "Design", "Community Management"]
+    },
+    {
+      "key": "google_ads",
+      "title": "Google Ads",
+      "description": "Search, Performance Max and remarketing campaigns built around leads and sales — not clicks. Conversion tracking from day one.",
+      "tags": ["Search", "Performance Max", "Remarketing"]
+    },
+    {
+      "key": "meta_ads",
+      "title": "Meta Ads (Facebook & Instagram)",
+      "description": "Audience targeting, scroll-stopping creative and A/B testing. Ideal for local visibility, offers and lead generation.",
+      "tags": ["Facebook", "Instagram", "A/B Testing"]
+    },
+    {
+      "key": "seo",
+      "title": "SEO & Local Visibility",
+      "description": "Technical SEO, on-page optimisation, content strategy and Google Business Profile so people find you when they are looking for you.",
+      "tags": ["Technical SEO", "Local SEO", "Google Business"]
+    },
+    {
+      "key": "content",
+      "title": "Content Production",
+      "description": "Product photography, short-form video, graphics and copy tailored to your brand identity and to the channel it will be published on.",
+      "tags": ["Video", "Photo", "Copywriting"]
+    },
+    {
+      "key": "analytics",
+      "title": "Analytics & Reporting",
+      "description": "Proper GA4 and conversion tracking setup, with a monthly report explaining what worked, what did not, and what changes next month.",
+      "tags": ["GA4", "Conversion Tracking", "Monthly Report"]
+    }
+  ],
+  "process_title": "How We Work",
+  "process_description": "A clear process, with no surprises and no unexplained jargon.",
+  "process": [
+    {
+      "step": "01",
+      "title": "Analysis & Goals",
+      "desc": "We map your current position, your competitors and your audience, and agree what success means in actual numbers."
+    },
+    {
+      "step": "02",
+      "title": "Strategy",
+      "desc": "We choose channels, budget and messaging. You get a concrete plan before the first euro is spent."
+    },
+    {
+      "step": "03",
+      "title": "Execution",
+      "desc": "We set up campaigns, creative and tracking. Content is approved by you before it goes live."
+    },
+    {
+      "step": "04",
+      "title": "Optimisation",
+      "desc": "We monitor performance daily and move budget towards what actually converts."
+    },
+    {
+      "step": "05",
+      "title": "Reporting",
+      "desc": "A monthly report in plain language: what was invested, what it returned, and what the next step is."
+    }
+  ],
+  "why_choose_us": "Why adinfinity",
+  "why_choose_description": "Local market knowledge combined with technical execution you rarely find at a local agency.",
+  "features": [
+    {
+      "title": "Local Market Knowledge",
+      "description": "We have worked in Arta and Epirus since 2013. We know which audience responds to what, and when."
+    },
+    {
+      "title": "Measurable, Not Vague",
+      "description": "Every campaign has a numeric goal and conversion tracking. You always know what your budget returned."
+    },
+    {
+      "title": "One Agency for Everything",
+      "description": "Campaign, graphics, printing and website from the same team — without coordinating three suppliers."
+    },
+    {
+      "title": "Direct Communication",
+      "description": "You speak directly with the person running your campaign, not with an account manager."
+    }
+  ],
+  "pricing_title": "Indicative Pricing",
+  "pricing_description": "These are starting prices and are adjusted to the scope of work. Ad spend is separate from the management fee.",
+  "pricing_plans": [
+    {
+      "name": "Social Media",
+      "price": "from €250",
+      "period": "/month",
+      "description": "For businesses that want a consistent, professional presence.",
+      "features": [
+        "Monthly content plan",
+        "Creative design",
+        "Publishing schedule",
+        "Community management",
+        "Monthly report"
+      ]
+    },
+    {
+      "name": "Ads Management",
+      "price": "from €300",
+      "period": "/month",
+      "description": "Google & Meta Ads aimed at leads and sales.",
+      "features": [
+        "Campaign setup & structure",
+        "Conversion tracking",
+        "Ad creative",
+        "Continuous optimisation",
+        "Monthly performance report"
+      ],
+      "highlighted": true
+    },
+    {
+      "name": "SEO",
+      "price": "from €350",
+      "period": "/month",
+      "description": "Organic visibility that is built to last.",
+      "features": [
+        "Technical SEO audit",
+        "On-page optimisation",
+        "Content strategy",
+        "Google Business Profile",
+        "Rank tracking"
+      ]
+    }
+  ],
+  "pricing_note": "Need a combination of services? We will build a package around you.",
+  "faq_title": "Frequently Asked Questions About Digital Marketing",
+  "faq": [
+    {
+      "question": "How much does digital marketing cost for a small business?",
+      "answer": "Social media management starts from €250/month and ads management from €300/month, excluding ad spend. The final cost depends on the channels and the volume of content. Request a free analysis for an exact quote."
+    },
+    {
+      "question": "How much ad budget do I need for Google and Meta Ads?",
+      "answer": "For local targeting in Arta and Epirus, a realistic starting point is €150-€300 per month in ad spend. That budget is paid directly to the platform and is separate from the management fee."
+    },
+    {
+      "question": "How long until I see results?",
+      "answer": "Paid ads bring traffic from the first week and stabilise after the first month of optimisation. SEO is slower: the first meaningful movement usually shows within 3-6 months."
+    },
+    {
+      "question": "Am I locked into a contract?",
+      "answer": "We work on a monthly basis. We recommend a minimum of three months so campaigns have time to optimise, but we do not hold you with exit penalties."
+    },
+    {
+      "question": "Who owns the advertising accounts?",
+      "answer": "You do. Google Ads, Meta Business and Analytics accounts are opened in your name and you grant us access. If the collaboration ends, you keep the accounts, history and data."
+    },
+    {
+      "question": "Do you work with businesses outside Arta?",
+      "answer": "Yes. We are based in Arta and serve all of Epirus, and we also work remotely with businesses across Greece."
+    }
+  ],
+  "cta_title": "Let's find out what works for you",
+  "cta_description": "Tell us what you are doing today and what you want to achieve. We will tell you honestly what makes sense — even if that turns out not to be advertising.",
+  "cta_button": "Request a Free Analysis",
+  "cta_secondary": "See Our Work",
+  "seo": {
+    "title": "Digital Marketing Arta | Social Media, Google Ads & SEO | adinfinity",
+    "description": "Digital marketing services in Arta, Greece: social media management, Google & Meta Ads, SEO and content production. Measurable results since 2013."
+  }
+}

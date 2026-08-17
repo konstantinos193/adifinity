@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { DistributionType } from "../components/DistributionType"
 import { BenefitCard } from "../components/BenefitCard"
-import { useTranslations } from "@/components/useTranslations"
+import { useTranslations, asArray } from "@/components/useTranslations"
 import {
   DoorToDoorIcon,
   BusinessDistributionIcon,
@@ -352,7 +352,7 @@ export function FlyerDistributionClient() {
             {t('flyer_distribution_page.faq.title')}
           </motion.h2>
           <div className="space-y-4">
-            {(t('flyer_distribution_page.faq.items') as Array<{question: string; answer: string}>).map((item, i) => (
+            {asArray<{question: string; answer: string}>(t('flyer_distribution_page.faq.items')).map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 10 }}

@@ -62,6 +62,8 @@ const ROUTES: Route[] = [
     changeFrequency: 'monthly',
     images: [OG, '/images/og-web-development.svg'],
   },
+  { path: '/digital-marketing', priority: 0.9, changeFrequency: 'monthly', images: [OG] },
+  { path: '/branding', priority: 0.9, changeFrequency: 'monthly', images: [OG] },
   { path: '/flyer-distribution', priority: 0.8, changeFrequency: 'monthly', images: [OG] },
   { path: '/market-research', priority: 0.7, changeFrequency: 'monthly', images: [OG] },
 

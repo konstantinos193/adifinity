@@ -7,7 +7,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { useTranslations } from "@/components/useTranslations"
+import { useTranslations, asArray } from "@/components/useTranslations"
 import { useState } from "react"
 
 const CodeSnippet: React.FC = () => {
@@ -20,7 +20,7 @@ const project = {
   styling:   "Tailwind CSS",
   database:  "PostgreSQL",
   deploy:    "Vercel / VPS",
-  approach:  "100% custom — no templates"
+  currentBuilds: "custom — no templates"
 }`
 
   return (
@@ -626,7 +626,7 @@ export function WebsiteDevelopmentClient() {
             {t('website_development_page.faq.title')}
           </motion.h2>
           <div className="space-y-4">
-            {(t('website_development_page.faq.items') as Array<{question: string; answer: string}>).map((item, i) => (
+            {asArray<{question: string; answer: string}>(t('website_development_page.faq.items')).map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 10 }}

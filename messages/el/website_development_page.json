@@ -1,12 +1,12 @@
 {
   "title": "Κατασκευή Ιστοσελίδων",
   "subtitle": "Custom Web Apps που Αποδίδουν!",
-  "hero_badge": "100% Custom · Καμία Χρήση Templates · React Development",
+  "hero_badge": "Νέα projects: Custom · Χωρίς Templates · React Development",
   "hero_title": "Κατασκευή Ιστοσελίδων που Αποδίδουν",
-  "description": "Κατασκευή web εφαρμογών, custom web apps, e-shops και platforms χτισμένα αποκλειστικά σε React & Next.js. Καμία χρήση WordPress, Wix ή templates — μόνο clean, scalable code για Greek market.",
+  "description": "Τα νέα web apps, e-shops και platforms μας υλοποιούνται custom σε React & Next.js, χωρίς έτοιμα themes ή page builders — με clean, scalable code για τη σύγχρονη ελληνική επιχείρηση.",
   "get_started": "Ζητήστε Προσφορά",
   "our_services": "Υπηρεσίες Web Development",
-  "services_description": "Από landing pages έως πλήρη web applications — πάντα custom, πάντα React για Greek businesses.",
+  "services_description": "Από landing pages έως πλήρη web applications — η σημερινή μας προσέγγιση βασίζεται σε custom React development.",
   "portfolio_title": "Portfolio Projects",
   "portfolio_description": "Real projects, real results — όλα custom-built για Greek market.",
   "see_all_projects": "Δείτε όλα τα Projects",
@@ -184,12 +184,12 @@
     }
   ],
   "tech_stack": [
-    "Next.js 15", "React 19", "TypeScript", "Tailwind CSS",
+    "Next.js 16", "React 19", "TypeScript", "Tailwind CSS",
     "Node.js", "PostgreSQL", "Prisma", "Stripe",
     "Vercel", "Framer Motion", "Figma"
   ],
   "stats": [
-    { "num": "100%", "label": "Πλήρως Custom Code" },
+    { "num": "Custom", "label": "Προσέγγιση Νέων Projects" },
     { "num": "3+", "label": "Ζωντανά Projects" },
     { "num": "24h", "label": "Χρόνος Απόκρισης" }
   ],
@@ -223,7 +223,7 @@
       },
       {
         "question": "Χρησιμοποιείτε WordPress ή templates;",
-        "answer": "Όχι. Χτίζουμε κάθε project από μηδέν σε React & Next.js. Δεν χρησιμοποιούμε WordPress, Wix ή templates — μόνο custom code για βέλτιστη απόδοση, ασφάλεια και SEO."
+        "answer": "Στα νέα projects ακολουθούμε custom προσέγγιση με React & Next.js, χωρίς έτοιμα WordPress themes, Wix ή page builders. Το portfolio περιλαμβάνει και παλαιότερα έργα άλλης τεχνολογίας, όπως το Physio Elpida του 2022."
       },
       {
         "question": "Παρέχετε SEO optimization στις ιστοσελίδες;",
@@ -233,6 +233,6 @@
   },
   "seo": {
     "title": "Κατασκευή Web Εφαρμογών & Ιστοσελίδων Άρτα | React, Next.js, E-shops | adinfinity",
-    "description": "Κατασκευή web εφαρμογών, ιστοσελίδων και e-shops στην Άρτα. React, Next.js, TypeScript, custom development. Καμία χρήση WordPress. Technical SEO included. +30 2681 303007"
+    "description": "Custom κατασκευή web εφαρμογών, ιστοσελίδων και e-shops στην Άρτα με React, Next.js και TypeScript. Technical SEO και υποστήριξη. +30 2681 303007"
   }
 }
