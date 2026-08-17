@@ -46,6 +46,19 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // HTTP to HTTPS redirect (all domains)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        permanent: true,
+        destination: 'https://adinfinity.gr/:path*',
+      },
       // WWW to non-www redirect (HTTPS)
       {
         source: '/:path*',

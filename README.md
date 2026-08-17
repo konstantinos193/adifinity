@@ -149,7 +149,7 @@ Copyright 2026 adifinity. All rights reserved. This repository is for demonstrat
 
 ## Contact
 
-Email: adenfinity@gmail.com
+Email: info@adinfinity.gr
 Phone: +30 2681 303007
 Address: Βασ. Πύρρου 30, Άρτα 471 32, Greece
 Website: [adinfinity.gr](https://adinfinity.gr)

@@ -82,8 +82,8 @@ export default function DianomiFylladionArtaLayout({
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "39.1262",
-              "longitude": "20.9373"
+              "latitude": "39.1606",
+              "longitude": "20.9853"
             },
             "areaServed": [
               {

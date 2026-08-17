@@ -46,6 +46,9 @@ export function proxy(request: NextRequest) {
       })
     }
     
+    // Log redirect for debugging
+    console.log(`Redirecting: ${protocol}://${hostname}${url.pathname} -> ${canonicalUrl.toString()}`)
+    
     return NextResponse.redirect(canonicalUrl, 301) // Permanent redirect
   }
 

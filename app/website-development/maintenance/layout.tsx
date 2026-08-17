@@ -196,8 +196,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "39.1262",
-      "longitude": "20.9373"
+      "latitude": "39.1606",
+      "longitude": "20.9853"
     },
     "openingHours": [
       "Mo 09:00-17:00",
@@ -225,8 +225,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "39.1262",
-      "longitude": "20.9373"
+      "latitude": "39.1606",
+      "longitude": "20.9853"
     },
     "openingHours": [
       "Mo 09:00-17:00",
@@ -401,8 +401,8 @@ export default function MaintenanceLayout({
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "39.1262",
-              "longitude": "20.9373"
+              "latitude": "39.1606",
+              "longitude": "20.9853"
             },
             "openingHours": [
               "Mo 09:00-17:00",

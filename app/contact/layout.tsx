@@ -76,7 +76,7 @@ export default function ContactLayout({
                 '@type': 'ContactPoint',
                 telephone: '+30-2681-303007',
                 contactType: 'customer service',
-                email: 'adenfinity@gmail.com',
+                email: 'info@adinfinity.gr',
                 areaServed: 'GR',
                 availableLanguage: ['Greek', 'el'],
               },
