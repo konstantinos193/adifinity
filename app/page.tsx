@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import FAQSection from "@/app/components/FAQSection"
+import { faqPageSchema, HOME_FAQ } from "@/app/components/faqData"
 import HomePageClient from './components/HomePageClient'
 
 export const metadata: Metadata = {
@@ -52,47 +54,13 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Ποιες υπηρεσίες προσφέρει η adinfinity;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Η adinfinity προσφέρει πλήρες φάσμα διαφημιστικών υπηρεσιών: graphic design και branding, επαγγελματικές εκτυπώσεις, κατασκευή ιστοσελίδων και web εφαρμογών, διανομή φυλλαδίων, έρευνα αγοράς και digital marketing."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πού βρίσκεται η adinfinity;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Η adfinity εδρεύει στην Άρτα, στην οδό Βασιλείου Πύρρου 30. Εξυπηρετούμε πελάτες σε όλη την Ελλάδα, Κύπρο και την ελληνική διασπορά."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πόσο καιρό λειτουργεί η adinfinity;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Η adinfinity λειτουργεί από το 2013, εξυπηρετώντας πάνω από 100 πελάτες με επιτυχία σε διάφορους τομείς."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πώς μπορώ να επικοινωνήσω μαζί σας;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Μπορείτε να μας καλέσετε στο +30 2681 303007, να στείλετε email στο info@adinfinity.gr, ή να επισκεφθείτε το γραφείο μας στην Άρτα."
-                }
-              }
-            ]
-          }),
+          __html: JSON.stringify(faqPageSchema(HOME_FAQ)),
         }}
       />
       <HomePageClient />
+      {/* Must be rendered, not just declared above: Google requires FAQ
+          structured data to match content visible on the page. */}
+      <FAQSection items={HOME_FAQ} />
     </>
   )
 }

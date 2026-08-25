@@ -393,58 +393,12 @@ export default function WebsiteDevelopmentLayout({
           }),
         }}
       />
-      {/* Structured Data - FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Τι είναι κατασκευή web εφαρμογών και τι τη διαφοροποιεί από μια απλή ιστοσελίδα;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Η κατασκευή web εφαρμογών αφορά πλατφόρμες με σύνθετη λειτουργικότητα: dashboards, booking systems, SaaS tools, portals. Δεν είναι παρουσιαστική σελίδα αλλά ολοκληρωμένο σύστημα χτισμένο σε React & Next.js."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πόσο κοστίζει η κατασκευή ιστοσελίδας ή web εφαρμογής;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Μια επαγγελματική ιστοσελίδα ξεκινά από €800. E-shops και web εφαρμογές κοστίζουν ανάλογα με τις λειτουργίες. Ζητήστε δωρεάν προσφορά για ακριβή εκτίμηση."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πόσο διαρκεί η κατασκευή ιστοσελίδας;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Μια επαγγελματική ιστοσελίδα παραδίδεται σε 2-4 εβδομάδες. Web εφαρμογές ανάλογα με την πολυπλοκότητα σε 4-12 εβδομάδες. Καθόλη τη διάρκεια επικοινωνείτε απευθείας με τον developer."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Ποια τεχνολογία χρησιμοποιείτε στα νέα projects;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Στα νέα projects ακολουθούμε custom προσέγγιση με React και Next.js, χωρίς έτοιμα themes ή page builders. Το portfolio μας περιλαμβάνει και παλαιότερα έργα διαφορετικής τεχνολογίας."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Παρέχετε SEO optimization στις ιστοσελίδες;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ναι. Κάθε ιστοσελίδα παραδίδεται με technical SEO: Core Web Vitals, schema markup, sitemap, robots.txt και on-page SEO προσαρμοσμένο για την ελληνική αγορά."
-                }
-              }
-            ]
-          }),
-        }}
-      />
+      {/*
+        The FAQPage schema deliberately lives in page.tsx, not here.
+        This layout wraps six sub-routes (/e-commerce, /web-apps, …), so a FAQ
+        block at this level emitted the same five questions on seven separate
+        URLs — duplicate structured data, none of it visible on the sub-pages.
+      */}
       {children}
     </>
   )

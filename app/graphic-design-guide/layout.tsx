@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { faqPageSchema, GUIDE_FAQ } from "@/app/components/faqData"
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -93,36 +94,7 @@ export default function GraphicDesignGuideLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is graphic design?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Graphic design is the art of visual communication through the use of typography, imagery, color, and layout to convey messages and create brand identity."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much does graphic design cost?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Graphic design costs vary based on project scope. Logo design starts from €150, while complete branding packages range from €300-€1000+."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What files do I receive?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "You receive all source files including AI, EPS, PDF, PNG, and JPG formats, along with font files and color codes."
-                }
-              }
-            ]
-          }),
+          __html: JSON.stringify(faqPageSchema(GUIDE_FAQ)),
         }}
       />
       {children}

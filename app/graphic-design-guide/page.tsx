@@ -1,4 +1,6 @@
 "use client"
+import FAQSection from "@/app/components/FAQSection"
+import { GUIDE_FAQ } from "@/app/components/faqData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Palette, Layout, Type, Image as ImageIcon } from "lucide-react"
@@ -249,6 +251,7 @@ export default function GraphicDesignGuidePage() {
           </div>
         </motion.div>
       </div>
+    <FAQSection items={GUIDE_FAQ} />
     </main>
   )
 }

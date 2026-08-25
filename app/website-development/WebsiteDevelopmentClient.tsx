@@ -379,7 +379,15 @@ export function WebsiteDevelopmentClient() {
 
   const services = t('website_development_page.services') as Record<string, { title: string; description: string; tags: string[] }>
   const portfolio = t('website_development_page.portfolio_items') as Array<{ name: string; category: string; description: string; image: string; url: string; tags: string[]; client?: string; duration?: string; team?: string; technologies?: string[]; features?: string[]; results?: string[]; challenge?: string }>
-  const process = t('website_development_page.process') as Array<{ name: string; category: string; description: string; image: string; url: string; tags: string[]; client?: string; duration?: string; team?: string; technologies?: string[]; features?: string[]; results?: string[]; challenge?: string }>
+  // Named `processSteps`, not `process`: the previous name shadowed the Node
+  // global, and its type annotation had been copy-pasted from the projects
+  // array — describing `name`/`category`/`image` for data that is actually
+  // `{ step, title, desc }`, which is what <ProcessStep /> reads.
+  const processSteps = t('website_development_page.process') as Array<{
+    step: string
+    title: string
+    desc: string
+  }>
   const techStack = t('website_development_page.tech_stack') as string[]
   const stats = t('website_development_page.stats') as Array<{num: string, label: string}>
   const features = t('website_development_page.features') as Array<{title: string, description: string}>
@@ -584,13 +592,13 @@ export function WebsiteDevelopmentClient() {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {process.map((step, i) => (
+            {processSteps.map((step, i) => (
               <ProcessStep
                 key={step.step}
                 step={step.step}
                 title={step.title}
                 desc={step.desc}
-                isLast={i === process.length - 1}
+                isLast={i === processSteps.length - 1}
               />
             ))}
           </div>

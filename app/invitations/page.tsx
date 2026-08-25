@@ -1,4 +1,6 @@
 "use client"
+import FAQSection from "@/app/components/FAQSection"
+import { INVITATIONS_FAQ } from "@/app/components/faqData"
 import RelatedLinks from "@/app/components/RelatedLinks"
 import { INVITATIONS_RELATED } from "@/app/components/relatedLinksData"
 
@@ -684,6 +686,7 @@ export default function InvitationsPage() {
         </motion.div>
       </div>
     <RelatedLinks links={INVITATIONS_RELATED} />
+    <FAQSection items={INVITATIONS_FAQ} />
     </main>
   )
 }

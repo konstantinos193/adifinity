@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { faqPageSchema, INVITATIONS_FAQ } from "@/app/components/faqData"
 
 export const metadata: Metadata = {
   title: 'Ψηφιακές Προσκλήσεις Γάμου | adinfinity',
@@ -120,36 +121,7 @@ export default function InvitationsLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Πώς μπορώ να δημιουργήσω ψηφιακή γαμήλια πρόσκληση;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Επισκεφτείτε το invitations.adinfinity.gr, επιλέξτε τον τύπο πρόσκλησης (Mini Website, Video Pro ή Video), συμπληρώστε τα στοιχεία σας και κοινοποιήστε τον μοναδικό σύνδεσμο στους καλεσμένους σας.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "Πώς λειτουργεί το σύστημα RSVP;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Οι καλεσμένοι συμπληρώνουν τη φόρμα RSVP στη σελίδα της πρόσκλησής σας. Λαμβάνετε άμεση ειδοποίηση και μπορείτε να δείτε όλες τις απαντήσεις από τον πίνακα διαχείρισης, με δυνατότητα εξαγωγής σε Excel.",
-                },
-              },
-              {
-                "@type": "Question",
-                "name": "Μπορώ να βάλω βίντεο στην πρόσκλησή μου;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ναι! Με τους τύπους Video Pro και Video, μπορείτε να ανεβάσετε το δικό σας βίντεο ή να προσθέσετε μουσική, δημιουργώντας μια μοναδική εμπειρία για τους καλεσμένους σας.",
-                },
-              },
-            ],
-          }),
+          __html: JSON.stringify(faqPageSchema(INVITATIONS_FAQ)),
         }}
       />
       {children}

@@ -2,8 +2,11 @@ import type { Metadata } from 'next'
 import { ServicesPageClient } from './ServicesPageClient'
 
 export const metadata: Metadata = {
-  title: 'Υπηρεσίες | adinfinity - Διαφημιστική Εταιρεία Άρτα',
-  description: 'Πλήρες φάσμα διαφημιστικών υπηρεσιών στην Άρτα: Εκτυπώσεις, γραφιστική, ιστοσελίδες, digital marketing, διανομή εντύπων, έρευνα αγοράς. Επαγγελματικές λύσεις +30 2681 303007',
+  // Head term kept distinct from the homepage ("Διαφημιστική Εταιρεία Άρτα")
+  // and from /diafimistiki-eteria ("Υπηρεσίες Διαφημιστικής Άρτα").
+  title: 'Υπηρεσίες | Εκτυπώσεις, Γραφιστική & Websites',
+  description:
+    'Όλες οι υπηρεσίες της adinfinity: εκτυπώσεις, γραφιστική, επιγραφές, ιστοσελίδες, digital marketing και διανομή εντύπων. Τηλ. 2681 303007',
   alternates: {
     canonical: 'https://adinfinity.gr/services',
   },
