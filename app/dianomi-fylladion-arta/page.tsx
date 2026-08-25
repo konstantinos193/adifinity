@@ -1,4 +1,8 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { DIANOMI_DETAILS } from "@/app/components/serviceDetailsData"
+import FAQSection from "@/app/components/FAQSection"
+import { DIANOMI_FAQ } from "@/app/components/faqData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, MapPin, Users, Target, TrendingUp } from "lucide-react"
@@ -215,6 +219,8 @@ export default function DianomiFylladionArtaPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={DIANOMI_DETAILS} />
+    <FAQSection items={DIANOMI_FAQ} />
     </main>
   )
 }

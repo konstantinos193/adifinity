@@ -3,21 +3,10 @@
 import { useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { X } from "lucide-react"
 import { useTranslations } from "@/components/useTranslations"
-
-type Project = {
-  id: string
-  name: string
-  category: string
-  image: string
-  description: string
-  challenge?: string
-  solution?: string
-  results?: string
-  bgColor?: string // Optional background color override
-  liveUrl?: string // Optional live website URL
-}
+import type { Project } from "@/lib/projects"
 
 interface ProjectModalProps {
   project: Project | null
@@ -251,7 +240,14 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
               </div>
 
-              <div className="flex justify-end mt-4">
+              <div className="relative z-10 flex justify-between items-center gap-3 mt-4">
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="bg-linear-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-bold py-1.5 px-5 rounded-full transition-all text-sm"
+                >
+                  {t('projects_page.view_case_study')} →
+                </Link>
+
                 <button
                   className="bg-transparent hover:bg-[#01FFFF]/10 border border-[#01FFFF]/30 text-[#01FFFF] font-bold py-1.5 px-5 rounded-full backdrop-blur-sm transition-all text-sm"
                   onClick={onClose}

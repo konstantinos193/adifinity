@@ -1,9 +1,9 @@
 import MaintenanceClient from './MaintenanceClient'
-import { getTranslations } from 'next-intl/server'
+import { serverT } from "@/lib/metadata"
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('maintenance_page')
+  const t = serverT('maintenance_page')
   
   return {
     title: t('seo.title'),

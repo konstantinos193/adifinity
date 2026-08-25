@@ -1,4 +1,6 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { DIAFIMISTIKI_DETAILS } from "@/app/components/serviceDetailsData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Megaphone, Target, TrendingUp, BarChart } from "lucide-react"
@@ -248,6 +250,7 @@ export default function DiafimistikiPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={DIAFIMISTIKI_DETAILS} />
     </main>
   )
 }

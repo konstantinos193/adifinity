@@ -1,4 +1,8 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { WEB_DEV_ARTA_DETAILS } from "@/app/components/serviceDetailsData"
+import FAQSection from "@/app/components/FAQSection"
+import { WEB_DEV_ARTA_FAQ } from "@/app/components/faqData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Code, Smartphone, Zap, Shield } from "lucide-react"
@@ -215,6 +219,8 @@ export default function WebDevelopmentArtaPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={WEB_DEV_ARTA_DETAILS} />
+    <FAQSection items={WEB_DEV_ARTA_FAQ} />
     </main>
   )
 }

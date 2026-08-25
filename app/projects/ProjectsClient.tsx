@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ProjectCard } from "../components/ProjectCard"
 import { ProjectModal } from "../components/ProjectModal"
-import projectData from "../data/projects.json"
+import { projects as allProjects, localizeProject, type Project } from "@/lib/projects"
 import Link from "next/link"
 import { useTranslations } from "@/components/useTranslations"
 
@@ -21,30 +21,22 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 export function ProjectsClient() {
   const { t, locale } = useTranslations()
   
-  const [selectedProject, setSelectedProject] = useState<(typeof projectData.projects)[0] | null>(null)
-  const [projects, setProjects] = useState(projectData.projects)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [projects, setProjects] = useState<Project[]>(allProjects)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
 
-  // Helper function to get localized project content
-  const getLocalizedProject = (project: { name: string; nameEn?: string; description: string; descriptionEn?: string; category: string; categoryEn?: string }) => {
-    if (locale === 'en' && project.nameEn) {
-      return {
-        ...project,
-        name: project.nameEn || project.name,
-        description: project.descriptionEn || project.description,
-        category: project.categoryEn || project.category
-      }
-    }
-    return project
-  }
+  // Returns the *whole* project with the English fields applied — the previous
+  // inline version spread only six of them, which dropped id/slug/image/liveUrl
+  // on the way into the card and the modal.
+  const getLocalizedProject = (project: Project) => localizeProject(project, locale)
 
   // Randomize projects on page load
   useEffect(() => {
-    setProjects(shuffleArray(projectData.projects))
+    setProjects(shuffleArray(allProjects))
   }, [])
 
   // Get unique categories
-  const categories = Array.from(new Set(projectData.projects.map((project) => 
+  const categories = Array.from(new Set(allProjects.map((project) =>
     locale === 'en' && project.categoryEn ? project.categoryEn : project.category
   )))
 

@@ -53,32 +53,60 @@
     {
       "category": "Κάρτες & Βασικές",
       "description": "Visa, Mastercard, Amex — η βάση κάθε e-shop.",
-      "providers": ["Stripe", "Adyen", "Checkout.com", "Viva Wallet"]
+      "providers": [
+        "Stripe",
+        "Adyen",
+        "Checkout.com",
+        "Viva Wallet"
+      ]
     },
     {
       "category": "Ψηφιαλα Πορτοφόλια",
       "description": "Checkout με ένα κλικ. Μέγιστο ποσοστό μετατροπής.",
-      "providers": ["Apple Pay", "Google Pay", "PayPal", "Revolut Pay"]
+      "providers": [
+        "Apple Pay",
+        "Google Pay",
+        "PayPal",
+        "Revolut Pay"
+      ]
     },
     {
       "category": "Αγόρασε Τώρα Πλήρωσε Αργότερα",
       "description": "Το BNPL αυξάνει την μέση τιμή παραγγελίας κατά 30-50%.",
-      "providers": ["Klarna", "Scalapay", "Afterpay"]
+      "providers": [
+        "Klarna",
+        "Scalapay",
+        "Afterpay"
+      ]
     },
     {
       "category": "Τραπεζικές Πληρωμές",
       "description": "EU τραπεζικές μεταφορές & άμεσες πληρωμές. Κρίσιμο για την Ελλάδα.",
-      "providers": ["SEPA", "GoCardless", "IRIS", "iDEAL"]
+      "providers": [
+        "SEPA",
+        "GoCardless",
+        "IRIS",
+        "iDEAL"
+      ]
     },
     {
       "category": "Offline & Τοπικές",
       "description": "Ακόμα δημοφιλές στην Ελλάδα — δεν το αγνοούμε.",
-      "providers": ["Πληρωμή κατά την Παράδοση", "Τραπεζική Κατάθεση", "IRIS Άμεση"]
+      "providers": [
+        "Πληρωμή κατά την Παράδοση",
+        "Τραπεζική Κατάθεση",
+        "IRIS Άμεση"
+      ]
     },
     {
       "category": "Enterprise & Παγκόσμιες",
       "description": "Για επέκταση σε EU & παγκόσμιες αγορές.",
-      "providers": ["Adyen", "Checkout.com", "Mollie", "Crypto (προαιρετικά)"]
+      "providers": [
+        "Adyen",
+        "Checkout.com",
+        "Mollie",
+        "Crypto (προαιρετικά)"
+      ]
     }
   ],
   "payment_summary": "Το e-shop σας δέχεται:",
@@ -137,7 +165,7 @@
     }
   ],
   "seo": {
-    "title": "Ανάπτυξη E-shop | Online Καταστήματα | adinfinity",
-    "description": "Custom ανάπτυξη e-shop χωρίς Shopify/WooCommerce. Next.js, React, Stripe payments. Μηδενικές μηνιαίες χρεώσεις. Εξειδίκευση στην ελληνική αγορά για online καταστήματα."
+    "title": "Ανάπτυξη E-shop | Χωρίς Μηνιαίες Χρεώσεις",
+    "description": "E-shop χτισμένο σε Next.js και Stripe, χωρίς Shopify ή WooCommerce και χωρίς μηνιαία συνδρομή πλατφόρμας. Το κατάστημα σάς ανήκει εξ ολοκλήρου."
   }
 }

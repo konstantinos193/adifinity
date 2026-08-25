@@ -1,9 +1,9 @@
 import { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
+import { serverT } from "@/lib/metadata"
 import AccessibilityClient from "./AccessibilityClient"
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('accessibility')
+  const t = serverT('accessibility')
   
   const title = t('title')
   const description = t('description')

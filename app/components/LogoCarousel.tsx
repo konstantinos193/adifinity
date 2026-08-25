@@ -4,13 +4,15 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion"
 import Image from "next/image"
-import projectsData from "../data/projects.json"
+import { carouselProjects } from "@/lib/projects"
 import { useTranslations } from "@/components/useTranslations"
 import SectionBackground from "./SectionBackground"
 
 export default function LogoCarousel() {
   const { t } = useTranslations()
-  const projects = projectsData.projects
+  // Logos only — a website project whose asset is a 1900px screenshot is not a
+  // client logo and does not belong in "Our Partners". See lib/projects.ts.
+  const projects = carouselProjects
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isLoaded, setIsLoaded] = useState(false)
   const [autoplay, setAutoplay] = useState(true)
@@ -118,6 +120,10 @@ export default function LogoCarousel() {
     "ΔΟΞΑΣ ΠΥΡΡΟΥ": { bgColor: colors.white, isDark: false, hasBorder: true },
     "Τερτ...Ήπια": { bgColor: colors.white, isDark: false, hasBorder: true },
     "Ενεργειακή Άρτας": { bgColor: colors.white, isDark: false, hasBorder: true },
+
+    // Website clients — gold-on-dark and white-script-on-dark wordmarks.
+    "SMH Real Estate": { bgColor: colors.veryDarkGray, isDark: true },
+    "L'Incanto Apartments": { bgColor: colors.darkCharcoal, isDark: true },
   }
 
   const currentProject = projects[currentIndex]
@@ -182,7 +188,7 @@ export default function LogoCarousel() {
               >
                 <div className="relative w-full max-w-[400px] h-[200px] sm:h-[220px] md:h-[250px]">
                   <Image
-                    src={currentProject.image || "/placeholder.svg"}
+                    src={currentProject.logoSrc || "/placeholder.svg"}
                     alt={currentProject.name}
                     fill
                     className="object-contain"

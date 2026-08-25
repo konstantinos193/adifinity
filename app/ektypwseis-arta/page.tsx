@@ -1,4 +1,8 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { EKTYPWSEIS_DETAILS } from "@/app/components/serviceDetailsData"
+import FAQSection from "@/app/components/FAQSection"
+import { EKTYPWSEIS_FAQ } from "@/app/components/faqData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Printer, Package, Zap, Award } from "lucide-react"
@@ -215,6 +219,8 @@ export default function EktypwseisArtaPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={EKTYPWSEIS_DETAILS} />
+    <FAQSection items={EKTYPWSEIS_FAQ} />
     </main>
   )
 }

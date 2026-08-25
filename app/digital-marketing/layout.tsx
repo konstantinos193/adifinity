@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getTranslations, getLocale } from 'next-intl/server'
+import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 
 const URL = 'https://adinfinity.gr/digital-marketing'
 
@@ -9,8 +9,8 @@ const localeMap = {
 } as const
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations('digital_marketing_page')
+  const locale = SERVER_LOCALE
+  const t = serverT('digital_marketing_page')
 
   return {
     title: t('seo.title'),
@@ -67,7 +67,7 @@ export default async function DigitalMarketingLayout({
 }: {
   children: React.ReactNode
 }) {
-  const t = await getTranslations('digital_marketing_page')
+  const t = serverT('digital_marketing_page')
   const faq = t.raw('faq') as Array<{ question: string; answer: string }>
 
   return (
@@ -164,7 +164,6 @@ export default async function DigitalMarketingLayout({
                 },
               ],
             },
-            openingHours: 'Mo-Fr 09:00-17:00',
             priceRange: '€€',
           }),
         }}

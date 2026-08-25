@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { serverT } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('custom_web_apps_page')
+  const t = serverT('custom_web_apps_page')
   
   return {
     title: t('seo.title'),
@@ -138,7 +138,6 @@ export default function CustomWebAppsLayout({
                 }
               ]
             },
-            "openingHours": "Mo-Fr 09:00-17:00",
             "priceRange": "€€€"
           }),
         }}
@@ -166,13 +165,6 @@ export default function CustomWebAppsLayout({
               "latitude": "39.1606",
               "longitude": "20.9853"
             },
-            "openingHours": [
-              "Mo 09:00-17:00",
-              "Tu 09:00-17:00", 
-              "We 09:00-17:00",
-              "Th 09:00-17:00",
-              "Fr 09:00-17:00"
-            ],
             "priceRange": "€€€",
             "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
             "currenciesAccepted": "EUR"

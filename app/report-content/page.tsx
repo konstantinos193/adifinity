@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server'
+import { serverT } from "@/lib/metadata"
 import { routing } from '@/i18n'
 import ReportContentClient from "./ReportContentClient"
 import type { Metadata } from "next"
@@ -12,7 +12,7 @@ interface ReportContentPageProps {
 export async function generateMetadata({ params }: ReportContentPageProps): Promise<Metadata> {
   const { locale: requestedLocale } = await params
   const locale = requestedLocale || routing.defaultLocale
-  const _t = await getTranslations({ locale, namespace: 'report_content' })
+  const _t = serverT('report_content')
   
   const baseUrl = process.env.NODE_ENV === 'production' ? "https://adinfinity.gr" : "https://adinfinity.gr"
   const pagePath = "/report-content"

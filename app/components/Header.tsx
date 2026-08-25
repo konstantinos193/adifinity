@@ -11,7 +11,7 @@ import { useTranslations } from "@/components/useTranslations"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
 
 export default function Header() {
-  const { t } = useTranslations()
+  const { t, locale } = useTranslations()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const _dropdownRefs = useRef<(HTMLDivElement | null)[]>([])
@@ -39,6 +39,19 @@ export default function Header() {
         { name: t('navigation.branding'), path: "/branding" },
         { name: t('navigation.market_research'), path: "/market-research" },
         { name: t('navigation.invitations'), path: "/invitations" },
+        /*
+         * The invitations product, on its own subdomain. `next/link` renders an
+         * absolute href as a plain anchor, so no special casing is needed here.
+         *
+         * Label is hardcoded rather than routed through `t()` on purpose: it is
+         * the exact Greek query the product ranks for, so the anchor text is a
+         * ranking signal — and a missing translation key would silently render
+         * the key path as the link text.
+         */
+        {
+          name: locale === 'el' ? 'Ψηφιακά Προσκλητήρια Γάμου' : 'Digital Wedding Invitations',
+          path: "https://invitations.adinfinity.gr",
+        },
       ],
     },
     { name: t('navigation.about'), path: "/about" },

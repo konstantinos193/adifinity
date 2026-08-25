@@ -1,4 +1,6 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { DIAFIMISTIKI_ETERIA_DETAILS } from "@/app/components/serviceDetailsData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Users, Award, Zap, CheckCircle } from "lucide-react"
@@ -248,6 +250,7 @@ export default function DiafimistikiEteriaPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={DIAFIMISTIKI_ETERIA_DETAILS} />
     </main>
   )
 }

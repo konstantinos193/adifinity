@@ -58,8 +58,16 @@
       "category": "Hospitality",
       "image": "/images/asteriashome-preview.png",
       "url": "https://asteriashome.gr",
-      "tags": ["Next.js", "TypeScript", "Tailwind"],
-      "metrics": { "performance": "95", "seo": "92", "speed": "1.2s" },
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind"
+      ],
+      "metrics": {
+        "performance": "95",
+        "seo": "92",
+        "speed": "1.2s"
+      },
       "description": "Custom booking system για ξενοδοχείο με real-time διαθεσιμότητα και online payments."
     },
     {
@@ -67,8 +75,16 @@
       "category": "Education",
       "image": "/images/kyklosedu-preview.png",
       "url": "https://kyklosedu.gr",
-      "tags": ["Next.js", "TypeScript", "SEO"],
-      "metrics": { "performance": "98", "seo": "94", "pages": "50+" },
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "SEO"
+      ],
+      "metrics": {
+        "performance": "98",
+        "seo": "94",
+        "pages": "50+"
+      },
       "description": "Πλήρης εκπαιδευτική πλατφόρμα με course management, student portals και online exams."
     },
     {
@@ -76,8 +92,16 @@
       "category": "Healthcare",
       "image": "/images/physioelpida-preview.png",
       "url": "https://physioelpida.gr",
-      "tags": ["Next.js", "TypeScript", "Booking"],
-      "metrics": { "performance": "96", "seo": "91", "bookings": "85%" },
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Booking"
+      ],
+      "metrics": {
+        "performance": "96",
+        "seo": "91",
+        "bookings": "85%"
+      },
       "description": "Patient portal με appointment booking, telemedicine features και HIPAA compliant security."
     }
   ],
@@ -95,22 +119,42 @@
     {
       "title": "Φιλοξενία",
       "desc": "Booking systems, room management, tour packages - ολοκληρωμένες λύσεις για hotels & rentals.",
-      "features": ["Online Booking", "Room Management", "Tour Packages", "Multi-language"]
+      "features": [
+        "Online Booking",
+        "Room Management",
+        "Tour Packages",
+        "Multi-language"
+      ]
     },
     {
       "title": "Εκπαίδευση",
       "desc": "E-learning platforms, course management, student portals - ψηφιακή μεταμόρφωση για εκπαιδευτικούς φορείς.",
-      "features": ["E-learning", "Course Management", "Student Portals", "Online Exams"]
+      "features": [
+        "E-learning",
+        "Course Management",
+        "Student Portals",
+        "Online Exams"
+      ]
     },
     {
       "title": "Υγεία",
       "desc": "Patient portals, appointment booking, telemedicine - ασφαλείς λύσεις για ιατρικούς φορείς.",
-      "features": ["Patient Portals", "Appointment Booking", "Telemedicine", "HIPAA Compliant"]
+      "features": [
+        "Patient Portals",
+        "Appointment Booking",
+        "Telemedicine",
+        "HIPAA Compliant"
+      ]
     },
     {
       "title": "E-commerce",
       "desc": "Online shops, payment integration, inventory management - πλήρη e-commerce λύσεις για κάθε επιχείρηση.",
-      "features": ["Online Shops", "Payment Integration", "Inventory", "Multi-currency"]
+      "features": [
+        "Online Shops",
+        "Payment Integration",
+        "Inventory",
+        "Multi-currency"
+      ]
     }
   ],
   "faqs": [
@@ -184,16 +228,46 @@
     }
   ],
   "integrations": [
-    { "name": "Stripe", "category": "Payments" },
-    { "name": "PayPal", "category": "Payments" },
-    { "name": "Google Analytics", "category": "Analytics" },
-    { "name": "Meta Pixel", "category": "Marketing" },
-    { "name": "SendGrid", "category": "Email" },
-    { "name": "Twilio", "category": "Communications" },
-    { "name": "Zapier", "category": "Automation" },
-    { "name": "Slack", "category": "Productivity" },
-    { "name": "Calendly", "category": "Booking" },
-    { "name": "Mailchimp", "category": "Email" }
+    {
+      "name": "Stripe",
+      "category": "Payments"
+    },
+    {
+      "name": "PayPal",
+      "category": "Payments"
+    },
+    {
+      "name": "Google Analytics",
+      "category": "Analytics"
+    },
+    {
+      "name": "Meta Pixel",
+      "category": "Marketing"
+    },
+    {
+      "name": "SendGrid",
+      "category": "Email"
+    },
+    {
+      "name": "Twilio",
+      "category": "Communications"
+    },
+    {
+      "name": "Zapier",
+      "category": "Automation"
+    },
+    {
+      "name": "Slack",
+      "category": "Productivity"
+    },
+    {
+      "name": "Calendly",
+      "category": "Booking"
+    },
+    {
+      "name": "Mailchimp",
+      "category": "Email"
+    }
   ],
   "premium_features": [
     {
@@ -257,7 +331,7 @@
     }
   ],
   "seo": {
-    "title": "Custom Web Apps & Εταιρικές Ιστοσελίδες | adinfinity — 100% Custom Development",
-    "description": "Custom εταιρικές ιστοσελίδες και web applications σε React & Next.js. Καμία χρήση templates. Mobile-first design, SEO optimization, enterprise security για Greek businesses."
+    "title": "Custom Εταιρικές Ιστοσελίδες | Χωρίς Templates",
+    "description": "Εταιρικές ιστοσελίδες γραμμένες από την αρχή σε React και Next.js — όχι παραμετροποιημένα templates. Mobile-first, γρήγορες και έτοιμες για SEO."
   }
 }

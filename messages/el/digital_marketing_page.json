@@ -5,9 +5,18 @@
   "get_started": "Ζητήστε Δωρεάν Ανάλυση",
   "see_services": "Δείτε τις Υπηρεσίες",
   "stats": [
-    { "num": "12+", "label": "Χρόνια Εμπειρίας" },
-    { "num": "200+", "label": "Ολοκληρωμένα Έργα" },
-    { "num": "4.9/5", "label": "Αξιολόγηση Google" }
+    {
+      "num": "12+",
+      "label": "Χρόνια Εμπειρίας"
+    },
+    {
+      "num": "200+",
+      "label": "Ολοκληρωμένα Έργα"
+    },
+    {
+      "num": "4.9/5",
+      "label": "Αξιολόγηση Google"
+    }
   ],
   "our_services": "Υπηρεσίες Digital Marketing",
   "services_description": "Διαλέξτε μία υπηρεσία ή συνδυάστε τις σε ολοκληρωμένη στρατηγική.",
@@ -16,37 +25,61 @@
       "key": "social_media",
       "title": "Διαχείριση Social Media",
       "description": "Πλάνο περιεχομένου, σχεδιασμός δημιουργικών, προγραμματισμός δημοσιεύσεων και community management σε Facebook, Instagram και TikTok.",
-      "tags": ["Content Plan", "Design", "Community Management"]
+      "tags": [
+        "Content Plan",
+        "Design",
+        "Community Management"
+      ]
     },
     {
       "key": "google_ads",
       "title": "Google Ads",
       "description": "Καμπάνιες αναζήτησης, Performance Max και remarketing με στόχο τα leads και τις πωλήσεις — όχι τα κλικ. Παρακολούθηση conversions από την πρώτη μέρα.",
-      "tags": ["Search", "Performance Max", "Remarketing"]
+      "tags": [
+        "Search",
+        "Performance Max",
+        "Remarketing"
+      ]
     },
     {
       "key": "meta_ads",
       "title": "Meta Ads (Facebook & Instagram)",
       "description": "Στόχευση κοινού, δημιουργικά που σταματούν το scroll και A/B testing. Ιδανικό για τοπική προβολή, προσφορές και lead generation.",
-      "tags": ["Facebook", "Instagram", "A/B Testing"]
+      "tags": [
+        "Facebook",
+        "Instagram",
+        "A/B Testing"
+      ]
     },
     {
       "key": "seo",
       "title": "SEO & Τοπική Προβολή",
       "description": "Technical SEO, on-page βελτιστοποίηση, στρατηγική περιεχομένου και Google Business Profile ώστε να σας βρίσκουν όταν σας ψάχνουν.",
-      "tags": ["Technical SEO", "Local SEO", "Google Business"]
+      "tags": [
+        "Technical SEO",
+        "Local SEO",
+        "Google Business"
+      ]
     },
     {
       "key": "content",
       "title": "Παραγωγή Περιεχομένου",
       "description": "Φωτογραφία προϊόντων, σύντομα βίντεο, γραφικά και κείμενα προσαρμοσμένα στην ταυτότητα του brand σας και στο κανάλι που θα δημοσιευτούν.",
-      "tags": ["Video", "Photo", "Copywriting"]
+      "tags": [
+        "Video",
+        "Photo",
+        "Copywriting"
+      ]
     },
     {
       "key": "analytics",
       "title": "Analytics & Reporting",
       "description": "Σωστή εγκατάσταση GA4 και conversion tracking, με μηνιαία αναφορά που εξηγεί τι δούλεψε, τι όχι και τι αλλάζουμε τον επόμενο μήνα.",
-      "tags": ["GA4", "Conversion Tracking", "Μηνιαία Αναφορά"]
+      "tags": [
+        "GA4",
+        "Conversion Tracking",
+        "Μηνιαία Αναφορά"
+      ]
     }
   ],
   "process_title": "Πώς Δουλεύουμε",
@@ -175,7 +208,7 @@
   "cta_button": "Ζητήστε Δωρεάν Ανάλυση",
   "cta_secondary": "Δείτε τα Έργα μας",
   "seo": {
-    "title": "Digital Marketing Άρτα | Social Media, Google Ads & SEO | adinfinity",
-    "description": "Υπηρεσίες digital marketing στην Άρτα: διαχείριση social media, Google & Meta Ads, SEO και παραγωγή περιεχομένου. Μετρήσιμα αποτελέσματα από το 2013."
+    "title": "Digital Marketing Άρτα | Social Media & Google Ads",
+    "description": "Διαχείριση social media, Google και Meta Ads και SEO για επιχειρήσεις στην Άρτα. Μηνιαία αναφορά με πραγματικά νούμερα. Τηλ. 2681 303007"
   }
 }

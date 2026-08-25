@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { serverT } from "@/lib/metadata"
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('market_research_page')
+  const t = serverT('market_research_page')
   
   return {
     title: t('seo.title'),

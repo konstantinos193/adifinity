@@ -1,4 +1,8 @@
 "use client"
+import FAQSection from "@/app/components/FAQSection"
+import { GRAPHIC_DESIGN_FAQ } from "@/app/components/faqData"
+import RelatedLinks from "@/app/components/RelatedLinks"
+import { GRAPHIC_DESIGN_RELATED } from "@/app/components/relatedLinksData"
 
 import { motion } from "framer-motion"
 import { Palette, FileImage, Monitor, Layers } from "lucide-react"
@@ -408,6 +412,8 @@ export default function GraphicDesignPage() {
           </div>
         </motion.div>
       </div>
+    <RelatedLinks links={GRAPHIC_DESIGN_RELATED} />
+    <FAQSection items={GRAPHIC_DESIGN_FAQ} />
     </main>
   )
 }

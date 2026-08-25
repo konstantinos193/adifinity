@@ -188,7 +188,6 @@ export default function KatastrifiWebEfarmogonContent() {
               "@type": "Country",
               "name": "Greece",
             },
-            "openingHours": "Mo-Fr 09:00-17:00",
             "priceRange": "€€€"
           }),
         }}

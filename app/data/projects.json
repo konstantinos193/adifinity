@@ -2,6 +2,7 @@
   "projects": [
     {
       "id": "1",
+      "slug": "apofa",
       "name": "Α.Π.Ο.Φ.Α",
       "nameEn": "APOFA",
       "category": "Branding",
@@ -19,13 +20,18 @@
       "businessTypeEn": "Sports Club",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Corporate Identity"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Corporate Identity"
+      ],
       "year": "2023",
       "duration": "3 εβδομάδες",
       "durationEn": "3 weeks"
     },
     {
       "id": "2",
+      "slug": "boheme-beach-bar",
       "name": "Bohĕme Beach bar",
       "nameEn": "Bohĕme Beach Bar",
       "category": "Branding",
@@ -43,13 +49,18 @@
       "businessTypeEn": "Beach Bar",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Visual Identity"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Visual Identity"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "3",
+      "slug": "box-bijou",
       "name": "Box Bijou",
       "nameEn": "Box Bijou",
       "category": "Branding",
@@ -67,13 +78,18 @@
       "businessTypeEn": "Handmade Jewelry",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Packaging Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Packaging Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "4",
+      "slug": "techfix-pc-and-smartphone-service",
       "name": "TechFix - Pc and Smartphone Service",
       "nameEn": "TechFix - PC and Smartphone Service",
       "category": "Branding",
@@ -91,13 +107,18 @@
       "businessTypeEn": "Computer Repair",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Print Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Print Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "5",
+      "slug": "aliambra",
       "name": "αλιΑμβρα",
       "nameEn": "AliAmbra",
       "category": "Branding",
@@ -115,13 +136,18 @@
       "businessTypeEn": "Fishery & Aquaculture",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Digital Marketing"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Digital Marketing"
+      ],
       "year": "2023",
       "duration": "3 εβδομάδες",
       "durationEn": "3 weeks"
     },
     {
       "id": "6",
+      "slug": "bocca-cucina-italiana",
       "name": "Bocca Cucina Italiana",
       "nameEn": "Bocca Cucina Italiana",
       "category": "Branding",
@@ -139,13 +165,18 @@
       "businessTypeEn": "Italian Pizzeria",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Menu Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Menu Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "7",
+      "slug": "energy-house",
       "name": "Energy House",
       "nameEn": "Energy House",
       "category": "Branding",
@@ -163,13 +194,18 @@
       "businessTypeEn": "Energy Upgrade",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Corporate Identity"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Corporate Identity"
+      ],
       "year": "2023",
       "duration": "3 εβδομάδες",
       "durationEn": "3 weeks"
     },
     {
       "id": "8",
+      "slug": "maxim-cafe-bar",
       "name": "Maxim Cafe-Bar",
       "nameEn": "Maxim Cafe-Bar",
       "category": "Branding",
@@ -187,13 +223,18 @@
       "businessTypeEn": "Cafe-Bar",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Menu Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Menu Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "9",
+      "slug": "west-gas",
       "name": "WEST GAS",
       "nameEn": "WEST GAS",
       "category": "Branding",
@@ -211,13 +252,18 @@
       "businessTypeEn": "LPG Distribution",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Vehicle Graphics"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Vehicle Graphics"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "10",
+      "slug": "stefanos-spyros-accounting",
       "name": "Στέφανος Σπύρος Accounting",
       "nameEn": "Stefanos Spyros Accounting",
       "category": "Branding",
@@ -235,13 +281,18 @@
       "businessTypeEn": "Accounting Services",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Stationery Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Stationery Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "11",
+      "slug": "ta-leme-stis-sofias",
       "name": "Τα Λέμε Στης Σοφίας",
       "nameEn": "Ta Leme Stis Sofias",
       "category": "Branding",
@@ -259,13 +310,18 @@
       "businessTypeEn": "Traditional Restaurant",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Menu Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Menu Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "12",
+      "slug": "oikonomou-safe-trans",
       "name": "ΟΙΚΟΝΟΜΟΥ SAFE TRANS",
       "nameEn": "OIKONOMOU SAFE TRANS",
       "category": "Branding",
@@ -283,13 +339,18 @@
       "businessTypeEn": "Transport & Moving",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Vehicle Graphics"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Vehicle Graphics"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "13",
+      "slug": "logotherapy",
       "name": "Λόγοtherapy",
       "nameEn": "Logotherapy",
       "category": "Branding",
@@ -307,13 +368,18 @@
       "businessTypeEn": "Speech Therapy",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Stationery Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Stationery Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "14",
+      "slug": "nutrifit",
       "name": "NUTRIfit",
       "nameEn": "NUTRIfit",
       "category": "Branding",
@@ -331,13 +397,18 @@
       "businessTypeEn": "Nutrition & Wellness",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Social Media Graphics"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Social Media Graphics"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "15",
+      "slug": "chartino-karavi",
       "name": "Χαρτίνο Καράβι",
       "nameEn": "Chartino Karavi",
       "category": "Branding",
@@ -355,13 +426,18 @@
       "businessTypeEn": "Children's Activity Center",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Print Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Print Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "16",
+      "slug": "notary-sofia-dem-exarchou",
       "name": "Συμβολαιογράφος Σοφία Δημ. Εξάρχου",
       "nameEn": "Notary Sofia Dem. Exarchou",
       "category": "Branding",
@@ -379,13 +455,18 @@
       "businessTypeEn": "Notary Office",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Stationery Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Stationery Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "17",
+      "slug": "storkway",
       "name": "Storkway",
       "nameEn": "Storkway",
       "category": "Branding",
@@ -403,13 +484,18 @@
       "businessTypeEn": "Cafe & Playground",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Menu Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Menu Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "18",
+      "slug": "teatro-cafe-bar-restaurant",
       "name": "Teatro Cafe Bar Restaurant",
       "nameEn": "Teatro Cafe Bar Restaurant",
       "category": "Branding",
@@ -427,13 +513,18 @@
       "businessTypeEn": "Cafe Bar Restaurant",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Menu Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Menu Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "19",
+      "slug": "kefis-protein-industry",
       "name": "Kefis Protein Industry",
       "nameEn": "Kefis Protein Industry",
       "category": "Branding",
@@ -451,13 +542,18 @@
       "businessTypeEn": "Food Industry",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Packaging Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Packaging Design"
+      ],
       "year": "2023",
       "duration": "3 εβδομάδες",
       "durationEn": "3 weeks"
     },
     {
       "id": "20",
+      "slug": "nutrilife",
       "name": "NUTRILIFE",
       "nameEn": "NUTRILIFE",
       "category": "Branding",
@@ -475,13 +571,18 @@
       "businessTypeEn": "Nutritional Consulting",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Social Media Graphics"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Social Media Graphics"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "21",
+      "slug": "four-aces",
       "name": "Four Aces",
       "nameEn": "Four Aces",
       "category": "Branding",
@@ -499,13 +600,18 @@
       "businessTypeEn": "Men's Barbershop",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Interior Signage"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Interior Signage"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "22",
+      "slug": "marina-britsa",
       "name": "Μαρίνα Μπρίτσα",
       "nameEn": "Marina Britsa",
       "category": "Branding",
@@ -523,13 +629,18 @@
       "businessTypeEn": "Psychiatrist",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Stationery Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Stationery Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "23",
+      "slug": "doxas-pyrrou",
       "name": "ΔΟΞΑΣ ΠΥΡΡΟΥ",
       "nameEn": "Doxas Pyrrou",
       "category": "Branding",
@@ -547,13 +658,18 @@
       "businessTypeEn": "Sports Association",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Uniform Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Uniform Design"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "25",
+      "slug": "ilias-barber-barber-shop",
       "name": "Ilias Barber - Barber Shop",
       "nameEn": "Ilias Barber - Barber Shop",
       "category": "Branding",
@@ -571,13 +687,18 @@
       "businessTypeEn": "Barbershop",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Interior Signage"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Interior Signage"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
-      },
-      {
+    },
+    {
       "id": "26",
+      "slug": "cultural-association-filotheis-arta",
       "name": "Πολιτιστικός Σύλλογος Φιλοθέης Άρτας",
       "nameEn": "Cultural Association Filotheis Arta",
       "category": "Cultural Association",
@@ -595,13 +716,18 @@
       "businessTypeEn": "Cultural Association",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Event Materials"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Event Materials"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
-      {
+    {
       "id": "27",
+      "slug": "da-campo-coffee-and-more",
       "name": "DA CAMPO coffee and more",
       "nameEn": "DA CAMPO coffee and more",
       "category": "Branding",
@@ -619,13 +745,18 @@
       "businessTypeEn": "Cafe Bar",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Menu Design"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Menu Design"
+      ],
       "year": "2021",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
-      },
-      {
+    },
+    {
       "id": "28",
+      "slug": "energiaki-arta",
       "name": "Ενεργειακή Άρτας",
       "nameEn": "Energiaki Arta",
       "category": "Branding",
@@ -643,18 +774,24 @@
       "businessTypeEn": "Energy Upgrade",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Logo Design", "Branding", "Vehicle Graphics"],
+      "services": [
+        "Logo Design",
+        "Branding",
+        "Vehicle Graphics"
+      ],
       "year": "2023",
       "duration": "2 εβδομάδες",
       "durationEn": "2 weeks"
     },
     {
       "id": "29",
+      "slug": "asterias-koronisia",
       "name": "Αστεριας Κορωνησία",
       "nameEn": "Asterias Koronisia",
       "category": "Website",
       "categoryEn": "Website",
       "image": "/images/asteriashome-preview.png",
+      "logo": "/images/logos/asterias-logo.png",
       "liveUrl": "http://asteriashome.gr/el",
       "description": "Η Αστεριας Κορωνησία είναι ένα οικογενειακό κατάλυμα στο παραθαλάσσιο χωριό Κορωνησία Άρτας, που προσφέρει 7 παραδοσιακά διαμερίσματα διακοπών με αυθεντική φιλοξενία.",
       "descriptionEn": "Asterias Koronisia is a family accommodation in the coastal village of Koronisia, Arta, offering 7 traditional holiday apartments with authentic hospitality.",
@@ -668,18 +805,24 @@
       "businessTypeEn": "Tourist Accommodation",
       "location": "Κορωνησία Άρτας",
       "locationEn": "Koronisia Arta",
-      "services": ["Web Development", "Booking System", "SEO"],
+      "services": [
+        "Web Development",
+        "Booking System",
+        "SEO"
+      ],
       "year": "2023",
       "duration": "4 εβδομάδες",
       "durationEn": "4 weeks"
     },
     {
       "id": "30",
+      "slug": "kyklos-education",
       "name": "ΚΥΚΛΟΣ Εκπαίδευση",
       "nameEn": "KYKLOS Education",
       "category": "Website",
       "categoryEn": "Website",
       "image": "/images/kyklosedu-preview.png",
+      "logo": "/images/logos/kyklosedu-logo.png",
       "liveUrl": "http://kyklosedu.gr/",
       "description": "Το Φροντιστήριο ΚΥΚΛΟΣ ιδρύθηκε το 1991 στην Άρτα και προσφέρει ολοκληρωμένη εκπαιδευτική προετοιμασία για Γυμνάσιο, Λύκειο και ΕΠΑΛ με υψηλά ποσοστά επιτυχίας.",
       "descriptionEn": "KYKLOS Educational Center was founded in 1991 in Arta and offers comprehensive educational preparation for Gymnasium, Lyceum, and EPAL with high success rates.",
@@ -693,18 +836,24 @@
       "businessTypeEn": "Educational Center",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Web Development", "Content Management", "SEO"],
+      "services": [
+        "Web Development",
+        "Content Management",
+        "SEO"
+      ],
       "year": "2023",
       "duration": "3 εβδομάδες",
       "durationEn": "3 weeks"
     },
     {
       "id": "31",
+      "slug": "physio-elpida",
       "name": "Physio Elpida",
       "nameEn": "Physio Elpida",
       "category": "Website",
       "categoryEn": "Website",
       "image": "/images/physioelpida-preview.png",
+      "logo": "/images/logos/physioelpida-logo.png",
       "liveUrl": "https://physioelpida.gr",
       "description": "Το Physio Elpida είναι επιστημονικό κέντρο φυσιοθεραπείας που προσφέρει σύγχρονες θεραπευτικές μεθόδους με εξειδικευμένο εξοπλισμό.",
       "descriptionEn": "Physio Elpida is a scientific physiotherapy center that offers modern therapeutic methods with specialized equipment.",
@@ -718,10 +867,78 @@
       "businessTypeEn": "Physiotherapy Center",
       "location": "Άρτα",
       "locationEn": "Arta",
-      "services": ["Web Development", "Booking System", "SEO"],
+      "services": [
+        "Web Development",
+        "Booking System",
+        "SEO"
+      ],
       "year": "2023",
       "duration": "3 εβδομάδες",
       "durationEn": "3 weeks"
+    },
+    {
+      "id": "32",
+      "slug": "smh-real-estate",
+      "name": "SMH Real Estate",
+      "nameEn": "SMH Real Estate",
+      "category": "Website",
+      "categoryEn": "Website",
+      "image": "/images/smholdings-preview.png",
+      "logo": "/images/logos/smholdings-logo.png",
+      "liveUrl": "https://smholdings.gr/el",
+      "description": "Η SM Holdings είναι εταιρεία ακινήτων με έδρα την Πρέβεζα, που διαχειρίζεται μακροχρόνιες και βραχυχρόνιες μισθώσεις ακινήτων σε όλη την Ελλάδα και χρειαζόταν μια δική της πλατφόρμα αντί για εξάρτηση από πλατφόρμες τρίτων.",
+      "descriptionEn": "SM Holdings is a Preveza-based real estate company managing long-term and short-term property rentals across Greece, which needed its own platform instead of depending on third-party marketplaces.",
+      "challenge": "Η πρόκληση ήταν να μη φτιάξουμε απλώς μια ιστοσελίδα παρουσίασης, αλλά μια πλήρη πλατφόρμα ακινήτων: αναζήτηση με φίλτρα, καταχωρήσεις ακινήτων με χάρτη, κρατήσεις με online πληρωμή, λογαριασμούς χρηστών και πίνακα διαχείρισης για την εταιρεία — όλα δίγλωσσα (ελληνικά και αγγλικά) και βελτιστοποιημένα για αναζήτηση.",
+      "challengeEn": "The challenge was not to build a simple showcase website, but a complete property platform: filtered search, property listings with maps, bookings with online payment, user accounts and an admin dashboard for the company — all bilingual (Greek and English) and search-optimized.",
+      "solution": "Αναπτύξαμε την πλατφόρμα σε Next.js με PostgreSQL, με σύστημα αναζήτησης ανά τοποθεσία, τύπο ακινήτου, υπνοδωμάτια και τιμή, διαδραστικούς χάρτες στις σελίδες ακινήτων, ροή κράτησης με ασφαλείς online πληρωμές μέσω Stripe, εγγραφή και προφίλ χρηστών, καθώς και ξεχωριστό admin panel από όπου η εταιρεία διαχειρίζεται ακίνητα, κρατήσεις και περιεχόμενο χωρίς να χρειάζεται προγραμματιστή. Όλο το site λειτουργεί σε δύο γλώσσες με ξεχωριστά URLs και δομημένα δεδομένα για τη Google.",
+      "solutionEn": "We built the platform on Next.js with PostgreSQL, featuring search by location, property type, bedrooms and price, interactive maps on property pages, a booking flow with secure online payments through Stripe, user registration and profiles, plus a separate admin panel where the company manages properties, bookings and content without needing a developer. The whole site runs in two languages with separate URLs and structured data for Google.",
+      "results": "Η SM Holdings απέκτησε το δικό της κανάλι κρατήσεων, χωρίς προμήθειες τρίτων, με πλήρη έλεγχο στις καταχωρήσεις και στην εικόνα της. Η δίγλωσση δομή ανοίγει την εταιρεία σε πελάτες από το εξωτερικό, ενώ το admin panel μειώνει δραστικά τον χρόνο ενημέρωσης νέων ακινήτων.",
+      "resultsEn": "SM Holdings gained its own booking channel with no third-party commissions and full control over its listings and brand image. The bilingual structure opens the company to international clients, while the admin panel drastically reduces the time needed to publish new properties.",
+      "businessType": "Ακίνητα & Διαχείριση Μισθώσεων",
+      "businessTypeEn": "Real Estate & Rental Management",
+      "location": "Πρέβεζα",
+      "locationEn": "Preveza",
+      "services": [
+        "Web Development",
+        "Booking System",
+        "Payments Integration",
+        "SEO",
+        "Content Management"
+      ],
+      "year": "2026",
+      "duration": "3 μήνες",
+      "durationEn": "3 months"
+    },
+    {
+      "id": "33",
+      "slug": "lincanto-apartments",
+      "name": "L'Incanto Apartments",
+      "nameEn": "L'Incanto Apartments",
+      "category": "Website",
+      "categoryEn": "Website",
+      "image": "/images/lincanto-preview.png",
+      "logo": "/images/logos/lincanto-logo.png",
+      "liveUrl": "https://lincanto.gr",
+      "description": "Τα L'Incanto Apartments είναι ένα συγκρότημα δέκα παραθαλάσσιων διαμερισμάτων στα Χρονέικα Πρέβεζας, που ήθελε να δέχεται απευθείας κρατήσεις αντί να εξαρτάται αποκλειστικά από πλατφόρμες τρίτων.",
+      "descriptionEn": "L'Incanto Apartments is a complex of ten beachfront apartments in Chroneika, Preveza, that wanted to take direct bookings instead of depending solely on third-party platforms.",
+      "challenge": "Η πρόκληση ήταν να αποτυπώσουμε την πολυτελή αίσθηση του καταλύματος και ταυτόχρονα να πείσουμε τον επισκέπτη να κλείσει απευθείας. Χρειαζόταν αναλυτική παρουσίαση και για τα δέκα διαμερίσματα, τρίγλωσσο περιεχόμενο για το ελληνικό, αγγλόφωνο και ιταλικό κοινό, και ισχυρή τοπική παρουσία στην αναζήτηση για διαμονή στην Πρέβεζα.",
+      "challengeEn": "The challenge was to capture the property's luxury feel while convincing visitors to book directly. It needed detailed presentation of all ten apartments, trilingual content for Greek, English and Italian audiences, and strong local search presence for accommodation in Preveza.",
+      "solution": "Σχεδιάσαμε και αναπτύξαμε ιστοσελίδα με ξεχωριστή σελίδα για κάθε διαμέρισμα, επαγγελματικό φωτογραφικό gallery, σελίδες παροχών και τοποθεσίας με τις παραλίες της περιοχής, φόρμα απευθείας κράτησης και δημιουργία QR code για εύκολη πρόσβαση από το κατάλυμα. Το περιεχόμενο είναι διαθέσιμο σε ελληνικά, αγγλικά και ιταλικά, με τοπικό SEO για την Πρέβεζα, δομημένα δεδομένα καταλύματος και παρακολούθηση σφαλμάτων σε πραγματικό χρόνο.",
+      "solutionEn": "We designed and developed a website with a dedicated page for each apartment, a professional photo gallery, amenities and location pages covering the area's beaches, a direct booking form and QR code generation for easy access from the property itself. Content is available in Greek, English and Italian, with local SEO for Preveza, accommodation structured data and real-time error monitoring.",
+      "results": "Το κατάλυμα απέκτησε δικό του κανάλι απευθείας κρατήσεων, χωρίς προμήθειες πλατφορμών, και μια εικόνα που αντιστοιχεί στην ποιότητα των διαμερισμάτων. Το τρίγλωσσο περιεχόμενο και το τοπικό SEO ενισχύουν την ορατότητα σε επισκέπτες από Ελλάδα, Ιταλία και το υπόλοιπο εξωτερικό.",
+      "resultsEn": "The property gained its own direct booking channel with no platform commissions, and an image that matches the quality of the apartments. The trilingual content and local SEO strengthen visibility among visitors from Greece, Italy and abroad.",
+      "businessType": "Τουριστικό Κατάλυμα",
+      "businessTypeEn": "Tourist Accommodation",
+      "location": "Χρονέικα Πρέβεζας",
+      "locationEn": "Chroneika Preveza",
+      "services": [
+        "Web Development",
+        "Booking System",
+        "SEO"
+      ],
+      "year": "2026",
+      "duration": "6 εβδομάδες",
+      "durationEn": "6 weeks"
     }
   ],
   "categories": []

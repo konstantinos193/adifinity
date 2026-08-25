@@ -1,4 +1,8 @@
 "use client"
+import FAQSection from "@/app/components/FAQSection"
+import { PRINTS_FAQ } from "@/app/components/faqData"
+import RelatedLinks from "@/app/components/RelatedLinks"
+import { PRINTS_RELATED } from "@/app/components/relatedLinksData"
 
 import type React from "react"
 
@@ -710,6 +714,8 @@ export default function PrintsPage() {
           </div>
         </motion.div>
       </div>
+    <RelatedLinks links={PRINTS_RELATED} />
+    <FAQSection items={PRINTS_FAQ} />
     </main>
   )
 }

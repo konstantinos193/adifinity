@@ -2,8 +2,11 @@ import type { Metadata } from 'next'
 import HomePageClient from './components/HomePageClient'
 
 export const metadata: Metadata = {
-  title: 'Διαφημιστική Εταιρεία Άρτα | adinfinity - Graphic Design, Web Development',
-  description: 'Κορυφαία διαφημιστική εταιρεία στην Άρτα. Graphic design, κατασκευή ιστοσελίδων, εκτυπώσεις, digital marketing. 100+ πελάτες. 2681 303007',
+  // Kept under ~60 chars so the differentiator ("από το 2013") survives Google's
+  // SERP truncation instead of being cut off mid-title.
+  title: 'Διαφημιστική Εταιρεία Άρτα από το 2013 | adinfinity',
+  description:
+    'Διαφήμιση, γραφιστική, εκτυπώσεις και ιστοσελίδες στην Άρτα, από το 2013. Πάνω από 100 επιχειρήσεις μάς εμπιστεύονται. Δωρεάν προσφορά σε 24 ώρες: 2681 303007',
   alternates: {
     canonical: 'https://adinfinity.gr/',
   },

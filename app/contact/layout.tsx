@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { getTranslations, getLocale } from 'next-intl/server'
+import { serverT, SERVER_LOCALE } from "@/lib/metadata"
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations('contact')
+  const locale = SERVER_LOCALE
+  const t = serverT('contact')
   
   // Dynamic locale mapping for OpenGraph
   const localeMap = {

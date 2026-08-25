@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Ψηφιακές Γαμήλιες Προσκλήσεις | adinfinity - Δημιουργήστε την Τέλεια Πρόσκλησή σας',
-  description: 'Δημιουργήστε εντυπωσιακές ψηφιακές γαμήλιες προσκλήσεις με παρακολούθηση RSVP, βίντεο και mini-website. Διαχειριστείτε τη λίστα καλεσμένων online. adinfinity +30 2681 303007',
+  title: 'Ψηφιακές Προσκλήσεις Γάμου | adinfinity',
+  description:
+    'Ψηφιακές προσκλήσεις γάμου με RSVP, video και mini-site. Στέλνετε ένα link και βλέπετε ποιος έρχεται, σε πραγματικό χρόνο. Τηλ. 2681 303007',
   openGraph: {
     title: 'Ψηφιακές Γαμήλιες Προσκλήσεις | adinfinity',
     description: 'Εντυπωσιακές ψηφιακές γαμήλιες προσκλήσεις με RSVP tracking, βίντεο και mini-website. Δημιουργήστε τη δική σας τώρα!',

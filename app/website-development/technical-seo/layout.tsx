@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Technical SEO Services | adinfinity — Core Web Vitals & Speed',
-  description: 'Technical SEO υπηρεσίες για ιστοσελίδες σε Ελλάδα. Core Web Vitals, schema markup, speed optimization, Lighthouse audits. Τεχνική βελτιστοποίηση για top Google rankings.',
+  title: 'Technical SEO | Ταχύτητα & Schema',
+  description:
+    'Technical SEO για ιστοσελίδες: Core Web Vitals, schema markup, ταχύτητα φόρτωσης και crawlability. Αναφορά με τι διορθώθηκε και γιατί.',
   alternates: { canonical: 'https://adinfinity.gr/website-development/technical-seo' },
   openGraph: {
     title: 'Technical SEO Services | adinfinity',

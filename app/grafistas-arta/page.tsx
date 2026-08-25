@@ -1,4 +1,8 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { GRAFISTAS_DETAILS } from "@/app/components/serviceDetailsData"
+import FAQSection from "@/app/components/FAQSection"
+import { GRAFISTAS_FAQ } from "@/app/components/faqData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Palette, FileImage, Monitor, Layers } from "lucide-react"
@@ -215,6 +219,8 @@ export default function GrafistasArtaPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={GRAFISTAS_DETAILS} />
+    <FAQSection items={GRAFISTAS_FAQ} />
     </main>
   )
 }

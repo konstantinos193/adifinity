@@ -71,23 +71,43 @@
   "tech_stack": [
     {
       "label": "Frontend",
-      "techs": ["React 19", "Next.js 16", "TypeScript", "Tailwind CSS", "Framer Motion"]
+      "techs": [
+        "React 19",
+        "Next.js 16",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion"
+      ]
     },
     {
       "label": "Backend",
-      "techs": ["Node.js", "Express", "REST APIs", "WebSockets"]
+      "techs": [
+        "Node.js",
+        "Express",
+        "REST APIs",
+        "WebSockets"
+      ]
     },
     {
       "label": "Database",
-      "techs": ["PostgreSQL", "Prisma ORM", "Redis"]
+      "techs": [
+        "PostgreSQL",
+        "Prisma ORM",
+        "Redis"
+      ]
     },
     {
       "label": "Deploy",
-      "techs": ["Vercel", "VPS", "Docker", "CI/CD"]
+      "techs": [
+        "Vercel",
+        "VPS",
+        "Docker",
+        "CI/CD"
+      ]
     }
   ],
   "seo": {
-    "title": "Custom Web Applications | SaaS Platforms | Web Εφαρμογές | adinfinity",
-    "description": "Custom web applications, SaaS πλατφόρμες, πίνακες ελέγχου σε React & Node.js. Full-stack development για ελληνική αγορά. Συστήματα κρατήσεων, εργαλεία διαχείρισης, πλατφόρμες δεδομένων."
+    "title": "Web Εφαρμογές & SaaS | React & Node.js",
+    "description": "Custom web εφαρμογές, SaaS πλατφόρμες και πίνακες ελέγχου σε React και Node.js: συστήματα κρατήσεων, εργαλεία διαχείρισης και πλατφόρμες δεδομένων."
   }
 }

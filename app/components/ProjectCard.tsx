@@ -1,20 +1,9 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { useTranslations } from "@/components/useTranslations"
-
-type Project = {
-  id: string
-  name: string
-  category: string
-  image: string
-  description: string
-  challenge?: string
-  solution?: string
-  results?: string
-  bgColor?: string
-  liveUrl?: string
-}
+import type { Project } from "@/lib/projects"
 
 interface ProjectCardProps {
   project: Project
@@ -84,6 +73,19 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
+
+          {/* A real anchor, not the modal: this is the only crawlable path from
+              /projects to the case-study pages. */}
+          <Link
+            href={`/projects/${project.slug}`}
+            className="w-full py-2 px-3 bg-transparent hover:bg-[#01FFFF]/10 border border-[#01FFFF]/20 rounded-lg text-[#01FFFF] text-xs flex items-center justify-center transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {t('projects_page.view_case_study')}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
 
           {project.liveUrl && (
             <a

@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next'
 
+import { projects } from '@/lib/projects'
+
 const BASE_URL = 'https://adinfinity.gr'
 
 /**
@@ -105,11 +107,16 @@ const ROUTES: Route[] = [
     images: ['/images/og-maintenance.svg'],
   },
 
-  // ── Wedding-invitation funnel ───────────────────────────────────────────
+  /*
+   * ── Wedding-invitation funnel ─────────────────────────────────────────────
+   *
+   * One route only. `/psifiako-prosklitirio-gamou`, `/ilektroniko-prosklitirio-gamou`
+   * and `/site-gamou-rsvp` were template clones of each other that also duplicated
+   * the invitations product's own landing pages; they now 308 into `/invitations`
+   * (see next.config.mjs). The product at invitations.adinfinity.gr owns the
+   * wedding queries — it has the real pages, and its own sitemap.
+   */
   { path: '/invitations', priority: 0.8, changeFrequency: 'monthly', images: [OG] },
-  { path: '/psifiako-prosklitirio-gamou', priority: 0.8, changeFrequency: 'monthly', images: [OG] },
-  { path: '/ilektroniko-prosklitirio-gamou', priority: 0.8, changeFrequency: 'monthly', images: [OG] },
-  { path: '/site-gamou-rsvp', priority: 0.8, changeFrequency: 'monthly', images: [OG] },
 
   // ── Conversion & trust pages ────────────────────────────────────────────
   { path: '/contact', priority: 0.8, changeFrequency: 'yearly', images: [OG] },
@@ -127,6 +134,8 @@ const ROUTES: Route[] = [
       '/images/asteriashome-preview.png',
       '/images/kyklosedu-preview.png',
       '/images/physioelpida-preview.png',
+      '/images/smholdings-preview.png',
+      '/images/lincanto-preview.png',
       '/images/apofa-branding.png',
     ],
   },
@@ -144,17 +153,35 @@ const ROUTES: Route[] = [
   { path: '/report-content', priority: 0.3, changeFrequency: 'yearly', lastModified: LEGAL_UPDATED },
 ]
 
+/**
+ * One case-study URL per portfolio entry, generated from the same data the
+ * `/projects/[slug]` route prerenders — so the sitemap cannot drift from what
+ * is actually built. Before these existed the whole portfolio was a single
+ * indexable URL.
+ */
+const PROJECT_ROUTES: Route[] = projects.map((project) => ({
+  path: `/projects/${project.slug}`,
+  priority: 0.6,
+  changeFrequency: 'yearly',
+  images: [project.image],
+}))
+
+const ALL_ROUTES = [...ROUTES, ...PROJECT_ROUTES]
+
 /** Exported so other modules (and tests) can assert canonical-route parity. */
-export const INDEXABLE_ROUTES = ROUTES.map((r) => r.path)
+export const INDEXABLE_ROUTES = ALL_ROUTES.map((r) => r.path)
 
 const absolute = (path: string) => (path === '/' ? `${BASE_URL}/` : `${BASE_URL}${path}`)
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ROUTES.map(({ path, priority, changeFrequency, lastModified, images }) => ({
+  return ALL_ROUTES.map(({ path, priority, changeFrequency, lastModified, images }) => ({
     url: absolute(path),
     lastModified: lastModified ?? CONTENT_UPDATED,
     changeFrequency,
     priority,
-    ...(images ? { images: images.map((src) => `${BASE_URL}${src}`) } : {}),
+    // encodeURI, because portfolio filenames contain spaces and Greek letters
+    // ("/images/box biju.png", "/images/Α.Π.Ο.Φ.Α-Photoroom.png") and a raw
+    // space makes the sitemap entry an invalid URL.
+    ...(images ? { images: images.map((src) => encodeURI(`${BASE_URL}${src}`)) } : {}),
   }))
 }

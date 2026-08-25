@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { getTranslations, getLocale } from 'next-intl/server'
+import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations('about_page')
+  const locale = SERVER_LOCALE
+  const t = serverT('about_page')
   
   // Dynamic locale mapping for OpenGraph
   const localeMap = {
@@ -55,7 +55,6 @@ export async function generateMetadata(): Promise<Metadata> {
         "description": "Ειδικός στην ανάπτυξη ιστοσελίδων και εφαρμογών"
       }
     ],
-    "openingHours": "Mo-Fr 09:00-17:00",
     "priceRange": "€€€"
   } : {
     "@context": "https://schema.org",
@@ -100,7 +99,6 @@ export async function generateMetadata(): Promise<Metadata> {
         "description": "Specializing in website and application development"
       }
     ],
-    "openingHours": "Mo-Fr 09:00-17:00",
     "priceRange": "€€€"
   }
   
@@ -202,7 +200,6 @@ export default function AboutLayout({
                 "description": "Ειδικός στην ανάπτυξη ιστοσελίδων και εφαρμογών"
               }
             ],
-            "openingHours": "Mo-Fr 09:00-17:00",
             "priceRange": "€€€"
           }),
         }}

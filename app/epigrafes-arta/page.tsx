@@ -1,4 +1,6 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { EPIGRAFES_DETAILS } from "@/app/components/serviceDetailsData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Lightbulb, Car, Store, MapPin } from "lucide-react"
@@ -248,6 +250,7 @@ export default function EpigrafesArtaPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={EPIGRAFES_DETAILS} />
     </main>
   )
 }

@@ -1,4 +1,6 @@
 "use client"
+import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
+import { DIAFIMISTIKA_DORA_DETAILS } from "@/app/components/serviceDetailsData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, PenTool, Coffee, Shirt, ShoppingBag } from "lucide-react"
@@ -248,6 +250,7 @@ export default function DiafimistikaDoraPage() {
           </div>
         </motion.div>
       </div>
+    <ServiceDetailsSection details={DIAFIMISTIKA_DORA_DETAILS} />
     </main>
   )
 }

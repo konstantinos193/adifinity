@@ -98,6 +98,35 @@ const nextConfig = {
         permanent: true,
         destination: 'https://adinfinity.gr',
       },
+      /*
+       * Wedding-funnel consolidation.
+       *
+       * These three routes were spun from one 220-line template — identical
+       * markup, differing only in an i18n key prefix and four icons — and each
+       * duplicated a properly-built landing page on the invitations product at
+       * invitations.adinfinity.gr (one of them, `/ilektroniko-prosklitirio-gamou`,
+       * shared its slug verbatim). Nine pages across the two hosts competed for
+       * the same Greek queries; Google resolved that by declining to index the
+       * product's own homepage ("Crawled - currently not indexed").
+       *
+       * The agency site keeps exactly one wedding page — `/invitations` — as the
+       * service entry that hands off to the product. Everything else folds into it.
+       */
+      {
+        source: '/psifiako-prosklitirio-gamou',
+        destination: '/invitations',
+        permanent: true,
+      },
+      {
+        source: '/ilektroniko-prosklitirio-gamou',
+        destination: '/invitations',
+        permanent: true,
+      },
+      {
+        source: '/site-gamou-rsvp',
+        destination: '/invitations',
+        permanent: true,
+      },
     ]
   },
 }

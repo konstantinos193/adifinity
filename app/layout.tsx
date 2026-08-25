@@ -11,7 +11,7 @@ import AccessibilityWidget from "../components/ui/AccessibilityWidget"
 import GoogleAnalytics from "../components/GoogleAnalytics"
 import StickyMobileCTA from "../components/ui/StickyMobileCTA"
 import type { Metadata, Viewport } from "next"
-import { getTranslations, getLocale } from 'next-intl/server'
+import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -33,8 +33,8 @@ const SERVICES = [
 ] as const
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations('seo')
+  const locale = SERVER_LOCALE
+  const t = serverT('seo')
   
   // Dynamic locale mapping for OpenGraph
   const localeMap = {
@@ -118,7 +118,7 @@ export default async function RootLayout({
 }) {
   // Must reflect the locale actually rendered — hardcoding "el" mislabels the
   // page for English visitors, for screen readers and for Google alike.
-  const locale = await getLocale()
+  const locale = SERVER_LOCALE
   const isGreek = locale === 'el'
 
   return (

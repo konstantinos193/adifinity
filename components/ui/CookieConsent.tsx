@@ -13,6 +13,12 @@ interface CookieSettings {
 
 const COOKIE_CONSENT_KEY = "adinfinity-cookie-consent"
 const COOKIE_SETTINGS_KEY = "adinfinity-cookie-settings"
+const OPEN_COOKIE_SETTINGS_EVENT = "openCookieSettings"
+
+/** Opens the cookie preferences panel from anywhere in the app. */
+export function openCookieSettings() {
+  window.dispatchEvent(new CustomEvent(OPEN_COOKIE_SETTINGS_EVENT))
+}
 
 export default function CookieConsent() {
   const { t, locale: _locale } = useTranslations()
@@ -50,9 +56,9 @@ export default function CookieConsent() {
       setShowSettings(true)
     }
 
-    window.addEventListener('openCookieSettings', handleOpenCookieSettings)
+    window.addEventListener(OPEN_COOKIE_SETTINGS_EVENT, handleOpenCookieSettings)
     return () => {
-      window.removeEventListener('openCookieSettings', handleOpenCookieSettings)
+      window.removeEventListener(OPEN_COOKIE_SETTINGS_EVENT, handleOpenCookieSettings)
     }
   }, [])
 

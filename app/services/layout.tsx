@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Υπηρεσίες Marketing & Διαφήμισης Άρτα | adinfinity',
-  description: 'Αναπτύξτε την επιχείρησή σας με τις υπηρεσίες της adinfinity: εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων & digital marketing. 100+ ικανοποιημένοι πελάτες. ☎ 2681 303007',
+  description:
+    'Εκτυπώσεις, γραφιστική, επιγραφές, ιστοσελίδες, διανομή εντύπων και digital marketing από ένα γραφείο στην Άρτα. Τηλ. 2681 303007',
   openGraph: {
     title: 'Υπηρεσίες Marketing & Διαφήμισης Άρτα | adinfinity',
     description: 'Αναπτύξτε την επιχείρησή σας: εκτυπώσεις, γραφιστική, ιστοσελίδες, διανομή εντύπων & digital marketing. 100+ ικανοποιημένοι πελάτες στην Άρτα.',

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
+import { faqPageSchema, GRAPHIC_DESIGN_FAQ } from '@/app/components/faqData'
+import { serverT } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('graphic_design_page')
+  const t = serverT('graphic_design_page')
   
   return {
     title: t('seo.title'),
@@ -138,7 +139,6 @@ export default function GraphicDesignLayout({
                 }
               ]
             },
-            "openingHours": "Mo-Fr 09:00-17:00",
             "priceRange": "€€"
           }),
         }}
@@ -166,13 +166,6 @@ export default function GraphicDesignLayout({
               "latitude": "39.1606",
               "longitude": "20.9853"
             },
-            "openingHours": [
-              "Mo 09:00-17:00",
-              "Tu 09:00-17:00", 
-              "We 09:00-17:00",
-              "Th 09:00-17:00",
-              "Fr 09:00-17:00"
-            ],
             "priceRange": "€€",
             "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
             "currenciesAccepted": "EUR"
@@ -183,36 +176,7 @@ export default function GraphicDesignLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Πόσο κοστίζει το logo design;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Logo design ξεκινά από €150 για basic concepts και φτάνει €300+ για premium packages με full branding."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Ποια αρχεία λαμβάνω;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Λαμβάνετε όλα τα source αρχεία: AI, EPS, PDF, PNG, JPG formats, μαζί με font files και color codes."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πόσο χρόνο παίρνει ένα project;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Logo design σε 3-5 εργάσιμες. Complete branding projects σε 2-4 εβδομάδες ανάλογα με την πολυπλοκότητα."
-                }
-              }
-            ]
-          }),
+          __html: JSON.stringify(faqPageSchema(GRAPHIC_DESIGN_FAQ)),
         }}
       />
       {children}

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { getTranslations, getLocale } from 'next-intl/server'
+import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations('web_apps_page')
+  const locale = SERVER_LOCALE
+  const t = serverT('web_apps_page')
   
   // Dynamic locale mapping for OpenGraph
   const localeMap = {
@@ -93,7 +93,6 @@ export async function generateMetadata(): Promise<Metadata> {
         }
       ]
     },
-    "openingHours": "Mo-Fr 09:00-17:00",
     "priceRange": "€€€"
   } : {
     "@context": "https://schema.org",
@@ -176,7 +175,6 @@ export async function generateMetadata(): Promise<Metadata> {
         }
       ]
     },
-    "openingHours": "Mo-Fr 09:00-17:00",
     "priceRange": "€€€"
   }
   
@@ -312,7 +310,6 @@ export default function WebAppsLayout({ children }: { children: React.ReactNode 
                 }
               ]
             },
-            "openingHours": "Mo-Fr 09:00-17:00",
             "priceRange": "€€€"
           }),
         }}
@@ -340,13 +337,6 @@ export default function WebAppsLayout({ children }: { children: React.ReactNode 
               "latitude": "39.1606",
               "longitude": "20.9853"
             },
-            "openingHours": [
-              "Mo 09:00-17:00",
-              "Tu 09:00-17:00", 
-              "We 09:00-17:00",
-              "Th 09:00-17:00",
-              "Fr 09:00-17:00"
-            ],
             "priceRange": "€€€",
             "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
             "currenciesAccepted": "EUR"

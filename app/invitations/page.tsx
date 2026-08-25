@@ -1,4 +1,6 @@
 "use client"
+import RelatedLinks from "@/app/components/RelatedLinks"
+import { INVITATIONS_RELATED } from "@/app/components/relatedLinksData"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Check } from "lucide-react"
@@ -681,6 +683,7 @@ export default function InvitationsPage() {
           </div>
         </motion.div>
       </div>
+    <RelatedLinks links={INVITATIONS_RELATED} />
     </main>
   )
 }

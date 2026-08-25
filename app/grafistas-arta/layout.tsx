@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { getTranslations, getLocale } from 'next-intl/server'
+import { faqPageSchema, GRAFISTAS_FAQ } from '@/app/components/faqData'
+import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = await getLocale()
-  const t = await getTranslations('grafistas_arta_page')
+  const locale = SERVER_LOCALE
+  const t = serverT('grafistas_arta_page')
   
   const localeMap = {
     'el': 'el_GR',
@@ -95,18 +96,16 @@ export default function GrafistasArtaLayout({
                 "name": "Ήπειρος"
               }
             ],
-            "openingHours": [
-              "Mo 09:00-17:00",
-              "Tu 09:00-17:00", 
-              "We 09:00-17:00",
-              "Th 09:00-17:00",
-              "Fr 09:00-17:00"
-            ],
             "priceRange": "€€",
             "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
             "currenciesAccepted": "EUR"
           }),
         }}
+      />
+      {/* FAQ Schema — derived from the same data the page renders. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(GRAFISTAS_FAQ)) }}
       />
       {children}
     </>

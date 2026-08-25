@@ -78,16 +78,26 @@ export function proxy(request: NextRequest) {
   
   // Check if path matches old URL patterns
   const isOldUrl = oldUrlPatterns.some((pattern) => pathname.includes(pattern))
-  
-  // Also check for paths that look like old content (multiple segments, .html extension, etc.)
-  const pathSegments = pathname.split('/').filter(Boolean)
-  const hasOldStructure = 
-    pathSegments.length > 2 || // More than 2 segments (e.g., /category/subcategory/page.html)
-    pathname.endsWith('.html') || // Old HTML files
-    pathname.match(/\/[a-z0-9-]+\/[a-z0-9-]+\.html$/) // Pattern like /category/page.html
+
+  /*
+   * Legacy Joomla artefacts only — a `.html` extension, which no route on this
+   * site has ever used.
+   *
+   * There used to be a `pathSegments.length > 2` clause here that 301'd *any*
+   * path with three or more segments to the homepage. Nothing hit it while the
+   * deepest route was two segments (`/website-development/technical-seo`), but
+   * it was a live trap: the next nested route added anywhere under app/ would
+   * have been silently swallowed before it ever reached the router, with no
+   * error to explain why.
+   *
+   * Genuinely unknown URLs are deliberately left alone so Next can answer 404.
+   * Blanket-redirecting them to the homepage instead is what Google classifies
+   * as a soft 404, and it buries real broken links rather than surfacing them.
+   */
+  const isLegacyHtmlUrl = pathname.endsWith('.html')
 
   // Redirect old/spam URLs to homepage
-  if (isOldUrl || hasOldStructure) {
+  if (isOldUrl || isLegacyHtmlUrl) {
     const homepageUrl = new URL(`https://${canonicalHost}/`)
     return NextResponse.redirect(homepageUrl, 301) // Permanent redirect
   }
