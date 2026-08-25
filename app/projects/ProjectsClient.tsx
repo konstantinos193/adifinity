@@ -132,18 +132,31 @@ export function ProjectsClient() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <AnimatePresence>
+            // `relative` is required by AnimatePresence's popLayout mode, which
+            // absolutely-positions the cards on their way out.
+            <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* popLayout pulls exiting cards out of the grid flow immediately,
+                  so the surviving cards reflow on the same frame as the click
+                  instead of waiting for 27 fade-outs to finish. */}
+              <AnimatePresence mode="popLayout">
                 {filteredProjects.map((project, index) => {
                   const localizedProject = getLocalizedProject(project)
+                  // Capped stagger. Uncapped (`index * 0.05`) the 32nd card was
+                  // delayed 1.55s — long enough that filtering read as "the grid
+                  // emptied out and the results came back a few seconds later".
+                  const stagger = Math.min(index, 7) * 0.04
                   return (
                     <motion.div
                       key={project.id}
-                      layout
+                      // "position" only: the cards are fixed-aspect, so there is
+                      // no size to animate and this skips the scale correction
+                      // that would otherwise distort every card's contents.
+                      layout="position"
                       initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.5, delay: index * 0.05 }}
+                      animate={{ opacity: 1, y: 0, transition: { duration: 0.3, delay: stagger } }}
+                      // Exits must not inherit the stagger — they all leave at once.
+                      exit={{ opacity: 0, scale: 0.95, transition: { duration: 0.15 } }}
+                      transition={{ layout: { duration: 0.3, ease: "easeOut" } }}
                     >
                       <ProjectCard project={localizedProject} onClick={() => setSelectedProject(localizedProject)} />
                     </motion.div>

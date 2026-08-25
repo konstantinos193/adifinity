@@ -34,7 +34,15 @@ export type Project = {
   location?: string
   locationEn?: string
   services?: string[]
+  /** Display string, may be a range ("2025 – 2026"). Never feed this to JSON-LD. */
   year?: string
+  /**
+   * ISO date the work started, for schema.org `dateCreated`.
+   *
+   * Separate from `year` because `year` is prose: schema.org needs a parseable
+   * date, and "2025 – 2026" is not one.
+   */
+  dateCreated?: string
   duration?: string
   durationEn?: string
 }

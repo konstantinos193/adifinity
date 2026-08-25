@@ -11,6 +11,20 @@ interface EcommerceFeature {
   description: string
 }
 
+/**
+ * The `premium_features` entries carry pricing and a bullet list — they were
+ * typed as plain `EcommerceFeature`, which is why passing them to
+ * <FeatureShowcase /> failed: its `Feature` type requires `price` and
+ * `features`, both of which the message data has always provided.
+ */
+interface EcommercePremiumFeature extends EcommerceFeature {
+  price: string
+  features: string[]
+  timeline?: string
+  recurring?: string
+  popular?: boolean
+}
+
 interface PaymentCategory {
   category: string
   description: string
@@ -22,7 +36,7 @@ const EcommerceClient = () => {
 
   const features = t('e_commerce_page.features') as EcommerceFeature[]
   const whyCustom = t('e_commerce_page.why_custom') as string[]
-  const ecommercePremiumFeatures = t('e_commerce_page.premium_features') as EcommerceFeature[]
+  const ecommercePremiumFeatures = t('e_commerce_page.premium_features') as EcommercePremiumFeature[]
   const paymentCategories = t('e_commerce_page.payment_categories') as PaymentCategory[]
 
   const featureIcons = [

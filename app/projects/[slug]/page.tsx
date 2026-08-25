@@ -84,7 +84,8 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
     url: `${BASE_URL}/projects/${project.slug}`,
     image: `${BASE_URL}${project.image}`,
     genre: project.category,
-    ...(project.year ? { dateCreated: project.year } : {}),
+    // `year` is a display string and can be a range — only the ISO field is safe here.
+    ...(project.dateCreated ? { dateCreated: project.dateCreated } : {}),
     creator: { '@id': `${BASE_URL}/#organization` },
     ...(project.businessType
       ? {

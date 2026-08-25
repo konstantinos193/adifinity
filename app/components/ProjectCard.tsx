@@ -43,6 +43,9 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           src={project.image || "/placeholder.svg"}
           alt={project.name}
           fill
+          // Matches the grid: 1 col below sm, 2 up to lg, 3 above. Without this
+          // `fill` defaults to 100vw and every card downloads the 1920px file.
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-contain p-8"
         />
       </div>

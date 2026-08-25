@@ -810,9 +810,10 @@
         "Booking System",
         "SEO"
       ],
-      "year": "2023",
-      "duration": "4 εβδομάδες",
-      "durationEn": "4 weeks"
+      "year": "2025",
+      "dateCreated": "2025-07-12",
+      "duration": "7 εβδομάδες",
+      "durationEn": "7 weeks"
     },
     {
       "id": "30",
@@ -841,9 +842,10 @@
         "Content Management",
         "SEO"
       ],
-      "year": "2023",
-      "duration": "3 εβδομάδες",
-      "durationEn": "3 weeks"
+      "year": "2025",
+      "dateCreated": "2025-10-03",
+      "duration": "2 μήνες",
+      "durationEn": "2 months"
     },
     {
       "id": "31",
@@ -872,7 +874,8 @@
         "Booking System",
         "SEO"
       ],
-      "year": "2023",
+      "year": "2022",
+      "dateCreated": "2022",
       "duration": "3 εβδομάδες",
       "durationEn": "3 weeks"
     },
@@ -906,6 +909,7 @@
         "Content Management"
       ],
       "year": "2026",
+      "dateCreated": "2025-11-07",
       "duration": "3 μήνες",
       "durationEn": "3 months"
     },
@@ -937,8 +941,9 @@
         "SEO"
       ],
       "year": "2026",
-      "duration": "6 εβδομάδες",
-      "durationEn": "6 weeks"
+      "dateCreated": "2026-02-11",
+      "duration": "8 εβδομάδες",
+      "durationEn": "8 weeks"
     }
   ],
   "categories": []
