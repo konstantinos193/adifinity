@@ -10,8 +10,27 @@ import { useTranslations } from "@/components/useTranslations"
 // Dynamically import the map component
 const Map = dynamic(() => import("../components/Map"), { ssr: false })
 
+/**
+ * Areas with real work behind them in `app/data/projects.json`.
+ *
+ * Arta and its villages carry 29 of the 32 case studies; Koronisia and Preveza
+ * carry the rest. Epirus and the neighbouring prefectures are stated as delivery
+ * and installation range, which the signage and printing services genuinely
+ * cover. Nothing here is aspirational.
+ */
+const SERVICE_AREAS = [
+  'Άρτα',
+  'Κορωνησία',
+  'Πρέβεζα',
+  'Φιλιππιάδα',
+  'Ιωάννινα',
+  'Ήπειρος',
+  'Αιτωλοακαρνανία',
+]
+
 export function ContactClient() {
-  const { t } = useTranslations()
+  const { t, locale } = useTranslations()
+  const isGreek = locale === 'el'
 
   const schedule = [
     { day: t('contact.schedule.monday'), hours: ['09:00 - 14:30'] },
@@ -234,6 +253,41 @@ export function ContactClient() {
             </motion.div>
           </motion.div>
         </div>
+
+        {/*
+          Service area, stated on the page rather than only in schema.
+
+          This is the one local signal the contact page was missing: it carried
+          the address, phone, hours and a map, but never said where the company
+          actually delivers and installs. The areas below are the ones the
+          portfolio can evidence — every one of them has real work behind it in
+          app/data/projects.json — so this is coverage the site can back up, not
+          a list of towns to catch queries.
+
+          Deliberately one section on the contact page, not a page per town:
+          Google's spam policy treats near-identical per-city pages funnelling to
+          the same destination as doorway abuse.
+        */}
+        <section className="mt-16 border-t border-cyan-900/30 pt-12">
+          <h2 className="text-2xl font-bold text-white mb-3">
+            {isGreek ? 'Περιοχές εξυπηρέτησης' : 'Where we work'}
+          </h2>
+          <p className="text-gray-400 max-w-3xl mb-6">
+            {isGreek
+              ? 'Το γραφείο μας είναι στην Άρτα και από εκεί εξυπηρετούμε όλη την Ήπειρο. Για εκτυπώσεις και διαφημιστικά δώρα στέλνουμε πανελλαδικά· για επιγραφές και σήμανση οχημάτων αναλαμβάνουμε την εγκατάσταση επιτόπου.'
+              : 'Our office is in Arta and we cover the whole of Epirus from it. Printing and promotional items ship anywhere in Greece; for signage and vehicle graphics we handle installation on site.'}
+          </p>
+          <ul className="flex flex-wrap gap-2">
+            {SERVICE_AREAS.map((area) => (
+              <li
+                key={area}
+                className="text-sm px-3 py-1 rounded-full border border-cyan-500/20 text-gray-300 bg-cyan-950/30"
+              >
+                {area}
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </main>
   )

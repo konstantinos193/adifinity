@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { faqPageSchema, GUIDE_FAQ } from "@/app/components/faqData"
+import { faqNode, GUIDE_FAQ } from "@/app/components/faqData"
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -90,12 +91,30 @@ export default function GraphicDesignGuideLayout({
           }),
         }}
       />
-      {/* FAQ Schema */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqPageSchema(GUIDE_FAQ)),
-        }}
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/graphic-design-guide",
+          breadcrumb: [
+            { name: "Οδηγοί", path: "/services" },
+            { name: "Οδηγός Γραφιστικής", path: "/graphic-design-guide" },
+          ],
+          faq: faqNode(GUIDE_FAQ),
+        }),
+        )}
       />
       {children}
     </>

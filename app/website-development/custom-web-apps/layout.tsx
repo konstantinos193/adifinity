@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { serverT } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = serverT('custom_web_apps_page')
@@ -53,125 +56,60 @@ export default function CustomWebAppsLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Professional Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "Custom Web Apps & Εταιρικές Ιστοσελίδες",
-            "description": "Custom εταιρικές ιστοσελίδες και web applications σε React & Next.js. Καμία χρήση templates. Mobile-first design, SEO optimization, enterprise security για Greek businesses.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/website-development/custom-web-apps",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Κατασκευή Ιστοσελίδων", path: "/website-development" },
+            { name: "Custom Εταιρικές Ιστοσελίδες", path: "/website-development/custom-web-apps" },
+          ],
+          service: {
+            path: "/website-development/custom-web-apps",
+            name: "Custom Web Apps & Εταιρικές Ιστοσελίδες",
+            description: "Custom εταιρικές ιστοσελίδες και web applications σε React & Next.js. Καμία χρήση templates. Mobile-first design, SEO optimization, enterprise security για Greek businesses.",
+            serviceType: [
+              "Custom Web Development",
+              "Web Application Development",
+              "Corporate Websites",
+              "E-commerce Solutions",
+              "Booking Systems",
+            ],
+            offers: [
+              {
+                name: "Custom Corporate Websites",
+                description: "Tailored websites for businesses with custom design and functionality",
               },
-              "sameAs": [
-                "https://www.facebook.com/adinfinity.gr",
-                "https://www.instagram.com/adinfinity.gr"
-              ]
-            },
-            "serviceType": ["Custom Web Development", "Web Application Development", "Corporate Websites", "E-commerce Solutions", "Booking Systems"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Custom Web Development Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Custom Corporate Websites",
-                    "description": "Tailored websites for businesses with custom design and functionality"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer", 
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Web Applications",
-                    "description": "Custom web applications with advanced functionality and database integration"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "E-commerce Solutions",
-                    "description": "Complete online stores with payment integration and inventory management"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                }
-              ]
-            },
-            "priceRange": "€€€"
-          }),
-        }}
+              {
+                name: "Web Applications",
+                description: "Custom web applications with advanced functionality and database integration",
+              },
+              {
+                name: "E-commerce Solutions",
+                description: "Complete online stores with payment integration and inventory management",
+              },
+            ],
+          },
+        }),
+        )}
       />
-      {/* Structured Data - Local Business */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Custom Web Development Άρτα",
-            "description": "Custom web apps και εταιρικές ιστοσελίδες στην Άρτα",
-            "url": "https://adinfinity.gr/website-development/custom-web-apps",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "priceRange": "€€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
-      />
+
       {children}
+      <RelatedProjects projects={pickProjects('/website-development/custom-web-apps')} />
     </>
   )
 }

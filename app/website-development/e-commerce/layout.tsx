@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -271,125 +274,60 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function EcommerceLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* Structured Data - Professional Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Ανάπτυξη Custom E-commerce",
-            "description": "Custom ανάπτυξη e-commerce χωρίς Shopify/WooCommerce. Next.js, React, Stripe payments. Μηδενικές μηνιαίες χρεώσεις. Εξειδίκευση στην ελληνική αγορά για online καταστήματα.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/website-development/e-commerce",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Κατασκευή Ιστοσελίδων", path: "/website-development" },
+            { name: "E-shop", path: "/website-development/e-commerce" },
+          ],
+          service: {
+            path: "/website-development/e-commerce",
+            name: "Ανάπτυξη Custom E-commerce",
+            description: "Custom ανάπτυξη e-commerce χωρίς Shopify/WooCommerce. Next.js, React, Stripe payments. Μηδενικές μηνιαίες χρεώσεις. Εξειδίκευση στην ελληνική αγορά για online καταστήματα.",
+            serviceType: [
+              "E-commerce Development",
+              "Custom Online Stores",
+              "Stripe Integration",
+              "Payment Systems",
+              "Web Development",
+            ],
+            offers: [
+              {
+                name: "Custom E-commerce Development",
+                description: "Πλήρως custom online καταστήματα χωρίς platform fees",
               },
-              "sameAs": [
-                "https://www.facebook.com/adinfinity.gr",
-                "https://www.instagram.com/adinfinity.gr"
-              ]
-            },
-            "serviceType": ["E-commerce Development", "Custom Online Stores", "Stripe Integration", "Payment Systems", "Web Development"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες E-commerce Development",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Custom E-commerce Development",
-                    "description": "Πλήρως custom online καταστήματα χωρίς platform fees"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Stripe Payment Integration",
-                    "description": "Ενσωμάτωση πληρωμών με Stripe και εναλλακτικές μεθόδους"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Custom Admin Dashboard",
-                    "description": "Προσαρμοσμένο panel διαχείρισης παραγγελιών και αποθέματος"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                }
-              ]
-            },
-            "priceRange": "€€€"
-          }),
-        }}
+              {
+                name: "Stripe Payment Integration",
+                description: "Ενσωμάτωση πληρωμών με Stripe και εναλλακτικές μεθόδους",
+              },
+              {
+                name: "Custom Admin Dashboard",
+                description: "Προσαρμοσμένο panel διαχείρισης παραγγελιών και αποθέματος",
+              },
+            ],
+          },
+        }),
+        )}
       />
-      {/* Structured Data - Local Business */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - E-commerce Development Άρτα",
-            "description": "Custom ανάπτυξη e-commerce και online καταστήματα στην Άρτα",
-            "url": "https://adinfinity.gr/website-development/e-commerce",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "priceRange": "€€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
-      />
+
       {children}
+      <RelatedProjects projects={pickProjects('/website-development/e-commerce')} />
     </>
   )
 }

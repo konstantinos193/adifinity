@@ -143,7 +143,11 @@ const ROUTES: Route[] = [
 
   // ── Editorial / supporting content ──────────────────────────────────────
   { path: '/graphic-design-guide', priority: 0.6, changeFrequency: 'yearly', images: [OG] },
-  { path: '/katastrifi-web-efarmogon', priority: 0.6, changeFrequency: 'yearly', images: [OG] },
+  /*
+   * `/katastrifi-web-efarmogon` is gone — it 308s to `/website-development`
+   * (see next.config.mjs). A redirecting URL in the sitemap is a soft error in
+   * Search Console, so it must not be listed here.
+   */
 
   // ── Legal & compliance ──────────────────────────────────────────────────
   { path: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly', lastModified: LEGAL_UPDATED },

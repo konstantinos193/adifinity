@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
-import { faqPageSchema, GRAPHIC_DESIGN_FAQ } from '@/app/components/faqData'
+import { faqNode, GRAPHIC_DESIGN_FAQ } from '@/app/components/faqData'
 import { serverT } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = serverT('graphic_design_page')
-  
+
   return {
     title: t('seo.title'),
     description: t('seo.description'),
@@ -18,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'adinfinity',
       images: [
         {
-          url: "/images/og-image.png",
+          url: '/images/og-image.png',
           width: 1200,
           height: 630,
           alt: 'Γραφικές Τέχνες adinfinity - Επαγγελματικές Υπηρεσίες Graphic Design',
@@ -47,140 +50,62 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function GraphicDesignLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function GraphicDesignLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {/* Structured Data - Professional Service */}
+      {/*
+        One graph, one business entity.
+
+        This route previously rendered three separate blocks: a
+        `ProfessionalService`, a `LocalBusiness` and an FAQPage — the first two
+        with no `@id`, each restating the company's address and telephone, and
+        advertising `facebook.com/adinfinity.gr` / `instagram.com/adinfinity.gr`,
+        neither of which is a real adinfinity profile. Together with the root
+        layout's `AdvertisingAgency` that put four businesses on one page.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "Γραφικές Τέχνες & Graphic Design",
-            "description": "Επαγγελματικές γραφικές τέχνες στην Άρτα. Branding, logo design, εταιρική ταυτότητα, διαφημιστικό υλικό, social media graphics.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
-              },
-              "sameAs": [
-                "https://www.facebook.com/adinfinity.gr",
-                "https://www.instagram.com/adinfinity.gr"
-              ]
-            },
-            "serviceType": ["Graphic Design", "Branding", "Logo Design", "Corporate Identity", "Digital Design", "Social Media Graphics"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Graphic Design",
-              "itemListElement": [
+        dangerouslySetInnerHTML={jsonLd(
+          pageGraph({
+            path: '/graphic-design',
+            breadcrumb: [
+              { name: 'Υπηρεσίες', path: '/services' },
+              { name: 'Γραφιστική', path: '/graphic-design' },
+            ],
+            service: {
+              path: '/graphic-design',
+              name: 'Γραφιστική & Graphic Design',
+              description:
+                'Επαγγελματικές γραφικές τέχνες στην Άρτα. Branding, logo design, εταιρική ταυτότητα, διαφημιστικό υλικό, social media graphics.',
+              serviceType: [
+                'Graphic Design',
+                'Branding',
+                'Logo Design',
+                'Corporate Identity',
+                'Social Media Graphics',
+              ],
+              offers: [
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Branding & Εταιρική Ταυτότητα",
-                    "description": "Logo design, εταιρική ταυτότητα, branding, οπτική επικοινωνία",
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
+                  name: 'Branding & Εταιρική Ταυτότητα',
+                  description: 'Logo design, εταιρική ταυτότητα, branding, οπτική επικοινωνία',
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Διαφημιστικό & Έντυπο Σχεδιασμό",
-                    "description": "Flyers, αφίσες, brochures, καταλόγοι, διαφημιστικό υλικό",
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
+                  name: 'Διαφημιστικός & Έντυπος Σχεδιασμός',
+                  description: 'Flyers, αφίσες, brochures, καταλόγοι, διαφημιστικό υλικό',
                 },
                 {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Ψηφιακός Σχεδιασμός & Social Media",
-                    "description": "Social media graphics, digital design, web graphics, content creation",
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                }
-              ]
+                  name: 'Ψηφιακός Σχεδιασμός & Social Media',
+                  description:
+                    'Social media graphics, digital design, web graphics, content creation',
+                },
+              ],
             },
-            "priceRange": "€€"
+            faq: faqNode(GRAPHIC_DESIGN_FAQ),
           }),
-        }}
-      />
-      {/* Structured Data - Local Business */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Γραφικές Τέχνες Άρτα",
-            "description": "Επαγγελματικές γραφικές τέχνες και design υπηρεσίες στην Άρτα",
-            "url": "https://adinfinity.gr/graphic-design",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "priceRange": "€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
-      />
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqPageSchema(GRAPHIC_DESIGN_FAQ)),
-        }}
+        )}
       />
       {children}
+      <RelatedProjects projects={pickProjects('/graphic-design')} />
     </>
   )
 }
-

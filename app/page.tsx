@@ -7,14 +7,20 @@ export const metadata: Metadata = {
   // Kept under ~60 chars so the differentiator ("από το 2013") survives Google's
   // SERP truncation instead of being cut off mid-title.
   title: 'Διαφημιστική Εταιρεία Άρτα από το 2013 | adinfinity',
+  // "50+", not "100+": the hero on this same page says 50, and a description
+  // that contradicts the content below it is a trust problem before it is an
+  // SEO one. The one figure now lives in lib/company.ts.
   description:
-    'Διαφήμιση, γραφιστική, εκτυπώσεις και ιστοσελίδες στην Άρτα, από το 2013. Πάνω από 100 επιχειρήσεις μάς εμπιστεύονται. Δωρεάν προσφορά σε 24 ώρες: 2681 303007',
+    'Διαφήμιση, γραφιστική, εκτυπώσεις και ιστοσελίδες στην Άρτα, από το 2013. Πάνω από 50 επιχειρήσεις μάς εμπιστεύονται. Δωρεάν προσφορά σε 24 ώρες: 2681 303007',
   alternates: {
     canonical: 'https://adinfinity.gr/',
   },
   openGraph: {
     title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Advertising & Digital Services',
-    description: 'Η adinfinity είναι κορυφαία διαφημιστική εταιρεία στην Άρτα. Διαφημιστικές υπηρεσίες, digital advertising, εκτυπώσεις, γραφιστική. Μετατρέπουμε ιδέες σε επιτυχίες!',
+    // "κορυφαία" dropped. It asserts a ranking nobody can check; the founding
+    // year and the project count are checkable on the site itself.
+    description:
+      'Διαφημιστικό γραφείο στην Άρτα από το 2013. Γραφιστική, εκτυπώσεις, επιγραφές, ιστοσελίδες και digital marketing — πάνω από 200 ολοκληρωμένα έργα.',
     url: 'https://adinfinity.gr',
     siteName: 'adinfinity',
     images: [
@@ -31,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα',
-    description: 'Κορυφαία διαφημιστική εταιρεία στην Άρτα. Διαφημιστικές υπηρεσίες, digital services, εκτυπώσεις, γραφιστική.',
+    description:
+      'Διαφημιστικό γραφείο στην Άρτα από το 2013. Γραφιστική, εκτυπώσεις, επιγραφές, ιστοσελίδες και digital marketing.',
     images: ['/images/og-image.png'],
   },
   robots: {

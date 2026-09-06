@@ -108,7 +108,9 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'adinfinity', item: BASE_URL },
+      // "Αρχική", not "adinfinity" — the crumb name is what Google prints in
+      // the result, and every other trail on the site starts with this word.
+      { '@type': 'ListItem', position: 1, name: 'Αρχική', item: `${BASE_URL}/` },
       { '@type': 'ListItem', position: 2, name: 'Έργα', item: `${BASE_URL}/projects` },
       { '@type': 'ListItem', position: 3, name: project.name, item: `${BASE_URL}/projects/${project.slug}` },
     ],

@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
 
 import { useTranslations } from '@/components/useTranslations'
 import { localizeProject, type Project } from '@/lib/projects'
+import { serviceHref } from '@/lib/serviceProjects'
 
 interface ProjectCaseStudyClientProps {
   project: Project
@@ -129,15 +130,34 @@ export function ProjectCaseStudyClient({ project, nextProject }: ProjectCaseStud
                 <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">
                   {t('projects_page.services')}
                 </p>
+                {/*
+                  Each tag links to the page that sells that service.
+
+                  These were plain <span>s, which made the portfolio a sink: the
+                  service pages now send equity to the case studies, and nothing
+                  came back. A reader who likes the work also gets an obvious
+                  next step instead of a dead label.
+                */}
                 <div className="flex flex-wrap gap-2">
-                  {project.services?.map((service) => (
-                    <span
-                      key={service}
-                      className="text-xs px-3 py-1 rounded-full border border-cyan-500/20 text-gray-300 bg-cyan-950/30"
-                    >
-                      {service}
-                    </span>
-                  ))}
+                  {project.services?.map((service) => {
+                    const href = serviceHref(service)
+                    const chip =
+                      "text-xs px-3 py-1 rounded-full border border-cyan-500/20 text-gray-300 bg-cyan-950/30"
+
+                    return href ? (
+                      <Link
+                        key={service}
+                        href={href}
+                        className={`${chip} transition-colors hover:border-[#01FFFF]/60 hover:text-white`}
+                      >
+                        {service}
+                      </Link>
+                    ) : (
+                      <span key={service} className={chip}>
+                        {service}
+                      </span>
+                    )
+                  })}
                 </div>
               </div>
             )}

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
-import { faqPageSchema, GRAFISTAS_FAQ } from '@/app/components/faqData'
+import { faqNode, GRAFISTAS_FAQ } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -62,52 +65,39 @@ export default function GrafistasArtaLayout({
 }) {
   return (
     <>
-      {/* Structured Data - LocalBusiness */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Γραφίστας Άρτα",
-            "description": "Επαγγελματικός γραφίστας στην Άρτα. Logo design, branding, εταιρική ταυτότητα, διαφημιστικό υλικό, social media graphics.",
-            "url": "https://adinfinity.gr/grafistas-arta",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "addressRegion": "Ήπειρος",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Άρτα"
-              },
-              {
-                "@type": "AdministrativeArea",
-                "name": "Ήπειρος"
-              }
-            ],
-            "priceRange": "€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/grafistas-arta",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Γραφίστας Άρτα", path: "/grafistas-arta" },
+          ],
+          service: {
+            path: "/grafistas-arta",
+            name: "Γραφίστας Άρτα",
+            description: "Επαγγελματικός γραφίστας στην Άρτα. Logo design, branding, εταιρική ταυτότητα, διαφημιστικό υλικό, social media graphics.",
+          },
+          faq: faqNode(GRAFISTAS_FAQ),
+        }),
+        )}
       />
-      {/* FAQ Schema — derived from the same data the page renders. */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(GRAFISTAS_FAQ)) }}
-      />
+
       {children}
+      <RelatedProjects projects={pickProjects('/grafistas-arta')} />
     </>
   )
 }

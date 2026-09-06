@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { faqPageSchema, INVITATIONS_FAQ } from "@/app/components/faqData"
+import { faqNode, INVITATIONS_FAQ } from "@/app/components/faqData"
+import { jsonLd, pageGraph } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Ψηφιακές Προσκλήσεις Γάμου | adinfinity',
@@ -50,80 +51,58 @@ export default function InvitationsLayout({
 }) {
   return (
     <>
-      {/* Structured Data - SoftwareApplication + Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Ψηφιακές Γαμήλιες Προσκλήσεις",
-            "description": "Δημιουργήστε εντυπωσιακές ψηφιακές γαμήλιες προσκλήσεις με παρακολούθηση RSVP, βίντεο, mini-website και πλήρη διαχείριση καλεσμένων.",
-            "url": "https://invitations.adinfinity.gr",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
-              },
-            },
-            "serviceType": [
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/invitations",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Ψηφιακά Προσκλητήρια", path: "/invitations" },
+          ],
+          service: {
+            path: "/invitations",
+            name: "Ψηφιακές Γαμήλιες Προσκλήσεις",
+            description: "Δημιουργήστε εντυπωσιακές ψηφιακές γαμήλιες προσκλήσεις με παρακολούθηση RSVP, βίντεο, mini-website και πλήρη διαχείριση καλεσμένων.",
+            serviceType: [
               "Digital Wedding Invitations",
               "Online RSVP Management",
               "Mini Wedding Website",
               "Video Wedding Invitation",
             ],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Τύποι Ψηφιακών Γαμήλιων Προσκλήσεων",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Mini Γαμήλια Ιστοσελίδα",
-                    "description": "Πλήρης mini-ιστοσελίδα με ιστορία, γκαλερί, εκδηλώσεις, μητρώο δώρων και RSVP.",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Video Πρόσκληση Pro",
-                    "description": "Βίντεο πρόσκληση με αντίστροφη μέτρηση, γρήγορες ενέργειες και RSVP.",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Video Πρόσκληση",
-                    "description": "Κομψή βίντεο πρόσκληση με απλό RSVP και εύκολη κοινοποίηση.",
-                  },
-                },
-              ],
-            },
-          }),
-        }}
+            offers: [
+              {
+                name: "Mini Γαμήλια Ιστοσελίδα",
+                description: "Πλήρης mini-ιστοσελίδα με ιστορία, γκαλερί, εκδηλώσεις, μητρώο δώρων και RSVP.",
+              },
+              {
+                name: "Video Πρόσκληση Pro",
+                description: "Βίντεο πρόσκληση με αντίστροφη μέτρηση, γρήγορες ενέργειες και RSVP.",
+              },
+              {
+                name: "Video Πρόσκληση",
+                description: "Κομψή βίντεο πρόσκληση με απλό RSVP και εύκολη κοινοποίηση.",
+              },
+            ],
+          },
+          faq: faqNode(INVITATIONS_FAQ),
+        }),
+        )}
       />
 
-      {/* FAQ Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqPageSchema(INVITATIONS_FAQ)),
-        }}
-      />
+
       {children}
     </>
   )

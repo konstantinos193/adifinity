@@ -22,8 +22,18 @@ export interface FaqItem {
  * so the structured data can never describe questions the page does not show.
  */
 export function faqPageSchema(items: FaqItem[]) {
+  return { '@context': 'https://schema.org', ...faqNode(items) }
+}
+
+/**
+ * The same FAQPage node without `@context`, for embedding in a page's `@graph`.
+ *
+ * Every route now emits one JSON-LD block rather than three or four competing
+ * ones (see `lib/schema.ts`), and `@context` belongs on the graph, not on the
+ * nodes inside it.
+ */
+export function faqNode(items: FaqItem[]) {
   return {
-    '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: items.map((item) => ({
       '@type': 'Question',
@@ -31,6 +41,23 @@ export function faqPageSchema(items: FaqItem[]) {
       acceptedAnswer: { '@type': 'Answer', text: item.a },
     })),
   }
+}
+
+/**
+ * Same node, built from a `{ question, answer }[]` array in a message file.
+ *
+ * Some routes render their FAQ straight from `messages/el/*.json` rather than
+ * from the arrays below. `/diafimistiki` is the case that motivated this: its
+ * JSON-LD was hand-copied from the message file and had drifted to three
+ * questions while the page displayed more. Reading the same array the section
+ * renders keeps the two in step by construction.
+ */
+export function faqNodeFromMessages(items: { question: string; answer: string }[]) {
+  // A missing namespace resolves to '' (or []) rather than throwing, so guard
+  // instead of calling `.map` on whatever came back — that turns a silent
+  // translation miss into a build-breaking prerender error.
+  if (!Array.isArray(items) || items.length === 0) return undefined
+  return faqNode(items.map((item) => ({ q: item.question, a: item.answer })))
 }
 
 export const PRINTS_FAQ: FaqItem[] = [

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from "@/lib/metadata"
+import { jsonLd, ORG_REF, pageGraph, SITE_URL } from '@/lib/schema'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -62,34 +63,30 @@ export default function ContactLayout({
 }) {
   return (
     <>
+      {/*
+        ContactPage pointing at the one business entity.
+
+        `mainEntity` used to be an inline Organization restating the address,
+        telephone and contact point. That made a second, @id-less company node
+        on the page — the duplication that costs a local business its entity
+        consolidation. It now references the node in app/layout.tsx, which
+        already carries all of those facts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ContactPage',
-            mainEntity: {
-              '@type': 'Organization',
-              name: 'adinfinity',
-              url: 'https://adinfinity.gr',
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+30-2681-303007',
-                contactType: 'customer service',
-                email: 'info@adinfinity.gr',
-                areaServed: 'GR',
-                availableLanguage: ['Greek', 'el'],
+        dangerouslySetInnerHTML={jsonLd(
+          pageGraph({
+            path: '/contact',
+            breadcrumb: [{ name: 'Επικοινωνία', path: '/contact' }],
+            extra: [
+              {
+                '@type': 'ContactPage',
+                '@id': `${SITE_URL}/contact#contactpage`,
+                mainEntity: ORG_REF,
               },
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Βασ. Πύρρου 30',
-                addressLocality: 'Άρτα',
-                postalCode: '471 32',
-                addressCountry: 'GR',
-              },
-            },
+            ],
           }),
-        }}
+        )}
       />
       {children}
     </>

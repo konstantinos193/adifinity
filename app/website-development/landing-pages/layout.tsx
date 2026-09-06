@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -275,124 +276,57 @@ export default function LandingPagesLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Professional Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "Custom Landing Pages Development",
-            "description": "Custom landing pages σε Next.js & React για Google Ads, καμπάνιες και νέα προϊόντα. High-converting, SEO-ready, mobile-first.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/website-development/landing-pages",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Κατασκευή Ιστοσελίδων", path: "/website-development" },
+            { name: "Landing Pages", path: "/website-development/landing-pages" },
+          ],
+          service: {
+            path: "/website-development/landing-pages",
+            name: "Custom Landing Pages Development",
+            description: "Custom landing pages σε Next.js & React για Google Ads, καμπάνιες και νέα προϊόντα. High-converting, SEO-ready, mobile-first.",
+            serviceType: [
+              "Landing Page Development",
+              "Google Ads Optimization",
+              "Conversion Rate Optimization",
+              "Campaign Page Development",
+            ],
+            offers: [
+              {
+                name: "Google Ads Landing Pages",
+                description: "High-converting landing pages βελτιστοποιημένες για Google Ads campaigns",
               },
-              "sameAs": [
-                "https://www.facebook.com/adinfinity.gr",
-                "https://www.instagram.com/adinfinity.gr"
-              ]
-            },
-            "serviceType": ["Landing Page Development", "Google Ads Optimization", "Conversion Rate Optimization", "Campaign Page Development"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Landing Pages",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Google Ads Landing Pages",
-                    "description": "High-converting landing pages βελτιστοποιημένες για Google Ads campaigns"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Product Launch Pages",
-                    "description": "Custom landing pages για νέα προϊόντα και ανακοινώσεις"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Campaign Landing Pages",
-                    "description": "Εξειδικευμένες σελίδες για marketing καμπάνιες"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                }
-              ]
-            },
-            "priceRange": "€€€"
-          }),
-        }}
+              {
+                name: "Product Launch Pages",
+                description: "Custom landing pages για νέα προϊόντα και ανακοινώσεις",
+              },
+              {
+                name: "Campaign Landing Pages",
+                description: "Εξειδικευμένες σελίδες για marketing καμπάνιες",
+              },
+            ],
+          },
+        }),
+        )}
       />
-      {/* Structured Data - Local Business */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Landing Pages Άρτα",
-            "description": "Custom landing pages και conversion optimization στην Άρτα",
-            "url": "https://adinfinity.gr/website-development/landing-pages",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "priceRange": "€€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
-      />
+
       {children}
     </>
   )

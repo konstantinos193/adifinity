@@ -274,18 +274,17 @@ export default async function RootLayout({
                   inLanguage: isGreek ? "el-GR" : "en-US",
                   publisher: { "@id": `${SITE_URL}/#organization` },
                 },
-                {
-                  "@type": "BreadcrumbList",
-                  "@id": `${SITE_URL}/#breadcrumb`,
-                  itemListElement: [
-                    {
-                      "@type": "ListItem",
-                      position: 1,
-                      name: isGreek ? "Αρχική" : "Home",
-                      item: SITE_URL,
-                    },
-                  ],
-                },
+                /*
+                 * No BreadcrumbList here.
+                 *
+                 * This node used to emit a single crumb — "Αρχική" — on all 67
+                 * URLs. Search Console counted 10 valid breadcrumb items while
+                 * Search Appearance reported "No data", because a one-item
+                 * trail describes no hierarchy and Google will not render it as
+                 * a rich result. Each route now emits its own real trail via
+                 * `pageGraph()` in `lib/schema.ts`; the homepage is the root and
+                 * needs none.
+                 */
               ],
             }),
           }}

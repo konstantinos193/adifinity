@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export const metadata: Metadata = {
   title: 'Technical SEO | Ταχύτητα & Schema',
@@ -17,5 +20,31 @@ export const metadata: Metadata = {
 }
 
 export default function TechnicalSEOLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      {/* This route shipped with no structured data at all. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLd(
+          pageGraph({
+            path: '/website-development/technical-seo',
+            breadcrumb: [
+              { name: 'Υπηρεσίες', path: '/services' },
+              { name: 'Κατασκευή Ιστοσελίδων', path: '/website-development' },
+              { name: 'Technical SEO', path: '/website-development/technical-seo' },
+            ],
+            service: {
+              path: '/website-development/technical-seo',
+              name: 'Technical SEO',
+              description:
+                'Technical SEO για ιστοσελίδες: Core Web Vitals, schema markup, ταχύτητα φόρτωσης και crawlability. Αναφορά με τι διορθώθηκε και γιατί.',
+              serviceType: ['Technical SEO', 'Core Web Vitals', 'Schema Markup', 'Site Speed'],
+            },
+          }),
+        )}
+      />
+      {children}
+      <RelatedProjects projects={pickProjects('/website-development/technical-seo')} />
+    </>
+  )
 }

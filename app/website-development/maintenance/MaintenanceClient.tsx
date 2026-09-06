@@ -30,13 +30,15 @@ const MaintenanceClient: React.FC = () => {
   }>
 
   const whyRetainer = t('maintenance_page.why_retainer') as unknown as string[]
-  const _testimonials = t('maintenance_page.testimonials') as unknown as Array<{
-    name: string
-    company: string
-    content: string
-    rating: number
-    results: string
-  }>
+  /*
+   * `_testimonials` used to read `maintenance_page.testimonials` — three
+   * invented reviews ("Γιάννης Παπαδόπουλος, Tech Solutions SA", 5 stars,
+   * "25% αύξηση μετατροπών") for companies that appear nowhere in the
+   * portfolio. It was never rendered, hence the underscore, but the data
+   * shipped in the bundle and was one import away from going live. Both the
+   * binding and the message entries are gone; real Google reviews live in
+   * testimonials.json and render on the homepage.
+   */
   const addOns = t('maintenance_page.addons') as unknown as Array<{
     name: string
     desc: string

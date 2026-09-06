@@ -273,133 +273,14 @@ export default function WebsiteDevelopmentLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      {/* Structured Data - Professional Service */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "Κατασκευή Ιστοσελίδων & Web Applications",
-            "description": "Custom κατασκευή ιστοσελίδων, web applications και e-shops σε React & Next.js. Καμία χρήση templates, μόνο clean code.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
-              },
-              "sameAs": [
-                "https://www.facebook.com/adinfinity.gr",
-                "https://www.instagram.com/adinfinity.gr"
-              ]
-            },
-            "serviceType": ["Web Development", "Custom Web Applications", "E-commerce Development", "Landing Pages", "Technical SEO", "Web Application Development"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Web Development",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Custom Web Applications",
-                    "description": "Πλήρως custom React/Next.js εφαρμογές χωρίς templates"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "E-commerce Development",
-                    "description": "Custom online stores με Stripe και διαχείριση παραγγελιών"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Technical SEO Optimization",
-                    "description": "Core Web Vitals, schema markup, speed optimization"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                }
-              ]
-            },
-            "priceRange": "€€€"
-          }),
-        }}
-      />
-      {/* Structured Data - Local Business */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Web Development Άρτα",
-            "description": "Custom κατασκευή ιστοσελίδων και web applications στην Άρτα",
-            "url": "https://adinfinity.gr/website-development",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "priceRange": "€€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
-      />
-      {/*
-        The FAQPage schema deliberately lives in page.tsx, not here.
-        This layout wraps six sub-routes (/e-commerce, /web-apps, …), so a FAQ
-        block at this level emitted the same five questions on seven separate
-        URLs — duplicate structured data, none of it visible on the sub-pages.
-      */}
-      {children}
-    </>
-  )
+  /*
+   * No structured data at this level.
+   *
+   * This layout wraps six sub-services (/e-commerce, /web-apps, …), so anything
+   * emitted here renders on seven URLs. The FAQ was moved to page.tsx for that
+   * reason already; the JSON-LD graph followed it, because every sub-page was
+   * carrying this route's breadcrumb *and* its own — and Google renders neither
+   * when a page declares two BreadcrumbLists.
+   */
+  return <>{children}</>
 }

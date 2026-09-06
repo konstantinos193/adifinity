@@ -512,64 +512,30 @@ export default function LandingPagesClient() {
         </div>
       </section>
 
-      {/* Structured Data for SEO */}
+      {/*
+        FAQ only.
+
+        This block used to be a second `Service` for the same page — with its own
+        inline Organization provider, duplicating the one in
+        `app/website-development/landing-pages/layout.tsx`. It also hung the
+        questions off a `faqPage` property, which is not a schema.org property of
+        Service, so the FAQ markup was inert. The Service now lives once in the
+        layout's graph; this emits the questions the page actually displays.
+      */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Custom Landing Pages",
-            "description": "Professional custom landing page development using Next.js for marketing campaigns and lead generation.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007"
-            },
-            "serviceType": "Landing Page Development",
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Landing Page Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Google Ads Landing Pages",
-                    "description": "High-converting landing pages optimized for Google Ads campaigns"
-                  },
-                  "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "priceCurrency": "EUR"
-                  }
-                },
-                {
-                  "@type": "Offer", 
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Product Launch Pages",
-                    "description": "Custom landing pages for new product launches and announcements"
-                  },
-                  "priceSpecification": {
-                    "@type": "PriceSpecification",
-                    "priceCurrency": "EUR"
-                  }
-                }
-              ]
-            },
-            "faqPage": faqs.map(faq => ({
+            "@type": "FAQPage",
+            "mainEntity": faqs.map((faq) => ({
               "@type": "Question",
               "name": t(faq.qKey),
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": t(faq.aKey)
-              }
-            }))
+                "text": t(faq.aKey),
+              },
+            })),
           })
         }}
       />

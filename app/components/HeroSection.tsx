@@ -4,13 +4,27 @@ import { motion, useReducedMotion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import { useTranslations } from "@/components/useTranslations"
+import { withFacts } from "@/lib/company"
 import SectionBackground from "./SectionBackground"
 
 export default function HeroSection() {
   const { t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
 
-  const stats = t('hero.stats') as { value: string; label: string }[]
+  /*
+   * The hero is where the site's headline numbers are read, so it renders them
+   * from `lib/company.ts` rather than from digits typed into hero.json.
+   *
+   * "12+ Χρόνια" was hard-coded and would have quietly become wrong at the next
+   * anniversary — the same way the About page ended up describing a company
+   * trading since 2013 as newly founded. The message files now carry
+   * placeholders ({years}, {completedProjects}, {clients}) and the values are
+   * substituted here.
+   */
+  const stats = (t('hero.stats') as { value: string; label: string }[])?.map((stat) => ({
+    ...stat,
+    value: withFacts(stat.value),
+  }))
 
   return (
     <section className="min-h-[100dvh] flex flex-col justify-center relative overflow-hidden">

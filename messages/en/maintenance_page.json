@@ -4,7 +4,7 @@
   "description": "Continuous Web Maintenance & Support to keep your site at its best. Ensure smooth operation and growth with your business — without searching for a developer every time.",
   "get_started": "Request a Quote",
   "why_retainer_title": "Why retainer instead of one-off?",
-  "performance_metrics_title": "Performance Metrics",
+  "performance_metrics_title": "What every plan commits to",
   "whats_included_title": "What's Included",
   "whats_included_desc": "Every retainer covers these needs.",
   "plans_title": "Retainer Levels",
@@ -120,29 +120,6 @@
     "Your site evolves with your business",
     "Single point of contact for everything"
   ],
-  "testimonials": [
-    {
-      "name": "Giannis Papadopoulos",
-      "company": "Tech Solutions SA",
-      "content": "Thanks to adinfinity's ongoing maintenance, we have steadily improved our site's performance and never worry about unexpected downtime.",
-      "rating": 5,
-      "results": "99.9% uptime, 40% faster loading time"
-    },
-    {
-      "name": "Eleni Nikolau",
-      "company": "E-Shop Plus",
-      "content": "The retainer saved us from many crises. Immediate support and regular updates kept our e-shop running perfectly during peak periods.",
-      "rating": 5,
-      "results": "25% increase in conversions, zero security issues"
-    },
-    {
-      "name": "Michalis Georgiou",
-      "company": "Startup Hub",
-      "content": "The adinfinity team didn't just do maintenance for us, but helped strategically evolve our platform along with our business growth.",
-      "rating": 5,
-      "results": "3 major features launched, 50% user increase"
-    }
-  ],
   "addons": [
     {
       "name": "Emergency Support",
@@ -161,10 +138,22 @@
     }
   ],
   "performance_metrics": [
-    { "label": "Average Uptime", "value": "99.9%" },
-    { "label": "Response Time", "value": "<4 hours" },
-    { "label": "Customer Satisfaction", "value": "4.9/5" },
-    { "label": "Resolved Issues", "value": "500+" }
+    {
+      "label": "Development hours / month",
+      "value": "2–10"
+    },
+    {
+      "label": "Support response",
+      "value": "4–48 hours"
+    },
+    {
+      "label": "Security updates",
+      "value": "Monthly"
+    },
+    {
+      "label": "Uptime monitoring",
+      "value": "24/7"
+    }
   ],
   "plan_buttons": {
     "basic": "Schedule Basic Plan",

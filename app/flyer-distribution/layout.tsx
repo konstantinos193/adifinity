@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { serverT } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = serverT('flyer_distribution_page')
@@ -53,124 +56,57 @@ export default function FlyerDistributionLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Professional Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "Διανομή Φυλλαδίων & Εντύπων",
-            "description": "Επαγγελματική στοχευμένη διανομή φυλλαδίων και εντύπων στην Άρτα και την Ήπειρο. Πόρτα-πόρτα διανομή σε κατοικίες και επιχειρήσεις.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/flyer-distribution",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Διανομή Εντύπων", path: "/flyer-distribution" },
+          ],
+          service: {
+            path: "/flyer-distribution",
+            name: "Διανομή Φυλλαδίων & Εντύπων",
+            description: "Επαγγελματική στοχευμένη διανομή φυλλαδίων και εντύπων στην Άρτα και την Ήπειρο. Πόρτα-πόρτα διανομή σε κατοικίες και επιχειρήσεις.",
+            serviceType: [
+              "Flyer Distribution",
+              "Leaflet Distribution",
+              "Door to Door Distribution",
+              "Targeted Distribution",
+              "B2B Distribution",
+            ],
+            offers: [
+              {
+                name: "Πόρτα-Πόρτα Διανομή",
+                description: "Διανομή φυλλαδίων σε κατοικίες και γραμματοκιβώτια",
               },
-              "sameAs": [
-                "https://www.facebook.com/adinfinity.gr",
-                "https://www.instagram.com/adinfinity.gr"
-              ]
-            },
-            "serviceType": ["Flyer Distribution", "Leaflet Distribution", "Door to Door Distribution", "Targeted Distribution", "B2B Distribution"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Διανομής Εντύπων",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Πόρτα-Πόρτα Διανομή",
-                    "description": "Διανομή φυλλαδίων σε κατοικίες και γραμματοκιβώτια",
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Στοχευμένη Διανομή σε Επιχειρήσεις",
-                    "description": "Διανομή εντύπων σε επιλεγμένες επιχειρήσεις και σημεία",
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Targeted Distribution",
-                    "description": "Στοχευμένη διανομή με βάση δημογραφικά και γεωγραφικά κριτήρια",
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                }
-              ]
-            },
-            "priceRange": "€€"
-          }),
-        }}
+              {
+                name: "Στοχευμένη Διανομή σε Επιχειρήσεις",
+                description: "Διανομή εντύπων σε επιλεγμένες επιχειρήσεις και σημεία",
+              },
+              {
+                name: "Targeted Distribution",
+                description: "Στοχευμένη διανομή με βάση δημογραφικά και γεωγραφικά κριτήρια",
+              },
+            ],
+          },
+        }),
+        )}
       />
-      {/* Structured Data - Local Business */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Διανομή Φυλλαδίων Άρτα",
-            "description": "Επαγγελματική διανομή φυλλαδίων και εντύπων στην Άρτα",
-            "url": "https://adinfinity.gr/flyer-distribution",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "priceRange": "€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
-      />
+
       {/* Structured Data - FAQPage */}
       <script
         type="application/ld+json"
@@ -224,6 +160,7 @@ export default function FlyerDistributionLayout({
         }}
       />
       {children}
+      <RelatedProjects projects={pickProjects('/flyer-distribution')} />
     </>
   )
 }

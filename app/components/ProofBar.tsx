@@ -2,16 +2,44 @@
 
 import { motion, useReducedMotion } from "framer-motion"
 import { useTranslations } from "@/components/useTranslations"
+import { COMPANY_FACTS } from "@/lib/company"
 
 export default function ProofBar() {
   const { t: _t } = useTranslations()
   const shouldReduceMotion = useReducedMotion()
 
+  /*
+   * Every figure here traces to `lib/company.ts`.
+   *
+   * This component is not currently mounted anywhere, but it shipped with
+   * numbers that contradicted the rest of the site by an order of magnitude:
+   * "500+ Projects" against a 32-entry portfolio, "15+ Years" against a 2013
+   * founding, "100+ Clients" against the homepage hero's 50+, and a "98%
+   * Satisfaction / Client retention rate" that had no source at all. Publishing
+   * an invented retention rate is the kind of claim Google's spam policy treats
+   * as manufactured, so it is gone rather than rounded.
+   */
   const metrics = [
-    { value: "100+", label: "Clients", description: "Growing businesses" },
-    { value: "500+", label: "Projects", description: "Successfully delivered" },
-    { value: "15+", label: "Years", description: "Industry experience" },
-    { value: "98%", label: "Satisfaction", description: "Client retention rate" }
+    {
+      value: `${COMPANY_FACTS.years}+`,
+      label: "Χρόνια",
+      description: `Στην Άρτα από το ${COMPANY_FACTS.foundedYear}`,
+    },
+    {
+      value: `${COMPANY_FACTS.completedProjects}+`,
+      label: "Ολοκληρωμένα Έργα",
+      description: "Για επιχειρήσεις στην Ήπειρο",
+    },
+    {
+      value: `${COMPANY_FACTS.clients}+`,
+      label: "Πελάτες",
+      description: "Τοπικές επιχειρήσεις",
+    },
+    {
+      value: String(COMPANY_FACTS.projects),
+      label: "Case Studies",
+      description: "Δημοσιευμένα στο portfolio",
+    },
   ]
 
   return (
@@ -34,9 +62,9 @@ export default function ProofBar() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold text-[#01FFFF] mb-4">Trusted by Leading Brands</h2>
+          <h2 className="text-3xl font-bold text-[#01FFFF] mb-4">Η adinfinity με αριθμούς</h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Results-driven partnerships that fuel business growth
+            Στοιχεία που μπορείτε να ελέγξετε στο portfolio μας.
           </p>
         </motion.div>
 
@@ -73,7 +101,7 @@ export default function ProofBar() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <div className="text-center text-gray-400 mb-6">
-            Partnered with industry leaders across sectors
+            Μερικές από τις επιχειρήσεις που έχουμε συνεργαστεί
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
             {['TechFix', 'Bohĕme', 'Energy House', 'Maxim Cafe', 'WEST GAS'].map((name, _index) => (

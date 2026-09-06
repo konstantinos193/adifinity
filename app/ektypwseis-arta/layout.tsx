@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
-import { faqPageSchema, EKTYPWSEIS_FAQ } from '@/app/components/faqData'
+import { faqNode, EKTYPWSEIS_FAQ } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -62,52 +65,44 @@ export default function EktypwseisArtaLayout({
 }) {
   return (
     <>
-      {/* Structured Data - LocalBusiness */}
+      {/*
+        The LocalBusiness node here was a second company — its own address, geo,
+        telephone and payment terms — sitting alongside the AdvertisingAgency in
+        app/layout.tsx. This route is a *service* of that one business, so it
+        says so and points at it.
+
+        The page also had no breadcrumb of its own, which left it relying on the
+        root layout's one-item trail. It now declares the real hierarchy.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Εκτυπώσεις Άρτα",
-            "description": "Επαγγελματικές εκτυπώσεις στην Άρτα. Digital printing, κάρτες, flyers, banners, αφίσες, premium εκτυπώσεις, συσκευασία. Γρήγορη παράδοση.",
-            "url": "https://adinfinity.gr/ektypwseis-arta",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "addressRegion": "Ήπειρος",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "areaServed": [
-              {
-                "@type": "City",
-                "name": "Άρτα"
-              },
-              {
-                "@type": "AdministrativeArea",
-                "name": "Ήπειρος"
-              }
+        dangerouslySetInnerHTML={jsonLd(
+          pageGraph({
+            path: '/ektypwseis-arta',
+            breadcrumb: [
+              { name: 'Υπηρεσίες', path: '/services' },
+              { name: 'Εκτυπώσεις Άρτα', path: '/prints' },
+              { name: 'Ψηφιακές Εκτυπώσεις Μεγάλου Μεγέθους', path: '/ektypwseis-arta' },
             ],
-            "priceRange": "€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
+            service: {
+              path: '/ektypwseis-arta',
+              name: 'Ψηφιακές Εκτυπώσεις Μεγάλου Μεγέθους',
+              description:
+                'Ψηφιακή εκτύπωση μεγάλου μεγέθους στην Άρτα: banner, roll-up, αφίσες, αυτοκόλλητα και συσκευασία. Δείγμα πριν την παραγωγή.',
+              serviceType: [
+                'Large Format Printing',
+                'Banner Printing',
+                'Poster Printing',
+                'Sticker Printing',
+                'Packaging',
+              ],
+            },
+            faq: faqNode(EKTYPWSEIS_FAQ),
           }),
-        }}
-      />
-      {/* FAQ Schema — derived from the same data the page renders. */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(EKTYPWSEIS_FAQ)) }}
+        )}
       />
       {children}
+      <RelatedProjects projects={pickProjects('/ektypwseis-arta')} />
     </>
   )
 }

@@ -273,128 +273,13 @@ export default function ProjectsLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      {/* Structured Data - Professional Service */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "Portfolio & Έργα - Branding & Graphic Design",
-            "description": "Εξερευνήστε το portfolio και τα διαφημιστικά έργα μας. Case studies, branding projects, ιστοσελίδες και marketing campaigns.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
-              },
-              "sameAs": [
-                "https://www.facebook.com/adinfinity.gr",
-                "https://www.instagram.com/adinfinity.gr"
-              ]
-            },
-            "serviceType": ["Branding", "Graphic Design", "Logo Design", "Web Design", "Marketing", "Visual Identity"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Branding & Design",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Branding & Logo Design",
-                    "description": "Custom branding και λογότυπα για επιχειρήσεις"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Graphic Design",
-                    "description": "Επαγγελματικό graphic design και marketing material"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Web Design & Development",
-                    "description": "Custom ιστοσελίδες και web applications"
-                  },
-                  "availableAtOrFrom": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Άρτα",
-                      "addressCountry": "GR"
-                    }
-                  }
-                }
-              ]
-            },
-            "priceRange": "€€€"
-          }),
-        }}
-      />
-      {/* Structured Data - Local Business */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "adinfinity - Portfolio & Projects Άρτα",
-            "description": "Portfolio και έργα branding & graphic design στην Άρτα",
-            "url": "https://adinfinity.gr/projects",
-            "telephone": "+30-2681-303007",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Βασ. Πύρρου 30",
-              "addressLocality": "Άρτα",
-              "postalCode": "471 32",
-              "addressCountry": "GR",
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "39.1606",
-              "longitude": "20.9853"
-            },
-            "priceRange": "€€€",
-            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer"],
-            "currenciesAccepted": "EUR"
-          }),
-        }}
-      />
-      {children}
-    </>
-  )
+  /*
+   * No structured data at this level.
+   *
+   * This layout also wraps the 30 `/projects/[slug]` case studies, each of
+   * which builds its own breadcrumb. A trail emitted here gave every case study
+   * two competing BreadcrumbLists — Google renders neither in that case — so the
+   * listing page's graph moved to page.tsx.
+   */
+  return <>{children}</>
 }
-

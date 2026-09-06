@@ -125,7 +125,7 @@ export default function FinalCTA() {
           >
             <div className="text-sm text-gray-500 max-w-2xl mx-auto">
               <p className="mb-2">
-                Join 100+ businesses that have already replaced their marketing chaos with automated success.
+                Join 50+ businesses that have already replaced their marketing chaos with automated success.
               </p>
               <p>
                 From local startups to established brands — we help you scale without the headaches.

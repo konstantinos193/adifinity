@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { jsonLd, pageGraph } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Τιμοκατάλογος Υπηρεσιών Άρτα | adinfinity',
@@ -48,29 +49,20 @@ export default function PricingLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Breadcrumb */}
+      {/*
+        This route already had a correct two-level breadcrumb — but the root
+        layout emitted a *second*, one-item BreadcrumbList on every page, so
+        Google saw two competing trails here and rendered neither. The root one
+        is gone; this is now the only breadcrumb on the page.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Αρχική',
-                item: 'https://adinfinity.gr',
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Τιμοκατάλογος',
-                item: 'https://adinfinity.gr/pricing',
-              },
-            ],
+        dangerouslySetInnerHTML={jsonLd(
+          pageGraph({
+            path: '/pricing',
+            breadcrumb: [{ name: 'Τιμοκατάλογος', path: '/pricing' }],
           }),
-        }}
+        )}
       />
       {children}
     </>

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import { faqNodeFromMessages } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, ORG_REF, pageGraph, SITE_URL } from '@/lib/schema'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -61,69 +63,50 @@ export default function DiafimistikiLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Article */}
+      {/*
+        Editorial route: an Article, not a second sales page.
+
+        `author` and `publisher` were inline Organization literals — two more
+        @id-less company nodes. They now reference the single entity, which
+        already carries the logo Google wants on an Article publisher.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": "Οδηγός Διαφημιστικής για Επιχειρήσεις",
-            "description": "Ολοκληρωμένος οδηγός διαφημιστικής για επιχειρήσεις: digital marketing, social media, διαφημιστικά υλικά και στρατηγικές.",
-            "author": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://adinfinity.gr/logo.png"
-              }
-            },
-            "datePublished": "2024-01-01",
-            "dateModified": new Date().toISOString().split('T')[0]
-          }),
-        }}
-      />
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+        dangerouslySetInnerHTML={jsonLd(
+          pageGraph({
+            path: '/diafimistiki',
+            breadcrumb: [
+              { name: 'Οδηγοί', path: '/services' },
+              { name: 'Τι Κάνει μια Διαφημιστική', path: '/diafimistiki' },
+            ],
+            // Read from the same message array the visible FAQ section renders.
+            // The old hand-copied block had drifted to three questions while the
+            // page displayed more, which is the drift Google penalises.
+            // `.raw` — the plain callable coerces non-strings to '' and the
+            // array would arrive as an empty string, which is the silent i18n
+            // failure this codebase keeps hitting.
+            faq: faqNodeFromMessages(
+              serverT('diafimistiki_page').raw('faq') as { question: string; answer: string }[],
+            ),
+            extra: [
               {
-                "@type": "Question",
-                "name": "Τι είναι η διαφημιστική;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Η διαφημιστική είναι η τέχνη και η επιστήμη της προώθησης προϊόντων, υπηρεσιών και brands μέσω διαφόρων καναλιών επικοινωνίας για να αυξήσουν τις πωλήσεις και την αναγνωρισιμότητα."
-                }
+                '@type': 'Article',
+                '@id': `${SITE_URL}/diafimistiki#article`,
+                headline: 'Οδηγός Διαφημιστικής για Επιχειρήσεις',
+                description:
+                  'Ολοκληρωμένος οδηγός διαφημιστικής για επιχειρήσεις: digital marketing, social media, διαφημιστικά υλικά και στρατηγικές.',
+                author: ORG_REF,
+                publisher: ORG_REF,
+                isPartOf: { '@id': `${SITE_URL}/diafimistiki#webpage` },
+                datePublished: '2024-01-01',
+                // A pinned date, not `new Date()`. Rebuilding the site is not
+                // editing the article, and a dateModified that advances on every
+                // deploy is a signal Google learns to discount.
+                dateModified: '2026-08-17',
               },
-              {
-                "@type": "Question",
-                "name": "Πόσο κοστίζει η διαφημιστική;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Το κόστος διαφημιστικής ποικίλλει ανάλογα με το κανάλι και το budget. Social media campaigns ξεκινούν από €200/μήνα, ενώ complete advertising packages από €500/μήνα."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Ποια κανάλια διαφημιστικής είναι πιο αποτελεσματικά;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Τα πιο αποτελεσματικά κανάλια εξαρτώνται από το target audience. Για B2C: social media, Google Ads, influencers. Για B2B: LinkedIn, email marketing, content marketing."
-                }
-              }
-            ]
+            ],
           }),
-        }}
+        )}
       />
       {children}
     </>

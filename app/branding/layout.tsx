@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
+import { faqNodeFromMessages } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 const URL = 'https://adinfinity.gr/branding'
 
@@ -72,130 +76,62 @@ export default async function BrandingLayout({
 
   return (
     <>
-      {/* Structured Data - Professional Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ProfessionalService',
-            name: 'Branding & Εταιρική Ταυτότητα Άρτα - adinfinity',
-            description:
-              'Σχεδιασμός λογοτύπου, εταιρικής ταυτότητας, brand guidelines και rebranding στην Άρτα. Πρωτότυπος σχεδιασμός με παράδοση όλων των διανυσματικών αρχείων.',
-            url: URL,
-            provider: {
-              '@type': 'Organization',
-              name: 'adinfinity',
-              url: 'https://adinfinity.gr',
-              telephone: '+30-2681-303007',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Βασ. Πύρρου 30',
-                addressLocality: 'Άρτα',
-                postalCode: '471 32',
-                addressCountry: 'GR',
-              },
-              sameAs: [
-                'https://www.facebook.com/adinfinity.gr',
-                'https://www.instagram.com/adinfinity.gr',
-              ],
-            },
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/branding",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Branding", path: "/branding" },
+          ],
+          service: {
+            path: "/branding",
+            name: "Branding & Εταιρική Ταυτότητα Άρτα - adinfinity",
+            description: "Σχεδιασμός λογοτύπου, εταιρικής ταυτότητας, brand guidelines και rebranding στην Άρτα. Πρωτότυπος σχεδιασμός με παράδοση όλων των διανυσματικών αρχείων.",
             serviceType: [
-              'Branding',
-              'Logo Design',
-              'Corporate Identity',
-              'Brand Strategy',
-              'Rebranding',
-              'Packaging Design',
+              "Branding",
+              "Logo Design",
+              "Corporate Identity",
+              "Brand Strategy",
+              "Rebranding",
+              "Packaging Design",
             ],
-            areaServed: [
-              { '@type': 'City', name: 'Άρτα' },
-              { '@type': 'AdministrativeArea', name: 'Ήπειρος' },
-              { '@type': 'Country', name: 'Greece' },
-            ],
-            hasOfferCatalog: {
-              '@type': 'OfferCatalog',
-              name: 'Υπηρεσίες Branding',
-              itemListElement: [
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Σχεδιασμός Λογοτύπου',
-                    description:
-                      'Πρωτότυπο λογότυπο σε διανυσματική μορφή, με παραλλαγές για κάθε χρήση και πλήρη παράδοση αρχείων.',
-                  },
-                  priceSpecification: {
-                    '@type': 'PriceSpecification',
-                    price: '250',
-                    priceCurrency: 'EUR',
-                    valueAddedTaxIncluded: false,
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Εταιρική Ταυτότητα',
-                    description:
-                      'Ολοκληρωμένο πακέτο ταυτότητας: κάρτες, έντυπα, social media assets και brand guidelines.',
-                  },
-                  priceSpecification: {
-                    '@type': 'PriceSpecification',
-                    price: '700',
-                    priceCurrency: 'EUR',
-                    valueAddedTaxIncluded: false,
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Rebranding',
-                    description:
-                      'Ανανέωση υπάρχουσας ταυτότητας με πλάνο σταδιακής μετάβασης σε όλα τα υλικά.',
-                  },
-                },
-              ],
-            },
-            priceRange: '€€',
-          }),
-        }}
-      />
-      {/* Structured Data - FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faq.map((item) => ({
-              '@type': 'Question',
-              name: item.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer,
+            offers: [
+              {
+                name: "Σχεδιασμός Λογοτύπου",
+                description: "Πρωτότυπο λογότυπο σε διανυσματική μορφή, με παραλλαγές για κάθε χρήση και πλήρη παράδοση αρχείων.",
               },
-            })),
-          }),
-        }}
-      />
-      {/* Structured Data - Breadcrumbs */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Αρχική', item: 'https://adinfinity.gr' },
-              { '@type': 'ListItem', position: 2, name: 'Υπηρεσίες', item: 'https://adinfinity.gr/services' },
-              { '@type': 'ListItem', position: 3, name: 'Branding', item: URL },
+              {
+                name: "Εταιρική Ταυτότητα",
+                description: "Ολοκληρωμένο πακέτο ταυτότητας: κάρτες, έντυπα, social media assets και brand guidelines.",
+              },
+              {
+                name: "Rebranding",
+                description: "Ανανέωση υπάρχουσας ταυτότητας με πλάνο σταδιακής μετάβασης σε όλα τα υλικά.",
+              },
             ],
-          }),
-        }}
+          },
+          // Same array the visible FAQ section renders, so schema and page
+          // cannot drift apart.
+          faq: faqNodeFromMessages(faq),
+        }),
+        )}
       />
       {children}
+      <RelatedProjects projects={pickProjects('/branding')} />
     </>
   )
 }

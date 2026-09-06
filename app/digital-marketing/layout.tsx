@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
+import { faqNodeFromMessages } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 const URL = 'https://adinfinity.gr/digital-marketing'
 
@@ -72,136 +76,62 @@ export default async function DigitalMarketingLayout({
 
   return (
     <>
-      {/* Structured Data - Professional Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ProfessionalService',
-            name: 'Digital Marketing Άρτα - adinfinity',
-            description:
-              'Υπηρεσίες digital marketing στην Άρτα: διαχείριση social media, Google & Meta Ads, SEO, παραγωγή περιεχομένου και μηνιαία αναφορά απόδοσης.',
-            url: URL,
-            provider: {
-              '@type': 'Organization',
-              name: 'adinfinity',
-              url: 'https://adinfinity.gr',
-              telephone: '+30-2681-303007',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: 'Βασ. Πύρρου 30',
-                addressLocality: 'Άρτα',
-                postalCode: '471 32',
-                addressCountry: 'GR',
-              },
-              sameAs: [
-                'https://www.facebook.com/adinfinity.gr',
-                'https://www.instagram.com/adinfinity.gr',
-              ],
-            },
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/digital-marketing",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Digital Marketing", path: "/digital-marketing" },
+          ],
+          service: {
+            path: "/digital-marketing",
+            name: "Digital Marketing Άρτα - adinfinity",
+            description: "Υπηρεσίες digital marketing στην Άρτα: διαχείριση social media, Google & Meta Ads, SEO, παραγωγή περιεχομένου και μηνιαία αναφορά απόδοσης.",
             serviceType: [
-              'Digital Marketing',
-              'Social Media Management',
-              'Google Ads',
-              'Meta Ads',
-              'Search Engine Optimization',
-              'Content Marketing',
+              "Digital Marketing",
+              "Social Media Management",
+              "Google Ads",
+              "Meta Ads",
+              "Search Engine Optimization",
+              "Content Marketing",
             ],
-            areaServed: [
-              { '@type': 'City', name: 'Άρτα' },
-              { '@type': 'AdministrativeArea', name: 'Ήπειρος' },
-              { '@type': 'Country', name: 'Greece' },
-            ],
-            hasOfferCatalog: {
-              '@type': 'OfferCatalog',
-              name: 'Υπηρεσίες Digital Marketing',
-              itemListElement: [
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Διαχείριση Social Media',
-                    description:
-                      'Πλάνο περιεχομένου, σχεδιασμός δημιουργικών και community management σε Facebook, Instagram και TikTok.',
-                  },
-                  priceSpecification: {
-                    '@type': 'PriceSpecification',
-                    price: '250',
-                    priceCurrency: 'EUR',
-                    valueAddedTaxIncluded: false,
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Διαχείριση Google & Meta Ads',
-                    description:
-                      'Στήσιμο καμπανιών, conversion tracking και συνεχής βελτιστοποίηση με στόχο leads και πωλήσεις.',
-                  },
-                  priceSpecification: {
-                    '@type': 'PriceSpecification',
-                    price: '300',
-                    priceCurrency: 'EUR',
-                    valueAddedTaxIncluded: false,
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'SEO & Τοπική Προβολή',
-                    description:
-                      'Technical SEO, on-page βελτιστοποίηση, στρατηγική περιεχομένου και Google Business Profile.',
-                  },
-                  priceSpecification: {
-                    '@type': 'PriceSpecification',
-                    price: '350',
-                    priceCurrency: 'EUR',
-                    valueAddedTaxIncluded: false,
-                  },
-                },
-              ],
-            },
-            priceRange: '€€',
-          }),
-        }}
-      />
-      {/* Structured Data - FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faq.map((item) => ({
-              '@type': 'Question',
-              name: item.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer,
+            offers: [
+              {
+                name: "Διαχείριση Social Media",
+                description: "Πλάνο περιεχομένου, σχεδιασμός δημιουργικών και community management σε Facebook, Instagram και TikTok.",
               },
-            })),
-          }),
-        }}
-      />
-      {/* Structured Data - Breadcrumbs */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Αρχική', item: 'https://adinfinity.gr' },
-              { '@type': 'ListItem', position: 2, name: 'Υπηρεσίες', item: 'https://adinfinity.gr/services' },
-              { '@type': 'ListItem', position: 3, name: 'Digital Marketing', item: URL },
+              {
+                name: "Διαχείριση Google & Meta Ads",
+                description: "Στήσιμο καμπανιών, conversion tracking και συνεχής βελτιστοποίηση με στόχο leads και πωλήσεις.",
+              },
+              {
+                name: "SEO & Τοπική Προβολή",
+                description: "Technical SEO, on-page βελτιστοποίηση, στρατηγική περιεχομένου και Google Business Profile.",
+              },
             ],
-          }),
-        }}
+          },
+          // Same array the visible FAQ section renders, so schema and page
+          // cannot drift apart.
+          faq: faqNodeFromMessages(faq),
+        }),
+        )}
       />
       {children}
+      <RelatedProjects projects={pickProjects('/digital-marketing')} />
     </>
   )
 }

@@ -51,7 +51,12 @@ export const localServiceLinks: LocalServiceLink[] = [
   { path: '/dianomi-fylladion-arta', el: 'Διανομή Φυλλαδίων Άρτα', en: 'Flyer Distribution Arta' },
   { path: '/diafimistika-dora', el: 'Διαφημιστικά Δώρα', en: 'Promotional Gifts' },
   { path: '/diafimistiki', el: 'Διαφημιστική & Digital Marketing', en: 'Advertising & Digital Marketing' },
-  { path: '/katastrifi-web-efarmogon', el: 'Κατασκευή Web Εφαρμογών', en: 'Web App Development' },
+  /*
+   * `/katastrifi-web-efarmogon` was here. It now 308s to `/website-development`,
+   * and a sitewide footer link pointing at a redirect wastes the crawl on every
+   * page. The web-app intent it targeted is served by
+   * `/website-development/web-apps`, linked from the header nav.
+   */
   { path: '/graphic-design-guide', el: 'Οδηγός Γραφιστικής', en: 'Graphic Design Guide' },
   { path: '/pricing', el: 'Τιμοκατάλογος', en: 'Pricing' },
   /*

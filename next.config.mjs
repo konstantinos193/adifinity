@@ -127,6 +127,29 @@ const nextConfig = {
         destination: '/invitations',
         permanent: true,
       },
+      /*
+       * `/katastrifi-web-efarmogon` folds into `/website-development`.
+       *
+       * Three URLs targeted "κατασκευή web εφαρμογών" (47 impressions, 0 clicks
+       * over 16 months): this one, `/website-development` — whose title is
+       * literally "Κατασκευή Web Εφαρμογών & E-shop" — and
+       * `/website-development/web-apps`. This was the thinnest by a wide margin:
+       * ~130 words of unique body copy, 86% token overlap with
+       * `/website-development` against a ~48% shared-chrome baseline, and every
+       * one of its headings a subset of that page's. It has never recorded a
+       * single impression.
+       *
+       * Kept deliberately narrow: `/ektypwseis-arta` overlaps `/prints` at 69%
+       * and is the obvious next candidate, but it was re-scoped to large-format
+       * printing on 2026-08-25 and has not yet had a crawl cycle to prove the
+       * split works. Redirecting it now would discard that test and confound
+       * attribution for the indexing fix shipped the same day.
+       */
+      {
+        source: '/katastrifi-web-efarmogon',
+        destination: '/website-development',
+        permanent: true,
+      },
     ]
   },
 }

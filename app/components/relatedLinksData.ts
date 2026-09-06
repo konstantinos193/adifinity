@@ -104,11 +104,13 @@ export const WEB_DEVELOPMENT_RELATED: RelatedLink[] = [
     enDesc: "Websites for businesses in Arta and Epirus.",
   },
   {
-    path: "/katastrifi-web-efarmogon",
-    el: "Κατασκευή Web Εφαρμογών",
-    en: "Web App Development",
-    elDesc: "Custom web applications σε React & Next.js, χωρίς έτοιμα templates.",
-    enDesc: "Custom web applications in React & Next.js — no templates.",
+    // Was /katastrifi-web-efarmogon, which now 308s here-adjacent. This is the
+    // page that actually holds the web-app content.
+    path: "/website-development/web-apps",
+    el: "Web Εφαρμογές & SaaS",
+    en: "Web Applications & SaaS",
+    elDesc: "Custom web applications σε React & Node.js, χωρίς έτοιμα templates.",
+    enDesc: "Custom web applications in React & Node.js — no templates.",
   },
   {
     path: "/pricing",

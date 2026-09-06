@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
-import { faqPageSchema, PRINTS_FAQ } from '@/app/components/faqData'
+import { faqNode, PRINTS_FAQ } from '@/app/components/faqData'
+import { jsonLd, pageGraph } from '@/lib/schema'
+import RelatedProjects from '@/app/components/RelatedProjects'
+import { pickProjects } from '@/lib/serviceProjects'
 
 export const metadata: Metadata = {
   // This page owns the head "εκτυπώσεις Άρτα" query: it is the one Google
@@ -53,74 +56,59 @@ export default function PrintsLayout({
 }) {
   return (
     <>
-      {/* Structured Data - Service */}
+      {/*
+        One JSON-LD graph for this route, every node cross-referenced by @id.
+
+        Previously this file emitted free-standing ProfessionalService /
+        LocalBusiness / Organization blocks with no @id, restating the
+        company's address, telephone and social profiles — several of which
+        contradicted the real ones in app/layout.tsx. Google saw three or four
+        different businesses per page and had to pick one.
+
+        The business entity is now stated once, in the root layout, and
+        referenced here through `provider`. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Επαγγελματικές Εκτυπώσεις & Digital Printing",
-            "description": "Επαγγελματικές εκτυπώσεις στην Άρτα. Digital printing, banners, flyers, premium εκτυπώσεις, διαφημιστικά δώρα, συσκευασία.",
-            "provider": {
-              "@type": "Organization",
-              "name": "adinfinity",
-              "url": "https://adinfinity.gr",
-              "telephone": "+30-2681-303007",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Βασ. Πύρρου 30",
-                "addressLocality": "Άρτα",
-                "postalCode": "471 32",
-                "addressCountry": "GR",
+        dangerouslySetInnerHTML={jsonLd(
+        pageGraph({
+          path: "/prints",
+          breadcrumb: [
+            { name: "Υπηρεσίες", path: "/services" },
+            { name: "Εκτυπώσεις Άρτα", path: "/prints" },
+          ],
+          service: {
+            path: "/prints",
+            name: "Επαγγελματικές Εκτυπώσεις & Digital Printing",
+            description: "Επαγγελματικές εκτυπώσεις στην Άρτα. Digital printing, banners, flyers, premium εκτυπώσεις, διαφημιστικά δώρα, συσκευασία.",
+            serviceType: [
+              "Digital Printing",
+              "Large Format Printing",
+              "Premium Printing",
+              "Packaging",
+            ],
+            offers: [
+              {
+                name: "Εκτυπώσεις Μεγάλου Μεγέθους & Προβολής",
+                description: "Επαγγελματικές κάρτες, flyers, banners, αφίσες, roll-up banners",
               },
-            },
-            "serviceType": ["Digital Printing", "Large Format Printing", "Premium Printing", "Packaging"],
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece",
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Υπηρεσίες Εκτυπώσεων",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Εκτυπώσεις Μεγάλου Μεγέθους & Προβολής",
-                    "description": "Επαγγελματικές κάρτες, flyers, banners, αφίσες, roll-up banners",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Εξειδικευμένες & Premium Εκτυπώσεις",
-                    "description": "Χρυσοτυπία, ανάγλυφες εκτυπώσεις, UV spot, πλαστικοποιήσεις",
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Συσκευασία & Προωθητικό Υλικό",
-                    "description": "Ετικέτες προϊόντων, διαφημιστικά δώρα, εκτυπώσεις σε υφάσματα",
-                  },
-                },
-              ],
-            },
-          }),
-        }}
+              {
+                name: "Εξειδικευμένες & Premium Εκτυπώσεις",
+                description: "Χρυσοτυπία, ανάγλυφες εκτυπώσεις, UV spot, πλαστικοποιήσεις",
+              },
+              {
+                name: "Συσκευασία & Προωθητικό Υλικό",
+                description: "Ετικέτες προϊόντων, διαφημιστικά δώρα, εκτυπώσεις σε υφάσματα",
+              },
+            ],
+          },
+          faq: faqNode(PRINTS_FAQ),
+        }),
+        )}
       />
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqPageSchema(PRINTS_FAQ)),
-        }}
-      />
+
       {children}
+      <RelatedProjects projects={pickProjects('/prints')} />
     </>
   )
 }
