@@ -46,45 +46,9 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // HTTP to HTTPS redirect (all domains)
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'x-forwarded-proto',
-            value: 'http',
-          },
-        ],
-        permanent: true,
-        destination: 'https://adinfinity.gr/:path*',
-      },
-      // WWW to non-www redirect (HTTPS)
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'host',
-            value: 'www.adinfinity.gr',
-          },
-        ],
-        permanent: true,
-        destination: 'https://adinfinity.gr/:path*',
-      },
-      // WWW to non-www redirect (HTTP)
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'host',
-            value: 'www.adinfinity.gr:80',
-          },
-        ],
-        permanent: true,
-        destination: 'https://adinfinity.gr/:path*',
-      },
+      // Protocol + www normalization now handled by middleware.ts at the edge.
+      // These application-level redirects handle URL consolidation & old routes only.
+
       // Redirect old Joomla URLs with query parameters to homepage
       {
         source: '/',

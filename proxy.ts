@@ -2,24 +2,27 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function proxy(request: NextRequest) {
-  // Apply proxy logic only in production
-  if (process.env.NODE_ENV !== 'production') {
-    return NextResponse.next()
-  }
-
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
   const protocol = request.headers.get('x-forwarded-proto') || (request.nextUrl.protocol === 'https:' ? 'https' : 'http')
-  
+
   // Target canonical domain: https://adinfinity.gr (no www)
   const canonicalHost = 'adinfinity.gr'
-  const needsRedirect = 
-    hostname !== canonicalHost || 
-    protocol !== 'https' ||
-    hostname.startsWith('www.')
+  const isWww = hostname.startsWith('www.')
+  const hostWithoutWww = isWww ? hostname.slice(4) : hostname
+  const isCanonical = hostWithoutWww === canonicalHost && protocol === 'https'
+
+  // Handle protocol/www normalization - fix GSC indexing issues
+  // Uses 308 (not 301) to preserve request method for POST/PUT requests
+  if (!isCanonical) {
+    const canonicalUrl = new URL(`https://${canonicalHost}${url.pathname}${url.search}`)
+    console.log(`[SEO] Normalizing: ${protocol}://${hostname}${url.pathname} -> ${canonicalUrl.toString()}`)
+    return NextResponse.redirect(canonicalUrl, 308) // Permanent redirect, preserves method
+  }
+
+  const searchParams = url.searchParams
 
   // Handle old Joomla URLs with query parameters - redirect to clean homepage
-  const searchParams = url.searchParams
   const joomlaParams = ['option', 'view', 'task', 'id', 'itemlist', 'user']
   const hasJoomlaParams = joomlaParams.some(param => searchParams.has(param)) ||
     (searchParams.has('option') &&
@@ -27,79 +30,36 @@ export function proxy(request: NextRequest) {
         searchParams.get('option')?.includes('com_content') ||
         searchParams.get('option')?.includes('com_users')))
 
-  // If it's a Joomla URL or needs protocol/domain redirect, redirect to canonical
-  if (hasJoomlaParams || needsRedirect) {
-    const canonicalUrl = new URL(`https://${canonicalHost}${url.pathname}`)
-    
-    // For Joomla URLs, always redirect to homepage
-    if (hasJoomlaParams) {
-      canonicalUrl.pathname = '/'
-      canonicalUrl.search = ''
-    } else {
-      // Keep pathname and only allowed query parameters
-      const allowedParams = ['utm_source', 'utm_medium', 'utm_campaign', 'ref', 'gclid', 'fbclid']
-      allowedParams.forEach((param) => {
-        const value = searchParams.get(param)
-        if (value) {
-          canonicalUrl.searchParams.set(param, value)
-        }
-      })
-    }
-    
-    // Log redirect for debugging
-    console.log(`Redirecting: ${protocol}://${hostname}${url.pathname} -> ${canonicalUrl.toString()}`)
-    
-    return NextResponse.redirect(canonicalUrl, 301) // Permanent redirect
+  // If it's a Joomla URL, redirect to homepage
+  if (hasJoomlaParams) {
+    const homepageUrl = new URL(`https://${canonicalHost}/`)
+    console.log(`[SEO] Removing Joomla params: ${url.toString()} -> ${homepageUrl.toString()}`)
+    return NextResponse.redirect(homepageUrl, 301) // Permanent redirect
   }
 
-  // Handle other unwanted query parameters on root (but keep allowed ones)
-  if (url.pathname === '/' && searchParams.toString() && !needsRedirect && !hasJoomlaParams) {
+  // Handle unwanted query parameters on root (keep marketing tracking params only)
+  if (url.pathname === '/' && searchParams.toString()) {
     const allowedParams = ['utm_source', 'utm_medium', 'utm_campaign', 'ref', 'gclid', 'fbclid']
     const hasAllowedParams = Array.from(searchParams.keys()).some((key) =>
       allowedParams.some((allowed) => key.startsWith(allowed) || key === allowed)
     )
 
     // If no allowed params, redirect to clean URL
-    if (!hasAllowedParams && searchParams.toString()) {
+    if (!hasAllowedParams) {
       const cleanUrl = new URL(`https://${canonicalHost}/`)
+      console.log(`[SEO] Removing unwanted query params from /: ${url.toString()} -> ${cleanUrl.toString()}`)
       return NextResponse.redirect(cleanUrl, 301)
     }
   }
 
-  // Handle old/spam URLs that don't exist - redirect to homepage
-  // These are old URLs from previous site versions or spam content
+  // Handle legacy .html URLs (old Joomla artifacts)
   const pathname = url.pathname.toLowerCase()
-  const oldUrlPatterns = [
-    '/sofpiti/',
-    '/disability-acellories-gauss/',
-    '/nitrile-von-poisson/',
-    '.html', // Old HTML files
-  ]
-  
-  // Check if path matches old URL patterns
-  const isOldUrl = oldUrlPatterns.some((pattern) => pathname.includes(pattern))
-
-  /*
-   * Legacy Joomla artefacts only — a `.html` extension, which no route on this
-   * site has ever used.
-   *
-   * There used to be a `pathSegments.length > 2` clause here that 301'd *any*
-   * path with three or more segments to the homepage. Nothing hit it while the
-   * deepest route was two segments (`/website-development/technical-seo`), but
-   * it was a live trap: the next nested route added anywhere under app/ would
-   * have been silently swallowed before it ever reached the router, with no
-   * error to explain why.
-   *
-   * Genuinely unknown URLs are deliberately left alone so Next can answer 404.
-   * Blanket-redirecting them to the homepage instead is what Google classifies
-   * as a soft 404, and it buries real broken links rather than surfacing them.
-   */
   const isLegacyHtmlUrl = pathname.endsWith('.html')
 
-  // Redirect old/spam URLs to homepage
-  if (isOldUrl || isLegacyHtmlUrl) {
+  if (isLegacyHtmlUrl) {
     const homepageUrl = new URL(`https://${canonicalHost}/`)
-    return NextResponse.redirect(homepageUrl, 301) // Permanent redirect
+    console.log(`[SEO] Removing legacy .html extension: ${url.toString()} -> ${homepageUrl.toString()}`)
+    return NextResponse.redirect(homepageUrl, 301)
   }
 
   return NextResponse.next()
