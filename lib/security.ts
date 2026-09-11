@@ -88,25 +88,34 @@ export class SecurityMonitor {
 }
 
 // Input validation schemas
+// Messages are shown to the visitor, so they are in Greek like the rest of the
+// contact form feedback (see useContactForm).
 export const validationSchemas = {
   name: {
+    label: '\u039F\u03BD\u03BF\u03BC\u03B1\u03C4\u03B5\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF',
     minLength: 2,
     maxLength: 100,
-    pattern: /^[a-zA-Z\u0391-\u03C9\s\-'.]+$/,
-    errorMessage: 'Name must be 2-100 characters and contain only letters, spaces, hyphens, and apostrophes'
+    // Any script's letters (Greek with tonos/dialytika, Latin with accents, ...)
+    // plus combining marks; the old [\u0391-\u03C9] range rejected \u00AB\u039A\u03CE\u03C3\u03C4\u03B1\u03C2\u00BB.
+    pattern: /^[\p{L}\p{M}\s'.-]+$/u,
+    errorMessage: '\u03A4\u03BF \u03BF\u03BD\u03BF\u03BC\u03B1\u03C4\u03B5\u03C0\u03CE\u03BD\u03C5\u03BC\u03BF \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9 2-100 \u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03B5\u03C2 (\u03BC\u03CC\u03BD\u03BF \u03B3\u03C1\u03AC\u03BC\u03BC\u03B1\u03C4\u03B1, \u03BA\u03B5\u03BD\u03AC, \u03C0\u03B1\u03CD\u03BB\u03B5\u03C2)'
   } as const,
   email: {
+    label: 'Email',
     pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    errorMessage: 'Please enter a valid email address'
+    errorMessage: '\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03B9\u03C3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03AD\u03B3\u03BA\u03C5\u03C1\u03B7 \u03B4\u03B9\u03B5\u03CD\u03B8\u03C5\u03BD\u03C3\u03B7 email'
   } as const,
   phone: {
+    label: '\u03A4\u03B7\u03BB\u03AD\u03C6\u03C9\u03BD\u03BF',
+    optional: true,
     pattern: /^\+?[\d\s\-()]{10,}$/,
-    errorMessage: 'Please enter a valid phone number'
+    errorMessage: '\u03A0\u03B1\u03C1\u03B1\u03BA\u03B1\u03BB\u03CE \u03B5\u03B9\u03C3\u03AC\u03B3\u03B5\u03C4\u03B5 \u03AD\u03B3\u03BA\u03C5\u03C1\u03BF \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03C4\u03B7\u03BB\u03B5\u03C6\u03CE\u03BD\u03BF\u03C5'
   } as const,
   message: {
+    label: '\u039C\u03AE\u03BD\u03C5\u03BC\u03B1',
     minLength: 10,
     maxLength: 2000,
-    errorMessage: 'Message must be 10-2000 characters'
+    errorMessage: '\u03A4\u03BF \u03BC\u03AE\u03BD\u03C5\u03BC\u03B1 \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9 10-2000 \u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03B5\u03C2'
   } as const
 }
 
@@ -119,17 +128,19 @@ export function validateInput(data: Record<string, string>): { isValid: boolean;
 
     // Check required fields
     if (!value || value.trim() === '') {
-      errors.push(`${field} is required`)
+      if (!('optional' in schema && schema.optional)) {
+        errors.push(`\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u00AB${schema.label}\u00BB \u03B5\u03AF\u03BD\u03B1\u03B9 \u03C5\u03C0\u03BF\u03C7\u03C1\u03B5\u03C9\u03C4\u03B9\u03BA\u03CC`)
+      }
       continue
     }
 
     // Check min/max length
     if ('minLength' in schema && schema.minLength && value.length < schema.minLength) {
-      errors.push(`${field} must be at least ${schema.minLength} characters`)
+      errors.push(`\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u00AB${schema.label}\u00BB \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03AD\u03C7\u03B5\u03B9 \u03C4\u03BF\u03C5\u03BB\u03AC\u03C7\u03B9\u03C3\u03C4\u03BF\u03BD ${schema.minLength} \u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03B5\u03C2`)
     }
 
     if ('maxLength' in schema && schema.maxLength && value.length > schema.maxLength) {
-      errors.push(`${field} must not exceed ${schema.maxLength} characters`)
+      errors.push(`\u03A4\u03BF \u03C0\u03B5\u03B4\u03AF\u03BF \u00AB${schema.label}\u00BB \u03B4\u03B5\u03BD \u03C0\u03C1\u03AD\u03C0\u03B5\u03B9 \u03BD\u03B1 \u03BE\u03B5\u03C0\u03B5\u03C1\u03BD\u03AC \u03C4\u03BF\u03C5\u03C2 ${schema.maxLength} \u03C7\u03B1\u03C1\u03B1\u03BA\u03C4\u03AE\u03C1\u03B5\u03C2`)
     }
 
     // Check pattern

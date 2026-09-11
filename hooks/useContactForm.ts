@@ -100,7 +100,9 @@ export function useContactForm() {
       
       if (!validation.isValid) {
         setValidationErrors(validation.errors)
-        
+        // Surface the problem in the form; otherwise the button just does nothing.
+        setSubmitStatus({ message: validation.errors.join(' · '), isError: true })
+
         // Log security event for invalid input
         SecurityMonitor.logEvent({
           type: 'invalid_input',
