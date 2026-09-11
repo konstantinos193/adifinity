@@ -16,14 +16,14 @@ type Fact = { label: string; value: string; href?: string }
  * and each row links to where the visitor can verify it.
  */
 export function CompanyFacts() {
-  const { t } = useTranslations()
+  const { t, locale } = useTranslations()
   const industries = asArray<string>(t('about_page.facts.industries'))
   const regions = asArray<string>(t('about_page.facts.regions'))
   const capabilities = asArray<string>(t('about_page.facts.capabilities'))
 
   const facts: Fact[] = [
     { label: t('about_page.facts.founded'), value: `${t('about_page.facts.founded_value')} ${COMPANY_FACTS.foundedYear}` },
-    { label: t('about_page.facts.office'), value: 'Βασ. Πύρρου 30, Άρτα 471 32', href: '/contact' },
+    { label: t('about_page.facts.office'), value: locale === 'el' ? 'Βασ. Πύρρου 30, Άρτα 471 32' : 'Vas. Pirrou 30, Arta 471 32', href: '/contact' },
     { label: t('about_page.facts.projects'), value: `${COMPANY_FACTS.completedProjects}+`, },
     { label: t('about_page.facts.case_studies'), value: String(COMPANY_FACTS.projects), href: '/projects' },
     { label: t('about_page.facts.live_sites'), value: String(COMPANY_FACTS.liveSites), href: '/website-development' },

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import { faqNodeFromMessages } from '@/app/components/faqData'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import RelatedLinks from '@/app/components/RelatedLinks'
@@ -93,47 +94,18 @@ export default function EpigrafesArtaLayout({
             name: "Επιγραφές Καταστημάτων Άρτα",
             description: "Επαγγελματικές επιγραφές καταστημάτων στην Άρτα. Neon signs, LED signs, store signage, vehicle graphics, wayfinding και custom signage solutions.",
           },
+          // Same array the visible FAQ section renders. The previous
+          // hand-copied FAQPage block carried hardcoded euro figures that the
+          // page no longer shows (every price is now on quotation), so the
+          // schema had drifted from the visible content.
+          faq: faqNodeFromMessages(
+            serverT('epigrafes_arta_page').raw('faq') as { question: string; answer: string }[],
+          ),
         }),
         )}
       />
       {/* Visible trail — same array as the BreadcrumbList above. */}
       <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Επιγραφές Άρτα", path: "/epigrafes-arta" } ]} />
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Πόσο κοστίζουν οι επιγραφές καταστημάτων;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Οι τιμές εξαρτώνται από το υλικό και το μέγεθος. Ακρυλικές επιγραφές από €50/τμ², LED signs από €150, neon signs από €200. Παρέχουμε δωρεάν προσφορά."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Παρέχετε εγκατάσταση;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ναι, παρέχουμε επαγγελματική εγκατάσταση σε όλη την Ήπειρο. Η εγκατάσταση περιλαμβάνεται στην τιμή για επιγραφές άνω των €200."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Ποια υλικά χρησιμοποιείτε;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Χρησιμοποιούμε ακρυλικό, PVC, αλουμίνιο, LED, neon, και ανθεκτικά υλικά για εξωτερική χρήση με εγγύηση αντοχής."
-                }
-              }
-            ]
-          }),
-        }}
-      />
       {children}
       <RelatedProjects projects={pickProjects('/epigrafes-arta')} />
       {/* Cluster links: LED/neon sub-service and the cost guide (audit §15). */}

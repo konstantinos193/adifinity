@@ -65,8 +65,8 @@ export const page: ContentPage = {
       heading: { el: 'Κόστος', en: 'Cost' },
       paragraphs: [
         {
-          el: 'Μια ιστοσελίδα καταλύματος με σελίδες δωματίων, gallery, γλώσσες και φόρμα αιτήματος κράτησης ξεκινά από {price:websiteBusiness}. Με σύστημα κρατήσεων, online πληρωμές, εποχιακές τιμές και συγχρονισμό με πλατφόρμες, από {price:eshop}. Ο χρόνος κατασκευής είναι 6-10 εβδομάδες. Η ετήσια συντήρηση, με ενημερώσεις ασφαλείας και μικροαλλαγές πριν τη σεζόν, είναι ξεχωριστό μηνιαίο πακέτο.',
-          en: 'An accommodation website with room pages, gallery, languages and a booking-request form starts from {price:websiteBusiness}. With a booking system, online payments, seasonal pricing and platform sync, from {price:eshop}. Build time is 6-10 weeks. Annual maintenance, with security updates and small changes before the season, is a separate monthly package.',
+          el: 'Το κόστος εξαρτάται από τρία πράγματα: πόσα δωμάτια ή διαμερίσματα έχουν δική τους σελίδα, πόσες γλώσσες, και αν θέλετε φόρμα αιτήματος κράτησης ή πλήρες σύστημα με online πληρωμές, εποχιακές τιμές και συγχρονισμό με πλατφόρμες. Με αυτά τα τρία σας στέλνουμε γραπτή προσφορά μέσα σε 24 ώρες. Ο χρόνος κατασκευής είναι 6-10 εβδομάδες. Η ετήσια συντήρηση, με ενημερώσεις ασφαλείας και μικροαλλαγές πριν τη σεζόν, είναι ξεχωριστό μηνιαίο πακέτο.',
+          en: 'The cost depends on three things: how many rooms or apartments get their own page, how many languages, and whether you want a booking-request form or a full system with online payments, seasonal pricing and platform sync. With those three we send a written quote within 24 hours. Build time is 6-10 weeks. Annual maintenance, with security updates and small changes before the season, is a separate monthly package.',
         },
         {
           el: 'Το σημείο σύγκρισης: η προμήθεια που πληρώνετε σε πλατφόρμες σε μία σεζόν. Αν είναι μερικές χιλιάδες ευρώ, η ιστοσελίδα που φέρνει ένα μέρος αυτών των κρατήσεων απευθείας αποσβένεται μέσα στην πρώτη ή τη δεύτερη σεζόν.',
@@ -101,19 +101,17 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζει;', en: 'How much does it cost?' },
       a: {
-        el: 'Από {price:websiteBusiness} με σελίδες δωματίων και αίτημα κράτησης, από {price:eshop} με πλήρες σύστημα κρατήσεων και online πληρωμές. Ζητήστε προσφορά με τον αριθμό των δωματίων και τις γλώσσες που θέλετε.',
-        en: 'From {price:websiteBusiness} with room pages and booking requests, from {price:eshop} with a full booking system and online payments. Ask for a quote with the number of rooms and the languages you want.',
+        el: 'Κατόπιν προσφοράς. Πείτε μας τον αριθμό των δωματίων, τις γλώσσες και αν θέλετε αίτημα κράτησης ή πλήρες σύστημα με online πληρωμές, και έχετε γραπτή προσφορά μέσα σε 24 ώρες, χωρίς δέσμευση.',
+        en: 'On quotation. Tell us the number of rooms, the languages and whether you want booking requests or a full system with online payments, and you have a written quote within 24 hours, no obligation.',
       },
     },
   ],
-  priceFrom: 'websiteBusiness',
-  priceLabel: { el: 'Ιστοσελίδα καταλύματος', en: 'Accommodation website' },
-  priceNote: { el: 'Με σύστημα κρατήσεων και online πληρωμές από {price:eshop}. 6-10 εβδομάδες.', en: 'With booking system and online payments from {price:eshop}. 6-10 weeks.' },
+  quoteNote: { el: 'Εξαρτάται από δωμάτια, γλώσσες και αν θέλετε αίτημα κράτησης ή online πληρωμές. 6-10 εβδομάδες.', en: 'Depends on rooms, languages and whether you want booking requests or online payments. 6-10 weeks.' },
   related: [
     { path: '/website-development/booking-systems', label: { el: 'Συστήματα κρατήσεων', en: 'Booking systems' }, description: { el: 'Διαθεσιμότητα, πληρωμές, συγχρονισμός πλατφορμών.', en: 'Availability, payments, platform sync.' } },
     { path: '/website-development', label: { el: 'Κατασκευή ιστοσελίδων', en: 'Website development' }, description: { el: 'Όλες οι υπηρεσίες web, τα πακέτα και τα έργα.', en: 'All web services, packages and projects.' } },
     { path: '/branding', label: { el: 'Branding για καταλύματα', en: 'Branding for accommodation' }, description: { el: 'Λογότυπο, επιγραφή και έντυπα για το κατάλυμα.', en: 'Logo, sign and print for the property.' } },
-    { path: '/guides/poso-kostizei-istoselida', label: { el: 'Πόσο κοστίζει μια ιστοσελίδα', en: 'How much a website costs' }, description: { el: 'Τα επίπεδα τιμών και τα κόστη που έρχονται μετά.', en: 'The price levels and the costs that follow.' } },
+    { path: '/guides/poso-kostizei-istoselida', label: { el: 'Πόσο κοστίζει μια ιστοσελίδα', en: 'How much a website costs' }, description: { el: 'Τι καθορίζει το κόστος και τι έρχεται μετά.', en: 'What sets the cost and what comes afterwards.' } },
   ],
   projectSlugs: ['asterias-koronisia', 'lincanto-apartments', 'boheme-beach-bar', 'maxim-cafe-bar'],
   breadcrumb: [
@@ -123,7 +121,7 @@ export const page: ContentPage = {
   ],
   service: {
     name: 'Ιστοσελίδες για Ξενοδοχεία & Καταλύματα',
-    description: 'Κατασκευή ιστοσελίδων για ξενοδοχεία και καταλύματα με σελίδα ανά δωμάτιο, απευθείας κρατήσεις, πολλές γλώσσες, συγχρονισμό Booking.com και τοπικό SEO. Από {price:websiteBusiness}.',
+    description: 'Κατασκευή ιστοσελίδων για ξενοδοχεία και καταλύματα με σελίδα ανά δωμάτιο, απευθείας κρατήσεις, πολλές γλώσσες, συγχρονισμό Booking.com και τοπικό SEO. Κατόπιν προσφοράς.',
     serviceType: ['Hotel Website Development', 'Accommodation Websites', 'Booking System Development', 'Local SEO'],
   },
 }

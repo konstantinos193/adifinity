@@ -131,13 +131,9 @@
   opacity: 1 !important;
 }
 
-/* Focus Visible Enhancement */
-.focus-visible *:focus,
-.focus-visible button:focus,
-.focus-visible a:focus,
-.focus-visible input:focus,
-.focus-visible textarea:focus,
-.focus-visible select:focus {
+/* Focus Visible Enhancement — keyboard navigation only (:focus-visible),
+   so mouse clicks on links/buttons don't leave a ring behind */
+.focus-visible *:focus-visible {
   outline: 3px solid #01FFFF !important;
   outline-offset: 2px !important;
   box-shadow: 0 0 0 2px #07141C, 0 0 0 4px #01FFFF !important;
@@ -208,7 +204,7 @@
 }
 
 /* Keyboard Navigation */
-.keyboard-nav *:focus {
+.keyboard-nav *:focus-visible {
   outline: 2px solid #01FFFF !important;
   outline-offset: 2px !important;
 }

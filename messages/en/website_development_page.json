@@ -14,7 +14,7 @@
   "why_choose_description": "We combine cutting-edge technology with business needs to deliver exceptional results",
   "cta": {
     "title": "Have a project in mind?",
-    "description": "Send us a brief description and we'll respond within 24 hours with an indicative price and timeline."
+    "description": "Send us a brief description and we'll respond within 24 hours with a written quote and timeline."
   },
   "request_quote": "Request Free Quote",
   "see_portfolio": "See Projects",
@@ -285,7 +285,7 @@
       },
       {
         "question": "How much does a website or web application cost?",
-        "answer": "A professional website starts from {price:websiteStarter}, a custom e-shop from {price:eshop}. E-shops and web applications are priced according to their features. Request a free quote for an exact estimate."
+        "answer": "On quotation. The cost depends on the number of pages, the languages, whether you need an admin panel, an e-shop or a booking system, and on the features of a web application. Describe what you want the website to do and you have a written quote within 24 hours, no obligation."
       },
       {
         "question": "How long does development take?",

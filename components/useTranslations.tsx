@@ -86,11 +86,14 @@ import enDigitalMarketingPage from '../messages/en/digital_marketing_page.json'
 import elDigitalMarketingPage from '../messages/el/digital_marketing_page.json'
 import enBrandingPage from '../messages/en/branding_page.json'
 import elBrandingPage from '../messages/el/branding_page.json'
+import enPricingPage from '../messages/en/pricing_page.json'
+import elPricingPage from '../messages/el/pricing_page.json'
 
 /*
  * Every namespace is passed through `withFactsDeep` once, here, so copy can
- * carry `{price:logo}` / `{clients}` placeholders and render the value from
- * `lib/company.ts` — the only place a number or price is allowed to live.
+ * carry `{clients}` / `{years}` placeholders and render the value from
+ * `lib/company.ts` — the only place a company number is allowed to live.
+ * (No prices: every service is quoted per project.)
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const messageCache: Record<string, Record<string, any>> = withFactsDeep({
@@ -136,6 +139,7 @@ export const messageCache: Record<string, Record<string, any>> = withFactsDeep({
     ilektroniko_prosklitirio_gamou_page: enIlektronikoProsklitirioGamouPage,
     digital_marketing_page: enDigitalMarketingPage,
     branding_page: enBrandingPage,
+    pricing_page: enPricingPage,
   },
   el: {
     common: elCommon,
@@ -179,6 +183,7 @@ export const messageCache: Record<string, Record<string, any>> = withFactsDeep({
     ilektroniko_prosklitirio_gamou_page: elIlektronikoProsklitirioGamouPage,
     digital_marketing_page: elDigitalMarketingPage,
     branding_page: elBrandingPage,
+    pricing_page: elPricingPage,
   }
 })
 

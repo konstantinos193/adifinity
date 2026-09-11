@@ -35,7 +35,7 @@ export const page: ContentPage = {
           [
             { el: 'Αρχικό κόστος', en: 'Initial cost' },
             { el: 'Χαμηλότερο, ειδικά με έτοιμο theme', en: 'Lower, especially with a ready theme' },
-            { el: 'Από {price:websiteStarter}', en: 'From {price:websiteStarter}' },
+            { el: 'Υψηλότερο· κατόπιν προσφοράς, ανάλογα με σελίδες, admin και λειτουργίες', en: 'Higher; on quotation, depending on pages, admin and features' },
           ],
           [
             { el: 'Ταχύτητα', en: 'Speed' },
@@ -75,7 +75,7 @@ export const page: ContentPage = {
       bullets: [
         { el: 'Η σελίδα είναι κυρίως άρθρα, νέα ή ενημερωτικό περιεχόμενο που ανανεώνεται συχνά', en: 'The site is mostly articles, news or informational content updated often' },
         { el: 'Πολλοί άνθρωποι θα γράφουν και θα επεξεργάζονται περιεχόμενο', en: 'Many people will write and edit content' },
-        { el: 'Ο προϋπολογισμός δεν φτάνει τα {price:websiteStarter} και χρειάζεστε κάτι online γρήγορα', en: 'The budget does not reach {price:websiteStarter} and you need something online quickly' },
+        { el: 'Ο προϋπολογισμός είναι πολύ μικρός και χρειάζεστε κάτι online γρήγορα', en: 'The budget is very small and you need something online quickly' },
         { el: 'Δεν χρειάζεστε κρατήσεις, πληρωμές ή σύνδεση με άλλα συστήματα', en: 'You do not need bookings, payments or connection to other systems' },
       ],
       paragraphs: [
@@ -89,7 +89,7 @@ export const page: ContentPage = {
       heading: { el: 'Πότε αξίζει η custom κατασκευή', en: 'When a custom build is worth it' },
       bullets: [
         { el: 'Δέχεστε κρατήσεις ή ραντεβού και θέλετε να μην πληρώνετε προμήθεια σε πλατφόρμες', en: 'You take bookings or appointments and do not want to pay platform commission' },
-        { el: 'Πουλάτε online και δεν θέλετε 30-500 ευρώ τον μήνα συνδρομή πλατφόρμας', en: 'You sell online and do not want a 30-500 euro monthly platform subscription' },
+        { el: 'Πουλάτε online και δεν θέλετε μηνιαία συνδρομή πλατφόρμας για πάντα', en: 'You sell online and do not want a platform subscription forever' },
         { el: 'Η ταχύτητα σε κινητό μετράει, γιατί από εκεί έρχονται οι πελάτες σας', en: 'Mobile speed matters, because that is where your customers come from' },
         { el: 'Χρειάζεστε σύνδεση με άλλα συστήματα: Booking.com, λογιστικό, CRM, χάρτες, πληρωμές', en: 'You need connection to other systems: Booking.com, accounting, CRM, maps, payments' },
         { el: 'Θέλετε η σελίδα να μοιάζει δική σας, όχι το ίδιο theme με άλλες χίλιες', en: 'You want the site to look like yours, not the same theme as a thousand others' },
@@ -143,8 +143,8 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζει η custom κατασκευή;', en: 'How much does a custom build cost?' },
       a: {
-        el: 'Ιστοσελίδα από {price:websiteStarter}, εταιρική με admin από {price:websiteBusiness}, e-shop από {price:eshop}. Οι web εφαρμογές κοστολογούνται ανάλογα με τις λειτουργίες. Όλα στον τιμοκατάλογο.',
-        en: 'Website from {price:websiteStarter}, corporate with admin from {price:websiteBusiness}, e-shop from {price:eshop}. Web applications are priced by features. Everything is on the price list.',
+        el: 'Κατόπιν προσφοράς: εξαρτάται από τις σελίδες, το admin, τις γλώσσες και τις λειτουργίες (κρατήσεις, πληρωμές, συνδέσεις). Μας λέτε τι πρέπει να κάνει η σελίδα και έχετε γραπτή προσφορά μέσα σε 24 ώρες.',
+        en: 'On quotation: it depends on the pages, the admin, the languages and the features (bookings, payments, integrations). Tell us what the site must do and you have a written quote within 24 hours.',
       },
     },
     {

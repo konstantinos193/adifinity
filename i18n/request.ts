@@ -45,6 +45,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     'maintenance_page',
     'market_research_page',
     'navigation',
+    'pricing_page',
     'prints_page',
     'privacy_policy',
     'projects_page',

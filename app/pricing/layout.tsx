@@ -3,11 +3,11 @@ import { jsonLd, pageGraph } from '@/lib/schema'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Τιμοκατάλογος Υπηρεσιών Άρτα | adinfinity',
-  description: 'Διαφανείς τιμές για ιστοσελίδες, γραφιστική, εκτυπώσεις, διανομή εντύπων & έρευνα αγοράς στην Άρτα. Δείτε τα πακέτα της adinfinity. ☎ 2681 303007',
+  title: 'Πακέτα Υπηρεσιών Άρτα | Τι Περιλαμβάνει Κάθε Πακέτο | adinfinity',
+  description: 'Τα πακέτα της adinfinity για ιστοσελίδες, γραφιστική, εκτυπώσεις, διανομή εντύπων και έρευνα αγοράς στην Άρτα: τι περιλαμβάνει το καθένα, πόσο χρόνο παίρνει, πώς κοστολογείται. Γραπτή προσφορά σε 24 ώρες.',
   openGraph: {
-    title: 'Τιμοκατάλογος Υπηρεσιών Άρτα | adinfinity',
-    description: 'Διαφανείς τιμές για ιστοσελίδες, γραφιστική, εκτυπώσεις, διανομή εντύπων & έρευνα αγοράς στην Άρτα.',
+    title: 'Πακέτα Υπηρεσιών Άρτα | adinfinity',
+    description: 'Τι περιλαμβάνει κάθε πακέτο για ιστοσελίδες, γραφιστική, εκτυπώσεις, διανομή εντύπων και έρευνα αγοράς στην Άρτα. Γραπτή προσφορά σε 24 ώρες.',
     url: 'https://adinfinity.gr/pricing',
     siteName: 'adinfinity',
     images: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'adinfinity - Τιμοκατάλογος Υπηρεσιών',
+        alt: 'adinfinity - Πακέτα Υπηρεσιών',
       },
     ],
     locale: 'el_GR',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Τιμοκατάλογος Υπηρεσιών Άρτα | adinfinity',
-    description: 'Διαφανείς τιμές για ιστοσελίδες, γραφιστική, εκτυπώσεις & διανομή εντύπων στην Άρτα.',
+    title: 'Πακέτα Υπηρεσιών Άρτα | adinfinity',
+    description: 'Τι περιλαμβάνει κάθε πακέτο για ιστοσελίδες, γραφιστική, εκτυπώσεις και διανομή εντύπων στην Άρτα.',
     images: ['/images/og-image.png'],
   },
   alternates: {
@@ -61,12 +61,12 @@ export default function PricingLayout({
         dangerouslySetInnerHTML={jsonLd(
           pageGraph({
             path: '/pricing',
-            breadcrumb: [{ name: 'Τιμοκατάλογος', path: '/pricing' }],
+            breadcrumb: [{ name: 'Πακέτα υπηρεσιών', path: '/pricing' }],
           }),
         )}
       />
       {/* Visible trail — same array as the BreadcrumbList above. */}
-      <Breadcrumbs trail={[{ name: 'Τιμοκατάλογος', path: '/pricing' }]} />
+      <Breadcrumbs trail={[{ name: 'Πακέτα υπηρεσιών', path: '/pricing' }]} />
       {children}
     </>
   )

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { ArrowRight, Phone } from "lucide-react"
 import { useLocale } from "@/components/LocaleProvider"
-import { PRICES, euro, withFacts } from "@/lib/company"
+import { QUOTE_TURNAROUND_HOURS, withFacts } from "@/lib/company"
 import type { ContentPage as ContentPageData, L } from "@/lib/content/types"
 
 /**
@@ -66,25 +66,24 @@ export function ContentPage({ page }: { page: ContentPageData }) {
             )}
           </p>
         ) : (
-          page.priceFrom && (
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-8 gap-y-3 items-end rounded-2xl bg-[#0A1A24] px-6 py-5">
-              <div>
-                <p className="text-xs uppercase tracking-wide text-gray-500 mb-1">
-                  {page.priceLabel ? pick(page.priceLabel) : isEl ? "Τιμή εκκίνησης" : "Starting price"}
-                </p>
-                <p className="text-3xl md:text-4xl font-bold text-white leading-none">
-                  <span className="text-base font-normal text-gray-400 mr-2">{isEl ? "από" : "from"}</span>
-                  {euro(PRICES[page.priceFrom])}
-                </p>
-              </div>
-              <div className="text-sm text-gray-400 leading-relaxed">
-                {page.priceNote && <p>{pick(page.priceNote)}</p>}
-                <Link href="/pricing" className="text-[#01FFFF] hover:underline">
-                  {isEl ? "Όλος ο τιμοκατάλογος" : "Full price list"}
-                </Link>
-              </div>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-x-8 gap-y-3 items-center rounded-2xl bg-[#0A1A24] px-6 py-5">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-gray-500 mb-1">{isEl ? "Τιμή" : "Price"}</p>
+              <p className="text-2xl md:text-3xl font-bold text-white leading-none">{isEl ? "Κατόπιν προσφοράς" : "On quotation"}</p>
             </div>
-          )
+            <div className="text-sm text-gray-400 leading-relaxed">
+              <p>
+                {page.quoteNote
+                  ? pick(page.quoteNote)
+                  : isEl
+                    ? `Γραπτή προσφορά μέσα σε ${QUOTE_TURNAROUND_HOURS} ώρες, χωρίς δέσμευση.`
+                    : `Written quote within ${QUOTE_TURNAROUND_HOURS} hours, no obligation.`}
+              </p>
+              <Link href="/contact#contact-form" className="text-[#01FFFF] hover:underline">
+                {isEl ? "Ζητήστε προσφορά" : "Request a quote"}
+              </Link>
+            </div>
+          </div>
         )}
       </header>
 
@@ -99,16 +98,6 @@ export function ContentPage({ page }: { page: ContentPageData }) {
               {pick(p)}
             </p>
           ))}
-          {isGuide && page.priceFrom && (
-            <p className="mt-5 text-sm text-gray-400">
-              {isEl ? "Τιμή εκκίνησης στην adinfinity: " : "Starting price at adinfinity: "}
-              <strong className="text-white">{euro(PRICES[page.priceFrom])}</strong>
-              {" · "}
-              <Link href="/pricing" className="text-[#01FFFF] hover:underline">
-                {isEl ? "τιμοκατάλογος" : "price list"}
-              </Link>
-            </p>
-          )}
         </section>
 
         {showJumpList && (

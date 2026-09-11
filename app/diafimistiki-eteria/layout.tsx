@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import { faqNodeFromMessages } from '@/app/components/faqData'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
@@ -91,47 +92,18 @@ export default function DiafimistikiEteriaLayout({
             name: "Διαφημιστική Εταιρεία Άρτα",
             description: "Full-service διαφημιστική εταιρεία στην Άρτα. Graphic design, printing, websites, digital marketing και ολοκληρωμένες λύσεις για επιχειρήσεις.",
           },
+          // Same array the visible FAQ section renders. The previous
+          // hand-copied FAQPage block carried hardcoded euro figures that the
+          // page no longer shows (every price is now on quotation), so the
+          // schema had drifted from the visible content.
+          faq: faqNodeFromMessages(
+            serverT('diafimistiki_eteria_page').raw('faq') as { question: string; answer: string }[],
+          ),
         }),
         )}
       />
       {/* Visible trail — same array as the BreadcrumbList above. */}
       <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Διαφημιστική Εταιρεία Άρτα", path: "/diafimistiki-eteria" } ]} />
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Τι προσφέρει μια διαφημιστική εταιρεία;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Μια διαφημιστική εταιρεία προσφέρει ολοκληρωμένες λύσεις marketing: graphic design, printing, websites, digital marketing, social media και strategic consulting για την ανάπτυξη της επιχείρησής σας."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πώς να επιλέξετε τη σωστή διαφημιστική εταιρεία;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ελέγξτε το portfolio, τις κριτικές πελατών, την εμπειρία στον κλάδο σας και την προσέγγιση στο strategy. Επιλέξτε μια agency που καταλαβαίνει το business σας."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πόσο κοστίζει η συνεργασία με διαφημιστική εταιρεία;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Το κόστος εξαρτάται από το project και το scope. Project-based pricing από €500, monthly retainers από €500/μήνα, και custom packages ανάλογα με τις ανάγκες."
-                }
-              }
-            ]
-          }),
-        }}
-      />
       {children}
       <RelatedProjects projects={pickProjects('/diafimistiki-eteria')} />
     </>

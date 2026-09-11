@@ -29,8 +29,8 @@ export function GuidesHubClient() {
         </h1>
         <p className="text-lg md:text-xl leading-relaxed max-w-[58ch]">
           {isEl
-            ? "Γραμμένοι από εμάς, με τις τιμές που πραγματικά χρεώνουμε και τα έργα που πραγματικά κάναμε. Για να αποφασίσετε πριν μας καλέσετε."
-            : "Written by us, with the prices we actually charge and the projects we actually did. So you can decide before you call."}
+            ? "Γραμμένοι από εμάς, με το τι καθορίζει πραγματικά το κόστος και τα έργα που πραγματικά κάναμε. Για να αποφασίσετε πριν μας καλέσετε."
+            : "Written by us, with what actually drives the cost and the projects we actually did. So you can decide before you call."}
         </p>
       </header>
 
@@ -80,19 +80,19 @@ export function GuidesHubClient() {
         <div className="rounded-2xl bg-[#0A1A24] p-8 md:p-10 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-center">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mb-2">
-              {isEl ? "Όλες οι τιμές σε έναν πίνακα" : "Every price in one table"}
+              {isEl ? "Τι περιλαμβάνει κάθε πακέτο" : "What every package includes"}
             </h2>
             <p className="text-gray-400 max-w-[50ch]">
               {isEl
-                ? "Οι οδηγοί εξηγούν το γιατί. Ο τιμοκατάλογος έχει το πόσο, για κάθε υπηρεσία."
-                : "The guides explain why. The price list has how much, for every service."}
+                ? "Οι οδηγοί εξηγούν το γιατί. Τα πακέτα δείχνουν το τι, για κάθε υπηρεσία. Το πόσο, σε γραπτή προσφορά μέσα σε 24 ώρες."
+                : "The guides explain why. The packages show what, for every service. How much, in a written quote within 24 hours."}
             </p>
           </div>
           <Link
             href="/pricing"
             className="bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-bold py-3 px-7 rounded-full inline-flex items-center gap-2 whitespace-nowrap active:scale-[0.98]"
           >
-            {isEl ? "Τιμοκατάλογος" : "Price list"} <ArrowRight size={16} />
+            {isEl ? "Πακέτα υπηρεσιών" : "Service packages"} <ArrowRight size={16} />
           </Link>
         </div>
       </div>

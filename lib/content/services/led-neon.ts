@@ -3,9 +3,9 @@ import type { ContentPage } from '../types'
 export const page: ContentPage = {
   path: '/led-neon',
   kind: 'service',
-  seoTitle: 'Φωτεινές Επιγραφές LED & Neon Άρτα | Από {price:signageLed}, με Τοποθέτηση',
+  seoTitle: 'Φωτεινές Επιγραφές LED & Neon Άρτα | Κατασκευή & Τοποθέτηση',
   seoDescription:
-    'Φωτεινές επιγραφές στην Άρτα και την Ήπειρο: LED από {price:signageLed}, neon από {price:signageNeon}, τοποθέτηση δωρεάν πάνω από {price:signageInstallIncludedFrom}. Μέτρηση στον χώρο, σε 5-7 εργάσιμες.',
+    'Φωτεινές επιγραφές LED και neon στην Άρτα και την Ήπειρο: μέτρηση στον χώρο, πρόταση πάνω στη φωτογραφία της πρόσοψης, κατασκευή και τοποθέτηση σε 5-7 εργάσιμες.',
   badge: { el: 'Επιγραφές', en: 'Signage' },
   h1: { el: 'Φωτεινές επιγραφές LED & neon', en: 'LED & neon lit signs' },
   summary: {
@@ -14,8 +14,8 @@ export const page: ContentPage = {
   },
   intro: [
     {
-      el: 'Κατασκευάζουμε και τοποθετούμε φωτεινές επιγραφές LED από {price:signageLed} και neon από {price:signageNeon}, με την τοποθέτηση να περιλαμβάνεται για επιγραφές άνω των {price:signageInstallIncludedFrom}. Ερχόμαστε και μετράμε στον χώρο σας, σας δείχνουμε πρόταση πάνω στη φωτογραφία της πρόσοψης, και παραδίδουμε σε 5-7 εργάσιμες. Συντήρηση και επισκευή από το ίδιο εργαστήριο, όταν χρειαστεί.',
-      en: 'We fabricate and install LED lit signs from {price:signageLed} and neon from {price:signageNeon}, with installation included for signs over {price:signageInstallIncludedFrom}. We come and measure on site, show you a proposal on a photo of your frontage, and deliver in 5-7 working days. Maintenance and repair from the same workshop, when needed.',
+      el: 'Κατασκευάζουμε και τοποθετούμε φωτεινές επιγραφές LED και neon. Ερχόμαστε και μετράμε στον χώρο σας, σας δείχνουμε πρόταση πάνω στη φωτογραφία της πρόσοψης μαζί με γραπτή προσφορά που περιλαμβάνει κατασκευή, τοποθέτηση και ηλεκτρολογική σύνδεση, και παραδίδουμε σε 5-7 εργάσιμες. Συντήρηση και επισκευή από το ίδιο εργαστήριο, όταν χρειαστεί.',
+      en: 'We fabricate and install LED and neon lit signs. We come and measure on site, show you a proposal on a photo of your frontage together with a written quote that covers fabrication, installation and electrical connection, and deliver in 5-7 working days. Maintenance and repair from the same workshop, when needed.',
     },
   ],
   sections: [
@@ -29,9 +29,9 @@ export const page: ContentPage = {
         ],
         rows: [
           [
-            { el: 'Από', en: 'From' },
-            { el: '{price:signageLed}', en: '{price:signageLed}' },
-            { el: '{price:signageNeon}', en: '{price:signageNeon}' },
+            { el: 'Κόστος', en: 'Cost' },
+            { el: 'Χαμηλότερο για το ίδιο μέγεθος', en: 'Lower for the same size' },
+            { el: 'Υψηλότερο, χειροποίητος σωλήνας', en: 'Higher, hand-bent tube' },
           ],
           [
             { el: 'Κατανάλωση', en: 'Consumption' },
@@ -68,7 +68,7 @@ export const page: ContentPage = {
         { el: 'Μέτρηση στον χώρο και φωτογραφίες της πρόσοψης, χωρίς χρέωση σε Άρτα και Ήπειρο', en: 'On-site measurement and photos of the frontage, free of charge in Arta and Epirus' },
         { el: 'Πρόταση πάνω στη φωτογραφία, με υλικά, διαστάσεις και γραπτή προσφορά', en: 'A proposal on the photo, with materials, dimensions and a written quote' },
         { el: 'Κατασκευή στο εργαστήριό μας: γράμματα από ακρυλικό ή αλουμίνιο, φωτισμός LED ή σωλήνας neon, τροφοδοτικό', en: 'Fabrication in our workshop: acrylic or aluminium letters, LED lighting or neon tube, power supply' },
-        { el: 'Τοποθέτηση από το συνεργείο μας, με ηλεκτρολογική σύνδεση, περιλαμβάνεται για επιγραφές άνω των {price:signageInstallIncludedFrom}', en: 'Installation by our crew, with electrical connection, included for signs over {price:signageInstallIncludedFrom}' },
+        { el: 'Τοποθέτηση από το συνεργείο μας, με ηλεκτρολογική σύνδεση, γραμμένη ξεχωριστά στην προσφορά ώστε να ξέρετε τι πληρώνετε', en: 'Installation by our crew, with electrical connection, listed as its own line in the quote so you know what you are paying for' },
         { el: 'Τα σχέδια και τις διαστάσεις που θα σας ζητήσει ο δήμος για τη δήλωση της επιγραφής', en: 'The drawings and dimensions the municipality will ask for when you register the sign' },
         { el: 'Συντήρηση και επισκευή από το ίδιο εργαστήριο', en: 'Maintenance and repair from the same workshop' },
       ],
@@ -92,8 +92,8 @@ export const page: ContentPage = {
       heading: { el: 'Το λογότυπο στην επιγραφή', en: 'The logo on the sign' },
       paragraphs: [
         {
-          el: 'Μια φωτεινή επιγραφή δείχνει κάθε αδυναμία του λογοτύπου: πολύ λεπτές γραμμές δεν φωτίζονται, πολύ μικρά γράμματα δεν κόβονται. Αν το λογότυπό σας υπάρχει μόνο ως εικόνα, το ξανασχεδιάζουμε σε διανυσματική μορφή πριν την κατασκευή. Αν δεν έχετε λογότυπο, ο σχεδιασμός του ξεκινά από {price:logo} και γίνεται από το ίδιο γραφείο, με την επιγραφή στο μυαλό μας.',
-          en: 'A lit sign exposes every weakness in a logo: very thin lines do not light up, very small letters cannot be cut. If your logo only exists as an image, we redraw it as a vector before fabrication. If you have no logo, its design starts from {price:logo} and is done by the same office, with the sign in mind.',
+          el: 'Μια φωτεινή επιγραφή δείχνει κάθε αδυναμία του λογοτύπου: πολύ λεπτές γραμμές δεν φωτίζονται, πολύ μικρά γράμματα δεν κόβονται. Αν το λογότυπό σας υπάρχει μόνο ως εικόνα, το ξανασχεδιάζουμε σε διανυσματική μορφή πριν την κατασκευή. Αν δεν έχετε λογότυπο, το σχεδιάζει το ίδιο γραφείο, με την επιγραφή στο μυαλό μας, και μπαίνει στην ίδια προσφορά.',
+          en: 'A lit sign exposes every weakness in a logo: very thin lines do not light up, very small letters cannot be cut. If your logo only exists as an image, we redraw it as a vector before fabrication. If you have no logo, the same office designs it with the sign in mind, and it goes in the same quote.',
         },
       ],
       link: { path: '/sxediasmos-logotypou', label: { el: 'Σχεδιασμός λογοτύπου', en: 'Logo design' } },
@@ -103,15 +103,15 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζει μια φωτεινή επιγραφή;', en: 'How much does a lit sign cost?' },
       a: {
-        el: 'LED από {price:signageLed}, neon από {price:signageNeon}. Η τελική τιμή εξαρτάται από το μέγεθος, τα γράμματα και το ύψος τοποθέτησης. Με μια φωτογραφία και διαστάσεις σας δίνουμε εκτίμηση την ίδια μέρα.',
-        en: 'LED from {price:signageLed}, neon from {price:signageNeon}. The final price depends on size, lettering and mounting height. With a photo and dimensions we give an estimate the same day.',
+        el: 'Κατόπιν προσφοράς. Η τιμή εξαρτάται από το μέγεθος, τον αριθμό και το ύψος των γραμμάτων, το υλικό, τον τύπο φωτισμού και το ύψος τοποθέτησης. Με μια φωτογραφία της πρόσοψης και διαστάσεις σας δίνουμε γραπτή προσφορά μέσα σε 24 ώρες, χωρίς δέσμευση.',
+        en: 'On quotation. The price depends on size, the number and height of the letters, material, lighting type and mounting height. With a photo of the frontage and dimensions we give a written quote within 24 hours, no obligation.',
       },
     },
     {
       q: { el: 'Περιλαμβάνεται η τοποθέτηση;', en: 'Is installation included?' },
       a: {
-        el: 'Για επιγραφές άνω των {price:signageInstallIncludedFrom}, ναι, σε όλη την Ήπειρο, μαζί με την ηλεκτρολογική σύνδεση. Για μικρότερες χρεώνεται ξεχωριστά και το γράφουμε στην προσφορά.',
-        en: 'For signs over {price:signageInstallIncludedFrom}, yes, across Epirus, including the electrical connection. For smaller ones it is charged separately and stated in the quote.',
+        el: 'Ναι, την αναλαμβάνει το συνεργείο μας σε όλη την Ήπειρο, μαζί με την ηλεκτρολογική σύνδεση. Την γράφουμε ως ξεχωριστή γραμμή στην προσφορά, ώστε να βλέπετε τι αφορά την κατασκευή και τι την τοποθέτηση.',
+        en: 'Yes, our crew handles it across Epirus, including the electrical connection. It is a separate line in the quote, so you can see what covers fabrication and what covers installation.',
       },
     },
     {
@@ -129,14 +129,12 @@ export const page: ContentPage = {
       },
     },
   ],
-  priceFrom: 'signageLed',
-  priceLabel: { el: 'Επιγραφή LED', en: 'LED sign' },
-  priceNote: { el: 'Neon από {price:signageNeon}. Τοποθέτηση περιλαμβάνεται πάνω από {price:signageInstallIncludedFrom}. 5-7 εργάσιμες.', en: 'Neon from {price:signageNeon}. Installation included above {price:signageInstallIncludedFrom}. 5-7 working days.' },
+  quoteNote: { el: 'Μέτρηση στον χώρο χωρίς χρέωση. Πρόταση πάνω στη φωτογραφία και γραπτή προσφορά μέσα σε 24 ώρες. 5-7 εργάσιμες.', en: 'On-site measurement free of charge. Proposal on the photo and a written quote within 24 hours. 5-7 working days.' },
   related: [
     { path: '/epigrafes-arta', label: { el: 'Επιγραφές καταστημάτων Άρτα', en: 'Shop signage Arta' }, description: { el: 'Ακρυλικές, αλουμινίου, σήμανση χώρων, γραφικά οχημάτων.', en: 'Acrylic, aluminium, wayfinding, vehicle graphics.' } },
     { path: '/guides/poso-kostizei-epigrafi', label: { el: 'Πόσο κοστίζει μια επιγραφή', en: 'How much a sign costs' }, description: { el: 'Ο οδηγός: τι καθορίζει την τιμή, τι να μετρήσετε.', en: 'The guide: what sets the price, what to measure.' } },
     { path: '/sxediasmos-logotypou', label: { el: 'Σχεδιασμός λογοτύπου', en: 'Logo design' }, description: { el: 'Το λογότυπο που θα φωτίζεται.', en: 'The logo that will light up.' } },
-    { path: '/banners-roll-up', label: { el: 'Banner & roll-up', en: 'Banners & roll-ups' }, description: { el: 'Για προσωρινή προβολή, από {price:bannerPerSqm}/τμ².', en: 'For temporary display, from {price:bannerPerSqm}/m².' } },
+    { path: '/banners-roll-up', label: { el: 'Banner & roll-up', en: 'Banners & roll-ups' }, description: { el: 'Για προσωρινή προβολή, σε 2-3 εργάσιμες.', en: 'For temporary display, in 2-3 working days.' } },
   ],
   projectsRoute: '/epigrafes-arta',
   breadcrumb: [
@@ -146,7 +144,7 @@ export const page: ContentPage = {
   ],
   service: {
     name: 'Φωτεινές Επιγραφές LED & Neon',
-    description: 'Κατασκευή και τοποθέτηση φωτεινών επιγραφών LED και neon στην Άρτα και την Ήπειρο, με μέτρηση στον χώρο, πρόταση πάνω στη φωτογραφία και συντήρηση. LED από {price:signageLed}, neon από {price:signageNeon}.',
+    description: 'Κατασκευή και τοποθέτηση φωτεινών επιγραφών LED και neon στην Άρτα και την Ήπειρο, με μέτρηση στον χώρο, πρόταση πάνω στη φωτογραφία και συντήρηση. Κατόπιν προσφοράς.',
     serviceType: ['LED Signs', 'Neon Signs', 'Illuminated Signage', 'Sign Installation'],
   },
 }

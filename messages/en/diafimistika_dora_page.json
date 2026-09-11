@@ -57,7 +57,7 @@
   "faq": [
     {
       "question": "How much do promotional gifts cost?",
-      "answer": "Prices depend on type and quantity. Pens from {price:promoGiftMin}/item, notebooks from €1.50/item, mugs from €2/item. We provide free quotes for bulk orders."
+      "answer": "On quotation. The cost per item depends on the type (pens, notebooks, mugs, shirts, bags), the quantity and how the logo is printed, and drops noticeably at larger quantities. Tell us type and quantity and you have a written quote within 24 hours."
     },
     {
       "question": "What is the minimum order quantity?",
@@ -83,6 +83,6 @@
   },
   "seo": {
     "title": "Promotional Gifts Arta | Corporate Gifts & Promotional Items | adinfinity",
-    "description": "Professional promotional gifts in Arta. Corporate gifts, promotional items, branded merchandise. Prices from {price:promoGiftMin}/item. Bulk orders. +30 2681 303007"
+    "description": "Professional promotional gifts in Arta. Corporate gifts, promotional items, branded merchandise. Priced per item and quantity, quote within 24 hours. +30 2681 303007"
   }
 }

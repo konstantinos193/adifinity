@@ -65,8 +65,8 @@ export const localServiceLinks: LocalServiceLink[] = [
   { path: '/led-neon', el: 'Φωτεινές Επιγραφές LED & Neon', en: 'LED & Neon Signs' },
   { path: '/website-development/booking-systems', el: 'Συστήματα Κρατήσεων', en: 'Booking Systems' },
   { path: '/istoselides-xenodoxeion', el: 'Ιστοσελίδες Καταλυμάτων', en: 'Hotel Websites' },
-  { path: '/guides', el: 'Οδηγοί & Τιμές', en: 'Guides & Prices' },
-  { path: '/pricing', el: 'Τιμοκατάλογος', en: 'Pricing' },
+  { path: '/guides', el: 'Οδηγοί', en: 'Guides' },
+  { path: '/pricing', el: 'Πακέτα Υπηρεσιών', en: 'Service Packages' },
   /*
    * The invitations product, linked sitewide.
    *

@@ -5,7 +5,7 @@ export const page: ContentPage = {
   kind: 'service',
   seoTitle: 'Εταιρική Ταυτότητα Άρτα | Λογότυπο, Χρώματα, Brand Guidelines',
   seoDescription:
-    'Εταιρική ταυτότητα στην Άρτα: λογότυπο, χρώματα, γραμματοσειρές, κάρτες, επιστολόχαρτο, social και brand guidelines σε αρχεία δικά σας. Από {price:brandIdentity}, σε 2-4 εβδομάδες.',
+    'Εταιρική ταυτότητα στην Άρτα: λογότυπο, χρώματα, γραμματοσειρές, κάρτες, επιστολόχαρτο, social και brand guidelines σε αρχεία δικά σας, σε 2-4 εβδομάδες.',
   badge: { el: 'Branding', en: 'Branding' },
   h1: { el: 'Εταιρική ταυτότητα', en: 'Corporate identity' },
   summary: {
@@ -14,8 +14,8 @@ export const page: ContentPage = {
   },
   intro: [
     {
-      el: 'Η εταιρική ταυτότητα είναι ό,τι χρειάζεται μια επιχείρηση για να εμφανίζεται με τον ίδιο τρόπο παντού: στην κάρτα, στην επιγραφή, στο φυλλάδιο, στο Instagram, στην ιστοσελίδα και στο όχημα. Περιλαμβάνει το λογότυπο, την παλέτα χρωμάτων, τις γραμματοσειρές, τις βασικές εφαρμογές και ένα εγχειρίδιο (brand guidelines) που εξηγεί πώς χρησιμοποιούνται. Από {price:brandIdentity}, σε 2-4 εβδομάδες.',
-      en: 'A corporate identity is what a business needs to appear the same way everywhere: on the card, the sign, the flyer, Instagram, the website and the vehicle. It includes the logo, the colour palette, the typefaces, the core applications and a manual (brand guidelines) explaining how they are used. From {price:brandIdentity}, in 2-4 weeks.',
+      el: 'Η εταιρική ταυτότητα είναι ό,τι χρειάζεται μια επιχείρηση για να εμφανίζεται με τον ίδιο τρόπο παντού: στην κάρτα, στην επιγραφή, στο φυλλάδιο, στο Instagram, στην ιστοσελίδα και στο όχημα. Περιλαμβάνει το λογότυπο, την παλέτα χρωμάτων, τις γραμματοσειρές, τις βασικές εφαρμογές και ένα εγχειρίδιο (brand guidelines) που εξηγεί πώς χρησιμοποιούνται. Παραδίδεται σε 2-4 εβδομάδες, με γραπτή προσφορά μέσα σε 24 ώρες από την πρώτη συζήτηση.',
+      en: 'A corporate identity is what a business needs to appear the same way everywhere: on the card, the sign, the flyer, Instagram, the website and the vehicle. It includes the logo, the colour palette, the typefaces, the core applications and a manual (brand guidelines) explaining how they are used. Delivered in 2-4 weeks, with a written quote within 24 hours of the first conversation.',
     },
     {
       el: 'Το πλεονέκτημα φαίνεται έναν χρόνο αργότερα: όποιος φτιάχνει κάτι για εσάς, εμείς ή άλλος, έχει κανόνες να ακολουθήσει, και η επιχείρηση δεν μοιάζει με τρεις διαφορετικές.',
@@ -36,24 +36,21 @@ export const page: ContentPage = {
       ],
     },
     {
-      heading: { el: 'Πακέτα και τιμές', en: 'Packages and prices' },
+      heading: { el: 'Τα δύο πακέτα', en: 'The two packages' },
       table: {
         head: [
           { el: 'Πακέτο', en: 'Package' },
-          { el: 'Από', en: 'From' },
           { el: 'Προσθέτει', en: 'Adds' },
           { el: 'Χρόνος', en: 'Time' },
         ],
         rows: [
           [
             { el: 'Εταιρική ταυτότητα', en: 'Corporate identity' },
-            { el: '{price:brandIdentity}', en: '{price:brandIdentity}' },
             { el: 'Όλα τα παραπάνω', en: 'Everything above' },
             { el: '2-4 εβδομάδες', en: '2-4 weeks' },
           ],
           [
             { el: 'Premium', en: 'Premium' },
-            { el: '{price:brandPremium}', en: '{price:brandPremium}' },
             { el: 'Σχεδιασμό διαφημιστικών και banners, εκτυπώσιμα (φυλλάδια, αφίσες), social media templates, παρουσίαση, απεριόριστες αναθεωρήσεις, προτεραιότητα υποστήριξης', en: 'Ad and banner design, print materials (flyers, posters), social media templates, presentation deck, unlimited revisions, priority support' },
             { el: '4-6 εβδομάδες', en: '4-6 weeks' },
           ],
@@ -61,8 +58,8 @@ export const page: ContentPage = {
       },
       paragraphs: [
         {
-          el: 'Αν χρειάζεστε μόνο λογότυπο ή λογότυπο με κάρτες, δείτε τον σχεδιασμό λογοτύπου (από {price:logo}) και το βασικό πακέτο (από {price:brandBasicPackage}).',
-          en: 'If you only need a logo, or a logo with cards, see logo design (from {price:logo}) and the basic package (from {price:brandBasicPackage}).',
+          el: 'Το κόστος καθορίζεται από τον αριθμό των εφαρμογών και το αν ξεκινάμε από το μηδέν ή ανανεώνουμε υπάρχον λογότυπο. Αν χρειάζεστε μόνο λογότυπο ή λογότυπο με κάρτες, δείτε τον σχεδιασμό λογοτύπου.',
+          en: 'The cost is set by the number of applications and whether we start from zero or refresh an existing logo. If you only need a logo, or a logo with cards, see logo design.',
         },
       ],
       link: { path: '/sxediasmos-logotypou', label: { el: 'Σχεδιασμός λογοτύπου', en: 'Logo design' } },
@@ -71,8 +68,8 @@ export const page: ContentPage = {
       heading: { el: 'Ταυτότητα ή rebranding;', en: 'Identity or rebranding?' },
       paragraphs: [
         {
-          el: 'Αν έχετε ήδη λογότυπο που σας αναγνωρίζουν, δεν χρειάζεται να το πετάξετε. Το rebranding κρατά ό,τι δουλεύει (συνήθως το σύμβολο ή το όνομα) και διορθώνει ό,τι σας εμποδίζει: τυπογραφία που δεν διαβάζεται σε μικρό μέγεθος, χρώματα που δεν τυπώνονται σωστά, παραλλαγές που λείπουν. Κοστολογείται αφού δούμε το υπάρχον.',
-          en: 'If you already have a logo people recognise, you do not need to throw it away. A rebrand keeps what works (usually the symbol or the name) and fixes what holds you back: typography unreadable at small sizes, colours that do not print correctly, missing variants. It is priced after we see the existing one.',
+          el: 'Αν έχετε ήδη λογότυπο που σας αναγνωρίζουν, δεν χρειάζεται να το πετάξετε. Το rebranding κρατά ό,τι δουλεύει (συνήθως το σύμβολο ή το όνομα) και διορθώνει ό,τι σας εμποδίζει: τυπογραφία που δεν διαβάζεται σε μικρό μέγεθος, χρώματα που δεν τυπώνονται σωστά, παραλλαγές που λείπουν. Κοστολογείται αφού δούμε το υπάρχον, και συνήθως κοστίζει λιγότερο από σχεδιασμό από την αρχή.',
+          en: 'If you already have a logo people recognise, you do not need to throw it away. A rebrand keeps what works (usually the symbol or the name) and fixes what holds you back: typography unreadable at small sizes, colours that do not print correctly, missing variants. It is quoted after we see the existing one, and usually costs less than designing from scratch.',
         },
       ],
     },
@@ -102,8 +99,8 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζει η εταιρική ταυτότητα;', en: 'How much does a corporate identity cost?' },
       a: {
-        el: 'Από {price:brandIdentity} για το πλήρες πακέτο με brand guidelines, και από {price:brandPremium} για το Premium με διαφημιστικά, εκτυπώσιμα και social templates. Η τελική τιμή εξαρτάται από τον αριθμό των εφαρμογών.',
-        en: 'From {price:brandIdentity} for the full package with brand guidelines, and from {price:brandPremium} for Premium with ads, print materials and social templates. The final price depends on the number of applications.',
+        el: 'Κατόπιν προσφοράς, ανάλογα με τον αριθμό των εφαρμογών και το αν ξεκινάμε από το μηδέν. Μια συζήτηση 20 λεπτών αρκεί για γραπτή προσφορά μέσα σε 24 ώρες, με το τι ακριβώς περιλαμβάνεται.',
+        en: 'On quotation, depending on the number of applications and whether we start from zero. A 20-minute conversation is enough for a written quote within 24 hours, stating exactly what is included.',
       },
     },
     {
@@ -121,12 +118,11 @@ export const page: ContentPage = {
       },
     },
   ],
-  priceFrom: 'brandIdentity',
-  priceNote: { el: 'Λογότυπο, χρώματα, τυπογραφία, κάρτες, επιστολόχαρτο, social και brand guidelines. 2-4 εβδομάδες.', en: 'Logo, colours, typography, cards, letterhead, social and brand guidelines. 2-4 weeks.' },
+  quoteNote: { el: 'Εξαρτάται από τις εφαρμογές και το αν υπάρχει λογότυπο. Γραπτή προσφορά σε 24 ώρες, παράδοση σε 2-4 εβδομάδες.', en: 'Depends on the applications and whether a logo exists. Written quote in 24 hours, delivery in 2-4 weeks.' },
   related: [
-    { path: '/sxediasmos-logotypou', label: { el: 'Σχεδιασμός λογοτύπου', en: 'Logo design' }, description: { el: 'Μόνο το σήμα, από {price:logo}.', en: 'The mark alone, from {price:logo}.' } },
+    { path: '/sxediasmos-logotypou', label: { el: 'Σχεδιασμός λογοτύπου', en: 'Logo design' }, description: { el: 'Μόνο το σήμα, με όλα τα αρχεία.', en: 'The mark alone, with all files.' } },
     { path: '/branding', label: { el: 'Branding & rebranding', en: 'Branding & rebranding' }, description: { el: 'Η υπηρεσία branding στο σύνολό της.', en: 'The branding service as a whole.' } },
-    { path: '/guides/poso-kostizei-logo', label: { el: 'Πόσο κοστίζει ένα λογότυπο', en: 'How much a logo costs' }, description: { el: 'Ο οδηγός με τις τιμές και τι να ζητήσετε.', en: 'The guide with prices and what to ask for.' } },
+    { path: '/guides/poso-kostizei-logo', label: { el: 'Πόσο κοστίζει ένα λογότυπο', en: 'How much a logo costs' }, description: { el: 'Ο οδηγός με το τι καθορίζει την τιμή και τι να ζητήσετε.', en: 'The guide on what sets the price and what to ask for.' } },
     { path: '/prints', label: { el: 'Εκτυπώσεις', en: 'Printing' }, description: { el: 'Κάρτες, επιστολόχαρτα και έντυπα από το ίδιο γραφείο.', en: 'Cards, letterhead and print from the same office.' } },
   ],
   projectsRoute: '/branding',
@@ -137,7 +133,7 @@ export const page: ContentPage = {
   ],
   service: {
     name: 'Εταιρική Ταυτότητα',
-    description: 'Σχεδιασμός εταιρικής ταυτότητας στην Άρτα: λογότυπο, χρωματική παλέτα, τυπογραφία, κάρτες, επιστολόχαρτο, social media και brand guidelines. Από {price:brandIdentity}.',
+    description: 'Σχεδιασμός εταιρικής ταυτότητας στην Άρτα: λογότυπο, χρωματική παλέτα, τυπογραφία, κάρτες, επιστολόχαρτο, social media και brand guidelines. Κατόπιν προσφοράς.',
     serviceType: ['Corporate Identity', 'Brand Identity Design', 'Branding', 'Brand Guidelines'],
   },
 }

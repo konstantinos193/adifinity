@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   // /ektypwseis-arta is narrowed to large-format so the two stop competing.
   title: 'Εκτυπώσεις Άρτα | Κάρτες & Φυλλάδια σε 24ω | adinfinity',
   description:
-    'Επαγγελματικές εκτυπώσεις στην Άρτα: επαγγελματικές κάρτες, φυλλάδια, αφίσες και καταλόγους. Τιμές από €5, παράδοση σε 24 ώρες. Τηλ. 2681 303007',
+    'Επαγγελματικές εκτυπώσεις στην Άρτα: επαγγελματικές κάρτες, φυλλάδια, αφίσες και καταλόγους. Προσφορά την ίδια μέρα, παράδοση σε 24 ώρες. Τηλ. 2681 303007',
   openGraph: {
     title: 'Εκτυπώσεις Άρτα | Digital Printing & Premium Εκτυπώσεις | adinfinity',
     description: 'Επαγγελματικές εκτυπώσεις στην Άρτα. Digital printing, banners, flyers, premium εκτυπώσεις. Γρήγορη παράδοση!',

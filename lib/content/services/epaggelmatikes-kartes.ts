@@ -3,24 +3,24 @@ import type { ContentPage } from '../types'
 export const page: ContentPage = {
   path: '/epaggelmatikes-kartes',
   kind: 'service',
-  seoTitle: 'Επαγγελματικές Κάρτες Άρτα | Από {price:businessCardsPer100} τα 100, σε 24 Ώρες',
+  seoTitle: 'Επαγγελματικές Κάρτες Άρτα | Χαρτιά, Φινιρίσματα, σε 24 Ώρες',
   seoDescription:
-    'Επαγγελματικές κάρτες στην Άρτα: χαρτιά, ματ ή γυαλιστερή πλαστικοποίηση, soft-touch, χρυσοτυπία, ανάγλυφο. Από {price:businessCardsPer100} τα 100, σε 24-72 ώρες.',
+    'Εκτύπωση επαγγελματικών καρτών στην Άρτα: χαρτιά, πλαστικοποίηση ματ ή γυαλιστερή, soft-touch, χρυσοτυπία, ανάγλυφο. Παράδοση σε 24-72 ώρες, προσφορά την ίδια μέρα.',
   badge: { el: 'Εκτυπώσεις', en: 'Printing' },
   h1: { el: 'Επαγγελματικές κάρτες', en: 'Business cards' },
   summary: {
-    el: 'Η κάρτα που φεύγει από το χέρι σας είναι το μόνο υλικό που κρατά ο πελάτης. Χαρτί, φινίρισμα και ποσότητα, με τιμή από {price:businessCardsPer100} τα 100.',
-    en: 'The card that leaves your hand is the one thing the customer keeps. Paper, finish and quantity, from {price:businessCardsPer100} per 100.',
+    el: 'Η κάρτα που φεύγει από το χέρι σας είναι το μόνο υλικό που κρατά ο πελάτης. Χαρτί, φινίρισμα και ποσότητα, με προσφορά την ίδια μέρα.',
+    en: 'The card that leaves your hand is the one thing the customer keeps. Paper, finish and quantity, with a quote the same day.',
   },
   intro: [
     {
-      el: 'Τυπώνουμε επαγγελματικές κάρτες στην Άρτα από {price:businessCardsPer100} τα 100 τεμάχια, με παράδοση σε 2-3 εργάσιμες ή express σε 24 ώρες. Επιλέγετε χαρτί, φινίρισμα (ματ, γυαλιστερό ή soft-touch), και αν θέλετε χρυσοτυπία, ανάγλυφο ή UV spot για τις λεπτομέρειες. Ελέγχουμε πάντα το αρχείο σας πριν την παραγωγή, και αν δεν έχετε αρχείο, τη σχεδιάζουμε.',
-      en: 'We print business cards in Arta from {price:businessCardsPer100} per 100, delivered in 2-3 working days or express within 24 hours. You choose the paper, the finish (matt, gloss or soft-touch), and whether you want gold foil, embossing or spot UV for the details. We always check your file before production, and if you have no file, we design it.',
+      el: 'Τυπώνουμε επαγγελματικές κάρτες στην Άρτα με παράδοση σε 2-3 εργάσιμες ή express σε 24 ώρες. Επιλέγετε χαρτί, φινίρισμα (ματ, γυαλιστερό ή soft-touch), και αν θέλετε χρυσοτυπία, ανάγλυφο ή UV spot για τις λεπτομέρειες. Το κόστος εξαρτάται από την ποσότητα, το χαρτί και το φινίρισμα, και σας το λέμε γραπτώς την ίδια μέρα. Ελέγχουμε πάντα το αρχείο σας πριν την παραγωγή, και αν δεν έχετε αρχείο, τη σχεδιάζουμε.',
+      en: 'We print business cards in Arta, delivered in 2-3 working days or express within 24 hours. You choose the paper, the finish (matt, gloss or soft-touch), and whether you want gold foil, embossing or spot UV for the details. The cost depends on quantity, paper and finish, and we put it in writing the same day. We always check your file before production, and if you have no file, we design it.',
     },
   ],
   sections: [
     {
-      heading: { el: 'Επιλογές και τιμές', en: 'Options and prices' },
+      heading: { el: 'Επιλογές', en: 'Options' },
       table: {
         head: [
           { el: 'Επιλογή', en: 'Option' },
@@ -31,7 +31,7 @@ export const page: ContentPage = {
           [
             { el: 'Απλή κάρτα', en: 'Standard card' },
             { el: '85 x 55 χιλ., χαρτί 300-350 γρ., ματ ή γυαλιστερή πλαστικοποίηση', en: '85 x 55 mm, 300-350 gsm card, matt or gloss lamination' },
-            { el: 'Η καθημερινή κάρτα. Από {price:businessCardsPer100} τα 100', en: 'The everyday card. From {price:businessCardsPer100} per 100' },
+            { el: 'Η καθημερινή κάρτα, η πιο οικονομική επιλογή', en: 'The everyday card, the most economical option' },
           ],
           [
             { el: 'Soft-touch', en: 'Soft-touch' },
@@ -57,8 +57,8 @@ export const page: ContentPage = {
       },
       paragraphs: [
         {
-          el: 'Οι συνηθισμένες ποσότητες είναι 100, 250, 500 και 1.000. Η τιμή ανά κάρτα πέφτει αισθητά από τις 250 και πάνω. Για δύο ή τρία ονόματα στην ίδια επιχείρηση, τυπώνουμε μαζί και μοιράζουμε την ποσότητα.',
-          en: 'Common quantities are 100, 250, 500 and 1,000. The price per card drops noticeably from 250 upwards. For two or three names in the same business, we print together and split the quantity.',
+          el: 'Οι συνηθισμένες ποσότητες είναι 100, 250, 500 και 1.000. Το κόστος ανά κάρτα πέφτει αισθητά από τις 250 και πάνω. Για δύο ή τρία ονόματα στην ίδια επιχείρηση, τυπώνουμε μαζί και μοιράζουμε την ποσότητα.',
+          en: 'Common quantities are 100, 250, 500 and 1,000. The cost per card drops noticeably from 250 upwards. For two or three names in the same business, we print together and split the quantity.',
         },
       ],
     },
@@ -82,8 +82,8 @@ export const page: ContentPage = {
       heading: { el: 'Χρόνοι και παράδοση', en: 'Timing and delivery' },
       paragraphs: [
         {
-          el: 'Κανονική παραγωγή σε 2-3 εργάσιμες από την έγκριση του δείγματος. Express σε 24 ώρες για επείγουσες περιπτώσεις, με μικρή επιβάρυνση. Παραλαβή από το γραφείο μας στη Βασ. Πύρρου 30 ή παράδοση στην Άρτα και σε όλη την Ήπειρο.',
-          en: 'Standard production in 2-3 working days from proof approval. Express in 24 hours for urgent cases, at a small premium. Collect from our office at Vas. Pyrrou 30 or delivery in Arta and across Epirus.',
+          el: 'Κανονική παραγωγή σε 2-3 εργάσιμες από την έγκριση του δείγματος. Express σε 24 ώρες για επείγουσες περιπτώσεις, με μικρή επιβάρυνση που αναγράφεται στην προσφορά. Παραλαβή από το γραφείο μας στη Βασ. Πύρρου 30 ή παράδοση στην Άρτα και σε όλη την Ήπειρο.',
+          en: 'Standard production in 2-3 working days from proof approval. Express in 24 hours for urgent cases, at a small premium stated in the quote. Collect from our office at Vas. Pyrrou 30 or delivery in Arta and across Epirus.',
         },
       ],
     },
@@ -102,8 +102,8 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζουν 100 επαγγελματικές κάρτες;', en: 'How much do 100 business cards cost?' },
       a: {
-        el: 'Από {price:businessCardsPer100} για απλή κάρτα με πλαστικοποίηση. Soft-touch, χρυσοτυπία και ανάγλυφο κοστολογούνται επιπλέον, και σας το λέμε στην προσφορά.',
-        en: 'From {price:businessCardsPer100} for a standard laminated card. Soft-touch, foil and embossing are priced extra, and we state it in the quote.',
+        el: 'Εξαρτάται από το χαρτί και το φινίρισμα: η απλή κάρτα με πλαστικοποίηση είναι η πιο οικονομική, ενώ soft-touch, χρυσοτυπία και ανάγλυφο κοστίζουν επιπλέον. Πείτε μας ποσότητα και επιλογές και έχετε γραπτή προσφορά την ίδια μέρα.',
+        en: 'It depends on paper and finish: the standard laminated card is the most economical, while soft-touch, foil and embossing cost extra. Tell us quantity and options and you have a written quote the same day.',
       },
     },
     {
@@ -116,8 +116,8 @@ export const page: ContentPage = {
     {
       q: { el: 'Δεν έχω λογότυπο. Τι κάνω;', en: 'I have no logo. What do I do?' },
       a: {
-        el: 'Το βασικό πακέτο λογοτύπου από {price:brandBasicPackage} περιλαμβάνει λογότυπο με δύο εναλλακτικές και τον σχεδιασμό της κάρτας. Έτσι η κάρτα και ό,τι ακολουθήσει (επιγραφή, φυλλάδια) ξεκινούν από το ίδιο αρχείο.',
-        en: 'The basic logo package from {price:brandBasicPackage} includes a logo with two alternatives and the card design. That way the card and whatever follows (sign, flyers) start from the same file.',
+        el: 'Το βασικό πακέτο λογοτύπου περιλαμβάνει λογότυπο με δύο εναλλακτικές και τον σχεδιασμό της κάρτας. Έτσι η κάρτα και ό,τι ακολουθήσει (επιγραφή, φυλλάδια) ξεκινούν από το ίδιο αρχείο.',
+        en: 'The basic logo package includes a logo with two alternatives and the card design. That way the card and whatever follows (sign, flyers) start from the same file.',
       },
     },
     {
@@ -128,12 +128,10 @@ export const page: ContentPage = {
       },
     },
   ],
-  priceFrom: 'businessCardsPer100',
-  priceLabel: { el: '100 κάρτες', en: '100 cards' },
-  priceNote: { el: 'Απλή κάρτα με πλαστικοποίηση. Παράδοση σε 2-3 εργάσιμες, express σε 24 ώρες.', en: 'Standard laminated card. Delivery in 2-3 working days, express in 24 hours.' },
+  quoteNote: { el: 'Εξαρτάται από ποσότητα, χαρτί και φινίρισμα. Προσφορά την ίδια μέρα, παράδοση σε 2-3 εργάσιμες ή express σε 24 ώρες.', en: 'Depends on quantity, paper and finish. Quote the same day, delivery in 2-3 working days or express in 24 hours.' },
   related: [
     { path: '/prints', label: { el: 'Εκτυπώσεις Άρτα', en: 'Printing Arta' }, description: { el: 'Όλες οι εκτυπώσεις: κάρτες, φυλλάδια, κατάλογοι, αφίσες.', en: 'All printing: cards, flyers, catalogues, posters.' } },
-    { path: '/flyers', label: { el: 'Φυλλάδια', en: 'Flyers' }, description: { el: 'Από {price:flyersPer500} τα 500, με διανομή αν θέλετε.', en: 'From {price:flyersPer500} per 500, with distribution if you like.' } },
+    { path: '/flyers', label: { el: 'Φυλλάδια', en: 'Flyers' }, description: { el: 'Μεγέθη, χαρτιά και διανομή αν θέλετε.', en: 'Sizes, papers and distribution if you like.' } },
     { path: '/sxediasmos-logotypou', label: { el: 'Σχεδιασμός λογοτύπου', en: 'Logo design' }, description: { el: 'Το λογότυπο που θα μπει στην κάρτα.', en: 'The logo that goes on the card.' } },
     { path: '/diafimistika-dora', label: { el: 'Διαφημιστικά δώρα', en: 'Promotional gifts' }, description: { el: 'Στυλό και μπλοκ με το ίδιο λογότυπο.', en: 'Pens and notepads with the same logo.' } },
   ],
@@ -145,7 +143,7 @@ export const page: ContentPage = {
   ],
   service: {
     name: 'Εκτύπωση Επαγγελματικών Καρτών',
-    description: 'Εκτύπωση επαγγελματικών καρτών στην Άρτα με επιλογή χαρτιού και φινιρίσματος, έλεγχο αρχείου και παράδοση σε 24-72 ώρες. Από {price:businessCardsPer100} τα 100 τεμάχια.',
+    description: 'Εκτύπωση επαγγελματικών καρτών στην Άρτα με επιλογή χαρτιού και φινιρίσματος, έλεγχο αρχείου και παράδοση σε 24-72 ώρες. Κατόπιν προσφοράς.',
     serviceType: ['Business Card Printing', 'Printing', 'Print Design'],
   },
 }

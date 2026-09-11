@@ -177,7 +177,7 @@ const FeatureCard = ({
 )
 
 export default function InvitationsPage() {
-  const { t } = useTranslations()
+  const { t, locale } = useTranslations()
 
   const types = [
     {
@@ -440,13 +440,14 @@ export default function InvitationsPage() {
             >
               {pkg === "premium" && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#01FFFF] text-[#07141C] px-4 py-1 rounded-full text-sm font-bold">
-                  Δημοφιλές
+                  {locale === "el" ? "Δημοφιλές" : "Popular"}
                 </div>
               )}
               <h3 className="text-2xl font-bold mb-2 text-white">
                 {t(`invitations_page.pricing.${pkg}.title`)}
               </h3>
-              <div className="text-4xl font-bold mb-2 text-[#01FFFF]">
+              {/* "Κατόπιν προσφοράς" replaced the old "€150"; one size down so it stays on one line. */}
+              <div className="text-3xl font-bold mb-2 text-[#01FFFF]">
                 {t(`invitations_page.pricing.${pkg}.price`)}
               </div>
               <p className="text-gray-400 mb-6">

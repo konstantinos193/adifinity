@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { serverT } from '@/lib/metadata'
 import { faqNode, FLYER_DISTRIBUTION_FAQ } from '@/app/components/faqData'
-import { PRICES, euro } from '@/lib/company'
 import { jsonLd, pageGraph } from '@/lib/schema'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 
@@ -103,7 +102,6 @@ export default function FlyerDistributionLayout({
                 description: "Στοχευμένη διανομή με βάση δημογραφικά και γεωγραφικά κριτήρια",
               },
             ],
-            priceRange: `από ${euro(PRICES.distributionLocal)}`,
           },
           // Same array the page renders via <FAQSection>, so schema and visible
           // content cannot drift — the previous hand-copied block had already.

@@ -110,12 +110,12 @@
     "Identity usage manual as a PDF",
     "Print-ready and social-media-ready files"
   ],
-  "pricing_title": "Indicative Pricing",
-  "pricing_description": "These are starting prices and are shaped by the scope of the project and the number of applications.",
+  "pricing_title": "Branding Packages",
+  "pricing_description": "Every package is priced by the scope of the project and the number of applications, with a written quote within 24 hours.",
   "pricing_plans": [
     {
       "name": "Logo",
-      "price": "from {price:logo}",
+      "price": "On quotation",
       "period": "",
       "description": "For new businesses that need a proper start.",
       "features": [
@@ -128,7 +128,7 @@
     },
     {
       "name": "Corporate Identity",
-      "price": "from {price:brandIdentity}",
+      "price": "On quotation",
       "period": "",
       "description": "A complete package for a business launching or refreshing.",
       "features": [
@@ -159,7 +159,7 @@
   "faq": [
     {
       "question": "How much does a logo cost in Arta?",
-      "answer": "Logo design starts from {price:logo} and includes original design, variants and all vector files. The full corporate identity package starts from {price:brandIdentity}. The final price depends on the number of applications."
+      "answer": "On quotation. A logo includes original design, variants and all vector files. The full corporate identity adds colours, typography, stationery and a usage guide, and is priced by the number of applications. Written quote within 24 hours, no obligation."
     },
     {
       "question": "How long does identity design take?",

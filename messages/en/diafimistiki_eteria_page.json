@@ -37,8 +37,8 @@
       "description": "The logo carries to the sign, the sign matches the flyer, the flyer leads to a website that exists. You do not coordinate three suppliers."
     },
     {
-      "title": "Transparent pricing",
-      "description": "Every service has a published starting price on the pricing page. You know in advance what you pay and what you get."
+      "title": "Written quote",
+      "description": "Every project gets a written, itemised quote within 24 hours, before anything starts. You know in advance what you pay and what you get."
     },
     {
       "title": "Fast delivery",
@@ -61,11 +61,11 @@
     },
     {
       "question": "How do you choose an advertising agency in Arta?",
-      "answer": "Ask to see real projects with client names, published prices, and exactly who will do the work. If an agency cannot show you those three, ask why. Ours are on the Projects, Pricing and About pages."
+      "answer": "Ask to see real projects with client names, a written quote itemised line by line, and exactly who will do the work. If an agency cannot show you those three, ask why. Our projects and people are on the Projects and About pages, and the quote arrives within 24 hours."
     },
     {
       "question": "How much does it cost to work with an advertising agency?",
-      "answer": "Each project is priced on its own: logo from {price:logo}, corporate identity from {price:brandIdentity}, website from {price:websiteStarter}, printing from {price:printsSmall}. Monthly digital marketing packages start from {price:socialMonthly}/month. Every price is on the pricing page. Custom packages based on needs."
+      "answer": "Each project is priced on its own, by its scope: a logo, a corporate identity, a website or a print run have different cost drivers, and digital marketing packages are monthly. Tell us what you need and you receive a written quote within 24 hours. What every package includes is on the Packages page."
     },
     {
       "question": "How long do projects take?",

@@ -47,7 +47,7 @@ Everything in that document that can be done in the repo is done. Status by sect
 
 | Sections | Status | Where |
 |---|---|---|
-| §4, §39, §40, §41 facts & prices in one place | Done | `lib/company.ts` `PRICES` + `withFactsDeep()` applied at message load; 49 strings, FAQ arrays and `/pricing` (rebuilt: comparison table, Digital Marketing tab) all resolve `{price:key}` |
+| §4, §39, §40, §41 facts & prices in one place | Done, then **prices removed** (owner's decision, 2026-09-11) | `lib/company.ts` facts + `withFactsDeep()` applied at message load. The site publishes **no prices**: every service is "Κατόπιν προσφοράς" with a written quote in `QUOTE_TURNAROUND_HOURS` (24). `/pricing` is now the packages page (what each includes, how it is priced, delivery); `__tests__/seo-registry.test.ts` fails on any `€` / `{price:` in content pages, FAQ arrays, related links or message files (Shopify's own fee is the one allowed third-party figure) |
 | §5, §31, §34, §44, §52 one page one job, titles | Done | 12 pages retitled to the keyword map; `/diafimistiki-eteria` = local hub, `/services` = plain catalogue, `/diafimistiki` = guide |
 | §6, §28, §43 clone routes | Done | `/web-development-arta` → `/website-development`, `/dianomi-fylladion-arta` → `/flyer-distribution` (308), their body + FAQ merged into the parents |
 | §7 case studies | Already existed; **claims verified over SSH** | Asterias: 1 paid Stripe booking (Jul 2026), 22 Booking.com reviews at 4.5, 7 apts, 6 seasons. KYKLOS: 2,143 επιτυχόντες 1992-2025, 35 Panhellenic papers. Fabricated "95% speed / 40% bookings / 500+ students / Top 3" removed from 3 pages + `projects.json` |
@@ -61,14 +61,14 @@ Everything in that document that can be done in the repo is done. Status by sect
 | §21, §22 images | Done | 27 portfolio images renamed to descriptive slugs (`apofa-logo-arta.png`), 32 references updated, header alt text |
 | §23 portfolio taxonomy | Done | Industry filter (`lib/industries.ts`), client state only, no filter URLs |
 | §27 language | Done | 224 → 116 English-only strings; what remains is tool/tech names |
-| §29 navigation | Done | Υπηρεσίες / Έργα / Τιμές / Σχετικά / Οδηγοί / Επικοινωνία; sub-services in the footer cluster |
+| §29 navigation | Done | Υπηρεσίες / Έργα / Πακέτα / Σχετικά / Οδηγοί / Επικοινωνία; sub-services in the footer cluster |
 | §33 conversion tracking | Done | GA4 `generate_lead`, `click_to_call`, `click_to_email`, `contact_cta_click`, `pricing_tab_view` (`lib/analytics.ts`, consent-gated) |
 | §42 governance | Done | `lib/seo-registry.ts` + test: every hand-built route has an owner, primary keyword, review date; no two share a keyword; content pages must have breadcrumb, 3+ related, 3+ FAQ, no em dashes, ≤70/≤175 metadata |
 | §13, §32, §36, §45 (GBP, GSC, links), §51 dashboard | **Not code** | Yours: Business Profile, Search Console monitoring, link outreach, monthly dashboard |
 
 Verified: 32 tests, `tsc`, production build (86 routes, all static), `scripts/audit-seo.mjs` over 78 sitemap URLs, zero placeholder leaks in rendered HTML.
 
-**Assumed, please confirm:** `CLIENTS_CLAIM = 50`, `COMPLETED_PROJECTS_CLAIM = 200`, and the `PRICES` table in `lib/company.ts` are stated as found on the site; no database backs them. Change them there and they change everywhere.
+**Assumed, please confirm:** `CLIENTS_CLAIM = 50` and `COMPLETED_PROJECTS_CLAIM = 200` in `lib/company.ts` are stated as found on the site; no database backs them. Change them there and they change everywhere. (The `PRICES` table is gone: no price is published anywhere, by decision of the owner.)
 
 ### Still open
 

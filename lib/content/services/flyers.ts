@@ -3,24 +3,24 @@ import type { ContentPage } from '../types'
 export const page: ContentPage = {
   path: '/flyers',
   kind: 'service',
-  seoTitle: 'Εκτύπωση Φυλλαδίων Άρτα | Από {price:flyersPer500} τα 500, Σχεδιασμός & Διανομή',
+  seoTitle: 'Εκτύπωση Φυλλαδίων Άρτα | Σχεδιασμός, Εκτύπωση & Διανομή',
   seoDescription:
-    'Εκτύπωση φυλλαδίων στην Άρτα σε A6, A5, A4 και DL, από {price:flyersPer500} τα 500. Σχεδιασμός αν χρειάζεται και διανομή πόρτα-πόρτα με GPS από το ίδιο γραφείο.',
+    'Εκτύπωση φυλλαδίων στην Άρτα σε A6, A5, A4 και DL, μονόφυλλα ή διπλωμένα, σε 2-3 εργάσιμες. Σχεδιασμός και διανομή πόρτα-πόρτα με GPS από το ίδιο γραφείο.',
   badge: { el: 'Εκτυπώσεις', en: 'Printing' },
   h1: { el: 'Φυλλάδια', en: 'Flyers' },
   summary: {
-    el: 'Σχεδιασμός, εκτύπωση και, αν θέλετε, διανομή στη γειτονιά που επιλέγετε. Από {price:flyersPer500} τα 500 τεμάχια.',
-    en: 'Design, printing and, if you want, distribution in the neighbourhood you choose. From {price:flyersPer500} per 500.',
+    el: 'Σχεδιασμός, εκτύπωση και, αν θέλετε, διανομή στη γειτονιά που επιλέγετε. Ένα έργο, ένας προμηθευτής, μία προσφορά.',
+    en: 'Design, printing and, if you want, distribution in the neighbourhood you choose. One job, one supplier, one quote.',
   },
   intro: [
     {
-      el: 'Τυπώνουμε φυλλάδια στην Άρτα από {price:flyersPer500} τα 500 τεμάχια, σε μεγέθη A6, A5, A4 και DL, μονόφυλλα ή διπλωμένα σε δίπτυχο και τρίπτυχο. Παράδοση σε 2-3 εργάσιμες, express σε 24 ώρες. Αν δεν έχετε αρχείο, το σχεδιάζουμε, και αν θέλετε να φτάσουν σε συγκεκριμένους δρόμους, τα μοιράζουμε εμείς με καταγραφή διαδρομής GPS.',
-      en: 'We print flyers in Arta from {price:flyersPer500} per 500, in A6, A5, A4 and DL, single-sheet or folded into bi-fold and tri-fold. Delivery in 2-3 working days, express in 24 hours. If you have no file we design it, and if you want them to reach specific streets we distribute them ourselves with GPS route logging.',
+      el: 'Τυπώνουμε φυλλάδια στην Άρτα σε μεγέθη A6, A5, A4 και DL, μονόφυλλα ή διπλωμένα σε δίπτυχο και τρίπτυχο. Παράδοση σε 2-3 εργάσιμες, express σε 24 ώρες. Το κόστος εξαρτάται από την ποσότητα, το μέγεθος, το χαρτί και το δίπλωμα, και σας το λέμε γραπτώς την ίδια μέρα. Αν δεν έχετε αρχείο, το σχεδιάζουμε, και αν θέλετε να φτάσουν σε συγκεκριμένους δρόμους, τα μοιράζουμε εμείς με καταγραφή διαδρομής GPS.',
+      en: 'We print flyers in Arta in A6, A5, A4 and DL, single-sheet or folded into bi-fold and tri-fold. Delivery in 2-3 working days, express in 24 hours. The cost depends on quantity, size, paper and folding, and we put it in writing the same day. If you have no file we design it, and if you want them to reach specific streets we distribute them ourselves with GPS route logging.',
     },
   ],
   sections: [
     {
-      heading: { el: 'Μεγέθη, χαρτιά και τιμές', en: 'Sizes, papers and prices' },
+      heading: { el: 'Μεγέθη και χαρτιά', en: 'Sizes and papers' },
       table: {
         head: [
           { el: 'Μέγεθος', en: 'Size' },
@@ -52,8 +52,8 @@ export const page: ContentPage = {
       },
       paragraphs: [
         {
-          el: 'Χαρτί από 115 έως 300 γραμμάρια, ματ ή γυαλιστερό. Για φυλλάδια που θα μοιραστούν στον δρόμο προτείνουμε 135-170 γρ., για μενού ή τιμοκαταλόγους που μένουν στο κατάστημα 250-300 γρ. με πλαστικοποίηση. Τα πακέτα εκτύπωσης ξεκινούν από {price:printsSmall} για έως 500 αντίτυπα και από {price:printsMedium} για 500-2.000.',
-          en: 'Paper from 115 to 300 gsm, matt or gloss. For flyers handed out on the street we suggest 135-170 gsm; for menus or price lists that stay in the shop, 250-300 gsm with lamination. Print packages start from {price:printsSmall} for up to 500 copies and from {price:printsMedium} for 500-2,000.',
+          el: 'Χαρτί από 115 έως 300 γραμμάρια, ματ ή γυαλιστερό. Για φυλλάδια που θα μοιραστούν στον δρόμο προτείνουμε 135-170 γρ., για μενού ή τιμοκαταλόγους που μένουν στο κατάστημα 250-300 γρ. με πλαστικοποίηση. Το κόστος ανά τεμάχιο πέφτει αισθητά από τα 500 τεμάχια και πάνω.',
+          en: 'Paper from 115 to 300 gsm, matt or gloss. For flyers handed out on the street we suggest 135-170 gsm; for menus or price lists that stay in the shop, 250-300 gsm with lamination. The cost per copy drops noticeably from 500 copies upwards.',
         },
       ],
     },
@@ -76,12 +76,12 @@ export const page: ContentPage = {
       heading: { el: 'Εκτύπωση και διανομή ως ένα έργο', en: 'Printing and distribution as one job' },
       paragraphs: [
         {
-          el: 'Το φυλλάδιο δεν δουλεύει αν μείνει σε κούτα. Αναλαμβάνουμε τη διανομή πόρτα-πόρτα σε κατοικίες ή στοχευμένα σε επιχειρήσεις, στους δρόμους που επιλέγετε, με καταγραφή διαδρομής GPS και αναφορά κάλυψης ανά περιοχή. Η τοπική διανομή έως 1.000 φυλλαδίων ξεκινά από {price:distributionLocal}.',
-          en: 'A flyer does not work if it stays in a box. We handle door-to-door distribution to households, or targeted to businesses, in the streets you choose, with GPS route logging and a coverage report per area. Local distribution of up to 1,000 flyers starts from {price:distributionLocal}.',
+          el: 'Το φυλλάδιο δεν δουλεύει αν μείνει σε κούτα. Αναλαμβάνουμε τη διανομή πόρτα-πόρτα σε κατοικίες ή στοχευμένα σε επιχειρήσεις, στους δρόμους που επιλέγετε, με καταγραφή διαδρομής GPS και αναφορά κάλυψης ανά περιοχή.',
+          en: 'A flyer does not work if it stays in a box. We handle door-to-door distribution to households, or targeted to businesses, in the streets you choose, with GPS route logging and a coverage report per area.',
         },
         {
-          el: 'Σχεδιασμός, εκτύπωση και διανομή από το ίδιο γραφείο σημαίνει ότι δεν συντονίζετε εσείς τρεις προμηθευτές, και ότι η ποσότητα εκτύπωσης βγαίνει από τον αριθμό των γραμματοκιβωτίων, όχι από εικασία.',
-          en: 'Design, printing and distribution from one office means you are not coordinating three suppliers, and the print quantity comes from the number of letterboxes, not a guess.',
+          el: 'Σχεδιασμός, εκτύπωση και διανομή από το ίδιο γραφείο σημαίνει ότι δεν συντονίζετε εσείς τρεις προμηθευτές, ότι η ποσότητα εκτύπωσης βγαίνει από τον αριθμό των γραμματοκιβωτίων και όχι από εικασία, και ότι παίρνετε μία προσφορά για όλο το έργο.',
+          en: 'Design, printing and distribution from one office means you are not coordinating three suppliers, the print quantity comes from the number of letterboxes rather than a guess, and you get one quote for the whole job.',
         },
       ],
       link: { path: '/flyer-distribution', label: { el: 'Διανομή φυλλαδίων στην Άρτα', en: 'Flyer distribution in Arta' } },
@@ -91,8 +91,8 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζουν 500 φυλλάδια;', en: 'How much do 500 flyers cost?' },
       a: {
-        el: 'Από {price:flyersPer500} για μονόφυλλο A5 σε 135 γρ. χαρτί. Διπλωμένα, βαρύτερο χαρτί και πλαστικοποίηση κοστολογούνται επιπλέον. Το πακέτο μικρής τιράζ, έως 500 αντίτυπα σε κάθε τύπο εντύπου, ξεκινά από {price:printsSmall}.',
-        en: 'From {price:flyersPer500} for a single-sheet A5 on 135 gsm paper. Folding, heavier paper and lamination are priced extra. The small-run package, up to 500 copies of any print item, starts from {price:printsSmall}.',
+        el: 'Εξαρτάται από το μέγεθος, το χαρτί και το αν είναι μονόφυλλα ή διπλωμένα. Πείτε μας ποσότητα, μέγεθος και χαρτί και έχετε γραπτή προσφορά την ίδια μέρα. Αν θέλετε και διανομή, μπαίνει στην ίδια προσφορά.',
+        en: 'It depends on size, paper and whether they are single-sheet or folded. Tell us quantity, size and paper and you have a written quote the same day. If you want distribution too, it goes in the same quote.',
       },
     },
     {
@@ -105,8 +105,8 @@ export const page: ContentPage = {
     {
       q: { el: 'Μπορείτε να τα μοιράσετε κιόλας;', en: 'Can you also distribute them?' },
       a: {
-        el: 'Ναι, σε Άρτα και Ήπειρο, πόρτα-πόρτα ή σε επιχειρήσεις, με καταγραφή GPS και αναφορά. Από {price:distributionLocal} για έως 1.000 φυλλάδια σε μία ζώνη.',
-        en: 'Yes, in Arta and Epirus, door-to-door or to businesses, with GPS logging and a report. From {price:distributionLocal} for up to 1,000 flyers in one zone.',
+        el: 'Ναι, σε Άρτα και Ήπειρο, πόρτα-πόρτα ή σε επιχειρήσεις, με καταγραφή GPS και αναφορά κάλυψης. Επιλέγετε ζώνες και ημερομηνίες.',
+        en: 'Yes, in Arta and Epirus, door-to-door or to businesses, with GPS logging and a coverage report. You choose zones and dates.',
       },
     },
     {
@@ -117,13 +117,11 @@ export const page: ContentPage = {
       },
     },
   ],
-  priceFrom: 'flyersPer500',
-  priceLabel: { el: '500 φυλλάδια', en: '500 flyers' },
-  priceNote: { el: 'Μονόφυλλο A5, 135 γρ. Παράδοση σε 2-3 εργάσιμες, express σε 24 ώρες.', en: 'Single-sheet A5, 135 gsm. Delivery in 2-3 working days, express in 24 hours.' },
+  quoteNote: { el: 'Εξαρτάται από ποσότητα, μέγεθος, χαρτί και δίπλωμα. Προσφορά την ίδια μέρα, παράδοση σε 2-3 εργάσιμες.', en: 'Depends on quantity, size, paper and folding. Quote the same day, delivery in 2-3 working days.' },
   related: [
-    { path: '/flyer-distribution', label: { el: 'Διανομή φυλλαδίων', en: 'Flyer distribution' }, description: { el: 'Πόρτα-πόρτα με καταγραφή GPS, από {price:distributionLocal}.', en: 'Door-to-door with GPS logging, from {price:distributionLocal}.' } },
+    { path: '/flyer-distribution', label: { el: 'Διανομή φυλλαδίων', en: 'Flyer distribution' }, description: { el: 'Πόρτα-πόρτα με καταγραφή GPS και αναφορά κάλυψης.', en: 'Door-to-door with GPS logging and a coverage report.' } },
     { path: '/prints', label: { el: 'Εκτυπώσεις Άρτα', en: 'Printing Arta' }, description: { el: 'Κάρτες, κατάλογοι, αφίσες και όλα τα έντυπα.', en: 'Cards, catalogues, posters and all print.' } },
-    { path: '/epaggelmatikes-kartes', label: { el: 'Επαγγελματικές κάρτες', en: 'Business cards' }, description: { el: 'Από {price:businessCardsPer100} τα 100.', en: 'From {price:businessCardsPer100} per 100.' } },
+    { path: '/epaggelmatikes-kartes', label: { el: 'Επαγγελματικές κάρτες', en: 'Business cards' }, description: { el: 'Χαρτιά, φινιρίσματα, παράδοση σε 24 ώρες.', en: 'Papers, finishes, delivery in 24 hours.' } },
     { path: '/guides/odigos-diafimisis-mikris-epixeirisis-arta', label: { el: 'Οδηγός διαφήμισης για μικρή επιχείρηση', en: 'Small-business advertising guide' }, description: { el: 'Φυλλάδια ή Facebook; Εξαρτάται από τον πελάτη.', en: 'Flyers or Facebook? Depends on the customer.' } },
   ],
   projectsRoute: '/prints',
@@ -134,7 +132,7 @@ export const page: ContentPage = {
   ],
   service: {
     name: 'Εκτύπωση Φυλλαδίων',
-    description: 'Σχεδιασμός και εκτύπωση φυλλαδίων στην Άρτα σε A6, A5, A4 και DL, μονόφυλλα ή διπλωμένα, με προαιρετική διανομή πόρτα-πόρτα. Από {price:flyersPer500} τα 500.',
+    description: 'Σχεδιασμός και εκτύπωση φυλλαδίων στην Άρτα σε A6, A5, A4 και DL, μονόφυλλα ή διπλωμένα, με προαιρετική διανομή πόρτα-πόρτα. Κατόπιν προσφοράς.',
     serviceType: ['Flyer Printing', 'Printing', 'Print Design', 'Flyer Distribution'],
   },
 }

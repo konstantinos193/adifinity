@@ -9,7 +9,6 @@ import { WEB_DEV_ARTA_DETAILS } from '@/app/components/serviceDetailsData'
 import { jsonLd, pageGraph } from '@/lib/schema'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import { pickProjects } from '@/lib/serviceProjects'
-import { PRICES, euro } from '@/lib/company'
 
 export default function WebsiteDevelopmentPage() {
   return (
@@ -37,7 +36,6 @@ export default function WebsiteDevelopmentPage() {
               name: 'Κατασκευή Ιστοσελίδων Άρτα',
               description:
                 'Κατασκευή ιστοσελίδων, e-shop και web εφαρμογών στην Άρτα σε React & Next.js — χωρίς templates, με τεχνικό SEO από την πρώτη μέρα και υποστήριξη από το γραφείο μας.',
-              priceRange: `από ${euro(PRICES.websiteStarter)}`,
               serviceType: [
                 'Web Development',
                 'Custom Web Applications',

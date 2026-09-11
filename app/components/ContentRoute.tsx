@@ -3,7 +3,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import { ContentPage } from "./ContentPage"
 import RelatedProjects from "./RelatedProjects"
 import { faqNode } from "./faqData"
-import { withFacts, withFactsDeep, PRICES, euro } from "@/lib/company"
+import { withFacts, withFactsDeep } from "@/lib/company"
 import { OG_LOCALE } from "@/lib/metadata"
 import { jsonLd, pageGraph, ORG_REF, SITE_URL } from "@/lib/schema"
 import { pickProjects } from "@/lib/serviceProjects"
@@ -78,7 +78,6 @@ export function ContentRoute({ page }: { page: ContentPageData }) {
             name: page.service.name,
             description: withFacts(page.service.description),
             serviceType: page.service.serviceType,
-            ...(page.priceFrom ? { priceRange: `από ${euro(PRICES[page.priceFrom])}` } : {}),
           },
         }
       : {}),
@@ -94,7 +93,7 @@ export function ContentRoute({ page }: { page: ContentPageData }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(graph)} />
       <Breadcrumbs trail={page.breadcrumb} />
-      {/* Substituted here so the RSC payload carries prices, not placeholders. */}
+      {/* Substituted here so the RSC payload carries the company facts, not placeholders. */}
       <ContentPage page={withFactsDeep(page)} />
       {projects.length > 0 && <RelatedProjects projects={projects} />}
     </>

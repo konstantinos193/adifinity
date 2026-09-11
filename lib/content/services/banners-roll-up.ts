@@ -3,19 +3,19 @@ import type { ContentPage } from '../types'
 export const page: ContentPage = {
   path: '/banners-roll-up',
   kind: 'service',
-  seoTitle: 'Banner & Roll-up Άρτα | Από {price:bannerPerSqm}/τμ², Δείγμα Πριν την Εκτύπωση',
+  seoTitle: 'Banner & Roll-up Άρτα | Μουσαμάδες, Forex, Δείγμα Πριν την Εκτύπωση',
   seoDescription:
-    'Banner, roll-up, X-banner, μουσαμάδες, forex και καμβάς στην Άρτα. Banner από {price:bannerPerSqm}/τμ², roll-up 85x200 με μηχανισμό, δείγμα πριν την παραγωγή. Σε 2-3 εργάσιμες.',
+    'Εκτύπωση banner, roll-up, X-banner, μουσαμάδων, forex και καμβά στην Άρτα. Ψηφιακό δείγμα πριν την παραγωγή, παράδοση σε 2-3 εργάσιμες, προσφορά την ίδια μέρα.',
   badge: { el: 'Εκτυπώσεις μεγάλου μεγέθους', en: 'Large-format printing' },
   h1: { el: 'Banner & roll-up', en: 'Banners & roll-ups' },
   summary: {
-    el: 'Μουσαμάς για την πρόσοψη, roll-up για την έκθεση, forex για τον τοίχο. Από {price:bannerPerSqm} το τετραγωνικό, με δείγμα πριν τυπωθεί.',
-    en: 'Vinyl for the frontage, a roll-up for the trade show, foam board for the wall. From {price:bannerPerSqm} per square metre, with a proof before printing.',
+    el: 'Μουσαμάς για την πρόσοψη, roll-up για την έκθεση, forex για τον τοίχο. Με δείγμα πριν τυπωθεί και προσφορά την ίδια μέρα.',
+    en: 'Vinyl for the frontage, a roll-up for the trade show, foam board for the wall. With a proof before printing and a quote the same day.',
   },
   intro: [
     {
-      el: 'Τυπώνουμε banner μεγάλου μεγέθους στην Άρτα από {price:bannerPerSqm} το τετραγωνικό μέτρο: μουσαμάδες με τρύπες για δέσιμο, roll-up 85 x 200 με μηχανισμό και τσάντα, X-banner, εκτυπώσεις σε forex και foam board, καμβάδες και αυτοκόλλητα βιτρίνας. Πριν από κάθε παραγγελία στέλνουμε ψηφιακή προεπισκόπηση για έγκριση, ώστε να μην υπάρξει έκπληξη σε ένα κομμάτι τριών μέτρων. Παράδοση σε 2-3 εργάσιμες.',
-      en: 'We print large-format banners in Arta from {price:bannerPerSqm} per square metre: eyeleted vinyl banners, 85 x 200 roll-ups with mechanism and bag, X-banners, prints on foam board and forex, canvas and window stickers. Before every order we send a digital proof for approval, so there are no surprises on a three-metre piece. Delivery in 2-3 working days.',
+      el: 'Τυπώνουμε banner μεγάλου μεγέθους στην Άρτα: μουσαμάδες με τρύπες για δέσιμο, roll-up 85 x 200 με μηχανισμό και τσάντα, X-banner, εκτυπώσεις σε forex και foam board, καμβάδες και αυτοκόλλητα βιτρίνας. Το κόστος υπολογίζεται ανά τετραγωνικό μέτρο και ανά υλικό, και σας το λέμε γραπτώς την ίδια μέρα. Πριν από κάθε παραγγελία στέλνουμε ψηφιακή προεπισκόπηση για έγκριση, ώστε να μην υπάρξει έκπληξη σε ένα κομμάτι τριών μέτρων. Παράδοση σε 2-3 εργάσιμες.',
+      en: 'We print large-format banners in Arta: eyeleted vinyl banners, 85 x 200 roll-ups with mechanism and bag, X-banners, prints on foam board and forex, canvas and window stickers. The cost is calculated per square metre and per material, and we put it in writing the same day. Before every order we send a digital proof for approval, so there are no surprises on a three-metre piece. Delivery in 2-3 working days.',
     },
   ],
   sections: [
@@ -30,7 +30,7 @@ export const page: ContentPage = {
         rows: [
           [
             { el: 'Μουσαμάς (banner)', en: 'Vinyl banner' },
-            { el: 'Ανθεκτικό PVC με τρύπες περιμετρικά για δέσιμο, από {price:bannerPerSqm}/τμ²', en: 'Durable PVC with eyelets around the edge, from {price:bannerPerSqm}/m²' },
+            { el: 'Ανθεκτικό PVC με τρύπες περιμετρικά για δέσιμο, κοστολογείται ανά τετραγωνικό', en: 'Durable PVC with eyelets around the edge, priced per square metre' },
             { el: 'Πρόσοψη σε εκπτώσεις και εγκαίνια, φράχτης εργοταξίου, εκδηλώσεις σε εξωτερικό χώρο', en: 'Frontage for sales and openings, site fencing, outdoor events' },
           ],
           [
@@ -87,8 +87,8 @@ export const page: ContentPage = {
       heading: { el: 'Χρόνοι και παράδοση', en: 'Timing and delivery' },
       paragraphs: [
         {
-          el: 'Μουσαμάδες, forex και αυτοκόλλητα σε 2-3 εργάσιμες. Roll-up και X-banner σε 2-4 εργάσιμες, ανάλογα με τη διαθεσιμότητα μηχανισμών. Παραλαβή από το γραφείο μας ή παράδοση στην Άρτα και σε όλη την Ήπειρο. Για μουσαμά στην πρόσοψη, αναλαμβάνουμε και την τοποθέτηση.',
-          en: 'Vinyl banners, foam board and stickers in 2-3 working days. Roll-ups and X-banners in 2-4 working days, depending on mechanism availability. Collect from our office or delivery in Arta and across Epirus. For a frontage banner we also handle installation.',
+          el: 'Μουσαμάδες, forex και αυτοκόλλητα σε 2-3 εργάσιμες. Roll-up και X-banner σε 2-4 εργάσιμες, ανάλογα με τη διαθεσιμότητα μηχανισμών. Παραλαβή από το γραφείο μας ή παράδοση στην Άρτα και σε όλη την Ήπειρο. Για μουσαμά στην πρόσοψη, αναλαμβάνουμε και την τοποθέτηση, και τη γράφουμε στην προσφορά.',
+          en: 'Vinyl banners, foam board and stickers in 2-3 working days. Roll-ups and X-banners in 2-4 working days, depending on mechanism availability. Collect from our office or delivery in Arta and across Epirus. For a frontage banner we also handle installation, and state it in the quote.',
         },
       ],
       link: { path: '/epigrafes-arta', label: { el: 'Για μόνιμη επιγραφή, δείτε τις επιγραφές καταστημάτων', en: 'For a permanent sign, see shop signage' } },
@@ -98,15 +98,15 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζει ένα banner 3 x 1 μέτρων;', en: 'How much does a 3 x 1 metre banner cost?' },
       a: {
-        el: 'Τρία τετραγωνικά μέτρα επί {price:bannerPerSqm} το τετραγωνικό, δηλαδή από 90 ευρώ, με τρύπες περιμετρικά. Η τοποθέτηση, αν τη θέλετε, κοστολογείται ξεχωριστά.',
-        en: 'Three square metres at {price:bannerPerSqm} per square metre, so from 90 euros, with eyelets. Installation, if you want it, is priced separately.',
+        el: 'Ο μουσαμάς κοστολογείται ανά τετραγωνικό μέτρο, οπότε ένα 3 x 1 είναι τρία τετραγωνικά συν τις τρύπες. Στείλτε μας διαστάσεις και αρχείο και έχετε γραπτή προσφορά την ίδια μέρα. Η τοποθέτηση, αν τη θέλετε, μπαίνει ξεχωριστά στην ίδια προσφορά.',
+        en: 'Vinyl is priced per square metre, so a 3 x 1 is three square metres plus eyelets. Send us dimensions and the file and you have a written quote the same day. Installation, if you want it, is listed separately in the same quote.',
       },
     },
     {
       q: { el: 'Το roll-up περιλαμβάνει τον μηχανισμό;', en: 'Does the roll-up include the mechanism?' },
       a: {
-        el: 'Ναι. Η τιμή του roll-up περιλαμβάνει την εκτύπωση 85 x 200, τον μηχανισμό αλουμινίου και την τσάντα μεταφοράς. Αν έχετε ήδη μηχανισμό, τυπώνουμε μόνο το πανό.',
-        en: 'Yes. The roll-up price includes the 85 x 200 print, the aluminium mechanism and the carry bag. If you already have a mechanism, we print just the graphic.',
+        el: 'Ναι. Η προσφορά για roll-up περιλαμβάνει την εκτύπωση 85 x 200, τον μηχανισμό αλουμινίου και την τσάντα μεταφοράς. Αν έχετε ήδη μηχανισμό, τυπώνουμε μόνο το πανό.',
+        en: 'Yes. The roll-up quote includes the 85 x 200 print, the aluminium mechanism and the carry bag. If you already have a mechanism, we print just the graphic.',
       },
     },
     {
@@ -124,14 +124,12 @@ export const page: ContentPage = {
       },
     },
   ],
-  priceFrom: 'bannerPerSqm',
-  priceLabel: { el: 'Banner, ανά τετραγωνικό', en: 'Banner, per square metre' },
-  priceNote: { el: 'Μουσαμάς με τρύπες. Ψηφιακό δείγμα πριν την παραγωγή, παράδοση σε 2-3 εργάσιμες.', en: 'Eyeleted vinyl. Digital proof before production, delivery in 2-3 working days.' },
+  quoteNote: { el: 'Ανά τετραγωνικό και υλικό. Προσφορά την ίδια μέρα, ψηφιακό δείγμα πριν την παραγωγή, παράδοση σε 2-3 εργάσιμες.', en: 'Per square metre and material. Quote the same day, digital proof before production, delivery in 2-3 working days.' },
   related: [
     { path: '/ektypwseis-arta', label: { el: 'Εκτυπώσεις μεγάλου μεγέθους Άρτα', en: 'Large-format printing Arta' }, description: { el: 'Αφίσες, αυτοκόλλητα, συσκευασία και όλα τα μεγάλα μεγέθη.', en: 'Posters, stickers, packaging and every large format.' } },
     { path: '/epigrafes-arta', label: { el: 'Επιγραφές καταστημάτων', en: 'Shop signage' }, description: { el: 'Για ό,τι πρέπει να μείνει στην πρόσοψη για χρόνια.', en: 'For whatever must stay on the frontage for years.' } },
     { path: '/prints', label: { el: 'Εκτυπώσεις Άρτα', en: 'Printing Arta' }, description: { el: 'Κάρτες, φυλλάδια, κατάλογοι.', en: 'Cards, flyers, catalogues.' } },
-    { path: '/pricing', label: { el: 'Τιμοκατάλογος', en: 'Price list' }, description: { el: 'Όλες οι τιμές εκκίνησης.', en: 'Every starting price.' } },
+    { path: '/pricing', label: { el: 'Πακέτα υπηρεσιών', en: 'Service packages' }, description: { el: 'Τι περιλαμβάνει κάθε πακέτο εκτύπωσης.', en: 'What every print package includes.' } },
   ],
   projectsRoute: '/ektypwseis-arta',
   breadcrumb: [
@@ -141,7 +139,7 @@ export const page: ContentPage = {
   ],
   service: {
     name: 'Εκτύπωση Banner & Roll-up',
-    description: 'Εκτύπωση μεγάλου μεγέθους στην Άρτα: μουσαμάδες, roll-up, X-banner, forex, καμβάς και αυτοκόλλητα βιτρίνας, με ψηφιακό δείγμα πριν την παραγωγή. Από {price:bannerPerSqm}/τμ².',
+    description: 'Εκτύπωση μεγάλου μεγέθους στην Άρτα: μουσαμάδες, roll-up, X-banner, forex, καμβάς και αυτοκόλλητα βιτρίνας, με ψηφιακό δείγμα πριν την παραγωγή. Κατόπιν προσφοράς.',
     serviceType: ['Large Format Printing', 'Banner Printing', 'Roll-up Banners', 'Printing'],
   },
 }

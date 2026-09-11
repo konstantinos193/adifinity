@@ -6,11 +6,16 @@
  * are checked for the same properties from `lib/content`.
  */
 import assert from 'node:assert/strict'
+import { readdirSync, readFileSync } from 'node:fs'
+import path from 'node:path'
 import { describe, it } from 'node:test'
+import { fileURLToPath } from 'node:url'
 
 import { INDEXABLE_ROUTES } from '@/app/sitemap'
+import * as faqData from '@/app/components/faqData'
+import * as relatedLinks from '@/app/components/relatedLinksData'
 import { CONTENT_PAGES } from '@/lib/content'
-import { PRICES, withFacts } from '@/lib/company'
+import { withFacts } from '@/lib/company'
 import { SEO_REGISTRY } from '@/lib/seo-registry'
 
 const derived = new Set(CONTENT_PAGES.map((page) => page.path))
@@ -49,28 +54,67 @@ describe('seo registry', () => {
   it('dates are ISO and not in the future', () => {
     const today = new Date().toISOString().slice(0, 10)
     for (const record of SEO_REGISTRY) {
-      for (const date of [record.lastReviewed, record.priceLastVerified].filter(Boolean) as string[]) {
-        assert.match(date, /^\d{4}-\d{2}-\d{2}$/, record.path)
-        assert.ok(date <= today, `${record.path}: ${date} is in the future`)
+      const date = record.lastReviewed
+      assert.match(date, /^\d{4}-\d{2}-\d{2}$/, record.path)
+      assert.ok(date <= today, `${record.path}: ${date} is in the future`)
+    }
+  })
+})
+
+/**
+ * The site publishes no prices: every service is quoted per project (see
+ * `QUOTE_TURNAROUND_HOURS` in lib/company.ts). This walks every string a page
+ * can render from data and fails on anything that reads as a first-party
+ * price, so a figure cannot creep back in through a content file, a FAQ array
+ * or a translation.
+ */
+const PRICE_PATTERNS: [RegExp, string][] = [
+  [/\{price:/, 'the removed {price:key} placeholder'],
+  [/€/, 'a euro sign'],
+  [/\b\d[\d.,]*\s?(ευρώ|euros?|EUR)\b/i, 'a euro amount'],
+  [/\b(από|from)\s+\d[\d.,]*\s?(€|ευρώ|euro)/i, 'a "from N euro" starting price'],
+]
+
+/** Third-party figures the copy may quote: they are not our prices. */
+const THIRD_PARTY_PRICE_ALLOWLIST = [
+  /Shopify/i, // "Shopify costs €30-500/month" on the e-commerce page
+  /κρατήσεις αξίας|bookings a year|χιλιάδες ευρώ|thousand euros/i, // client revenue examples on booking pages
+]
+
+function assertNoFirstPartyPrice(value: unknown, where: string) {
+  if (typeof value === 'string') {
+    if (THIRD_PARTY_PRICE_ALLOWLIST.some((re) => re.test(value))) return
+    for (const [re, what] of PRICE_PATTERNS) {
+      assert.ok(!re.test(value), `${where} contains ${what}: "${value.slice(0, 80)}"`)
+    }
+  } else if (Array.isArray(value)) value.forEach((v, i) => assertNoFirstPartyPrice(v, `${where}[${i}]`))
+  else if (value && typeof value === 'object') for (const [k, v] of Object.entries(value)) assertNoFirstPartyPrice(v, `${where}.${k}`)
+}
+
+describe('no published prices', () => {
+  it('content pages carry no first-party price', () => {
+    for (const page of CONTENT_PAGES) assertNoFirstPartyPrice(page, page.path)
+  })
+
+  it('FAQ arrays and related-link descriptions carry no first-party price', () => {
+    assertNoFirstPartyPrice(faqData, 'faqData')
+    assertNoFirstPartyPrice(relatedLinks, 'relatedLinksData')
+  })
+
+  it('message files carry no first-party price', () => {
+    const root = fileURLToPath(new URL('../messages/', import.meta.url))
+    for (const locale of readdirSync(root)) {
+      const dir = path.join(root, locale)
+      for (const file of readdirSync(dir)) {
+        if (!file.endsWith('.json')) continue
+        const json = JSON.parse(readFileSync(path.join(dir, file), 'utf8'))
+        assertNoFirstPartyPrice(json, `messages/${locale}/${file}`)
       }
     }
   })
 })
 
 describe('content pages', () => {
-  it('resolve every price placeholder they use', () => {
-    const known = new Set(Object.keys(PRICES))
-    const scan = (value: unknown, where: string) => {
-      if (typeof value === 'string') {
-        for (const [, key] of value.matchAll(/\{price:(\w+)\}/g)) {
-          assert.ok(known.has(key), `${where} uses unknown price key "${key}"`)
-        }
-      } else if (Array.isArray(value)) value.forEach((v, i) => scan(v, `${where}[${i}]`))
-      else if (value && typeof value === 'object') for (const [k, v] of Object.entries(value)) scan(v, `${where}.${k}`)
-    }
-    for (const page of CONTENT_PAGES) scan(page, page.path)
-  })
-
   it('keep seo titles and descriptions within SERP limits', () => {
     for (const page of CONTENT_PAGES) {
       const title = withFacts(page.seoTitle)

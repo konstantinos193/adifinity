@@ -166,34 +166,19 @@ export function FlyerDistributionClient() {
       icon: <DoorToDoorIcon className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]" />,
       title: t('flyer_distribution_page.services.residential.title') as string,
       description: t('flyer_distribution_page.services.residential.description') as string,
-      items: [
-        "Στοχευμένη κάλυψη συγκεκριμένων περιοχών",
-        "Ενημέρωση κατοίκων για προσφορές & νέες επιχειρήσεις",
-        "Εξατομικευμένη προσέγγιση για κάθε γειτονιά",
-        "Αναφορά κάλυψης με λεπτομερή στοιχεία",
-      ],
+      items: asArray<string>(t('flyer_distribution_page.services.residential.items')),
     },
     {
       icon: <BusinessDistributionIcon className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]" />,
       title: t('flyer_distribution_page.services.business.title') as string,
       description: t('flyer_distribution_page.services.business.description') as string,
-      items: [
-        "Ενημέρωση επαγγελματιών για προϊόντα & υπηρεσίες",
-        "Τοποθέτηση διαφημιστικού υλικού σε σημεία υψηλής επισκεψιμότητας",
-        "Προσέγγιση επιχειρήσεων συγκεκριμένου κλάδου",
-        "Δημιουργία επαγγελματικών συνεργασιών",
-      ],
+      items: asArray<string>(t('flyer_distribution_page.services.business.items')),
     },
     {
       icon: <TargetedDistributionIcon className="w-10 h-10 sm:w-12 sm:h-12 text-[#07141C]" />,
       title: t('flyer_distribution_page.services.targeted.title') as string,
       description: t('flyer_distribution_page.services.targeted.description') as string,
-      items: [
-        "Τοποθέτηση εντύπων σε stands & σημεία ενδιαφέροντος",
-        "Ειδικές προωθητικές καμπάνιες με brand ambassadors",
-        "Διανομή σε εκδηλώσεις, φεστιβάλ και εμπορικά κέντρα",
-        "Συνδυασμός με άμεση επικοινωνία με το κοινό",
-      ],
+      items: asArray<string>(t('flyer_distribution_page.services.targeted.items')),
     },
   ]
 

@@ -8,7 +8,7 @@ import { GuidesHubClient } from './GuidesHubClient'
 
 const TITLE = 'Οδηγοί: Τι Κοστίζει Λογότυπο, Ιστοσελίδα, Επιγραφή | adinfinity'
 const DESCRIPTION =
-  'Οδηγοί κόστους και απόφασης από την adinfinity: πόσο κοστίζει ένα λογότυπο, μια ιστοσελίδα, μια επιγραφή, WordPress ή Next.js, και πώς διαφημίζεται μια μικρή επιχείρηση στην Άρτα. Με πραγματικές τιμές.'
+  'Οδηγοί κόστους και απόφασης από την adinfinity: τι καθορίζει το κόστος ενός λογοτύπου, μιας ιστοσελίδας, μιας επιγραφής, WordPress ή Next.js, και πώς διαφημίζεται μια μικρή επιχείρηση στην Άρτα.'
 
 export const metadata: Metadata = {
   title: TITLE,

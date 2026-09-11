@@ -1,5 +1,4 @@
 import type { Crumb } from '@/lib/schema'
-import type { PriceKey } from '@/lib/company'
 
 /**
  * Bilingual content pages — guides, sub-services and vertical pages.
@@ -18,7 +17,11 @@ import type { PriceKey } from '@/lib/company'
  *
  * Every string is `{ el, en }`. The server always renders Greek (see
  * `lib/metadata.ts`); English is the client-side toggle. Strings may carry
- * `{price:key}` / `{clients}` placeholders — they are substituted at render.
+ * `{clients}` / `{founded}` placeholders, substituted at render.
+ *
+ * No prices, anywhere: the site quotes per project (see `lib/company.ts`).
+ * A page says what is included, what determines the cost, and how fast a
+ * written quote arrives; `quoteNote` is the one-line version of that.
  */
 export interface L {
   el: string
@@ -68,10 +71,8 @@ export interface ContentPage {
   intro: L[]
   sections: ContentSection[]
   faq: ContentFaq[]
-  /** Renders a "από €…" price box from `lib/company.ts`. */
-  priceFrom?: PriceKey
-  priceLabel?: L
-  priceNote?: L
+  /** Service pages: one line under "Κατόπιν προσφοράς" (what determines the cost, quote turnaround). */
+  quoteNote?: L
   /** Cluster links: one related service, one case study route, one guide, the conversion path. */
   related: ContentLink[]
   /** Key for `pickProjects()` — which case studies prove this page. */

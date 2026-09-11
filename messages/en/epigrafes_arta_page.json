@@ -57,11 +57,11 @@
   "faq": [
     {
       "question": "How much do store signs cost?",
-      "answer": "Prices depend on material and size. Acrylic signs from {price:signageAcrylicPerSqm}/m², LED signs from {price:signageLed}, neon signs from {price:signageNeon}. We provide free quotes."
+      "answer": "On quotation. The cost depends on the material (acrylic, aluminium, LED, neon), the dimensions, the number of letters and the mounting height. With a photo of the frontage and dimensions you have a written quote within 24 hours, no obligation."
     },
     {
       "question": "Do you provide installation?",
-      "answer": "Yes, we provide professional installation throughout Epirus. Installation is included in price for signs over {price:signageInstallIncludedFrom}."
+      "answer": "Yes, we provide professional installation throughout Epirus, including the electrical connection for lit signs. Installation is listed as its own line in the quote, so you know what covers fabrication and what covers installation."
     },
     {
       "question": "What materials do you use?",
@@ -83,6 +83,6 @@
   },
   "seo": {
     "title": "Store Signage Arta | Neon, LED & Business Signs | adinfinity",
-    "description": "Professional store signage in Arta. Neon signs, LED signs, store signage, vehicle graphics. Prices from {price:signageAcrylicPerSqm}/m². Installation in Epirus. +30 2681 303007"
+    "description": "Professional store signage in Arta. Neon signs, LED signs, store signage, vehicle graphics. On-site measurement, quote within 24 hours, installation across Epirus. +30 2681 303007"
   }
 }

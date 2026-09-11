@@ -44,9 +44,16 @@ export const AREA_SERVED = [
 
 /** One level of a breadcrumb trail. The final crumb is the current page. */
 export interface Crumb {
+  /** Greek — what the BreadcrumbList JSON-LD carries. */
   name: string
   /** Route-absolute path, e.g. `/website-development`. Omit on the current page. */
   path?: string
+  /**
+   * English label for the visible trail. Usually unnecessary — the visible
+   * component resolves English by `path` via `lib/routeNames.ts`; set this only
+   * for crumbs that are data rather than routes (a project name, say).
+   */
+  nameEn?: string
 }
 
 /**

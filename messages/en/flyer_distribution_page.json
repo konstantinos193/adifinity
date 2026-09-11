@@ -19,15 +19,33 @@
   "services": {
     "residential": {
       "title": "Residential Distribution",
-      "description": "Door-to-door delivery to homes and apartments"
+      "description": "Door-to-door delivery to homes and apartments",
+      "items": [
+        "Targeted coverage of specific areas",
+        "Informing residents about offers & new businesses",
+        "A tailored approach for each neighbourhood",
+        "Coverage report with detailed data"
+      ]
     },
     "business": {
       "title": "Business Distribution",
-      "description": "Targeted delivery to commercial establishments"
+      "description": "Targeted delivery to commercial establishments",
+      "items": [
+        "Informing professionals about products & services",
+        "Placing promotional material at high-traffic spots",
+        "Reaching businesses in a specific sector",
+        "Building professional partnerships"
+      ]
     },
     "targeted": {
       "title": "Targeted Campaigns",
-      "description": "Strategic distribution based on demographics"
+      "description": "Strategic distribution based on demographics",
+      "items": [
+        "Placing flyers on stands & at points of interest",
+        "Special promotional campaigns with brand ambassadors",
+        "Distribution at events, festivals and shopping centres",
+        "Combined with direct contact with the audience"
+      ]
     },
     "specialized": {
       "title": "Specialized Distribution",

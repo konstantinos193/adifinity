@@ -122,94 +122,27 @@ export const COMPANY_FACTS = {
 /* ------------------------------------------------------------------ */
 
 /**
- * Canonical starting prices, in euros. The pricing page is the reference; every
- * other mention on the site must resolve to these.
+ * The site publishes no prices. Every service is quoted per project.
  *
- * Why this exists
- * ---------------
- * The 2026-09-11 audit found the same service priced three ways: a logo was
- * "από €150" in the graphic-design guide FAQ, "από €250" on the branding page
- * and part of a "από €300" package on the pricing page; a website was "από
- * €800" in the web-development FAQ and "από €1.200" on the pricing page; social
- * media management was "από €200/μήνα" on one page and "από €250/μήνα" on
- * another. A prospect who reads two pages sees the company contradict itself
- * on the one thing they came to check.
+ * Decision of 2026-09-11: the earlier `PRICES` table and the `{price:key}`
+ * placeholder were removed, and every page that stated "από €…" now says
+ * "κατόπιν προσφοράς". `__tests__/seo-registry.test.ts` asserts that no
+ * first-party price appears in content pages, FAQ arrays or message files, so
+ * one cannot creep back in through a single edit.
  *
- * Message files and FAQ arrays now carry `{price:key}` placeholders (see
- * {@link withFacts}) rather than digits, so a price changes in exactly one
- * place. Where two figures conflicted, the *pricing page* figure won — it is the
- * page a visitor is sent to for the answer — except for the logo, where the
- * standalone "από €250" on the branding page is kept as the logo-only price and
- * the €300 "Βασικό" package (logo + cards) stays a package.
- *
- * Verify these against what the business actually invoices before changing
- * them; they are stated here as found on the site, not re-priced.
+ * What replaces a figure: what the work includes, what determines the cost,
+ * how long it takes, and how quickly a written quote arrives.
  */
-export const PRICES = {
-  // Design & branding
-  logo: 250,
-  brandBasicPackage: 300,
-  brandIdentity: 700,
-  brandPremium: 1400,
-  // Websites
-  websiteStarter: 1200,
-  websiteBusiness: 2500,
-  eshop: 4500,
-  // Printing
-  printsSmall: 80,
-  printsMedium: 200,
-  printsLarge: 450,
-  businessCardsPer100: 5,
-  flyersPer500: 20,
-  bannerPerSqm: 30,
-  // Flyer distribution
-  distributionLocal: 150,
-  distributionExtended: 400,
-  distributionRegional: 900,
-  // Market research
-  researchBasic: 450,
-  researchExtended: 950,
-  researchAudit: 2200,
-  // Digital marketing (management fee per month, ad spend excluded)
-  socialMonthly: 250,
-  adsMonthly: 300,
-  fullDigitalMonthly: 350,
-  adSpendMin: 150,
-  adSpendMax: 300,
-  // Signage
-  signageAcrylicPerSqm: 50,
-  signageLed: 150,
-  signageNeon: 200,
-  signageInstallIncludedFrom: 200,
-  // Promotional gifts (per item, in quantity)
-  promoGiftMin: 0.5,
-} as const
+export const QUOTE_TURNAROUND_HOURS = 24
 
-export type PriceKey = keyof typeof PRICES
-
-/**
- * Greek-locale euro formatting: `€1.200`, `€0,50`, `€250`.
- *
- * Thousands take a dot and decimals a comma, which is how every price on the
- * site was already typed by hand.
- */
-export function euro(value: number): string {
-  const [whole, fraction] = value.toFixed(value % 1 === 0 ? 0 : 2).split('.')
-  const grouped = whole.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
-  return `€${grouped}${fraction ? `,${fraction}` : ''}`
-}
 
 /**
  * Substitutes the fact placeholders in a copy string.
  *
  * Supports `{years}`, `{projects}`, `{projectsFloor}`, `{liveSites}`,
- * `{clients}`, `{completedProjects}`, `{founded}` and `{price:<key>}` for any
- * key of {@link PRICES}. Message files carry the placeholder rather than the
- * digits, so a number can never be updated on one page and missed on another.
- *
- * An unknown price key is left in place verbatim so it is visible in the
- * rendered page and fails `__tests__/facts.test.ts`, rather than silently
- * rendering an empty price.
+ * `{clients}`, `{completedProjects}` and `{founded}`. Message files carry the
+ * placeholder rather than the digits, so a number can never be updated on one
+ * page and missed on another.
  */
 export function withFacts(template: string): string {
   return template
@@ -220,9 +153,6 @@ export function withFacts(template: string): string {
     .replace(/\{completedProjects\}/g, String(COMPANY_FACTS.completedProjects))
     .replace(/\{clients\}/g, String(COMPANY_FACTS.clients))
     .replace(/\{founded\}/g, String(COMPANY_FACTS.foundedYear))
-    .replace(/\{price:(\w+)\}/g, (match, key: string) =>
-      key in PRICES ? euro(PRICES[key as PriceKey]) : match,
-    )
 }
 
 /**
@@ -230,7 +160,7 @@ export function withFacts(template: string): string {
  *
  * Message namespaces are run through this once, when they are loaded (see
  * `components/useTranslations.tsx`, `lib/metadata.ts`, `i18n/request.ts`), so
- * a FAQ answer or a hero paragraph can carry `{price:logo}` without each
+ * a FAQ answer or a hero paragraph can carry `{clients}` without each
  * rendering component having to remember to substitute it.
  */
 export function withFactsDeep<T>(value: T): T {

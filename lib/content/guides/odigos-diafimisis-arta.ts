@@ -5,12 +5,12 @@ export const page: ContentPage = {
   kind: 'guide',
   seoTitle: 'Οδηγός Διαφήμισης για Μικρή Επιχείρηση στην Άρτα (2026)',
   seoDescription:
-    'Τι χρειάζεται μια μικρή επιχείρηση στην Άρτα για να τη βρίσκουν: λογότυπο, επιγραφή, κάρτες, Google Business Profile, ιστοσελίδα, φυλλάδια. Με σειρά, τιμές και χρόνους.',
+    'Τι χρειάζεται μια μικρή επιχείρηση στην Άρτα για να τη βρίσκουν: λογότυπο, επιγραφή, κάρτες, Google Business Profile, ιστοσελίδα, φυλλάδια. Με σειρά και χρόνους.',
   badge: { el: 'Τοπικός οδηγός', en: 'Local guide' },
   h1: { el: 'Οδηγός διαφήμισης για μικρή επιχείρηση στην Άρτα', en: 'Advertising guide for a small business in Arta' },
   summary: {
-    el: 'Με ποια σειρά να τα κάνετε, τι κοστίζει το καθένα και τι δουλεύει σε μια πόλη όπου όλοι ξέρουν όλους.',
-    en: 'In which order to do things, what each one costs, and what works in a town where everyone knows everyone.',
+    el: 'Με ποια σειρά να τα κάνετε, πόσο διαρκεί το καθένα και τι δουλεύει σε μια πόλη όπου όλοι ξέρουν όλους.',
+    en: 'In which order to do things, how long each one takes, and what works in a town where everyone knows everyone.',
   },
   intro: [
     {
@@ -18,8 +18,8 @@ export const page: ContentPage = {
       en: 'A small business in Arta does not need a "campaign". It needs, in this order: a logo that scales, a sign visible from the street, cards and a menu or price list, a properly completed Google Business Profile, a website that loads on a phone, and then social media or flyers depending on who you want to reach.',
     },
     {
-      el: 'Όλα μαζί, στη βασική τους μορφή, κοστίζουν λιγότερο από ό,τι φαντάζονται οι περισσότεροι. Παρακάτω τα βάζουμε σε σειρά με τιμές από τον τιμοκατάλογό μας και χρόνους που τηρούμε.',
-      en: 'All together, in their basic form, they cost less than most people imagine. Below we put them in order with prices from our price list and lead times we keep.',
+      el: 'Όλα μαζί, στη βασική τους μορφή, γίνονται από ένα γραφείο σε τρεις έως τέσσερις εβδομάδες. Παρακάτω τα βάζουμε σε σειρά, με χρόνους που τηρούμε και με το τι καθορίζει το κόστος του καθενός. Το ακριβές ποσό το παίρνετε γραπτώς, μέσα σε 24 ώρες από την πρώτη κουβέντα.',
+      en: 'All together, in their basic form, one office can do them in three to four weeks. Below we put them in order, with lead times we keep and what determines the cost of each. The exact figure comes in writing, within 24 hours of the first conversation.',
     },
   ],
   sections: [
@@ -34,45 +34,45 @@ export const page: ContentPage = {
       table: {
         head: [
           { el: 'Βήμα', en: 'Step' },
-          { el: 'Από', en: 'From' },
           { el: 'Χρόνος', en: 'Time' },
+          { el: 'Τι καθορίζει το κόστος', en: 'What sets the cost' },
           { el: 'Γιατί πρώτα', en: 'Why first' },
         ],
         rows: [
           [
             { el: '1. Λογότυπο', en: '1. Logo' },
-            { el: '{price:logo}', en: '{price:logo}' },
             { el: '3-5 εργάσιμες', en: '3-5 working days' },
+            { el: 'Προτάσεις, γύροι διορθώσεων, εφαρμογές', en: 'Concepts, revision rounds, applications' },
             { el: 'Μπαίνει στην επιγραφή, στις κάρτες, στο Google, παντού', en: 'Goes on the sign, the cards, Google, everywhere' },
           ],
           [
             { el: '2. Επιγραφή', en: '2. Sign' },
-            { el: '{price:signageAcrylicPerSqm}/τμ²', en: '{price:signageAcrylicPerSqm}/m²' },
             { el: '5-7 εργάσιμες', en: '5-7 working days' },
+            { el: 'Μέγεθος, υλικό, φωτισμός, ύψος τοποθέτησης', en: 'Size, material, lighting, mounting height' },
             { el: 'Το πρώτο πράγμα που βλέπει όποιος περνά από τον δρόμο', en: 'The first thing anyone passing on the street sees' },
           ],
           [
             { el: '3. Κάρτες, μενού, τιμοκατάλογος', en: '3. Cards, menu, price list' },
-            { el: '{price:businessCardsPer100} / 100 κάρτες', en: '{price:businessCardsPer100} / 100 cards' },
             { el: '2-3 εργάσιμες', en: '2-3 working days' },
+            { el: 'Ποσότητα, χαρτί, φινίρισμα', en: 'Quantity, paper, finish' },
             { el: 'Ό,τι φεύγει από το κατάστημα μαζί με τον πελάτη', en: 'Whatever leaves the shop with the customer' },
           ],
           [
             { el: '4. Google Business Profile', en: '4. Google Business Profile' },
-            { el: 'Δωρεάν', en: 'Free' },
             { el: '1 ημέρα', en: '1 day' },
+            { el: 'Δωρεάν από τη Google', en: 'Free from Google' },
             { el: 'Έτσι σας βρίσκουν στο «κοντά μου» και στους χάρτες', en: 'This is how people find you in "near me" and on maps' },
           ],
           [
             { el: '5. Ιστοσελίδα', en: '5. Website' },
-            { el: '{price:websiteStarter}', en: '{price:websiteStarter}' },
             { el: '2-4 εβδομάδες', en: '2-4 weeks' },
+            { el: 'Σελίδες, admin, γλώσσες, κρατήσεις', en: 'Pages, admin, languages, bookings' },
             { el: 'Η μόνη διεύθυνση online που σας ανήκει', en: 'The only online address you own' },
           ],
           [
             { el: '6. Social media ή φυλλάδια', en: '6. Social media or flyers' },
-            { el: '{price:socialMonthly}/μήνα ή {price:distributionLocal}', en: '{price:socialMonthly}/month or {price:distributionLocal}' },
             { el: 'Συνεχές ή 1-5 ημέρες', en: 'Ongoing or 1-5 days' },
+            { el: 'Κανάλια και όγκος, ή ποσότητα και ζώνες', en: 'Channels and volume, or quantity and zones' },
             { el: 'Ανάλογα με το αν το κοινό σας είναι στο κινητό ή στη γειτονιά', en: 'Depending on whether your audience is on the phone or in the neighbourhood' },
           ],
         ],
@@ -95,8 +95,8 @@ export const page: ContentPage = {
       heading: { el: 'Φυλλάδια ή Facebook; Εξαρτάται από τον πελάτη', en: 'Flyers or Facebook? Depends on the customer' },
       paragraphs: [
         {
-          el: 'Αν οι πελάτες σας είναι τα νοικοκυριά μιας γειτονιάς (ταβέρνα, φούρνος, τεχνικός, ιατρείο), 1.000 φυλλάδια πόρτα-πόρτα με καταγραφή διαδρομής GPS κοστίζουν από {price:distributionLocal} και ξέρετε ακριβώς σε ποιους δρόμους πήγαν. Αν οι πελάτες σας είναι κάτω των 40 και αποφασίζουν από το κινητό (καφέ, μπαρ, ρούχα, κομμωτήριο), η διαχείριση social media από {price:socialMonthly} τον μήνα και μια μικρή καμπάνια με {price:adSpendMin}-{price:adSpendMax} τον μήνα σε διαφημιστικό budget φτάνουν περισσότερους για τα ίδια χρήματα.',
-          en: 'If your customers are the households of a neighbourhood (taverna, bakery, technician, clinic), 1,000 door-to-door flyers with GPS route logging cost from {price:distributionLocal} and you know exactly which streets they went to. If your customers are under 40 and decide from their phone (café, bar, clothing, hairdresser), social media management from {price:socialMonthly} a month plus a small campaign with {price:adSpendMin}-{price:adSpendMax} a month in ad spend reaches more people for the same money.',
+          el: 'Αν οι πελάτες σας είναι τα νοικοκυριά μιας γειτονιάς (ταβέρνα, φούρνος, τεχνικός, ιατρείο), φυλλάδια πόρτα-πόρτα με καταγραφή διαδρομής GPS φτάνουν ακριβώς στους δρόμους που επιλέγετε, και ξέρετε πού πήγαν. Αν οι πελάτες σας είναι κάτω των 40 και αποφασίζουν από το κινητό (καφέ, μπαρ, ρούχα, κομμωτήριο), η διαχείριση social media και μια μικρή στοχευμένη καμπάνια στην Άρτα φτάνουν περισσότερους για τα ίδια χρήματα.',
+          en: 'If your customers are the households of a neighbourhood (taverna, bakery, technician, clinic), door-to-door flyers with GPS route logging reach exactly the streets you choose, and you know where they went. If your customers are under 40 and decide from their phone (café, bar, clothing, hairdresser), social media management plus a small targeted campaign in Arta reaches more people for the same money.',
         },
         {
           el: 'Τα δύο δεν αποκλείονται. Ένα φυλλάδιο με QR που οδηγεί στο Instagram σας δουλεύει και για τους δύο.',
@@ -116,47 +116,47 @@ export const page: ContentPage = {
       ],
     },
     {
-      heading: { el: 'Τι κοστίζει το βασικό πακέτο εκκίνησης', en: 'What the basic starter set costs' },
+      heading: { el: 'Το βασικό σετ εκκίνησης', en: 'The basic starter set' },
       paragraphs: [
         {
-          el: 'Λογότυπο ({price:logo}), 200 επαγγελματικές κάρτες, μια ακρυλική επιγραφή δύο τετραγωνικών και μια ιστοσελίδα Starter ({price:websiteStarter}) κοστίζουν συνολικά λιγότερο από 1.700 ευρώ, με το Google Business Profile δωρεάν. Είναι το σύνολο που χρειάζεται μια νέα επιχείρηση για να τη βρίσκουν, και γίνεται σε τρεις έως τέσσερις εβδομάδες από ένα γραφείο, στην Άρτα.',
-          en: 'A logo ({price:logo}), 200 business cards, a two-square-metre acrylic sign and a Starter website ({price:websiteStarter}) come to under 1,700 euros in total, with the Google Business Profile free. That is the set a new business needs to be found, and it is done in three to four weeks by one office, in Arta.',
+          el: 'Λογότυπο, μια ποσότητα επαγγελματικών καρτών, μια ακρυλική επιγραφή στην πρόσοψη και μια ιστοσελίδα Starter, με το Google Business Profile δωρεάν: αυτό είναι το σύνολο που χρειάζεται μια νέα επιχείρηση για να τη βρίσκουν. Γίνεται από ένα γραφείο, στην Άρτα, σε τρεις έως τέσσερις εβδομάδες, και κοστολογείται ως ένα έργο, όχι ως τέσσερα.',
+          en: 'A logo, a run of business cards, an acrylic sign on the frontage and a Starter website, with the Google Business Profile free: that is the set a new business needs to be found. One office in Arta does it in three to four weeks, and it is quoted as one project, not four.',
         },
         {
           el: 'Αν ο προϋπολογισμός είναι μικρότερος, η σειρά μένει η ίδια: λογότυπο, επιγραφή, κάρτες, Google. Η ιστοσελίδα μπορεί να περιμένει έναν-δύο μήνες. Το λογότυπο όχι.',
           en: 'If the budget is smaller, the order stays the same: logo, sign, cards, Google. The website can wait a month or two. The logo cannot.',
         },
       ],
-      link: { path: '/pricing', label: { el: 'Όλες οι τιμές στον τιμοκατάλογο', en: 'All prices on the price list' } },
+      link: { path: '/contact#contact-form', label: { el: 'Ζητήστε προσφορά για το σετ εκκίνησης', en: 'Request a quote for the starter set' } },
     },
   ],
   faq: [
     {
-      q: { el: 'Από πού ξεκινάω αν έχω μόνο 500 ευρώ;', en: 'Where do I start if I only have 500 euros?' },
+      q: { el: 'Από πού ξεκινάω αν ο προϋπολογισμός είναι μικρός;', en: 'Where do I start if the budget is small?' },
       a: {
-        el: 'Λογότυπο ({price:logo}) και κάρτες. Μετά συμπληρώστε το Google Business Profile μόνοι σας, δωρεάν, με φωτογραφίες του χώρου. Η επιγραφή και η ιστοσελίδα έρχονται μόλις μπουν τα πρώτα έσοδα.',
-        en: 'Logo ({price:logo}) and cards. Then complete the Google Business Profile yourself, free, with photos of the premises. The sign and the website come once the first revenue is in.',
+        el: 'Λογότυπο και κάρτες. Μετά συμπληρώστε το Google Business Profile μόνοι σας, δωρεάν, με φωτογραφίες του χώρου. Η επιγραφή και η ιστοσελίδα έρχονται μόλις μπουν τα πρώτα έσοδα. Πείτε μας το ποσό που έχετε και σας λέμε τι χωράει.',
+        en: 'Logo and cards. Then complete the Google Business Profile yourself, free, with photos of the premises. The sign and the website come once the first revenue is in. Tell us the amount you have and we tell you what fits.',
       },
     },
     {
       q: { el: 'Χρειάζομαι ιστοσελίδα αν έχω Facebook;', en: 'Do I need a website if I have Facebook?' },
       a: {
-        el: 'Το Facebook δεν σας ανήκει και δεν εμφανίζεται στη Google όπως μια ιστοσελίδα. Για καφέ ή μπαρ μπορεί να αρκεί για έναν χρόνο. Για ιατρείο, τεχνικό γραφείο ή κατάλυμα, όχι: ο πελάτης ψάχνει στη Google και περιμένει να βρει σελίδα με υπηρεσίες, τιμές και τηλέφωνο.',
-        en: 'Facebook is not yours and does not appear on Google the way a website does. For a café or bar it may be enough for a year. For a clinic, a technical office or accommodation, no: the customer searches Google and expects a page with services, prices and a phone number.',
+        el: 'Το Facebook δεν σας ανήκει και δεν εμφανίζεται στη Google όπως μια ιστοσελίδα. Για καφέ ή μπαρ μπορεί να αρκεί για έναν χρόνο. Για ιατρείο, τεχνικό γραφείο ή κατάλυμα, όχι: ο πελάτης ψάχνει στη Google και περιμένει να βρει σελίδα με υπηρεσίες και τηλέφωνο.',
+        en: 'Facebook is not yours and does not appear on Google the way a website does. For a café or bar it may be enough for a year. For a clinic, a technical office or accommodation, no: the customer searches Google and expects a page with services and a phone number.',
       },
     },
     {
       q: { el: 'Πόσο κοστίζει η διαφήμιση στη Google για τοπική επιχείρηση;', en: 'How much does Google advertising cost for a local business?' },
       a: {
-        el: 'Για τοπική στόχευση στην Άρτα και την Ήπειρο, ένα ρεαλιστικό σημείο εκκίνησης είναι {price:adSpendMin}-{price:adSpendMax} τον μήνα σε διαφημιστικό budget, που πληρώνεται στην πλατφόρμα, συν η διαχείριση από {price:adsMonthly} τον μήνα. Ξεκινήστε όμως από το δωρεάν Google Business Profile.',
-        en: 'For local targeting in Arta and Epirus a realistic starting point is {price:adSpendMin}-{price:adSpendMax} a month in ad budget, paid to the platform, plus management from {price:adsMonthly} a month. But start with the free Google Business Profile.',
+        el: 'Δύο μέρη: το διαφημιστικό budget, που πληρώνεται στην πλατφόρμα και το ορίζετε εσείς, και η διαχείριση της καμπάνιας, που κοστολογείται κατόπιν προσφοράς ανάλογα με τα κανάλια. Ξεκινήστε όμως από το δωρεάν Google Business Profile.',
+        en: 'Two parts: the ad budget, paid to the platform and set by you, and campaign management, quoted per case depending on the channels. But start with the free Google Business Profile.',
       },
     },
     {
       q: { el: 'Μπορώ να τα κάνω όλα από ένα γραφείο;', en: 'Can I get it all from one office?' },
       a: {
-        el: 'Ναι, αυτό ακριβώς κάνουμε: λογότυπο, επιγραφή, εκτυπώσεις, ιστοσελίδα, social media και διανομές από το γραφείο μας στη Βασ. Πύρρου 30. Το πλεονέκτημα δεν είναι η ευκολία, είναι ότι όλα ταιριάζουν μεταξύ τους.',
-        en: 'Yes, that is exactly what we do: logo, sign, printing, website, social media and distribution from our office at Vas. Pyrrou 30. The advantage is not convenience, it is that everything matches.',
+        el: 'Ναι, αυτό ακριβώς κάνουμε: λογότυπο, επιγραφή, εκτυπώσεις, ιστοσελίδα, social media και διανομές από το γραφείο μας στη Βασ. Πύρρου 30. Το πλεονέκτημα δεν είναι η ευκολία, είναι ότι όλα ταιριάζουν μεταξύ τους, και μία γραπτή προσφορά καλύπτει τα πάντα.',
+        en: 'Yes, that is exactly what we do: logo, sign, printing, website, social media and distribution from our office at Vas. Pyrrou 30. The advantage is not convenience, it is that everything matches, and one written quote covers it all.',
       },
     },
   ],

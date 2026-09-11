@@ -85,23 +85,23 @@ export const page: ContentPage = {
       heading: { el: 'Κόστος και χρόνος', en: 'Cost and time' },
       paragraphs: [
         {
-          el: 'Ένα σύστημα κρατήσεων είναι web εφαρμογή και κοστολογείται ανάλογα με τις λειτουργίες. Για να έχετε τάξη μεγέθους: μια ιστοσελίδα καταλύματος με φόρμα αιτήματος κράτησης και admin ξεκινά στο επίπεδο του πακέτου Business, από {price:websiteBusiness}. Με online πληρωμές, εποχιακές τιμές και συγχρονισμό πλατφορμών, πλησιάζει το επίπεδο του E-shop, από {price:eshop}. Ο χρόνος είναι 4-12 εβδομάδες.',
-          en: 'A booking system is a web application and is priced by its features. For an order of magnitude: an accommodation website with a booking-request form and admin starts at the Business package level, from {price:websiteBusiness}. With online payments, seasonal pricing and platform sync it approaches the E-shop level, from {price:eshop}. Time is 4-12 weeks.',
+          el: 'Ένα σύστημα κρατήσεων είναι web εφαρμογή και κοστολογείται ανάλογα με τις λειτουργίες: αν θέλετε μόνο αίτημα κράτησης με admin, ή και online πληρωμές, εποχιακές τιμές και συγχρονισμό πλατφορμών. Καταγράφουμε μαζί τι χρειάζεστε σε ένα τηλεφώνημα και στέλνουμε γραπτή προσφορά με ανάλυση ανά λειτουργία μέσα σε 24 ώρες. Ο χρόνος κατασκευής είναι 4-12 εβδομάδες.',
+          en: 'A booking system is a web application and is priced by its features: whether you want only booking requests with an admin, or also online payments, seasonal pricing and platform sync. We list what you need together in one call and send a written quote itemised per feature within 24 hours. Build time is 4-12 weeks.',
         },
         {
           el: 'Η αριθμητική που μετράει: αν το κατάλυμά σας κάνει κρατήσεις αξίας 30.000 ευρώ τον χρόνο μέσω πλατφορμών, κάθε 10% που μεταφέρεται σε απευθείας κρατήσεις είναι 3.000 ευρώ τον χρόνο που μένουν σε εσάς αντί στην πλατφόρμα.',
           en: 'The arithmetic that matters: if your property takes 30,000 euros of bookings a year through platforms, every 10% moved to direct bookings is 3,000 euros a year that stays with you instead of the platform.',
         },
       ],
-      link: { path: '/pricing', label: { el: 'Τιμοκατάλογος', en: 'Price list' } },
+      link: { path: '/pricing', label: { el: 'Τι περιλαμβάνει κάθε πακέτο ιστοσελίδας', en: 'What every website package includes' } },
     },
   ],
   faq: [
     {
       q: { el: 'Πόσο κοστίζει ένα σύστημα κρατήσεων;', en: 'How much does a booking system cost?' },
       a: {
-        el: 'Από {price:websiteBusiness} για ιστοσελίδα με αίτημα κράτησης και admin, από {price:eshop} με online πληρωμές, εποχιακές τιμές και συγχρονισμό πλατφορμών. Το ακριβές ποσό βγαίνει αφού καταγράψουμε τις λειτουργίες που χρειάζεστε.',
-        en: 'From {price:websiteBusiness} for a website with booking requests and admin, from {price:eshop} with online payments, seasonal pricing and platform sync. The exact figure comes after we list the features you need.',
+        el: 'Κατόπιν προσφοράς. Το ποσό εξαρτάται από το αν χρειάζεστε μόνο αίτημα κράτησης με admin ή και online πληρωμές, εποχιακές τιμές και συγχρονισμό πλατφορμών. Καταγράφουμε τις λειτουργίες μαζί και στέλνουμε γραπτή προσφορά μέσα σε 24 ώρες, χωρίς δέσμευση.',
+        en: 'On quotation. The figure depends on whether you need only booking requests with an admin, or also online payments, seasonal pricing and platform sync. We list the features together and send a written quote within 24 hours, no obligation.',
       },
     },
     {
@@ -126,14 +126,12 @@ export const page: ContentPage = {
       },
     },
   ],
-  priceFrom: 'websiteBusiness',
-  priceLabel: { el: 'Ιστοσελίδα με κρατήσεις', en: 'Website with bookings' },
-  priceNote: { el: 'Με online πληρωμές και συγχρονισμό πλατφορμών από {price:eshop}. 4-12 εβδομάδες.', en: 'With online payments and platform sync from {price:eshop}. 4-12 weeks.' },
+  quoteNote: { el: 'Ανάλυση ανά λειτουργία: αίτημα κράτησης, online πληρωμές, εποχιακές τιμές, συγχρονισμός. 4-12 εβδομάδες.', en: 'Itemised per feature: booking requests, online payments, seasonal pricing, sync. 4-12 weeks.' },
   related: [
     { path: '/istoselides-xenodoxeion', label: { el: 'Ιστοσελίδες για καταλύματα', en: 'Websites for accommodation' }, description: { el: 'Δωμάτια, παραλίες, γλώσσες, κρατήσεις: όλη η δομή.', en: 'Rooms, beaches, languages, bookings: the whole structure.' } },
     { path: '/website-development/web-apps', label: { el: 'Web εφαρμογές & SaaS', en: 'Web applications & SaaS' }, description: { el: 'Πλατφόρμες και εργαλεία σε React και Node.js.', en: 'Platforms and tools in React and Node.js.' } },
     { path: '/website-development/e-commerce', label: { el: 'Κατασκευή e-shop', en: 'E-shop development' }, description: { el: 'Πληρωμές, αποθήκη, παραγγελίες.', en: 'Payments, inventory, orders.' } },
-    { path: '/guides/poso-kostizei-istoselida', label: { el: 'Πόσο κοστίζει μια ιστοσελίδα', en: 'How much a website costs' }, description: { el: 'Τα τρία επίπεδα τιμών και τα κόστη μετά.', en: 'The three price levels and the costs afterwards.' } },
+    { path: '/guides/poso-kostizei-istoselida', label: { el: 'Πόσο κοστίζει μια ιστοσελίδα', en: 'How much a website costs' }, description: { el: 'Τι καθορίζει το κόστος και τι έρχεται μετά.', en: 'What sets the cost and what comes afterwards.' } },
   ],
   projectSlugs: ['asterias-koronisia', 'lincanto-apartments', 'smh-real-estate', 'physio-elpida'],
   breadcrumb: [

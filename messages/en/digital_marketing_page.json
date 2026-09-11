@@ -98,12 +98,12 @@
       "description": "You speak directly with the person running your campaign, not with an account manager."
     }
   ],
-  "pricing_title": "Indicative Pricing",
-  "pricing_description": "These are starting prices and are adjusted to the scope of work. Ad spend is separate from the management fee.",
+  "pricing_title": "Retainer Packages",
+  "pricing_description": "Every package is priced by the channels and the volume of work, with a written quote within 24 hours. Ad spend is separate from the management fee.",
   "pricing_plans": [
     {
       "name": "Social Media",
-      "price": "from {price:socialMonthly}",
+      "price": "On quotation",
       "period": "/month",
       "description": "For businesses that want a consistent, professional presence.",
       "features": [
@@ -116,7 +116,7 @@
     },
     {
       "name": "Ads Management",
-      "price": "from {price:adsMonthly}",
+      "price": "On quotation",
       "period": "/month",
       "description": "Google & Meta Ads aimed at leads and sales.",
       "features": [
@@ -130,7 +130,7 @@
     },
     {
       "name": "SEO",
-      "price": "from {price:fullDigitalMonthly}",
+      "price": "On quotation",
       "period": "/month",
       "description": "Organic visibility that is built to last.",
       "features": [
@@ -147,11 +147,11 @@
   "faq": [
     {
       "question": "How much does digital marketing cost for a small business?",
-      "answer": "Social media management starts from {price:socialMonthly}/month and ads management from {price:adsMonthly}/month, excluding ad spend. The final cost depends on the channels and the volume of content. Request a free analysis for an exact quote."
+      "answer": "On quotation, on a monthly basis. The cost depends on which channels we run, the volume of content and whether ads management is included. Ad spend is separate and paid directly to the platform. Request a free analysis and you have a written quote within 24 hours."
     },
     {
       "question": "How much ad budget do I need for Google and Meta Ads?",
-      "answer": "For local targeting in Arta and Epirus, a realistic starting point is {price:adSpendMin}-{price:adSpendMax} per month in ad spend. That budget is paid directly to the platform and is separate from the management fee."
+      "answer": "It depends on the goal, the targeting area and the competition in your sector. In the proposal we send you we recommend a specific monthly budget for Arta and Epirus, based on what you want to achieve. That budget is paid directly to the platform and is separate from the management fee."
     },
     {
       "question": "How long until I see results?",

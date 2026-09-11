@@ -5,6 +5,7 @@ import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, ChevronDown } from "lucide-react"
 import LanguageSwitcher from "@/components/LanguageSwitcher"
+import { useLocale } from "@/components/LocaleProvider"
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -18,6 +19,8 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuProps) {
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<number | null>(null)
+  const { locale } = useLocale()
+  const isGreek = locale === "el"
 
   const toggleMobileDropdown = (index: number) => {
     setActiveMobileDropdown(activeMobileDropdown === index ? null : index)
@@ -67,7 +70,7 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  Μενού
+                  {isGreek ? "Μενού" : "Menu"}
                 </motion.h2>
                 <motion.button
                   onClick={onClose}
@@ -169,7 +172,7 @@ export default function MobileMenu({ isOpen, onClose, menuItems }: MobileMenuPro
                         className="w-full bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C] font-medium py-3 px-6 rounded-lg hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
                         whileTap={{ scale: 0.95 }}
                       >
-                        Επικοινωνία
+                        {isGreek ? "Επικοινωνία" : "Contact"}
                       </motion.button>
                     </Link>
                   </motion.li>

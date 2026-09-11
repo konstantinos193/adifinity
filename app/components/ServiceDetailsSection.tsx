@@ -1,13 +1,22 @@
+"use client"
+
+import { useLocale } from "@/components/LocaleProvider"
 import type { ServiceDetails } from "./serviceDetailsData"
 
 /**
  * Page-specific body content for the local landing pages.
  *
- * A server component with no interactivity: this is the content that has to be
- * in the initial HTML for the page to stop reading as a template clone, so
- * nothing here may depend on hydration.
+ * This is the content that has to be in the initial HTML for the page to stop
+ * reading as a template clone, so nothing here may depend on hydration: the
+ * server (and first client render) is Greek, and the only thing the client
+ * boundary adds is following the language toggle afterwards. Before this the
+ * section was a locale-blind server component, so it stayed Greek on every
+ * page after a visitor switched to English.
  */
-export default function ServiceDetailsSection({ details }: { details: ServiceDetails }) {
+export default function ServiceDetailsSection({ details: copy }: { details: ServiceDetails }) {
+  const { locale } = useLocale()
+  const details = copy[locale] ?? copy.el
+
   return (
     <section className="py-16 bg-[#0A1A24]">
       <div className="container mx-auto px-4 max-w-4xl">

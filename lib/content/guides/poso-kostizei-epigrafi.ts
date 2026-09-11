@@ -3,66 +3,66 @@ import type { ContentPage } from '../types'
 export const page: ContentPage = {
   path: '/guides/poso-kostizei-epigrafi',
   kind: 'guide',
-  seoTitle: 'Πόσο Κοστίζει μια Επιγραφή Καταστήματος; Τιμές LED, Neon, Ακρυλικό',
+  seoTitle: 'Πόσο Κοστίζει μια Επιγραφή Καταστήματος; Τι Καθορίζει την Τιμή',
   seoDescription:
-    'Ακρυλικές επιγραφές από {price:signageAcrylicPerSqm}/τμ², LED από {price:signageLed}, neon από {price:signageNeon}, τοποθέτηση δωρεάν πάνω από {price:signageInstallIncludedFrom}. Τι καθορίζει την τιμή, τι να μετρήσετε και πόσο διαρκεί.',
+    'Τι καθορίζει το κόστος μιας επιγραφής (μέγεθος, υλικό, φωτισμός, τοποθέτηση), LED ή neon, τι να μετρήσετε πριν ζητήσετε προσφορά, άδεια δήμου και χρόνοι.',
   badge: { el: 'Οδηγός κόστους', en: 'Cost guide' },
   h1: { el: 'Πόσο κοστίζει μια επιγραφή καταστήματος;', en: 'How much does a shop sign cost?' },
   summary: {
-    el: 'Τι καθορίζει την τιμή, πόσο κοστίζει κάθε υλικό, τι να μετρήσετε πριν ζητήσετε προσφορά και τι να ρωτήσετε για την τοποθέτηση.',
-    en: 'What sets the price, what each material costs, what to measure before asking for a quote, and what to ask about installation.',
+    el: 'Τι καθορίζει την τιμή, ποιο υλικό ταιριάζει πού, τι να μετρήσετε πριν ζητήσετε προσφορά και τι να ρωτήσετε για την τοποθέτηση.',
+    en: 'What sets the price, which material fits where, what to measure before asking for a quote, and what to ask about installation.',
   },
   intro: [
     {
-      el: 'Στην adinfinity μια ακρυλική επιγραφή κοστίζει από {price:signageAcrylicPerSqm} το τετραγωνικό μέτρο, μια επιγραφή LED από {price:signageLed} και μια neon από {price:signageNeon}. Για επιγραφές άνω των {price:signageInstallIncludedFrom} η τοποθέτηση περιλαμβάνεται στην τιμή, σε όλη την Ήπειρο.',
-      en: 'At adinfinity an acrylic sign costs from {price:signageAcrylicPerSqm} per square metre, an LED sign from {price:signageLed} and a neon sign from {price:signageNeon}. For signs over {price:signageInstallIncludedFrom}, installation is included in the price, across Epirus.',
+      el: 'Η τιμή μιας επιγραφής εξαρτάται από τέσσερα πράγματα: το μέγεθος, το υλικό, αν φωτίζεται και πού θα τοποθετηθεί. Δεν υπάρχει ένα νούμερο για «επιγραφή τριών μέτρων», γιατί μια ακρυλική πινακίδα και τρία μέτρα φωτεινά κομμένα γράμματα είναι διαφορετικές κατασκευές. Στην adinfinity ερχόμαστε και μετράμε στον χώρο σας χωρίς χρέωση, σε Άρτα και Ήπειρο, και η γραπτή προσφορά έρχεται μέσα σε 24 ώρες.',
+      en: 'The price of a sign depends on four things: size, material, whether it is lit, and where it goes. There is no single number for a "three-metre sign", because an acrylic panel and three metres of lit cut letters are different constructions. At adinfinity we come and measure on site free of charge, in Arta and Epirus, and the written quote arrives within 24 hours.',
     },
     {
-      el: 'Η τελική τιμή εξαρτάται από τέσσερα πράγματα: το μέγεθος, το υλικό, αν φωτίζεται και πού θα τοποθετηθεί. Ένα καλό γραφείο τα μετρά επί τόπου πριν σας δώσει νούμερο.',
-      en: 'The final price depends on four things: size, material, whether it is lit, and where it goes. A good workshop measures on site before giving you a number.',
+      el: 'Για επιγραφές πάνω από ένα μέγεθος η τοποθέτηση περιλαμβάνεται στην προσφορά, σε όλη την Ήπειρο. Το γράφουμε ρητά, ώστε να μην υπάρξει έκπληξη την ημέρα της εγκατάστασης.',
+      en: 'For signs above a certain size, installation is included in the quote, across Epirus. We state it explicitly, so there is no surprise on installation day.',
     },
   ],
   sections: [
     {
-      heading: { el: 'Τι κοστίζει κάθε είδος επιγραφής', en: 'What each kind of sign costs' },
+      heading: { el: 'Ποιο είδος επιγραφής ταιριάζει πού', en: 'Which kind of sign fits where' },
       table: {
         head: [
           { el: 'Είδος', en: 'Type' },
-          { el: 'Από', en: 'From' },
           { el: 'Πού ταιριάζει', en: 'Where it fits' },
+          { el: 'Τι ανεβάζει το κόστος', en: 'What raises the cost' },
           { el: 'Χρόνος', en: 'Time' },
         ],
         rows: [
           [
             { el: 'Ακρυλική / plexiglass', en: 'Acrylic / plexiglass' },
-            { el: '{price:signageAcrylicPerSqm}/τμ²', en: '{price:signageAcrylicPerSqm}/m²' },
             { el: 'Πρόσοψη καταστήματος χωρίς φωτισμό, εσωτερική σήμανση, γραφεία', en: 'Unlit shopfront, interior signage, offices' },
+            { el: 'Το εμβαδόν και το πάχος του υλικού', en: 'Surface area and material thickness' },
             { el: '5-7 εργάσιμες', en: '5-7 working days' },
           ],
           [
             { el: 'LED', en: 'LED' },
-            { el: '{price:signageLed}', en: '{price:signageLed}' },
             { el: 'Φωτεινή πρόσοψη με χαμηλή κατανάλωση, γράμματα με εσωτερικό φωτισμό', en: 'Lit shopfront with low consumption, internally lit letters' },
+            { el: 'Κομμένα γράμματα αντί για πινακίδα, ύψος γραμμάτων, ηλεκτρολογική σύνδεση', en: 'Cut letters instead of a panel, letter height, electrical connection' },
             { el: '5-7 εργάσιμες', en: '5-7 working days' },
           ],
           [
             { el: 'Neon', en: 'Neon' },
-            { el: '{price:signageNeon}', en: '{price:signageNeon}' },
             { el: 'Καφέ, μπαρ, εστιατόρια: η χαρακτηριστική λάμψη που δεν μιμείται το LED', en: 'Cafés, bars, restaurants: the characteristic glow LED does not imitate' },
+            { el: 'Το μήκος και η πολυπλοκότητα του σωλήνα', en: 'Tube length and complexity' },
             { el: '5-7 εργάσιμες', en: '5-7 working days' },
           ],
           [
             { el: 'Γραφικά οχημάτων', en: 'Vehicle graphics' },
-            { el: 'Με προσφορά', en: 'On quote' },
             { el: 'Εταιρικά αυτοκίνητα και φορτηγά, από γράμματα μέχρι πλήρες wrap', en: 'Company cars and vans, from lettering to a full wrap' },
+            { el: 'Κάλυψη: γράμματα, μερικό ή πλήρες wrap', en: 'Coverage: lettering, partial or full wrap' },
             { el: '3-5 εργάσιμες', en: '3-5 working days' },
           ],
         ],
       },
       paragraphs: [
         {
-          el: 'Express παραγωγή σε 2-3 εργάσιμες είναι εφικτή για τις περισσότερες επιγραφές, με μικρή επιβάρυνση. Ρωτήστε το από την αρχή αν έχετε ημερομηνία εγκαινίων.',
-          en: 'Express production in 2-3 working days is possible for most signs at a small premium. Ask at the start if you have an opening date.',
+          el: 'Express παραγωγή σε 2-3 εργάσιμες είναι εφικτή για τις περισσότερες επιγραφές, με μικρή επιβάρυνση που αναγράφεται στην προσφορά. Ρωτήστε το από την αρχή αν έχετε ημερομηνία εγκαινίων.',
+          en: 'Express production in 2-3 working days is possible for most signs, at a small premium stated in the quote. Ask at the start if you have an opening date.',
         },
       ],
     },
@@ -84,8 +84,8 @@ export const page: ContentPage = {
           en: 'LED consumes less, lasts longer and suits every kind of business. It is the default for lit signs on shops, clinics and offices.',
         },
         {
-          el: 'Το neon έχει μια λάμψη που το LED μιμείται αλλά δεν αντιγράφει, και γι’ αυτό το επιλέγουν καφέ, μπαρ και εστιατόρια που θέλουν η επιγραφή να είναι μέρος της ατμόσφαιρας. Κοστίζει από {price:signageNeon} και χρειάζεται λίγο περισσότερη προσοχή στη συντήρηση.',
-          en: 'Neon has a glow that LED imitates but does not copy, which is why cafés, bars and restaurants that want the sign to be part of the atmosphere choose it. It costs from {price:signageNeon} and needs a little more care in maintenance.',
+          el: 'Το neon έχει μια λάμψη που το LED μιμείται αλλά δεν αντιγράφει, και γι’ αυτό το επιλέγουν καφέ, μπαρ και εστιατόρια που θέλουν η επιγραφή να είναι μέρος της ατμόσφαιρας. Κοστίζει περισσότερο από το LED και χρειάζεται λίγο περισσότερη προσοχή στη συντήρηση.',
+          en: 'Neon has a glow that LED imitates but does not copy, which is why cafés, bars and restaurants that want the sign to be part of the atmosphere choose it. It costs more than LED and needs a little more care in maintenance.',
         },
       ],
       link: { path: '/led-neon', label: { el: 'Επιγραφές LED και neon: η υπηρεσία', en: 'LED and neon signs: the service' } },
@@ -119,7 +119,7 @@ export const page: ContentPage = {
       heading: { el: 'Πώς γίνεται μια επιγραφή, από τη μέτρηση στην τοποθέτηση', en: 'How a sign is made, from measurement to installation' },
       bullets: [
         { el: 'Μέτρηση στον χώρο και φωτογραφίες της πρόσοψης', en: 'On-site measurement and photos of the frontage' },
-        { el: 'Πρόταση με σχέδιο πάνω στη φωτογραφία, υλικά και γραπτή προσφορά', en: 'Proposal with a mock-up on the photo, materials and a written quote' },
+        { el: 'Πρόταση με σχέδιο πάνω στη φωτογραφία, υλικά και γραπτή προσφορά μέσα σε 24 ώρες', en: 'Proposal with a mock-up on the photo, materials and a written quote within 24 hours' },
         { el: 'Κατασκευή στο εργαστήριο, με έλεγχο πριν φύγει', en: 'Fabrication in the workshop, checked before it leaves' },
         { el: 'Τοποθέτηση από το συνεργείο μας, με ηλεκτρολογική σύνδεση όπου χρειάζεται', en: 'Installation by our crew, with electrical connection where needed' },
         { el: 'Συντήρηση και επισκευή όταν χρειαστεί, από το ίδιο γραφείο', en: 'Maintenance and repair when needed, from the same office' },
@@ -130,15 +130,15 @@ export const page: ContentPage = {
     {
       q: { el: 'Πόσο κοστίζει μια φωτεινή επιγραφή 3 μέτρων;', en: 'How much does a 3-metre lit sign cost?' },
       a: {
-        el: 'Εξαρτάται από το ύψος, τα γράμματα και το υλικό, οπότε δεν υπάρχει ένα νούμερο. Για να έχετε τάξη μεγέθους: οι επιγραφές LED ξεκινούν από {price:signageLed} και η τοποθέτηση περιλαμβάνεται πάνω από {price:signageInstallIncludedFrom}. Στείλτε μας διαστάσεις και φωτογραφία και έχετε εκτίμηση την ίδια μέρα.',
-        en: 'It depends on height, lettering and material, so there is no single number. For an order of magnitude: LED signs start from {price:signageLed} and installation is included above {price:signageInstallIncludedFrom}. Send us dimensions and a photo and you have an estimate the same day.',
+        el: 'Εξαρτάται από το ύψος των γραμμάτων, το υλικό, τον φωτισμό και το πού θα μπει, οπότε δεν υπάρχει ένα νούμερο. Στείλτε μας διαστάσεις και φωτογραφία της πρόσοψης και έχετε εκτίμηση την ίδια μέρα, και γραπτή προσφορά μετά τη μέτρηση στον χώρο.',
+        en: 'It depends on letter height, material, lighting and where it goes, so there is no single number. Send us dimensions and a photo of the frontage and you have an estimate the same day, and a written quote after the on-site measurement.',
       },
     },
     {
       q: { el: 'Περιλαμβάνεται η τοποθέτηση;', en: 'Is installation included?' },
       a: {
-        el: 'Για επιγραφές άνω των {price:signageInstallIncludedFrom}, ναι, σε όλη την Ήπειρο. Για μικρότερες τη χρεώνουμε ξεχωριστά και το γράφουμε στην προσφορά.',
-        en: 'For signs over {price:signageInstallIncludedFrom}, yes, across Epirus. For smaller ones we charge it separately and state it in the quote.',
+        el: 'Για επιγραφές πάνω από ένα μέγεθος, ναι, σε όλη την Ήπειρο. Για μικρότερες τη χρεώνουμε ξεχωριστά. Και στις δύο περιπτώσεις το γράφουμε ρητά στην προσφορά.',
+        en: 'For signs above a certain size, yes, across Epirus. For smaller ones we charge it separately. Either way it is stated explicitly in the quote.',
       },
     },
     {
@@ -156,13 +156,11 @@ export const page: ContentPage = {
       },
     },
   ],
-  priceFrom: 'signageLed',
-  priceLabel: { el: 'Επιγραφή LED', en: 'LED sign' },
   related: [
     { path: '/epigrafes-arta', label: { el: 'Επιγραφές καταστημάτων Άρτα', en: 'Shop signage Arta' }, description: { el: 'Η υπηρεσία, τα υλικά και τα έργα.', en: 'The service, materials and projects.' } },
     { path: '/led-neon', label: { el: 'Επιγραφές LED & neon', en: 'LED & neon signs' }, description: { el: 'Φωτεινές επιγραφές, από την κατασκευή στην τοποθέτηση.', en: 'Lit signs, from fabrication to installation.' } },
     { path: '/sxediasmos-logotypou', label: { el: 'Σχεδιασμός λογοτύπου', en: 'Logo design' }, description: { el: 'Η επιγραφή ξεκινά από ένα λογότυπο που μεγεθύνεται.', en: 'A sign starts with a logo that scales.' } },
-    { path: '/pricing', label: { el: 'Τιμοκατάλογος', en: 'Price list' }, description: { el: 'Όλες οι τιμές εκκίνησης σε έναν πίνακα.', en: 'Every starting price in one table.' } },
+    { path: '/pricing', label: { el: 'Πακέτα υπηρεσιών', en: 'Service packages' }, description: { el: 'Τι περιλαμβάνει κάθε πακέτο, σε έναν πίνακα.', en: 'What every package includes, in one table.' } },
   ],
   projectsRoute: '/epigrafes-arta',
   breadcrumb: [

@@ -258,7 +258,8 @@ const FeatureCard = ({ icon, title, description }: { icon: React.ReactElement; t
 
 export default function PrintsPage() {
   const [activeCategory, setActiveCategory] = useState(0)
-  const { t, locale: _locale } = useTranslations()
+  const { t, locale } = useTranslations()
+  const isGreek = locale === "el"
 
   const categories = [
     {
@@ -567,7 +568,7 @@ export default function PrintsPage() {
                             <rect x="15" y="35" width="20" height="3" rx="1" fill="#333" />
                             <circle cx="70" cy="25" r="10" fill="#01FFFF" fillOpacity="0.3" stroke="#01A9FF" />
                           </svg>
-                          <div className="text-[#071218] text-sm font-bold mt-2">Επαγγελματικές Κάρτες</div>
+                          <div className="text-[#071218] text-sm font-bold mt-2">{isGreek ? "Επαγγελματικές Κάρτες" : "Business Cards"}</div>
                         </div>
                       )}
 
@@ -599,7 +600,7 @@ export default function PrintsPage() {
                             <path d="M75 45 L85 45 L80 50 Z" fill="#D4AF37" />
                             <circle cx="80" cy="15" r="5" fill="#D4AF37" fillOpacity="0.5" />
                           </svg>
-                          <div className="text-[#071218] text-sm font-bold mt-2">Χρυσοτυπία & Ειδικές Εκτυπώσεις</div>
+                          <div className="text-[#071218] text-sm font-bold mt-2">{isGreek ? "Χρυσοτυπία & Ειδικές Εκτυπώσεις" : "Foil Stamping & Special Finishes"}</div>
                         </div>
                       )}
 
@@ -632,7 +633,7 @@ export default function PrintsPage() {
                             <circle cx="25" cy="45" r="2" fill="#01A9FF" />
                             <circle cx="75" cy="45" r="2" fill="#01A9FF" />
                           </svg>
-                          <div className="text-[#071218] text-sm font-bold mt-2">Συσκευασία & Ετικέτες</div>
+                          <div className="text-[#071218] text-sm font-bold mt-2">{isGreek ? "Συσκευασία & Ετικέτες" : "Packaging & Labels"}</div>
                         </div>
                       )}
                     </div>

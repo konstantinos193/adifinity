@@ -61,7 +61,7 @@ export const OG_LOCALE = 'el_GR' as const
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // `withFactsDeep` so a meta description can say "{clients}+ επιχειρήσεις" or
-// "από {price:websiteStarter}" and always agree with the page body.
+// "{years} χρόνια" and always agree with the page body.
 const NAMESPACES: Record<string, any> = withFactsDeep({
   about_page: aboutPage,
   accessibility,

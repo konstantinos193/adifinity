@@ -81,19 +81,19 @@
     "subtitle": "Choose the package that fits your needs",
     "basic": {
       "title": "Basic",
-      "price": "€150",
+      "price": "On quotation",
       "description": "Simple and affordable",
       "features": ["Video invitation", "RSVP form", "Easy sharing", "Basic customization"]
     },
     "premium": {
       "title": "Premium",
-      "price": "€250",
+      "price": "On quotation",
       "description": "Popular choice",
       "features": ["Video invitation Pro", "RSVP with notifications", "Countdown timer", "Full customization", "Music"]
     },
     "mini_website": {
       "title": "Mini Website",
-      "price": "€350",
+      "price": "On quotation",
       "description": "Full website",
       "features": ["Mini wedding website", "Photo gallery", "Timeline", "Gift registry", "RSVP management", "Map"]
     }
@@ -121,7 +121,7 @@
     "questions": [
       {
         "q": "How much does a digital wedding invitation cost?",
-        "a": "Our prices start from €150 for the Basic package and go up to €350 for the Mini Website. Each package includes different features based on your needs."
+        "a": "On quotation. The cost depends on the package (Basic, Premium or Mini Website), the number of guests and the extras you want, such as video or maps. Tell us what you have in mind and you have a written quote within 24 hours."
       },
       {
         "q": "Can it have RSVP?",

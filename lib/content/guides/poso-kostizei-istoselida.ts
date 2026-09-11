@@ -3,19 +3,19 @@ import type { ContentPage } from '../types'
 export const page: ContentPage = {
   path: '/guides/poso-kostizei-istoselida',
   kind: 'guide',
-  seoTitle: 'Πόσο Κοστίζει μια Ιστοσελίδα το 2026; Τιμές για Επιχειρήσεις',
+  seoTitle: 'Πόσο Κοστίζει μια Ιστοσελίδα το 2026; Τι Καθορίζει την Τιμή',
   seoDescription:
-    'Επαγγελματική ιστοσελίδα από {price:websiteStarter}, εταιρική με admin από {price:websiteBusiness}, e-shop από {price:eshop}. Τι περιλαμβάνει κάθε τιμή, τα κρυφά κόστη και πόσο διαρκεί.',
+    'Τι καθορίζει το κόστος μιας ιστοσελίδας, τι περιλαμβάνει κάθε πακέτο (Starter, Business, E-shop), ποια κόστη έρχονται μετά και τι να ρωτήσετε. Γραπτή προσφορά σε 24 ώρες.',
   badge: { el: 'Οδηγός κόστους', en: 'Cost guide' },
   h1: { el: 'Πόσο κοστίζει μια ιστοσελίδα το 2026;', en: 'How much does a website cost in 2026?' },
   summary: {
-    el: 'Τρία επίπεδα τιμών, τι αγοράζει το καθένα, ποια κόστη έρχονται μετά και πότε αξίζει το ακριβότερο.',
-    en: 'Three price levels, what each one buys, which costs come afterwards, and when the dearer one is worth it.',
+    el: 'Τι καθορίζει την τιμή, τρία επίπεδα πακέτων και τι αγοράζει το καθένα, ποια κόστη έρχονται μετά και πότε αξίζει το μεγαλύτερο.',
+    en: 'What sets the price, three package levels and what each one buys, which costs come afterwards, and when the bigger one is worth it.',
   },
   intro: [
     {
-      el: 'Στην adinfinity μια επαγγελματική ιστοσελίδα για επιχείρηση ξεκινά από {price:websiteStarter}. Μια πλήρης εταιρική παρουσία έως 15 σελίδες με δικό σας πίνακα διαχείρισης, blog και analytics ξεκινά από {price:websiteBusiness}, και ένα custom e-shop με online πληρωμές και διαχείριση αποθήκης από {price:eshop}.',
-      en: 'At adinfinity a professional business website starts from {price:websiteStarter}. A full corporate presence of up to 15 pages with your own admin panel, blog and analytics starts from {price:websiteBusiness}, and a custom e-shop with online payments and inventory management from {price:eshop}.',
+      el: 'Το κόστος μιας ιστοσελίδας καθορίζεται από τον αριθμό των σελίδων, το αν θα την ενημερώνετε μόνοι σας (πίνακας διαχείρισης), το αν πουλάει online ή δέχεται κρατήσεις, τις γλώσσες, και τις συνδέσεις με άλλα συστήματα. Στην adinfinity δουλεύουμε με τρία επίπεδα πακέτων, Starter, Business και E-shop, και κάθε έργο κοστολογείται γραπτώς μέσα σε 24 ώρες από την πρώτη συζήτηση.',
+      en: 'The cost of a website is set by the number of pages, whether you will update it yourself (an admin panel), whether it sells online or takes bookings, the languages, and the connections to other systems. At adinfinity we work with three package levels, Starter, Business and E-shop, and every project is quoted in writing within 24 hours of the first conversation.',
     },
     {
       el: 'Το ερώτημα δεν είναι μόνο τι κοστίζει η κατασκευή. Είναι τι θα πληρώνετε κάθε μήνα μετά, ποιος θα την αλλάζει, και αν σας ανήκει. Αυτά αλλάζουν την πραγματική τιμή περισσότερο από το αρχικό ποσό.',
@@ -24,32 +24,32 @@ export const page: ContentPage = {
   ],
   sections: [
     {
-      heading: { el: 'Τα τρία επίπεδα τιμών', en: 'The three price levels' },
+      heading: { el: 'Τα τρία επίπεδα πακέτων', en: 'The three package levels' },
       table: {
         head: [
           { el: 'Πακέτο', en: 'Package' },
-          { el: 'Τιμή', en: 'Price' },
           { el: 'Για ποιον', en: 'For whom' },
           { el: 'Τι περιλαμβάνει', en: 'What it includes' },
+          { el: 'Χρόνος', en: 'Time' },
         ],
         rows: [
           [
             { el: 'Starter', en: 'Starter' },
-            { el: 'από {price:websiteStarter}', en: 'from {price:websiteStarter}' },
             { el: 'Επαγγελματίες και μικρές επιχειρήσεις που χρειάζονται παρουσία και επικοινωνία', en: 'Professionals and small businesses that need a presence and a way to be contacted' },
             { el: 'Έως 5 ενότητες, responsive, βασικό SEO, φόρμα επικοινωνίας, SSL, 1 μήνας υποστήριξη', en: 'Up to 5 sections, responsive, basic SEO, contact form, SSL, 1 month of support' },
+            { el: '2-3 εβδομάδες', en: '2-3 weeks' },
           ],
           [
             { el: 'Business', en: 'Business' },
-            { el: 'από {price:websiteBusiness}', en: 'from {price:websiteBusiness}' },
             { el: 'Επιχειρήσεις με πολλές υπηρεσίες που θέλουν να ενημερώνουν μόνες τους το περιεχόμενο', en: 'Businesses with many services that want to update content themselves' },
             { el: 'Έως 15 σελίδες, custom admin, blog, προηγμένο SEO και Google Analytics, social integration, hosting 1 έτος, 3 μήνες υποστήριξη', en: 'Up to 15 pages, custom admin, blog, advanced SEO and Google Analytics, social integration, 1 year hosting, 3 months of support' },
+            { el: '3-4 εβδομάδες', en: '3-4 weeks' },
           ],
           [
             { el: 'E-shop', en: 'E-shop' },
-            { el: 'από {price:eshop}', en: 'from {price:eshop}' },
             { el: 'Καταστήματα που πουλάνε online', en: 'Shops selling online' },
             { el: 'Custom e-commerce σε Next.js, απεριόριστα προϊόντα, πληρωμές με κάρτα, διαχείριση αποθήκης και παραγγελιών, SEO, hosting 1 έτος, 6 μήνες υποστήριξη', en: 'Custom Next.js e-commerce, unlimited products, card payments, inventory and order management, SEO, 1 year hosting, 6 months of support' },
+            { el: '6-10 εβδομάδες', en: '6-10 weeks' },
           ],
         ],
       },
@@ -62,15 +62,26 @@ export const page: ContentPage = {
       link: { path: '/projects/smh-real-estate', label: { el: 'Δείτε τη μελέτη περίπτωσης SMH Real Estate', en: 'See the SMH Real Estate case study' } },
     },
     {
+      heading: { el: 'Τι καθορίζει την τιμή', en: 'What sets the price' },
+      bullets: [
+        { el: 'Σελίδες και περιεχόμενο: πέντε ενότητες σε μία σελίδα είναι διαφορετική δουλειά από δεκαπέντε σελίδες με blog', en: 'Pages and content: five sections on one page is a different job from fifteen pages with a blog' },
+        { el: 'Πίνακας διαχείρισης: αν θα αλλάζετε τιμές, μενού ή νέα μόνοι σας, χτίζεται admin για ό,τι αλλάζει', en: 'Admin panel: if you will change prices, menus or news yourself, an admin is built for what changes' },
+        { el: 'Πωλήσεις ή κρατήσεις online: πληρωμές, αποθήκη, διαθεσιμότητα και συγχρονισμός με πλατφόρμες είναι λογισμικό, όχι σελίδες', en: 'Online sales or bookings: payments, inventory, availability and platform sync are software, not pages' },
+        { el: 'Γλώσσες: κάθε γλώσσα είναι ξεχωριστό περιεχόμενο και ξεχωριστές διευθύνσεις για τη Google', en: 'Languages: each language is separate content and separate addresses for Google' },
+        { el: 'Συνδέσεις: Booking.com, λογιστικό, CRM, χάρτες, email marketing', en: 'Connections: Booking.com, accounting, CRM, maps, email marketing' },
+        { el: 'Υλικό: αν τα κείμενα και οι φωτογραφίες υπάρχουν ή πρέπει να γίνουν', en: 'Material: whether the texts and photos exist or must be produced' },
+      ],
+    },
+    {
       heading: { el: 'Τα κόστη που έρχονται μετά', en: 'The costs that come afterwards' },
       paragraphs: [
         {
-          el: 'Μια ιστοσελίδα έχει τρία τρέχοντα έξοδα: το domain (το όνομα, περίπου 10-20 ευρώ τον χρόνο για .gr), το hosting (ο server που τη σερβίρει) και τη συντήρηση (ενημερώσεις ασφαλείας, backup, μικροαλλαγές). Στα πακέτα Business και E-shop το hosting του πρώτου έτους περιλαμβάνεται.',
-          en: 'A website has three running costs: the domain (the name, roughly 10-20 euros a year for .gr), hosting (the server that serves it) and maintenance (security updates, backups, small changes). In the Business and E-shop packages the first year of hosting is included.',
+          el: 'Μια ιστοσελίδα έχει τρία τρέχοντα έξοδα: το domain (το όνομα, μια μικρή ετήσια χρέωση στον καταχωρητή), το hosting (ο server που τη σερβίρει) και τη συντήρηση (ενημερώσεις ασφαλείας, backup, μικροαλλαγές). Στα πακέτα Business και E-shop το hosting του πρώτου έτους περιλαμβάνεται.',
+          en: 'A website has three running costs: the domain (the name, a small annual fee to the registrar), hosting (the server that serves it) and maintenance (security updates, backups, small changes). In the Business and E-shop packages the first year of hosting is included.',
         },
         {
-          el: 'Το κόστος που συνήθως δεν αναφέρεται είναι η συνδρομή πλατφόρμας. Ένα e-shop σε Shopify πληρώνει 30 έως 500 ευρώ τον μήνα στην πλατφόρμα, συν προμήθεια ανά συναλλαγή, για όσο καιρό υπάρχει. Ένα custom e-shop με Stripe δεν έχει μηνιαία συνδρομή πλατφόρμας. Σε τρία χρόνια η διαφορά ξεπερνά συχνά το αρχικό κόστος κατασκευής.',
-          en: 'The cost usually left unsaid is the platform subscription. A Shopify e-shop pays 30 to 500 euros a month to the platform, plus a fee per transaction, for as long as it exists. A custom e-shop with Stripe has no monthly platform subscription. Over three years the difference often exceeds the initial build cost.',
+          el: 'Το κόστος που συνήθως δεν αναφέρεται είναι η συνδρομή πλατφόρμας. Ένα e-shop σε Shopify πληρώνει μηνιαία συνδρομή στην πλατφόρμα, συν προμήθεια ανά συναλλαγή, για όσο καιρό υπάρχει. Ένα custom e-shop με Stripe δεν έχει μηνιαία συνδρομή πλατφόρμας. Σε τρία χρόνια η διαφορά είναι συχνά μεγαλύτερη από το αρχικό κόστος κατασκευής.',
+          en: 'The cost usually left unsaid is the platform subscription. A Shopify e-shop pays a monthly subscription to the platform, plus a fee per transaction, for as long as it exists. A custom e-shop with Stripe has no monthly platform subscription. Over three years the difference is often larger than the initial build cost.',
         },
       ],
       link: { path: '/website-development/maintenance', label: { el: 'Μηνιαία πακέτα συντήρησης', en: 'Monthly maintenance packages' } },
@@ -104,10 +115,10 @@ export const page: ContentPage = {
       ],
     },
     {
-      heading: { el: 'Πότε αξίζει το ακριβότερο πακέτο', en: 'When the dearer package is worth it' },
+      heading: { el: 'Πότε αξίζει το μεγαλύτερο πακέτο', en: 'When the bigger package is worth it' },
       paragraphs: [
         {
-          el: 'Αν θα αλλάζετε τιμές, μενού, προσφορές ή νέα κάθε εβδομάδα, το Business με δικό σας admin πληρώνει τη διαφορά του μέσα σε λίγους μήνες, γιατί δεν θα χρεώνεστε για κάθε αλλαγή. Αν η σελίδα θα μείνει ίδια για έναν χρόνο, το Starter αρκεί.',
+          el: 'Αν θα αλλάζετε τιμές, μενού, προσφορές ή νέα κάθε εβδομάδα, το Business με δικό σας admin αποσβένει τη διαφορά του μέσα σε λίγους μήνες, γιατί δεν θα χρεώνεστε για κάθε αλλαγή. Αν η σελίδα θα μείνει ίδια για έναν χρόνο, το Starter αρκεί.',
           en: 'If you will change prices, menus, offers or news every week, Business with your own admin pays back its difference within a few months, because you will not be charged for every change. If the site will stay the same for a year, Starter is enough.',
         },
         {
@@ -137,10 +148,17 @@ export const page: ContentPage = {
   ],
   faq: [
     {
-      q: { el: 'Γιατί μια ιστοσελίδα κοστίζει {price:websiteStarter} και όχι 300 ευρώ;', en: 'Why does a website cost {price:websiteStarter} and not 300 euros?' },
+      q: { el: 'Πόσο κοστίζει, τελικά, μια ιστοσελίδα;', en: 'So how much does a website cost?' },
       a: {
-        el: 'Τα 300 ευρώ αγοράζουν συνήθως ένα έτοιμο template με τα κείμενά σας μέσα, σε πλατφόρμα με συνδρομή. Τα {price:websiteStarter} αγοράζουν σχεδιασμό για την επιχείρησή σας, κώδικα που σας ανήκει, τεχνικό SEO και έναν άνθρωπο που απαντά στο τηλέφωνο.',
-        en: 'The 300 euros usually buy a ready template with your texts inside, on a subscription platform. The {price:websiteStarter} buys design for your business, code you own, technical SEO and a person who answers the phone.',
+        el: 'Κατόπιν προσφοράς, γιατί το ποσό αλλάζει με τις σελίδες, το admin, τις γλώσσες και το αν πουλάει ή δέχεται κρατήσεις. Μας λέτε τι πρέπει να κάνει η σελίδα και έχετε γραπτή προσφορά μέσα σε 24 ώρες, με το τι περιλαμβάνει, σε τι χρόνο και τι πληρώνετε μετά.',
+        en: 'On quotation, because the figure changes with the pages, the admin, the languages and whether it sells or takes bookings. Tell us what the site must do and you have a written quote within 24 hours, with what it includes, the timeline and what you pay afterwards.',
+      },
+    },
+    {
+      q: { el: 'Γιατί μια custom ιστοσελίδα κοστίζει περισσότερο από ένα template;', en: 'Why does a custom website cost more than a template?' },
+      a: {
+        el: 'Το template είναι μια έτοιμη σελίδα με τα κείμενά σας μέσα, συνήθως σε πλατφόρμα με συνδρομή. Η custom κατασκευή αγοράζει σχεδιασμό για την επιχείρησή σας, κώδικα που σας ανήκει, τεχνικό SEO και έναν άνθρωπο που απαντά στο τηλέφωνο.',
+        en: 'A template is a ready page with your texts inside, usually on a subscription platform. A custom build buys design for your business, code you own, technical SEO and a person who answers the phone.',
       },
     },
     {
@@ -151,26 +169,18 @@ export const page: ContentPage = {
       },
     },
     {
-      q: { el: 'Χρειάζομαι WordPress;', en: 'Do I need WordPress?' },
-      a: {
-        el: 'Όχι απαραίτητα. Το WordPress είναι μια καλή επιλογή για ιστολόγια και για ομάδες με πολλούς συντάκτες. Για επιχειρήσεις που θέλουν ταχύτητα, ασφάλεια χωρίς plugins και συγκεκριμένες λειτουργίες, χτίζουμε custom σε Next.js. Έχουμε ξεχωριστό οδηγό για την απόφαση.',
-        en: 'Not necessarily. WordPress is a good choice for blogs and for teams with many editors. For businesses that want speed, security without plugins and specific functionality, we build custom in Next.js. There is a separate guide for that decision.',
-      },
-    },
-    {
       q: { el: 'Μπορώ να πληρώσω σε δόσεις;', en: 'Can I pay in instalments?' },
       a: {
-        el: 'Ναι, για μεγαλύτερα έργα προσφέρουμε τμηματική πληρωμή, συνήθως σε τρία μέρη: έναρξη, παράδοση σχεδιασμού, δημοσίευση.',
-        en: 'Yes, for larger projects we offer staged payment, usually in three parts: start, design delivery, launch.',
+        el: 'Ναι, για μεγαλύτερα έργα προσφέρουμε τμηματική πληρωμή, συνήθως σε τρία μέρη: έναρξη, παράδοση σχεδιασμού, δημοσίευση. Το γράφουμε στην προσφορά.',
+        en: 'Yes, for larger projects we offer staged payment, usually in three parts: start, design delivery, launch. It is stated in the quote.',
       },
     },
   ],
-  priceFrom: 'websiteStarter',
   related: [
     { path: '/website-development', label: { el: 'Κατασκευή ιστοσελίδων', en: 'Website development' }, description: { el: 'Η υπηρεσία, τα πακέτα και τα έργα.', en: 'The service, the packages and the projects.' } },
     { path: '/guides/wordpress-i-nextjs', label: { el: 'WordPress ή custom Next.js;', en: 'WordPress or custom Next.js?' }, description: { el: 'Πότε αξίζει το καθένα.', en: 'When each one is worth it.' } },
     { path: '/website-development/e-commerce', label: { el: 'Κατασκευή e-shop', en: 'E-shop development' }, description: { el: 'Χωρίς μηνιαίες χρεώσεις πλατφόρμας.', en: 'No monthly platform fees.' } },
-    { path: '/pricing', label: { el: 'Τιμοκατάλογος', en: 'Price list' }, description: { el: 'Όλες οι τιμές εκκίνησης σε έναν πίνακα.', en: 'Every starting price in one table.' } },
+    { path: '/pricing', label: { el: 'Πακέτα υπηρεσιών', en: 'Service packages' }, description: { el: 'Τι περιλαμβάνει κάθε πακέτο, σε έναν πίνακα.', en: 'What every package includes, in one table.' } },
   ],
   projectSlugs: ['asterias-koronisia', 'smh-real-estate', 'lincanto-apartments', 'kyklos-education'],
   breadcrumb: [

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import { faqNodeFromMessages } from '@/app/components/faqData'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
@@ -91,47 +92,18 @@ export default function DiafimistikaDoraLayout({
             name: "Διαφημιστικά Δώρα Επιχειρήσεων Άρτα",
             description: "Επαγγελματικά διαφημιστικά δώρα και branded merchandise στην Άρτα. Corporate gifts, promotional items, branded merchandise, custom printing και personalized gifts για επιχειρήσεις.",
           },
+          // Same array the visible FAQ section renders. The previous
+          // hand-copied FAQPage block carried hardcoded euro figures that the
+          // page no longer shows (every price is now on quotation), so the
+          // schema had drifted from the visible content.
+          faq: faqNodeFromMessages(
+            serverT('diafimistika_dora_page').raw('faq') as { question: string; answer: string }[],
+          ),
         }),
         )}
       />
       {/* Visible trail — same array as the BreadcrumbList above. */}
       <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Διαφημιστικά Δώρα", path: "/diafimistika-dora" } ]} />
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Πόσο κοστίζουν τα διαφημιστικά δώρα;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Οι τιμές εξαρτώνται από το είδος και την ποσότητα. Στυλό από €0.50/τεμ., μπλοκ από €1.50/τεμ., κούπες από €2/τεμ. Παρέχουμε δωρεάν προσφορά για bulk orders."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Ποια minimum order quantity;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Minimum order εξαρτάται από το προϊόν. Στυλό: 50 τεμ., μπλοκ: 25 τεμ., κούπες: 25 τεμ. Custom items: 100+ τεμ."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Παρέχετε custom design;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ναι, παρέχουμε custom design services για όλα τα branded merchandise. Μπορείτε να μας στείλετε το δικό σας logo ή να δημιουργήσουμε design για εσάς."
-                }
-              }
-            ]
-          }),
-        }}
-      />
       {children}
       <RelatedProjects projects={pickProjects('/diafimistika-dora')} />
     </>
