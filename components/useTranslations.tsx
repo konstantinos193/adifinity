@@ -1,6 +1,7 @@
 'use client'
 
 import { useLocale } from './LocaleProvider'
+import { withFactsDeep } from '@/lib/company'
 
 // Import all message files statically for better performance
 import enCommon from '../messages/en/common.json'
@@ -69,8 +70,6 @@ import enDiafimistikiEteriaPage from '../messages/en/diafimistiki_eteria_page.js
 import elDiafimistikiEteriaPage from '../messages/el/diafimistiki_eteria_page.json'
 import enDiafimistikiPage from '../messages/en/diafimistiki_page.json'
 import elDiafimistikiPage from '../messages/el/diafimistiki_page.json'
-import enDianomiFylladionArtaPage from '../messages/en/dianomi_fylladion_arta_page.json'
-import elDianomiFylladionArtaPage from '../messages/el/dianomi_fylladion_arta_page.json'
 import enSiteGamouRsvpPage from '../messages/en/site_gamou_rsvp_page.json'
 import elSiteGamouRsvpPage from '../messages/el/site_gamou_rsvp_page.json'
 import enEktypwseisArtaPage from '../messages/en/ektypwseis_arta_page.json'
@@ -79,8 +78,6 @@ import enEpigrafesArtaPage from '../messages/en/epigrafes_arta_page.json'
 import elEpigrafesArtaPage from '../messages/el/epigrafes_arta_page.json'
 import enGrafistasArtaPage from '../messages/en/grafistas_arta_page.json'
 import elGrafistasArtaPage from '../messages/el/grafistas_arta_page.json'
-import enWebDevelopmentArtaPage from '../messages/en/web_development_arta_page.json'
-import elWebDevelopmentArtaPage from '../messages/el/web_development_arta_page.json'
 import enGraphicDesignGuidePage from '../messages/en/graphic_design_guide_page.json'
 import elGraphicDesignGuidePage from '../messages/el/graphic_design_guide_page.json'
 import enIlektronikoProsklitirioGamouPage from '../messages/en/ilektroniko_prosklitirio_gamou_page.json'
@@ -90,8 +87,13 @@ import elDigitalMarketingPage from '../messages/el/digital_marketing_page.json'
 import enBrandingPage from '../messages/en/branding_page.json'
 import elBrandingPage from '../messages/el/branding_page.json'
 
+/*
+ * Every namespace is passed through `withFactsDeep` once, here, so copy can
+ * carry `{price:logo}` / `{clients}` placeholders and render the value from
+ * `lib/company.ts` — the only place a number or price is allowed to live.
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const messageCache: Record<string, Record<string, any>> = {
+export const messageCache: Record<string, Record<string, any>> = withFactsDeep({
   en: {
     common: enCommon,
     market_research_page: enMarketResearchPage,
@@ -126,12 +128,10 @@ export const messageCache: Record<string, Record<string, any>> = {
     psifiako_prosklitirio_gamou_page: enPsifiakoProsklitirioGamouPage,
     diafimistiki_eteria_page: enDiafimistikiEteriaPage,
     diafimistiki_page: enDiafimistikiPage,
-    dianomi_fylladion_arta_page: enDianomiFylladionArtaPage,
     site_gamou_rsvp_page: enSiteGamouRsvpPage,
     ektypwseis_arta_page: enEktypwseisArtaPage,
     epigrafes_arta_page: enEpigrafesArtaPage,
     grafistas_arta_page: enGrafistasArtaPage,
-    web_development_arta_page: enWebDevelopmentArtaPage,
     graphic_design_guide_page: enGraphicDesignGuidePage,
     ilektroniko_prosklitirio_gamou_page: enIlektronikoProsklitirioGamouPage,
     digital_marketing_page: enDigitalMarketingPage,
@@ -171,18 +171,16 @@ export const messageCache: Record<string, Record<string, any>> = {
     psifiako_prosklitirio_gamou_page: elPsifiakoProsklitirioGamouPage,
     diafimistiki_eteria_page: elDiafimistikiEteriaPage,
     diafimistiki_page: elDiafimistikiPage,
-    dianomi_fylladion_arta_page: elDianomiFylladionArtaPage,
     site_gamou_rsvp_page: elSiteGamouRsvpPage,
     ektypwseis_arta_page: elEktypwseisArtaPage,
     epigrafes_arta_page: elEpigrafesArtaPage,
     grafistas_arta_page: elGrafistasArtaPage,
-    web_development_arta_page: elWebDevelopmentArtaPage,
     graphic_design_guide_page: elGraphicDesignGuidePage,
     ilektroniko_prosklitirio_gamou_page: elIlektronikoProsklitirioGamouPage,
     digital_marketing_page: elDigitalMarketingPage,
     branding_page: elBrandingPage,
   }
-}
+})
 
 // t() returns the key itself when a translation is missing, so casting its
 // result straight to an array crashes the render. Use this instead.

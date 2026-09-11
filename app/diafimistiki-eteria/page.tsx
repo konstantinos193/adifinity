@@ -1,6 +1,7 @@
 "use client"
 import ServiceDetailsSection from "@/app/components/ServiceDetailsSection"
 import { DIAFIMISTIKI_ETERIA_DETAILS } from "@/app/components/serviceDetailsData"
+import { LocalHubSection } from "@/app/components/LocalHubSection"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Users, Award, Zap, CheckCircle } from "lucide-react"
@@ -117,6 +118,9 @@ export default function DiafimistikiEteriaPage() {
           </motion.div>
         </div>
       </div>
+
+      {/* The local hub: services, office, reach — audit §14. */}
+      <LocalHubSection namespace="diafimistiki_eteria_page" />
 
       {/* Services Section */}
       <div className="container mx-auto px-4 py-16">

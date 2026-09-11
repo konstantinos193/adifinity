@@ -115,7 +115,7 @@
   "pricing_plans": [
     {
       "name": "Logo",
-      "price": "from €250",
+      "price": "from {price:logo}",
       "period": "",
       "description": "For new businesses that need a proper start.",
       "features": [
@@ -128,7 +128,7 @@
     },
     {
       "name": "Corporate Identity",
-      "price": "from €700",
+      "price": "from {price:brandIdentity}",
       "period": "",
       "description": "A complete package for a business launching or refreshing.",
       "features": [
@@ -159,7 +159,7 @@
   "faq": [
     {
       "question": "How much does a logo cost in Arta?",
-      "answer": "Logo design starts from €250 and includes original design, variants and all vector files. The full corporate identity package starts from €700. The final price depends on the number of applications."
+      "answer": "Logo design starts from {price:logo} and includes original design, variants and all vector files. The full corporate identity package starts from {price:brandIdentity}. The final price depends on the number of applications."
     },
     {
       "question": "How long does identity design take?",

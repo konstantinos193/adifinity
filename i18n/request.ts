@@ -1,5 +1,6 @@
 import { getRequestConfig } from 'next-intl/server'
 import { routing } from '../i18n'
+import { withFactsDeep } from '../lib/company'
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale
@@ -26,7 +27,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
     'diafimistika_dora_page',
     'diafimistiki_eteria_page',
     'diafimistiki_page',
-    'dianomi_fylladion_arta_page',
     'digital_marketing_page',
     'dsa_compliance',
     'e_commerce_page',
@@ -57,7 +57,6 @@ export default getRequestConfig(async ({ requestLocale }) => {
     'technical_seo_page',
     'testimonials',
     'web_apps_page',
-    'web_development_arta_page',
     'website_development_page',
   ]
 
@@ -68,7 +67,8 @@ export default getRequestConfig(async ({ requestLocale }) => {
   for (const file of messageFiles) {
     try {
       const fileMessages = (await import(`../messages/${locale}/${file}.json`)).default
-      messages[file] = fileMessages
+      // Same substitution the client cache applies — see lib/company.ts.
+      messages[file] = withFactsDeep(fileMessages)
     } catch (_error) {
       missing.push(file)
     }

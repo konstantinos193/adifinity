@@ -2,7 +2,10 @@ import type { Metadata } from 'next'
 import { faqNodeFromMessages } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
+import RelatedLinks from '@/app/components/RelatedLinks'
+import { BRANDING_RELATED } from '@/app/components/relatedLinksData'
 import { pickProjects } from '@/lib/serviceProjects'
 
 const URL = 'https://adinfinity.gr/branding'
@@ -130,8 +133,12 @@ export default async function BrandingLayout({
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Branding", path: "/branding" } ]} />
       {children}
       <RelatedProjects projects={pickProjects('/branding')} />
+      {/* Cluster links: sub-services and the cost guide (audit §15). */}
+      <RelatedLinks links={BRANDING_RELATED} />
     </>
   )
 }

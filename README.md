@@ -121,7 +121,7 @@ adifinity/
 
 ## Contact API
 
-`POST /api/contact` — Handles form submissions with optional file attachment. Sends email via Nodemailer (Gmail transport). Returns `{ success: boolean, message: string }`.
+`POST /api/contact` — Handles form submissions with optional file attachment. Sends email via Nodemailer through our own Stalwart SMTP (`mail.adinfinity.gr:465`, see `.env.example`) to `manos@adinfinity.gr` with the team in CC. Returns `{ success: boolean }`.
 
 ---
 

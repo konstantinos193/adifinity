@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Τιμοκατάλογος Υπηρεσιών Άρτα | adinfinity',
@@ -64,6 +65,8 @@ export default function PricingLayout({
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[{ name: 'Τιμοκατάλογος', path: '/pricing' }]} />
       {children}
     </>
   )

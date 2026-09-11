@@ -61,7 +61,7 @@
     },
     {
       "question": "How much does advertising cost?",
-      "answer": "Advertising costs vary by channel and budget. Social media campaigns start from €200/month, while complete advertising packages start from €500/month."
+      "answer": "Advertising costs vary by channel and budget. Social media management starts from {price:socialMonthly}/month, ads management from {price:adsMonthly}/month and full digital marketing packages from {price:fullDigitalMonthly}/month, excluding ad spend."
     },
     {
       "question": "Which advertising channels are most effective?",

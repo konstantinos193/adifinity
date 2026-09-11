@@ -9,6 +9,7 @@ import CookieConsent from "../components/ui/CookieConsent"
 import SkipLinks from "../components/ui/SkipLinks"
 import AccessibilityWidget from "../components/ui/AccessibilityWidget"
 import GoogleAnalytics from "../components/GoogleAnalytics"
+import ConversionTracking from "../components/ConversionTracking"
 import StickyMobileCTA from "../components/ui/StickyMobileCTA"
 import type { Metadata, Viewport } from "next"
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
@@ -299,6 +300,7 @@ export default async function RootLayout({
           <Footer />
           <CookieConsent />
           <GoogleAnalytics />
+          <ConversionTracking />
           <StickyMobileCTA />
         </LocaleProvider>
       </body>

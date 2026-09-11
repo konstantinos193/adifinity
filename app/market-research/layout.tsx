@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { serverT } from "@/lib/metadata"
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = serverT('market_research_page')
@@ -107,6 +108,8 @@ export default function MarketResearchLayout({
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Έρευνα Αγοράς", path: "/market-research" } ]} />
       {/* Structured Data - FAQPage */}
       <script
         type="application/ld+json"

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { faqNode, GRAPHIC_DESIGN_FAQ } from '@/app/components/faqData'
 import { serverT } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
 
@@ -104,6 +105,8 @@ export default function GraphicDesignLayout({ children }: { children: React.Reac
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: 'Υπηρεσίες', path: '/services' }, { name: 'Γραφιστική', path: '/graphic-design' } ]} />
       {children}
       <RelatedProjects projects={pickProjects('/graphic-design')} />
     </>

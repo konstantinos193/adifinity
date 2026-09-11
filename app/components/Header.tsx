@@ -26,17 +26,25 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  /*
+   * Primary navigation per the 2026-09-11 audit (§29): every commercial page
+   * is one click from anywhere, and the money pages that used to be reachable
+   * only from the footer — /pricing, /epigrafes-arta, /diafimistika-dora — are
+   * in the main menu. /guides is the editorial hub.
+   */
   const menuItems = [
     {
       name: t('navigation.services'),
       path: "/services",
       dropdownItems: [
-        { name: t('navigation.prints'), path: "/prints" },
+        { name: t('navigation.branding'), path: "/branding" },
         { name: t('navigation.graphic_design'), path: "/graphic-design" },
-        { name: t('navigation.flyer_distribution'), path: "/flyer-distribution" },
+        { name: t('navigation.prints'), path: "/prints" },
+        { name: t('navigation.signage'), path: "/epigrafes-arta" },
         { name: t('navigation.website_development'), path: "/website-development" },
         { name: t('navigation.digital_marketing'), path: "/digital-marketing" },
-        { name: t('navigation.branding'), path: "/branding" },
+        { name: t('navigation.promo_gifts'), path: "/diafimistika-dora" },
+        { name: t('navigation.flyer_distribution'), path: "/flyer-distribution" },
         { name: t('navigation.market_research'), path: "/market-research" },
         { name: t('navigation.invitations'), path: "/invitations" },
         /*
@@ -54,8 +62,10 @@ export default function Header() {
         },
       ],
     },
-    { name: t('navigation.about'), path: "/about" },
     { name: t('navigation.projects'), path: "/projects" },
+    { name: t('navigation.pricing'), path: "/pricing" },
+    { name: t('navigation.about'), path: "/about" },
+    { name: t('navigation.guides'), path: "/guides" },
   ]
 
   return (
@@ -76,7 +86,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 src="/logo.png"
-                alt="Logo"
+                alt="adinfinity — Διαφημιστική Εταιρεία Άρτα"
                 width={256}
                 height={68}
                 className="w-24 md:w-32 h-auto"

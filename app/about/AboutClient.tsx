@@ -7,12 +7,17 @@ import { CompanyHistory } from "../components/CompanyHistory"
 import { TeamMember } from "../components/TeamMember"
 import { Timeline } from "../components/Timeline"
 import { OfficeShowcase } from "../components/OfficeShowcase"
+import { CompanyFacts } from "../components/CompanyFacts"
 import { useTranslations } from "@/components/useTranslations"
 
 interface TeamMemberData {
   name: string
   role: string
   bio: string
+  focus?: string
+  since?: string
+  work_label?: string
+  work_href?: string
 }
 
 interface TeamMembers {
@@ -31,6 +36,9 @@ export function AboutClient() {
 
       <div className="container mx-auto px-4 pb-20">
         <CompanyDescription />
+
+        {/* Verifiable facts before the narrative (audit §12). */}
+        <CompanyFacts />
 
         <CompanyHistory />
 
@@ -57,12 +65,20 @@ export function AboutClient() {
               role={teamMembers.manos.role}
               imageSrc="/images/team-member-manos.jpg"
               bio={teamMembers.manos.bio}
+              focus={teamMembers.manos.focus}
+              since={teamMembers.manos.since}
+              workLabel={teamMembers.manos.work_label}
+              workHref={teamMembers.manos.work_href}
             />
             <TeamMember
               name={teamMembers.kostas.name}
               role={teamMembers.kostas.role}
               imageSrc="/images/team-member.jpg"
               bio={teamMembers.kostas.bio}
+              focus={teamMembers.kostas.focus}
+              since={teamMembers.kostas.since}
+              workLabel={teamMembers.kostas.work_label}
+              workHref={teamMembers.kostas.work_href}
             />
           </div>
         </motion.div>

@@ -31,7 +31,6 @@ import customWebAppsPage from '../messages/el/custom_web_apps_page.json'
 import diafimistikaDoraPage from '../messages/el/diafimistika_dora_page.json'
 import diafimistikiEteriaPage from '../messages/el/diafimistiki_eteria_page.json'
 import diafimistikiPage from '../messages/el/diafimistiki_page.json'
-import dianomiFylladionArtaPage from '../messages/el/dianomi_fylladion_arta_page.json'
 import digitalMarketingPage from '../messages/el/digital_marketing_page.json'
 import eCommercePage from '../messages/el/e_commerce_page.json'
 import ektypwseisArtaPage from '../messages/el/ektypwseis_arta_page.json'
@@ -51,8 +50,8 @@ import reportContent from '../messages/el/report_content.json'
 import seo from '../messages/el/seo.json'
 import siteGamouRsvpPage from '../messages/el/site_gamou_rsvp_page.json'
 import webAppsPage from '../messages/el/web_apps_page.json'
-import webDevelopmentArtaPage from '../messages/el/web_development_arta_page.json'
 import websiteDevelopmentPage from '../messages/el/website_development_page.json'
+import { withFactsDeep } from './company'
 
 /** The locale the server always renders. See the module doc above. */
 export const SERVER_LOCALE = 'el' as const
@@ -61,7 +60,9 @@ export const SERVER_LOCALE = 'el' as const
 export const OG_LOCALE = 'el_GR' as const
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const NAMESPACES: Record<string, any> = {
+// `withFactsDeep` so a meta description can say "{clients}+ επιχειρήσεις" or
+// "από {price:websiteStarter}" and always agree with the page body.
+const NAMESPACES: Record<string, any> = withFactsDeep({
   about_page: aboutPage,
   accessibility,
   branding_page: brandingPage,
@@ -71,7 +72,6 @@ const NAMESPACES: Record<string, any> = {
   diafimistika_dora_page: diafimistikaDoraPage,
   diafimistiki_eteria_page: diafimistikiEteriaPage,
   diafimistiki_page: diafimistikiPage,
-  dianomi_fylladion_arta_page: dianomiFylladionArtaPage,
   digital_marketing_page: digitalMarketingPage,
   e_commerce_page: eCommercePage,
   ektypwseis_arta_page: ektypwseisArtaPage,
@@ -91,9 +91,8 @@ const NAMESPACES: Record<string, any> = {
   seo,
   site_gamou_rsvp_page: siteGamouRsvpPage,
   web_apps_page: webAppsPage,
-  web_development_arta_page: webDevelopmentArtaPage,
   website_development_page: websiteDevelopmentPage,
-}
+})
 /* eslint-enable @typescript-eslint/no-explicit-any */
 
 /** Resolves a dot path, mirroring next-intl's `t('seo.title')` addressing. */

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { jsonLd, ORG_REF, pageGraph, SITE_URL } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 /**
  * The services this hub lists, each pointing at its own indexable page.
@@ -107,6 +108,8 @@ export default function ServicesLayout({
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[{ name: 'Υπηρεσίες', path: '/services' }]} />
       {children}
     </>
   )

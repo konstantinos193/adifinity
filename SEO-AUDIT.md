@@ -6,6 +6,78 @@
 
 ---
 
+## Follow-up — 2026-09-11
+
+**GSC at this date:** 15 indexed / 76 not indexed · 16 months: 146 clicks / 3,268 impressions.
+The 2026-08-25 fixes are live (66 sitemap URLs, all static, all with real breadcrumbs), but
+the export exposed two infrastructure bugs that were quietly undoing them.
+
+### What was actually wrong
+
+| Finding | Evidence | Fix |
+|---|---|---|
+| **`https://www.adinfinity.gr/*` served 200 for every route.** `proxy.ts` stripped `www.` *before* comparing to the canonical host, so www requests were treated as canonical. Two full copies of the site. | `curl -I https://www.adinfinity.gr/prints` → `200`. In GSC the homepage's impressions split across `http://adinfinity.gr/` (2,322) and `https://adinfinity.gr/` (694) — Google has been choosing between four homepages. | Host check fixed in `proxy.ts`; www→apex also declared in `redirects.mjs` so Vercel resolves it at the edge before any render. |
+| **Legacy Joomla URLs looped forever.** The `next.config.mjs` rule `/` + `?option=com_k2` → `https://adinfinity.gr` re-appended the query to its own destination. | `curl -L 'https://adinfinity.gr/?option=com_k2'` → gave up after 50 redirects. Every old-site URL Google still remembers was a "Redirect error". | Rule removed. `proxy.ts` handles all Joomla params with one 301 to `/`. |
+| The proxy's redirect tests had never run — they targeted Jest globals with no Jest installed. | The www case above would have failed. | Tests ported to `node:test`; `pnpm test` runs them plus a new sitemap ↔ filesystem ↔ redirects parity suite. |
+| Image sitemap listed the OG card under 31 URLs. Google Images only indexes images it also finds in the page body. | `og-image.png` on 25 URLs, `og-*.svg` on 6. | Only on-page images remain (office, team, portfolio). Test enforces it. |
+| `/projects` and `/dsa-compliance` shipped **English** title/description on `<html lang="el">` pages; `/dsa-compliance` also redefined the Organization with a second, transliterated address. | — | Greek metadata; DSA page uses the shared `pageGraph()`. |
+
+### Titles rewritten against real queries (0-click impressions in the export)
+
+| Query | Impr. | Pos. | Page | Change |
+|---|---|---|---|---|
+| `graphic design` | 197 | 3.8 | `/graphic-design` | Title/desc now carry the English term the query uses |
+| `διαφημιστικο γραφειο` | 48 | 52.8 | `/` | Phrase never appeared on the site; now leads the description |
+| `τυπογραφειο αρτα`, `τυπογραφειο κοντα μου` | 2 | 11 | `/prints` | "Τυπογραφείο" added to title + desc |
+| `διαφημιστική πινακίδα`, `επιγραφεσ γραμματα` | 8 | 1.5–4.3 | `/epigrafes-arta` | "Διαφημιστικές Πινακίδες" + "γράμματα" |
+| `διαφημιστικα ειδη` | 3 | 9 | `/diafimistika-dora` | "& Είδη" |
+| `διανομη εντυπων`, `εταιρειεσ διανομησ φυλλαδιων` | 24 | 73–78 | `/flyer-distribution` | "Εταιρεία διανομής εντύπων & φυλλαδίων" |
+| `μελέτη ανάλυσης ανταγωνισμού` | 3 | 16.7 | `/market-research` | Exact phrase in title |
+
+### Do in Search Console (cannot be done from code)
+
+1. **URL Inspection → `https://adinfinity.gr/`** → *Request indexing*. Then inspect `http://adinfinity.gr/` and confirm it now reports "Page with redirect". Google has held `http://` as the homepage canonical for 16 months; the www fix removes the last competing signal, but a recrawl request shortens the wait.
+2. **Pages report → "Redirect error"** should drain to zero over the next 2–3 crawl cycles. If any remain, they are the legacy `.html`/`?option=` URLs and are now correct 301s.
+3. **Pages report → "Duplicate without user-selected canonical" / "Alternate page with proper canonical tag"** — expect the www copies to leave the index. Do not "Remove" them manually; the 308 does it.
+4. Watch **`graphic design` CTR** on `/graphic-design` over 28 days — that is the cleanest A/B this change offers (197 impressions, previously 0 clicks).
+
+### Applied the same day: the 55-section audit (`D:\donwloads\adinfinity-seo-audit.md`)
+
+Everything in that document that can be done in the repo is done. Status by section:
+
+| Sections | Status | Where |
+|---|---|---|
+| §4, §39, §40, §41 facts & prices in one place | Done | `lib/company.ts` `PRICES` + `withFactsDeep()` applied at message load; 49 strings, FAQ arrays and `/pricing` (rebuilt: comparison table, Digital Marketing tab) all resolve `{price:key}` |
+| §5, §31, §34, §44, §52 one page one job, titles | Done | 12 pages retitled to the keyword map; `/diafimistiki-eteria` = local hub, `/services` = plain catalogue, `/diafimistiki` = guide |
+| §6, §28, §43 clone routes | Done | `/web-development-arta` → `/website-development`, `/dianomi-fylladion-arta` → `/flyer-distribution` (308), their body + FAQ merged into the parents |
+| §7 case studies | Already existed; **claims verified over SSH** | Asterias: 1 paid Stripe booking (Jul 2026), 22 Booking.com reviews at 4.5, 7 apts, 6 seasons. KYKLOS: 2,143 επιτυχόντες 1992-2025, 35 Panhellenic papers. Fabricated "95% speed / 40% bookings / 500+ students / Top 3" removed from 3 pages + `projects.json` |
+| §8, §9, §24, §47 sub-services & vertical | Done | `/sxediasmos-logotypou`, `/etairiki-tautotita`, `/epaggelmatikes-kartes`, `/flyers`, `/banners-roll-up`, `/led-neon`, `/website-development/booking-systems`, `/istoselides-xenodoxeion` |
+| §17, §37, §43 guides hub | Done | `/guides` + 5 guides (website cost, logo cost, sign cost, WordPress vs Next.js, small-business advertising in Arta); the two legacy guides listed on the hub |
+| §11 homepage | Done | H1 "Διαφημιστική Εταιρεία στην Άρτα για Design, Εκτυπώσεις & Digital"; selected projects moved above the logo wall; invitations promo moved down |
+| §12, §26 About / E-E-A-T | Done | Person nodes for both team members, verifiable facts block, specialties + "see their work" links; dead Organization with wrong socials removed |
+| §14 local hub | Done | `LocalHubSection` on `/diafimistiki-eteria`: services, office hours, visit reasons, reach by region, industries |
+| §15, §16 cluster links | Done | `RelatedLinks` blocks on prints, graphic design, branding, signage, web; case-study tags link to the selling page (`Booking System` → booking page) |
+| §19, §20, §30 technical, schema, breadcrumbs | Done | Visible `Breadcrumbs` on 41 pages from the same trail as the JSON-LD; Article/Service/FAQPage graph on every content page |
+| §21, §22 images | Done | 27 portfolio images renamed to descriptive slugs (`apofa-logo-arta.png`), 32 references updated, header alt text |
+| §23 portfolio taxonomy | Done | Industry filter (`lib/industries.ts`), client state only, no filter URLs |
+| §27 language | Done | 224 → 116 English-only strings; what remains is tool/tech names |
+| §29 navigation | Done | Υπηρεσίες / Έργα / Τιμές / Σχετικά / Οδηγοί / Επικοινωνία; sub-services in the footer cluster |
+| §33 conversion tracking | Done | GA4 `generate_lead`, `click_to_call`, `click_to_email`, `contact_cta_click`, `pricing_tab_view` (`lib/analytics.ts`, consent-gated) |
+| §42 governance | Done | `lib/seo-registry.ts` + test: every hand-built route has an owner, primary keyword, review date; no two share a keyword; content pages must have breadcrumb, 3+ related, 3+ FAQ, no em dashes, ≤70/≤175 metadata |
+| §13, §32, §36, §45 (GBP, GSC, links), §51 dashboard | **Not code** | Yours: Business Profile, Search Console monitoring, link outreach, monthly dashboard |
+
+Verified: 32 tests, `tsc`, production build (86 routes, all static), `scripts/audit-seo.mjs` over 78 sitemap URLs, zero placeholder leaks in rendered HTML.
+
+**Assumed, please confirm:** `CLIENTS_CLAIM = 50`, `COMPLETED_PROJECTS_CLAIM = 200`, and the `PRICES` table in `lib/company.ts` are stated as found on the site; no database backs them. Change them there and they change everywhere.
+
+### Still open
+
+- `κατασκευη web εφαρμογων` and `έρευνα ανταγωνισμού` remain authority problems; the guides hub is the lever, and it needs time.
+- `physioelpida.gr` serves a self-signed certificate (browsers block it). Left as instructed.
+- The English `messages/en/*.json` `seo` blocks are never served and have drifted; harmless.
+
+---
+
 ## TL;DR
 
 Your **technical** SEO is already good — metadata, JSON-LD `@graph`, canonicals, robots,

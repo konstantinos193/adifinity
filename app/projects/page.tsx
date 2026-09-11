@@ -1,5 +1,6 @@
 import { ProjectsClient } from './ProjectsClient'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export default function ProjectsPage() {
   return (
@@ -49,6 +50,8 @@ export default function ProjectsPage() {
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[{ name: 'Έργα', path: '/projects' }]} />
       <ProjectsClient />
     </>
   )

@@ -1,6 +1,6 @@
 {
-  "title": "Υπηρεσίες Τεχνικού SEO | Core Web Vitals | Τεχνικό SEO | adfinity",
-  "description": "Βελτιστοποίηση τεχνικού SEO για ελληνική αγορά. Core Web Vitals, schema markup, έλεγχος Lighthouse. Διορθώσεις σε επίπεδο κώδικα χωρίς plugins. Βελτιστοποίηση για Google rankings.",
+  "title": "Τεχνικό SEO | Core Web Vitals & Schema Markup | adinfinity",
+  "description": "Τεχνικό SEO για την ελληνική αγορά: Core Web Vitals, schema markup, έλεγχος Lighthouse. Διορθώσεις σε επίπεδο κώδικα, χωρίς plugins. Τηλ. 2681 303007",
   "keywords": "τεχνικό SEO, core web vitals, schema markup, βελτιστοποίηση SEO, ελληνικό SEO, υπηρεσίες SEO, έλεγχος Lighthouse, Google Search Console, βελτιστοποίηση crawling, έλεγχος SEO, ανάπτυξη react, nextjs, adfinity, adinity, τεχνικο SEO, βελτιστοποιηση SEO, Google ranking, ανάλυση SEO, βελτιστοποίηση ταχύτητας σελίδας, δομημένα δεδομένα, SEO Ελλάδα, βελτιστοποίηση μηχανών αναζήτησης",
   "hero_badge": "Core Web Vitals · Schema · Speed · Rankings",
   "hero_title": "Τεχνικό SEO",
@@ -11,7 +11,7 @@
   "unique_approach_desc": "Αντί για plugins, διορθώνουμε απευθείας τον κώδικα για μακροπρόθεσμα αποτελέσματα.",
   "lighthouse_target": "Στόχος Lighthouse",
   "performance": "Απόδοση",
-  "accessibility": "Προσβασιμότητα", 
+  "accessibility": "Προσβασιμότητα",
   "best_practices": "Βέλτιστες Πρακτικές",
   "seo_score": "SEO",
   "performance_tooltip": "Χρόνος φόρτωσης < 2δ",
@@ -35,7 +35,7 @@
       "desc": "LCP, FID, CLS — οι μετρήσεις που μετρά η Google για ranking. Βελτιστοποιήσεις για φόρτωση κάτω από 2δ."
     },
     "schema_markup": {
-      "title": "Schema Markup", 
+      "title": "Schema Markup",
       "desc": "Δομημένα δεδομένα (JSON-LD) για εμπλουτισμένα αποτελέσματα στη Google — αξιολογήσεις, συχνές ερωτήσεις, breadcrumbs."
     },
     "crawlability": {
@@ -43,7 +43,7 @@
       "desc": "Sitemap, robots.txt, canonical tags, internal linking. Η Google βλέπει ακριβώς τι θέλετε να δείτε."
     },
     "lighthouse_audit": {
-      "title": "Lighthouse Audit",
+      "title": "Έλεγχος Lighthouse",
       "desc": "Performance, Accessibility, Best Practices, SEO score. Στοχεύουμε 90+ σε όλες τις κατηγορίες."
     },
     "on_page_seo": {
@@ -51,7 +51,7 @@
       "desc": "Titles, meta descriptions, ιεραρχία H1-H6, βελτιστοποίηση λέξεων-κλειδιών, περιγραφές εικόνων."
     },
     "technical_fixes": {
-      "title": "Technical Fixes",
+      "title": "Τεχνικές διορθώσεις",
       "desc": "Σπασμένοι σύνδεσμοι, αλυσίδες ανακατευθύνσεων, διπλότυπο περιεχόμενο, προβλήματα χρηστικότητας σε κινητά — όλα διορθωμένα."
     }
   },
@@ -62,7 +62,7 @@
       "desc": "Πλήρης τεχνικός έλεγχος με Lighthouse, Google Search Console και Screaming Frog."
     },
     "analysis": {
-      "title": "Ανάλυση", 
+      "title": "Ανάλυση",
       "desc": "Εντοπισμός των κρίσιμων προβλημάτων που επηρεάζουν περισσότερο την κατάταξή σας."
     },
     "implementation": {
@@ -82,7 +82,7 @@
       "desc": "Μέση βελτίωση θέσεων μετά από διορθώσεις τεχνικού SEO"
     },
     "load_time": {
-      "title": "-60% Χρόνος Φόρτωσης", 
+      "title": "-60% Χρόνος Φόρτωσης",
       "desc": "Γρηγορότεροι χρόνοι φόρτωσης για καλύτερη εμπειρία χρήστη"
     },
     "traffic": {
@@ -104,7 +104,7 @@
     },
     "gsc": {
       "name": "Google Search Console",
-      "category": "Παρακολούθηση", 
+      "category": "Παρακολούθηση",
       "description": "Κατατάξεις και δεδομένα ευρετηρίασης"
     },
     "screaming_frog": {

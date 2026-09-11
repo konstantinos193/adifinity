@@ -1,4 +1,5 @@
 import type { RelatedLink } from "./RelatedLinks"
+import { withFactsDeep } from "@/lib/company"
 
 /**
  * Hub page -> the local-intent landing pages it should link to in-body.
@@ -9,7 +10,28 @@ import type { RelatedLink } from "./RelatedLinks"
  * targeting those exact queries.
  */
 
-export const PRINTS_RELATED: RelatedLink[] = [
+export const PRINTS_RELATED: RelatedLink[] = withFactsDeep([
+  {
+    path: "/epaggelmatikes-kartes",
+    el: "Επαγγελματικές Κάρτες",
+    en: "Business Cards",
+    elDesc: "Χαρτιά, φινιρίσματα και τιμές, από {price:businessCardsPer100} τα 100.",
+    enDesc: "Papers, finishes and prices, from {price:businessCardsPer100} per 100.",
+  },
+  {
+    path: "/flyers",
+    el: "Φυλλάδια",
+    en: "Flyers",
+    elDesc: "Μεγέθη, χαρτιά, σχεδιασμός και διανομή, από {price:flyersPer500} τα 500.",
+    enDesc: "Sizes, papers, design and distribution, from {price:flyersPer500} per 500.",
+  },
+  {
+    path: "/banners-roll-up",
+    el: "Banner & Roll-up",
+    en: "Banners & Roll-ups",
+    elDesc: "Μουσαμάδες, roll-up και forex, από {price:bannerPerSqm}/τμ².",
+    enDesc: "Vinyl, roll-ups and foam board, from {price:bannerPerSqm}/m².",
+  },
   {
     path: "/ektypwseis-arta",
     el: "Εκτυπώσεις Άρτα",
@@ -31,9 +53,23 @@ export const PRINTS_RELATED: RelatedLink[] = [
     elDesc: "Στυλό, κούπες, μπλούζες και εταιρικά δώρα με το λογότυπό σας.",
     enDesc: "Pens, mugs, shirts and corporate gifts carrying your logo.",
   },
-]
+])
 
-export const GRAPHIC_DESIGN_RELATED: RelatedLink[] = [
+export const GRAPHIC_DESIGN_RELATED: RelatedLink[] = withFactsDeep([
+  {
+    path: "/sxediasmos-logotypou",
+    el: "Σχεδιασμός Λογοτύπου",
+    en: "Logo Design",
+    elDesc: "Προτάσεις, διορθώσεις και όλα τα αρχεία, από {price:logo}.",
+    enDesc: "Concepts, revisions and all files, from {price:logo}.",
+  },
+  {
+    path: "/guides/poso-kostizei-logo",
+    el: "Πόσο Κοστίζει ένα Λογότυπο",
+    en: "How Much a Logo Costs",
+    elDesc: "Τι περιλαμβάνει κάθε τιμή και τι να ζητήσετε.",
+    enDesc: "What each price includes and what to ask for.",
+  },
   {
     path: "/grafistas-arta",
     el: "Γραφίστας Άρτα",
@@ -55,7 +91,7 @@ export const GRAPHIC_DESIGN_RELATED: RelatedLink[] = [
     elDesc: "Full-service διαφημιστική: στρατηγική, δημιουργικό και υλοποίηση.",
     enDesc: "Full-service agency: strategy, creative and delivery.",
   },
-]
+])
 
 /**
  * Points at the invitations product on its own subdomain, not at the three
@@ -68,7 +104,7 @@ export const GRAPHIC_DESIGN_RELATED: RelatedLink[] = [
  * Google treats invitations.adinfinity.gr as a separate site, and it had almost
  * no inbound links, which is why its homepage sat unindexed.
  */
-export const INVITATIONS_RELATED: RelatedLink[] = [
+export const INVITATIONS_RELATED: RelatedLink[] = withFactsDeep([
   {
     path: "https://invitations.adinfinity.gr/psifiakes-proskliseis-gamou",
     el: "Ψηφιακές Προσκλήσεις Γάμου",
@@ -93,15 +129,79 @@ export const INVITATIONS_RELATED: RelatedLink[] = [
     enDesc: "Digital wedding invitations for Arta and Epirus.",
     external: true,
   },
-]
+])
 
-export const WEB_DEVELOPMENT_RELATED: RelatedLink[] = [
+export const BRANDING_RELATED: RelatedLink[] = withFactsDeep([
   {
-    path: "/web-development-arta",
-    el: "Κατασκευή Ιστοσελίδων Άρτα",
-    en: "Web Development in Arta",
-    elDesc: "Ιστοσελίδες για επιχειρήσεις στην Άρτα και την Ήπειρο.",
-    enDesc: "Websites for businesses in Arta and Epirus.",
+    path: "/etairiki-tautotita",
+    el: "Εταιρική Ταυτότητα",
+    en: "Corporate Identity",
+    elDesc: "Λογότυπο, χρώματα, τυπογραφία και brand guidelines, από {price:brandIdentity}.",
+    enDesc: "Logo, colours, typography and brand guidelines, from {price:brandIdentity}.",
+  },
+  {
+    path: "/sxediasmos-logotypou",
+    el: "Σχεδιασμός Λογοτύπου",
+    en: "Logo Design",
+    elDesc: "Μόνο το σήμα, με όλα τα αρχεία, από {price:logo}.",
+    enDesc: "The mark alone, with all files, from {price:logo}.",
+  },
+  {
+    path: "/guides/poso-kostizei-logo",
+    el: "Πόσο Κοστίζει ένα Λογότυπο",
+    en: "How Much a Logo Costs",
+    elDesc: "Ο οδηγός με τις τιμές και τι να ρωτήσετε πριν αναθέσετε.",
+    enDesc: "The guide with prices and what to ask before you commission.",
+  },
+])
+
+export const SIGNAGE_RELATED: RelatedLink[] = withFactsDeep([
+  {
+    path: "/led-neon",
+    el: "Φωτεινές Επιγραφές LED & Neon",
+    en: "LED & Neon Signs",
+    elDesc: "Κατασκευή και τοποθέτηση, LED από {price:signageLed}, neon από {price:signageNeon}.",
+    enDesc: "Fabrication and installation, LED from {price:signageLed}, neon from {price:signageNeon}.",
+  },
+  {
+    path: "/guides/poso-kostizei-epigrafi",
+    el: "Πόσο Κοστίζει μια Επιγραφή",
+    en: "How Much a Sign Costs",
+    elDesc: "Τι καθορίζει την τιμή και τι να μετρήσετε πριν ζητήσετε προσφορά.",
+    enDesc: "What sets the price and what to measure before asking for a quote.",
+  },
+  {
+    path: "/banners-roll-up",
+    el: "Banner & Roll-up",
+    en: "Banners & Roll-ups",
+    elDesc: "Για προσωρινή προβολή, από {price:bannerPerSqm}/τμ².",
+    enDesc: "For temporary display, from {price:bannerPerSqm}/m².",
+  },
+])
+
+export const WEB_DEVELOPMENT_RELATED: RelatedLink[] = withFactsDeep([
+  {
+    path: "/istoselides-xenodoxeion",
+    el: "Ιστοσελίδες για Καταλύματα",
+    en: "Websites for Accommodation",
+    elDesc: "Σελίδα ανά δωμάτιο, απευθείας κρατήσεις, γλώσσες, τοπικό SEO.",
+    enDesc: "A page per room, direct bookings, languages, local SEO.",
+  },
+  {
+    path: "/guides/poso-kostizei-istoselida",
+    el: "Πόσο Κοστίζει μια Ιστοσελίδα",
+    en: "How Much a Website Costs",
+    elDesc: "Τα τρία επίπεδα τιμών και τα κόστη που έρχονται μετά.",
+    enDesc: "The three price levels and the costs that follow.",
+  },
+  {
+    // /web-development-arta folded into /website-development; the booking
+    // systems page is the sub-service every accommodation client asks about.
+    path: "/website-development/booking-systems",
+    el: "Συστήματα Κρατήσεων",
+    en: "Booking Systems",
+    elDesc: "Online κρατήσεις χωρίς προμήθειες τρίτων, για καταλύματα, ιατρεία και ενοικιάσεις.",
+    enDesc: "Direct online bookings with no third-party commission, for stays, clinics and rentals.",
   },
   {
     // Was /katastrifi-web-efarmogon, which now 308s here-adjacent. This is the
@@ -119,4 +219,4 @@ export const WEB_DEVELOPMENT_RELATED: RelatedLink[] = [
     elDesc: "Τι κοστίζει μια ιστοσελίδα, ένα e-shop και μια web εφαρμογή.",
     enDesc: "What a website, an e-shop and a web app actually cost.",
   },
-]
+])

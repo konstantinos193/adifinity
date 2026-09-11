@@ -58,27 +58,51 @@
       "category": "Hospitality",
       "image": "/images/asteriashome-preview.png",
       "url": "https://asteriashome.gr",
-      "tags": ["Next.js", "TypeScript", "Tailwind"],
-      "metrics": { "performance": "95", "seo": "92", "speed": "1.2s" },
-      "description": "Custom booking system for hotel with real-time availability and online payments."
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind"
+      ],
+      "metrics": {
+        "apartments": "7",
+        "reviews": "22 · 4.5/5",
+        "languages": "3"
+      },
+      "description": "Direct-booking system for a 7-apartment property, with Stripe online payments, seasonal pricing and Booking.com review sync."
     },
     {
       "name": "KYKLOS Education",
       "category": "Education",
       "image": "/images/kyklosedu-preview.png",
       "url": "https://kyklosedu.gr",
-      "tags": ["Next.js", "TypeScript", "SEO"],
-      "metrics": { "performance": "98", "seo": "94", "pages": "50+" },
-      "description": "Complete educational platform with course management, student portals and online exams."
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "SEO"
+      ],
+      "metrics": {
+        "candidates": "2,143",
+        "years": "1992–2025",
+        "papers": "35"
+      },
+      "description": "Education platform with 2,143 successful candidates searchable by year and faculty, a Panhellenic exam archive and news/newsletter run from the admin."
     },
     {
       "name": "Physio Elpida",
       "category": "Healthcare",
       "image": "/images/physioelpida-preview.png",
       "url": "https://physioelpida.gr",
-      "tags": ["Next.js", "TypeScript", "Booking"],
-      "metrics": { "performance": "96", "seo": "91", "bookings": "85%" },
-      "description": "Patient portal with appointment booking, telemedicine features and HIPAA compliant security."
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Booking"
+      ],
+      "metrics": {
+        "appointments": "online",
+        "year": "2022",
+        "language": "EL"
+      },
+      "description": "Physiotherapy clinic website with online appointment booking, services and equipment presentation and the physiotherapist’s bio."
     }
   ],
   "included_features": [
@@ -95,22 +119,42 @@
     {
       "title": "Hospitality",
       "desc": "Booking systems, room management, tour packages - complete solutions for hotels & rentals.",
-      "features": ["Online Booking", "Room Management", "Tour Packages", "Multi-language"]
+      "features": [
+        "Online Booking",
+        "Room Management",
+        "Tour Packages",
+        "Multi-language"
+      ]
     },
     {
       "title": "Education",
       "desc": "E-learning platforms, course management, student portals - digital transformation for educational institutions.",
-      "features": ["E-learning", "Course Management", "Student Portals", "Online Exams"]
+      "features": [
+        "E-learning",
+        "Programme presentation",
+        "Successful-candidate lists",
+        "Exam paper archive"
+      ]
     },
     {
       "title": "Healthcare",
       "desc": "Patient portals, appointment booking, telemedicine - secure solutions for medical institutions.",
-      "features": ["Patient Portals", "Appointment Booking", "Telemedicine", "HIPAA Compliant"]
+      "features": [
+        "Patient Portals",
+        "Appointment Booking",
+        "Telemedicine",
+        "GDPR compliant"
+      ]
     },
     {
       "title": "E-commerce",
       "desc": "Online shops, payment integration, inventory management - complete e-commerce solutions for every business.",
-      "features": ["Online Shops", "Payment Integration", "Inventory", "Multi-currency"]
+      "features": [
+        "Online Shops",
+        "Payment Integration",
+        "Inventory",
+        "Multi-currency"
+      ]
     }
   ],
   "faqs": [
@@ -184,16 +228,46 @@
     }
   ],
   "integrations": [
-    { "name": "Stripe", "category": "Payments" },
-    { "name": "PayPal", "category": "Payments" },
-    { "name": "Google Analytics", "category": "Analytics" },
-    { "name": "Meta Pixel", "category": "Marketing" },
-    { "name": "SendGrid", "category": "Email" },
-    { "name": "Twilio", "category": "Communications" },
-    { "name": "Zapier", "category": "Automation" },
-    { "name": "Slack", "category": "Productivity" },
-    { "name": "Calendly", "category": "Booking" },
-    { "name": "Mailchimp", "category": "Email" }
+    {
+      "name": "Stripe",
+      "category": "Payments"
+    },
+    {
+      "name": "PayPal",
+      "category": "Payments"
+    },
+    {
+      "name": "Google Analytics",
+      "category": "Analytics"
+    },
+    {
+      "name": "Meta Pixel",
+      "category": "Marketing"
+    },
+    {
+      "name": "SendGrid",
+      "category": "Email"
+    },
+    {
+      "name": "Twilio",
+      "category": "Communications"
+    },
+    {
+      "name": "Zapier",
+      "category": "Automation"
+    },
+    {
+      "name": "Slack",
+      "category": "Productivity"
+    },
+    {
+      "name": "Calendly",
+      "category": "Booking"
+    },
+    {
+      "name": "Mailchimp",
+      "category": "Email"
+    }
   ],
   "premium_features": [
     {

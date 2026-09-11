@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { faqNode, GRAFISTAS_FAQ } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
 
@@ -95,6 +96,8 @@ export default function GrafistasArtaLayout({
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Γραφίστας Άρτα", path: "/grafistas-arta" } ]} />
 
       {children}
       <RelatedProjects projects={pickProjects('/grafistas-arta')} />

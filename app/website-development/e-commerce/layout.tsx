@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
 
@@ -325,6 +326,8 @@ export default function EcommerceLayout({ children }: { children: React.ReactNod
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Κατασκευή Ιστοσελίδων", path: "/website-development" }, { name: "E-shop", path: "/website-development/e-commerce" } ]} />
 
       {children}
       <RelatedProjects projects={pickProjects('/website-development/e-commerce')} />

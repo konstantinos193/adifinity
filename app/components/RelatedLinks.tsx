@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { useTranslations } from "@/components/useTranslations"
+import { withFacts } from "@/lib/company"
 
 export interface RelatedLink {
   path: string
@@ -52,7 +53,7 @@ export default function RelatedLinks({ links }: { links: RelatedLink[] }) {
                   />
                 </span>
                 <span className="mt-2 block text-sm text-gray-400">
-                  {isGreek ? link.elDesc : link.enDesc}
+                  {withFacts(isGreek ? link.elDesc : link.enDesc)}
                 </span>
               </>
             )

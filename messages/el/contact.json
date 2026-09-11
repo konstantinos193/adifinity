@@ -39,7 +39,7 @@
     "message": "Μήνυμα",
     "message_placeholder": "Πώς μπορούμε να σας βοηθήσουμε;",
     "attachment": "Επισύναψη Αρχείου",
-    "attachment_placeholder": "No file chosen",
+    "attachment_placeholder": "Δεν επιλέχθηκε αρχείο",
     "attachment_drag": "Σύρετε ένα αρχείο εδώ ή κάντε κλικ για επιλογή",
     "selected_file": "Επιλεγμένο",
     "services": "Επιλέξτε Υπηρεσίες & Features",

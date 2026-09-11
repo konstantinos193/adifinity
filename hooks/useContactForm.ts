@@ -2,6 +2,7 @@
 
 import { useState, useCallback } from "react"
 import { validateInput, SecurityMonitor } from "@/lib/security"
+import { track } from "@/lib/analytics"
 
 interface ContactFormData {
   name: string
@@ -126,6 +127,9 @@ export function useContactForm() {
       })
 
       if (!response.ok) throw new Error("Failed to send message")
+
+      // The one event that turns "organic click" into "organic lead" in GA4.
+      track("generate_lead", { subject: formData.subject || "unspecified" })
 
       setSubmitStatus({
         message: "Το μήνυμά σας στάλθηκε με επιτυχία!",

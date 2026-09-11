@@ -2,8 +2,17 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Check, Star, Globe, Palette, Printer, MapPin, BarChart2 } from "lucide-react"
+import { Check, Star, Globe, Palette, Printer, MapPin, BarChart2, Megaphone } from "lucide-react"
 import Link from "next/link"
+import { PRICES, euro } from "@/lib/company"
+import { track } from "@/lib/analytics"
+
+/*
+ * Every figure on this page comes from lib/company.ts. This is the reference
+ * price list — the FAQ answers, service pages and guides all resolve their
+ * "από €…" to the same constants, so a change here changes them everywhere.
+ */
+const from = (value: number) => `από ${euro(value)}`
 
 const categories = [
   { id: "websites", label: "Ιστοσελίδες", icon: Globe },
@@ -11,6 +20,29 @@ const categories = [
   { id: "prints", label: "Εκτυπώσεις", icon: Printer },
   { id: "distribution", label: "Έντυποδιανομές", icon: MapPin },
   { id: "research", label: "Έρευνα Αγοράς", icon: BarChart2 },
+  { id: "digital", label: "Digital Marketing", icon: Megaphone },
+]
+
+/**
+ * One row per service, for the comparison table below the cards.
+ *
+ * Search Console shows cost queries ("πόσο κοστίζει…") landing on this page, and
+ * a tabbed card grid answers only one tab at a time. The table answers all of
+ * them in one glance and is what the buying guides link to.
+ */
+const COMPARISON: { service: string; href: string; from: number; unit?: string; scope: string; delivery: string }[] = [
+  { service: "Σχεδιασμός λογοτύπου", href: "/sxediasmos-logotypou", from: PRICES.logo, scope: "Λογότυπο, παραλλαγές, όλα τα διανυσματικά αρχεία", delivery: "3-5 εργάσιμες" },
+  { service: "Εταιρική ταυτότητα", href: "/etairiki-tautotita", from: PRICES.brandIdentity, scope: "Λογότυπο, χρώματα, τυπογραφία, κάρτες, brand guidelines", delivery: "2-4 εβδομάδες" },
+  { service: "Ιστοσελίδα", href: "/website-development", from: PRICES.websiteStarter, scope: "Έως 5 ενότητες, responsive, βασικό SEO, φόρμα", delivery: "2-4 εβδομάδες" },
+  { service: "Εταιρική ιστοσελίδα με admin", href: "/website-development/custom-web-apps", from: PRICES.websiteBusiness, scope: "Έως 15 σελίδες, admin panel, blog, analytics", delivery: "4-6 εβδομάδες" },
+  { service: "E-shop", href: "/website-development/e-commerce", from: PRICES.eshop, scope: "Custom Next.js, πληρωμές, αποθήκη, παραγγελίες", delivery: "6-10 εβδομάδες" },
+  { service: "Εκτυπώσεις", href: "/prints", from: PRICES.printsSmall, scope: "Έως 500 αντίτυπα, κάρτες / φυλλάδια / αφίσες", delivery: "2-3 εργάσιμες, express 24ω" },
+  { service: "Επιγραφές καταστημάτων", href: "/epigrafes-arta", from: PRICES.signageAcrylicPerSqm, unit: "/τμ²", scope: `Ακρυλικό· LED από ${euro(PRICES.signageLed)}, neon από ${euro(PRICES.signageNeon)}, με τοποθέτηση`, delivery: "5-7 εργάσιμες" },
+  { service: "Διανομή φυλλαδίων", href: "/flyer-distribution", from: PRICES.distributionLocal, scope: "Έως 1.000 φυλλάδια, 1 ζώνη, αναφορά κάλυψης", delivery: "1-5 ημέρες" },
+  { service: "Διαφημιστικά δώρα", href: "/diafimistika-dora", from: PRICES.promoGiftMin, unit: "/τεμ.", scope: "Στυλό, κούπες, μπλούζες, τσάντες με λογότυπο", delivery: "5-10 εργάσιμες" },
+  { service: "Διαχείριση social media", href: "/digital-marketing", from: PRICES.socialMonthly, unit: "/μήνα", scope: "Πλάνο περιεχομένου, δημιουργικά, αναφορά", delivery: "Μηνιαία συνεργασία" },
+  { service: "Google & Meta Ads", href: "/digital-marketing", from: PRICES.adsMonthly, unit: "/μήνα", scope: "Καμπάνιες, conversion tracking, βελτιστοποίηση (χωρίς ad spend)", delivery: "Μηνιαία συνεργασία" },
+  { service: "Έρευνα αγοράς", href: "/market-research", from: PRICES.researchBasic, scope: "3 ανταγωνιστές, SWOT, έρευνα τιμών, έκθεση", delivery: "5 ημέρες" },
 ]
 
 const pricingData: Record<
@@ -31,7 +63,7 @@ const pricingData: Record<
     plans: [
       {
         name: "Starter",
-        price: "από €1.200",
+        price: from(PRICES.websiteStarter),
         description: "Ιδανικό για επαγγελματίες και μικρές επιχειρήσεις",
         features: [
           "Landing page έως 5 ενότητες",
@@ -45,7 +77,7 @@ const pricingData: Record<
       },
       {
         name: "Business",
-        price: "από €2.500",
+        price: from(PRICES.websiteBusiness),
         description: "Πλήρης εταιρική παρουσία με προηγμένες λειτουργίες",
         features: [
           "Πλήρης ιστοσελίδα έως 15 σελίδες",
@@ -61,7 +93,7 @@ const pricingData: Record<
       },
       {
         name: "E-shop",
-        price: "από €4.500",
+        price: from(PRICES.eshop),
         description: "Ολοκληρωμένο ηλεκτρονικό κατάστημα",
         features: [
           "Custom e-commerce (React/Next.js)",
@@ -80,7 +112,7 @@ const pricingData: Record<
     plans: [
       {
         name: "Βασικό",
-        price: "από €300",
+        price: from(PRICES.brandBasicPackage),
         description: "Για νέες επιχειρήσεις που χτίζουν την ταυτότητά τους",
         features: [
           "Σχεδιασμός λογοτύπου",
@@ -93,7 +125,7 @@ const pricingData: Record<
       },
       {
         name: "Επαγγελματικό",
-        price: "από €700",
+        price: from(PRICES.brandIdentity),
         description: "Πλήρης εταιρική ταυτότητα για σοβαρές επιχειρήσεις",
         features: [
           "Σχεδιασμός λογοτύπου (3 εναλλακτικά)",
@@ -108,7 +140,7 @@ const pricingData: Record<
       },
       {
         name: "Premium",
-        price: "από €1.400",
+        price: from(PRICES.brandPremium),
         description: "Ολοκληρωμένο brand package για μεγάλες επιχειρήσεις",
         features: [
           "Όλα του Επαγγελματικού",
@@ -127,7 +159,7 @@ const pricingData: Record<
     plans: [
       {
         name: "Μικρή Τιράζ",
-        price: "από €80",
+        price: from(PRICES.printsSmall),
         description: "Ιδανικό για δοκιμαστικές εκτυπώσεις",
         features: [
           "Έως 500 αντίτυπα",
@@ -140,10 +172,10 @@ const pricingData: Record<
       },
       {
         name: "Μεσαία Τιράζ",
-        price: "από €200",
+        price: from(PRICES.printsMedium),
         description: "Η καλύτερη σχέση ποιότητας-τιμής",
         features: [
-          "500 – 2.000 αντίτυπα",
+          "500-2.000 αντίτυπα",
           "Όλοι οι τύποι εντύπων",
           "Χαρτί premium ποιότητας",
           "Επιλογή φινιρίσματος & κοπής",
@@ -155,7 +187,7 @@ const pricingData: Record<
       },
       {
         name: "Μεγάλη Τιράζ",
-        price: "από €450",
+        price: from(PRICES.printsLarge),
         description: "Μαζικές εκτυπώσεις σε τιμή χονδρικής",
         features: [
           "2.000+ αντίτυπα",
@@ -174,7 +206,7 @@ const pricingData: Record<
     plans: [
       {
         name: "Τοπική",
-        price: "από €150",
+        price: from(PRICES.distributionLocal),
         description: "Διανομή σε μια συγκεκριμένη γειτονιά / περιοχή",
         features: [
           "Έως 1.000 φυλλάδια",
@@ -186,10 +218,10 @@ const pricingData: Record<
       },
       {
         name: "Διευρυμένη",
-        price: "από €400",
+        price: from(PRICES.distributionExtended),
         description: "Καλύψτε περισσότερες περιοχές αποτελεσματικά",
         features: [
-          "1.000 – 5.000 φυλλάδια",
+          "1.000-5.000 φυλλάδια",
           "Έως 3 γεωγραφικές ζώνες",
           "GPS tracking διανομής",
           "Φωτογραφική τεκμηρίωση",
@@ -200,7 +232,7 @@ const pricingData: Record<
       },
       {
         name: "Πανηπειρωτική",
-        price: "από €900",
+        price: from(PRICES.distributionRegional),
         description: "Κάλυψη ολόκληρης της πόλης & περιφέρειας",
         features: [
           "5.000+ φυλλάδια",
@@ -218,7 +250,7 @@ const pricingData: Record<
     plans: [
       {
         name: "Βασική Ανάλυση",
-        price: "από €450",
+        price: from(PRICES.researchBasic),
         description: "Γρήγορη ματιά στην αγορά σας",
         features: [
           "Ανάλυση 3 κύριων ανταγωνιστών",
@@ -231,7 +263,7 @@ const pricingData: Record<
       },
       {
         name: "Εκτεταμένη",
-        price: "από €950",
+        price: from(PRICES.researchExtended),
         description: "Πλήρης εικόνα της αγοράς και του ανταγωνισμού",
         features: [
           "Ανάλυση έως 10 ανταγωνιστών",
@@ -246,7 +278,7 @@ const pricingData: Record<
       },
       {
         name: "Πλήρης Audit",
-        price: "από €2.200",
+        price: from(PRICES.researchAudit),
         description: "360° ανάλυση για μέγιστη ανταγωνιστικότητα",
         features: [
           "Απεριόριστη ανάλυση ανταγωνιστών",
@@ -256,6 +288,54 @@ const pricingData: Record<
           "Πλήρης στρατηγική ανάπτυξη",
           "Συνάντηση παρουσίασης αποτελεσμάτων",
           "Follow-up ανάλυση μετά 1 μήνα",
+        ],
+        cta: "Ζητήστε Προσφορά",
+      },
+    ],
+  },
+  // Mirrors the packages on /digital-marketing so the two pages cannot drift.
+  digital: {
+    plans: [
+      {
+        name: "Social Media",
+        price: from(PRICES.socialMonthly),
+        period: "μήνα",
+        description: "Για επιχειρήσεις που θέλουν συνεπή, επαγγελματική παρουσία",
+        features: [
+          "Μηνιαίο πλάνο περιεχομένου",
+          "Σχεδιασμός δημιουργικών",
+          "Προγραμματισμός δημοσιεύσεων",
+          "Community management",
+          "Μηνιαία αναφορά",
+        ],
+        cta: "Ζητήστε Προσφορά",
+      },
+      {
+        name: "Ads Management",
+        price: from(PRICES.adsMonthly),
+        period: "μήνα",
+        description: "Google & Meta Ads με στόχο leads και πωλήσεις, χωρίς το ad spend",
+        features: [
+          "Στήσιμο & δομή καμπανιών",
+          "Conversion tracking",
+          "Δημιουργικά διαφημίσεων",
+          "Συνεχής βελτιστοποίηση",
+          "Μηνιαία αναφορά απόδοσης",
+        ],
+        popular: true,
+        cta: "Ζητήστε Προσφορά",
+      },
+      {
+        name: "SEO",
+        price: from(PRICES.fullDigitalMonthly),
+        period: "μήνα",
+        description: "Οργανική ορατότητα που χτίζεται και μένει",
+        features: [
+          "Technical SEO audit",
+          "On-page βελτιστοποίηση",
+          "Στρατηγική περιεχομένου",
+          "Google Business Profile",
+          "Παρακολούθηση κατατάξεων",
         ],
         cta: "Ζητήστε Προσφορά",
       },
@@ -315,7 +395,11 @@ export default function PricingPage() {
               return (
                 <motion.button
                   key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
+                  onClick={() => {
+                    setActiveCategory(cat.id)
+                    // Which price list a visitor opened — the "pricing-page interaction" the audit asks to measure.
+                    track("pricing_tab_view", { tab: cat.id })
+                  }}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-lg whitespace-nowrap text-sm font-medium transition-all flex-shrink-0 ${
                     isActive
                       ? "bg-gradient-to-r from-[#01FFFF] to-[#01A9FF] text-[#07141C]"
@@ -377,7 +461,7 @@ export default function PricingPage() {
                     {plan.period && (
                       <span className="text-gray-400 text-sm ml-1">/{plan.period}</span>
                     )}
-                    <p className="text-[#01FFFF]/60 text-xs mt-1">* Τιμή εκκίνησης — η τελική τιμή εξαρτάται από το scope</p>
+                    <p className="text-[#01FFFF]/60 text-xs mt-1">* Τιμή εκκίνησης. Η τελική τιμή εξαρτάται από το scope</p>
                   </div>
 
                   <ul className="space-y-3 mb-8 flex-1">
@@ -409,6 +493,46 @@ export default function PricingPage() {
             ))}
           </motion.div>
         </AnimatePresence>
+
+        {/* Comparison table — every service on one screen */}
+        <section className="max-w-6xl mx-auto mt-20" aria-labelledby="pricing-comparison">
+          <h2 id="pricing-comparison" className="text-3xl md:text-4xl font-bold text-white mb-3">
+            Τι κοστίζει κάθε υπηρεσία
+          </h2>
+          <p className="text-gray-400 mb-8 max-w-3xl">
+            Τιμές εκκίνησης ανά υπηρεσία, με το τυπικό εύρος και τον χρόνο παράδοσης. Οι ίδιες τιμές
+            ισχύουν σε κάθε σελίδα του site.
+          </p>
+          <div className="overflow-x-auto rounded-2xl border border-cyan-900/30">
+            <table className="w-full text-sm text-left">
+              <thead className="bg-[#0A1A24] text-[#01FFFF] uppercase text-xs tracking-wide">
+                <tr>
+                  <th scope="col" className="px-4 py-3">Υπηρεσία</th>
+                  <th scope="col" className="px-4 py-3 whitespace-nowrap">Από</th>
+                  <th scope="col" className="px-4 py-3">Τυπικό εύρος</th>
+                  <th scope="col" className="px-4 py-3 whitespace-nowrap">Παράδοση</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-cyan-900/20 bg-[#07141C]/60">
+                {COMPARISON.map((row) => (
+                  <tr key={row.service} className="hover:bg-[#01FFFF]/5 transition-colors">
+                    <th scope="row" className="px-4 py-3 font-medium text-white">
+                      <Link href={row.href} className="hover:text-[#01FFFF] transition-colors">
+                        {row.service}
+                      </Link>
+                    </th>
+                    <td className="px-4 py-3 whitespace-nowrap text-[#01FFFF] font-semibold">
+                      {euro(row.from)}
+                      {row.unit ?? ""}
+                    </td>
+                    <td className="px-4 py-3 text-gray-300">{row.scope}</td>
+                    <td className="px-4 py-3 text-gray-400 whitespace-nowrap">{row.delivery}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
 
         {/* Note */}
         <motion.p

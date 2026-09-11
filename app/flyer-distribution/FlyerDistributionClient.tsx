@@ -339,36 +339,6 @@ export function FlyerDistributionClient() {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="py-16 bg-[#061218]/50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#01FFFF]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {t('flyer_distribution_page.faq.title')}
-          </motion.h2>
-          <div className="space-y-4">
-            {asArray<{question: string; answer: string}>(t('flyer_distribution_page.faq.items')).map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="border border-cyan-900/40 rounded-xl p-6 bg-[#0A1A24]"
-              >
-                <h3 className="font-semibold text-white mb-2">{item.question}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div

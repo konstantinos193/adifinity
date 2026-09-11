@@ -1,16 +1,22 @@
 {
   "home": "Αρχική",
   "services": "Υπηρεσίες",
-  "about": "Σχετικά με εμάς",
+  "about": "Σχετικά",
   "contact": "Επικοινωνία",
   "graphic_design": "Γραφιστική",
   "prints": "Εκτυπώσεις",
-  "website_development": "Ιστοσελίδες",
-  "flyer_distribution": "Έντυποδιανομές",
+  "website_development": "Ιστοσελίδες & Web Apps",
+  "flyer_distribution": "Διανομή Εντύπων",
   "market_research": "Έρευνα Αγοράς",
   "projects": "Έργα",
   "accessibility": "Προσβασιμότητα",
   "invitations": "Προσκλήσεις",
   "digital_marketing": "Digital Marketing",
-  "branding": "Branding"
+  "branding": "Branding & Λογότυπο",
+  "pricing": "Τιμές",
+  "guides": "Οδηγοί",
+  "signage": "Επιγραφές",
+  "promo_gifts": "Διαφημιστικά Δώρα",
+  "booking_systems": "Συστήματα Κρατήσεων",
+  "hotel_websites": "Ιστοσελίδες Καταλυμάτων"
 }

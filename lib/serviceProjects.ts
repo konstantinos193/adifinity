@@ -65,7 +65,6 @@ const SERVICE_TAGS: Record<string, string[]> = {
     'Content Management',
     'SEO',
   ],
-  '/web-development-arta': ['Web Development', 'Booking System', 'Content Management', 'SEO'],
   '/website-development/e-commerce': ['Payments Integration', 'Web Development'],
   '/website-development/web-apps': ['Booking System', 'Content Management', 'Web Development'],
   '/website-development/custom-web-apps': ['Web Development', 'Content Management'],
@@ -73,7 +72,6 @@ const SERVICE_TAGS: Record<string, string[]> = {
   '/digital-marketing': ['Digital Marketing', 'SEO', 'Social Media Graphics'],
   '/diafimistika-dora': ['Uniform Design', 'Stationery Design', 'Event Materials'],
   '/flyer-distribution': ['Print Design', 'Event Materials'],
-  '/dianomi-fylladion-arta': ['Print Design', 'Event Materials'],
   '/diafimistiki-eteria': ['Corporate Identity', 'Branding', 'Web Development', 'Print Design'],
 }
 
@@ -91,8 +89,8 @@ const SERVICE_TAGS: Record<string, string[]> = {
  * Four by default — one lead tile and three supporting rows. Three left the
  * supporting column visibly short against the lead tile, and four is also more
  * proof, which is the point of the section. Every mapped route can supply at
- * least three; `/flyer-distribution` and `/dianomi-fylladion-arta` have exactly
- * that, and the component lays out whatever it is given.
+ * least three; `/flyer-distribution` has exactly that, and the component lays
+ * out whatever it is given.
  */
 export function pickProjects(path: string, limit = 4): Project[] {
   const tags = SERVICE_TAGS[path]
@@ -144,7 +142,7 @@ const TAG_DESTINATION: Record<string, string> = {
   'Interior Signage': '/epigrafes-arta',
   'Vehicle Graphics': '/epigrafes-arta',
   'Web Development': '/website-development',
-  'Booking System': '/website-development/web-apps',
+  'Booking System': '/website-development/booking-systems',
   'Content Management': '/website-development/custom-web-apps',
   'Payments Integration': '/website-development/e-commerce',
   SEO: '/website-development/technical-seo',

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { serverT } from '@/lib/metadata'
+import { faqNode, FLYER_DISTRIBUTION_FAQ } from '@/app/components/faqData'
+import { PRICES, euro } from '@/lib/company'
 import { jsonLd, pageGraph } from '@/lib/schema'
-import RelatedProjects from '@/app/components/RelatedProjects'
-import { pickProjects } from '@/lib/serviceProjects'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = serverT('flyer_distribution_page')
@@ -102,65 +103,18 @@ export default function FlyerDistributionLayout({
                 description: "Στοχευμένη διανομή με βάση δημογραφικά και γεωγραφικά κριτήρια",
               },
             ],
+            priceRange: `από ${euro(PRICES.distributionLocal)}`,
           },
+          // Same array the page renders via <FAQSection>, so schema and visible
+          // content cannot drift — the previous hand-copied block had already.
+          faq: faqNode(FLYER_DISTRIBUTION_FAQ),
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Διανομή Εντύπων", path: "/flyer-distribution" } ]} />
 
-      {/* Structured Data - FAQPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Τι είναι η διανομή εντύπων και σε ποιες περιοχές δραστηριοποιείστε;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Η διανομή εντύπων είναι η επαγγελματική πόρτα-πόρτα παράδοση φυλλαδίων, καταλόγων και διαφημιστικού υλικού σε κατοικίες και επιχειρήσεις. Καλύπτουμε την Άρτα και την ευρύτερη περιοχή Ηπείρου."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πόσα φυλλάδια μπορείτε να διανείμετε;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Αναλαμβάνουμε καμπάνιες από 500 έως 50.000+ έντυπα. Κάθε καμπάνια διανομής σχεδιάζεται στρατηγικά για μέγιστη απήχηση στο κοινό-στόχο σας."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Πόσος χρόνος χρειάζεται για τη διανομή;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Μια τυπική καμπάνια διανομής εντύπων στην Άρτα ολοκληρώνεται σε 1-5 εργάσιμες ημέρες. Παρέχουμε αναφορά ολοκλήρωσης μετά τη διανομή."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Προσφέρετε στοχευμένη διανομή σε συγκεκριμένες περιοχές;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ναι. Προσφέρουμε πλήρως στοχευμένη διανομή βάσει γεωγραφικής περιοχής, δημογραφικών χαρακτηριστικών ή τύπου επιχείρησης. Αναλύουμε το κοινό-στόχο σας και δημιουργούμε τη βέλτιστη διαδρομή."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Ποια υλικά αναλαμβάνετε;",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Αναλαμβάνουμε διανομή φυλλαδίων, καταλόγων, μενού εστιατορίων, ενημερωτικών δελτίων, προωθητικών εντύπων — οποιοδήποτε έντυπο διαφημιστικό υλικό χρειάζεστε."
-                }
-              }
-            ]
-          }),
-        }}
-      />
       {children}
-      <RelatedProjects projects={pickProjects('/flyer-distribution')} />
     </>
   )
 }

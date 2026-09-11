@@ -57,11 +57,11 @@
   "faq": [
     {
       "question": "How much do store signs cost?",
-      "answer": "Prices depend on material and size. Acrylic signs from €50/m², LED signs from €150, neon signs from €200. We provide free quotes."
+      "answer": "Prices depend on material and size. Acrylic signs from {price:signageAcrylicPerSqm}/m², LED signs from {price:signageLed}, neon signs from {price:signageNeon}. We provide free quotes."
     },
     {
       "question": "Do you provide installation?",
-      "answer": "Yes, we provide professional installation throughout Epirus. Installation is included in price for signs over €200."
+      "answer": "Yes, we provide professional installation throughout Epirus. Installation is included in price for signs over {price:signageInstallIncludedFrom}."
     },
     {
       "question": "What materials do you use?",
@@ -83,6 +83,6 @@
   },
   "seo": {
     "title": "Store Signage Arta | Neon, LED & Business Signs | adinfinity",
-    "description": "Professional store signage in Arta. Neon signs, LED signs, store signage, vehicle graphics. Prices from €50/m². Installation in Epirus. +30 2681 303007"
+    "description": "Professional store signage in Arta. Neon signs, LED signs, store signage, vehicle graphics. Prices from {price:signageAcrylicPerSqm}/m². Installation in Epirus. +30 2681 303007"
   }
 }

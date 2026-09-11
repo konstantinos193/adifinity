@@ -100,9 +100,9 @@
         "TypeScript",
         "Full-Stack System"
       ],
-      "client": "Asterias Homes",
+      "client": "Asterias Koronisia",
       "duration": "3 months",
-      "team": "2 developers",
+      "team": "adinfinity",
       "technologies": [
         "Next.js 16",
         "React 19",
@@ -112,20 +112,20 @@
         "TypeScript"
       ],
       "features": [
-        "Real-time booking system",
-        "Multi-language support (EL, EN, DE)",
-        "Payment processing with Stripe",
-        "Admin dashboard",
-        "Mobile-responsive design",
-        "SEO optimization",
-        "Image gallery with lightbox",
-        "Email notifications"
+        "Direct online bookings with Stripe payment",
+        "Three languages: Greek, English, German",
+        "Seasonal pricing and availability managed from the admin",
+        "Booking.com reviews synced to the site",
+        "Booking management dashboard",
+        "Mobile-first design",
+        "Photo gallery with lightbox",
+        "Email notifications for every booking"
       ],
       "results": [
-        "95% page speed score",
-        "40% increase in bookings",
-        "Top 3 Google rankings",
-        "Mobile-first user experience"
+        "Its own direct-booking channel with no platform commission — the first paid booking came through the site in July 2026",
+        "22 Booking.com reviews (4.5/5 average) shown automatically on the site",
+        "7 apartments with 6 seasonal price periods, all managed without a developer",
+        "Trilingual content for Greek, English- and German-speaking guests"
       ],
       "challenge": "Build a complete hospitality management system from scratch with real-time availability and secure payment processing."
     },
@@ -142,7 +142,7 @@
       ],
       "client": "KYKLOS Educational Center",
       "duration": "6 weeks",
-      "team": "2 developers",
+      "team": "adinfinity",
       "technologies": [
         "Next.js 16",
         "React 19",
@@ -154,26 +154,19 @@
         "Sentry"
       ],
       "features": [
-        "Student authentication system",
-        "Admin dashboard with role-based access",
-        "Blog management system",
-        "Newsletter subscription",
-        "Pan-Hellenic exam materials",
-        "Success stories showcase",
-        "Teacher profiles",
-        "Course management",
-        "Mobile-responsive design",
-        "Dark/Light mode support",
-        "SEO optimization",
-        "PWA capabilities"
+        "Successful candidates listed by year and faculty",
+        "Panhellenic exam paper archive",
+        "News and announcements",
+        "Newsletter sign-up",
+        "Content management dashboard",
+        "Mobile-first design",
+        "SEO optimisation"
       ],
       "results": [
-        "500+ enrolled students",
-        "95% success rate",
-        "25+ years educational content",
-        "Mobile-first user experience",
-        "Top Google rankings",
-        "Comprehensive admin system"
+        "2,143 successful candidates from 1992 to 2025, published by name and faculty, searchable by year",
+        "Archive of 35 Panhellenic exam papers 2015–2026, available to students and parents",
+        "News and a newsletter the school updates itself from the admin",
+        "A website for a tutoring school operating since 1991 — 35 years of history in one structure"
       ],
       "challenge": "Create a complete educational platform that manages 25+ years of educational content, student authentication, admin management, and provides access to Pan-Hellenic exam materials."
     },
@@ -190,7 +183,7 @@
       ],
       "client": "Physio Elpida Clinic",
       "duration": "2 weeks",
-      "team": "1 developer",
+      "team": "adinfinity",
       "technologies": [
         "WordPress",
         "PHP",
@@ -199,22 +192,20 @@
         "Contact Forms"
       ],
       "features": [
-        "Online appointment booking system",
-        "Services presentation gallery",
+        "Online appointment booking",
+        "Services presentation",
         "Equipment showcase with descriptions",
-        "Interactive contact forms",
-        "Mobile-responsive design",
-        "Greek SEO optimization",
+        "Contact forms",
+        "Mobile-first design",
+        "Greek-language SEO",
         "Patient testimonials section",
-        "Location map integration",
-        "Emergency contact information"
+        "Location map",
+        "Emergency contact details"
       ],
       "results": [
-        "Professional online presence",
-        "30% increase in patient inquiries",
-        "Mobile-friendly patient experience",
-        "Top local search rankings",
-        "Streamlined appointment booking"
+        "Online appointment booking instead of phone-only scheduling",
+        "Services, equipment and the physiotherapist’s bio presented on one page",
+        "Mobile-first design, where most patients come from"
       ],
       "challenge": "Establish a professional online presence for a physiotherapy clinic with focus on local SEO, easy patient access to service information and online appointment booking system."
     }
@@ -294,7 +285,7 @@
       },
       {
         "question": "How much does a website or web application cost?",
-        "answer": "A professional website starts from €800. E-shops and web applications are priced according to their features. Request a free quote for an exact estimate."
+        "answer": "A professional website starts from {price:websiteStarter}, a custom e-shop from {price:eshop}. E-shops and web applications are priced according to their features. Request a free quote for an exact estimate."
       },
       {
         "question": "How long does development take?",

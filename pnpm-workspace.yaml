@@ -6,8 +6,8 @@ allowBuilds:
   sharp: false
 minimumReleaseAgeExclude:
   - react-hook-form@7.78.0
-  - nodemailer@9.0.0
-  - lucide-react@1.20.0 || 1.22.0 || 1.34.0
+  - nodemailer@9.0.0 || 10.0.8
+  - lucide-react@1.20.0 || 1.22.0 || 1.34.0 || 1.45.0
   - react-resizable-panels@4.12.0 || 4.12.3
   - '@typescript-eslint/eslint-plugin@8.68.0'
   - '@typescript-eslint/parser@8.68.0'
@@ -21,3 +21,19 @@ minimumReleaseAgeExclude:
   - '@typescript-eslint/visitor-keys@8.68.0'
   - eslint@10.9.1
   - resend@6.22.1
+  - '@next/env@16.3.5'
+  - '@next/swc-darwin-arm64@16.3.5'
+  - '@next/swc-darwin-x64@16.3.5'
+  - '@next/swc-linux-arm64-gnu@16.3.5'
+  - '@next/swc-linux-arm64-musl@16.3.5'
+  - '@next/swc-linux-x64-gnu@16.3.5'
+  - '@next/swc-linux-x64-musl@16.3.5'
+  - '@next/swc-win32-arm64-msvc@16.3.5'
+  - '@next/swc-win32-x64-msvc@16.3.5'
+  - '@types/three@0.186.0'
+  - icu-minify@4.14.4
+  - next-intl-swc-plugin-extractor@4.14.4
+  - next-intl@4.14.4
+  - next@16.3.5
+  - use-intl@4.14.4
+  - zod@4.6.2

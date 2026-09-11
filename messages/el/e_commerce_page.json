@@ -14,7 +14,7 @@
   "cta_title": "Προγραμματίζετε online κατάστημα;",
   "cta_description": "Πείτε μας τι θέλετε να πουλάτε και θα σας στείλουμε πρόταση εντός 24 ωρών.",
   "cta_button": "Ζητήστε Προσφορά",
-  "custom_vs_title": "Custom vs. Shopify/WooCommerce",
+  "custom_vs_title": "Custom ή Shopify / WooCommerce;",
   "why_custom": [
     "Πλήρης έλεγχος του design — ακριβώς όπως το θέλετε",
     "Μηδενικές μηνιαίες χρεώσεις πλατφόρμας (Το Shopify κοστίζει €30-500/μήνα)",
@@ -29,7 +29,7 @@
       "description": "Κατηγορίες, φίλτρα, αναζήτηση, παραλλαγές — σχεδιασμένος ακριβώς για τα προϊόντα σας."
     },
     {
-      "title": "Stripe Payments",
+      "title": "Πληρωμές με Stripe",
       "description": "Κάρτες, Apple Pay, Google Pay, IBAN. Ασφαλής checkout χωρίς ανακατευθύνσεις."
     },
     {

@@ -29,27 +29,27 @@
   "benefits_title": "Γιατί να Επιλέξετε adinfinity;",
   "benefits": [
     {
-      "title": "Custom Branding",
+      "title": "Εκτύπωση με το δικό σας λογότυπο",
       "description": "Προσαρμόζουμε κάθε προϊόν με το brand σας, με custom design και high-quality printing."
     },
     {
-      "title": "Bulk Pricing",
+      "title": "Τιμές ποσότητας",
       "description": "Προσφέρουμε competitive pricing για bulk orders και special offers για large quantities."
     },
     {
-      "title": "Fast Turnaround",
+      "title": "Γρήγορη παράδοση",
       "description": "Γρήγορη παραγωγή και παράδοση σε 5-10 εργάσιμες για standard orders."
     },
     {
-      "title": "Quality Guarantee",
+      "title": "Εγγύηση ποιότητας",
       "description": "Προσφέρουμε quality guarantee και replacement για defective products."
     },
     {
-      "title": "Design Services",
+      "title": "Σχεδιασμός από εμάς",
       "description": "Παρέχουμε design services για να δημιουργήσουμε το τέλειο branded merchandise για εσάς."
     },
     {
-      "title": "Wide Selection",
+      "title": "Μεγάλη γκάμα",
       "description": "Ευρεία γκάμα προϊόντων για κάθε budget και occasion, από premium έως budget-friendly options."
     }
   ],
@@ -57,7 +57,7 @@
   "faq": [
     {
       "question": "Πόσο κοστίζουν τα διαφημιστικά δώρα;",
-      "answer": "Οι τιμές εξαρτώνται από το είδος και την ποσότητα. Στυλό από €0.50/τεμ., μπλοκ από €1.50/τεμ., κούπες από €2/τεμ. Παρέχουμε δωρεάν προσφορά για bulk orders."
+      "answer": "Οι τιμές εξαρτώνται από το είδος και την ποσότητα. Στυλό από {price:promoGiftMin}/τεμ., μπλοκ από €1.50/τεμ., κούπες από €2/τεμ. Παρέχουμε δωρεάν προσφορά για bulk orders."
     },
     {
       "question": "Ποια minimum order quantity;",
@@ -82,7 +82,7 @@
     "button": "Στείλτε Αίτημα"
   },
   "seo": {
-    "title": "Διαφημιστικά Δώρα Επιχειρήσεων | Από €0,50",
-    "description": "Διαφημιστικά δώρα με το λογότυπό σας: στυλό, κούπες, μπλούζες, τσάντες και εταιρικά σετ. Τιμές από €0,50/τεμ. σε ποσότητα. Τηλ. 2681 303007"
+    "title": "Διαφημιστικά Δώρα & Είδη Επιχειρήσεων | Από {price:promoGiftMin}",
+    "description": "Διαφημιστικά δώρα και είδη με το λογότυπό σας: στυλό, κούπες, μπλούζες, τσάντες και εταιρικά σετ. Τιμές από {price:promoGiftMin}/τεμ. σε ποσότητα. Τηλ. 2681 303007"
   }
 }

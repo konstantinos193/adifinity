@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
 
@@ -43,6 +44,8 @@ export default function TechnicalSEOLayout({ children }: { children: React.React
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: 'Υπηρεσίες', path: '/services' }, { name: 'Κατασκευή Ιστοσελίδων', path: '/website-development' }, { name: 'Technical SEO', path: '/website-development/technical-seo' } ]} />
       {children}
       <RelatedProjects projects={pickProjects('/website-development/technical-seo')} />
     </>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { faqNode, PRINTS_FAQ } from '@/app/components/faqData'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
 
@@ -106,6 +107,8 @@ export default function PrintsLayout({
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Εκτυπώσεις Άρτα", path: "/prints" } ]} />
 
       {children}
       <RelatedProjects projects={pickProjects('/prints')} />

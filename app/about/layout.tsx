@@ -1,108 +1,48 @@
 import type { Metadata } from 'next'
-import { serverT, SERVER_LOCALE } from '@/lib/metadata'
-import { jsonLd, pageGraph } from '@/lib/schema'
+import { serverT, OG_LOCALE } from '@/lib/metadata'
+import { jsonLd, pageGraph, ORG_ID, ORG_REF, SITE_URL } from '@/lib/schema'
+import { COMPANY_FACTS } from '@/lib/company'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
+
+/**
+ * The people behind the work, as schema.org Persons bound to the one business
+ * entity (E-E-A-T — 2026-09-11 audit §12, §26).
+ *
+ * The founder already exists in the root graph as `#founder`; that node is
+ * referenced here by @id, not re-declared, so the site never describes him
+ * twice. The developer is declared here, on the only page that presents him.
+ *
+ * This file used to build a second `Organization` — with the wrong Facebook
+ * and Instagram URLs — inside generateMetadata and then never render it. The
+ * About page also described itself as a `Service`, which it is not.
+ */
+const TEAM = [
+  {
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#founder`,
+    name: 'Μάνος Κόσμας',
+    alternateName: 'Manos Kosmas',
+    jobTitle: 'Ιδρυτής & Διευθύνων Σύμβουλος',
+    worksFor: ORG_REF,
+    knowsAbout: ['Διαφήμιση', 'Branding', 'Εκτυπώσεις', 'Επιγραφές', 'Digital Marketing'],
+    image: `${SITE_URL}/images/team-member-manos.jpg`,
+    url: `${SITE_URL}/about`,
+  },
+  {
+    '@type': 'Person',
+    '@id': `${SITE_URL}/about#konstantinos-blavakis`,
+    name: 'Κωνσταντίνος Μπλαβάκης',
+    alternateName: 'Konstantinos Blavakis',
+    jobTitle: 'Web Developer',
+    worksFor: ORG_REF,
+    knowsAbout: ['Κατασκευή Ιστοσελίδων', 'React', 'Next.js', 'TypeScript', 'Συστήματα Κρατήσεων', 'Technical SEO'],
+    url: `${SITE_URL}/about`,
+  },
+]
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = SERVER_LOCALE
   const t = serverT('about_page')
-  
-  // Dynamic locale mapping for OpenGraph
-  const localeMap = {
-    'el': 'el_GR',
-    'en': 'en_US'
-  }
-  
-  // Dynamic content based on locale
-  const _structuredData = locale === 'el' ? {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "adinfinity - Διαφημιστική Εταιρεία",
-    "description": "Διαφημιστική εταιρεία στην Άρτα με εξειδίκευση σε digital marketing, graphic design, printing και web development από το 2013.",
-    "url": "https://adinfinity.gr/about",
-    "telephone": "+30-2681-303007",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Βασ. Πύρρου 30",
-      "addressLocality": "Άρτα",
-      "postalCode": "471 32",
-      "addressCountry": "GR",
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "39.1606",
-      "longitude": "20.9853"
-    },
-    "foundingDate": "2013",
-    "sameAs": [
-      "https://www.facebook.com/adinfinity.gr",
-      "https://www.instagram.com/adinfinity.gr"
-    ],
-    "serviceType": ["Digital Marketing", "Graphic Design", "Printing", "Web Development", "Flyer Distribution", "Market Research"],
-    "areaServed": {
-      "@type": "Country",
-      "name": "Greece",
-    },
-    "employee": [
-      {
-        "@type": "Person",
-        "name": "Μάνος Κωσμάς",
-        "jobTitle": "Διευθύνων Σύμβουλος",
-        "description": "Με πάνω από 10 χρόνια εμπειρίας στον χώρο της διαφήμισης και του μάρκετινγκ"
-      },
-      {
-        "@type": "Person", 
-        "name": "Κωνσταντίνος Μπλαβάκης",
-        "jobTitle": "Web Developer",
-        "description": "Ειδικός στην ανάπτυξη ιστοσελίδων και εφαρμογών"
-      }
-    ],
-    "priceRange": "€€€"
-  } : {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "adinfinity - Creative Agency",
-    "description": "Creative agency in Arta specializing in digital marketing, graphic design, printing and web development since 2013.",
-    "url": "https://adinfinity.gr/about",
-    "telephone": "+30-2681-303007",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Vas. Pyrrou 30",
-      "addressLocality": "Arta",
-      "postalCode": "471 32",
-      "addressCountry": "GR",
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "39.1606",
-      "longitude": "20.9853"
-    },
-    "foundingDate": "2013",
-    "sameAs": [
-      "https://www.facebook.com/adinfinity.gr",
-      "https://www.instagram.com/adinfinity.gr"
-    ],
-    "serviceType": ["Digital Marketing", "Graphic Design", "Printing", "Web Development", "Flyer Distribution", "Market Research"],
-    "areaServed": {
-      "@type": "Country",
-      "name": "Greece",
-    },
-    "employee": [
-      {
-        "@type": "Person",
-        "name": "Manos Kosmas",
-        "jobTitle": "CEO",
-        "description": "With over 10 years of experience in advertising and marketing"
-      },
-      {
-        "@type": "Person",
-        "name": "Konstantinos Blavakis", 
-        "jobTitle": "Web Developer",
-        "description": "Specializing in website and application development"
-      }
-    ],
-    "priceRange": "€€€"
-  }
-  
+
   return {
     title: t('seo.title'),
     description: t('seo.description'),
@@ -116,22 +56,20 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: 'adinfinity',
       images: [
         {
-          url: "/images/og-image.png",
+          url: '/images/office-showcase.png',
           width: 1200,
           height: 630,
-          alt: locale === 'el' 
-            ? 'Σχετικά με Εμάς | adinfinity - Διαφημιστική Εταιρεία Άρτα'
-            : 'About Us | adinfinity - Creative Agency Arta',
+          alt: 'Το γραφείο της adinfinity στη Βασ. Πύρρου 30, Άρτα',
         },
       ],
-      locale: localeMap[locale as keyof typeof localeMap],
+      locale: OG_LOCALE,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
       title: t('seo.title'),
       description: t('seo.description'),
-      images: ['/images/og-image.png'],
+      images: ['/images/office-showcase.png'],
     },
     robots: {
       index: true,
@@ -147,51 +85,34 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function AboutLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function AboutLayout({ children }: { children: React.ReactNode }) {
+  const trail = [{ name: 'Η Εταιρεία', path: '/about' }]
+
   return (
     <>
-      {/*
-        One JSON-LD graph for this route, every node cross-referenced by @id.
-
-        Previously this file emitted free-standing ProfessionalService /
-        LocalBusiness / Organization blocks with no @id, restating the
-        company's address, telephone and social profiles — several of which
-        contradicted the real ones in app/layout.tsx. Google saw three or four
-        different businesses per page and had to pick one.
-
-        The business entity is now stated once, in the root layout, and
-        referenced here through `provider`. See lib/schema.ts.
-      */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={jsonLd(
-        pageGraph({
-          path: "/about",
-          breadcrumb: [
-            { name: "Η Εταιρεία", path: "/about" },
-          ],
-          service: {
-            path: "/about",
-            name: "Διαφημιστική Εταιρεία",
-            description: "Διαφημιστική εταιρεία στην Άρτα με εξειδίκευση σε digital marketing, graphic design, printing και web development από το 2013.",
-            serviceType: [
-              "Digital Marketing",
-              "Graphic Design",
-              "Printing",
-              "Web Development",
-              "Flyer Distribution",
-              "Market Research",
+          pageGraph({
+            path: '/about',
+            breadcrumb: trail,
+            extra: [
+              ...TEAM,
+              {
+                // Facts a visitor can check, stated once from lib/company.ts.
+                '@type': 'Organization',
+                '@id': ORG_ID,
+                foundingDate: `${COMPANY_FACTS.foundedYear}-10`,
+                // The named, public team — not a headcount claim.
+                employee: TEAM.map((person) => ({ '@id': person['@id'] })),
+              },
             ],
-          },
-        }),
+          }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={trail} />
       {children}
     </>
   )
 }
-

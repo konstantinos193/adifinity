@@ -10,7 +10,7 @@
   "services": {
     "title": "Υπηρεσίες Διαφημιστικής",
     "traditional": {
-      "title": "Traditional Advertising",
+      "title": "Παραδοσιακή διαφήμιση",
       "description": "Flyers, αφίσες, διανομή φυλλαδίων, outdoor advertising και έντυπο υλικό για τοπική προώθηση."
     },
     "digital": {
@@ -18,11 +18,11 @@
       "description": "Google Ads, Facebook Ads, Instagram campaigns, retargeting και performance marketing για measurable results."
     },
     "social": {
-      "title": "Social Media Marketing",
+      "title": "Marketing στα social media",
       "description": "Social media management, content creation, community building και influencer partnerships για brand awareness."
     },
     "analytics": {
-      "title": "Analytics & Reporting",
+      "title": "Analytics & αναφορές",
       "description": "Data-driven decisions με detailed analytics, reporting και optimization για maximum ROI."
     }
   },
@@ -33,19 +33,19 @@
       "description": "Εffective advertising campaigns οδηγούν σε αυξημένο traffic, leads και conversions."
     },
     {
-      "title": "Brand Awareness",
+      "title": "Αναγνωρισιμότητα",
       "description": "Συνεπής διαφημιστική χτίζει brand recognition και trust με το target audience."
     },
     {
-      "title": "Targeted Reach",
+      "title": "Στοχευμένο κοινό",
       "description": "Φτάνετε το ακριβές target audience με precision targeting και segmentation."
     },
     {
-      "title": "Measurable Results",
+      "title": "Μετρήσιμα αποτελέσματα",
       "description": "Digital advertising προσφέρει real-time analytics και measurable KPIs για performance tracking."
     },
     {
-      "title": "Competitive Advantage",
+      "title": "Ανταγωνιστικό πλεονέκτημα",
       "description": "Stay ahead του ανταγωνισμού με innovative advertising strategies και creative campaigns."
     },
     {
@@ -61,7 +61,7 @@
     },
     {
       "question": "Πόσο κοστίζει η διαφημιστική;",
-      "answer": "Το κόστος διαφημιστικής ποικίλλει ανάλογα με το κανάλι και το budget. Social media campaigns ξεκινούν από €200/μήνα, ενώ complete advertising packages από €500/μήνα."
+      "answer": "Το κόστος διαφημιστικής ποικίλλει ανάλογα με το κανάλι και το budget. Η διαχείριση social media ξεκινά από {price:socialMonthly}/μήνα, η διαχείριση διαφημίσεων από {price:adsMonthly}/μήνα και τα πλήρη πακέτα digital marketing από {price:fullDigitalMonthly}/μήνα, χωρίς το διαφημιστικό budget."
     },
     {
       "question": "Ποια κανάλια διαφημιστικής είναι πιο αποτελεσματικά;",
@@ -82,7 +82,7 @@
     "button": "Στείλτε Αίτημα"
   },
   "seo": {
-    "title": "Τι Κάνει μια Διαφημιστική | Οδηγός & Τιμές",
-    "description": "Τι αναλαμβάνει μια διαφημιστική εταιρεία, πώς κοστολογείται κάθε υπηρεσία και τι να ζητήσετε πριν υπογράψετε. Πρακτικός οδηγός για επιχειρήσεις."
+    "title": "Τι Κάνει μια Διαφημιστική Εταιρεία | Οδηγός & Τιμές 2026",
+    "description": "Τι αναλαμβάνει μια διαφημιστική εταιρεία, πώς κοστολογείται κάθε υπηρεσία και τι να ρωτήσετε πριν υπογράψετε. Οδηγός με πραγματικές τιμές από την adinfinity."
   }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from "@/lib/metadata"
 import { jsonLd, ORG_REF, pageGraph, SITE_URL } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -88,6 +89,8 @@ export default function ContactLayout({
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[{ name: 'Επικοινωνία', path: '/contact' }]} />
       {children}
     </>
   )

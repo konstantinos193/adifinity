@@ -2,9 +2,9 @@
   "title": "About Us",
   "subtitle": "Learn more about our story and team",
   "hero_title": "About Adinfinity",
-  "hero_description": "We are a creative agency dedicated to helping businesses grow through innovative digital solutions and exceptional design.",
+  "hero_description": "Advertising agency based in Arta, Greece, since October {founded}. Graphic design, printing, signage, websites and digital marketing from one office, and {projects} published case studies you can read before you call.",
   "our_team": "Our Team",
-  "team_description": "Meet the talented people behind our success",
+  "team_description": "Who does what, and which projects show their work.",
   "our_journey": "Our Journey",
   "journey_description": "The story of our growth and evolution",
   "visit_us": "Visit Us",
@@ -23,7 +23,7 @@
       },
       {
         "title": "4.9/5 Rating on Google",
-        "description": "Our work is rated 4.9/5 by our clients on Google — see the reviews for yourself."
+        "description": "Our work is rated 4.9/5 by our clients on Google, see the reviews for yourself."
       },
       {
         "title": "Innovative Solutions",
@@ -77,13 +77,21 @@
   "team_members": {
     "manos": {
       "name": "Manos Kosmas",
-      "role": "CEO",
-      "bio": "With over 10 years of experience in advertising and marketing, Manos leads our team with vision and creativity."
+      "role": "Founder & Managing Director",
+      "bio": "Founded adinfinity in {founded}. Personally handles identity design, printing and signage, from the first conversation with the client to installation.",
+      "focus": "Branding, printing, signage, advertising strategy",
+      "since": "At adinfinity since {founded}",
+      "work_label": "See branding work",
+      "work_href": "/branding"
     },
     "kostas": {
       "name": "Konstantinos Blavakis",
       "role": "Web Developer",
-      "bio": "Specializing in website and application development, Konstantinos brings our ideas to life with technical excellence and innovation."
+      "bio": "Designs and builds adinfinity’s websites, e-shops and web applications in React and Next.js, including the booking systems for accommodation and clinics.",
+      "focus": "Websites, e-shops, web applications, booking systems, technical SEO",
+      "since": "Custom development in React & Next.js",
+      "work_label": "See the websites",
+      "work_href": "/website-development"
     }
   },
   "office": {
@@ -98,5 +106,45 @@
   "seo": {
     "title": "About adinfinity | Advertising Agency in Arta, Greece",
     "description": "Meet adinfinity, the advertising agency in Arta. Specialists in graphic design, printing, digital marketing & websites since 2013."
+  },
+  "facts": {
+    "title": "The company in numbers",
+    "founded": "Founded",
+    "founded_value": "October",
+    "office": "Office",
+    "projects": "Completed projects",
+    "case_studies": "Published case studies",
+    "live_sites": "Websites online",
+    "regions_label": "Areas served",
+    "regions": [
+      "Arta",
+      "Preveza",
+      "Ioannina",
+      "Thesprotia",
+      "Epirus",
+      "Remotely across Greece"
+    ],
+    "industries_label": "Industries we have worked with",
+    "industries": [
+      "Restaurants & cafés",
+      "Tourist accommodation",
+      "Real estate",
+      "Education & tutoring",
+      "Health & physiotherapy",
+      "Accounting & legal practices",
+      "Sports & cultural associations",
+      "Retail",
+      "Energy & technical companies",
+      "Transport"
+    ],
+    "capabilities_label": "What happens here, in Arta",
+    "capabilities": [
+      "Logo and corporate identity design",
+      "Small- and large-format digital printing",
+      "Fabrication and installation of LED, neon and plexiglass signage",
+      "Website and web application development in React / Next.js",
+      "Google Ads, Meta Ads and social media management",
+      "Flyer distribution with GPS route logging"
+    ]
   }
 }

@@ -103,7 +103,7 @@
   "pricing_plans": [
     {
       "name": "Social Media",
-      "price": "from €250",
+      "price": "from {price:socialMonthly}",
       "period": "/month",
       "description": "For businesses that want a consistent, professional presence.",
       "features": [
@@ -116,7 +116,7 @@
     },
     {
       "name": "Ads Management",
-      "price": "from €300",
+      "price": "from {price:adsMonthly}",
       "period": "/month",
       "description": "Google & Meta Ads aimed at leads and sales.",
       "features": [
@@ -130,7 +130,7 @@
     },
     {
       "name": "SEO",
-      "price": "from €350",
+      "price": "from {price:fullDigitalMonthly}",
       "period": "/month",
       "description": "Organic visibility that is built to last.",
       "features": [
@@ -147,11 +147,11 @@
   "faq": [
     {
       "question": "How much does digital marketing cost for a small business?",
-      "answer": "Social media management starts from €250/month and ads management from €300/month, excluding ad spend. The final cost depends on the channels and the volume of content. Request a free analysis for an exact quote."
+      "answer": "Social media management starts from {price:socialMonthly}/month and ads management from {price:adsMonthly}/month, excluding ad spend. The final cost depends on the channels and the volume of content. Request a free analysis for an exact quote."
     },
     {
       "question": "How much ad budget do I need for Google and Meta Ads?",
-      "answer": "For local targeting in Arta and Epirus, a realistic starting point is €150-€300 per month in ad spend. That budget is paid directly to the platform and is separate from the management fee."
+      "answer": "For local targeting in Arta and Epirus, a realistic starting point is {price:adSpendMin}-{price:adSpendMax} per month in ad spend. That budget is paid directly to the platform and is separate from the management fee."
     },
     {
       "question": "How long until I see results?",

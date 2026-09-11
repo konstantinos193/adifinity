@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { faqNode, EKTYPWSEIS_FAQ } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
 import { pickProjects } from '@/lib/serviceProjects'
 
@@ -101,6 +102,8 @@ export default function EktypwseisArtaLayout({
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: 'Υπηρεσίες', path: '/services' }, { name: 'Εκτυπώσεις Άρτα', path: '/prints' }, { name: 'Ψηφιακές Εκτυπώσεις Μεγάλου Μεγέθους', path: '/ektypwseis-arta' } ]} />
       {children}
       <RelatedProjects projects={pickProjects('/ektypwseis-arta')} />
     </>

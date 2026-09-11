@@ -1,88 +1,141 @@
 {
   "hero": {
-    "badge": "Full-Service Agency",
-    "title": "Advertising Agency",
-    "subtitle": "Your Full-Service Advertising Agency in Arta",
-    "description": "At adinfinity, we are a full-service advertising agency in Arta offering complete solutions: graphic design, printing, websites, digital marketing, and strategic consulting for your business growth.",
+    "badge": "Advertising agency in Arta",
+    "title": "Advertising Agency in Arta",
+    "subtitle": "Branding, printing, signage, websites and digital marketing, from one office, since {founded}",
+    "description": "adinfinity is a full-service advertising agency with an office at Vas. Pyrrou 30, Arta. We design, print, install and promote: from the logo and the shop sign to the website and the Google and Meta campaigns. {completedProjects}+ completed projects for businesses in Arta and Epirus.",
     "cta": "Get a Quote",
     "about_us": "About Us"
   },
   "services": {
-    "title": "Advertising Agency Services",
+    "title": "What our agency handles",
     "team": {
-      "title": "Expert Team",
-      "description": "Experienced team with expertise in graphic design, web development, digital marketing, and strategic planning."
+      "title": "A team with names",
+      "description": "Two people you can see on the About page: one handles identity, printing and signage, the other websites and applications. You talk directly to whoever does the work."
     },
     "portfolio": {
-      "title": "Proven Portfolio",
-      "description": "200+ completed projects across various industries across a range of industries, since 2013."
+      "title": "Work you can check",
+      "description": "{completedProjects}+ completed projects for {clients}+ businesses across industries, since {founded}. {projects} of them are written up in detail in our projects."
     },
     "strategy": {
-      "title": "Custom Strategy",
-      "description": "We develop custom marketing strategy tailored to your business needs and goals."
+      "title": "Strategy before creative",
+      "description": "We start from what you sell, to whom, and what has already been tried, and then recommend which channel deserves your money, not the other way round."
     },
     "results": {
-      "title": "Measurable Results",
-      "description": "We focus on results with detailed reporting, analytics, and continuous optimization for maximum ROI."
+      "title": "Measurable results",
+      "description": "Campaigns with conversion tracking and monthly reports, distributions with GPS logs, websites connected to Search Console. You see numbers, not estimates."
     }
   },
-  "benefits_title": "Why Choose adinfinity?",
+  "benefits_title": "Why a local advertising agency",
   "benefits": [
     {
-      "title": "Local Expertise",
-      "description": "We know the Epirus market and tailor solutions to local business needs."
+      "title": "We know the Epirus market",
+      "description": "Working with Arta businesses since {founded}: restaurants, accommodation, tutoring schools, clinics, shops. We know what works here and what does not."
     },
     {
-      "title": "Full-Service Solutions",
-      "description": "Everything in one place: graphic design, printing, websites, digital marketing, and strategic consulting."
+      "title": "Everything from one office",
+      "description": "The logo carries to the sign, the sign matches the flyer, the flyer leads to a website that exists. You do not coordinate three suppliers."
     },
     {
-      "title": "Transparent Pricing",
-      "description": "Clear pricing with no hidden charges. You know exactly what you pay and what you get."
+      "title": "Transparent pricing",
+      "description": "Every service has a published starting price on the pricing page. You know in advance what you pay and what you get."
     },
     {
-      "title": "Fast Turnaround",
-      "description": "Quick deliveries without compromising quality. Projects in 1-4 weeks."
+      "title": "Fast delivery",
+      "description": "Printing in 2-3 working days, signage in 5-7, a website in 2-4 weeks. Times written into the quote and kept."
     },
     {
-      "title": "Ongoing Support",
-      "description": "We provide ongoing support and consulting for long-term success and growth."
+      "title": "Support from a person",
+      "description": "After delivery you reach us by phone or at the office, not through a ticket system."
     },
     {
-      "title": "Results Focused",
-      "description": "We focus on measurable results and ROI, not just deliverables."
+      "title": "Focused on outcomes",
+      "description": "We measure leads, calls and bookings, not just deliverables. If something is not performing, we change it."
     }
   ],
-  "faq_title": "Advertising Agency FAQ",
+  "faq_title": "Frequently asked questions about our agency",
   "faq": [
     {
-      "question": "What does an advertising agency offer?",
-      "answer": "An advertising agency offers complete marketing solutions: graphic design, printing, websites, digital marketing, social media, and strategic consulting for your business growth."
+      "question": "What does adinfinity offer as an advertising agency?",
+      "answer": "Logo and corporate identity design, printing of every size, shop signage, website and e-shop development, social media and Google/Meta ads management, flyer distribution and promotional gifts, all from our office in Arta."
     },
     {
-      "question": "How to choose the right advertising agency?",
-      "answer": "Check the portfolio, client reviews, industry experience, and strategy approach. Choose an agency that understands your business."
+      "question": "How do you choose an advertising agency in Arta?",
+      "answer": "Ask to see real projects with client names, published prices, and exactly who will do the work. If an agency cannot show you those three, ask why. Ours are on the Projects, Pricing and About pages."
     },
     {
       "question": "How much does it cost to work with an advertising agency?",
-      "answer": "Costs depend on project and scope. Project-based pricing from €500, monthly retainers from €500/month, and custom packages based on needs."
+      "answer": "Each project is priced on its own: logo from {price:logo}, corporate identity from {price:brandIdentity}, website from {price:websiteStarter}, printing from {price:printsSmall}. Monthly digital marketing packages start from {price:socialMonthly}/month. Every price is on the pricing page. Custom packages based on needs."
     },
     {
       "question": "How long do projects take?",
-      "answer": "Graphic design projects in 1-2 weeks, websites in 2-4 weeks, complete campaigns in 4-8 weeks depending on complexity."
+      "answer": "A logo in 3-5 working days, corporate identity in 2-4 weeks, a website in 2-4 weeks, printing in 2-3 working days and signage in 5-7 working days. Digital marketing campaigns are monthly engagements."
     },
     {
-      "question": "Do you provide ongoing support?",
-      "answer": "Yes, we provide ongoing support, maintenance, and consulting to ensure long-term success and continuous improvement."
+      "question": "Do you provide support after delivery?",
+      "answer": "Yes. Websites with monthly maintenance packages, signage with service and repair, and for everything else you reach us at +30 2681 303007 or at the office at Vas. Pyrrou 30."
+    },
+    {
+      "question": "Do you serve clients outside Arta?",
+      "answer": "Yes. Printing, signage and distribution across Epirus. Preveza, Ioannina, Thesprotia. Websites, branding and digital marketing remotely, across Greece and Cyprus."
     }
   ],
   "cta": {
-    "title": "Ready to work with us?",
-    "description": "Contact us for a free consultation and quote for your next business marketing campaign.",
-    "button": "Send Request"
+    "title": "Let’s talk about your business",
+    "description": "A first 20-minute conversation is enough for us to tell you what we would recommend and what it costs. In person in Arta or by phone.",
+    "button": "Request a Quote"
   },
   "seo": {
     "title": "Advertising Agency Arta | Full-Service Agency | adinfinity",
-    "description": "Advertising agency in Arta with graphic design, printing, websites, digital marketing. 50+ clients. Free quote in 24h. +30 2681 303007"
+    "description": "Advertising agency in Arta with graphic design, printing, websites, digital marketing. {clients}+ clients. Free quote in 24h. +30 2681 303007"
+  },
+  "local_hub": {
+    "title": "Services in Arta and Epirus",
+    "intro": "Every adinfinity service has its own page with prices, process and real projects. This page is the hub: what we offer locally, where we are, and how far we reach.",
+    "services_title": "Our services in Arta",
+    "office_title": "Our office",
+    "office_address": "Vas. Pyrrou 30, Arta 471 32",
+    "office_hours": "Monday to Friday 09:00-14:30, Tuesday, Thursday & Friday also 18:00-21:00",
+    "visit_title": "What you can visit the office for",
+    "visit_reasons": [
+      "See paper, finishing and signage material samples in person",
+      "Collect print jobs or drop off files for a pre-press check",
+      "Discuss a logo, website or campaign with the person who will build it",
+      "Get an on-the-spot signage quote after a site measurement"
+    ],
+    "regions_title": "Where we reach",
+    "regions": [
+      {
+        "name": "Arta",
+        "note": "Home base. Print delivery, signage installation and distribution across the town and the villages of the prefecture."
+      },
+      {
+        "name": "Preveza",
+        "note": "Signage installation, distribution and print delivery. Websites for accommodation and real estate, see L’Incanto and SMH Real Estate in our projects."
+      },
+      {
+        "name": "Ioannina",
+        "note": "Signage, printing and distribution with scheduled deliveries."
+      },
+      {
+        "name": "Thesprotia & the rest of Epirus",
+        "note": "Signage and printing with delivery; branding and websites remotely."
+      },
+      {
+        "name": "Rest of Greece & Cyprus",
+        "note": "Branding, websites, e-shops and digital marketing remotely, with video calls and online file delivery."
+      }
+    ],
+    "industries_title": "Industries we serve locally",
+    "industries": [
+      "Restaurants & cafés",
+      "Tourist accommodation",
+      "Tutoring & education",
+      "Clinics & physiotherapy",
+      "Retail shops",
+      "Accounting & legal practices",
+      "Associations & sports clubs",
+      "Technical & energy companies"
+    ]
   }
 }

@@ -73,7 +73,7 @@
     },
     {
       "key": "analytics",
-      "title": "Analytics & Reporting",
+      "title": "Analytics & αναφορές",
       "description": "Σωστή εγκατάσταση GA4 και conversion tracking, με μηνιαία αναφορά που εξηγεί τι δούλεψε, τι όχι και τι αλλάζουμε τον επόμενο μήνα.",
       "tags": [
         "GA4",
@@ -136,7 +136,7 @@
   "pricing_plans": [
     {
       "name": "Social Media",
-      "price": "από €250",
+      "price": "από {price:socialMonthly}",
       "period": "/μήνα",
       "description": "Για επιχειρήσεις που θέλουν συνεπή, επαγγελματική παρουσία.",
       "features": [
@@ -148,8 +148,8 @@
       ]
     },
     {
-      "name": "Ads Management",
-      "price": "από €300",
+      "name": "Διαχείριση διαφημίσεων",
+      "price": "από {price:adsMonthly}",
       "period": "/μήνα",
       "description": "Google & Meta Ads με στόχο leads και πωλήσεις.",
       "features": [
@@ -163,7 +163,7 @@
     },
     {
       "name": "SEO",
-      "price": "από €350",
+      "price": "από {price:fullDigitalMonthly}",
       "period": "/μήνα",
       "description": "Οργανική ορατότητα που χτίζεται και μένει.",
       "features": [
@@ -180,11 +180,11 @@
   "faq": [
     {
       "question": "Πόσο κοστίζει το digital marketing για μια μικρή επιχείρηση;",
-      "answer": "Η διαχείριση social media ξεκινά από €250/μήνα και η διαχείριση διαφημίσεων από €300/μήνα, χωρίς το διαφημιστικό budget. Το τελικό κόστος εξαρτάται από τα κανάλια και τον όγκο περιεχομένου. Ζητήστε δωρεάν ανάλυση για ακριβή προσφορά."
+      "answer": "Η διαχείριση social media ξεκινά από {price:socialMonthly}/μήνα και η διαχείριση διαφημίσεων από {price:adsMonthly}/μήνα, χωρίς το διαφημιστικό budget. Το τελικό κόστος εξαρτάται από τα κανάλια και τον όγκο περιεχομένου. Ζητήστε δωρεάν ανάλυση για ακριβή προσφορά."
     },
     {
       "question": "Πόσο διαφημιστικό budget χρειάζομαι σε Google και Meta Ads;",
-      "answer": "Για τοπική στόχευση στην Άρτα και την Ήπειρο, ένα ρεαλιστικό σημείο εκκίνησης είναι €150-€300 τον μήνα σε ad spend. Το budget πληρώνεται απευθείας στην πλατφόρμα και είναι ξεχωριστό από την αμοιβή διαχείρισης."
+      "answer": "Για τοπική στόχευση στην Άρτα και την Ήπειρο, ένα ρεαλιστικό σημείο εκκίνησης είναι {price:adSpendMin}-{price:adSpendMax} τον μήνα σε ad spend. Το budget πληρώνεται απευθείας στην πλατφόρμα και είναι ξεχωριστό από την αμοιβή διαχείρισης."
     },
     {
       "question": "Σε πόσο καιρό θα δω αποτελέσματα;",
@@ -208,7 +208,7 @@
   "cta_button": "Ζητήστε Δωρεάν Ανάλυση",
   "cta_secondary": "Δείτε τα Έργα μας",
   "seo": {
-    "title": "Digital Marketing Άρτα | Social Media & Google Ads",
-    "description": "Διαχείριση social media, Google και Meta Ads και SEO για επιχειρήσεις στην Άρτα. Μηνιαία αναφορά με πραγματικά νούμερα. Τηλ. 2681 303007"
+    "title": "Digital Marketing Άρτα | SEO, Google Ads & Social Media",
+    "description": "Digital marketing στην Άρτα και την Ήπειρο: SEO, Google Ads, Meta Ads, social media, content, conversion tracking. Πακέτα από {price:socialMonthly}/μήνα."
   }
 }

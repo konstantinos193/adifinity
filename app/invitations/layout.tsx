@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { faqNode, INVITATIONS_FAQ } from "@/app/components/faqData"
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Ψηφιακές Προσκλήσεις Γάμου | adinfinity',
@@ -101,6 +102,8 @@ export default function InvitationsLayout({
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Ψηφιακά Προσκλητήρια", path: "/invitations" } ]} />
 
 
       {children}

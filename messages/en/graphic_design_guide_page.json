@@ -57,7 +57,7 @@
     },
     {
       "question": "How much does graphic design cost?",
-      "answer": "Graphic design costs vary based on project scope. Logo design starts from €150, while complete branding packages range from €300-€1000+."
+      "answer": "Costs depend on the scope of the work. Logo design starts from {price:logo}, a basic package with logo and business cards from {price:brandBasicPackage}, and the full corporate identity package from {price:brandIdentity}. See the full pricing page."
     },
     {
       "question": "What files do I receive?",

@@ -1,26 +1,41 @@
 import type { Metadata } from 'next'
 import FAQSection from "@/app/components/FAQSection"
 import { faqPageSchema, HOME_FAQ } from "@/app/components/faqData"
+import { COMPANY_FACTS } from "@/lib/company"
+import RelatedProjects from "@/app/components/RelatedProjects"
+import { getProjectBySlug } from "@/lib/projects"
 import HomePageClient from './components/HomePageClient'
 
+/*
+ * The proof the homepage leads with (audit §11): two accommodation sites with
+ * booking systems, the property platform, and one identity, so the first
+ * screen of real work covers web, bookings and branding.
+ */
+const FEATURED_PROJECTS = ['asterias-koronisia', 'lincanto-apartments', 'smh-real-estate', 'apofa']
+  .map((slug) => getProjectBySlug(slug))
+  .filter((project): project is NonNullable<typeof project> => Boolean(project))
+
+/*
+ * The homepage owns the broad brand/local query — "διαφημιστική εταιρεία Άρτα"
+ * — and nothing else. Service queries belong to the service pages.
+ *
+ * "Διαφημιστικό γραφείο" is in the description because Search Console shows
+ * 48 impressions for that exact phrasing at position 52: the site never used
+ * the words. Figures come from lib/company.ts so they cannot disagree with
+ * the hero beneath them.
+ */
+const TITLE = 'Διαφημιστική Εταιρεία Άρτα | Branding, Εκτυπώσεις & Digital | adinfinity'
+const DESCRIPTION = `Διαφημιστικό γραφείο στην Άρτα από το ${COMPANY_FACTS.foundedYear}: branding, γραφιστική, εκτυπώσεις, επιγραφές, ιστοσελίδες και digital marketing. ${COMPANY_FACTS.clients}+ επιχειρήσεις στην Ήπειρο. Τηλ. 2681 303007`
+
 export const metadata: Metadata = {
-  // Kept under ~60 chars so the differentiator ("από το 2013") survives Google's
-  // SERP truncation instead of being cut off mid-title.
-  title: 'Διαφημιστική Εταιρεία Άρτα από το 2013 | adinfinity',
-  // "50+", not "100+": the hero on this same page says 50, and a description
-  // that contradicts the content below it is a trust problem before it is an
-  // SEO one. The one figure now lives in lib/company.ts.
-  description:
-    'Διαφήμιση, γραφιστική, εκτυπώσεις και ιστοσελίδες στην Άρτα, από το 2013. Πάνω από 50 επιχειρήσεις μάς εμπιστεύονται. Δωρεάν προσφορά σε 24 ώρες: 2681 303007',
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: {
     canonical: 'https://adinfinity.gr/',
   },
   openGraph: {
-    title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα - Advertising & Digital Services',
-    // "κορυφαία" dropped. It asserts a ranking nobody can check; the founding
-    // year and the project count are checkable on the site itself.
-    description:
-      'Διαφημιστικό γραφείο στην Άρτα από το 2013. Γραφιστική, εκτυπώσεις, επιγραφές, ιστοσελίδες και digital marketing — πάνω από 200 ολοκληρωμένα έργα.',
+    title: TITLE,
+    description: DESCRIPTION,
     url: 'https://adinfinity.gr',
     siteName: 'adinfinity',
     images: [
@@ -36,9 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'adinfinity | Διαφημιστική Εταιρεία Άρτα',
-    description:
-      'Διαφημιστικό γραφείο στην Άρτα από το 2013. Γραφιστική, εκτυπώσεις, επιγραφές, ιστοσελίδες και digital marketing.',
+    title: TITLE,
+    description: DESCRIPTION,
     images: ['/images/og-image.png'],
   },
   robots: {
@@ -64,7 +78,15 @@ export default function Home() {
           __html: JSON.stringify(faqPageSchema(HOME_FAQ)),
         }}
       />
-      <HomePageClient />
+      <HomePageClient
+        proof={
+          <RelatedProjects
+            projects={FEATURED_PROJECTS}
+            headingEl="Επιλεγμένα έργα"
+            headingEn="Selected work"
+          />
+        }
+      />
       {/* Must be rendered, not just declared above: Google requires FAQ
           structured data to match content visible on the page. */}
       <FAQSection items={HOME_FAQ} />

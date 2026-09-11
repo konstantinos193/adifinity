@@ -7,7 +7,7 @@
   "get_started": "Ζητήστε Προσφορά",
   "our_services": "Υπηρεσίες Web Development",
   "services_description": "Από landing pages έως πλήρη web applications — η σημερινή μας προσέγγιση βασίζεται σε custom React development.",
-  "portfolio_title": "Portfolio Projects",
+  "portfolio_title": "Έργα που μπορείτε να επισκεφθείτε",
   "portfolio_description": "Real projects, real results — όλα custom-built για Greek market.",
   "see_all_projects": "Δείτε όλα τα Projects",
   "why_choose_us": "Γιατί να μας επιλέξετε",
@@ -20,7 +20,7 @@
   "see_portfolio": "Δείτε Projects",
   "services": {
     "custom_web_apps": {
-      "title": "Custom Web Apps",
+      "title": "Custom Ιστοσελίδες",
       "description": "Πλήρως custom React/Next.js εφαρμογές. Καμία χρήση template ή page builder — μόνο clean code.",
       "tags": [
         "Next.js",
@@ -47,7 +47,7 @@
       ]
     },
     "web_applications": {
-      "title": "Web Applications",
+      "title": "Web Εφαρμογές",
       "description": "SaaS tools, dashboards, booking systems, portals. Ό,τι χρειάζεται η επιχείρησή σας.",
       "tags": [
         "React",
@@ -65,7 +65,7 @@
       ]
     },
     "maintenance": {
-      "title": "Maintenance & Updates",
+      "title": "Συντήρηση & Ενημερώσεις",
       "description": "Ongoing development retainer. Νέα features, performance monitoring, security updates.",
       "tags": [
         "CI/CD",
@@ -76,7 +76,7 @@
   },
   "features": [
     {
-      "title": "Zero templates",
+      "title": "Χωρίς templates",
       "description": "Κάθε project ξεκινά από λευκή σελίδα. Καμία επαναχρησιμοποίηση θεμάτων ή page builders."
     },
     {
@@ -84,7 +84,7 @@
       "description": "Next.js, server components, edge caching. Sites που φορτώνουν σε < 1 δευτερόλεπτο."
     },
     {
-      "title": "Direct developer access",
+      "title": "Απευθείας επαφή με τον developer",
       "description": "Μιλάτε απευθείας με τον developer — χωρίς account managers και ενδιάμεσους."
     }
   ],
@@ -100,9 +100,9 @@
         "TypeScript",
         "Full-Stack System"
       ],
-      "client": "Asterias Homes",
+      "client": "Αστεριας Κορωνησία",
       "duration": "3 μήνες",
-      "team": "2 developers",
+      "team": "adinfinity",
       "technologies": [
         "Next.js 16",
         "React 19",
@@ -112,20 +112,20 @@
         "TypeScript"
       ],
       "features": [
-        "Σύστημα κρατήσεων πραγματικού χρόνου",
-        "Υποστήριξη πολλαπλών γλωσσών (EL, EN, DE)",
-        "Επεξεργασία πληρωμών με Stripe",
-        "Admin dashboard",
-        "Mobile-responsive design",
-        "SEO optimization",
-        "Image gallery με lightbox",
-        "Email notifications"
+        "Απευθείας online κρατήσεις με πληρωμή Stripe",
+        "Τρεις γλώσσες: ελληνικά, αγγλικά, γερμανικά",
+        "Εποχιακές τιμές και διαθεσιμότητα από το admin",
+        "Συγχρονισμός κριτικών Booking.com",
+        "Πίνακας διαχείρισης κρατήσεων",
+        "Σχεδιασμός για κινητά",
+        "Gallery φωτογραφιών με lightbox",
+        "Ειδοποιήσεις email για κάθε κράτηση"
       ],
       "results": [
-        "95% page speed score",
-        "40% αύξηση κρατήσεων",
-        "Top 3 Google rankings",
-        "Mobile-first user experience"
+        "Δικό του κανάλι απευθείας κρατήσεων, χωρίς προμήθειες πλατφορμών — η πρώτη πληρωμένη κράτηση ήρθε μέσα από το site τον Ιούλιο 2026",
+        "22 κριτικές Booking.com (μέσος όρος 4,5/5) εμφανίζονται αυτόματα στο site",
+        "7 διαμερίσματα με 6 εποχιακές περιόδους τιμών, όλα διαχειρίσιμα χωρίς προγραμματιστή",
+        "Τρίγλωσσο περιεχόμενο για Έλληνες, αγγλόφωνους και γερμανόφωνους επισκέπτες"
       ],
       "challenge": "Δημιουργία ενός πλήρους συστήματος διαχείρισης φιλοξενίας από το μηδέν με πραγματική διαθεσιμότητα και ασφαλή επεξεργασία πληρωμών."
     },
@@ -142,7 +142,7 @@
       ],
       "client": "ΚΥΚΛΟΣ Εκπαιδευτικό Κέντρο",
       "duration": "6 εβδομάδες",
-      "team": "2 developers",
+      "team": "adinfinity",
       "technologies": [
         "Next.js 16",
         "React 19",
@@ -154,26 +154,19 @@
         "Sentry"
       ],
       "features": [
-        "Σύστημα αυθεντικοποίησης μαθητών",
-        "Admin dashboard με πρόσβαση βάσει ρόλων",
-        "Σύστημα διαχείρισης blog",
-        "Συνδρομή newsletter",
-        "Υλικά Πανελληνίων εξετάσεων",
-        "Παρουσίαση ιστοριών επιτυχίας",
-        "Προφίλ καθηγητών",
-        "Διαχείριση μαθημάτων",
-        "Mobile-responsive design",
-        "Υποστήριξη Dark/Light mode",
-        "Βελτιστοποίηση SEO",
-        "Δυνατότητες PWA"
+        "Λίστα επιτυχόντων ανά έτος και σχολή",
+        "Αρχείο θεμάτων Πανελληνίων εξετάσεων",
+        "Νέα και ανακοινώσεις",
+        "Εγγραφή σε newsletter",
+        "Πίνακας διαχείρισης περιεχομένου",
+        "Σχεδιασμός για κινητά",
+        "Βελτιστοποίηση SEO"
       ],
       "results": [
-        "500+ εγγεγραμμένοι μαθητές",
-        "95% ποσοστό επιτυχίας",
-        "25+ χρόνια εκπαιδευτικού υλικού",
-        "Mobile-first user experience",
-        "Top Google rankings",
-        "Ολοκληρωμένο admin system"
+        "2.143 επιτυχόντες από το 1992 έως το 2025, δημοσιευμένοι με όνομα και σχολή, αναζητήσιμοι ανά έτος",
+        "Αρχείο 35 θεμάτων Πανελληνίων 2015–2026, διαθέσιμο σε μαθητές και γονείς",
+        "Νέα και newsletter που ενημερώνει το ίδιο το φροντιστήριο από το admin",
+        "Ιστοσελίδα για φροντιστήριο που λειτουργεί από το 1991 — 35 χρόνια ιστορίας σε μία δομή"
       ],
       "challenge": "Δημιουργία μιας ολοκληρωμένης εκπαιδευτικής πλατφόρμας που διαχειρίζεται 25+ χρόνια εκπαιδευτικού υλικού, αυθεντικοποίηση μαθητών, διαχείριση admin, και παρέχει πρόσβαση σε υλικά Πανελληνίων εξετάσεων."
     },
@@ -190,7 +183,7 @@
       ],
       "client": "Physio Elpida Clinic",
       "duration": "2 εβδομάδες",
-      "team": "1 developer",
+      "team": "adinfinity",
       "technologies": [
         "WordPress",
         "PHP",
@@ -199,22 +192,20 @@
         "Contact Forms"
       ],
       "features": [
-        "Online σύστημα κρατήσεων ραντεβού",
-        "Gallery παρουσίασης υπηρεσιών",
-        "Showcase εξοπλισμού με περιγραφές",
-        "Interactive φόρμες επικοινωνίας",
-        "Mobile-responsive design",
-        "Greek SEO optimization",
+        "Online κράτηση ραντεβού",
+        "Παρουσίαση υπηρεσιών",
+        "Παρουσίαση εξοπλισμού με περιγραφές",
+        "Φόρμες επικοινωνίας",
+        "Σχεδιασμός για κινητά",
+        "Βελτιστοποίηση SEO στα ελληνικά",
         "Ενότητα μαρτυριών ασθενών",
-        "Ενσωμάτωση χάρτη τοποθεσίας",
-        "Πληροφορίες επαφής επειγόντων"
+        "Χάρτης τοποθεσίας",
+        "Στοιχεία επικοινωνίας επειγόντων"
       ],
       "results": [
-        "Επαγγελματική online παρουσία",
-        "30% αύξηση ερωτήσεων ασθενών",
-        "Mobile-friendly εμπειρία ασθενών",
-        "Top τοπικές αναζητήσεις",
-        "Βελτιστοποιημένο σύστημα κρατήσεων"
+        "Online κράτηση ραντεβού αντί για τηλεφωνική μόνο εξυπηρέτηση",
+        "Παρουσίαση υπηρεσιών, εξοπλισμού και βιογραφικού του φυσιοθεραπευτή σε μία σελίδα",
+        "Σχεδιασμός για κινητά, από όπου έρχονται οι περισσότεροι ασθενείς"
       ],
       "challenge": "Σύσταση επαγγελματικής online παρουσίας για φυσιοθεραπευτήριο με έμφαση στο local SEO, εύκολη πρόσβαση ασθενών σε πληροφορίες υπηρεσιών και online σύστημα κρατήσεων."
     }
@@ -222,12 +213,12 @@
   "process": [
     {
       "step": "01",
-      "title": "Discovery Call",
+      "title": "Πρώτη συζήτηση",
       "desc": "30 λεπτά για να καταλάβουμε τι χρειάζεστε, τους στόχους σας και το budget."
     },
     {
       "step": "02",
-      "title": "Design & Wireframes",
+      "title": "Σχεδιασμός & wireframes",
       "desc": "Mockups σε Figma πριν γραφτεί μια γραμμή κώδικα. Εγκρίνετε την εμφάνιση πρώτα."
     },
     {
@@ -237,7 +228,7 @@
     },
     {
       "step": "04",
-      "title": "Launch & Support",
+      "title": "Παράδοση & υποστήριξη",
       "desc": "Deploy, testing, SEO setup. Εκπαίδευση στη διαχείριση και ongoing support."
     }
   ],
@@ -290,7 +281,7 @@
       },
       {
         "question": "Πόσο κοστίζει η κατασκευή ιστοσελίδας ή web εφαρμογής;",
-        "answer": "Μια επαγγελματική ιστοσελίδα ξεκινά από €800. E-shops και web εφαρμογές κοστίζουν ανάλογα με τις λειτουργίες. Ζητήστε δωρεάν προσφορά για ακριβή εκτίμηση."
+        "answer": "Μια επαγγελματική ιστοσελίδα ξεκινά από {price:websiteStarter}, ένα custom e-shop από {price:eshop}. E-shops και web εφαρμογές κοστίζουν ανάλογα με τις λειτουργίες. Ζητήστε δωρεάν προσφορά για ακριβή εκτίμηση."
       },
       {
         "question": "Πόσο διαρκεί η κατασκευή;",
@@ -307,7 +298,7 @@
     ]
   },
   "seo": {
-    "title": "Κατασκευή Web Εφαρμογών & E-shop | React & Next.js",
-    "description": "Custom web εφαρμογές και e-shops σε React, Next.js και TypeScript. Χωρίς έτοιμα templates, με technical SEO από την πρώτη μέρα. Τηλ. 2681 303007"
+    "title": "Κατασκευή Ιστοσελίδων Άρτα | Custom Next.js & React | adinfinity",
+    "description": "Ιστοσελίδες, e-shop και web εφαρμογές στην Άρτα με Next.js, React, TypeScript. Booking systems, SEO, performance-first. Από {price:websiteStarter}. Τηλ. 2681 303007"
   }
 }

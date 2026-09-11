@@ -1,15 +1,20 @@
 import { Metadata } from "next"
 import DSAContentClient from "./DSAContentClient"
+import { jsonLd, pageGraph } from "@/lib/schema"
+import Breadcrumbs from '@/app/components/Breadcrumbs'
+
+// Greek, like every other served page — this shipped in English on a page whose
+// <html lang="el"> body is Greek, which reads to Google as a language mismatch.
+const TITLE = "Συμμόρφωση DSA (Digital Services Act) | adinfinity"
+const DESCRIPTION =
+  "Τα μέτρα συμμόρφωσης της adinfinity με τον Κανονισμό Ψηφιακών Υπηρεσιών (DSA): πολιτικές περιεχομένου, διαδικασίες αναφοράς και προστασία χρηστών."
 
 export const metadata: Metadata = {
-  title: {
-    default: "DSA Compliance | adinfinity",
-    template: "%s | adinfinity",
-  },
-  description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",
+  title: TITLE,
+  description: DESCRIPTION,
   openGraph: {
-    title: "DSA Compliance | adinfinity",
-    description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://adinfinity.gr/dsa-compliance",
     type: "website",
     images: [
@@ -23,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DSA Compliance | adinfinity",
-    description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/images/og-image.png"],
   },
   alternates: {
@@ -46,64 +51,22 @@ export const metadata: Metadata = {
 export default function DSACompliancePage() {
   return (
     <>
-      {/* Structured Data for DSA Compliance Page */}
+      {/*
+        One graph, one business entity. This block used to restate the
+        Organization with its own (transliterated) address and a nested
+        `breadcrumbList` property that is not a schema.org term. See lib/schema.ts.
+      */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "DSA Compliance | adinfinity",
-            description: "Our Digital Services Act compliance measures, content policies, and user protection procedures.",
-            url: "https://adinfinity.gr/dsa-compliance",
-            isPartOf: {
-              "@type": "WebSite",
-              name: "adinfinity",
-              url: "https://adinfinity.gr",
-            },
-            about: {
-              "@type": "Thing",
-              name: "Digital Services Act",
-              description: "EU regulation for digital services and online platforms",
-            },
-            mainEntity: {
-              "@type": "Organization",
-              name: "adinfinity",
-              url: "https://adinfinity.gr",
-              contactPoint: {
-                "@type": "ContactPoint",
-                email: "info@adinfinity.gr",
-                telephone: "+30-2681-303007",
-                contactType: "DSA compliance",
-                availableLanguage: ["Greek", "English"],
-              },
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "Vas. Pyrrou 30",
-                addressLocality: "Arta",
-                addressCountry: "GR",
-              },
-            },
-            breadcrumbList: {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Αρχική",
-                  item: "https://adinfinity.gr",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "DSA Compliance",
-                  item: "https://adinfinity.gr/dsa-compliance",
-                },
-              ],
-            },
+        dangerouslySetInnerHTML={jsonLd(
+          pageGraph({
+            path: "/dsa-compliance",
+            breadcrumb: [{ name: "Συμμόρφωση DSA", path: "/dsa-compliance" }],
           }),
-        }}
+        )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[{ name: "Συμμόρφωση DSA", path: "/dsa-compliance" }]} />
       <DSAContentClient />
     </>
   )

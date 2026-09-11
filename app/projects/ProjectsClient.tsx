@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { INDUSTRIES, industryOf } from "@/lib/industries"
 import { motion, AnimatePresence } from "framer-motion"
 import { ProjectCard } from "../components/ProjectCard"
 import { ProjectModal } from "../components/ProjectModal"
@@ -24,6 +25,8 @@ export function ProjectsClient() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [projects, setProjects] = useState<Project[]>(allProjects)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  // Second axis (audit §23): industry, derived from businessType. State only, never a URL.
+  const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null)
 
   // Returns the *whole* project with the English fields applied — the previous
   // inline version spread only six of them, which dropped id/slug/image/liveUrl
@@ -40,13 +43,15 @@ export function ProjectsClient() {
     locale === 'en' && project.categoryEn ? project.categoryEn : project.category
   )))
 
-  // Filter projects by category
-  const filteredProjects = selectedCategory
-    ? projects.filter((project) => {
-        const localizedProject = getLocalizedProject(project)
-        return localizedProject.category === selectedCategory
-      })
-    : projects
+  // Filter projects by category, then by industry
+  const filteredProjects = projects.filter((project) => {
+    if (selectedCategory && getLocalizedProject(project).category !== selectedCategory) return false
+    if (selectedIndustry && industryOf(project)?.key !== selectedIndustry) return false
+    return true
+  })
+
+  // Only industries that actually have a project, so no pill filters to nothing.
+  const industries = INDUSTRIES.filter((industry) => allProjects.some((project) => industryOf(project)?.key === industry.key))
 
   return (
     <main className="min-h-screen py-20 bg-gradient-to-b from-[#07141C] to-[#0A1A24]">
@@ -124,6 +129,28 @@ export function ProjectsClient() {
           </div>
         </motion.div>
 
+        {/* Industry filter: pills, so it reads as a second axis rather than a second tab row */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12 -mt-6" role="group" aria-label={locale === 'en' ? 'Filter by industry' : 'Φίλτρο ανά κλάδο'}>
+          {industries.map((industry) => {
+            const isActive = selectedIndustry === industry.key
+            return (
+              <button
+                key={industry.key}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => setSelectedIndustry(isActive ? null : industry.key)}
+                className={`rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors ${
+                  isActive
+                    ? "border-[#01FFFF] bg-[#01FFFF]/10 text-[#01FFFF]"
+                    : "border-gray-800 text-gray-400 hover:border-gray-600 hover:text-gray-200"
+                }`}
+              >
+                {locale === 'en' ? industry.en : industry.el}
+              </button>
+            )
+          })}
+        </div>
+
         {/* Projects Grid */}
         <motion.div
           className="mb-16"
@@ -171,6 +198,7 @@ export function ProjectsClient() {
               <button
                 onClick={() => {
                   setSelectedCategory(null)
+                  setSelectedIndustry(null)
                 }}
                 className="bg-[#0D2436] text-white px-6 py-3 rounded-lg hover:bg-[#0D2436]/80 transition-colors"
               >

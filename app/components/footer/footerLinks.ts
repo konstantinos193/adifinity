@@ -46,9 +46,9 @@ export const localServiceLinks: LocalServiceLink[] = [
   { path: '/ektypwseis-arta', el: 'Εκτυπώσεις Άρτα', en: 'Printing Arta' },
   { path: '/grafistas-arta', el: 'Γραφίστας Άρτα', en: 'Graphic Designer Arta' },
   { path: '/epigrafes-arta', el: 'Επιγραφές Καταστημάτων Άρτα', en: 'Store Signage Arta' },
-  { path: '/web-development-arta', el: 'Κατασκευή Ιστοσελίδων Άρτα', en: 'Web Development Arta' },
+  { path: '/website-development', el: 'Κατασκευή Ιστοσελίδων Άρτα', en: 'Web Development Arta' },
   { path: '/diafimistiki-eteria', el: 'Διαφημιστική Εταιρεία Άρτα', en: 'Advertising Agency Arta' },
-  { path: '/dianomi-fylladion-arta', el: 'Διανομή Φυλλαδίων Άρτα', en: 'Flyer Distribution Arta' },
+  { path: '/flyer-distribution', el: 'Διανομή Φυλλαδίων Άρτα', en: 'Flyer Distribution Arta' },
   { path: '/diafimistika-dora', el: 'Διαφημιστικά Δώρα', en: 'Promotional Gifts' },
   { path: '/diafimistiki', el: 'Διαφημιστική & Digital Marketing', en: 'Advertising & Digital Marketing' },
   /*
@@ -57,7 +57,15 @@ export const localServiceLinks: LocalServiceLink[] = [
    * page. The web-app intent it targeted is served by
    * `/website-development/web-apps`, linked from the header nav.
    */
-  { path: '/graphic-design-guide', el: 'Οδηγός Γραφιστικής', en: 'Graphic Design Guide' },
+  { path: '/sxediasmos-logotypou', el: 'Σχεδιασμός Λογοτύπου', en: 'Logo Design' },
+  { path: '/etairiki-tautotita', el: 'Εταιρική Ταυτότητα', en: 'Corporate Identity' },
+  { path: '/epaggelmatikes-kartes', el: 'Επαγγελματικές Κάρτες', en: 'Business Cards' },
+  { path: '/flyers', el: 'Φυλλάδια', en: 'Flyers' },
+  { path: '/banners-roll-up', el: 'Banner & Roll-up', en: 'Banners & Roll-ups' },
+  { path: '/led-neon', el: 'Φωτεινές Επιγραφές LED & Neon', en: 'LED & Neon Signs' },
+  { path: '/website-development/booking-systems', el: 'Συστήματα Κρατήσεων', en: 'Booking Systems' },
+  { path: '/istoselides-xenodoxeion', el: 'Ιστοσελίδες Καταλυμάτων', en: 'Hotel Websites' },
+  { path: '/guides', el: 'Οδηγοί & Τιμές', en: 'Guides & Prices' },
   { path: '/pricing', el: 'Τιμοκατάλογος', en: 'Pricing' },
   /*
    * The invitations product, linked sitewide.

@@ -1,5 +1,5 @@
 {
-  "title": "Landing Pages Development",
+  "title": "Κατασκευή Landing Pages",
   "subtitle": "Υψηλές Μετατροπές · Έτοιμες για Διαφημίσεις",
   "hero_badge": "Γρήγορες · SEO-Ready · Μεγιστοποίηση Μετατροπών",
   "hero_title_line1": "Custom",
@@ -39,7 +39,7 @@
       "desc": "Έτοιμη για οργανική κίνηση: Schema markup, meta tags, Open Graph, sitemap."
     },
     {
-      "title": "Analytics & Heatmaps",
+      "title": "Analytics & heatmaps",
       "desc": "Ενσωμάτωση Google Analytics 4, Meta Pixel, Hotjar για πλήρη παρακολούθηση και βελτιστοποίηση."
     }
   ],
@@ -53,11 +53,11 @@
       "desc": "Παρουσίαση νέων προϊόντων/υπηρεσιών με launch pages πριν το πλήρες site."
     },
     {
-      "title": "Events / Webinars",
+      "title": "Εκδηλώσεις / webinars",
       "desc": "Προώθηση events με countdowns, social proof, φόρμες συλλογής δεδομένων."
     },
     {
-      "title": "Lead Generation",
+      "title": "Συλλογή leads",
       "desc": "Συλλογή leads με φόρμες υψηλής μετατροπής και αιτήσεις προσφορών."
     },
     {
@@ -78,21 +78,21 @@
       ]
     },
     {
-      "title": "Next.js Development",
+      "title": "Ανάπτυξη σε Next.js",
       "items": [
         "Γρήγορες static σελίδες για βέλτιστη SEO ταχύτητα.",
         "Πλήρως mobile-responsive για άριστη εμπειρία σε όλες τις συσκευές."
       ]
     },
     {
-      "title": "Google Analytics 4 Setup",
+      "title": "Ρύθμιση Google Analytics 4",
       "items": [
         "Conversion tracking setup από την πρώτη μέρα.",
         "Meta Pixel ενσωμάτωση για Facebook/Instagram καμπάνιες."
       ]
     },
     {
-      "title": "SSL + Deployment",
+      "title": "SSL + δημοσίευση",
       "items": [
         "Ασφαλής deployment σε Vercel ή hosting της επιλογής σας."
       ]

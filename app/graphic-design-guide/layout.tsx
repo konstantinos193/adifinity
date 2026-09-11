@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { faqNode, GUIDE_FAQ } from "@/app/components/faqData"
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -109,13 +110,15 @@ export default function GraphicDesignGuideLayout({
         pageGraph({
           path: "/graphic-design-guide",
           breadcrumb: [
-            { name: "Οδηγοί", path: "/services" },
+            { name: "Οδηγοί", path: "/guides" },
             { name: "Οδηγός Γραφιστικής", path: "/graphic-design-guide" },
           ],
           faq: faqNode(GUIDE_FAQ),
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Οδηγοί", path: "/guides" }, { name: "Οδηγός Γραφιστικής", path: "/graphic-design-guide" } ]} />
       {children}
     </>
   )

@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import RelatedProjects from '@/app/components/RelatedProjects'
+import RelatedLinks from '@/app/components/RelatedLinks'
+import { SIGNAGE_RELATED } from '@/app/components/relatedLinksData'
 import { pickProjects } from '@/lib/serviceProjects'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -93,6 +96,8 @@ export default function EpigrafesArtaLayout({
         }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: "Υπηρεσίες", path: "/services" }, { name: "Επιγραφές Άρτα", path: "/epigrafes-arta" } ]} />
       {/* FAQ Schema */}
       <script
         type="application/ld+json"
@@ -131,6 +136,8 @@ export default function EpigrafesArtaLayout({
       />
       {children}
       <RelatedProjects projects={pickProjects('/epigrafes-arta')} />
+      {/* Cluster links: LED/neon sub-service and the cost guide (audit §15). */}
+      <RelatedLinks links={SIGNAGE_RELATED} />
     </>
   )
 }

@@ -80,14 +80,6 @@ export default function HeroSection() {
             >
               {t('hero.title_parts.part4')}
             </motion.span>
-            <motion.span
-              initial={{ opacity: shouldReduceMotion ? 1 : 0, y: shouldReduceMotion ? 0 : 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: shouldReduceMotion ? 0 : 0.3, delay: shouldReduceMotion ? 0 : 0.2 }}
-              style={{ willChange: 'opacity, transform' }}
-            >
-              .
-            </motion.span>
           </h1>
 
           <motion.p

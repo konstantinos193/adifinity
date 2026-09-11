@@ -4,8 +4,12 @@ import { WEB_DEVELOPMENT_RELATED } from '@/app/components/relatedLinksData'
 import FAQSection from '@/app/components/FAQSection'
 import { faqNode, WEBDEV_FAQ } from '@/app/components/faqData'
 import RelatedProjects from '@/app/components/RelatedProjects'
+import ServiceDetailsSection from '@/app/components/ServiceDetailsSection'
+import { WEB_DEV_ARTA_DETAILS } from '@/app/components/serviceDetailsData'
 import { jsonLd, pageGraph } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 import { pickProjects } from '@/lib/serviceProjects'
+import { PRICES, euro } from '@/lib/company'
 
 export default function WebsiteDevelopmentPage() {
   return (
@@ -30,9 +34,10 @@ export default function WebsiteDevelopmentPage() {
             ],
             service: {
               path: '/website-development',
-              name: 'Κατασκευή Ιστοσελίδων & Web Applications',
+              name: 'Κατασκευή Ιστοσελίδων Άρτα',
               description:
-                'Custom κατασκευή ιστοσελίδων, web applications και e-shops σε React & Next.js. Καμία χρήση templates, μόνο clean code.',
+                'Κατασκευή ιστοσελίδων, e-shop και web εφαρμογών στην Άρτα σε React & Next.js — χωρίς templates, με τεχνικό SEO από την πρώτη μέρα και υποστήριξη από το γραφείο μας.',
+              priceRange: `από ${euro(PRICES.websiteStarter)}`,
               serviceType: [
                 'Web Development',
                 'Custom Web Applications',
@@ -60,12 +65,21 @@ export default function WebsiteDevelopmentPage() {
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: 'Υπηρεσίες', path: '/services' }, { name: 'Κατασκευή Ιστοσελίδων', path: '/website-development' } ]} />
       <WebsiteDevelopmentClient />
       {/*
         In the page, not the layout: that layout wraps the six sub-services, and
         each of those mounts its own, more specific selection.
       */}
       <RelatedProjects projects={pickProjects('/website-development')} />
+      {/*
+        Merged from /web-development-arta, which 308s here. The local angle —
+        mobile-first, technical SEO from day one, you own the code, support by
+        phone from Arta — is what makes this page the answer to "κατασκευή
+        ιστοσελίδων Άρτα" rather than a generic framework pitch.
+      */}
+      <ServiceDetailsSection details={WEB_DEV_ARTA_DETAILS} />
       <FAQSection items={WEBDEV_FAQ} />
       <RelatedLinks links={WEB_DEVELOPMENT_RELATED} />
     </>

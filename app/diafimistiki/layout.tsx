@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { faqNodeFromMessages } from '@/app/components/faqData'
 import { serverT, SERVER_LOCALE } from '@/lib/metadata'
 import { jsonLd, ORG_REF, pageGraph, SITE_URL } from '@/lib/schema'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = SERVER_LOCALE
@@ -76,7 +77,7 @@ export default function DiafimistikiLayout({
           pageGraph({
             path: '/diafimistiki',
             breadcrumb: [
-              { name: 'Οδηγοί', path: '/services' },
+              { name: 'Οδηγοί', path: '/guides' },
               { name: 'Τι Κάνει μια Διαφημιστική', path: '/diafimistiki' },
             ],
             // Read from the same message array the visible FAQ section renders.
@@ -108,6 +109,8 @@ export default function DiafimistikiLayout({
           }),
         )}
       />
+      {/* Visible trail — same array as the BreadcrumbList above. */}
+      <Breadcrumbs trail={[ { name: 'Οδηγοί', path: '/guides' }, { name: 'Τι Κάνει μια Διαφημιστική', path: '/diafimistiki' } ]} />
       {children}
     </>
   )

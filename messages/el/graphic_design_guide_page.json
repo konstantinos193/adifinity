@@ -1,7 +1,7 @@
 {
   "hero": {
     "badge": "Οδηγός Graphic Design",
-    "title": "Graphic Design Guide",
+    "title": "Οδηγός Γραφιστικής",
     "subtitle": "Πλήρης Οδηγός για Υπηρεσίες Graphic Design",
     "description": "Μια ολοκληρωμένη παρουσίαση των υπηρεσιών graphic design: logo design, branding, εταιρική ταυτότητα, διαφημιστικό υλικό και digital design. Μάθετε τι να περιμένετε και πώς να επιλέξετε τον κατάλληλο graphic designer.",
     "cta": "Ζητήστε Προσφορά",
@@ -10,7 +10,7 @@
   "services": {
     "title": "Υπηρεσίες Graphic Design",
     "logo": {
-      "title": "Logo Design",
+      "title": "Σχεδιασμός λογοτύπου",
       "description": "Επαγγελματικό logo design που αντικατοπτρίζει την ταυτότητα της επιχείρησής σας και ξεχωρίζει από τον ανταγωνισμό."
     },
     "branding": {
@@ -22,7 +22,7 @@
       "description": "Flyers, αφίσες, brochures, καταλόγοι και όλα τα έντυπα που χρειάζεται η επιχείρησή σας."
     },
     "digital": {
-      "title": "Digital Design & Social Media",
+      "title": "Ψηφιακός σχεδιασμός & social media",
       "description": "Social media graphics, digital banners, web graphics και content creation για online presence."
     }
   },
@@ -57,7 +57,7 @@
     },
     {
       "question": "Πόσο κοστίζει το graphic design;",
-      "answer": "Το κόστος graphic design ποικίλλει ανάλογα με το project. Logo design ξεκινά από €150, ενώ ολοκληρωμένα πακέτα branding κυμαίνονται από €300-€1000+."
+      "answer": "Το κόστος εξαρτάται από το εύρος του έργου. Ο σχεδιασμός λογοτύπου ξεκινά από {price:logo}, ένα βασικό πακέτο με λογότυπο και επαγγελματικές κάρτες από {price:brandBasicPackage}, και το πλήρες πακέτο εταιρικής ταυτότητας από {price:brandIdentity}. Δείτε αναλυτικά τον τιμοκατάλογο."
     },
     {
       "question": "Ποια αρχεία λαμβάνω;",
@@ -78,7 +78,7 @@
     "button": "Στείλτε Αίτημα"
   },
   "seo": {
-    "title": "Οδηγός Γραφιστικής | Τιμές & Διαδικασία",
-    "description": "Τι περιλαμβάνει ένα λογότυπο, πόσο διαρκεί ο σχεδιασμός και πώς κοστολογείται. Πρακτικός οδηγός πριν αναθέσετε τη δουλειά σε γραφίστα."
+    "title": "Οδηγός Γραφιστικής | Τιμές, Διαδικασία & Τι να Ζητήσετε",
+    "description": "Τι περιλαμβάνει ένα λογότυπο, πόσο διαρκεί ο σχεδιασμός και τι κοστίζει: από {price:logo} το λογότυπο, από {price:brandIdentity} η εταιρική ταυτότητα."
   }
 }

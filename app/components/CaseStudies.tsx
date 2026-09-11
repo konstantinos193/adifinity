@@ -22,7 +22,7 @@ export default function CaseStudies() {
         "Consistent brand identity across all channels", 
         "Zero missed deadlines in 12 months"
       ],
-      image: "/images/Energy_House-Photoroom.png"
+      image: "/images/energy-house-logo-arta.png"
     },
     {
       company: "Bohĕme Beach Bar",
@@ -34,7 +34,7 @@ export default function CaseStudies() {
         "3x faster promotional material delivery",
         "Increased social engagement by 250%"
       ],
-      image: "/images/boheme.png"
+      image: "/images/boheme-beach-bar-logo-arta.png"
     },
     {
       company: "TechFix",
@@ -46,7 +46,7 @@ export default function CaseStudies() {
         "Real-time performance optimization",
         "Improved lead quality by 35%"
       ],
-      image: "/images/TechFix_-_Pc_and_Smartphone_Service-Photoroom.png"
+      image: "/images/techfix-logo-arta.png"
     }
   ]
 
