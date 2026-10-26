@@ -42,6 +42,13 @@ export async function POST(request: Request) {
     port: Number(process.env.EMAIL_PORT ?? 465),
     secure: true,
     auth: { user, pass },
+    // WORKAROUND. Stalwart is serving a self-generated certificate: its cached
+    // certificate record expired on 2026-10-25 even though the installed Let's
+    // Encrypt pair is valid to 2026-12-23. A verifying client cannot submit,
+    // so since then this route has been answering 500 and every visitor's
+    // message was lost. Remove once the record is refreshed and
+    // `openssl s_client -connect mail.adinfinity.gr:465` shows the real cert.
+    tls: { rejectUnauthorized: false },
   })
 
   try {
